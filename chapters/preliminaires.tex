@@ -12,8 +12,8 @@ Un ensemble algébrique affine est une partie de $k^n$ constituée de zéros com
 Soient $\Sigma_1,\Sigma_2$ deux ensembles algébriques affine de $k^{n_1}$ (resp. $k^{n_2}$). Un morphisme est une application $\phi:\Sigma_1,\rightarrow \Sigma_2$ telle que les composantes de $\phi$ soient polynomiales.
 \end{defn}
 On remarque que les ensembles algébriques affines munis de leur morphismes constituent une catégorie. 
-Les ensembles algébriques affines sont de la forme $\mathcal{V}(I):=\lbrace x\in k^n|\forall P\in I, P(x)=0\rbrace$ où $I$ est un idéal de $S$. Ils sont stables par intersection quelconque, et on a $\mathcal{V}(S)=\emptyset$ et $\mathcal{V}(\lbrace 0\rbrace)=k^n$. Ainsi les ensembles algébriques affines constituent les fermés d'une topologie, dite de Zariski.\\
-Par ailleurs, à tout ensemble algébrique affine $\Sigma$ on associe l'idéal $\mathcal{I}(\Sigma):=\lbrace P\in k[X_1,...X_n] | P(x)=0, \forall x\in\Sigma \rbrace$. L'ensemble des morphismes $\Sigma\rightarrow k$ est doté d'une structure de k-algèbre évidente que l'on note $k[\Sigma]$. Cette algèbre est naturellement isomorphe à $S/\mathcal{I}(\Sigma)$. Elle est de type fini réduite, on dit que c'est une $k$-algèbre affine. D'après le Nullstellensatz on a $\mathcal{I}(\mathcal{V}(I))= \sqrt{I}$, d'où une bijection entre les sous-ensembles algébriques affines de $\Sigma$ et les idéaux radicaux de $k[\Sigma]$. En particulier les points de $\Sigma$ sont en bijection avec les idéaux maximaux de $k[\Sigma]$. On note $Specm(k[\Sigma])$ cet ensemble.
+Les ensembles algébriques affines sont de la forme $\mathcal{V}(I):=\lbrace x\in k^n\mid \forall P\in I, P(x)=0\rbrace$ où $I$ est un idéal de $S$. Ils sont stables par intersection quelconque, et on a $\mathcal{V}(S)=\emptyset$ et $\mathcal{V}(\lbrace 0\rbrace)=k^n$. Ainsi les ensembles algébriques affines constituent les fermés d'une topologie, dite de Zariski.\\
+Par ailleurs, à tout ensemble algébrique affine $\Sigma$ on associe l'idéal $\mathcal{I}(\Sigma):=\lbrace P\in k[X_1,...X_n] \mid P(x)=0, \forall x\in\Sigma \rbrace$. L'ensemble des morphismes $\Sigma\rightarrow k$ est doté d'une structure de k-algèbre évidente que l'on note $k[\Sigma]$. Cette algèbre est naturellement isomorphe à $S/\mathcal{I}(\Sigma)$. Elle est de type fini réduite, on dit que c'est une $k$-algèbre affine. D'après le Nullstellensatz on a $\mathcal{I}(\mathcal{V}(I))= \sqrt{I}$, d'où une bijection entre les sous-ensembles algébriques affines de $\Sigma$ et les idéaux radicaux de $k[\Sigma]$. En particulier les points de $\Sigma$ sont en bijection avec les idéaux maximaux de $k[\Sigma]$. On note $Specm(k[\Sigma])$ cet ensemble.
 \begin{prop}\label{eqaffinevaralg}
 La construction qui à $\Sigma$ associe $k[\Sigma]$ est fonctorielle. Le foncteur est pleinement fidèle et essentiellement surjectif.
 \end{prop}
@@ -48,7 +48,7 @@ Soit $\Sigma$ un ensemble algébrique affine et $f\in k[\Sigma]^*$. On a $\mathc
 Une $k$-variété algébrique affine est un espace annelé isomorphe à un ensemble algébrique affine.
 \end{defn}
 
-Soit $\Sigma$ un ensemble algébrique affine. En utilisant la bijection entre $\Sigma$ et $Specm(k[\Sigma])$, on voit comment définir directement la topologie de Zariski sur $Specm(k[\Sigma])$ ainsi que le faisceau structural, faisant de ce dernier une variété algébrique affine. Concrètement, les fermés de $Specm(k[\Sigma])$ sont les $\mathcal{V}(I):=\lbrace m \in Specm(k[\Sigma]) | I\subset m \rbrace$. Les éléments de $k[\Sigma]$ définissent des fonctions sur $Specm(k[\Sigma])$ en les considérant modulo $m$, pour $m \in Specm(k[\Sigma])$. On peut définir le faisceau sur la base des ouverts principaux $D(f):=\lbrace m \in Specm(k[\Sigma]) | f \notin m\rbrace$ en posant $\mathcal{O}_{Specm(k[\Sigma])}(D(f))\simeq k[\Sigma][1/f]$\\
+Soit $\Sigma$ un ensemble algébrique affine. En utilisant la bijection entre $\Sigma$ et $Specm(k[\Sigma])$, on voit comment définir directement la topologie de Zariski sur $Specm(k[\Sigma])$ ainsi que le faisceau structural, faisant de ce dernier une variété algébrique affine. Concrètement, les fermés de $Specm(k[\Sigma])$ sont les $\mathcal{V}(I):=\lbrace m \in Specm(k[\Sigma]) \mid I\subset m \rbrace$. Les éléments de $k[\Sigma]$ définissent des fonctions sur $Specm(k[\Sigma])$ en les considérant modulo $m$, pour $m \in Specm(k[\Sigma])$. On peut définir le faisceau sur la base des ouverts principaux $D(f):=\lbrace m \in Specm(k[\Sigma]) \mid f \notin m\rbrace$ en posant $\mathcal{O}_{Specm(k[\Sigma])}(D(f))\simeq k[\Sigma][1/f]$\\
 Par construction $Specm(k[\Sigma])$ est isomorphe à $\Sigma$. Cela donne une manière intrinsèque de définir une variété algébrique affine, indépendamment d'un plongement dans un espace affine quelconque.\\
 On remarque que la catégorie des variétés algébriques est équivalente à celle des ensembles algébriques affines.
 \begin{ex}
@@ -145,41 +145,58 @@ Soit $f:X \mapsto Y$ un morphisme bijectif de variétés irréductibles avec $Y$
 \subsection{Généralités}
 \subsection{G-variétés, représentations}
 
-\begin{defn}
-G-variétés
-\end{defn}
-
-\begin{defn}
-Une représentation de $G$, ou $G$-module est un couple $(V, \rho)$ ou
-semi-simple module.
-\end{defn}
-
-\begin{defn}
-$k[X] est un G-module$
-\end{defn}
-
-\begin{thm}
-Every affine
-\end{thm}
-
-\begin{cor}
-Every affine
-\end{cor}
-
-\begin{defn}
-Groupe reductif
+\begin{defn}[G-variété]
+Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique $X$ sur laquelle $G$ agit algébriquement. C'est à dire qu'on a un morphisme de groupes de $G$ dans le groupe d'automorphismes $X$.
 \end{defn}
 
 \begin{prop}
-Groupe reductif
+Soit $G$ un groupe algébrique, $X$ une $G$-variété et $x\in X$.\\
+(i) $G.x$ est ouvert dans $\overline{G.x}$\\
+(ii) Toute composante irréductible de $\overline{G.x}$ a pour dimension $dim (G)-dim(G.x)$\\
+(iii) $\overline{G.x}\setminus G.X$ est une union d'orbites de dimension $<dim(\overline{G.x})$\\
+(iv) $G.x$ est ouvert dans $\overline{G.x}$
 \end{prop}
+\begin{proof}
+
+\end{proof}
+
+\begin{defn}
+Une représentation de $G$, ou $G$-module (rationnel) est un couple $(V, \rho)$ où $V$ est un $k$-espace vectoriel de dimension finie et $\rho$ un morphisme de groupes algébriques de $G$ dans $GL(V)$.\\
+On étend cette définition au cas où $V$ est de dimension infinie, on demande alors que $V$ soit réunion de $G$-modules de dimension finie.\\
+On dit qu'un $G$-module est simple si il n'admet pas de sous $G$-module non trivial. On dit qu'un $G$-module est semi-simple si tout sous $G$-module admet un $G$-module supplémentaire.
+\end{defn}
+
+\begin{prop}
+Soit $G$ un groupe algébrique et $X$ une $G$-variété. $k[X]$ est naturellement muni d'une action $(g.f)(x):=f(g^{-1}.x), \forall f\in k[X], g\in G,x\in X$.\\
+Muni de cette action, $k[X]$ un $G$-module.
+\end{prop}
+\begin{proof}
+
+\end{proof}
+
+\begin{thm}
+Soit $G$ un groupe algébrique et $X$ une $G$ variété. $X$ est isomorphe en tant que $G$-variété à une sous $G$-variété fermée d'un $G$-module de dimension finie.
+\end{thm}
+
+\begin{cor}
+Tout groupe algébrique est linéaire.
+\end{cor}
+
+\begin{defn}
+Un groupe algébrique $G$ est dit réductif si tout $G$-module est semi-simple.
+\end{defn}
+
+\begin{ex}
+Les groupes finis et les quasitores sont réductifs.
+\end{ex}
 
 \subsection{Groupes quotients}
 \begin{thm}
-Soit $G$ un groupe algébrique, $H\leq G$ fermé. \\Alors il existe un $G$-module $V$ de dimension finie et une ligne $L\subset V$ telle que $H=Stab_G(L):=\lbrace g\in G| g.v\in L,\forall v\in L\rbrace$.
+Soit $G$ un groupe algébrique et $H\leq G$ fermé. \\Alors il existe un $G$-module $V$ de dimension finie et une ligne $L\subset V$ telle que $H=Stab_G(L):=\lbrace g\in G\mid g.v\in L,\forall v\in L\rbrace$.
 \end{thm}
+
 \begin{thm}
-Soit $G$ un groupe algébrique, $H\lhd G$ fermé. \\Alors il existe un $G$-module $(V, \rho)$ de dimension finie tel que $H=\Ker{\rho}$.
+Soit $G$ un groupe algébrique et $H\lhd G$ fermé. \\Alors il existe un $G$-module $(V, \rho)$ de dimension finie tel que $H=\Ker{\rho}$.
 \end{thm}
 Le théorème suivant est le résultat principal de cette section. Il prouve l'existence des groupes quotients dans la catégorie des groupes algébriques. L'unicité est une conséquence formelle de la propriété universelle du quotient.
 \begin{thm}[Car. 0]
@@ -197,7 +214,7 @@ Alors il existe une unique factorisation
 	\end{proof}
 \subsection{Quasitores}
 \section{Théorie des invariants}
-Soit $G$ un groupe algébrique et $X$ une $G$-variété affine. $k[X]$ est un $G$-module rationnel pour l'action naturelle de $G$ sur les fonctions régulières. on définit la sous-algèbre des invariants $k[X]^G:=\lbrace f\in\k[X]|g.f=f \forall g\in G\rbrace$. C'est par définition la sous-algèbre des fonctions constantes sur les orbites de l'action de $G$ sur $X$.\\
+Soit $G$ un groupe algébrique et $X$ une $G$-variété affine. $k[X]$ est un $G$-module rationnel pour l'action naturelle de $G$ sur les fonctions régulières. on définit la sous-algèbre des invariants $k[X]^G:=\lbrace f\in\k[X]\mid g.f=f \forall g\in G\rbrace$. C'est par définition la sous-algèbre des fonctions constantes sur les orbites de l'action de $G$ sur $X$.\\
 Supposons $G$ réductif. Le $G$-module $k[X]$ est alors semi-simple, en particulier, $k[X]^G$ admet un supplémentaire $G$-stable que l'on note $k[X]_G$. On définit l'opérateur de Reynolds $R_{k[X]}$ comme la projection sur $k[X]^G$ associée à cette décomposition. Voici quelques propriétés de $R_{k[X]}$:
 
 
