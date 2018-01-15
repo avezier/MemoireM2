@@ -1,0 +1,220 @@
+\chapter{Préliminaires}
+
+\section{Algèbres graduées}
+
+\section{Variétés algébriques}
+
+\subsection{Généralités}
+La référence principale est~\cite{LAGSpringer}. On rappelle ci-dessous les définitions et résultats de base. On rappelle que $k$ est un corps algébriquement clos (voir \hyperref[sec:conventions]{conventions}).
+\subsubsection{La topologie de Zariski dans $k^n$}
+\begin{defn}[Ens. alg. affine]
+Un ensemble algébrique affine est une partie de $k^n$ constituée de zéros communs à un ensemble de polynômes de $S:=k[X_1,...,X_n]$.\\
+Soient $\Sigma_1,\Sigma_2$ deux ensembles algébriques affine de $k^{n_1}$ (resp. $k^{n_2}$). Un morphisme est une application $\phi:\Sigma_1,\rightarrow \Sigma_2$ telle que les composantes de $\phi$ soient polynomiales.
+\end{defn}
+On remarque que les ensembles algébriques affines munis de leur morphismes constituent une catégorie. 
+Les ensembles algébriques affines sont de la forme $\mathcal{V}(I):=\lbrace x\in k^n|\forall P\in I, P(x)=0\rbrace$ où $I$ est un idéal de $S$. Ils sont stables par intersection quelconque, et on a $\mathcal{V}(S)=\emptyset$ et $\mathcal{V}(\lbrace 0\rbrace)=k^n$. Ainsi les ensembles algébriques affines constituent les fermés d'une topologie, dite de Zariski.\\
+Par ailleurs, à tout ensemble algébrique affine $\Sigma$ on associe l'idéal $\mathcal{I}(\Sigma):=\lbrace P\in k[X_1,...X_n] | P(x)=0, \forall x\in\Sigma \rbrace$. L'ensemble des morphismes $\Sigma\rightarrow k$ est doté d'une structure de k-algèbre évidente que l'on note $k[\Sigma]$. Cette algèbre est naturellement isomorphe à $S/\mathcal{I}(\Sigma)$. Elle est de type fini réduite, on dit que c'est une $k$-algèbre affine. D'après le Nullstellensatz on a $\mathcal{I}(\mathcal{V}(I))= \sqrt{I}$, d'où une bijection entre les sous-ensembles algébriques affines de $\Sigma$ et les idéaux radicaux de $k[\Sigma]$. En particulier les points de $\Sigma$ sont en bijection avec les idéaux maximaux de $k[\Sigma]$. On note $Specm(k[\Sigma])$ cet ensemble.
+\begin{prop}\label{eqaffinevaralg}
+La construction qui à $\Sigma$ associe $k[\Sigma]$ est fonctorielle. Le foncteur est pleinement fidèle et essentiellement surjectif.
+\end{prop}
+\begin{proof}
+
+\end{proof}
+\subsubsection{Irréductibilité}
+\begin{defn}[espace irréductible]
+
+\end{defn}
+\subsubsection{La catégorie des $k$-variétés algébriques affines}
+\begin{defn}[Espace annelé]\label{espaceannele}
+Un espace annelé est un espace topologique $X$ muni d'un faisceau de $k$-algèbres de fonctions sur $X$ à valeurs dans $k$. On dénote $\mathcal{O}_X$ ce faisceau.\\
+Soient $(X, \mathcal{O}_X), (Y, \mathcal{O}_Y)$ deux espaces annelés. Un morphisme d'espace annelé est une application continue $\phi: X\rightarrow Y$ telle que que la pré-composition par $\phi$ induit, pour tout ouvert $U$ de $Y$, un morphisme de $k$-algèbres $\phi^*:\mathcal{O}_Y(U) \rightarrow \mathcal{O}_X(\phi^{-1}U)$.
+\end{defn}
+
+\begin{defn}[Fonction régulière]
+Soit $\Sigma$ un ensemble algébrique affine, $x\in \Sigma$ et $U$ un ouvert contenant $x$. Une application $f:U\rightarrow k\in Map(U,k)$ est dite régulère en $x$ si $\exists\ g,h\in k[\Sigma]$ et un ouvert $V\subset U\cap D(h)$ contenant $x$ tel que $f(y) = g(y)/h(y), \forall y\in V$.\\
+$f$ est dite régulière sur $U$ si elle est régulière en tout point de $U$.
+\end{defn}
+
+On voit que les fonctions régulières sur les ouverts de X définissent un faisceau. Ainsi un ensemble algébrique affine muni de la topologie de Zariski et de son faisceau de fonctions régulières est un espace annelé. 
+
+\begin{prop}
+Soit $\Sigma$ un ensemble algébrique affine et $f\in k[\Sigma]^*$. On a $\mathcal{O}_\Sigma(D(f))\simeq k[\Sigma][1/f]$.
+\end{prop}
+\begin{proof}
+
+\end{proof}
+
+\begin{defn}[Variété algébrique affine]
+Une $k$-variété algébrique affine est un espace annelé isomorphe à un ensemble algébrique affine.
+\end{defn}
+
+Soit $\Sigma$ un ensemble algébrique affine. En utilisant la bijection entre $\Sigma$ et $Specm(k[\Sigma])$, on voit comment définir directement la topologie de Zariski sur $Specm(k[\Sigma])$ ainsi que le faisceau structural, faisant de ce dernier une variété algébrique affine. Concrètement, les fermés de $Specm(k[\Sigma])$ sont les $\mathcal{V}(I):=\lbrace m \in Specm(k[\Sigma]) | I\subset m \rbrace$. Les éléments de $k[\Sigma]$ définissent des fonctions sur $Specm(k[\Sigma])$ en les considérant modulo $m$, pour $m \in Specm(k[\Sigma])$. On peut définir le faisceau sur la base des ouverts principaux $D(f):=\lbrace m \in Specm(k[\Sigma]) | f \notin m\rbrace$ en posant $\mathcal{O}_{Specm(k[\Sigma])}(D(f))\simeq k[\Sigma][1/f]$\\
+Par construction $Specm(k[\Sigma])$ est isomorphe à $\Sigma$. Cela donne une manière intrinsèque de définir une variété algébrique affine, indépendamment d'un plongement dans un espace affine quelconque.\\
+On remarque que la catégorie des variétés algébriques est équivalente à celle des ensembles algébriques affines.
+\begin{ex}
+Soit $X$ une variété algébrique affine et $f\in k[X]$. $(D(f), \mathcal{O}_X(D(f)))$ est une variété algébrique affine.
+\end{ex}
+\begin{proof}
+
+\end{proof}
+
+\begin{prop}
+On note $\mathcal{O}_x$ la $k$-algèbre des fonctions régulières en $x\in X$. C'est par définition $ \underset{x\in U}{\varinjlim} \mathcal{O}(U)$. On a $\mathcal{O}_x\simeq k[X]_{m_x}$ (localisé en l'idéal maximal $m_x$).
+\end{prop}
+\begin{proof}
+
+\end{proof}
+
+\begin{cor}
+Soit $X$ une variété algébrique affine. On a $\mathcal{O}_X(X)\simeq k[X]$.
+\end{cor}
+
+
+
+\begin{prop}Soient $X,Y$ deux variétés algébriques affines.\\
+(i) le produit $X\times Y$ existe dans la catégorie des variétés algébriques affines. De plus on a $k[X\times Y]\simeq k[X]\otimes _k k[Y]$.\\
+(ii) Si $X$ et $Y$ sont irréductibles, alors $X\times Y$ aussi.
+\end{prop}
+\begin{proof}
+
+\end{proof}
+\subsection{Dimension}
+\subsection{Quelques résultats sur les morphismes}
+\subsubsection{Généralités}
+
+\subsubsection{Dimension des fibres}
+
+\subsubsection{Applications rationnelles}
+
+\subsubsection{Morphismes finis, normalité}
+
+\begin{defn}[Morphisme fini, localement fini]
+Soit $X \xrightarrow{f}Y$ un morphisme de variétés affines. On dit que $f$ est fini si la $k[Y]$-algèbre $(k[X], f^*)$ est finie.\\
+On dit qu'un morphisme est localement fini en $x\in X$ si ils existe un morphisme fini $Y' \xrightarrow{\mu}Y$ et un isomorphisme $\nu$ d'un ouvert de $X$ contenant $x$ sur un ouvert de $Y'$, tel que $\mu\nu =f_{|U}$.
+\end{defn}
+
+\begin{prop}Soient $X,Y$ deux variétés algébriques affines irréductibles de même dimension et $f:X \mapsto Y$ un morphisme dominant.\\
+Alors il existe $g\in k[Y]^*$ tel que le morphisme induit $f:X_g \mapsto Y_g$ soit fini, surjectif avec des fibres de même cardinal.
+\end{prop}
+\begin{proof}
+Par hypothèse, l'extension $k(Y) \xrightarrow{f^*} k(X)$ est algébrique finie, disons de degré n. En \textbf{caractéristique zéro} on peut trouver $u\in k(X)$ tel que $k(X)=k(Y)[u]$. On remarque que l'on peut imposer $u\in k[X]$. On considère $P:=P_{min}(u, k(Y))=T^n+a_1T^{n-1}+...+a_0$. En réduisant au même dénominateur on a $P\in k[Y]_{v_1}[T]$ pour un $v_1\in k[Y]$. \textcolor{red}{Est ce que $k[X]_{v_1}\simeq k[Y]_{v_1}[u]$ ? A priori pas de raison?}
+\end{proof}
+
+Ce résultat reste vrai en caractéristique positive, voir 
+~\cite{LAGSpringer} 5.1.6 pour une preuve légèrement différente dans ce cadre. On y montre que le cardinal de la fibre générale est $[k(X):k(Y)]_s$. En revanche pour le corollaire immédiat suivant, la caractéristique zéro est essentielle (penser par exemple au morphisme de Frobenius $\AAA^1 \xrightarrow{x \mapsto x^p} \AAA^1$ ). 
+\begin{cor}
+Avec les hypothèses de 5, si de plus $f$ est injectif, alors il existe $g\in k[Y]^*$ tel que le morphisme induit $f:X_g \mapsto Y_g$ soit un isomorphisme.
+\end{cor}
+
+\begin{prop}\label{facto}
+Soit $f:X \mapsto Y$ un morphisme dominant de variétés irréductibles. Soit $g:X \rightarrow Z$ constant sur les fibres de $f$. Alors il existe $h\in k[Y]^*$ et une factorisation
+	\begin{tikzcd}
+		X_h \arrow[r,"g"] \arrow[d,"f"] & Z \\
+		Y_h \arrow[ru, dashed]
+	\end{tikzcd}
+\end{prop}
+\begin{proof}
+	\begin{multicols}{2}
+	On considère $\phi=(f,g):X\rightarrow Y\times Z$ et le diagramme commutatif ci-contre. Comme $f$ est dominant, $\pi_1$ l'est aussi. De plus $\overline{\phi(X)}$ est irréductible et $\phi(X)$ contient un ouvert dense de $\overline{\phi(X)}$. Par ailleurs comme $g$ est constante sur les fibres de $f$ on vérifie que $\pi_1$ est injective sur $\phi(X)$. Par le corollaire précédent, $\pi_1$ réalise un isomorphisme $\overline{\phi(X)}_h \xrightarrow{\pi_1} Y_h$ pour un $h\in k[Y]^*$. Finalement, le morphisme recherché est  $Y_h \xrightarrow{\pi_2\pi_1^{-1}} Z$ 
+	
+	\columnbreak
+	\begin{center}
+	\begin{tikzcd}
+  		& X \arrow[ldd,bend right,swap, "f"] \arrow[d, "\phi"] \arrow[rdd, bend left,"g"]  &\\ 
+  		& \overline{\phi(X)} \arrow[ld,swap,"\pi_1"] \arrow[d,"i=\subset"] \arrow[rd,"\pi_2"]  &\\ 
+		Y & \arrow[l,"p_1"]  Y\times Z \arrow[r,swap,"p_2"]  & Z
+	\end{tikzcd}\\
+	\end{center}
+	\end{multicols}
+\end{proof}
+
+\begin{prop}
+Soit $f:X \mapsto Y$ un morphisme de variétés affines et $x\in X$. Si la fibre de $f(x)$ est finie, alors $f$ est localement fini en $x$.
+\end{prop}
+
+\begin{thm}
+Soit $f:X \mapsto Y$ un morphisme bijectif de variétés irréductibles avec $Y$ normale. Alors $f$ est un isomorphisme.
+\end{thm}
+
+
+
+\subsection{Diviseurs}
+
+
+\section{Groupes algébriques affines}
+\subsection{Généralités}
+\subsection{G-variétés, représentations}
+
+\begin{defn}
+G-variétés
+\end{defn}
+
+\begin{defn}
+Une représentation de $G$, ou $G$-module est un couple $(V, \rho)$ ou
+semi-simple module.
+\end{defn}
+
+\begin{defn}
+$k[X] est un G-module$
+\end{defn}
+
+\begin{thm}
+Every affine
+\end{thm}
+
+\begin{cor}
+Every affine
+\end{cor}
+
+\begin{defn}
+Groupe reductif
+\end{defn}
+
+\begin{prop}
+Groupe reductif
+\end{prop}
+
+\subsection{Groupes quotients}
+\begin{thm}
+Soit $G$ un groupe algébrique, $H\leq G$ fermé. \\Alors il existe un $G$-module $V$ de dimension finie et une ligne $L\subset V$ telle que $H=Stab_G(L):=\lbrace g\in G| g.v\in L,\forall v\in L\rbrace$.
+\end{thm}
+\begin{thm}
+Soit $G$ un groupe algébrique, $H\lhd G$ fermé. \\Alors il existe un $G$-module $(V, \rho)$ de dimension finie tel que $H=\Ker{\rho}$.
+\end{thm}
+Le théorème suivant est le résultat principal de cette section. Il prouve l'existence des groupes quotients dans la catégorie des groupes algébriques. L'unicité est une conséquence formelle de la propriété universelle du quotient.
+\begin{thm}[Car. 0]
+Soient $G, H, (V, \rho)$ comme dans le théorème précédent, et $G \xrightarrow{f} G'$ un morphisme de groupes algébriques tel que $H\subset \Ker f$.\\
+Alors il existe une unique factorisation 	
+	\begin{tikzcd}
+		G \arrow[r,"f"] \arrow[d,"\rho"] & G' \\
+		\rho(G) \arrow[ru, "\exists ! \phi", swap, dashed]
+	\end{tikzcd}
+\end{thm}
+\begin{proof}
+	Le morphisme $\phi$ recherché existe en tant que morphisme de groupes abstraits, il est G-équivariant pour les actions naturelles de G sur $\rho(G)$ et $G'$ via $\rho$ et $f$. Concrètement cela signifie $\forall g_1, g_2 \in G, \phi(\rho(g_1)\rho(g_2))=f(g_1)\phi(\rho(g_2))$. Si $G$ est connexe, d'après la proposition \ref{facto}, $\phi$ est un morphisme sur un ouvert $U$ non-vide de $\rho(G)$. Or on a un recouvrement de $\rho(G)$ par des $g.U$. En écrivant pour $x\in g.U,  \phi(g_1)=f(g)\phi(g^{-1}.x))$, on constate que $\phi$ est un morphisme de groupes algébriques.
+	\\Supposons $G$ quelconque mais $H\leq G^\circ$. Comme $\phi$ est algébrique sur le sous-groupe $G^\circ/H$ d'après ce qui précède, on a $\phi$ algébrique partout à nouveau par G-équivariance.\\
+	On peut se ramener au cas précédent en procédant en deux étapes. Dans un premier temps, on quotiente par le sous-groupe normal connexe $H^\circ$ (on a bien $H^\circ\leq G^\circ$), puis on quotiente par le sous-groupe normal fini $H/H^\circ$. Il reste donc à prouver le cas $H$ fini, c'est un corollaire direct de proposition \ref{}.
+	\end{proof}
+\subsection{Quasitores}
+\section{Théorie des invariants}
+Soit $G$ un groupe algébrique et $X$ une $G$-variété affine. $k[X]$ est un $G$-module rationnel pour l'action naturelle de $G$ sur les fonctions régulières. on définit la sous-algèbre des invariants $k[X]^G:=\lbrace f\in\k[X]|g.f=f \forall g\in G\rbrace$. C'est par définition la sous-algèbre des fonctions constantes sur les orbites de l'action de $G$ sur $X$.\\
+Supposons $G$ réductif. Le $G$-module $k[X]$ est alors semi-simple, en particulier, $k[X]^G$ admet un supplémentaire $G$-stable que l'on note $k[X]_G$. On définit l'opérateur de Reynolds $R_{k[X]}$ comme la projection sur $k[X]^G$ associée à cette décomposition. Voici quelques propriétés de $R_{k[X]}$:
+
+
+\begin{prop}
+(i) Soit $V \xrightarrow{f}W$ un morphisme de $G$-module et $V^G \xrightarrow{f^G}W^G$ le morphisme induit. On a $R_Wf=fR_V$. En particulier, si $f$ est surjective, $f^G$ l'est aussi.\\
+(ii) $R_{k[X]}$ est $K[X]^G$-linéaire\\
+
+\end{prop}
+\begin{proof}
+(i) ok\\
+(ii) Soit $a\in k[X]^G$. on considère $m_a$ la multiplication par $a$ dans $k[X]$. C'est un endomorphisme de $G$-module, il commute donc avec $R_{k[X]}$. 
+\end{proof}
+
+\begin{thm}[Hilbert]
+Soit $G$ un groupe réductif et $X$ une $G$-variété affine. Alors l'algèbre des invariant $k[X]^G$ est de type fini.
+\end{thm}
+\begin{proof}
+Supposons que $X$ soit un $G$-module $V$ de dimension finie. L'action de $k^*$ sur $V$ par homothétie donne une graduation $k[V]=\oplus{n=0}{\infty}$ 
+\end{proof}
+

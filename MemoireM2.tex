@@ -1,0 +1,53 @@
+\documentclass[oneside, 10pt]{book}
+
+\usepackage[french]{babel}
+\selectlanguage{french}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Be sure to use PDF Latex
+\pdfoutput=1
+
+\usepackage[bookmarks,bookmarksdepth=2, colorlinks=true, linkcolor=blue,citecolor=red, urlcolor=blue]{hyperref}
+
+\usepackage{fullpage}
+
+\usepackage{mystyle}
+\usepackage{wrapfig}
+\usepackage{tikz-cd}
+\usepackage{multicol}
+
+\graphicspath{{./figures/}}
+
+
+\newcommand{\myauthor}[3]{#1\protect\footnote{#2, \protect\url{#3}}}
+
+
+\title{\Huge \sf Mémoire M2\vspace{1cm}} 
+
+\author{%
+\begin{tabular}{c}
+	Antoine VEZIER \\
+\end{tabular}
+}
+
+
+\date{\today}
+
+%%
+
+\begin{document}
+
+
+\maketitle
+
+\tableofcontents
+\include{chapters/introduction}
+\include{chapters/preliminaires}
+
+% \nocite{*}
+
+\bibliographystyle{plain}
+\bibliography{biblio/biblio}
+
+\end{document}
