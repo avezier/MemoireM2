@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  15 JAN 2018 22:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  16 JAN 2018 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,9 +725,9 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 \c@prop=\count129
 \c@cor=\count130
 \c@alg=\count131
-\c@ex=\count132
-\c@lem=\count133
-\c@defn=\count134
+\c@lem=\count132
+\c@defn=\count133
+\c@ex=\count134
 \c@rem=\count135
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
@@ -1161,27 +1161,27 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 43.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 42.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 43.
+LaTeX Font Info:    Try loading font information for U+msa on input line 42.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 43.
+LaTeX Font Info:    Try loading font information for U+msb on input line 42.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 43.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 42.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 43.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 42.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
 
@@ -1195,7 +1195,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.45 \include{chapters/introduction}
+l.44 \include{chapters/introduction}
                                      [1
 
 ]
@@ -1218,67 +1218,71 @@ Chapitre 1.
 
 ] [5] [6] [7]
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 213.
+LaTeX Warning: Reference `' on page 8 undefined on input line 223.
 
 
-LaTeX Warning: Command \k invalid in math mode on input line 217.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
-) [8] (./MemoireM2.bbl) [9
+[8] [9]) [10] (./MemoireM2.bbl
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 6.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)) [11
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
- (./MemoireM2.aux (./chapters/introduction.aux)
-(./chapters/preliminaires.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
+
+(./MemoireM2.aux (./chapters/introduction.aux) (./chapters/preliminaires.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `MemoireM2.out' has not changed.
-(rerunfilecheck)             Checksum: 9EC4D8BF3B2561C7A4DE585DA3C88891;931.
+(rerunfilecheck)             Checksum: CA71B5BD4B7BAB75CD527221B1C78D3C;1148.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 20239 strings out of 492995
- 374589 string characters out of 6132704
- 464680 words of memory out of 5000000
- 23309 multiletter control sequences out of 15000+600000
- 22140 words of font info for 65 fonts, out of 8000000 for 9000
+ 20284 strings out of 492995
+ 375624 string characters out of 6132704
+ 465212 words of memory out of 5000000
+ 23335 multiletter control sequences out of 15000+600000
+ 23987 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,18n,84p,836b,1066s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,18n,84p,1065b,1066s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on MemoireM2.pdf (10 pages, 278017 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on MemoireM2.pdf (12 pages, 323868 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 308 PDF objects out of 1000 (max. 8388607)
+ 269 compressed objects within 3 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
