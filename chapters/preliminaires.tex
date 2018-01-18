@@ -174,7 +174,7 @@ Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique 
 \begin{prop}
 Soit $G$ un groupe algébrique, $X$ une $G$-variété et $x\in X$.\\
 (i) $G.x$ est ouvert dans $\overline{G.x}$.\\
-(ii) Toute composante irréductible de $\overline{G.x}$ a pour dimension $dim (G)-dim(G.x)$.\\
+(ii) Toute composante irréductible de $G.x$ a pour dimension $dim (G)-dim(G.x)$.\\
 (iii) $\overline{G.x}\setminus G.X$ est une union d'orbites de dimension $<dim(\overline{G.x})$.\\
 (iv) $G.x$ est ouvert dans $\overline{G.x}$.
 \end{prop}
@@ -273,17 +273,16 @@ Soit $S\subset X$ une sous-variété fermée. Définissons $Z(S)=\lbrace g\in G\
 Supposons que l'on ait un ouvert dense $U\subset X$ tel que $\forall x\in U,\, G.x$ intersecte $S$, alors on voit que $\phi$ est injective. Si de plus, $k[S]^W$ est engendré par des $\phi(f_1),...,\phi(f_r)$, alors $\phi$ est un isomorphisme et $k[X]^G$ est engendré par $f_1,...,f_r$.
 
 \begin{ex}
-$G=GL_n$, $X=M_n$, $g.A=gAg^{-1}, S=D_n, U=X_{disc(\chi )}$. En considérant un élément de $U$, qui a donc ses valeurs propres deux à deux distinctes, on a par un calcul direct on a $Z(S)=D_n$, et comme la conjugaison préserve les espaces propres, on a $N(S)=\lbrace\textrm{matrices monomiales}\rbrace$. Ainsi, $W$ est isomorphe au groupe symétrique $\Sigma_n$ et agit sur $S$ en permutant les entrées diagonales. On a ainsi $k[S]^W=k[\sigma_1,...,\sigma _n]$, l'algèbre engendrée par les fonctions polynômes élémentaires. C'est une algèbre de polynômes.\\
-Soient $f_1,...,f_n$ les coefficient du polynôme caractéristique générique. Ce sont éléments de $k[X]^G$, et on a $f_{i| S}=(-1)^i\sigma _i$, d'où $k[X]^G=k[f_1,...,f_n]$.
+$G=GL_n$,\, $X=M_n$,\, $g.A=gAg^{-1},\, S=D_n,\, U=X_{disc(\chi )}$. En considérant un élément de $U$, qui a donc ses valeurs propres deux à deux distinctes, on a par un calcul direct $Z(S)=D_n$. Puis on a $N(S)=\lbrace\textrm{matrices monomiales}\rbrace$ car la conjugaison préserve les espaces propres. Ainsi, $W$ est isomorphe au groupe symétrique $\Sigma_n$ et agit sur $S$ en permutant les entrées diagonales. On a ainsi $k[S]^W=k[\sigma_1,...,\sigma _n]$, l'algèbre engendrée par les fonctions polynômes élémentaires. C'est une algèbre de polynômes.\\
+Soient $f_1,...,f_n$ les coefficient du polynôme caractéristique générique. Ce sont des éléments de $k[X]^G$, et on a $f_{i| S}=(-1)^i\sigma _i$, d'où $k[X]^G=k[f_1,...,f_n]$.
 \end{ex}
 
 \subsection{Quotient d'une variété algébrique sous l'action d'un groupe algébrique}
 
 \subsubsection{Quotient catégorique}
 
-Soit $G$ un groupe algébrique et $X$ une $G$-variété. En tant que groupe abstrait agissant sur un ensemble, le quotient de $X$ par $G$ (noté $X//G$) est par définition l'ensemble des orbites. On note $\pi:X \rightarrow X//G$ l'application qui à un élément de $X$ associe son orbite. $X//G$ satisfait une propriété universelle, il représente le foncteur $\textrm{Ens}\rightarrow \textrm{Ens}, Y\mapsto \lbrace f\in \textrm{Map}(X, Y)\mid f \textrm{ est constante sur les orbites} \rbrace$. Pour cette raison la paire $(X//G, \pi)$ est appelé un quotient catégorique. \\ 
-On peut ainsi transporter cette définition dans la catégorie des variétés algébriques. Toutefois, il n'est pas clair que ce quotient existe toujours. On remarque que si il existe, il est unique à isomorphisme près, on le nomme le quotient catégorique, et on le note $X//G$.
-L'exemple suivant montre que lorsqu'il existe, le quotient catégorique ne coïncide pas nécessairement avec l'ensemble des orbites.
+Soit $G$ un groupe algébrique et $X$ une $G$-variété. En tant que groupe abstrait agissant sur un ensemble, le quotient de $X$ par $G$ (noté $X//G$) est par définition l'ensemble des orbites. On note $\pi:X \rightarrow X//G$ l'application qui à un élément de $X$ associe son orbite. $X//G$ satisfait une propriété universelle, il représente le foncteur $\textrm{Ens}\rightarrow \textrm{Ens}, Y\mapsto \lbrace f\in \textrm{Map}(X, Y)\mid f \textrm{ est constante sur les orbites} \rbrace$, il est donc unique à isomorphisme près. Pour cette raison la paire $(X//G, \pi)$ est appelée le quotient catégorique. \\ 
+On peut ainsi transporter cette définition dans la catégorie des variétés algébriques. Toutefois, il n'est pas clair que ce quotient existe toujours. L'exemple suivant montre que lorsqu'il existe, le quotient catégorique ne coïncide pas nécessairement avec l'ensemble des orbites.
 
 \begin{ex}
 On considère l'action naturelle de $GL_n$ sur $\AAA^n$. Le quotient catégorique existe et est un point. En effet soir $f:\AAA^n\rightarrow Z$ constant sur les orbites, alors $f$ est constante car il existe un orbite dense. En revanche il y a un deuxième orbite, c'est le fermé $\lbrace 0\rbrace$. 
@@ -306,12 +305,12 @@ Soit $I$ (resp. $I'$) l'idéal de $Z$ (resp. $Z'$) dans $k[X]$. L'idéal de $Z\c
 (iv) d'après (iii), $\pi_X$ envoie deux orbites fermés distincts sur deux points distincts.
 \end{proof}
 
-On remarque les propriétés du théorème précédent s'étendent automatiquement au cas d'une $G$-variété $X$ si le théorème est vérifié localement sur un recouvrement affine d'un candidat $Y$ pour le quotient $X//G$. De ce constat découle la notion de bon quotient.
+On remarque que les propriétés du théorème précédent s'étendent automatiquement au cas d'une $G$-variété $X$ si le théorème est vérifié localement sur un recouvrement affine d'un candidat $Y$ pour le quotient $X//G$. De ce constat découle la notion de bon quotient.
 
 \begin{defn}
 Soit $G$ un groupe réductif et $X$ une $G$-variété. Une paire $(Y, \pi)$ où $Y$ est une variété et $\pi$ un morphisme $X\rightarrow Y$ est un bon quotient si elle vérifie:\\
 (i) $\pi$ est affine et $G$-invariant.\\
-(ii) $\pi^*:\Oo_Y \rightarrow (\pi_*\Oo_X)^G$ est un isomorphisme.\\
+(ii) $\pi^*:\Oo_Y \rightarrow (\pi_*\Oo_X)^G$ est un isomorphisme.
 \end{defn}
 
 \begin{ex}
@@ -326,14 +325,14 @@ Parmi les quotients catégoriques $(X//G,\pi)$, on cherche à caractériser ceux
 \begin{defn}
 Soit $G$ un groupe algébrique et $X$ une $G$-variété. Une paire $(Y, \pi)$ où $Y$ est une variété et $\pi$ un morphisme $X\rightarrow Y$ est un quotient géométrique si elle vérifie:\\
 (i) $\pi$ est surjective et ses fibres sont exactement les orbites.\\
-(ii) La topologie de $Y$ coïncide avec la topologie quotient.\\
+(ii) La topologie de $Y$ coïncide avec la topologie quotient associée à $\pi$.\\
 (iii) $\pi^*:\Oo_Y \rightarrow (\pi_*\Oo_X)^G$ est un isomorphisme.
 \end{defn}
 
-On remarque que pour un quotient géométrique $(X//G, \pi)$, tous les orbites sont fermés et l'application quotient est ouverte. En effet, soit $U$ un ouvert de $X$, on a $\pi^{-1}(\pi(U))=\cup_{g\in G}g.U$ qui est ouvert.
+On remarque que pour un quotient géométrique $(X//G, \pi)$, tous les orbites sont fermés dans $X$ et l'application quotient est ouverte. En effet, soit $U$ un ouvert de $X$, on a $\pi^{-1}(\pi(U))=\cup_{g\in G}g.U$ qui est ouvert.
 
 \begin{ex}
-Soit $G$ un groupe algébrique et $H$ un sous-groupe fermé. Dans la catégorie des ensemble, le quotient $(G/H,\pi)$ est exactement le quotient catégorique $(G//H,\pi)$ pour l'action de $H$ sur $G$ par multiplication à droite. Dans \cite{LAGSpringer} 5.5.5, en caractéristique quelconque, on munit $G/H$ d'une structure d'espace annelé en lui attribuant la topologie quotient puis en définissant le faisceau structural par $\Oo_{G/H}(U):=\lbrace f\in\textrm{Map}(U,k)\mid f\pi \in \Oo_G(\pi^{-1}(U))\rbrace$. On montre ensuite que cet espace annelé est isomorphe à une variété quasi-projective, ce qui montre l'existence du quotient catégorique $(G//H,\pi)$ dans la catégorie des variétés algébriques. Par définition de $\Oo_{G/H}$, on a une flèche $\Oo_Y \xrightarrow{\pi^*} (\pi_*\Oo_X)^G$. Elle est injective par la surjectivité de $\pi$, et elle est surjective, par la propriété universelle du quotient. $(G//H,\pi)$ est donc un quotient géométrique. Cela généralise bien sur le théorème \ref{groupequotient}.
+Soit $G$ un groupe algébrique et $H$ un sous-groupe fermé. Dans la catégorie des ensemble, le quotient $(G/H,\pi)$ est exactement le quotient catégorique $(G//H,\pi)$ pour l'action de $H$ sur $G$ par multiplication à droite. Dans \cite{LAGSpringer} 5.5.5, en caractéristique quelconque, on munit $G/H$ d'une structure d'espace annelé en lui attribuant la topologie quotient puis en définissant le faisceau structural par $\Oo_{G/H}(U):=\lbrace f\in\textrm{Map}(U,k)\mid f\pi \in \Oo_G(\pi^{-1}(U))\rbrace$. Par construction, il vérifie la propriété universelle de factorisation. De plus, on montre ensuite que cet espace annelé est isomorphe à une variété quasi-projective, ce qui montre l'existence du quotient catégorique $(G//H,\pi)$ dans la catégorie des variétés algébriques. Par définition de $\Oo_{G/H}$, on a une flèche $\Oo_Y \xrightarrow{\pi^*} (\pi_*\Oo_X)^G$. Elle est injective par la surjectivité de $\pi$, et elle est surjective, par la propriété universelle du quotient. $(G//H,\pi)$ est donc un quotient géométrique. Cela généralise bien sur le théorème \ref{groupequotient}.
 \end{ex}
 
 \begin{ex}
@@ -341,9 +340,29 @@ Un bon quotient $(X//G, \pi)$ est un quotient géométrique si les fibres de $\p
 \end{ex}
 
 \subsubsection{Un exemple: La construction Proj}
-Soit $X$ une variété affine munie d'une action de $k^*$. Une orbite $k^*.x$ est de dimension 0 ou 1. Si il est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, soit il est fermé, soit son adhérence est constitué de $k^*.x$  et d'une réunion de points fixes. Ainsi si on note $F$ l'ensemble des points fixes, $W:=X\setminus F$ est une réunion d'orbites fermés. On va montrer que $W$ admet un quotient géométrique, c'est la construction Proj.
-Soit $A=\oplus A_d$ une algèbre affine $\ZZ_{\geq 0}$-graduée. L'idéal inconvenant est par définition $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d\geq 0)$. Pour tout $f\in A_{>0}$ homogène, la localisation $A_f$ est $\ZZ$-graduée de la manière suivante:
+Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n$($k$). On considère une variété affine $X$ munie d'une action de $k^*$. Une orbite $k^*.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $k^*.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir. On note $F$ l'ensemble des points fixes. \\
+L'algèbre affine $A:=k[X]$ est $\ZZ_{\geq 0}$-graduée par l'action de $k^*$ et on remarque que $F=\mathcal{V}_X(A_{>0})$, où $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d\geq 0)$ est l'idéal dit inconvenant. En effet, on peut remarquer qu'un idéal est $k^*$-stable si et seulement si il est homogène. Par ailleurs, un idéal homogène maximal contient nécessairement $A_{>0}$.\\
+On remarque que $A^{k^*}=A_0=A/A_{>0}$, et comme le bon quotient $Y_0:=X//k^*=\spm (A_0)$ paramètre les orbites fermés, on obtient en particulier que si $k^*.x$ n'est pas fermé, son adhérence contient un unique point fixe. En résumé, $W:=X\setminus F$ est la réunion des orbites de dimension 1, et ils sont tous fermés dans $W$. On va montrer que $W$ admet un quotient géométrique, c'est la construction Proj.\\
+Pour tout $f\in A_{>0}$ homogène, la localisation $A_f$ est $\ZZ$-graduée de la manière suivante:
 \begin{center}
  $A_f=\bigoplus_{d\in \ZZ},\,\,\,\, (A_f)_d:=\lbrace h/f^l\mid \textrm{deg}(h)-l\textrm{deg}(f)=d \rbrace$
 \end{center}
-On note $A_{(f)}:=(A_f)_0$ qui est de type fini d'après la proposition \ref{}, et on pose $X:=\spm (A),\, Y_0:=\spm (A_0),\, X_f=\spm (A_f),$ et $U_f=\spm(A_{(f)})$.
+On note $A_{(f)}:=(A_f)_0$ en remarquant qu'il s'agit de l'algèbre des invariants de la $k^*$-variété affine $X_f$. On a ainsi trouvé le bon quotient $U_f:=\spm(A_{(f)})=X_f//k^*$. De plus, comme $F\subset\mathcal{V}_X(f)$,  il s'agit d'un quotient géométrique d'après ce qui précède. Or on peut recouvrir $W$ par un nombre fini de $X_{f_i}$ avec les $f_i$ homogènes de degrés $>0$. Considérons les diagrammes commutatifs ci-dessous. Dans le diagramme de gauche, toutes les flèches sont des inclusions. Le diagramme de droite est obtenu par application du foncteur $\spm$:
+\begin{multicols}{2}
+	\begin{center}
+	\begin{tikzcd}
+  		A_{f_i} \arrow[r, ""] & A_{f_if_j}  & A_{f_j} \arrow[l, ""]\\ 
+  		A_{(f_i)} \arrow[r, ""] \arrow[u, ""] & A_{(f_if_j)}  \arrow[u, ""] & A_{(f_j)} \arrow[l, ""] \arrow[u, ""]
+	\end{tikzcd}\\
+	\end{center}
+	
+	\columnbreak
+	\begin{center}
+	\begin{tikzcd}
+  		X_{f_i} \arrow[d, "\pi_i"] & X_{f_i}\cap X_{f_j}=X_{f_jf_j} \arrow[l, ""] \arrow[d, ""] \arrow[r, ""] & X_{f_j}  \arrow[d, "\pi_j"]\\ 
+  		U_{f_i}  & U_{f_if_j}  \arrow[l, ""] \arrow[r, ""]   & U_{f_j} 
+	\end{tikzcd}\\
+	\end{center}
+\end{multicols}
+Les flèches horizontales du diagramme de droite sont des immersions ouvertes, en effet on a $U_{f_if_j}\simeq (U_{f_i})_{f_j}$. Les $(U_{f_i},\pi_i)$ sont des quotients géométriques et le diagramme exprime que l'on a les conditions de recollement sur les intersections pour former un quotient géométrique global $\textrm{Proj}(A):=W//k^*$.\\
+Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-stables de $W$, c'est à dire aux idéaux radicaux homogènes qui ne contiennent pas l'idéal inconvenant. On appelle ces fermés des variétés projectives. La topologie quotient sur Proj($A$) que l'on vient de définir est aussi appelé la topologie de Zariski.
