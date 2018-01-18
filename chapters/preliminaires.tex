@@ -88,6 +88,19 @@ Soit $X$ une variété algébrique affine. On a $\mathcal{O}_X(X)\simeq k[X]$.
 \begin{proof}
 
 \end{proof}
+
+\subsubsection{La catégorie des $k$-variétés algébriques}
+
+\begin{cons}\label{gluevar}
+Soit $(X_i)_{u\in I}$ une famille finie de prevariétés. Supposons $\forall i,j$ avec $i\neq j$ on ait des ouverts $U_{ij}\subset X_i$ et des isomorphismes $f_{ij}:U_{ij}\rightarrow U_{ji}$ tels que $\forall i,j,k\in I$ distincts on ait:
+	\begin{enumerate}
+	\item $f_{ij}=f_{ji}^{-1}$
+	\item $U_{ij}\cup f_{ij}^{-1}(U_{jk})\subset U_{ik}^{-1}$ et $f_{jk}f_{ij}=f_{ik}$ sur $U_{ij}\cup f_{ij}^{-1}(U_{jk})$
+	\end{enumerate}
+Alors on définit une prevariété X comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $a\sim f_{ji}(a),\forall a\in U_{ij}\subset X_i$, et $a\sim a \forall a$. La topologie est la topologie finale associée aux inclusions $inc_i:X_i\subset X$. Le faisceau structural est définit par $\Oo_X(U):=\lbrace \phi\in \textrm{Map}(U,k)\mid inc_i^*\phi\in\Oo_{X_i}(inc_i^{-1}(U))\rbrace$
+\end{cons}
+
+
 \subsection{Dimension}
 \subsection{Quelques résultats sur les morphismes}
 \subsubsection{Généralités}
@@ -201,7 +214,9 @@ Soit $G$ un groupe algébrique et $X$ une $G$-variété. $k[X]$ est naturellemen
 Muni de cette action, $k[X]$ un $G$-module.
 \end{prop}
 \begin{proof}
-
+On note $a:G\times X\rightarrow X$ le morphisme associé à l'action de $G$. Cela donne $\forall g,x \in G\times X$, $a^*(f)(g,x)=g^{-1}.f(x)=\sum_{i=1}^r\phi_i(g)\psi_i(x)$, d'où $g.f=\sum_{i=1}^r\phi_i(g)\psi_i\in k[X]$. Ainsi les translaté $g.f$ pour $g\in G$ engendrent un $k$-ev $V(f)$ de dimension finie et $G$-stable. \\
+De plus l'action est algébrique. En effet $\forall l\in V(f)^*$, qu'on prolonge en $l'\in \textrm{Vect}_k(\psi_1,...,\psi_r)^*$. On a $\forall h\in G, g\mapsto l(g.(h.f))=\sum_{i=1}^r\phi_i((gh)^{-1})l'(\psi_i)\in k[G]$.\\
+Finalement $k[X]=\cup_{f\in k[X]}V(f)$ est un G-module.
 \end{proof}
 
 \begin{thm}\label{embed}
@@ -273,7 +288,7 @@ Soit $S\subset X$ une sous-variété fermée. Définissons $Z(S)=\lbrace g\in G\
 Supposons que l'on ait un ouvert dense $U\subset X$ tel que $\forall x\in U,\, G.x$ intersecte $S$, alors on voit que $\phi$ est injective. Si de plus, $k[S]^W$ est engendré par des $\phi(f_1),...,\phi(f_r)$, alors $\phi$ est un isomorphisme et $k[X]^G$ est engendré par $f_1,...,f_r$.
 
 \begin{ex}
-$G=GL_n$,\, $X=M_n$,\, $g.A=gAg^{-1},\, S=D_n,\, U=X_{disc(\chi )}$. En considérant un élément de $U$, qui a donc ses valeurs propres deux à deux distinctes, on a par un calcul direct $Z(S)=D_n$. Puis on a $N(S)=\lbrace\textrm{matrices monomiales}\rbrace$ car la conjugaison préserve les espaces propres. Ainsi, $W$ est isomorphe au groupe symétrique $\Sigma_n$ et agit sur $S$ en permutant les entrées diagonales. On a ainsi $k[S]^W=k[\sigma_1,...,\sigma _n]$, l'algèbre engendrée par les fonctions polynômes élémentaires. C'est une algèbre de polynômes.\\
+$G=GL_n$,\, $X=M_n$,\, $g.A=gAg^{-1},\, S=D_n,\, U=X_{disc(\chi )}$. En considérant un élément de $U$, qui a donc ses valeurs propres deux à deux distinctes, on a par un calcul direct $Z(S)=D_n$. Puis on a $N(S)=\lbrace\textrm{matrices monomiales}\rbrace$ car la conjugaison préserve les espaces propres. Ainsi, $W$ est isomorphe au groupe symétrique $\Sigma_n$ et agit sur $S$ en permutant les entrées diagonales. On a ainsi $k[S]^W=k[\sigma_1,...,\sigma _n]$, l'algèbre engendrée par les fonctions symétriques élémentaires. C'est une algèbre de polynômes.\\
 Soient $f_1,...,f_n$ les coefficient du polynôme caractéristique générique. Ce sont des éléments de $k[X]^G$, et on a $f_{i| S}=(-1)^i\sigma _i$, d'où $k[X]^G=k[f_1,...,f_n]$.
 \end{ex}
 
@@ -281,7 +296,7 @@ Soient $f_1,...,f_n$ les coefficient du polynôme caractéristique générique. 
 
 \subsubsection{Quotient catégorique}
 
-Soit $G$ un groupe algébrique et $X$ une $G$-variété. En tant que groupe abstrait agissant sur un ensemble, le quotient de $X$ par $G$ (noté $X//G$) est par définition l'ensemble des orbites. On note $\pi:X \rightarrow X//G$ l'application qui à un élément de $X$ associe son orbite. $X//G$ satisfait une propriété universelle, il représente le foncteur $\textrm{Ens}\rightarrow \textrm{Ens}, Y\mapsto \lbrace f\in \textrm{Map}(X, Y)\mid f \textrm{ est constante sur les orbites} \rbrace$, il est donc unique à isomorphisme près. Pour cette raison la paire $(X//G, \pi)$ est appelée le quotient catégorique. \\ 
+Soit $G$ un groupe algébrique et $X$ une $G$-variété. En tant que groupe abstrait agissant sur un ensemble, le quotient de $X$ par $G$ (noté $X//G$) est par définition l'ensemble des orbites. On note $\pi:X \rightarrow X//G$ l'application qui à un élément de $X$ associe son orbite. $X//G$ satisfait une propriété universelle, il représente le foncteur $\textrm{Ens}\rightarrow \textrm{Ens}, Y\mapsto \lbrace f\in \textrm{Map}(X, Y)\mid f \textrm{ est constante sur les orbites} \rbrace$, il est donc unique à isomorphisme près. Pour cette raison la paire $(X//G, \pi)$ est appelée le quotient catégorique de $X$ par $G$. \\ 
 On peut ainsi transporter cette définition dans la catégorie des variétés algébriques. Toutefois, il n'est pas clair que ce quotient existe toujours. L'exemple suivant montre que lorsqu'il existe, le quotient catégorique ne coïncide pas nécessairement avec l'ensemble des orbites.
 
 \begin{ex}
@@ -341,7 +356,7 @@ Un bon quotient $(X//G, \pi)$ est un quotient géométrique si les fibres de $\p
 
 \subsubsection{Un exemple: La construction Proj}
 Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n$($k$). On considère une variété affine $X$ munie d'une action de $k^*$. Une orbite $k^*.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $k^*.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir. On note $F$ l'ensemble des points fixes. \\
-L'algèbre affine $A:=k[X]$ est $\ZZ_{\geq 0}$-graduée par l'action de $k^*$ et on remarque que $F=\mathcal{V}_X(A_{>0})$, où $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d\geq 0)$ est l'idéal dit inconvenant. En effet, on peut remarquer qu'un idéal est $k^*$-stable si et seulement si il est homogène. Par ailleurs, un idéal homogène maximal contient nécessairement $A_{>0}$.\\
+L'algèbre affine $A:=k[X]$ est $\NN$-graduée par l'action de $k^*$ et on remarque que $F=\mathcal{V}_X(A_{>0})$, où $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d\geq 0)$ est l'idéal dit inconvenant. En effet, $F$ est l'ensemble des idéaux maximaux qui sont $k^*$-stables. Or on peut remarquer qu'un idéal radical est $k^*$-stable si et seulement si il est homogène. Enfin, un idéal maximal et homogène contient nécessairement $A_{>0}$.\\
 On remarque que $A^{k^*}=A_0=A/A_{>0}$, et comme le bon quotient $Y_0:=X//k^*=\spm (A_0)$ paramètre les orbites fermés, on obtient en particulier que si $k^*.x$ n'est pas fermé, son adhérence contient un unique point fixe. En résumé, $W:=X\setminus F$ est la réunion des orbites de dimension 1, et ils sont tous fermés dans $W$. On va montrer que $W$ admet un quotient géométrique, c'est la construction Proj.\\
 Pour tout $f\in A_{>0}$ homogène, la localisation $A_f$ est $\ZZ$-graduée de la manière suivante:
 \begin{center}
@@ -364,5 +379,7 @@ On note $A_{(f)}:=(A_f)_0$ en remarquant qu'il s'agit de l'algèbre des invarian
 	\end{tikzcd}\\
 	\end{center}
 \end{multicols}
-Les flèches horizontales du diagramme de droite sont des immersions ouvertes, en effet on a $U_{f_if_j}\simeq (U_{f_i})_{f_j}$. Les $(U_{f_i},\pi_i)$ sont des quotients géométriques et le diagramme exprime que l'on a les conditions de recollement sur les intersections pour former un quotient géométrique global $\textrm{Proj}(A):=W//k^*$.\\
+Les flèches horizontales du diagramme de droite sont des immersions ouvertes, en effet on a $U_{f_if_j}\simeq (U_{f_i})_{f_j}$. Les conditions de la construction \ref{gluevar} sont satisfaites, on peut former une prevariété Proj($A$) par recollement des $U_{f_i}$ le long de ces immersions. De plus, les $(U_{f_i},\pi_i)$ sont des quotients géométriques et le diagramme exprime que l'on a les conditions de recollement sur les intersections qui font de Proj($A$) le quotient géométrique global $W//k^*$.\\
 Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-stables de $W$, c'est à dire aux idéaux radicaux homogènes qui ne contiennent pas l'idéal inconvenant. On appelle ces fermés des variétés projectives. La topologie quotient sur Proj($A$) que l'on vient de définir est aussi appelé la topologie de Zariski.
+
+\section{Diviseurs}
