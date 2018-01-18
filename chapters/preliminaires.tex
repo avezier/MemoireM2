@@ -23,7 +23,7 @@ Soient $\Sigma_1,\Sigma_2$ deux ensembles algébriques affine de $k^{n_1}$ (resp
 \end{defn}
 On remarque que les ensembles algébriques affines munis de leur morphismes constituent une catégorie. 
 Les ensembles algébriques affines sont de la forme $\mathcal{V}(I):=\lbrace x\in k^n\mid \forall P\in I, P(x)=0\rbrace$ où $I$ est un idéal de $S$. Ils sont stables par intersection quelconque, et on a $\mathcal{V}(S)=\emptyset$ et $\mathcal{V}(\lbrace 0\rbrace)=k^n$. Ainsi les ensembles algébriques affines constituent les fermés d'une topologie, dite de Zariski.\\
-Par ailleurs, à tout ensemble algébrique affine $\Sigma$ on associe l'idéal $\mathcal{I}(\Sigma):=\lbrace P\in k[X_1,...X_n] \mid P(x)=0, \forall x\in\Sigma \rbrace$. L'ensemble des morphismes $\Sigma\rightarrow k$ est doté d'une structure de k-algèbre évidente que l'on note $k[\Sigma]$. Cette algèbre est naturellement isomorphe à $S/\mathcal{I}(\Sigma)$. Elle est de type fini réduite, on dit que c'est une $k$-algèbre affine. D'après le Nullstellensatz on a $\mathcal{I}(\mathcal{V}(I))= \sqrt{I}$, d'où une bijection entre les sous-ensembles algébriques affines de $\Sigma$ et les idéaux radicaux de $k[\Sigma]$. En particulier les points de $\Sigma$ sont en bijection avec les idéaux maximaux de $k[\Sigma]$. On note $Specm(k[\Sigma])$ cet ensemble.
+Par ailleurs, à tout ensemble algébrique affine $\Sigma$ on associe l'idéal $\mathcal{I}(\Sigma):=\lbrace P\in k[X_1,...X_n] \mid P(x)=0, \forall x\in\Sigma \rbrace$. L'ensemble des morphismes $\Sigma\rightarrow k$ est doté d'une structure de k-algèbre évidente que l'on note $k[\Sigma]$. Cette algèbre est naturellement isomorphe à $S/\mathcal{I}(\Sigma)$. Elle est de type fini réduite, on dit que c'est une $k$-algèbre affine. D'après le Nullstellensatz on a $\mathcal{I}(\mathcal{V}(I))= \sqrt{I}$, d'où une bijection entre les sous-ensembles algébriques affines de $\Sigma$ et les idéaux radicaux de $k[\Sigma]$. En particulier les points de $\Sigma$ sont en bijection avec les idéaux maximaux de $k[\Sigma]$. On note $\spm (k[\Sigma])$ cet ensemble.
 \begin{prop}\label{eqaffinevaralg}
 La construction qui à $\Sigma$ associe $k[\Sigma]$ est fonctorielle. Le foncteur est pleinement fidèle et essentiellement surjectif.
 \end{prop}
@@ -58,8 +58,8 @@ Soit $\Sigma$ un ensemble algébrique affine et $f\in k[\Sigma]^*$. On a $\mathc
 Une $k$-variété algébrique affine est un espace annelé isomorphe à un ensemble algébrique affine.
 \end{defn}
 
-Soit $\Sigma$ un ensemble algébrique affine. En utilisant la bijection entre $\Sigma$ et $Specm(k[\Sigma])$, on voit comment définir directement la topologie de Zariski sur $Specm(k[\Sigma])$ ainsi que le faisceau structural, faisant de ce dernier une variété algébrique affine. Concrètement, les fermés de $Specm(k[\Sigma])$ sont les $\mathcal{V}(I):=\lbrace m \in Specm(k[\Sigma]) \mid I\subset m \rbrace$. Les éléments de $k[\Sigma]$ définissent des fonctions sur $Specm(k[\Sigma])$ en les considérant modulo $m$, pour $m \in Specm(k[\Sigma])$. On peut définir le faisceau sur la base des ouverts principaux $D(f):=\lbrace m \in Specm(k[\Sigma]) \mid f \notin m\rbrace$ en posant $\mathcal{O}_{Specm(k[\Sigma])}(D(f))\simeq k[\Sigma][1/f]$\\
-Par construction $Specm(k[\Sigma])$ est isomorphe à $\Sigma$. Cela donne une manière intrinsèque de définir une variété algébrique affine, indépendamment d'un plongement dans un espace affine quelconque.\\
+Soit $\Sigma$ un ensemble algébrique affine. En utilisant la bijection entre $\Sigma$ et $\spm (k[\Sigma])$, on voit comment définir directement la topologie de Zariski sur $\spm (k[\Sigma])$ ainsi que le faisceau structural, faisant de ce dernier une variété algébrique affine. Concrètement, les fermés de $\spm (k[\Sigma])$ sont les $\mathcal{V}(I):=\lbrace m \in \spm (k[\Sigma]) \mid I\subset m \rbrace$. Les éléments de $k[\Sigma]$ définissent des fonctions sur $\spm (k[\Sigma])$ en les considérant modulo $m$, pour $m \in \spm (k[\Sigma])$. On peut définir le faisceau sur la base des ouverts principaux $D(f):=\lbrace m \in \spm (k[\Sigma]) \mid f \notin m\rbrace$ en posant $\mathcal{O}_{\spm (k[\Sigma])}(D(f))\simeq k[\Sigma][1/f]$\\
+Par construction $\spm (k[\Sigma])$ est isomorphe à $\Sigma$. Cela donne une manière intrinsèque de définir une variété algébrique affine, indépendamment d'un plongement dans un espace affine quelconque.\\
 On remarque que la catégorie des variétés algébriques est équivalente à celle des ensembles algébriques affines.
 \begin{ex}
 Soit $X$ une variété algébrique affine et $f\in k[X]$. $(D(f), \mathcal{O}_X(D(f)))$ est une variété algébrique affine.
@@ -91,6 +91,21 @@ Soit $X$ une variété algébrique affine. On a $\mathcal{O}_X(X)\simeq k[X]$.
 \subsection{Dimension}
 \subsection{Quelques résultats sur les morphismes}
 \subsubsection{Généralités}
+
+\begin{defn}[Morphisme affine]
+Un morphisme de variétés algébriques $\phi X\rightarrow Y$ est dit affine si pour tout ouvert affine $V\subset Y$, l'image réciproque $\phi^{-1}(V)$ est affine.
+\end{defn}
+
+\begin{ex}\label{exaff}
+Un morphisme de variétés affines $\phi X\rightarrow Y$ est affine. En effet, soit $V$ un ouvert affine de $Y$ et $U=\phi^{-1}(V)$. En considérant le diagramme commutatif ci-dessous on constate que l'on a $U \simeq (\phi\times i_2)^{-1}(\Delta_Y)=\lbrace (x,\phi(x))\mid x\in U \rbrace \subset X\times V$. Comme $X\times V$ est affine, $U$ aussi.
+	\begin{center}
+	\begin{tikzcd}
+  		U \arrow[r, "\phi"] \arrow[d, "i_1"]& V \arrow[d, "i_2"] \\ 
+  		X \arrow[r, "\phi"] & Y
+	\end{tikzcd}\\
+	\end{center}
+
+\end{ex}
 
 \subsubsection{Dimension des fibres}
 
@@ -148,9 +163,6 @@ Soit $f:X \mapsto Y$ un morphisme bijectif de variétés irréductibles avec $Y$
 
 
 
-\subsection{Diviseurs}
-
-
 \section{Groupes algébriques affines}
 \subsection{Généralités}
 \subsection{G-variétés, représentations}
@@ -161,13 +173,21 @@ Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique 
 
 \begin{prop}
 Soit $G$ un groupe algébrique, $X$ une $G$-variété et $x\in X$.\\
-(i) $G.x$ est ouvert dans $\overline{G.x}$\\
-(ii) Toute composante irréductible de $\overline{G.x}$ a pour dimension $dim (G)-dim(G.x)$\\
-(iii) $\overline{G.x}\setminus G.X$ est une union d'orbites de dimension $<dim(\overline{G.x})$\\
-(iv) $G.x$ est ouvert dans $\overline{G.x}$
+(i) $G.x$ est ouvert dans $\overline{G.x}$.\\
+(ii) Toute composante irréductible de $\overline{G.x}$ a pour dimension $dim (G)-dim(G.x)$.\\
+(iii) $\overline{G.x}\setminus G.X$ est une union d'orbites de dimension $<dim(\overline{G.x})$.\\
+(iv) $G.x$ est ouvert dans $\overline{G.x}$.
 \end{prop}
 \begin{proof}
-
+On suppose d'abord $G$ connexe. \\
+D'après \ref{}, $G.x$ contient un ouvert dense $U$ de $\overline{G.x}$. Comme, $G$ est réunion de translatés de $U$, cela prouve (i).\\ 
+D'après \ref{}, il existe un ouvert dense de $G.x$ tel que toute les fibres de cet ouvert ont pour dimension dim($G$)$-$dim($G.x$)$=$dim($G_x$). Cela prouve (ii).\\
+$\overline{G.x}\setminus G.x$ est un fermé propre de $\overline{G.x}$ donc de dimension inférieure d'après \ref{}. Par ailleurs, $G$ stable donc est réunion d'orbites. Cela prouve (iii).\\
+Enfin si dim($G.x$) est minimal, $\overline{G.x}\setminus G.x$ est vide ce qui prouve (iv).\\
+Si $G$ n'est pas connexe, on écrit $G=\cup_{i=1}^{n}g_iG^\circ .x$ avec $g_1=e$. D'où $\overline{G.x}=\cup_{i=1}^{n}\overline{g_iG^\circ .x}$. Les $\overline{g_iG^\circ}$ sont égales où disjointes, c'est donc la décomposition en composantes irréductibles. On construit un ouvert de $\overline{G.x}$ inclus dans $G.x$ en posant $U=G^\circ .x\setminus \cup_{i=2}^{n}\overline{g_iG^\circ .x}$ puis on conclus comme dans le cas connexe pour (i).\\
+On a dim($G^\circ$)$-$dim($(G^\circ) _x$)$=$dim($G$)$-$dim($G_x$) car $(G_x)^\circ \subset(G^\circ) _x \subset G_x$, d'où dim($G_x$)$=$dim($(G^\circ) _x$). Or chaque composante de $G.x$ est l'adhérence d'un orbite pour $G^\circ$, d'où (ii) d'après le cas connexe.\\
+On a $\overline{G.x}\setminus G.x=\cup_{i=1}^{n}\overline{g_iG^\circ .x}\setminus g_iG^\circ .x=\cup_{i=1}^{n}g_i(\overline{G^\circ .x}\setminus G^\circ .x)$ qui est une union finie de fermés de dimension inférieure à $\overline{G .x}$ ce qui prouve (iii).\\
+On utilise le même argument pour prouver (iv) dans le cas général.
 \end{proof}
 
 \begin{defn}
@@ -177,7 +197,7 @@ On dit qu'un $G$-module est simple si il n'admet pas de sous $G$-module non triv
 \end{defn}
 
 \begin{prop}
-Soit $G$ un groupe algébrique et $X$ une $G$-variété. $k[X]$ est naturellement muni d'une action $(g.f)(x):=f(g^{-1}.x), \forall f\in k[X], g\in G,x\in X$.\\
+Soit $G$ un groupe algébrique et $X$ une $G$-variété. $k[X]$ est naturellement muni d'une action $(g.f)(x):=f(g^{-1}.x), \forall f\in k[X], g\in G,x\in X$\\
 Muni de cette action, $k[X]$ un $G$-module.
 \end{prop}
 \begin{proof}
@@ -208,8 +228,8 @@ Soit $G$ un groupe algébrique et $H\leq G$ fermé. \\Alors il existe un $G$-mod
 \begin{thm}
 Soit $G$ un groupe algébrique et $H\lhd G$ fermé. \\Alors il existe un $G$-module $(V, \rho)$ de dimension finie tel que $H=\Ker{\rho}$.
 \end{thm}
-Le théorème suivant est le résultat principal de cette section. Il prouve l'existence des groupes quotients dans la catégorie des groupes algébriques. L'unicité est une conséquence formelle de la propriété universelle du quotient.
-\begin{thm}[Car. 0]
+Le théorème suivant est le résultat principal de cette section. Il prouve l'existence des groupes quotients dans la catégorie des groupes algébriques. Le groupe quotient est alors unique à isomorphisme près, c'est une conséquence formelle de la propriété universelle du quotient.
+\begin{thm}[Car. 0]\label{groupequotient}
 Soient $G, H, (V, \rho)$ comme dans le théorème précédent, et $f:G \rightarrow G'$ un morphisme de groupes algébriques tel que $H\subset \Ker f$.\\
 Alors il existe une unique factorisation 	
 	\begin{tikzcd}
@@ -218,9 +238,9 @@ Alors il existe une unique factorisation
 	\end{tikzcd}
 \end{thm}
 \begin{proof}
-	Le morphisme $\phi$ recherché existe en tant que morphisme de groupes abstraits, il est G-équivariant pour les actions naturelles de G sur $\rho(G)$ et $G'$ via $\rho$ et $f$. Concrètement cela signifie $\forall g_1, g_2 \in G, \phi(\rho(g_1)\rho(g_2))=f(g_1)\phi(\rho(g_2))$. Si $G$ est connexe, d'après la proposition \ref{facto}, $\phi$ est un morphisme sur un ouvert $U$ non-vide de $\rho(G)$. Or on a un recouvrement de $\rho(G)$ par des $g.U$. En écrivant pour $x\in g.U,  \phi(x)=f(g)\phi(g^{-1}.x))$, on constate que $\phi$ est un morphisme de groupes algébriques.
+	Le morphisme $\phi$ recherché existe en tant que morphisme de groupes abstraits, il est G-équivariant pour les actions naturelles de G sur $\rho(G)$ et $G'$ via $\rho$ et $f$. Concrètement cela signifie $\forall g_1, g_2 \in G, \phi(\rho(g_1)\rho(g_2))=f(g_1)\phi(\rho(g_2))$. Si $G$ est connexe, d'après la proposition \ref{facto}, $\phi$ est algébrique sur un ouvert $U$ non-vide de $\rho(G)$. Or on a un recouvrement de $\rho(G)$ par des $g.U$. En écrivant pour $x\in g.U,  \phi(x)=f(g)\phi(g^{-1}.x))$, on constate que $\phi$ est un morphisme de groupes algébriques.
 	\\Supposons $G$ quelconque mais $H\leq G^\circ$. Comme $\phi$ est algébrique sur le sous-groupe $G^\circ/H$ d'après ce qui précède, on a $\phi$ algébrique partout à nouveau par G-équivariance.\\
-	On peut se ramener au cas précédent en procédant en deux étapes. Dans un premier temps, on quotiente par le sous-groupe normal connexe $H^\circ$ (on a bien $H^\circ\leq G^\circ$), puis on quotiente par le sous-groupe normal fini $H/H^\circ$. Il reste donc à prouver le cas $H$ fini, c'est un corollaire direct de proposition \ref{}.
+	On peut se ramener au cas précédent en procédant en deux étapes. Dans un premier temps, on quotiente par le sous-groupe normal connexe $H^\circ$ (on a bien $H^\circ\leq G^\circ$), puis on quotiente par le sous-groupe normal fini $H/H^\circ$. Il reste donc à prouver le cas $H$ fini, c'est un corollaire direct du théorème \ref{goodquotientthm}.
 	\end{proof}
 \subsection{Quasitores}
 \section{Théorie des invariants}
@@ -240,47 +260,90 @@ Supposons $G$ réductif. Le $G$-module $k[X]$ est alors semi-simple, en particul
 (ii) Soit $a\in k[X]^G$. on considère $m_a$ la multiplication par $a$ dans $k[X]$. C'est un endomorphisme de $G$-module, il commute donc avec $R_{k[X]}$. 
 \end{proof}
 
-\begin{thm}[Hilbert]
+\begin{thm}[Hilbert]\label{hilbert}
 Soit $G$ un groupe réductif et $X$ une $G$-variété affine. Alors l'algèbre des invariant $k[X]^G$ est de type fini.
 \end{thm}
 \begin{proof}
-Supposons que $X$ soit un $G$-module $V$ de dimension finie. L'action de $k^*$ sur $V$ par homothétie donne une $\NN$-graduation $k[V]=\bigoplus_{n=0}^{\infty}k[V]_n$, $k[V]_n$ étant le sous espace des polynômes homogènes de degré n. Cette graduation est $G$-stable et se restreint sur l'algèbre des invariants en une $\NN$-graduation $k[V]^G=\bigoplus_{n=0}^{\infty}k[V]^G_n$. Or on remarque que $k[V]^G$ est noetherien. En effet, soit $I$ un idéal de $k[V]^G$, et $J$ son extension dans $k[V]$. $J$ est un sous $G$-module, donc la contraction de $J$ dans $k[V]^G$ est $R_{k[V]}(J)=IR_{k[V]}(k[V])=I$. On voit donc que la condition de chaîne est satisfaite sur $k[V]^G$ si elle satisfaite sur $k[V]$, ce qui est le cas car ce dernier est noetherien par le théorème de la base de Hilbert. Ainsi, on a le résultat d'après \ref{noethgrad}.\\
-Dans le cas général, on peut d'après \ref{embed} supposer $X$ inclus dans un $G$-module $V$. On obtient alors un $G$-morphisme surjectif $k[V] \xrightarrow k[X]$ qui induit un $G$-morphisme surjectif $k[V]^G \xrightarrow k[X]^G$ d'après \ref{reynolds}. Cela montre que $k[X]^G$ est de type fini.
+Supposons que $X$ soit un $G$-module $V$ de dimension finie. L'action de $k^*$ sur $V$ par homothétie donne une $\NN$-graduation $k[V]=\bigoplus_{n=0}^{\infty}k[V]_n$, $k[V]_n$ étant le sous espace des polynômes homogènes de degré n. Cette graduation est $G$-stable et se restreint sur l'algèbre des invariants en une $\NN$-graduation $k[V]^G=\bigoplus_{n=0}^{\infty}k[V]^G_n$. Or on remarque que $k[V]^G$ est noetherien. En effet, soit $I$ un idéal de $k[V]^G$, et $J$ son extension dans $k[V]$. $J$ est un sous $G$-module, donc la contraction de $J$ dans $k[V]^G$ est $R_{k[V]}(J)=IR_{k[V]}(k[V])=I$. On voit donc que la condition de chaîne est satisfaite sur $k[V]^G$ si elle satisfaite sur $k[V]$, ce qui est le cas car ce dernier est noetherien par le théorème de la base de Hilbert. Ainsi, on a le résultat d'après la proposition \ref{noethgrad}.\\
+Dans le cas général, on peut d'après le théorème \ref{embed} supposer $X$ inclus dans un $G$-module $V$. On obtient alors un $G$-morphisme surjectif $k[V] \rightarrow k[X]$ qui induit un $G$-morphisme surjectif $k[V]^G \rightarrow k[X]^G$ d'après la proposition \ref{reynolds}. Cela montre que $k[X]^G$ est de type fini.
 \end{proof}
 
-On constate que cette preuve n'est pas effective. Il est en général difficile de calculer l'algèbre des invariants. On présente ci-dessous la méthode des sections qui permet le calcul dans certains cas.
+On constate que cette preuve n'est pas effective. Il est en général difficile de calculer l'algèbre des invariants. On présente ci-dessous la méthode des sections qui permet le calcul dans certains cas.\\
+Soit $S\subset X$ une sous-variété fermée. Définissons $Z(S)=\lbrace g\in G\mid g.s=s,\,\forall s \in S\rbrace$ et $N(S)=\lbrace g\in G\mid g.s\in S,\,\forall s \in S\rbrace$. Clairement, $Z(S)$ est un sous-groupe normal de $N(S)$, et le quotient $W=N(S)/Z(S)$ agit sur $S$. La surjection $k[X]\rightarrow k[S]$, induit un morphisme $k[X]^G\xrightarrow{\phi} k[S]^W$.\\
+Supposons que l'on ait un ouvert dense $U\subset X$ tel que $\forall x\in U,\, G.x$ intersecte $S$, alors on voit que $\phi$ est injective. Si de plus, $k[S]^W$ est engendré par des $\phi(f_1),...,\phi(f_r)$, alors $\phi$ est un isomorphisme et $k[X]^G$ est engendré par $f_1,...,f_r$.
 
-\subsection{Quotients de variétés algébriques sous l'action d'un groupe algébrique}
-Soit $G$ un groupe algébrique et $X$ une $G$-variété. En tant que groupe abstrait agissant sur un ensemble, le quotient de $X$ par $G$ est par définition l'ensemble des orbites. Cet ensemble satisfait une propriété universelle, il représente le foncteur $\textrm{Ens}\rightarrow \textrm{Ens}, Y\mapsto \lbrace f\in \textrm{Map}(X, Y)\mid f \textrm{ est constante sur les orbites} \rbrace$. Pour cette raison on $X//G$ est appelé un quotient catégorique. \\ 
-On peut ainsi transporter cette définition dans la catégorie des variétés algébriques. Toutefois, il n'est pas clair que ce quotient existe toujours. Dans cette partie on s'intéresse donc à cette question. On remarque que si il existe, il est unique à isomorphisme près, on le nomme le quotient catégorique, et on le note $X//G$.
+\begin{ex}
+$G=GL_n$, $X=M_n$, $g.A=gAg^{-1}, S=D_n, U=X_{disc(\chi )}$. En considérant un élément de $U$, qui a donc ses valeurs propres deux à deux distinctes, on a par un calcul direct on a $Z(S)=D_n$, et comme la conjugaison préserve les espaces propres, on a $N(S)=\lbrace\textrm{matrices monomiales}\rbrace$. Ainsi, $W$ est isomorphe au groupe symétrique $\Sigma_n$ et agit sur $S$ en permutant les entrées diagonales. On a ainsi $k[S]^W=k[\sigma_1,...,\sigma _n]$, l'algèbre engendrée par les fonctions polynômes élémentaires. C'est une algèbre de polynômes.\\
+Soient $f_1,...,f_n$ les coefficient du polynôme caractéristique générique. Ce sont éléments de $k[X]^G$, et on a $f_{i| S}=(-1)^i\sigma _i$, d'où $k[X]^G=k[f_1,...,f_n]$.
+\end{ex}
+
+\subsection{Quotient d'une variété algébrique sous l'action d'un groupe algébrique}
+
+\subsubsection{Quotient catégorique}
+
+Soit $G$ un groupe algébrique et $X$ une $G$-variété. En tant que groupe abstrait agissant sur un ensemble, le quotient de $X$ par $G$ (noté $X//G$) est par définition l'ensemble des orbites. On note $\pi:X \rightarrow X//G$ l'application qui à un élément de $X$ associe son orbite. $X//G$ satisfait une propriété universelle, il représente le foncteur $\textrm{Ens}\rightarrow \textrm{Ens}, Y\mapsto \lbrace f\in \textrm{Map}(X, Y)\mid f \textrm{ est constante sur les orbites} \rbrace$. Pour cette raison la paire $(X//G, \pi)$ est appelé un quotient catégorique. \\ 
+On peut ainsi transporter cette définition dans la catégorie des variétés algébriques. Toutefois, il n'est pas clair que ce quotient existe toujours. On remarque que si il existe, il est unique à isomorphisme près, on le nomme le quotient catégorique, et on le note $X//G$.
 L'exemple suivant montre que lorsqu'il existe, le quotient catégorique ne coïncide pas nécessairement avec l'ensemble des orbites.
 
 \begin{ex}
 On considère l'action naturelle de $GL_n$ sur $\AAA^n$. Le quotient catégorique existe et est un point. En effet soir $f:\AAA^n\rightarrow Z$ constant sur les orbites, alors $f$ est constante car il existe un orbite dense. En revanche il y a un deuxième orbite, c'est le fermé $\lbrace 0\rbrace$. 
 \end{ex}
 
-On suppose $X$ affine et $k[X]^G$ de type fini avec $f_1,...,f_r$ des générateurs. Dans ce cadre, l'algèbre des invariants définit une variété algébrique affine $Y$. On définit $\phi :X\rightarrow k^r,\, x\mapsto (f_1(x),...,f_r(x))$. Le comorphisme $\phi^*$ admet une factorisation: $k[t_1,...,t_r]\twoheadrightarrow k[X]^G\xrightarrow{\subset}k[X]$, d'où $Y\simeq \overline{\phi (X)}$. On peut donc voir $X \xrightarrow{\phi} \overline{\phi (X)}$ comme une réalisation du morphisme $\pi: X\rightarrow Y$ associé à $k[X]^G\subset k[X]$. On appelle ce morphisme, le morphisme quotient. De la même manière on voit que tout morphisme $G$-invariant de variétés affines $X\rightarrow Z$ se factorise à travers $Y$. De ce fait, $Y$ semble être un bon candidat pour le quotient catégorique. Toutefois il faut être prudent, par exemple dans \cite{LAGFerrer} 6.4.10, on exhibe un exemple de cette situation qui n'admet pas de quotient catégorique. On a toutefois le résultat suivant:
+On suppose $X$ affine et $k[X]^G$ de type fini avec $f_1,...,f_r$ des générateurs, c'est en particulier le cas lorsque $G$ est réductif d'aprés le théorème \ref{hilbert}. Dans ce cadre, l'algèbre des invariants définit une variété algébrique affine, notons la $Y$. On définit le morphisme $\phi :X\rightarrow k^r,\, x\mapsto (f_1(x),...,f_r(x))$. Son comorphisme $\phi^*$ admet une factorisation: $k[t_1,...,t_r]\twoheadrightarrow k[X]^G\xrightarrow{\subset}k[X]$, d'où $Y\simeq \overline{\phi (X)}$. On peut donc voir $X \xrightarrow{\phi} \overline{\phi (X)}$ comme une réalisation du morphisme $\pi: X\rightarrow Y$ associé à $k[X]^G\subset k[X]$. On appelle ce morphisme, le morphisme quotient. De la même manière on voit que tout morphisme $G$-invariant de variétés affines $X\rightarrow Z$ se factorise à travers $Y$. De ce fait, $Y$ semble être un bon candidat pour le quotient catégorique. Toutefois il faut être prudent, dans \cite{LAGFerrer} 6.4.10, on exhibe un exemple de cette situation qui n'admet pas de quotient catégorique. On a toutefois le résultat suivant:
 
-\begin{thm}
+\begin{thm}\label{goodquotientthm}
 Soit $G$ un groupe réductif et $X$ une $G$-variété affine.\\
 (i) Le morphisme quotient $\pi:X\rightarrow Y$ est surjectif.\\
 (ii) $(Y, \pi)$ est un quotient catégorique. On écrit donc $Y=X//G$.\\
-(iii) Soit $Y\subset X$ une sous $G$-variété. Le morphisme induit $Y//G \rightarrow X//G$ est une immersion fermé. On peut ainsi identifier $\pi_Y$ et $\pi_X$ restreint à $Y$. De plus, soit $Y'$ une autre sous $G$-variété, on a $\pi_X(Y\cap Y')=\pi_X(Y)\cap\pi_X(Y')$.\\
+(iii) Soit $Z\subset X$ une sous $G$-variété fermée. Le morphisme induit $Z//G \rightarrow X//G$ est une immersion fermé. On peut ainsi identifier $\pi_Z$ et $\pi_X$ restreint à $Z$. De plus, soit $Z'$ une autre sous $G$-variété fermée, on a $\pi_X(Z\cap Z')=\pi_X(Z)\cap\pi_X(Z')$.\\
 (iv) Chaque fibre de $\pi_X$ contient un unique orbite fermé.
 \end{thm}
 \begin{proof}
-(i) Soit $x\in Y$ et $m_x$ l'ideal maximal de $k[X]^G$ correspondant. La fibre $\pi^{-1}(x)$ correspond à l'ensemble des idéaux maximaux contenant l'extension $I$ de $m_x$ dans $k[X]$. Or on a déjà vu que l'extension dans $k[X]$ était injective. ainsi $I$ est un idéal propre qui donc contenu dans un idéal maximal. La fibre étant non-vide, $\pi$ est surjective.\\
+(i) Soit $x\in Y$ et $m_x$ l'ideal maximal de $k[X]^G$ correspondant. La fibre $\pi^{-1}(x)$ correspond à l'ensemble des idéaux maximaux contenant l'extension $I$ de $m_x$ dans $k[X]$. Or on a déjà vu que l'extension dans $k[X]$ était injective, $I$ est donc un idéal propre contenu dans au moins un idéal maximal. La fibre étant non-vide, $\pi$ est surjective.\\
 (ii) L'existence de la factorisation a déjà était vue. Avec (i) on a maintenant l'unicité.\\
-(iii) On note $i$ l'inclusion $Y\subset X$. $\pi_Xi$ est constant sur les orbites de $Y$ d'où l'existence d'un unique morphisme $\phi:Y//G\rightarrow X//G$ tel que $\phi\pi_Y=\pi_Xi$. La projection $k[X] \rightarrow k[Y]$ est un morphisme de $G$-module surjectif. D'après \ref{reynolds}, cette projection induit un morphisme de $k$-algèbre surjectif $k[X]^G \xrightarrow{\phi^*} k[Y]^G$, donc $\phi$ est une immersion fermée.\\
-Soit $I$ (resp. $I'$) l'idéal de $Y$ (resp. $Y'$) dans $k[X]$. L'idéal de $Y\cap Y'$ est $I+I'$ et l'idéal de $\pi_X(Y)$ est $\mathcal{I}_{X//G}(\pi_X(Y))=I\cap k[X]^G=R_X(I)$. Ainsi $\mathcal{I}_{X//G}(\pi_X(Y\cap Y'))=R_X(I+I')=R_X(I)+R_X(I')=\mathcal{I}_{X//G}(\pi_X(Y)\cap \pi_X(Y'))$.\\
+(iii) On note $i$ l'inclusion $Z\subset X$. $\pi_Xi$ est constant sur les orbites de $Z$ d'où l'existence d'un unique morphisme $\phi:Z//G\rightarrow X//G$ tel que $\phi\pi_Z=\pi_Xi$. La projection $k[X] \rightarrow k[Z]$ est un morphisme de $G$-module surjectif. D'après la proposition \ref{reynolds}, cette projection induit un morphisme de $k$-algèbre surjectif $k[X]^G \xrightarrow{\phi^*} k[Z]^G$, donc $\phi$ est une immersion fermée.\\
+Soit $I$ (resp. $I'$) l'idéal de $Z$ (resp. $Z'$) dans $k[X]$. L'idéal de $Z\cap Z'$ est $I+I'$ et l'idéal de $\pi_X(Z)$ est $\mathcal{I}_{X//G}(\pi_X(Z))=I\cap k[X]^G=R_X(I)$. Ainsi $\mathcal{I}_{X//G}(\pi_X(Z\cap Z'))=R_X(I+I')=R_X(I)+R_X(I')=\mathcal{I}_{X//G}(\pi_X(Z)\cap \pi_X(Z'))$.\\
 (iv) d'après (iii), $\pi_X$ envoie deux orbites fermés distincts sur deux points distincts.
 \end{proof}
 
-Comme les ouverts affines d'une variété algébrique forme une base de la topologie, on peut rechercher un cadre dans lequel on sera localement dans la situation agréable précédente. C'est la notion de bon quotient.
+On remarque les propriétés du théorème précédent s'étendent automatiquement au cas d'une $G$-variété $X$ si le théorème est vérifié localement sur un recouvrement affine d'un candidat $Y$ pour le quotient $X//G$. De ce constat découle la notion de bon quotient.
 
 \begin{defn}
 Soit $G$ un groupe réductif et $X$ une $G$-variété. Une paire $(Y, \pi)$ où $Y$ est une variété et $\pi$ un morphisme $X\rightarrow Y$ est un bon quotient si elle vérifie:\\
 (i) $\pi$ est affine et $G$-invariant.\\
-(ii) $\pi^*:\Oo_Y \rightarrow (\pi_*Oo_X)^G$ est un isomorphisme.\\
-De plus, si les fibres de $\pi$ sont exactement les orbites, on dit que $(Y, \pi)$ est un quotient géométrique.
+(ii) $\pi^*:\Oo_Y \rightarrow (\pi_*\Oo_X)^G$ est un isomorphisme.\\
 \end{defn}
+
+\begin{ex}
+Soit $G$ un groupe réductif et $X$ une $G$-variété affine. D'après le théorème \ref{goodquotientthm} et l'exemple \ref{exaff}, $X//G$ est un bon quotient.
+\end{ex}
+
+
+\subsubsection{Quotient géométrique}
+
+Parmi les quotients catégoriques $(X//G,\pi)$, on cherche à caractériser ceux ayant les propriétés géométriques intuitivement attendues pour un quotient, c'est à dire que $X//G$ soit l'ensemble des orbites avec une topologie aussi fine que possible. C'est la notion de quotient géométrique:
+
+\begin{defn}
+Soit $G$ un groupe algébrique et $X$ une $G$-variété. Une paire $(Y, \pi)$ où $Y$ est une variété et $\pi$ un morphisme $X\rightarrow Y$ est un quotient géométrique si elle vérifie:\\
+(i) $\pi$ est surjective et ses fibres sont exactement les orbites.\\
+(ii) La topologie de $Y$ coïncide avec la topologie quotient.\\
+(iii) $\pi^*:\Oo_Y \rightarrow (\pi_*\Oo_X)^G$ est un isomorphisme.
+\end{defn}
+
+On remarque que pour un quotient géométrique $(X//G, \pi)$, tous les orbites sont fermés et l'application quotient est ouverte. En effet, soit $U$ un ouvert de $X$, on a $\pi^{-1}(\pi(U))=\cup_{g\in G}g.U$ qui est ouvert.
+
+\begin{ex}
+Soit $G$ un groupe algébrique et $H$ un sous-groupe fermé. Dans la catégorie des ensemble, le quotient $(G/H,\pi)$ est exactement le quotient catégorique $(G//H,\pi)$ pour l'action de $H$ sur $G$ par multiplication à droite. Dans \cite{LAGSpringer} 5.5.5, en caractéristique quelconque, on munit $G/H$ d'une structure d'espace annelé en lui attribuant la topologie quotient puis en définissant le faisceau structural par $\Oo_{G/H}(U):=\lbrace f\in\textrm{Map}(U,k)\mid f\pi \in \Oo_G(\pi^{-1}(U))\rbrace$. On montre ensuite que cet espace annelé est isomorphe à une variété quasi-projective, ce qui montre l'existence du quotient catégorique $(G//H,\pi)$ dans la catégorie des variétés algébriques. Par définition de $\Oo_{G/H}$, on a une flèche $\Oo_Y \xrightarrow{\pi^*} (\pi_*\Oo_X)^G$. Elle est injective par la surjectivité de $\pi$, et elle est surjective, par la propriété universelle du quotient. $(G//H,\pi)$ est donc un quotient géométrique. Cela généralise bien sur le théorème \ref{groupequotient}.
+\end{ex}
+
+\begin{ex}
+Un bon quotient $(X//G, \pi)$ est un quotient géométrique si les fibres de $\pi$ sont exactement les orbites. En effet, d'après ce qui précède, il reste à vérifier que $X//G$ est muni de la topologie quotient. Soit un ouvert de X de la forme $\pi^{-1}(A)$ où $A$ est une partie de $X//G$. En tenant compte de \ref{goodquotientthm} (iii) et de la surjectivité de $\pi$ on a: $\pi(X\setminus \pi^{-1}(A))=Y\setminus A$ qui est fermé, donc $A$ est ouvert.
+\end{ex}
+
+\subsubsection{Un exemple: La construction Proj}
+Soit $X$ une variété affine munie d'une action de $k^*$. Une orbite $k^*.x$ est de dimension 0 ou 1. Si il est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, soit il est fermé, soit son adhérence est constitué de $k^*.x$  et d'une réunion de points fixes. Ainsi si on note $F$ l'ensemble des points fixes, $W:=X\setminus F$ est une réunion d'orbites fermés. On va montrer que $W$ admet un quotient géométrique, c'est la construction Proj.
+Soit $A=\oplus A_d$ une algèbre affine $\ZZ_{\geq 0}$-graduée. L'idéal inconvenant est par définition $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d\geq 0)$. Pour tout $f\in A_{>0}$ homogène, la localisation $A_f$ est $\ZZ$-graduée de la manière suivante:
+\begin{center}
+ $A_f=\bigoplus_{d\in \ZZ},\,\,\,\, (A_f)_d:=\lbrace h/f^l\mid \textrm{deg}(h)-l\textrm{deg}(f)=d \rbrace$
+\end{center}
+On note $A_{(f)}:=(A_f)_0$ qui est de type fini d'après la proposition \ref{}, et on pose $X:=\spm (A),\, Y_0:=\spm (A_0),\, X_f=\spm (A_f),$ et $U_f=\spm(A_{(f)})$.
