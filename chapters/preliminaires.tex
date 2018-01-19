@@ -257,7 +257,110 @@ Alors il existe une unique factorisation
 	\\Supposons $G$ quelconque mais $H\leq G^\circ$. Comme $\phi$ est algébrique sur le sous-groupe $G^\circ/H$ d'après ce qui précède, on a $\phi$ algébrique partout à nouveau par G-équivariance.\\
 	On peut se ramener au cas précédent en procédant en deux étapes. Dans un premier temps, on quotiente par le sous-groupe normal connexe $H^\circ$ (on a bien $H^\circ\leq G^\circ$), puis on quotiente par le sous-groupe normal fini $H/H^\circ$. Il reste donc à prouver le cas $H$ fini, c'est un corollaire direct du théorème \ref{goodquotientthm}.
 	\end{proof}
-\subsection{Quasitores}
+\subsection{Quasitores, et actions de quasitores}
+
+\subsubsection{Quasitores}
+Soit $G$ un groupe algébrique. Le groupe $X^*(G)$ des caractères de $G$ est un sous-groupe de $k[G]^\times$. On remarque que $X^*(.)$ est un foncteur contravariant de la catégorie des groupes algébriques dans la catégorie des groupes abéliens de type fini, l'image d'un morphisme $G_1\xrightarrow{\phi}G_2$ étant simplement la (co)-restriction $\phi^* \,_{|X^*(G_2)}^{|X^*(G_1)}$ du co-morphisme $\phi^*$ entre les algèbres de coordonnées. On signale qu'en caractéristique $p>0$, les $X^*(G)$ ont de plus la propriété d'être sans $p$-torsion. Tout ce qui suit reste vrai en caractéristique p, avec cette contrainte supplémentaire sur les groupes de caractères.
+
+\begin{ex}
+\begin{enumerate}
+\item $X^*(GL_n)=\lbrace \textrm{det}^k\mid k\in \ZZ \rbrace\simeq\ZZ$. En effet, $k[GL_n]^\times =\lbrace \lambda\textrm{det}^k\mid k\in \ZZ, \lambda\in k^* \rbrace$, puisque $k[X_{ij}]$ est factoriel et det irréductible.
+\item $X^*(SL_n)={1}$ car $D(SL_n)=SL_n$.
+\item Les unités de $k[\GG_m]$ sont les monômes. On en déduit que les caractères sont exactement les $t\mapsto t^k, k\in \ZZ$. Par ailleurs, on remarque que $X^*(G_1\times G_2)=X^*(G_1)\times X^*(G_2)$, d'où $X^*(D_n)=\lbrace \textrm{monômes à coefficient unitaire} \rbrace \simeq \ZZ^n$.
+\end{enumerate}
+\end{ex}
+
+On remarque que les caractères de $D_n$ engendrent $k[D_n]$ comme $k$-ev, ils en forment donc une $k$-base par le lemme de Dedekind qui assurent que les caractères sont libres dans Map$(D_n, k)$. On a plus généralement:
+
+\begin{prop}
+Soit $G$ un groupe algébrique. Les assertions suivantes sont équivalentes:
+\begin{enumerate}
+\item $G$ est diagonalisable (i.e. $\simeq$ à un sous-groupe fermé de $D_n$)
+\item $k[G]=\textrm{Vect}_k(X^*(G))$.
+\item Tout $G$-module est somme directe $G$-modules de dimension 1.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\begin{enumerate}
+\item 1)$\implies$2) La restriction $k[D_n]\xrightarrow{res} G$ est surjective et la restriction d'un caractère est un caractère.
+\item 2)$\implies$3) $G$ est abélien, car $\forall \chi\in X^*(G),\,g,h\in G, \chi(gh)=\chi(hg)$. C'est donc vrai pour toute fonction régulière, on en conclut $gh=hg$.\\
+On observe que l'action naturelle de $G$ sur $k[G]$ est semi-simple. En effet, les caractères forment une base de diagonalisation, $G$ est donc semi-simple. Soit $(V,\rho)$ le $G$-module considéré, que l'on peut supposer de dimension finie. Par la décomposition de Jordan,  $\rho(G)$ est un sous groupe fermé de $GL_n$, abélien et semi-simple. Il est donc conjugué à un sous-groupe fermé de $D_n$.
+\item 3)$\implies$1) On peut supposer $G\subset GL_n$, et considérer l'action naturelle sur $k^n$ après choix d'une base $(e_1,...,e_n)$. Par hypothèse, on peut écrire $k^n=(f_1)\oplus...\oplus (f_n)$, avec les $(f_i)$ sous $G$-module de dimension 1. $G$ est donc conjugué à un sous-groupe de $D_n$.
+\end{enumerate}
+\end{proof}
+
+Ce constat motive la définition suivante:
+
+\begin{defn}
+Un quasitore est un groupe algébrique $G$ tel que $k[G]=\textrm{Vect}_k(X^*(G))$. Un tore est un quasitore connexe.
+\end{defn}
+
+On travaille désormais dans la catégorie des quasitores. On considère un quasitore $G$ et le groupe $\chi^{**}(G):=(\chi^*)^2(G)$.
+
+\begin{prop}
+$G$ et $\chi^{**}(G)$ sont naturellement isomorphes en tant que groupes abstraits, et aussi en tant que groupes algébriques par transport de structure. L'isomorphisme est $ev_G:G\rightarrow \Hom (X^*(G),\GG _m), g\mapsto (\chi\mapsto \chi(g))$.
+\end{prop}
+\begin{proof}
+$ev_G$ est injective: Soit $g\in G$ tel que $\chi(g)=1=\chi(e_G),\forall \chi\in X^*(G)$. Alors $g=e_G$ car $G$ est un quasitore.\\
+$ev_G$ est surjective: Soit $\phi\in\chi^{**}(G)$. On a un prolongement unique de $\phi$ en un morphisme de $k$-algèbre $k[X^*(G]=k[G]\rightarrow k$ qui est donc de la forme $k[G]\rightarrow k, f\mapsto f(g)$ pour un $g\in G$. En restreignant à $X^*(G)$, on trouve que $\phi=ev_G(g)$.
+\end{proof}
+
+Autrement dit on a un isomorphisme de foncteurs $(\chi^*)^2(.)\simeq Id$, d'où une équivalence de catégories entre les quasitores et les groupes abéliens de type fini. Une autre façon de voir cela est d'introduire l'algèbre de groupe d'un groupe abélien de type fini M, c'est par définition $k[M]=\lbrace \sum_{finie} \lambda_gg,\,\lambda_g\in k,g\in G \rbrace$ avec la multiplication définie par l'opération de groupe de $G$. La propriété suivante montre que l'on construit ainsi un autre inverse de $\chi^*(.)$
+\begin{prop}
+Soient, $M, M_1, M_2$ des groupes abéliens de type fini, et $G$ un quasitore.\\
+Alors $k[M]$ est de type fini, réduite et on a $k[M_1\oplus M_2]\simeq k[M_1]\otimes k[M_2]$. De plus, $k[M]$ est naturellement muni d'une structure d'algèbre de Hopf et on a $k[G]=k[X^*(G)]$ et donc $G=\spm\circ k[X^*(G)]$.
+\end{prop}
+\begin{proof}
+On a deux morphismes d'algèbre $k[M_1]\rightarrow k[M_1\oplus M_2], e_{m_1}\mapsto e_{(m_1,0)}$ et $k[M_2]\rightarrow k[M_1\oplus M_2], e_{m_2}\mapsto e_{(0,e_{m_2})}$, d'où l'existence d'un morphisme $k[M_1]\otimes k[M_2]$ dont on vérifie que c'est un isomorphisme.\\
+Comme on a $M\simeq \ZZ^r\oplus (\oplus_{i=1}^r \ZZ/d_i\ZZ)$, il suffit de traiter les cas $M=\ZZ$ et $M=\ZZ/d\ZZ$. On a $k[\ZZ]\simeq k[t,t^{-1}]$ qui est intègre, de type fini, et réduite. On a $k[\ZZ/d\ZZ]\simeq k[t]/(t^d-1)$. On voit, par le théorème chinois par exemple, que cette algèbre de type fini non-intègre est réduite si et seulement si les racine de $t^d-1$ sont simples, ce qui est le cas en caractéristique zéro.\\
+Enfin la structure d'algèbre de Hopf sur $k[M]$ est donnée par $\Delta(e_m)=e_m\otimes e_m,\, i(e_m)=e_{-m},\, e(e_m)=e_0$.
+\end{proof}
+
+\begin{cor}
+Soit $G$ un quasitore. Alors:
+\begin{enumerate}
+\item $G$ est isomorphe au produit direct d'un tore et d'un groupe abélien fini.
+\item $G$ est un tore $\iff X^*(G)$ est libre de type fini $\iff G$ est connexe.
+\end{enumerate}
+\end{cor}
+
+\subsubsection{Action d'un quasitore sur une variété affine}
+
+Soient $\chi_1,...,\chi_r$ un choix de caractères de $D_n$. On a une action dite diagonale de $D_n$ sur $k^r$ associée à ce choix par: $g.x = (\chi_1(g)x_1,...,\chi_r(g)x_r)$. On voit, que $k[k^r]=k[t_1,...,t_r]$ est naturellement graduée par le sous-groupe de $X^*(D_n)=\oplus_{i=1}^n\ZZ t_i$ engendré par les $\chi_i$. En fait, on observe ci-dessous que les foncteurs $\spm$ et $k[.]$ réalisent une équivalence de catégorie entre les variétés affines munies d'une action d'un quasitore et les algèbres graduées par un groupe abélien de type fini. La seule chose à vérifier étant que ces restriction sont bien définies, l'équivalence découlant alors de celle entre les variétés affines et les $k$-algèbres affines.
+
+\begin{cons}
+Soit $G$ un quasitore et X une $G$-variété affine. Le $G$-module $k[X]$ est somme directe de $G$-module de dimension 1 d'après la partie précédente et on peut écrire: 
+\begin{center}
+$k[X]=\bigoplus_{\chi \in X^*(G)}V_\chi$,  où $V_\chi:=\lbrace f\in k[X]\mid g.f=\chi(g)f,\, \forall g\in G$
+\end{center}
+On voit immédiatement que cette somme directe est $X^*(G)$-graduée. De plus, cette construction est fonctorielle, en effet en considérons les diagrammes commutatifs ci-dessous. Le premier est la traduction de la donnée d'un morphisme d'un morphisme $(\widetilde{\phi},\phi)$ d'une $G$-variété affine $X$ vers une $G'$-variété affine $X'$. Le second est obtenu par passage aux algèbres de coordonnées.
+\begin{multicols}{2}
+	\begin{center}
+		\begin{tikzcd}
+  		G\times X \arrow[r, "a_1"] \arrow[d, "\widetilde{\phi} \times \phi"] & X \arrow[d, "\phi"] \\ 
+  		G'\times X' \arrow[r, "a_2"] & X'
+	\end{tikzcd}
+	\end{center}
+
+	\columnbreak
+	\begin{center}
+		\begin{tikzcd}
+  		k[G]\otimes k[X]   & k[X] \arrow[l, "a_1^*"] \\ 
+  		k[G]'\otimes k[X'] \arrow[u, "\widetilde{\phi}^* \otimes \phi^*"] & X' \arrow[u, "\phi"] \arrow[l, "a_2^*"] 
+	\end{tikzcd}
+	\end{center}
+\end{multicols}
+On obtient alors pour $f\in V'_{\chi'}\subset k[X'],g\in G,x\in X,\, \phi^*(f)(g.x)=a_1^*\phi^*(f)(g, x)=(\widetilde{\phi}\otimes\phi)a_2^*(f)(g,x)=\widetilde{\phi}^*(\chi')(g)\phi^*(f)(x)$ donc $\phi^*(f)\in V_{\widetilde{\phi}^*(\chi')}$, cela montre que $(\widetilde{\phi},\phi)$ est un morphisme d'algèbres graduées. Le reste des propriétés découlent du fait que $X^*(.)$ et $k[.]$ sont des foncteurs. 
+\end{cons}
+
+\begin{cons}
+Soit $K$ un groupe abélien de type fini et $A$ une $k$-algèbre $K$-graduée. On pose $X:=\spm(A)$ et on choisit des générateurs homogènes $f_{\omega_1},...,f_{\omega_r}$ de $A$, ce qui donne une immersion fermée $i:X\rightarrow k^r, x\mapsto (f_1(x),...,f_r(x))$. On transporte la graduation à $k[i(X)]=k[t_1,...,t_r]/\Ker i^*$ en posant $deg(t_i)=\omega _i$. Enfin, on munit $i(X)$ de l'action diagonales associée aux caractères $\chi^{\omega_1},...,\chi^{\omega_r}$ de $G:=\spm(k[K])$. Vu comme cela on a concrètement pour $f\in k[i(X)]$, $f(g.t)=f(\chi^{\omega_1}(g)t_1,...,\chi^{\omega_r}(g)t_r)=\sum\alpha_{i_1,...,i_r}\chi^{\sum i_k\omega_k}t_1^{i_1}...t_r^{i_r}(x)$. D'où $f\in $
+\end{cons}
+
+
+
+
+
 \section{Théorie des invariants}
 \subsection{L'algèbre des invariants}
 
@@ -267,12 +370,17 @@ Supposons $G$ réductif. Le $G$-module $k[X]$ est alors semi-simple, en particul
 
 
 \begin{prop}\label{reynolds}
-(i) Soit $f:V \rightarrow W$ un morphisme de $G$-module et $f^G:V^G \rightarrow W^G$ le morphisme induit. On a $R_Wf=fR_V$. En particulier, si $f$ est surjective, $f^G$ l'est aussi.\\
-(ii) $R_{k[X]}$ est $K[X]^G$-linéaire\\
+\begin{enumerate}
+\item Soit $f:V \rightarrow W$ un morphisme de $G$-module et $f^G:V^G \rightarrow W^G$ le morphisme induit. On a $R_Wf=fR_V$. En particulier, si $f$ est surjective, $f^G$ l'est aussi.
+\item $R_{k[X]}$ est $K[X]^G$-linéaire
+\end{enumerate}
+
 \end{prop}
 \begin{proof}
-(i) ok\\
-(ii) Soit $a\in k[X]^G$. on considère $m_a$ la multiplication par $a$ dans $k[X]$. C'est un endomorphisme de $G$-module, il commute donc avec $R_{k[X]}$. 
+\begin{enumerate}
+\item Ok
+\item Soit $a\in k[X]^G$. on considère $m_a$ la multiplication par $a$ dans $k[X]$. C'est un endomorphisme de $G$-module, il commute donc avec $R_{k[X]}$. 
+\end{enumerate}
 \end{proof}
 
 \begin{thm}[Hilbert]\label{hilbert}
@@ -306,18 +414,22 @@ On considère l'action naturelle de $GL_n$ sur $\AAA^n$. Le quotient catégoriqu
 On suppose $X$ affine et $k[X]^G$ de type fini avec $f_1,...,f_r$ des générateurs, c'est en particulier le cas lorsque $G$ est réductif d'aprés le théorème \ref{hilbert}. Dans ce cadre, l'algèbre des invariants définit une variété algébrique affine, notons la $Y$. On définit le morphisme $\phi :X\rightarrow k^r,\, x\mapsto (f_1(x),...,f_r(x))$. Son comorphisme $\phi^*$ admet une factorisation: $k[t_1,...,t_r]\twoheadrightarrow k[X]^G\xrightarrow{\subset}k[X]$, d'où $Y\simeq \overline{\phi (X)}$. On peut donc voir $X \xrightarrow{\phi} \overline{\phi (X)}$ comme une réalisation du morphisme $\pi: X\rightarrow Y$ associé à $k[X]^G\subset k[X]$. On appelle ce morphisme, le morphisme quotient. De la même manière on voit que tout morphisme $G$-invariant de variétés affines $X\rightarrow Z$ se factorise à travers $Y$. De ce fait, $Y$ semble être un bon candidat pour le quotient catégorique. Toutefois il faut être prudent, dans \cite{LAGFerrer} 6.4.10, on exhibe un exemple de cette situation qui n'admet pas de quotient catégorique. On a toutefois le résultat suivant:
 
 \begin{thm}\label{goodquotientthm}
-Soit $G$ un groupe réductif et $X$ une $G$-variété affine.\\
-(i) Le morphisme quotient $\pi:X\rightarrow Y$ est surjectif.\\
-(ii) $(Y, \pi)$ est un quotient catégorique. On écrit donc $Y=X//G$.\\
-(iii) Soit $Z\subset X$ une sous $G$-variété fermée. Le morphisme induit $Z//G \rightarrow X//G$ est une immersion fermé. On peut ainsi identifier $\pi_Z$ et $\pi_X$ restreint à $Z$. De plus, soit $Z'$ une autre sous $G$-variété fermée, on a $\pi_X(Z\cap Z')=\pi_X(Z)\cap\pi_X(Z')$.\\
-(iv) Chaque fibre de $\pi_X$ contient un unique orbite fermé.
+Soit $G$ un groupe réductif et $X$ une $G$-variété affine.
+\begin{enumerate}
+\item Le morphisme quotient $\pi:X\rightarrow Y$ est surjectif.
+\item $(Y, \pi)$ est un quotient catégorique. On écrit donc $Y=X//G$.
+\item Soit $Z\subset X$ une sous $G$-variété fermée. Le morphisme induit $Z//G \rightarrow X//G$ est une immersion fermé. On peut ainsi identifier $\pi_Z$ et $\pi_X$ restreint à $Z$. De plus, soit $Z'$ une autre sous $G$-variété fermée, on a $\pi_X(Z\cap Z')=\pi_X(Z)\cap\pi_X(Z')$.
+\item Chaque fibre de $\pi_X$ contient un unique orbite fermé.
+\end{enumerate}
 \end{thm}
 \begin{proof}
-(i) Soit $x\in Y$ et $m_x$ l'ideal maximal de $k[X]^G$ correspondant. La fibre $\pi^{-1}(x)$ correspond à l'ensemble des idéaux maximaux contenant l'extension $I$ de $m_x$ dans $k[X]$. Or on a déjà vu que l'extension dans $k[X]$ était injective, $I$ est donc un idéal propre contenu dans au moins un idéal maximal. La fibre étant non-vide, $\pi$ est surjective.\\
-(ii) L'existence de la factorisation a déjà était vue. Avec (i) on a maintenant l'unicité.\\
-(iii) On note $i$ l'inclusion $Z\subset X$. $\pi_Xi$ est constant sur les orbites de $Z$ d'où l'existence d'un unique morphisme $\phi:Z//G\rightarrow X//G$ tel que $\phi\pi_Z=\pi_Xi$. La projection $k[X] \rightarrow k[Z]$ est un morphisme de $G$-module surjectif. D'après la proposition \ref{reynolds}, cette projection induit un morphisme de $k$-algèbre surjectif $k[X]^G \xrightarrow{\phi^*} k[Z]^G$, donc $\phi$ est une immersion fermée.\\
-Soit $I$ (resp. $I'$) l'idéal de $Z$ (resp. $Z'$) dans $k[X]$. L'idéal de $Z\cap Z'$ est $I+I'$ et l'idéal de $\pi_X(Z)$ est $\mathcal{I}_{X//G}(\pi_X(Z))=I\cap k[X]^G=R_X(I)$. Ainsi $\mathcal{I}_{X//G}(\pi_X(Z\cap Z'))=R_X(I+I')=R_X(I)+R_X(I')=\mathcal{I}_{X//G}(\pi_X(Z)\cap \pi_X(Z'))$.\\
-(iv) d'après (iii), $\pi_X$ envoie deux orbites fermés distincts sur deux points distincts.
+\begin{enumerate}
+\item Soit $x\in Y$ et $m_x$ l'ideal maximal de $k[X]^G$ correspondant. La fibre $\pi^{-1}(x)$ correspond à l'ensemble des idéaux maximaux contenant l'extension $I$ de $m_x$ dans $k[X]$. Or on a déjà vu que l'extension dans $k[X]$ était injective, $I$ est donc un idéal propre contenu dans au moins un idéal maximal. La fibre étant non-vide, $\pi$ est surjective.
+\item L'existence de la factorisation a déjà était vue. Avec 1) on a maintenant l'unicité.
+\item On note $i$ l'inclusion $Z\subset X$. $\pi_Xi$ est constant sur les orbites de $Z$ d'où l'existence d'un unique morphisme $\phi:Z//G\rightarrow X//G$ tel que $\phi\pi_Z=\pi_Xi$. La projection $k[X] \rightarrow k[Z]$ est un morphisme de $G$-module surjectif. D'après la proposition \ref{reynolds}, cette projection induit un morphisme de $k$-algèbre surjectif $k[X]^G \xrightarrow{\phi^*} k[Z]^G$, donc $\phi$ est une immersion fermée.
+Soit $I$ (resp. $I'$) l'idéal de $Z$ (resp. $Z'$) dans $k[X]$. L'idéal de $Z\cap Z'$ est $I+I'$ et l'idéal de $\pi_X(Z)$ est $\mathcal{I}_{X//G}(\pi_X(Z))=I\cap k[X]^G=R_X(I)$. Ainsi $\mathcal{I}_{X//G}(\pi_X(Z\cap Z'))=R_X(I+I')=R_X(I)+R_X(I')=\mathcal{I}_{X//G}(\pi_X(Z)\cap \pi_X(Z'))$.
+\item d'après 3), $\pi_X$ envoie deux orbites fermés distincts sur deux points distincts.
+\end{enumerate}
 \end{proof}
 
 On remarque que les propriétés du théorème précédent s'étendent automatiquement au cas d'une $G$-variété $X$ si le théorème est vérifié localement sur un recouvrement affine d'un candidat $Y$ pour le quotient $X//G$. De ce constat découle la notion de bon quotient.
