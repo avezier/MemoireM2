@@ -64,7 +64,10 @@ Cela donne une manière intrinsèque de définir une variété algébrique affin
 De même on peut munir $\Hom(k[\Sigma],k)$ d'une structure de variété affine canoniquement isomorphe à $\Sigma$. On peut voir cela comme une généralisation de la bidualité de l'algèbre linéaire, qui correspond aux polynômes homogènes de degré 1. Avec cette même analogie on peut voir le Nullstellensatz comme une généralisation de l'égalité $F=F^{\bot\circ}$ pour un sous $k$-ev $F$ d'un $k$-ev $E$ de dimension finie.
 \end{rem}
 
+\begin{rem}
 On remarque que la catégorie des variétés algébriques est équivalente à celle des ensembles algébriques affines.
+\end{rem}
+
 \begin{ex}
 Soit $X$ une variété algébrique affine et $f\in k[X]$. $(D(f), \mathcal{O}_X(D(f)))$ est une variété algébrique affine.
 \end{ex}
@@ -189,25 +192,26 @@ Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique 
 \end{defn}
 
 \begin{prop}
-Soit $G$ un groupe algébrique, $X$ une $G$-variété et $x\in X$.\\
-(i) $G.x$ est ouvert dans $\overline{G.x}$.\\
-(ii) Toute composante irréductible de $G.x$ a pour dimension $dim (G)-dim(G.x)$.\\
-(iii) $\overline{G.x}\setminus G.X$ est une union d'orbites de dimension $<dim(\overline{G.x})$.\\
-(iv) $G.x$ est ouvert dans $\overline{G.x}$.
+Soit $G$ un groupe algébrique, $X$ une $G$-variété et $x\in X$.
+\begin{enumerate}
+\item $G.x$ est ouvert dans $\overline{G.x}$.
+\item Toute composante irréductible de $G.x$ a pour dimension $dim (G)-dim(G.x)$.
+\item $\overline{G.x}\setminus G.X$ est une union d'orbites de dimension $<dim(\overline{G.x})$.
+\item $G.x$ est ouvert dans $\overline{G.x}$.
+\end{enumerate}
 \end{prop}
 \begin{proof}
-On suppose d'abord $G$ connexe. \\
-D'après \ref{}, $G.x$ contient un ouvert dense $U$ de $\overline{G.x}$. Comme, $G$ est réunion de translatés de $U$, cela prouve (i).\\ 
-D'après \ref{}, il existe un ouvert dense de $G.x$ tel que toute les fibres de cet ouvert ont pour dimension dim($G$)$-$dim($G.x$)$=$dim($G_x$). Cela prouve (ii).\\
-$\overline{G.x}\setminus G.x$ est un fermé propre de $\overline{G.x}$ donc de dimension inférieure d'après \ref{}. Par ailleurs, $G$ stable donc est réunion d'orbites. Cela prouve (iii).\\
-Enfin si dim($G.x$) est minimal, $\overline{G.x}\setminus G.x$ est vide ce qui prouve (iv).\\
-Si $G$ n'est pas connexe, on écrit $G=\cup_{i=1}^{n}g_iG^\circ .x$ avec $g_1=e$. D'où $\overline{G.x}=\cup_{i=1}^{n}\overline{g_iG^\circ .x}$. Les $\overline{g_iG^\circ}$ sont égales où disjointes, c'est donc la décomposition en composantes irréductibles. On construit un ouvert de $\overline{G.x}$ inclus dans $G.x$ en posant $U=G^\circ .x\setminus \cup_{i=2}^{n}\overline{g_iG^\circ .x}$ puis on conclus comme dans le cas connexe pour (i).\\
-On a dim($G^\circ$)$-$dim($(G^\circ) _x$)$=$dim($G$)$-$dim($G_x$) car $(G_x)^\circ \subset(G^\circ) _x \subset G_x$, d'où dim($G_x$)$=$dim($(G^\circ) _x$). Or chaque composante de $G.x$ est l'adhérence d'un orbite pour $G^\circ$, d'où (ii) d'après le cas connexe.\\
-On a $\overline{G.x}\setminus G.x=\cup_{i=1}^{n}\overline{g_iG^\circ .x}\setminus g_iG^\circ .x=\cup_{i=1}^{n}g_i(\overline{G^\circ .x}\setminus G^\circ .x)$ qui est une union finie de fermés de dimension inférieure à $\overline{G .x}$ ce qui prouve (iii).\\
-On utilise le même argument pour prouver (iv) dans le cas général.
+On suppose d'abord $G$ connexe.
+\begin{enumerate}
+\item D'après \ref{}, $G.x$ contient un ouvert dense $U$ de $\overline{G.x}$. Or, $G$ est réunion de translatés de $U$.
+\item D'après \ref{}, il existe un ouvert dense de $G.x$ tel que toute les fibres de cet ouvert ont pour dimension dim($G$)$-$dim($G.x$)$=$dim($G_x$).
+\item $\overline{G.x}\setminus G.x$ est un fermé propre de $\overline{G.x}$ donc de dimension inférieure d'après \ref{}. Par ailleurs, $\overline{G.x}$ est $G$-stable donc $\overline{G.x}\setminus G.x$ est réunion d'orbites.
+\item Enfin si dim($G.x$) est minimal, $\overline{G.x}\setminus G.x$ est vide
+\end{enumerate}
+Enfin, $G$ n'est pas connexe, on écrit $G=\cup_{i=1}^{n}g_iG^\circ .x$ avec $g_1=e$. D'où $\overline{G.x}=\cup_{i=1}^{n}\overline{g_iG^\circ .x}$. Les $\overline{g_iG^\circ}$ sont égales où disjointes, c'est donc la décomposition en composantes irréductibles. On construit un ouvert de $\overline{G.x}$ inclus dans $G.x$ en posant $U=G^\circ .x\setminus \cup_{i=2}^{n}\overline{g_iG^\circ .x}$. On a dim($G^\circ$)$-$dim($(G^\circ) _x$)$=$dim($G$)$-$dim($G_x$) car $(G_x)^\circ \subset(G^\circ) _x \subset G_x$, d'où dim($G_x$)$=$dim($(G^\circ) _x$). Or chaque composante de $G.x$ est l'adhérence d'un orbite pour $G^\circ$, d'où 2) d'après le cas connexe. On a $\overline{G.x}\setminus G.x=\cup_{i=1}^{n}\overline{g_iG^\circ .x}\setminus g_iG^\circ .x=\cup_{i=1}^{n}g_i(\overline{G^\circ .x}\setminus G^\circ .x)$ qui est une union finie de fermés de dimension inférieure à $\overline{G .x}$ ce qui prouve 3). On utilise le même argument pour prouver 4) dans le cas général.
 \end{proof}
 
-\begin{defn}
+\begin{defn}[$G$-module, simple, semi-simple]
 Une représentation de $G$, ou $G$-module (rationnel) est un couple $(V, \rho)$ où $V$ est un $k$-espace vectoriel de dimension finie et $\rho$ un morphisme de groupes algébriques de $G$ dans $GL(V)$.\\
 On étend cette définition au cas où $V$ est de dimension infinie, on demande alors que $V$ soit réunion de $G$-modules de dimension finie.\\
 On dit qu'un $G$-module est simple si il n'admet pas de sous $G$-module non trivial. On dit qu'un $G$-module est semi-simple si tout sous $G$-module admet un $G$-module supplémentaire.
@@ -231,7 +235,7 @@ Soit $G$ un groupe algébrique et $X$ une $G$ variété. $X$ est isomorphe en ta
 Tout groupe algébrique est linéaire.
 \end{cor}
 
-\begin{defn}
+\begin{defn}[Groupe réductif]
 Un groupe algébrique $G$ est dit réductif si tout $G$-module est semi-simple.
 \end{defn}
 
@@ -288,14 +292,14 @@ Soit $G$ un groupe algébrique. Les assertions suivantes sont équivalentes:
 \begin{enumerate}
 \item 1)$\implies$2) La restriction $k[D_n]\xrightarrow{res} G$ est surjective et la restriction d'un caractère est un caractère.
 \item 2)$\implies$3) $G$ est abélien, car $\forall \chi\in X^*(G),\,g,h\in G, \chi(gh)=\chi(hg)$. C'est donc vrai pour toute fonction régulière, on en conclut $gh=hg$.\\
-On observe que l'action naturelle de $G$ sur $k[G]$ est semi-simple. En effet, les caractères forment une base de diagonalisation, $G$ est donc semi-simple. Soit $(V,\rho)$ le $G$-module considéré, que l'on peut supposer de dimension finie. Par la décomposition de Jordan,  $\rho(G)$ est un sous groupe fermé de $GL_n$, abélien et semi-simple. Il est donc conjugué à un sous-groupe fermé de $D_n$.
+On observe que l'action naturelle de $G$ sur $k[G]$ est semi-simple. En effet, les caractères forment une base de diagonalisation, $G$ est donc semi-simple. Soit $(V,\rho)$ le $G$-module considéré et $W\subset V$ un sous $G$-module de dimension finie, disons $n$. Par la décomposition de Jordan,  $\rho(G)$ est semi-simple. De plus, c'est un sous groupe abélien fermé de $GL_n$. Il est donc conjugué à un sous-groupe fermé de $D_n$. On voit ainsi que $V=\bigoplus_{\chi \in X^*(G)}V_\chi$, où $V_\chi:=\lbrace v\in v\mid g.f=\chi(g)f,\, \forall g\in G \rbrace$. En effet, ils sont en somme directe, et tout élément de $V$ se décompose de cette manière.
 \item 3)$\implies$1) On peut supposer $G\subset GL_n$, et considérer l'action naturelle sur $k^n$ après choix d'une base $(e_1,...,e_n)$. Par hypothèse, on peut écrire $k^n=(f_1)\oplus...\oplus (f_n)$, avec les $(f_i)$ sous $G$-module de dimension 1. $G$ est donc conjugué à un sous-groupe de $D_n$.
 \end{enumerate}
 \end{proof}
 
 Ce constat motive la définition suivante:
 
-\begin{defn}
+\begin{defn}[Quasitore]
 Un quasitore est un groupe algébrique $G$ tel que $k[G]=\textrm{Vect}_k(X^*(G))$. Un tore est un quasitore connexe.
 \end{defn}
 
@@ -363,8 +367,6 @@ Fonctorialité.
 \end{cons}
 
 On voit que dans les deux constructions on a la même condition sur l'homogénéité qui détermine à la fois l'action et la graduation, c'est ce qu'on voulait vérifier.
-
-
 
 \section{Théorie des invariants}
 \subsection{L'algèbre des invariants}
@@ -439,7 +441,7 @@ Soit $I$ (resp. $I'$) l'idéal de $Z$ (resp. $Z'$) dans $k[X]$. L'idéal de $Z\c
 
 On remarque que les propriétés du théorème précédent s'étendent automatiquement au cas d'une $G$-variété $X$ si le théorème est vérifié localement sur un recouvrement affine d'un candidat $Y$ pour le quotient $X//G$. De ce constat découle la notion de bon quotient.
 
-\begin{defn}
+\begin{defn}[Bon quotient]
 Soit $G$ un groupe réductif et $X$ une $G$-variété. Une paire $(Y, \pi)$ où $Y$ est une variété et $\pi$ un morphisme $X\rightarrow Y$ est un bon quotient si elle vérifie:\\
 (i) $\pi$ est affine et $G$-invariant.\\
 (ii) $\pi^*:\Oo_Y \rightarrow (\pi_*\Oo_X)^G$ est un isomorphisme.
@@ -454,7 +456,7 @@ Soit $G$ un groupe réductif et $X$ une $G$-variété affine. D'après le théor
 
 Parmi les quotients catégoriques $(X//G,\pi)$, on cherche à caractériser ceux ayant les propriétés géométriques intuitivement attendues pour un quotient, c'est à dire que $X//G$ soit l'ensemble des orbites avec une topologie aussi fine que possible. C'est la notion de quotient géométrique:
 
-\begin{defn}
+\begin{defn}[Quotient géométrique]
 Soit $G$ un groupe algébrique et $X$ une $G$-variété. Une paire $(Y, \pi)$ où $Y$ est une variété et $\pi$ un morphisme $X\rightarrow Y$ est un quotient géométrique si elle vérifie:\\
 (i) $\pi$ est surjective et ses fibres sont exactement les orbites.\\
 (ii) La topologie de $Y$ coïncide avec la topologie quotient associée à $\pi$.\\
