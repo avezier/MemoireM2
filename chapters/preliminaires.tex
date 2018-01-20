@@ -58,8 +58,12 @@ Soit $\Sigma$ un ensemble algébrique affine et $f\in k[\Sigma]^*$. On a $\mathc
 Une $k$-variété algébrique affine est un espace annelé isomorphe à un ensemble algébrique affine.
 \end{defn}
 
-Soit $\Sigma$ un ensemble algébrique affine. En utilisant la bijection entre $\Sigma$ et $\spm (k[\Sigma])$, on voit comment définir directement la topologie de Zariski sur $\spm (k[\Sigma])$ ainsi que le faisceau structural, faisant de ce dernier une variété algébrique affine. Concrètement, les fermés de $\spm (k[\Sigma])$ sont les $\mathcal{V}(I):=\lbrace m \in \spm (k[\Sigma]) \mid I\subset m \rbrace$. Les éléments de $k[\Sigma]$ définissent des fonctions sur $\spm (k[\Sigma])$ en les considérant modulo $m$, pour $m \in \spm (k[\Sigma])$. On peut définir le faisceau sur la base des ouverts principaux $D(f):=\lbrace m \in \spm (k[\Sigma]) \mid f \notin m\rbrace$ en posant $\mathcal{O}_{\spm (k[\Sigma])}(D(f))\simeq k[\Sigma][1/f]$\\
-Par construction $\spm (k[\Sigma])$ est isomorphe à $\Sigma$. Cela donne une manière intrinsèque de définir une variété algébrique affine, indépendamment d'un plongement dans un espace affine quelconque.\\
+\begin{rem}
+Soit $\Sigma$ un ensemble algébrique affine. En utilisant la bijection entre $\Sigma$ et $\spm (k[\Sigma])$, on voit comment définir directement la topologie de Zariski sur $\spm (k[\Sigma])$ ainsi qu'un faisceau structural, faisant de $\spm$ une variété algébrique affine canoniquement isomorphe à $\Sigma$. Concrètement, les fermés de $\spm (k[\Sigma])$ sont les $\mathcal{V}(I):=\lbrace m \in \spm (k[\Sigma]) \mid I\subset m \rbrace$. Les éléments de $k[\Sigma]$ définissent des fonctions sur $\spm (k[\Sigma])$ en les considérant modulo $m$, pour $m \in \spm (k[\Sigma])$. On peut définir le faisceau sur la base des ouverts principaux $D(f):=\lbrace m \in \spm (k[\Sigma]) \mid f \notin m\rbrace$ en posant $\mathcal{O}_{\spm (k[\Sigma])}(D(f))\simeq k[\Sigma][1/f]$.\\
+Cela donne une manière intrinsèque de définir une variété algébrique affine à partir d'une algèbre affine $A$, indépendamment d'un plongement dans un espace affine quelconque.\\
+De même on peut munir $\Hom(k[\Sigma],k)$ d'une structure de variété affine canoniquement isomorphe à $\Sigma$. On peut voir cela comme une généralisation de la bidualité de l'algèbre linéaire, qui correspond aux polynômes homogènes de degré 1. Avec cette même analogie on peut voir le Nullstellensatz comme une généralisation de l'égalité $F=F^{\bot\circ}$ pour un sous $k$-ev $F$ d'un $k$-ev $E$ de dimension finie.
+\end{rem}
+
 On remarque que la catégorie des variétés algébriques est équivalente à celle des ensembles algébriques affines.
 \begin{ex}
 Soit $X$ une variété algébrique affine et $f\in k[X]$. $(D(f), \mathcal{O}_X(D(f)))$ est une variété algébrique affine.
@@ -326,12 +330,12 @@ Soit $G$ un quasitore. Alors:
 
 \subsubsection{Action d'un quasitore sur une variété affine}
 
-Soient $\chi_1,...,\chi_r$ un choix de caractères de $D_n$. On a une action dite diagonale de $D_n$ sur $k^r$ associée à ce choix par: $g.x = (\chi_1(g)x_1,...,\chi_r(g)x_r)$. On voit, que $k[k^r]=k[t_1,...,t_r]$ est naturellement graduée par le sous-groupe de $X^*(D_n)=\oplus_{i=1}^n\ZZ t_i$ engendré par les $\chi_i$. En fait, on observe ci-dessous que les foncteurs $\spm$ et $k[.]$ réalisent une équivalence de catégorie entre les variétés affines munies d'une action d'un quasitore et les algèbres graduées par un groupe abélien de type fini. La seule chose à vérifier étant que ces restriction sont bien définies, l'équivalence découlant alors de celle entre les variétés affines et les $k$-algèbres affines.
+On a montré dans la partie précédente que l'algèbre des coordonnées d'un quasitore $G$ était naturellement munie d'une $X^*(G)$-graduation. Cela peut être vu comme la traduction algébrique de l'action de $G$ sur lui même par multiplication à gauche. On précise, cela ci-dessous en montrant que les foncteurs $\spm$ et $k[.]$ réalisent une équivalence de catégorie entre les variétés affines munies d'une action d'un quasitore et les algèbres graduées par un groupe abélien de type fini. On a déjà l'équivalence entre variétés affines et algèbres affines. Il s'agit donc de vérifier que les restriction des deux foncteurs sont bien définies et que les actions et graduations sont préservées.
 
 \begin{cons}
 Soit $G$ un quasitore et X une $G$-variété affine. Le $G$-module $k[X]$ est somme directe de $G$-module de dimension 1 d'après la partie précédente et on peut écrire: 
 \begin{center}
-$k[X]=\bigoplus_{\chi \in X^*(G)}V_\chi$,  où $V_\chi:=\lbrace f\in k[X]\mid g.f=\chi(g)f,\, \forall g\in G$
+$k[X]=\bigoplus_{\chi \in X^*(G)}V_\chi$,  où $V_\chi:=\lbrace f\in k[X]\mid g.f=\chi(g)f,\, \forall g\in G \rbrace$ 
 \end{center}
 On voit immédiatement que cette somme directe est $X^*(G)$-graduée. De plus, cette construction est fonctorielle, en effet en considérons les diagrammes commutatifs ci-dessous. Le premier est la traduction de la donnée d'un morphisme d'un morphisme $(\widetilde{\phi},\phi)$ d'une $G$-variété affine $X$ vers une $G'$-variété affine $X'$. Le second est obtenu par passage aux algèbres de coordonnées.
 \begin{multicols}{2}
@@ -350,14 +354,15 @@ On voit immédiatement que cette somme directe est $X^*(G)$-graduée. De plus, c
 	\end{tikzcd}
 	\end{center}
 \end{multicols}
-On obtient alors pour $f\in V'_{\chi'}\subset k[X'],g\in G,x\in X,\, \phi^*(f)(g.x)=a_1^*\phi^*(f)(g, x)=(\widetilde{\phi}\otimes\phi)a_2^*(f)(g,x)=\widetilde{\phi}^*(\chi')(g)\phi^*(f)(x)$ donc $\phi^*(f)\in V_{\widetilde{\phi}^*(\chi')}$, cela montre que $(\widetilde{\phi},\phi)$ est un morphisme d'algèbres graduées. Le reste des propriétés découlent du fait que $X^*(.)$ et $k[.]$ sont des foncteurs. 
+On obtient alors pour $f\in V'_{\chi'}\subset k[X'],\,g\in G,\,x\in X,\, \phi^*(f)(g.x)=a_1^*\phi^*(f)(g, x)=(\widetilde{\phi}\otimes\phi)a_2^*(f)(g,x)=\widetilde{\phi}^*(\chi')(g)\phi^*(f)(x)$ donc $\phi^*(f)\in V_{\widetilde{\phi}^*(\chi')}$, cela montre que $(\widetilde{\phi},\phi)$ est un morphisme d'algèbres graduées.
 \end{cons}
 
 \begin{cons}
-Soit $K$ un groupe abélien de type fini et $A$ une $k$-algèbre $K$-graduée. On pose $X:=\spm(A)$ et on choisit des générateurs homogènes $f_{\omega_1},...,f_{\omega_r}$ de $A$, ce qui donne une immersion fermée $i:X\rightarrow k^r, x\mapsto (f_1(x),...,f_r(x))$. On transporte la graduation à $k[i(X)]=k[t_1,...,t_r]/\Ker i^*$ en posant $deg(t_i)=\omega _i$. Enfin, on munit $i(X)$ de l'action diagonales associée aux caractères $\chi^{\omega_1},...,\chi^{\omega_r}$ de $G:=\spm(k[K])$. Vu comme cela on a concrètement pour $f\in k[i(X)]$, $f(g.t)=f(\chi^{\omega_1}(g)t_1,...,\chi^{\omega_r}(g)t_r)=\sum\alpha_{i_1,...,i_r}\chi^{\sum i_k\omega_k}t_1^{i_1}...t_r^{i_r}(x)$. D'où $f\in $
+Soit $K$ un groupe abélien de type fini et $A$ une $k$-algèbre affine $K$-graduée. On pose $X:=\spm(A)$ et on choisit des générateurs homogènes $f_{\omega_1},...,f_{\omega_r}$ de $A$, ce qui donne une immersion fermée $i:X\rightarrow k^r, x\mapsto (f_1(x),...,f_r(x))$. On transporte la graduation à $k[k^r]=k[t_1,...,t_r]$ en posant deg$(t_i)=\omega _i$, ce qui fait de $k[i(X)]=k[t_1,...,t_r]/\Ker i^*\xrightarrow{\overline{i^*}}A$ un isomorphisme d'algèbres graduées. Enfin, on munit $k^r$ de l'action diagonale associée aux caractères $\chi^{\omega_1},...,\chi^{\omega_r}$ de $G:=\spm(k[K])$, c'est à dire $\forall g\in G,\, t\in k^r,\, g.t := (\chi^{\omega_1}(g)t_1,...,\chi^{\omega_r}(g)t_r)$. On a donc concrètement pour $f:=\sum\alpha_{i_1,...,i_r}t_1^{i_1}...t_r^{i_r}\in k[k^r]$, $f(g.t)=f(\chi^{\omega_1}(g)t_1,...,\chi^{\omega_r}(g)t_r)=\sum\alpha_{i_1,...,i_r}\chi^{\sum i_k\omega_k}(g)t_1^{i_1}...t_r^{i_r}$. Ainsi on a, $f\in k[k^r]_{\omega}\iff \forall (i_1,...,i_r),\, \sum_k i_k\omega_k=\omega \iff f(g.t)=\chi^{\omega}(g)\sum\alpha_{i_1,...,i_r}t_1^{i_1}...t_r^{i_r}=\chi^{\omega}(g)f(t), \forall g\in G$. Cette condition montre que l'idéal homogène $\Ker i^*$ est $G$-stable et donc que $i(X)$ est une $G$-variété. On transporte en retour cette action sur $X$ et on voit que l'action obtenue est indépendante du choix initiale des $f_i$, en effet la condition d'homogénéité exprimée ci-dessus le comorphisme de l'action de $G$: $a^*:A\rightarrow k[K]\otimes A,\, f_{\omega}\mapsto \chi^{\omega}\otimes f_{\omega}$.\\
+Fonctorialité.
 \end{cons}
 
-
+On voit que dans les deux constructions on a la même condition sur l'homogénéité qui détermine à la fois l'action et la graduation, c'est ce qu'on voulait vérifier.
 
 
 
