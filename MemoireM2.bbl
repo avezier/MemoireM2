@@ -4,7 +4,7 @@
 Ivan Arzhantsev.
 \newblock Introduction to algebraic groups and invariant theory.
 \newblock \url{http://halgebra.math.msu.su/staff/arzhan/driver.pdf}.
-\newblock Accessed: 2018-16-01.
+\newblock Accessed: 2018-23-01.
 
 \bibitem{article}
 auteur.
@@ -15,12 +15,23 @@ auteur.
 Michel Brion.
 \newblock Introduction to actions of algebraic groups.
 \newblock \url{https://www-fourier.ujf-grenoble.fr/~mbrion/notes_luminy.pdf}.
-\newblock Accessed: 2018-16-01.
+\newblock Accessed: 2018-23-01.
 
 \bibitem{coxrings}
 Ivan~Arzhantsev et~al.
 \newblock {\em Cox Rings}.
 \newblock Cambridge University Press, 2014.
+
+\bibitem{AGMilne}
+JS~Milne.
+\newblock Algebraic geometry.
+\newblock \url{http://www.jmilne.org/math/CourseNotes/AG.pdf}.
+\newblock Accessed: 2018-23-01.
+
+\bibitem{MumfordRedBook}
+David Mumford.
+\newblock {\em The red book of varieties and schemes}.
+\newblock Springer, 1999.
 
 \bibitem{LAGSpringer}
 T.A. Springer.

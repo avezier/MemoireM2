@@ -116,6 +116,14 @@ Alors on définit une prevariété X comme la réunion disjointe des $X_i$ modul
 
 
 \subsection{Dimension}
+
+\begin{thm}\label{dimsousvariete}
+Soit $X$ une variété irréductible, $U\subset X$ un ouvert non-vide et $f\in \Oo_X(U)^*$ non inversible. Soit $Z$ une composante irréductible de $\lbrace x \in U \mid f(x)=0$. Alors dim($Z$)$=$dim(X)-1.
+\end{thm}
+\begin{proof}
+Voir \cite{MumfordRedBook} I.7 Th.2, après réduction au cas $X$ affine, la preuve consiste en une réduction au cas facile où $k[X]$ est factoriel. 
+\end{proof}
+
 \subsection{Normalité}
 
 \subsection{Quelques résultats sur les morphismes}
@@ -628,22 +636,25 @@ On note $A_{(f)}:=(A_f)_0$ en remarquant qu'il s'agit de l'algèbre des invarian
 Les flèches horizontales du diagramme de droite sont des immersions ouvertes, en effet on a $U_{f_if_j}\simeq (U_{f_i})_{f_j}$. Les conditions de la construction \ref{gluevar} sont satisfaites, on peut former une prevariété Proj($A$) par recollement des $U_{f_i}$ le long de ces immersions. De plus, les $(U_{f_i},\pi_i)$ sont des quotients géométriques et le diagramme exprime que l'on a les conditions de recollement sur les intersections qui font de Proj($A$) le quotient géométrique global $W//k^*$.\\
 Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-stables de $W$, c'est à dire aux idéaux radicaux homogènes qui ne contiennent pas l'idéal inconvenant. On appelle ces fermés des variétés projectives. La topologie quotient sur Proj($A$) que l'on vient de définir est aussi appelé la topologie de Zariski.
 
+\textcolor{red}{Pourquoi c'est séparé?}
+
 \textcolor{red}{Action de $PGL$ sur $(P^1)^4$. Quotient = $P1$ avec birapport?}
 
 \section{Diviseurs}
 
 \subsection{Généralités}
-\begin{defn}[Diviseur premier, Div($X$), diviseur de Weil]
-Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une sous-variété fermée irréductible de codimension 1. On définit Div($X$) le groupe libre engendré par les diviseurs premiers. Un élément de Div($X$) est appelé un diviseur de Weil.
+\begin{defn}[Diviseur premier, WDiv($X$), diviseur de Weil]
+Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une sous-variété fermée irréductible de codimension 1. On définit WDiv($X$) le groupe libre engendré par les diviseurs premiers. Un élément de WDiv($X$) est appelé un diviseur de Weil.
 \end{defn}
 On introduit maintenant pour chaque diviseur $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles sur $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. On pose $$\Oo_{X,D}=\lbrace f\in k(X)\mid f \textrm{ est définie sur } U\subset X \textrm{ ouvert tel que } U\cup D\neq \emptyset \rbrace$$
 Soit $U$ un ouvert affine qui intersecte $D$. Comme $X$ est irréductible, on voit que $\Oo_{X,D}=\Oo_{U,U\cap D}$. On peut donc supposer $X$ affine avec $A=k[X]$ intègre. Dans ce contexte, $D$ correspond à un idéal premier $p$ de hauteur 1, et on a par définition:$$\Oo_{X,D}=\lbrace f/g\in k(X)\mid f,g\in A,\, g\notin p \rbrace = A_p$$
-$A_p$ est un anneau local d'idéal maximal $pA_p$. $A_p$ est noetherien et normal car la localisation préserve ces propriétés. De plus $A_p$ est de dimension 1 car on a une correspondance entre les idéaux premiers de $A$ inclus dans $p$, et les idéaux premiers de $A_p$. On conclut que $\Oo_{X,D}$ est un DVR. La valuation associée $\nu_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
+$A_p$ est un anneau local d'idéal maximal $pA_p$. $A_p$ est noetherien et normal car la localisation préserve ces propriétés. De plus $A_p$ est de dimension 1 car on a une correspondance entre les idéaux premiers de $A$ inclus dans $p$, et les idéaux premiers de $A_p$. On conclut que $\Oo_{X,D}$ est un DVR. La valuation associée ord$_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
 
 \begin{prop}
-Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors $\nu_D(f)=0$ sauf pour un nombre fini de diviseurs premiers $D$.
+Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors ord$_D(f)=0$ sauf pour un nombre fini de diviseurs premiers $D$.
 \end{prop}
 \begin{proof}
-Soit $f=g/h\in k(X)*$
+Soit $f=g/h\in k(X)*$, où l'on peut supposer $X$ affine. Comme ord$_D(f)=$ord$_D(g)-$ord$_D(h)$, on peut supposer $f\in k[X]$. Soit $D$ une diviseur et $p$ son idéal. Si $f\in k[X]_p^\times$ alors ord$_D(f)=0$. Sinon, $f\in p$ et donc $D \subset \mathcal{V}_X(f)$. Or, d'après le théorème \ref{dimsousvariete}, les composantes irréductibles $Z_i$ de $\mathcal{V}_X(f)$ sont des diviseurs premiers. Ainsi ord$_D(f)=0$ à moins que $D$ ne soit l'un des $Z_i$.
 \end{proof}
 
+Ainsi l'application $k(X)^*\rightarrow $ WDiv$(X),\, f\mapsto $ div$(f):=\sum_D$ord$_D(f)D$ définit un morphisme de groupe. Son image est le \textit{groupe des diviseurs principaux} noté PDiv$(X)$. La relation modulo PDiv$(X)$ s'appelle \textit{l'équivalence linéaire}, et le groupe quotient est \textit{le groupe des classes de diviseurs}.

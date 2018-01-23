@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  23 JAN 2018 17:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  23 JAN 2018 21:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1219,16 +1219,16 @@ Chapitre 1.
 
 ] [5] [6] [7]
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 221.
+LaTeX Warning: Reference `' on page 8 undefined on input line 229.
 
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 222.
+LaTeX Warning: Reference `' on page 8 undefined on input line 230.
 
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 223.
+LaTeX Warning: Reference `' on page 8 undefined on input line 231.
 
 [8] [9]
-Overfull \hbox (0.88939pt too wide) in paragraph at lines 324--325
+Overfull \hbox (0.88939pt too wide) in paragraph at lines 332--333
 \T1/cmr/m/it/10 tant que groupes al-gé-briques par trans-port de struc-ture. L'
 iso-mor-phisme est $\OML/cmm/m/it/10 ev[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 G 
 \OMS/cmsy/m/n/10 ! []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 (\OML
@@ -1260,10 +1260,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 20911 strings out of 492995
- 389670 string characters out of 6132704
- 472893 words of memory out of 5000000
- 23878 multiletter control sequences out of 15000+600000
+ 20917 strings out of 492995
+ 389751 string characters out of 6132704
+ 476742 words of memory out of 5000000
+ 23881 multiletter control sequences out of 15000+600000
  25361 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,18n,84p,1650b,1109s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1295,10 +1295,10 @@ ve/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive
 017/texmf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/201
 7/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/
 texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on MemoireM2.pdf (20 pages, 411531 bytes).
+Output written on MemoireM2.pdf (20 pages, 415497 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
- 430 compressed objects within 5 object streams
- 160 named destinations out of 1000 (max. 500000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 437 compressed objects within 5 object streams
+ 163 named destinations out of 1000 (max. 500000)
  181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
