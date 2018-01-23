@@ -1,5 +1,12 @@
 \chapter{Préliminaires}
 
+\section{Résultats d'algèbre commutative}
+
+\subsection{Lemme de normalisation de Noether et applications}
+\subsection{Décomposition primaire des modules noetheriens}
+\subsection{Anneaux de valuation discrète}
+
+
 \section{Algèbres graduées}
 
 \begin{prop}\label{noethgrad}
@@ -35,13 +42,13 @@ La construction qui à $\Sigma$ associe $k[\Sigma]$ est fonctorielle. Le foncteu
 
 \end{defn}
 \subsubsection{La catégorie des $k$-variétés algébriques affines}
-\begin{defn}[Espace annelé]\label{espaceannele}
+\begin{defn}[Espace annelé, Morphisme]\label{espaceannele}
 Un espace annelé est un espace topologique $X$ muni d'un faisceau de $k$-algèbres de fonctions sur $X$ à valeurs dans $k$. On dénote $\mathcal{O}_X$ ce faisceau.\\
 Soient $(X, \mathcal{O}_X), (Y, \mathcal{O}_Y)$ deux espaces annelés. Un morphisme d'espace annelé est une application continue $\phi: X\rightarrow Y$ telle que que la pré-composition par $\phi$ induit, pour tout ouvert $U$ de $Y$, un morphisme de $k$-algèbres $\phi^*:\mathcal{O}_Y(U) \rightarrow \mathcal{O}_X(\phi^{-1}U)$.
 \end{defn}
 
 \begin{defn}[Fonction régulière]
-Soit $\Sigma$ un ensemble algébrique affine, $x\in \Sigma$ et $U$ un ouvert contenant $x$. Une application $f:U\rightarrow k\in Map(U,k)$ est dite régulère en $x$ si $\exists\ g,h\in k[\Sigma]$ et un ouvert $V\subset U\cap D(h)$ contenant $x$ tel que $f(y) = g(y)/h(y), \forall y\in V$.\\
+Soit $\Sigma$ un ensemble algébrique affine, $x\in \Sigma$ et $U$ un ouvert contenant $x$. Une application $f:U\rightarrow k\in \textrm{Map}(U,k)$ est dite régulière en $x$ si $\exists\ g,h\in k[\Sigma]$ et un ouvert $V\subset U\cap D(h)$ contenant $x$ tel que $f(y) = g(y)/h(y), \forall y\in V$.\\
 $f$ est dite régulière sur $U$ si elle est régulière en tout point de $U$.
 \end{defn}
 
@@ -104,11 +111,13 @@ Soit $(X_i)_{u\in I}$ une famille finie de prevariétés. Supposons $\forall i,j
 	\item $f_{ij}=f_{ji}^{-1}$
 	\item $U_{ij}\cup f_{ij}^{-1}(U_{jk})\subset U_{ik}^{-1}$ et $f_{jk}f_{ij}=f_{ik}$ sur $U_{ij}\cup f_{ij}^{-1}(U_{jk})$
 	\end{enumerate}
-Alors on définit une prevariété X comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $a\sim f_{ji}(a),\forall a\in U_{ij}\subset X_i$, et $a\sim a \forall a$. La topologie est la topologie finale associée aux inclusions $inc_i:X_i\subset X$. Le faisceau structural est définit par $\Oo_X(U):=\lbrace \phi\in \textrm{Map}(U,k)\mid inc_i^*\phi\in\Oo_{X_i}(inc_i^{-1}(U))\rbrace$
+Alors on définit une prevariété X comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $a\sim f_{ji}(a),\forall a\in U_{ij}\subset X_i$, et $a\sim a \forall a$. La topologie est la topologie finale associée aux inclusions $inc_i:X_i\subset X$. Le faisceau structural est définit par $\Oo_X(U):=\lbrace \phi\in \textrm{Map}(U,k)\mid inc_i^*\phi\in\Oo_{X_i}(inc_i^{-1}(U))\rbrace$.
 \end{cons}
 
 
 \subsection{Dimension}
+\subsection{Normalité}
+
 \subsection{Quelques résultats sur les morphismes}
 \subsubsection{Généralités}
 
@@ -142,7 +151,8 @@ On dit qu'un morphisme est localement fini en $x\in X$ si ils existe un morphism
 Alors il existe $g\in k[Y]^*$ tel que le morphisme induit $f:X_g \mapsto Y_g$ soit fini, surjectif avec des fibres de même cardinal.
 \end{prop}
 \begin{proof}
-Par hypothèse, l'extension $k(Y) \xrightarrow{f^*} k(X)$ est algébrique finie, disons de degré n. En \textbf{caractéristique zéro} on peut trouver $u\in k(X)$ tel que $k(X)=k(Y)[u]$. On remarque que l'on peut imposer $u\in k[X]$. On considère $P:=P_{min}(u, k(Y))=T^n+a_1T^{n-1}+...+a_0$. En réduisant au même dénominateur on a $P\in k[Y]_{v_1}[T]$ pour un $v_1\in k[Y]$. \textcolor{red}{Est ce que $k[X]_{v_1}\simeq k[Y]_{v_1}[u]$ ? A priori pas de raison?}
+Par hypothèse, l'extension $k(Y) \xrightarrow{f^*} k(X)$ est algébrique finie, disons de degré n. En caractéristique zéro on peut trouver $u\in k(X)$ tel que $k(X)=k(Y)[u]$. On remarque que l'on peut imposer $u\in k[X]$. On considère $P:=P_{min}(u, k(Y))=T^n+a_1T^{n-1}+...+a_0$. En réduisant au même dénominateur on a $P\in k[Y]_v[T]$ pour un $v\in k[Y]$. De plus, en prenant l'intersection avec d'autres ouverts principaux on peut supposer $k[X]_v$ entier sur $k[Y]_v$, et $k[Y]_v[u]$ intégralement clos, ce qui donne $k[Y]_v[u]=k[X]_v$ et $k[X]_v$ entier sur $k[Y]_v$. Ainsi $f:X_v \rightarrow Y_v$ est fini et donc surjectif car dominant.\\
+On a donc une factorisation de $f^*:k[Y]_v\xrightarrow{p_1^*}k[Y]_v[T]\xrightarrow{\pi}k[Y]_v[T]/(P)\xrightarrow{\overline{ev_f}}k[Y]_v[u]$ qui donne $f:X_v \xrightarrow{\simeq} \lbrace (y,t) \in Y_v\times \mathbb{A}^1\mid P(y)(t)=0\rbrace \hookrightarrow Y_v\times \mathbb{A}^1 \xrightarrow{p_1} Y_v$. Ainsi le cardinal de la fibre $f^{-1}(y), y\in Y_v$ est le cardinal de l'ensemble des zéros du polynôme $P(y)(T)$. On peut s'assurer que cet ensemble est de cardinal constant en intersectant à nouveau avec l'ouvert principal du discriminant de $P$ qui est un polynôme en les coefficients de $P$.
 \end{proof}
 
 Ce résultat reste vrai en caractéristique positive, voir 
@@ -176,11 +186,16 @@ Soit $f:X \mapsto Y$ un morphisme dominant de variétés irréductibles. Soit $g
 \begin{prop}
 Soit $f:X \mapsto Y$ un morphisme de variétés affines et $x\in X$. Si la fibre de $f(x)$ est finie, alors $f$ est localement fini en $x$.
 \end{prop}
+\begin{proof}
+Cf \cite{LAGSpringer} 5.2.6
+\end{proof}
 
-\begin{thm}
+\begin{thm}\label{ZMT}
 Soit $f:X \mapsto Y$ un morphisme bijectif de variétés irréductibles avec $Y$ normale. Alors $f$ est un isomorphisme.
 \end{thm}
+\begin{proof}
 
+\end{proof}
 
 
 \section{Groupes algébriques affines}
@@ -265,7 +280,7 @@ Alors il existe une unique factorisation
 	\\Supposons $G$ quelconque mais $H\leq G^\circ$. Comme $\phi$ est algébrique sur le sous-groupe $G^\circ/H$ d'après ce qui précède, on a $\phi$ algébrique partout à nouveau par G-équivariance.\\
 	On peut se ramener au cas précédent en procédant en deux étapes. Dans un premier temps, on quotiente par le sous-groupe normal connexe $H^\circ$ (on a bien $H^\circ\leq G^\circ$), puis on quotiente par le sous-groupe normal fini $H/H^\circ$. Il reste donc à prouver le cas $H$ fini, c'est un corollaire direct du théorème \ref{goodquotientthm}.
 	\end{proof}
-\subsection{Quasitores, et actions de quasitores}
+\subsection{Quasitores, actions de quasitores}
 
 \subsubsection{Quasitores}
 Soit $G$ un groupe algébrique. Le groupe $X^*(G)$ des caractères de $G$ est un sous-groupe de $k[G]^\times$. On remarque que $X^*(.)$ est un foncteur contravariant de la catégorie des groupes algébriques dans la catégorie des groupes abéliens de type fini, l'image d'un morphisme $G_1\xrightarrow{\phi}G_2$ étant simplement la (co)-restriction $\phi^* \,_{|X^*(G_2)}^{|X^*(G_1)}$ du co-morphisme $\phi^*$ entre les algèbres de coordonnées. On signale qu'en caractéristique $p>0$, les $X^*(G)$ ont de plus la propriété d'être sans $p$-torsion. Tout ce qui suit reste vrai en caractéristique p, avec cette contrainte supplémentaire sur les groupes de caractères.
@@ -334,39 +349,151 @@ Soit $G$ un quasitore. Alors:
 
 \subsubsection{Action d'un quasitore sur une variété affine}
 
-On a montré dans la partie précédente que l'algèbre des coordonnées d'un quasitore $G$ était naturellement munie d'une $X^*(G)$-graduation. Cela peut être vu comme la traduction algébrique de l'action de $G$ sur lui même par multiplication à gauche. On précise, cela ci-dessous en montrant que les foncteurs $\spm$ et $k[.]$ réalisent une équivalence de catégorie entre les variétés affines munies d'une action d'un quasitore et les algèbres graduées par un groupe abélien de type fini. On a déjà l'équivalence entre variétés affines et algèbres affines. Il s'agit donc de vérifier que les restriction des deux foncteurs sont bien définies et que les actions et graduations sont préservées.
+On a montré dans la partie précédente que l'algèbre des coordonnées d'un quasitore $G$ était naturellement munie d'une $X^*(G)$-graduation. Cela peut être vu comme la traduction algébrique de l'action de $G$ sur lui même par multiplication à gauche. On précise, cela ci-dessous en montrant que les foncteurs $\spm$ et $k[.]$ réalisent une équivalence de catégories entre les variétés affines munies d'une action d'un quasitore et les algèbres graduées par un groupe abélien de type fini. On a déjà l'équivalence entre variétés affines et algèbres affines. Il s'agit donc de vérifier que les (co)-restrictions des deux foncteurs sont bien définies et que les actions et graduations sont préservées.
 
 \begin{cons}
-Soit $G$ un quasitore et X une $G$-variété affine. Le $G$-module $k[X]$ est somme directe de $G$-module de dimension 1 d'après la partie précédente et on peut écrire: 
+Soit $H$ un quasitore et X une $H$-variété affine. Le $H$-module $k[X]$ est somme directe de $H$-module de dimension 1 d'après la partie précédente et on peut écrire: 
 \begin{center}
-$k[X]=\bigoplus_{\chi \in X^*(G)}V_\chi$,  où $V_\chi:=\lbrace f\in k[X]\mid g.f=\chi(g)f,\, \forall g\in G \rbrace$ 
+$k[X]=\bigoplus_{\chi \in X^*(H)}V_\chi$,  où $V_\chi:=\lbrace f\in k[X]\mid h.f=\chi(h)f,\, \forall h\in H \rbrace$ 
 \end{center}
-On voit immédiatement que cette somme directe est $X^*(G)$-graduée. De plus, cette construction est fonctorielle, en effet en considérons les diagrammes commutatifs ci-dessous. Le premier est la traduction de la donnée d'un morphisme d'un morphisme $(\widetilde{\phi},\phi)$ d'une $G$-variété affine $X$ vers une $G'$-variété affine $X'$. Le second est obtenu par passage aux algèbres de coordonnées.
+On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, cette construction est fonctorielle, en effet en considérons les diagrammes commutatifs ci-dessous. Le premier est la traduction de la donnée d'un morphisme d'un morphisme $(\widetilde{\phi},\phi)$ d'une $H$-variété affine $X$ vers une $H'$-variété affine $X'$. Le second est obtenu par passage aux algèbres de coordonnées.
 \begin{multicols}{2}
 	\begin{center}
 		\begin{tikzcd}
-  		G\times X \arrow[r, "a_1"] \arrow[d, "\widetilde{\phi} \times \phi"] & X \arrow[d, "\phi"] \\ 
-  		G'\times X' \arrow[r, "a_2"] & X'
+  		H\times X \arrow[r, "a_1"] \arrow[d, "\widetilde{\phi} \times \phi"] & X \arrow[d, "\phi"] \\ 
+  		H'\times X' \arrow[r, "a_2"] & X'
 	\end{tikzcd}
 	\end{center}
 
 	\columnbreak
 	\begin{center}
 		\begin{tikzcd}
-  		k[G]\otimes k[X]   & k[X] \arrow[l, "a_1^*"] \\ 
-  		k[G]'\otimes k[X'] \arrow[u, "\widetilde{\phi}^* \otimes \phi^*"] & X' \arrow[u, "\phi"] \arrow[l, "a_2^*"] 
+  		k[H]\otimes k[X]   & k[X] \arrow[l, "a_1^*"] \\ 
+  		k[H']\otimes k[X'] \arrow[u, "\widetilde{\phi}^* \otimes \phi^*"] & k[X'] \arrow[u, "\phi"] \arrow[l, "a_2^*"] 
 	\end{tikzcd}
 	\end{center}
 \end{multicols}
-On obtient alors pour $f\in V'_{\chi'}\subset k[X'],\,g\in G,\,x\in X,\, \phi^*(f)(g.x)=a_1^*\phi^*(f)(g, x)=(\widetilde{\phi}\otimes\phi)a_2^*(f)(g,x)=\widetilde{\phi}^*(\chi')(g)\phi^*(f)(x)$ donc $\phi^*(f)\in V_{\widetilde{\phi}^*(\chi')}$, cela montre que $(\widetilde{\phi},\phi)$ est un morphisme d'algèbres graduées.
+Le petit calcul ci-dessous montre que $\forall f\in V'_{\chi'}\subset k[X'],\,	\phi^*(f)\in V_{\widetilde{\phi}^*(\chi')}$, ce qui montre que $(\widetilde{\phi},\phi)$ est un morphisme d'algèbres graduées. 
+$$\forall h\in H,\,x\in X,\, \phi^*(f)(h.x)=a_1^*\phi^*(f)(h, x)=(\widetilde{\phi}\otimes\phi)a_2^*(f)(h,x)=\widetilde{\phi}^*(\chi')(h)\phi^*(f)(x)$$ 
+
 \end{cons}
 
-\begin{cons}
-Soit $K$ un groupe abélien de type fini et $A$ une $k$-algèbre affine $K$-graduée. On pose $X:=\spm(A)$ et on choisit des générateurs homogènes $f_{\omega_1},...,f_{\omega_r}$ de $A$, ce qui donne une immersion fermée $i:X\rightarrow k^r, x\mapsto (f_1(x),...,f_r(x))$. On transporte la graduation à $k[k^r]=k[t_1,...,t_r]$ en posant deg$(t_i)=\omega _i$, ce qui fait de $k[i(X)]=k[t_1,...,t_r]/\Ker i^*\xrightarrow{\overline{i^*}}A$ un isomorphisme d'algèbres graduées. Enfin, on munit $k^r$ de l'action diagonale associée aux caractères $\chi^{\omega_1},...,\chi^{\omega_r}$ de $G:=\spm(k[K])$, c'est à dire $\forall g\in G,\, t\in k^r,\, g.t := (\chi^{\omega_1}(g)t_1,...,\chi^{\omega_r}(g)t_r)$. On a donc concrètement pour $f:=\sum\alpha_{i_1,...,i_r}t_1^{i_1}...t_r^{i_r}\in k[k^r]$, $f(g.t)=f(\chi^{\omega_1}(g)t_1,...,\chi^{\omega_r}(g)t_r)=\sum\alpha_{i_1,...,i_r}\chi^{\sum i_k\omega_k}(g)t_1^{i_1}...t_r^{i_r}$. Ainsi on a, $f\in k[k^r]_{\omega}\iff \forall (i_1,...,i_r),\, \sum_k i_k\omega_k=\omega \iff f(g.t)=\chi^{\omega}(g)\sum\alpha_{i_1,...,i_r}t_1^{i_1}...t_r^{i_r}=\chi^{\omega}(g)f(t), \forall g\in G$. Cette condition montre que l'idéal homogène $\Ker i^*$ est $G$-stable et donc que $i(X)$ est une $G$-variété. On transporte en retour cette action sur $X$ et on voit que l'action obtenue est indépendante du choix initiale des $f_i$, en effet la condition d'homogénéité exprimée ci-dessus le comorphisme de l'action de $G$: $a^*:A\rightarrow k[K]\otimes A,\, f_{\omega}\mapsto \chi^{\omega}\otimes f_{\omega}$.\\
-Fonctorialité.
+\begin{cons}\label{consgraduequasitore}
+Soit $K$ un groupe abélien de type fini et $A$ une $k$-algèbre affine $K$-graduée. On pose $X:=\spm(A)$ et on choisit des générateurs homogènes $f_{\omega_1},...,f_{\omega_r}$ de $A$, ce qui donne une immersion fermée $i:X\rightarrow k^r, x\mapsto (f_1(x),...,f_r(x))$. On transporte la graduation à $k[k^r]=k[t_1,...,t_r]$ en posant deg$(t_i)=\omega _i$, ce qui fait de $k[i(X)]=k[t_1,...,t_r]/\Ker i^*\xrightarrow{\overline{i^*}}A$ un isomorphisme d'algèbres graduées. Enfin, on munit $k^r$ de l'action diagonale associée aux caractères $\chi^{\omega_1},...,\chi^{\omega_r}$ de $H:=\spm(k[K])$, c'est à dire $\forall h\in H,\, t\in k^r,\, h.t := (\chi^{\omega_1}(h)t_1,...,\chi^{\omega_r}(h)t_r)$. On a donc concrètement pour $f:=\sum\alpha_{i_1,...,i_r}t_1^{i_1}...t_r^{i_r}\in k[k^r]$, $f(h.t)=f(\chi^{\omega_1}(h)t_1,...,\chi^{\omega_r}(h)t_r)=\sum\alpha_{i_1,...,i_r}\chi^{\sum i_k\omega_k}(h)t_1^{i_1}...t_r^{i_r}$. Ainsi on a, $f\in k[k^r]_{\omega}\iff \forall (i_1,...,i_r),\, \sum_k i_k\omega_k=\omega \iff f(h.t)=\chi^{\omega}(h)\sum\alpha_{i_1,...,i_r}t_1^{i_1}...t_r^{i_r}=\chi^{\omega}(h)f(t), \forall h\in H$. Cette condition montre que l'idéal homogène $\Ker i^*$ est $H$-stable et donc que $i(X)$ est une $H$-variété. On transporte en retour cette action sur $X$ et on voit que l'action obtenue est indépendante du choix initiale des $f_i$, en effet la condition d'homogénéité exprimée ci-dessus définit complètement le comorphisme de l'action de $H$: $a^*:A\rightarrow k[K]\otimes A,\, f_{\omega}\mapsto \chi^{\omega}\otimes f_{\omega}$.\\
+Pour finir, vérifions la fonctorialité. Soit $(\widetilde{\phi},\phi)$ un morphisme entre la $K$-algèbre graduée $A$ et la $K'$-algèbre graduée $A'$. La construction montre que l'on définit deux morphismes $a_1:A\rightarrow k[K]\otimes A$ et $a_2:A'\rightarrow k[K']\otimes A'$. Et on a, $$\forall h_\omega \in A_\omega,\, (\widetilde{\phi}\otimes \phi)\circ a_1(h_\omega)=(\widetilde{\phi}\otimes \phi)(\chi^{\omega}\otimes h_\omega) = \chi'^{\widetilde{\phi}(\omega)}\otimes \phi(h_\omega)_{\widetilde{\phi}(\omega)}$$ 
+$$\forall h_\omega \in A_\omega,\, a_2\circ \phi(h_\omega)=a_2(\phi(h_\omega)_{\widetilde{\phi}(\omega)})=\chi'^{\widetilde{\phi}(\omega)}\otimes \phi(h_\omega)_{\widetilde{\phi}(\omega)}$$
+D'où le diagramme commutatif de gauche ci-dessous, qui donne le diagramme de droite par application du foncteur $\spm$. Ce dernier diagramme finit de prouver la fonctorialité.
+\begin{multicols}{2}
+	\begin{center}
+			\begin{tikzcd}
+  		K\otimes A  \arrow[d, "\widetilde{\phi}^* \otimes \phi^*"]  & A \arrow[l, "a_1"] \arrow[d, "\phi"]  \\ 
+  		K'\otimes A' & A' \arrow[l, "a_2"] 
+	\end{tikzcd}
+	\end{center}
+
+	\columnbreak
+	\begin{center}
+		\begin{tikzcd}
+  		\spm(k[K])\times \spm(A) \arrow[r, "a_1^{\circ}"]  & \spm(A) \\ 
+  		\spm(k[K'])\times \spm(A') \arrow[r, "a_2^{\circ}"] \arrow[u, "\widetilde{\phi} \times \phi"] & \spm(A') \arrow[u, "\phi"] 
+	\end{tikzcd}
+	\end{center}
+\end{multicols}
 \end{cons}
 
-On voit que dans les deux constructions on a la même condition sur l'homogénéité qui détermine à la fois l'action et la graduation, c'est ce qu'on voulait vérifier.
+On voit que dans les deux constructions on a la même condition sur l'homogénéité qui détermine à la fois l'action et la graduation, c'est ce qu'on voulait vérifier.\\
+Ainsi les actions de quasitore sur les variétés affines peuvent être caractérisé en terme algébrique  grâce à cette équivalence. C'est l'objet des propositions suivantes.
+
+\begin{prop}\label{stablehomogene}
+Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$. Soit $Y\subset X$ une sous variété fermée, et $I=\mathcal{I}(Y)$. Les assertions suivantes sont équivalentes:
+\begin{enumerate}
+\item $Y$ est $H$-stable.
+\item $I$ est un idéal homogène.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Comme $I$ est radical, $Y$ est $H$-stable si et seulement si $\forall P\in I,\,h\in H,\, y\in Y,\, P(h.y)=0$. Supposons que cette dernière condition soit vérifiée, on écrit $P=\sum_{finie}P_\omega$ sa décomposition en composantes homogènes. On a alors, $P(h.y)=\sum \chi^{\omega}\otimes P_{\omega}(h,y) = \sum \chi^{\omega}(h) P_{\omega}(y)=0$. Les caractères étant libres, on a $P_{\omega}(y)=0, \forall y,\omega$, c'est à dire $P_{\omega}\in I, \forall \omega$. Ainsi $I$ est homogène. La réciproque est immédiate. 
+\end{proof}
+
+Dans la construction \ref{consgraduequasitore}, on voit que la situation générale est assez proche de l'exemple le plus simple de l'action diagonale de $(k^*)^n$ sur $k^r$ par un choix de $r$ caractères. On voit bien dans ce cas que la géométrie de l'orbite d'un point $p\in k^r$ va être assez dépendante de nullité des coordonnées $x_1,..., x_r$ au point $p$. Cela motive la définition suivante.
+
+
+\begin{defn}[Monoïde d'orbite, Groupe d'orbite]
+Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$.
+\begin{enumerate}
+\item Le monoïde d'orbite d'un point $\in X$ est le sous-monoïde $S_x\subset K$ engendré par $\lbrace\omega \in K\mid \exists f\in A_{\omega} \textrm{ telle que } f(x)\neq 0\rbrace$
+\item Le groupe d'orbite d'un point $\in X$ est le sous-groupe $K_x\subset K$ engendré par le monoïde d'orbite.
+\end{enumerate}
+\end{defn}
+
+\begin{prop}
+Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$, et $x\in X$. On a le diagramme commutatif suivant, dont les deux lignes sont exactes:
+	\begin{center}
+		\begin{tikzcd}
+  		0  \arrow[r] & K_x\arrow[r] \arrow[d, "\simeq"] & K \arrow[r] \arrow[d, "\omega \xmapsto{\simeq} \chi^{\omega}"] & K/K_x \arrow[d, "\simeq"] \arrow[r] & 0 \\ 
+  		0 \arrow[r]& X^*(H/H_x) \arrow[r, "\pi^*"] & X^*(H)  \arrow[r,"i^*"] & X^*(H_x) \arrow[r] & 0
+	\end{tikzcd}
+	\end{center}
+	où $i:H_x\rightarrow H$ est l'inclusion du stabilisateur de $x$, et $\pi:H\rightarrow H/H_x$ la projection canonique. En particulier, on obtient $H_x\simeq \spm(k[K/K_x])$.
+\end{prop}
+\begin{proof}
+La deuxième ligne est obtenue par le théorème \ref{groupequotient}, puis application du foncteur $X^*$. Elle est bien exacte par exactitude du foncteur $X^*$. La flèche verticale centrale est l'isomorphisme canonique déduit de $X^*\circ\spm\circ k[.]\simeq Id$.\\ 
+Comme $\overline{H.x}$ est $H$-stable, la graduation est préservée sur $k[\overline{H.x}]$ d'après la proposition \ref{stablehomogene}. De plus si $f\in k[X]_{\omega}$ est telle que $f(x)\neq 0$, cela reste le cas modulo $\mathcal{I}_{X}(\overline{H.x})_\omega$ et réciproquement. Ainsi, $S_x$ et $K_x$ ne sont pas modifiés si on remplace $X$ par $\overline{H.x}$. \\
+Considérons le fermé propre $\overline{H.x}\setminus H.x$, éventuellement vide. Il est $H$-stable comme réunion d'orbites. Alors $\mathcal{I}_{\overline{H.x}}(\overline{H.x}\setminus H.x)$ est homogène d'après la proposition \ref{stablehomogene}, et $\neq \lbrace 0\rbrace$. Choisissons $f\neq0$ homogène dans ce $H$-module, c'est donc un vecteur propre. Ainsi, $f$ est non-nulle quelque part sur $H.x$ et donc partout par transitivité et choix de $f$. On en conclut $H.x=(\overline{H.x})_f$. Considérons la graduation naturelle associée à $k[\overline{H.x}]_f$. Comme on a inversé $f$, le monoïde de poids est potentiellement plus gros. En revanche on voit facilement que $K_x$ n'est pas modifié.\\
+Supposons donc $X=H.x$. Dans ce cas, on voit qu'une fonction homogène non-nulle est partout non-nulle, donc inversible. On a donc dans ce cas $S_x=K_x=S(k[H.x])=K(k[H.x])$, où $S(k[H.x])$ et $K(k[H.x])$ sont respectivement les monoïdes et groupes de poids de l'algèbre $K$-graduée $k[H.x]$. \\
+D'après la proposition \ref{facto} et le théorème \ref{ZMT} on a le diagramme commutatif de gauche ci-dessous. Le diagramme de droite est obtenu par application du foncteur $k[.]$.
+\begin{multicols}{2}
+	\begin{center}
+	\begin{tikzcd}
+		H \arrow[r,"h \mapsto h.x", twoheadrightarrow] \arrow[d,"\pi", twoheadrightarrow] & H.x \\
+		H/H_x \arrow[ru, "\exists !\simeq \phi", swap, dashed]
+	\end{tikzcd}
+	\end{center}
+
+	\columnbreak
+	\begin{center}
+	\begin{tikzcd}
+		k[H] & & k[H.x] \arrow[lld, "\exists !\simeq \phi^*", dashed]\arrow[ll, hook, "f_\omega \mapsto f_\omega(x)\chi^{\omega}", swap]  \\
+		k[H/H_x]  \arrow[u,"\pi^*", hook]  & &
+	\end{tikzcd}
+	\end{center}
+\end{multicols}
+Comme les flèches du diagramme de gauche sont des morphismes de $H$-variétés, les morphismes du diagramme de droite préservent la graduation. Ainsi, $\phi^*$ induit un isomorphisme sur les groupes de poids $K_x \xrightarrow{\omega \mapsto\chi^{\omega}}X^*(H/H_x)$. Enfin, toujours en utilisant le diagramme, cet isomorphisme est l'unique faisant commuter le carré de gauche dans le diagramme de la proposition.
+\end{proof}
+
+\begin{prop}
+Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$, et $x\in X$. Cette action induit une action de $H/H_x$ sur $\overline{H.x}$. De plus, $\overline{H.x}$ et $\spm(k[S_x])$ sont isomorphes en tant que $H/H_x$-variétés.
+\end{prop}
+\begin{proof}
+On suppose $X=\overline{H.x}$ ce qui ne modifie pas $S_x$ et $K_x$. De plus on a $S(k[\overline{H.x}])=S_x$ et $K(k[\overline{H.x}])=K_x$. D'après la preuve précédente, $k[K_x]$ et $k[H/H_x]$ sont canoniquement isomorphes et on a un isomorphisme de $K_x$-algèbres graduées $k[H.x]\rightarrow k[K_x],\, f_\omega \mapsto f_\omega(x)\chi^{\omega}$. On le morphisme de $K_x$-algèbres graduées $k[\overline{H.x}]\rightarrow k[S_x]$ définit par la même formule. On voit facilement qu'il est injectif. Pour la surjectivité on peut par exemple voir que le premier isomorphisme est en fait le prolongement par localisation en un élément homogène de ce morphisme (voir démonstration précédente). D'où un diagramme commutatif de $K_x$-algèbres graduées. qui donne la proposition par application de $\spm$.
+
+	\begin{center}
+	\begin{tikzcd}
+		k[H.x] \arrow[r,"\simeq"] & k[K_x]  \\
+		k[\overline{H.x}] \arrow[r, "\simeq"] \arrow[u,"f\mapsto f_{|H.x}"] & k[S_x] \arrow[u,"\subset"] 
+	\end{tikzcd}
+	\end{center}
+
+\end{proof}
+
+\begin{prop}
+Soit $A$ une algèbre affine intègre $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$. Alors il existe un ouvert affine non-vide $U\subset X$ tel que:
+$$S_x=S(A),\,\,\, K_x=K(A),\,\,\, \forall x\in U$$
+\end{prop}
+\begin{proof}
+On choisit des générateurs homogènes $f_1,...,f_r$ de $A$. Alors $U:=X_{f_1...f_r}$ est non-vide car $A$ est intègre et $U$ satisfait la propriété d'après ce qui précède.
+\end{proof}
+
+
+Pour finir voyons une caractérisation algébrique des actions fidèles de quasitores sur des variétés affines.
+
+\begin{prop}
+Soit $A$ une algèbre affine intègre $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$. L'action de $H$ est fidèle si et seulement si $K=K(A)$.
+\end{prop}
+\begin{proof}
+Soit $g\in \cap_{x\in X}H_x$. L'action de $g$ sur les fonctions régulières est triviale, donc en particulier sur les fonctions homogènes. Comme $A$ est intègre, $\forall \omega \in S(A), \exists f_\omega\neq 0\in A_\omega$, on en déduit $g\in \cap_{\chi \in S(A)} \Ker(\chi)$ puis facilement $g\in \cap_{\chi \in K(A)} \Ker(\chi)$ d'où $g=e_H$ si $K=K(A)$ car $H$ est un quasitore.\\
+Sinon comme $K(A)\subsetneq K$, on peut choisir $g\neq e_H\in H$ tel que $g\in\cap_{\chi \in K(A)} \Ker(\chi)$. En effet $\cap_{\chi \in K(A)} \Ker(\chi)$ est un sous-groupe fermé non-trivial de $H$ car son groupe de caractère est $K/K(A)$. Ainsi $g$ agit trivialement sur les fonctions homogènes et donc sur les fonctions régulières. On en déduit que $g$ agit trivialement sur $X$.
+\end{proof}
 
 \section{Théorie des invariants}
 \subsection{L'algèbre des invariants}
@@ -501,4 +628,22 @@ On note $A_{(f)}:=(A_f)_0$ en remarquant qu'il s'agit de l'algèbre des invarian
 Les flèches horizontales du diagramme de droite sont des immersions ouvertes, en effet on a $U_{f_if_j}\simeq (U_{f_i})_{f_j}$. Les conditions de la construction \ref{gluevar} sont satisfaites, on peut former une prevariété Proj($A$) par recollement des $U_{f_i}$ le long de ces immersions. De plus, les $(U_{f_i},\pi_i)$ sont des quotients géométriques et le diagramme exprime que l'on a les conditions de recollement sur les intersections qui font de Proj($A$) le quotient géométrique global $W//k^*$.\\
 Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-stables de $W$, c'est à dire aux idéaux radicaux homogènes qui ne contiennent pas l'idéal inconvenant. On appelle ces fermés des variétés projectives. La topologie quotient sur Proj($A$) que l'on vient de définir est aussi appelé la topologie de Zariski.
 
+\textcolor{red}{Action de $PGL$ sur $(P^1)^4$. Quotient = $P1$ avec birapport?}
+
 \section{Diviseurs}
+
+\subsection{Généralités}
+\begin{defn}[Diviseur premier, Div($X$), diviseur de Weil]
+Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une sous-variété fermée irréductible de codimension 1. On définit Div($X$) le groupe libre engendré par les diviseurs premiers. Un élément de Div($X$) est appelé un diviseur de Weil.
+\end{defn}
+On introduit maintenant pour chaque diviseur $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles sur $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. On pose $$\Oo_{X,D}=\lbrace f\in k(X)\mid f \textrm{ est définie sur } U\subset X \textrm{ ouvert tel que } U\cup D\neq \emptyset \rbrace$$
+Soit $U$ un ouvert affine qui intersecte $D$. Comme $X$ est irréductible, on voit que $\Oo_{X,D}=\Oo_{U,U\cap D}$. On peut donc supposer $X$ affine avec $A=k[X]$ intègre. Dans ce contexte, $D$ correspond à un idéal premier $p$ de hauteur 1, et on a par définition:$$\Oo_{X,D}=\lbrace f/g\in k(X)\mid f,g\in A,\, g\notin p \rbrace = A_p$$
+$A_p$ est un anneau local d'idéal maximal $pA_p$. $A_p$ est noetherien et normal car la localisation préserve ces propriétés. De plus $A_p$ est de dimension 1 car on a une correspondance entre les idéaux premiers de $A$ inclus dans $p$, et les idéaux premiers de $A_p$. On conclut que $\Oo_{X,D}$ est un DVR. La valuation associée $\nu_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
+
+\begin{prop}
+Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors $\nu_D(f)=0$ sauf pour un nombre fini de diviseurs premiers $D$.
+\end{prop}
+\begin{proof}
+Soit $f=g/h\in k(X)*$
+\end{proof}
+
