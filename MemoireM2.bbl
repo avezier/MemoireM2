@@ -1,40 +1,49 @@
-\begin{thebibliography}{1}
-
-\bibitem{LAGArzhantsev}
-Ivan Arzhantsev.
-\newblock Introduction to algebraic groups and invariant theory.
-\newblock \url{http://halgebra.math.msu.su/staff/arzhan/driver.pdf}.
-\newblock Accessed: 2018-23-01.
+\begin{thebibliography}{10}
 
 \bibitem{article}
 auteur.
 \newblock titre.
 \newblock {\em journal}, 2015.
 
-\bibitem{LAGBrion}
-Michel Brion.
-\newblock Introduction to actions of algebraic groups.
-\newblock \url{https://www-fourier.ujf-grenoble.fr/~mbrion/notes_luminy.pdf}.
-\newblock Accessed: 2018-23-01.
+\bibitem{CoxToric}
+D.Cox.
+\newblock Toric varieties, 2009.
+
+\bibitem{MumfordRedBook}
+D.Mumford.
+\newblock {\em The red book of varieties and schemes}.
+\newblock Springer, 1999.
 
 \bibitem{coxrings}
-Ivan~Arzhantsev et~al.
+I.Arzhantsev et~al.
 \newblock {\em Cox Rings}.
 \newblock Cambridge University Press, 2014.
 
+\bibitem{Matsumura}
+H.Matsumura.
+\newblock {\em Commutative ring theory}.
+\newblock Cambridge University Press, 1986.
+
+\bibitem{LAGArzhantsev}
+I.Arzhantsev.
+\newblock Introduction to algebraic groups and invariant theory.
+\newblock \url{http://halgebra.math.msu.su/staff/arzhan/driver.pdf}.
+\newblock Accessed: 2018-23-01.
+
 \bibitem{AGMilne}
-JS~Milne.
+JS.Milne.
 \newblock Algebraic geometry.
 \newblock \url{http://www.jmilne.org/math/CourseNotes/AG.pdf}.
 \newblock Accessed: 2018-23-01.
 
-\bibitem{MumfordRedBook}
-David Mumford.
-\newblock {\em The red book of varieties and schemes}.
-\newblock Springer, 1999.
+\bibitem{LAGBrion}
+M.Brion.
+\newblock Introduction to actions of algebraic groups.
+\newblock \url{https://www-fourier.ujf-grenoble.fr/~mbrion/notes_luminy.pdf}.
+\newblock Accessed: 2018-23-01.
 
 \bibitem{LAGSpringer}
-T.A. Springer.
+T.A.Springer.
 \newblock {\em Linear Algebraic Groups}.
 \newblock Birkhauser, 1998.
 
