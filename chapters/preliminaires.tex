@@ -321,11 +321,11 @@ Alors il existe une unique factorisation
 \subsection{Quasitores, actions de quasitores}
 
 \subsubsection{Quasitores}
-Soit $G$ un groupe algébrique. Le groupe $X^*(G)$ des caractères de $G$ est un sous-groupe de $k[G]^\times$. On remarque que $X^*(.)$ est un foncteur contravariant de la catégorie des groupes algébriques dans la catégorie des groupes abéliens de type fini, l'image d'un morphisme $G_1\xrightarrow{\phi}G_2$ étant simplement la (co)-restriction $\phi^* \,_{|X^*(G_2)}^{|X^*(G_1)}$ du co-morphisme $\phi^*$ entre les algèbres de coordonnées. On signale qu'en caractéristique $p>0$, les $X^*(G)$ ont de plus la propriété d'être sans $p$-torsion. Tout ce qui suit reste vrai en caractéristique p, avec cette contrainte supplémentaire sur les groupes de caractères.
+Soit $G$ un groupe algébrique. Le groupe $X^*(G)$ des caractères de $G$ est un sous-groupe de $k[G]^\times$. On remarque que $X^*$ est un foncteur contravariant de la catégorie des groupes algébriques dans la catégorie des groupes abéliens de type fini, l'image d'un morphisme $G_1\xrightarrow{\phi}G_2$ étant simplement la (co)-restriction $\phi^* \,_{|X^*(G_2)}^{|X^*(G_1)}$ du comorphisme $\phi^*$ entre les algèbres de coordonnées. On signale qu'en caractéristique $p>0$, les groupes de caractères ont de plus la propriété d'être sans $p$-torsion. Tout ce qui suit reste vrai en caractéristique $p$, avec cette contrainte supplémentaire sur les groupes de caractères.
 
 \begin{ex}
 \begin{enumerate}
-\item $X^*(GL_n)=\lbrace \textrm{det}^k\mid k\in \ZZ \rbrace\simeq\ZZ$. En effet, $k[GL_n]^\times =\lbrace \lambda\textrm{det}^k\mid k\in \ZZ, \lambda\in k^* \rbrace$, puisque $k[X_{ij}]$ est factoriel et det irréductible.
+\item $X^*(GL_n)=\lbrace \textrm{det}^k\mid k\in \ZZ \rbrace\simeq\ZZ$. En effet, $k[GL_n]^\times =\lbrace \lambda\textrm{det}^k\mid k\in \ZZ, \lambda\in k^* \rbrace$, puisque $k[X_{ij}]$ est factoriel et det irréductible. En évaluant en $I_n$, on a nécessairement $\lambda=1$. Comme det$^k$ est un caractère, le résultat suit.
 \item $X^*(SL_n)={1}$ car $D(SL_n)=SL_n$.
 \item Les unités de $k[\GG_m]$ sont les monômes. On en déduit que les caractères sont exactement les $t\mapsto t^k, k\in \ZZ$. Par ailleurs, on remarque que $X^*(G_1\times G_2)=X^*(G_1)\times X^*(G_2)$, d'où $X^*(D_n)=\lbrace \textrm{monômes à coefficient unitaire} \rbrace \simeq \ZZ^n$.
 \end{enumerate}
@@ -343,30 +343,30 @@ Soit $G$ un groupe algébrique. Les assertions suivantes sont équivalentes:
 \end{prop}
 \begin{proof}
 \begin{enumerate}
-\item 1)$\implies$2) La restriction $k[D_n]\xrightarrow{res} G$ est surjective et la restriction d'un caractère est un caractère.
+\item 1)$\implies$2) La restriction $k[D_n]\xrightarrow{res_G} k[G]$ est surjective et la restriction d'un caractère est un caractère.
 \item 2)$\implies$3) $G$ est abélien, car $\forall \chi\in X^*(G),\,g,h\in G, \chi(gh)=\chi(hg)$. C'est donc vrai pour toute fonction régulière, on en conclut $gh=hg$.\\
-On observe que l'action naturelle de $G$ sur $k[G]$ est semi-simple. En effet, les caractères forment une base de diagonalisation, $G$ est donc semi-simple. Soit $(V,\rho)$ le $G$-module considéré et $W\subset V$ un sous $G$-module de dimension finie, disons $n$. Par la décomposition de Jordan,  $\rho(G)$ est semi-simple. De plus, c'est un sous groupe abélien fermé de $GL_n$. Il est donc conjugué à un sous-groupe fermé de $D_n$. On voit ainsi que $V=\bigoplus_{\chi \in X^*(G)}V_\chi$, où $V_\chi:=\lbrace v\in v\mid g.f=\chi(g)f,\, \forall g\in G \rbrace$. En effet, ils sont en somme directe, et tout élément de $V$ se décompose de cette manière.
+On observe que l'action naturelle de $G$ sur $k[G]$ est semi-simple. En effet, les caractères forment une base de diagonalisation de $k[G]$. Ainsi $G$ est semi-simple par la décomposition de Jordan. Soit $(V,\rho)$ le $G$-module considéré et $W\subset V$ un sous $G$-module de dimension finie, disons $n$. Par la décomposition de Jordan,  $\rho(G)$ est semi-simple. De plus, c'est un sous groupe abélien fermé de $GL_n$. Il est donc conjugué à un sous-groupe fermé de $D_n$. On voit ainsi que $V=\bigoplus_{\chi \in X^*(G)}V_\chi$, où $V_\chi:=\lbrace v\in v\mid g.f=\chi(g)f,\, \forall g\in G \rbrace$. En effet, ils sont en somme directe, et tout élément de $V$ se décompose de cette manière.
 \item 3)$\implies$1) On peut supposer $G\subset GL_n$, et considérer l'action naturelle sur $k^n$ après choix d'une base $(e_1,...,e_n)$. Par hypothèse, on peut écrire $k^n=(f_1)\oplus...\oplus (f_n)$, avec les $(f_i)$ sous $G$-module de dimension 1. $G$ est donc conjugué à un sous-groupe de $D_n$.
 \end{enumerate}
 \end{proof}
 
 Ce constat motive la définition suivante:
 
-\begin{defn}[Quasitore]
+\begin{defn}[Tore, Quasitore]
 Un quasitore est un groupe algébrique $G$ tel que $k[G]=\textrm{Vect}_k(X^*(G))$. Un tore est un quasitore connexe.
 \end{defn}
 
 On travaille désormais dans la catégorie des quasitores. On considère un quasitore $G$ et le groupe $\chi^{**}(G):=(\chi^*)^2(G)$.
 
 \begin{prop}
-$G$ et $\chi^{**}(G)$ sont naturellement isomorphes en tant que groupes abstraits, et aussi en tant que groupes algébriques par transport de structure. L'isomorphisme est $ev_G:G\rightarrow \Hom (X^*(G),\GG _m), g\mapsto (\chi\mapsto \chi(g))$.
+$G$ et $\chi^{**}(G)$ sont naturellement isomorphes en tant que groupes abstraits, et aussi en tant que groupes algébriques par transport de structure. L'isomorphisme est $ev_G : G\rightarrow \Hom (X^*(G),\GG _m), g\mapsto (\chi\mapsto \chi(g))$.
 \end{prop}
 \begin{proof}
-$ev_G$ est injective: Soit $g\in G$ tel que $\chi(g)=1=\chi(e_G),\forall \chi\in X^*(G)$. Alors $g=e_G$ car $G$ est un quasitore.\\
-$ev_G$ est surjective: Soit $\phi\in\chi^{**}(G)$. On a un prolongement unique de $\phi$ en un morphisme de $k$-algèbre $k[X^*(G]=k[G]\rightarrow k$ qui est donc de la forme $k[G]\rightarrow k, f\mapsto f(g)$ pour un $g\in G$. En restreignant à $X^*(G)$, on trouve que $\phi=ev_G(g)$.
+ev$_G$ est injective: Soit $g\in G$ tel que $\chi(g)=1=\chi(e_G),\forall \chi\in X^*(G)$. Alors $g=e_G$ car $G$ est un quasitore.\\
+ev$_G$ est surjective: Soit $\phi\in\chi^{**}(G)$. On a un prolongement unique de $\phi$ en un morphisme de $k$-algèbre $k[X^*(G)]=k[G]\rightarrow k$ qui est donc de la forme $k[G]\rightarrow k, f\mapsto f(g)$ pour un $g\in G$. En restreignant à $X^*(G)$, on trouve que $\phi=\textrm{ev}_G(g)$.
 \end{proof}
 
-Autrement dit on a un isomorphisme de foncteurs $(\chi^*)^2(.)\simeq Id$, d'où une équivalence de catégories entre les quasitores et les groupes abéliens de type fini. Une autre façon de voir cela est d'introduire l'algèbre de groupe d'un groupe abélien de type fini M, c'est par définition $k[M]=\lbrace \sum_{finie} \lambda_gg,\,\lambda_g\in k,g\in G \rbrace$ avec la multiplication définie par l'opération de groupe de $G$. La propriété suivante montre que l'on construit ainsi un autre inverse de $\chi^*(.)$
+Autrement dit on a un isomorphisme de foncteurs $(\chi^*)^2\simeq Id$, d'où une équivalence de catégories entre les quasitores et les groupes abéliens de type fini. Une autre façon de voir cela est d'introduire l'algèbre de groupe d'un groupe abélien de type fini M, c'est par définition $k[M]=\lbrace \sum_{finie} \lambda_gg,\,\lambda_g\in k,g\in G \rbrace$ avec la multiplication définie par l'opération de groupe de $G$. La propriété suivante montre que l'on construit ainsi un autre inverse de $\chi^*(.)$
 \begin{prop}
 Soient, $M, M_1, M_2$ des groupes abéliens de type fini, et $G$ un quasitore.\\
 Alors $k[M]$ est de type fini, réduite et on a $k[M_1\oplus M_2]\simeq k[M_1]\otimes k[M_2]$. De plus, $k[M]$ est naturellement muni d'une structure d'algèbre de Hopf et on a $k[G]=k[X^*(G)]$ et donc $G=\spm\circ k[X^*(G)]$.
@@ -387,14 +387,14 @@ Soit $G$ un quasitore. Alors:
 
 \subsubsection{Action d'un quasitore sur une variété affine}
 
-On a montré dans la partie précédente que l'algèbre des coordonnées d'un quasitore $G$ était naturellement munie d'une $X^*(G)$-graduation. Cela peut être vu comme la traduction algébrique de l'action de $G$ sur lui même par multiplication à gauche. On précise, cela ci-dessous en montrant que les foncteurs $\spm$ et $k[.]$ réalisent une équivalence de catégories entre les variétés affines munies d'une action d'un quasitore et les algèbres graduées par un groupe abélien de type fini. On a déjà l'équivalence entre variétés affines et algèbres affines. Il s'agit donc de vérifier que les (co)-restrictions des deux foncteurs sont bien définies et que les actions et graduations sont préservées.
+On a montré dans la partie précédente que l'algèbre des coordonnées d'un quasitore $G$ était naturellement munie d'une $X^*(G)$-graduation. Cela peut être vu comme la traduction algébrique de l'action de $G$ sur lui même par multiplication à gauche. On précise, cela ci-dessous en montrant que les foncteurs $\spm$ et $k[.]$ réalisent une équivalence de catégories entre les variétés affines munies d'une action d'un quasitore et les algèbres graduées par un groupe abélien de type fini. On a déjà l'équivalence entre variétés affines et algèbres affines. Il s'agit donc de vérifier que les (co)-restrictions des deux foncteurs $k[.]$ et $\spm$ sont bien définies et que les actions et graduations sont préservées.
 
 \begin{cons}
 Soit $H$ un quasitore et X une $H$-variété affine. Le $H$-module $k[X]$ est somme directe de $H$-module de dimension 1 d'après la partie précédente et on peut écrire: 
 \begin{center}
 $k[X]=\bigoplus_{\chi \in X^*(H)}V_\chi$,  où $V_\chi:=\lbrace f\in k[X]\mid h.f=\chi(h)f,\, \forall h\in H \rbrace$ 
 \end{center}
-On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, cette construction est fonctorielle, en effet en considérons les diagrammes commutatifs ci-dessous. Le premier est la traduction de la donnée d'un morphisme d'un morphisme $(\widetilde{\phi},\phi)$ d'une $H$-variété affine $X$ vers une $H'$-variété affine $X'$. Le second est obtenu par passage aux algèbres de coordonnées.
+On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, cette construction est fonctorielle, en effet en considérons les diagrammes commutatifs ci-dessous. Le premier est la traduction de la donnée d'un morphisme $(\widetilde{\phi},\phi)$ d'une $H$-variété affine $X$ vers une $H'$-variété affine $X'$. Le second est obtenu par passage aux algèbres de coordonnées.
 \begin{multicols}{2}
 	\begin{center}
 		\begin{tikzcd}
@@ -411,7 +411,7 @@ On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, c
 	\end{tikzcd}
 	\end{center}
 \end{multicols}
-Le petit calcul ci-dessous montre que $\forall f\in V'_{\chi'}\subset k[X'],\,	\phi^*(f)\in V_{\widetilde{\phi}^*(\chi')}$, ce qui montre que $(\widetilde{\phi},\phi)$ est un morphisme d'algèbres graduées. 
+Le petit calcul ci-dessous montre que $\forall f\in V'_{\chi'}\subset k[X'],\,	\phi^*(f)\in V_{\widetilde{\phi}^*(\chi')}$, ce qui montre que $(\widetilde{\phi}^*,\phi^*)$ est un morphisme d'algèbres graduées. 
 $$\forall h\in H,\,x\in X,\, \phi^*(f)(h.x)=a_1^*\phi^*(f)(h, x)=(\widetilde{\phi}\otimes\phi)a_2^*(f)(h,x)=\widetilde{\phi}^*(\chi')(h)\phi^*(f)(x)$$ 
 
 \end{cons}
@@ -443,7 +443,7 @@ On voit que dans les deux constructions on a la même condition sur l'homogéné
 Ainsi les actions de quasitore sur les variétés affines peuvent être caractérisé en terme algébrique  grâce à cette équivalence. C'est l'objet des propositions suivantes.
 
 \begin{prop}\label{stablehomogene}
-Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$. Soit $Y\subset X$ une sous variété fermée, et $I=\mathcal{I}(Y)$. Les assertions suivantes sont équivalentes:
+Soit $A$ une algèbre affine $K$-graduée, $X:=\spm A$ muni de l'action de $H:=\spm k[K]$.  Soit $Y\subset X$ une sous variété fermée, et $I=\mathcal{I}(Y)$. Les assertions suivantes sont équivalentes:
 \begin{enumerate}
 \item $Y$ est $H$-stable.
 \item $I$ est un idéal homogène.
@@ -453,8 +453,7 @@ Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ su
 Comme $I$ est radical, $Y$ est $H$-stable si et seulement si $\forall P\in I,\,h\in H,\, y\in Y,\, P(h.y)=0$. Supposons que cette dernière condition soit vérifiée, on écrit $P=\sum_{finie}P_\omega$ sa décomposition en composantes homogènes. On a alors, $P(h.y)=\sum \chi^{\omega}\otimes P_{\omega}(h,y) = \sum \chi^{\omega}(h) P_{\omega}(y)=0$. Les caractères étant libres, on a $P_{\omega}(y)=0, \forall y,\omega$, c'est à dire $P_{\omega}\in I, \forall \omega$. Ainsi $I$ est homogène. La réciproque est immédiate. 
 \end{proof}
 
-Dans la construction \ref{consgraduequasitore}, on voit que la situation générale est assez proche de l'exemple le plus simple de l'action diagonale de $(k^*)^n$ sur $k^r$ par un choix de $r$ caractères. On voit bien dans ce cas que la géométrie de l'orbite d'un point $p\in k^r$ va être assez dépendante de nullité des coordonnées $x_1,..., x_r$ au point $p$. Cela motive la définition suivante.
-
+Dans la construction \ref{consgraduequasitore}, on voit que la situation générale est assez proche de l'exemple le plus simple de l'action diagonale de $(k^*)^n$ sur $k^r$ par un choix de $r$ caractères. On voit bien dans ce cas que la géométrie de l'orbite d'un point $p\in k^r$ va être assez dépendante de la nullité des coordonnées $x_1,..., x_r$ au point $p$. Cela motive la définition suivante.
 
 \begin{defn}[Monoïde d'orbite, Groupe d'orbite]
 Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$.
@@ -465,7 +464,7 @@ Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ su
 \end{defn}
 
 \begin{prop}
-Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$, et $x\in X$. On a le diagramme commutatif suivant, dont les deux lignes sont exactes:
+Soit $A$ une algèbre affine $K$-graduée, $X:=\spm A$ muni de l'action de $H:=\spm k[K]$, et $x\in X$. On a le diagramme commutatif suivant, dont les deux lignes sont exactes:
 	\begin{center}
 		\begin{tikzcd}
   		0  \arrow[r] & K_x\arrow[r] \arrow[d, "\simeq"] & K \arrow[r] \arrow[d, "\omega \xmapsto{\simeq} \chi^{\omega}"] & K/K_x \arrow[d, "\simeq"] \arrow[r] & 0 \\ 
@@ -500,10 +499,10 @@ Comme les flèches du diagramme de gauche sont des morphismes de $H$-variétés,
 \end{proof}
 
 \begin{prop}
-Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$, et $x\in X$. Cette action induit une action de $H/H_x$ sur $\overline{H.x}$. De plus, $\overline{H.x}$ et $\spm(k[S_x])$ sont isomorphes en tant que $H/H_x$-variétés.
+Soit $A$ une algèbre affine $K$-graduée, $X:=\spm A$ muni de l'action de $H:=\spm k[K]$, et $x\in X$. Cette action induit une action de $H/H_x$ sur $\overline{H.x}$. De plus, $\overline{H.x}$ et $\spm(k[S_x])$ sont isomorphes en tant que $H/H_x$-variétés.
 \end{prop}
 \begin{proof}
-On suppose $X=\overline{H.x}$ ce qui ne modifie pas $S_x$ et $K_x$. De plus on a $S(k[\overline{H.x}])=S_x$ et $K(k[\overline{H.x}])=K_x$. D'après la preuve précédente, $k[K_x]$ et $k[H/H_x]$ sont canoniquement isomorphes et on a un isomorphisme de $K_x$-algèbres graduées $k[H.x]\rightarrow k[K_x],\, f_\omega \mapsto f_\omega(x)\chi^{\omega}$. On le morphisme de $K_x$-algèbres graduées $k[\overline{H.x}]\rightarrow k[S_x]$ définit par la même formule. On voit facilement qu'il est injectif. Pour la surjectivité on peut par exemple voir que le premier isomorphisme est en fait le prolongement par localisation en un élément homogène de ce morphisme (voir démonstration précédente). D'où un diagramme commutatif de $K_x$-algèbres graduées. qui donne la proposition par application de $\spm$.
+On suppose $X=\overline{H.x}$ ce qui ne modifie pas $S_x$ et $K_x$. De plus on a $S(k[\overline{H.x}])=S_x$ et $K(k[\overline{H.x}])=K_x$. D'après la preuve précédente, $k[K_x]$ et $k[H/H_x]$ sont canoniquement isomorphes et on a un isomorphisme de $K_x$-algèbres graduées $k[H.x]\rightarrow k[K_x],\, f_\omega \mapsto f_\omega(x)\chi^{\omega}$. On a également le morphisme de $K_x$-algèbres graduées $k[\overline{H.x}]\rightarrow k[S_x]$ définit par la même formule. On voit facilement qu'il est injectif. Pour la surjectivité, on peut par exemple voir que le premier isomorphisme est en fait le prolongement par localisation en un élément homogène de ce morphisme (voir démonstration précédente), d'où un diagramme commutatif de $K_x$-algèbres graduées. Cela donne la proposition par application de $\spm$.
 
 	\begin{center}
 	\begin{tikzcd}
@@ -515,18 +514,18 @@ On suppose $X=\overline{H.x}$ ce qui ne modifie pas $S_x$ et $K_x$. De plus on a
 \end{proof}
 
 \begin{prop}
-Soit $A$ une algèbre affine intègre $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$. Alors il existe un ouvert affine non-vide $U\subset X$ tel que:
+Soit $A$ une algèbre affine intègre $K$-graduée, $X:=\spm A$ muni de l'action de $H:=\spm k[K]$. Alors il existe un ouvert affine non-vide $U\subset X$ tel que:
 $$S_x=S(A),\,\,\, K_x=K(A),\,\,\, \forall x\in U$$
 \end{prop}
 \begin{proof}
-On choisit des générateurs homogènes $f_1,...,f_r$ de $A$. Alors $U:=X_{f_1...f_r}$ est non-vide car $A$ est intègre et $U$ satisfait la propriété d'après ce qui précède.
+On choisit des générateurs homogènes $f_1,...,f_r$ de $A$. On pose $U:=X_{f_1...f_r}$ qui est non-vide car $A$ est intègre. $\forall \omega \in S(A),\, \exists g\neq0 \in A_\omega$ car $A$ est intègre. Quitte à décomposer $g$,  on peut le supposer de la forme $f_1^{i_1}...f_r^{i_r}$. On en déduit que $\omega \in S_x$, $\forall x\in U$. Comme l'autre inclusion est immédiate, $U$ satisfait la propriété.
 \end{proof}
 
 
 Pour finir voyons une caractérisation algébrique des actions fidèles de quasitores sur des variétés affines.
 
 \begin{prop}
-Soit $A$ une algèbre affine intègre $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$. L'action de $H$ est fidèle si et seulement si $K=K(A)$.
+Soit $A$ une algèbre affine intègre $K$-graduée, $X:=\spm A$ muni de l'action de $H:=\spm k[K]$. L'action de $H$ est fidèle si et seulement si $K=K(A)$.
 \end{prop}
 \begin{proof}
 Soit $g\in \cap_{x\in X}H_x$. L'action de $g$ sur les fonctions régulières est triviale, donc en particulier sur les fonctions homogènes. Comme $A$ est intègre, $\forall \omega \in S(A), \exists f_\omega\neq 0\in A_\omega$, on en déduit $g\in \cap_{\chi \in S(A)} \Ker(\chi)$ puis facilement $g\in \cap_{\chi \in K(A)} \Ker(\chi)$ d'où $g=e_H$ si $K=K(A)$ car $H$ est un quasitore.\\
@@ -677,7 +676,7 @@ Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-
 
 \section{Diviseurs}
 
-\subsection{Généralités}
+\subsection{Diviseurs de Weil}
 
 Partant de l'observation qu'en géométrie classique dans le plan projectif, il existe une dualité entre les droites et les points, il parait intéressant de s'intéresser aux sous-variétés fermées de codimension 1 et de conférer une structure naturelle à cet ensemble. C'est l'idée de diviseur, dont on va voir qu'un cadre privilégié est celui d'une variété normale, que l'on supposera de plus irréductible suivant la remarque \ref{}.
 
@@ -764,6 +763,8 @@ Soit $X$ une variété normale et irréductible. Le faisceau d'algèbres divisor
 On considère la droite projective $\PP^1$, $D=\lbrace\infty\rbrace$ et $K=\ZZ D$. Cherchons la forme d'une section $f\in S_{nD}(\PP^1)$. On se place sur la carte affine $U_0=\PP^1\setminus \lbrace \infty\rbrace$ associée au repère projectif $(\infty, 0, 1)=(e_0,e_1,e_0+e_1)$, on note $z$ la coordonnée associée. Par hypothèse, $f$ est régulière sur $U_0$, c'est donc un polynôme en $z$. On fait agir l'homographie $z\mapsto w=1/z$  pour se placer sur la carte $U_1=\PP^1\setminus \lbrace e_1 \rbrace$ associée au repère $(0, \infty,1)$. Sur cette carte, la fonction qui coïncide avec $f$ sur $U_0\cap U_1$ est $g(w)=f(1/w)$. Or si on écrit $f(z)=z^kh(z)$ avec $z\nmid h(z)$, on obtient $g(w)=w^{-k-\textrm{deg}(h)}h(w)$. Comme on doit avoir $k+\textrm{deg}(h)\leq n$, on obtient que $f$ est un polynôme de degré $\leq n$.\\
 Ainsi on voit que l'application $\phi_n:k[t_0,t_1]_n\rightarrow S_{nD}(\PP^1), f\mapsto f(1,z)$ est un isomorphisme de $k$-ev. De plus, on a facilement $\phi_n\phi_m=\phi_{n+m}$. Finalement, $(\phi, \widetilde{\phi})$ avec $\phi: k[t_0,t_n]\rightarrow S(\PP^1), f\mapsto f(1,z)$ et $\widetilde{\phi}:\ZZ\rightarrow K, n\mapsto nD$ est un isomorphisme d'algèbres graduées.
 \end{ex}
+
+\subsection{Diviseurs de Cartier, Faisceaux inversibles}
 
 
 
