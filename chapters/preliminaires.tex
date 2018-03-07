@@ -49,20 +49,16 @@ AtiyahMcdo p106
 
 \subsection{Généralités}
 
-Dans ce mémoire, on travaille dans la catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos de caractéristique zéro fixé. Ces objets sont appelés des $k$-variétés algèbriques, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer}. Cela nous permettra d'utiliser l'un ou l'autre langage suivant la commodité.
-On note que la sous-catégorie pleine des variétés affines est anti-équivalente à celle des $k$-algèbre de type fini réduites via le foncteur sections globales, noté $k[.]$ dans ce cas pour coller aux notations traditionnelles.
-\\
-Dans ce contexte toute partie localement fermée d'une variété admet une unique structure de variété.\\
-Tout fermé se décompose de manière unique en une union finie de sous-variétés fermées irréductibles maximales.\\
-Le produit sur $k$ existe et préserve l'irréductibilité.
+Dans ce mémoire, on travaille dans la catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos de caractéristique zéro fixé. Ces objets sont appelés des $k$-variétés algèbriques, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés de la variété. D'ailleurs, par un point d'une variété $X$, on entendra point fermé sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite et soit $t(X)$ la variété au sens de \cite{LAGSpringer} correspondant à $X$. Alors $X_0$ et $t(X)$ sont homéomorphes et les treillis des ouverts des topologies de $X$ et $t(X)$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I.\\
+On note que la sous-catégorie pleine des variétés affines est anti-équivalente à celle des $k$-algèbre de type fini réduites via le foncteur sections globales, noté $k[.]$ dans ce cas pour coller aux notations traditionnelles. Toute partie localement fermée d'une variété admet une unique structure de variété.Tout fermé se décompose de manière unique en une union finie de sous-variétés fermées irréductibles maximales. Enfin le produit sur $k$ existe et préserve l'irréductibilité.
 
-\begin{cons}\label{gluevar}
-Soit $(X_i)_{u\in I}$ une famille finie de prevariétés. Supposons $\forall i,j$ avec $i\neq j$ on ait des ouverts $U_{ij}\subset X_i$ et des isomorphismes $f_{ij}:U_{ij}\rightarrow U_{ji}$ tels que $\forall i,j,k\in I$ distincts on ait:
+\begin{cons}\label{gluevar}[Recollement de variétés]
+Soit $(X_i)_{u\in I}$ une famille finie de variétés. Supposons $\forall i,j$ avec $i\neq j$ on ait des ouverts $U_{ij}\subset X_i$ et des isomorphismes $f_{ij}:U_{ij}\rightarrow U_{ji}$ tels que $\forall i,j,k\in I$ distincts on ait:
 	\begin{enumerate}
 	\item $f_{ij}=f_{ji}^{-1}$
 	\item $U_{ij}\cup f_{ij}^{-1}(U_{jk})\subset U_{ik}^{-1}$ et $f_{jk}f_{ij}=f_{ik}$ sur $U_{ij}\cup f_{ij}^{-1}(U_{jk})$
 	\end{enumerate}
-Alors on définit une prevariété X comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $a\sim f_{ji}(a),\forall a\in U_{ij}\subset X_i$, et $a\sim a \forall a$. La topologie est la topologie finale associée aux inclusions $inc_i:X_i\subset X$. Le faisceau structural est définit par $\Oo_X(U):=\lbrace \phi\in \textrm{Map}(U,k)\mid inc_i^*\phi\in\Oo_{X_i}(inc_i^{-1}(U))\rbrace$.
+Alors on définit une variété X comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $a\sim f_{ji}(a),\forall a\in U_{ij}\subset X_i$, et $a\sim a \forall a$. La topologie est la topologie finale associée aux inclusions $inc_i:X_i\subset X$. Le faisceau structural est définit par $\Oo_X(U):=\lbrace \phi\in \textrm{Map}(U,k)\mid inc_i^*\phi\in\Oo_{X_i}(inc_i^{-1}(U))\rbrace$.
 \end{cons}
 
 
@@ -76,6 +72,19 @@ Voir \cite{MumfordRedBook} I.7 Th.2, après réduction au cas $X$ affine, la pre
 \end{proof}
 
 \subsection{Normalité}
+
+\begin{defn}
+Une variété est dite normale si tous ses anneaux locaux sont intègres et intégralement clos.
+\end{defn}
+
+\begin{prop}\label{normaluniondisjointe}
+Une variété normale est union disjointe de ses composantes irréductibles.
+\end{prop}
+\begin{proof}
+Si un point $p\in X$ d'une variété se situe à l'intersection de deux composantes irréductibles, l'anneau local en $p$ contient au moins deux premiers minimaux et n'est donc pas intègre.
+\end{proof}
+
+
 
 \subsection{Quelques résultats sur les morphismes}
 \subsubsection{Généralités}
@@ -315,7 +324,7 @@ Soit $H$ un quasitore et X une $H$-variété affine. Le $H$-module $k[X]$ est so
 \begin{center}
 $k[X]=\bigoplus_{\chi \in X^*(H)}V_\chi$,  où $V_\chi:=\lbrace f\in k[X]\mid h.f=\chi(h)f,\, \forall h\in H \rbrace$ 
 \end{center}
-On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, cette construction est fonctorielle, en effet en considérons les diagrammes commutatifs ci-dessous. Le premier est la traduction de la donnée d'un morphisme $(\widetilde{\phi},\phi)$ d'une $H$-variété affine $X$ vers une $H'$-variété affine $X'$. Le second est obtenu par passage aux algèbres de coordonnées.
+On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, cette construction est fonctorielle, en effet en considérant les diagrammes commutatifs ci-dessous. Le premier est la traduction de la donnée d'un morphisme $(\widetilde{\phi},\phi)$ d'une $H$-variété affine $X$ vers une $H'$-variété affine $X'$. Le second est obtenu par passage aux algèbres de coordonnées.
 \begin{multicols}{2}
 	\begin{center}
 		\begin{tikzcd}
@@ -332,7 +341,7 @@ On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, c
 	\end{tikzcd}
 	\end{center}
 \end{multicols}
-Le petit calcul ci-dessous montre que $\forall f\in V'_{\chi'}\subset k[X'],\,	\phi^*(f)\in V_{\widetilde{\phi}^*(\chi')}$, ce qui montre que $(\widetilde{\phi}^*,\phi^*)$ est un morphisme d'algèbres graduées. 
+Le petit calcul ci-dessous montre que $\forall f\in V'_{\chi'}\subset k[X'],\,$ on a $\phi^*(f)\in V_{\widetilde{\phi}^*(\chi')}$, ce qui montre que $(\widetilde{\phi}^*,\phi^*)$ est un morphisme d'algèbres graduées. 
 $$\forall h\in H,\,x\in X,\, \phi^*(f)(h.x)=a_1^*\phi^*(f)(h, x)=(\widetilde{\phi}\otimes\phi)a_2^*(f)(h,x)=\widetilde{\phi}^*(\chi')(h)\phi^*(f)(x)$$ 
 
 \end{cons}
@@ -379,7 +388,7 @@ Dans la construction \ref{consgraduequasitore}, on voit que la situation génér
 \begin{defn}[Monoïde d'orbite, Groupe d'orbite]
 Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spm k[K]$ sur $X:=\spm A$.
 \begin{enumerate}
-\item Le monoïde d'orbite d'un point $\in X$ est le sous-monoïde $S_x\subset K$ engendré par $\lbrace\omega \in K\mid \exists f\in A_{\omega} \textrm{ telle que } f(x)\neq 0\rbrace$
+\item Le monoïde d'orbite d'un point $x\in X$ est le sous-monoïde $S_x\subset K$ engendré par $\lbrace\omega \in K\mid \exists f\in A_{\omega} \textrm{ telle que } f(x)\neq 0\rbrace$
 \item Le groupe d'orbite d'un point $\in X$ est le sous-groupe $K_x\subset K$ engendré par le monoïde d'orbite.
 \end{enumerate}
 \end{defn}
@@ -559,8 +568,8 @@ Un bon quotient $(X//G, \pi)$ est un quotient géométrique si les fibres de $\p
 \end{ex}
 
 \subsubsection{Un exemple: La construction Proj}
-Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n$($k$). On considère une variété affine $X$ munie d'une action de $k^*$. Une orbite $k^*.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $k^*.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir. On note $F$ l'ensemble des points fixes. \\
-L'algèbre affine $A:=k[X]$ est $\NN$-graduée par l'action de $k^*$ et on remarque que $F=\mathcal{V}_X(A_{>0})$, où $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d\geq 0)$ est l'idéal dit inconvenant. En effet, $F$ est l'ensemble des idéaux maximaux qui sont $k^*$-stables. Or on peut remarquer qu'un idéal radical est $k^*$-stable si et seulement si il est homogène. Enfin, un idéal maximal et homogène contient nécessairement $A_{>0}$.\\
+Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n$($k$). On considère $A$ une algèbre affine $\NN$-graduée et on pose $X:=\spm(A)$. $X$ est donc muni d'une action de $k^*$. Une orbite $k^*.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $k^*.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir.\\
+On note $F$ l'ensemble des points fixes et on remarque que $F=\mathcal{V}_X(A_{>0})$, où $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d>0)$ est l'idéal dit inconvenant. En effet, $F$ est l'ensemble des idéaux maximaux qui sont $k^*$-stables. Or on peut remarquer qu'un idéal radical est $k^*$-stable si et seulement si il est homogène. Enfin, un idéal maximal et homogène contient nécessairement $A_{>0}$.\\
 On remarque que $A^{k^*}=A_0=A/A_{>0}$, et comme le bon quotient $Y_0:=X//k^*=\spm (A_0)$ paramètre les orbites fermés, on obtient en particulier que si $k^*.x$ n'est pas fermé, son adhérence contient un unique point fixe. En résumé, $W:=X\setminus F$ est la réunion des orbites de dimension 1, et ils sont tous fermés dans $W$. On va montrer que $W$ admet un quotient géométrique, c'est la construction Proj.\\
 Pour tout $f\in A_{>0}$ homogène, la localisation $A_f$ est $\ZZ$-graduée de la manière suivante:
 \begin{center}
@@ -588,7 +597,7 @@ Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-
 
 \textcolor{red}{Pourquoi c'est séparé?}
 \textcolor{red}{Est ce que c'est irréductible?}
-\textcolor{red}{sections globales? c'est complet?}
+\textcolor{red}{sections globales (cf hartshorne chap 1 si A0=k et A engendré par A1)? c'est complet?}
 
 \textcolor{red}{bijection avec les fermées qui sont des cones}
 \textcolor{red}{Action de $PGL$ sur $(P^1)^4$. Quotient = $P1$ avec birapport?}
@@ -697,13 +706,14 @@ On considère la droite projective $\PP^1$, $D=\lbrace\infty\rbrace$ et $K=\ZZ D
 Ainsi on voit que l'application $\phi_n:k[t_0,t_1]_n\rightarrow S_{nD}(\PP^1), f\mapsto f(1,z)$ est un isomorphisme de $k$-ev. De plus, on a facilement $\phi_n\phi_m=\phi_{n+m}$. Finalement, $(\phi, \widetilde{\phi})$ avec $\phi: k[t_0,t_n]\rightarrow S(\PP^1), f\mapsto f(1,z)$ et $\widetilde{\phi}:\ZZ\rightarrow K, n\mapsto nD$ est un isomorphisme d'algèbres graduées.
 \end{ex}
 
-\subsection{Diviseurs de Cartier, faisceaux inversibles, fibrés en droites}
+\subsection{Diviseurs de Cartier et groupe de Picard}
 
 Sur des variétés plus générales, par exemple avec des singularités, les anneaux locaux associés aux diviseurs de Weil ne sont plus en général des DVR. On a alors des difficultés pour définir par exemple le diviseur d'une fonction rationnelle. On a néanmoins la notion de diviseur de Cartier, qui dans le cadre des variétés normales irréductibles correspondra aux diviseur de Weil "localement principaux".
 
 \begin{defn}[Diviseur de Cartier]
 Soit $X$ une variété irréductible. Un diviseur de Cartier sur $X$ est une section globale du faisceau $k(X)^\times/\mathcal{O}_X^\times$. Ainsi un diviseur de Cartier est la donnée d'une famille $(U_i, f_i)_{i\in I}$ telle que pour tout $i$, $U_i$ est un ouvert de $X$, $(U_i)_{i\in I}$ est un recouvrement de $X$, $f_i\in k(X)^\times$, et pour tout $i,j \in I$, $f_if_j^{-1}\in \mathcal{O}_X^\times(U_i\cap U_j)$.\\
-Un diviseur de cartier est dit principal si il provient d'une section globale de $k(X)^\times$ c'est à dire d'un fonction rationnelle. Deux diviseurs de Cartier sont dits linéairement équivalents si ils sont égaux modulo le sous-groupe des diviseurs principaux. Le groupe quotient se note CaCl$(X)$.
+Un diviseur de cartier est dit principal si il provient d'une section globale de $k(X)^\times$ c'est à dire d'une fonction rationnelle. Deux diviseurs de Cartier sont dits linéairement équivalents si ils sont égaux modulo le sous-groupe des diviseurs principaux. Le groupe quotient se note CaCl$(X)$.\\
+Un diviseur de Cartier $(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i$, $f_i\in \mathcal{O_X}(U_i)$
 \end{defn}
 
 On suppose $X$ normal et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur  premier $Y$, on choisit un indice $i\in I$ tel que $U_i\cap Y\neq \emptyset$ et on prend $v_Y(f_i)$ pour coefficient de $Y$. Cette somme est finie par la même preuve que \ref{noetherienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \mathcal{O}_X^\times(U_i\cap U_j)$ par définition, donc $v_Y(f_i)=v_Y(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal".\\ 
@@ -715,16 +725,20 @@ Les classes d'isomorphie de faisceaux inversible sur $X$ munies du produit tenso
 Soit $X$ une variété normale et irréductible. L'application $D\mapsto \mathcal{O}_X(D)$ définit un isomorphisme de groupe CaCl$(X)\simeq $ Pic$(X)$.
 \end{prop}
 
-Supposons maintenant $X$ lisse (donc normale) et projective munie d'un faisceau inversible $\mathcal{L}$ et $s$ une section globale non nulle. Soit $(U_i)_i$ un recouvrement qui trivialise $\mathcal{L}$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\mathcal{L}_{|U_i}\rightarrow\mathcal{O}_X{|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des $\phi_i$. On l'appelle le diviseur des zéros de $s$.\\
-Par exemple pour $\mathcal{L}=\mathcal{O}_X(D)$, où $D\in $ WDiv$(X)=$ CaDiv$(X)$, le diviseur des zéros de $s$ est div$(s)+D$, il est linéairement équivalent à $D$. Réciproquement on voit que tout diviseur effectif linéairement équivalent à $D$ est de la forme div$(s)+D$ pour une section globale $s$ de $\mathcal{O}_X(D)$. D'autre part deux sections globales $s, s'$ non nulles ont même diviseur des zéros si et seulement si elles sont colinéaires dans le $k$-ev $\Gamma(X, \mathcal{O}_X(D))$, en effet dans ce cas $s/s'\in \mathcal{O}_X^\times(X)=k^*$, car $k$ est algébriquement clos. Notons que $\Gamma(X, \mathcal{O}_X(D))$ est de dimension finie (\cite{Hartshorne} II.5.19), ainsi l'ensemble des diviseurs effectifs linéairement équivalent à $D$ est naturellement muni d'une structure d'espace projectif, cela amène la définition suivante:
-\begin{defn}[Système linéaire, point de base]
-Soit $X$ une variété lisse et projective, et $D$ un diviseur. L'ensemble des diviseurs effectifs linéairement équivalents à $D$ est le système linéaire complet définit par $D$, on le note $|D|$.\\ Un système linéaire est une partie de $|D|$ correspondant à un sous espace projectif.\\
-On dit que $p\in X$ est un point de base d'un système linéaire $\PP(V)\subset |D|$ si l'intersection des $X\setminus X_s$ pour $s\in V$ est non vide. 
-\end{defn}
+\subsection{Fibrés en droites}
 
-Autrement dit dans ce langage, se donner un morphisme $X\rightarrow \PP^n_k$ est équivalent à se donner un système linéaire $\PP(V)\subset |D|$ sans point de base et une base de $V$.
+Soit $X$ une variété. Un fibré en droite sur $X$ est une variété $L$ munie d'un morphisme $\pi:L\rightarrow X$ tel que $X$ admet un recouvrement ouvert $(U_i)_{i\in I}$ satisfaisant:
 
-\subsection{Faisceaux amples, très amples. Caractérisation des variétés projectives.}
+\begin{enumerate}
+\item $\forall i\in I$, il existe un isomorphisme $\phi_i :\pi^{-1}(U_i):\rightarrow \AAA^1$ de variétés sur $U_i$.
+\item $\forall i, j\in I$, l'isomorphisme $\phi_j\circ \phi_i^{-1}: (U_i\cap U_j)\times \AAA^1\rightarrow (U_i\cap U_j)\times \AAA^1$ est de la forme $(x, z)\mapsto (x, a_{ij}(x)z)$.
+\end{enumerate}
+
+Deux fibrés en droites sont isomorphes si ils le sont en tant que variétés sur $X$. Une section d'un fibré en droites $(L, \pi)$ est une section de $\pi$, et on a la version locale de cette notion. On définit ainsi le $\mathcal{O}_X$-module des sections de $L$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{X|U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est à dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible.\\
+Réciproquement, si on se donne un faisceau inversible $\mathcal{L}$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\mathcal{L}(U_i)$ sur chaque $U_i$, on a sur $U_i\cap U_j$, $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ un fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes k[u]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[v]$, $f\otimes 1\mapsto f\otimes 1$, $1 \otimes u \mapsto a_{ij}\otimes v$.\\
+Ces deux opérations sont inverses l'une de l'autre à isomorphisme près, ce qui permet de transporté la structure du groupe de Picard sur les classes d'isomorphie de fibrés en droites.
+
+\subsection{Variétés projectives, Faisceaux très amples}
 
 Soit $X$ une variété munie d'un morphisme $(f,f^\sharp):X\rightarrow \PP^n_k$, où $\PP^n_k=$Proj$[x_0,...,x_n]$. On considère le faisceau tordu de Serre $\mathcal{O}(1)$ sur $\PP^n_k$. C'est un faisceau inversible engendré par les sections globales $x_0,...,x_n$. $f^*\mathcal{O}(1)$ est également inversible et on a un morphisme canonique de $\mathcal{O}_{\PP^n_k}$-module $\alpha:\mathcal{O}(1)\rightarrow f_*f^*\mathcal{O}(1)$ où la structure de $\mathcal{O}_{\PP^n_k}$-module sur $f_*f^*\mathcal{O}(1)$ est donnée par $\lambda.t=f^\sharp(\lambda)t$ pour tout ouvert $V\subset \PP^n_k$, $\lambda\in \mathcal{O}_{\PP^n_k}(V)$, $t\in f_*f^*\mathcal{O}(1)(V)$. Ainsi $f^*(x_0):=s_0:=\alpha(\PP^n_k)(x_0),...,f^*(x_n):=s_n:=\alpha(\PP^n_k)(x_n)$ sont des sections globales de $f^*\mathcal{O}(1)$ dont on voit facilement qu'elles engendrent $f^*\mathcal{O}(1)$.\\
 Considérons un faisceau inversible $\mathcal{L}$ sur une variété $Y$, une section globale $l$, et un morphisme $(g,g^\sharp):X\rightarrow Y$. On définit l'ouvert $$Y_l:=\lbrace y\in Y\mid \mathcal{O}_{Y,y}l_y=\mathcal{L}_y\rbrace=\lbrace y\in Y\mid l_y\notin m_y\mathcal{L}_y\rbrace$$
@@ -736,3 +750,13 @@ Réciproquement montrons que la donnée d'un faisceau inversible $\mathcal{L}$ s
 Soit $X$ une variété et $\mathcal{L}$ un faisceau inversible sur $X$ engendré par une famille finie de sections globales. Si ces sections définissent une immersion $X\xhookrightarrow{}\PP_k^n$, on dit que $\mathcal{L}$ est très ample. Cela revient à dire que $\mathcal{L}\simeq i^*\mathcal{O}(1)$  pour une immersion $i:\xhookrightarrow{}\PP_k^n$.\\
 Si $X$ est normale et irréductible, un diviseur de Cartier $D$ est dit très ample si on a $\mathcal{O}_X(D)\simeq i^*\mathcal{O}(1)$ pour une immersion $i:\xhookrightarrow{}\PP_k^n$.
 \end{defn}
+
+
+Supposons maintenant $X$ lisse (donc normale) et projective munie d'un faisceau inversible $\mathcal{L}$ et $s$ une section globale non nulle. Soit $(U_i)_i$ un recouvrement qui trivialise $\mathcal{L}$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\mathcal{L}_{|U_i}\rightarrow\mathcal{O}_X{|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des $\phi_i$. On l'appelle le diviseur des zéros de $s$.\\
+Par exemple pour $\mathcal{L}=\mathcal{O}_X(D)$, où $D\in $ WDiv$(X)=$ CaDiv$(X)$, le diviseur des zéros de $s$ est div$(s)+D$, il est linéairement équivalent à $D$. Réciproquement on voit que tout diviseur effectif linéairement équivalent à $D$ est de la forme div$(s)+D$ pour une section globale $s$ de $\mathcal{O}_X(D)$. D'autre part deux sections globales $s, s'$ non nulles ont même diviseur des zéros si et seulement si elles sont colinéaires dans le $k$-ev $\Gamma(X, \mathcal{O}_X(D))$, en effet dans ce cas $s/s'\in \mathcal{O}_X^\times(X)=k^*$, car $k$ est algébriquement clos. Notons que $\Gamma(X, \mathcal{O}_X(D))$ est de dimension finie (\cite{Hartshorne} II.5.19), ainsi l'ensemble des diviseurs effectifs linéairement équivalent à $D$ est naturellement muni d'une structure d'espace projectif, cela amène la définition suivante:
+\begin{defn}[Système linéaire, point de base]
+Soit $X$ une variété lisse et projective, et $D$ un diviseur. L'ensemble des diviseurs effectifs linéairement équivalents à $D$ est le système linéaire complet définit par $D$, on le note $|D|$.\\ Un système linéaire est une partie de $|D|$ correspondant à un sous espace projectif.\\
+On dit que $p\in X$ est un point de base d'un système linéaire $\PP(V)\subset |D|$ si l'intersection des $X\setminus X_s$ pour $s\in V$ est non vide. 
+\end{defn}
+
+Autrement dit dans ce langage, se donner un morphisme $X\rightarrow \PP^n_k$ est équivalent à se donner un système linéaire $\PP(V)\subset |D|$ sans point de base et une base de $V$.
