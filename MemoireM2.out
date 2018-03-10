@@ -14,7 +14,7 @@
 \BOOKMARK [2][-]{subsection.1.4.1}{G\351n\351ralit\351s}{section.1.4}% 14
 \BOOKMARK [2][-]{subsection.1.4.2}{G-vari\351t\351s, repr\351sentations}{section.1.4}% 15
 \BOOKMARK [2][-]{subsection.1.4.3}{Groupes quotients}{section.1.4}% 16
-\BOOKMARK [2][-]{subsection.1.4.4}{Quasitores, actions de quasitores}{section.1.4}% 17
+\BOOKMARK [2][-]{subsection.1.4.4}{Groupes diagonalisables, actions de groupes diagonalisables}{section.1.4}% 17
 \BOOKMARK [1][-]{section.1.5}{Th\351orie des invariants}{chapter.1}% 18
 \BOOKMARK [2][-]{subsection.1.5.1}{L'alg\350bre des invariants}{section.1.5}% 19
 \BOOKMARK [2][-]{subsection.1.5.2}{Quotient d'une vari\351t\351 alg\351brique sous l'action d'un groupe alg\351brique}{section.1.5}% 20
@@ -22,4 +22,13 @@
 \BOOKMARK [2][-]{subsection.1.6.1}{Diviseurs de Weil}{section.1.6}% 22
 \BOOKMARK [2][-]{subsection.1.6.2}{Diviseurs de Cartier et groupe de Picard}{section.1.6}% 23
 \BOOKMARK [2][-]{subsection.1.6.3}{Fibr\351s en droites}{section.1.6}% 24
-\BOOKMARK [2][-]{subsection.1.6.4}{Vari\351t\351s projectives, Faisceaux tr\350s amples}{section.1.6}% 25
+\BOOKMARK [2][-]{subsection.1.6.4}{L'espace projectif Pkn}{section.1.6}% 25
+\BOOKMARK [1][-]{section.1.7}{Alg\350bres divisorielles}{chapter.1}% 26
+\BOOKMARK [2][-]{subsection.1.7.1}{Faisceau d'alg\350bres divisorielles}{section.1.7}% 27
+\BOOKMARK [2][-]{subsection.1.7.2}{Factorialit\351 de l'anneau des sections globales}{section.1.7}% 28
+\BOOKMARK [0][-]{chapter.2}{Anneaux de Cox}{}% 29
+\BOOKMARK [1][-]{section.2.1}{Un exemple introductif}{chapter.2}% 30
+\BOOKMARK [2][-]{subsection.2.1.1}{Le spectre relatif d'un faisceau d'alg\350bres divisorielles}{section.2.1}% 31
+\BOOKMARK [2][-]{subsection.2.1.2}{Exemple d'une vari\351t\351 projective}{section.2.1}% 32
+\BOOKMARK [1][-]{section.2.2}{Groupe des classes sans torsion}{chapter.2}% 33
+\BOOKMARK [1][-]{section.2.3}{Groupe des classes avec torsion}{chapter.2}% 34
