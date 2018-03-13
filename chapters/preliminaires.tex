@@ -46,7 +46,6 @@ Soit $A$ un anneau $\ZZ$-gradué. Les assertions suivantes sont équivalentes:\\
 AtiyahMcdo p106
 \end{proof}
 
-
 \section{Variétés algébriques}
 
 \subsection{Généralités}
@@ -55,15 +54,33 @@ Dans ce mémoire, on travaille dans la catégorie des $k$-schémas réduits sép
 On note que la sous-catégorie pleine des variétés affines est anti-équivalente à celle des $k$-algèbre de type fini réduites via le foncteur sections globales, noté $k[.]$ dans ce cas pour coller aux notations traditionnelles. Un schéma de type fini sur un corps est noetherien, on en déduit que toute partie localement fermée d'une variété admet une unique structure de variété, et tout fermé se décompose de manière unique en une union finie de sous-variétés fermées irréductibles maximales. Enfin, le produit sur $k$ préserve l'irréductibilité.
 
 \begin{cons}\label{gluevar}[Recollement de variétés]
-Soit $(X_i)_{u\in I}$ une famille finie de variétés. Supposons $\forall i,j$ avec $i\neq j$ on ait des ouverts $U_{ij}\subset X_i$ et des isomorphismes $f_{ij}:U_{ij}\rightarrow U_{ji}$ tels que $\forall i,j,k\in I$ distincts on ait:
+Soit $(X_i)_{u\in I}$ une famille finie de variétés. Supposons $\forall i,j$ on ait des ouverts $X_{ij}\subset X_i$ et des isomorphismes $f_{ij}:X_{ij}\rightarrow X_{ji}$ tels que $\forall i,j,k\in I$ on ait:
 	\begin{enumerate}
-	\item $f_{ij}=f_{ji}^{-1}$
-	\item $U_{ij}\cup f_{ij}^{-1}(U_{jk})\subset U_{ik}^{-1}$ et $f_{jk}f_{ij}=f_{ik}$ sur $U_{ij}\cup f_{ij}^{-1}(U_{jk})$
+	\item $X_{ii}=X_i$ et $f_{ii}=id$
+	\item $f_{ij}^{-1}(X_{ji} \cap X_{jk}) =  X_{ij} \cap X_{ik}$
+	\item Le diagramme suivant commute:
+	$$
+		\begin{tikzcd}
+		  X_{ij}\cap X_{ik} \arrow[rd, "f_{ij}"] \arrow[rr, "f_{ik}"] & & X_{ki}\cap X_{kj}\\
+  		 & X_{ji}\cap X_{jk} \arrow[ru, "f_{jk}"] &
+	\end{tikzcd}
+	$$
+	
 	\end{enumerate}
-Alors on définit une variété X comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $a\sim f_{ji}(a),\forall a\in U_{ij}\subset X_i$, et $a\sim a \forall a$. La topologie est la topologie finale associée aux inclusions $inc_i:X_i\subset X$. Le faisceau structural est définit par $\Oo_X(U):=\lbrace \phi\in \textrm{Map}(U,k)\mid inc_i^*\phi\in\Oo_{X_i}(inc_i^{-1}(U))\rbrace$.
+Alors on peut définir une variété X comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $x\sim x' \iff §x\in X_{ij}, x'\in X_{ji}$ et $f_{ij}(x)=x')$. On note $f_i:X_i\rightarrow X$ les applications canoniques, et on munit 
+$X$ de la topologie finale associée aux $f_i$. On vérifie que chaque $f_i$ est une immersion ouverte dont on note $U_i$ l'image. Le faisceau structural est définit en recollant les $\mathcal{O}_{U_i}:=f_{i\star}\mathcal{O}_{X_i}$, ses sections sur un ouvert $W\subset X$ étant $$
+\mathcal{O}_X(W) =
+\{
+(s_i)_{i \in I} \mid
+s_i \in \mathcal{O}_{U_i}(W \cap U_i),
+f_{ij}(s_i|_{W \cap U_i \cap U_j}) = s_j|_{W \cap U_i \cap U_j}
+\}
+$$
+
+
 \end{cons}
 
-\begin{cons}\label{gluevar}[Spectre relatif]
+\begin{cons}\label{relspec}[Spectre relatif]
 
 \end{cons}
 
@@ -626,6 +643,13 @@ Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-
 \textcolor{red}{Ajouter le truc sur les morphismes qliu p53 et définir une variété projective}
 
 
+
+\section{Faisceaux quasi-cohérents}
+
+\subsection{Faisceaux quasi-cohérents sur une variété affine}
+
+\subsection{Faisceaux quasi-cohérents sur une variété projective}
+
 \section{Diviseurs}
 
 \subsection{Diviseurs de Weil}
@@ -730,7 +754,7 @@ Réciproquement montrons que la donnée d'un faisceau inversible $\mathcal{L}$ s
 
 Notons que cette propriété caractérise l'espace projectif sur $k$ à isomorphisme près. En effet il représente le foncteur (voir stacks)...
 
-\subsubsection{Variétés projectives, faisceaux très amples}
+\subsubsection{Variétés quasi-projectives, faisceaux inversible très amples}
 
 \begin{defn}
 Soit $X$ une variété et $\mathcal{L}$ un faisceau inversible sur $X$ engendré par une famille finie de sections globales. Si ces sections définissent une immersion $X\xhookrightarrow{}\PP_k^n$, on dit que $\mathcal{L}$ est très ample. Cela revient à dire que $\mathcal{L}\simeq i^*\mathcal{O}(1)$  pour une immersion $i:\xhookrightarrow{}\PP_k^n$.\\
