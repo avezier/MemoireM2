@@ -80,9 +80,7 @@ $$
 
 \end{cons}
 
-\begin{cons}\label{relspec}[Spectre relatif]
 
-\end{cons}
 
 \begin{defn}
 Soit $X, Y$ des variétés. Supposons que $X$ soit une variété sur $Y$ par un morphisme $f:X\rightarrow Y$. On dit que $X$ est séparé sur $Y$ si $f$ est séparé, c'est à dire que l'image du morphisme diagonal dans $X\times_Y X$ est fermé.
@@ -718,27 +716,30 @@ Un diviseur de cartier est dit principal si il provient d'une section globale de
 Un diviseur de Cartier $(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i$, $f_i\in \mathcal{O_X}(U_i)$
 \end{defn}
 
-On suppose $X$ normal et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur  premier $Y$, on choisit un indice $i\in I$ tel que $U_i\cap Y\neq \emptyset$ et on prend $v_Y(f_i)$ pour coefficient de $Y$. Cette somme est finie par la même preuve que \ref{noetherienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \mathcal{O}_X^\times(U_i\cap U_j)$ par définition, donc $v_Y(f_i)=v_Y(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal".\\ 
-Tout diviseur de Weil n'est pas nécessairement principal (cf \cite{Hartshorne} 6.11.3). C'est en revanche le cas si $X$ est lisse. En effet dans ce cas, les anneaux locaux sont factoriels, on obtient ainsi en tout point une équation locale d'un diviseur premier car un idéal premier de hauteur 1 d'un anneau factoriel est principal, ce qui permet de conclure. Dans ce cas on a également un isomorphisme entre Cl$(X)$ et CaCl$(X)$ car les diviseurs principaux se correspondent.\\
-On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang 1, c'est à dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)^\times$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceau inversible de $k(X)^\times$. Par cette correspondance, deux diviseurs sont linéairement équivalents si et seulement si les faisceaux inversibles sont isomorphes.\\
+Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang 1, c'est à dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)^\times$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceau inversible de $k(X)^\times$. Par cette correspondance, deux diviseurs sont linéairement équivalents si et seulement si les faisceaux inversibles sont isomorphes.\\
 Les classes d'isomorphie de faisceaux inversible sur $X$ munies du produit tensoriel forment un groupe appelé groupe de Picard de $X$, noté Pic$(X)$. On a ainsi définit une application injective CaCl$(X)\rightarrow$ Pic$(X)$ dont on voit facilement que c'est un morphisme de groupe. Comme $X$ est supposé irréductible, c'est un isomorphisme car tout faisceau inversible est isomorphe à un sous-faisceau inversible de $k(X)^\times$. En résumé on a le résultat suivant:
 
 \begin{prop}
-Soit $X$ une variété normale et irréductible. L'application $D\mapsto \mathcal{O}_X(D)$ définit un isomorphisme de groupe CaCl$(X)\simeq $ Pic$(X)$.
+Soit $X$ une variété irréductible. L'application $D\mapsto \mathcal{O}_X(D)$ définit un isomorphisme de groupe CaCl$(X)\simeq $ Pic$(X)$.
 \end{prop}
 
-\subsection{Fibrés en droites}
 
+On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur  premier $Y$, on choisit un indice $i\in I$ tel que $U_i\cap Y\neq \emptyset$ et on prend $v_Y(f_i)$ pour coefficient de $Y$. Cette somme est finie par la même preuve que \ref{noetherienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \mathcal{O}_X^\times(U_i\cap U_j)$ par définition, donc $v_Y(f_i)=v_Y(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir CaCl$(X)$ comme un sous-groupe de Cl$(X)$ (on vérifie que les diviseurs principaux se correspondent).\\ 
+Ce sous-groupe est propre en général (cf \cite{Hartshorne} 6.11.3). En revanche, si $X$ est lisse, tout diviseur de Weil est localement principal . En effet dans ce cas, les anneaux locaux sont factoriels, on obtient ainsi en tout point une équation locale d'un diviseur premier car un idéal premier de hauteur 1 d'un anneau factoriel est principal, ce qui permet de conclure.\\
+
+\subsection{Fibrés en droites, $\GG_m$-fibrés principaux}
+\label{linebundle}
 Soit $X$ une variété. Un fibré en droite sur $X$ est une variété $L$ munie d'un morphisme $\pi:L\rightarrow X$ tel que $X$ admet un recouvrement ouvert $(U_i)_{i\in I}$ satisfaisant:
 
 \begin{enumerate}
-\item $\forall i\in I$, il existe un isomorphisme $\phi_i :\pi^{-1}(U_i):\rightarrow \AAA^1$ de variétés sur $U_i$.
+\item $\forall i\in I$, il existe un isomorphisme $\phi_i :\pi^{-1}(U_i):\rightarrow U_i\times\AAA^1$ de variétés sur $U_i$.
 \item $\forall i, j\in I$, l'isomorphisme $\phi_j\circ \phi_i^{-1}: (U_i\cap U_j)\times \AAA^1\rightarrow (U_i\cap U_j)\times \AAA^1$ est de la forme $(x, z)\mapsto (x, a_{ij}(x)z)$.
 \end{enumerate}
 
 Deux fibrés en droites sont isomorphes si ils le sont en tant que variétés sur $X$ avec la conditions supplémentaire que les automorphismes induits sur les fibres soient linéaires. Une section d'un fibré en droites $(L, \pi)$ est une section de $\pi$, et on a la version locale de cette notion. On définit ainsi le $\mathcal{O}_X$-module des sections de $L$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{X|U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est à dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible.\\
-Réciproquement, si on se donne un faisceau inversible $\mathcal{L}$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\mathcal{L}(U_i)$ sur chaque $U_i$, on a sur $U_i\cap U_j$, $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ un fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes k[u]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[v]$, $f\otimes 1\mapsto f\otimes 1$, $1 \otimes u \mapsto a_{ij}\otimes v$.\\
-Ces deux opérations sont inverses l'une de l'autre à isomorphisme près, ce qui permet de transporté la structure du groupe de Picard sur les classes d'isomorphie de fibrés en droites.
+Réciproquement, si on se donne un faisceau inversible $\mathcal{L}$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\mathcal{L}(U_i)$ sur chaque $U_i$, on a sur $U_i\cap U_j$, $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. Ces deux opérations sont inverses l'une de l'autre à isomorphisme près, ce qui permet de transporter la structure du groupe de Picard sur les classes d'isomorphie de fibrés en droites.\\
+Enfin, notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$ sur ses fibres. L'ensemble $L_0$ des points fixes sous $\GG_m$ est le fermé correspondant à l'image de la section nulle. $L^\times:=L\setminus L_0$ est une $\GG_m$-variété et $\pi$ se restreint en $\pi^\times: L^\times \rightarrow X$ qui est un quotient géométrique. En effet sur les $U_i$, on a $\pi^{\times-1}(U_i) \simeq U_i\times_k \GG_m$ et l'action de $\GG_m$ se fait par multiplication sur le facteur de droite.
+
 
 \subsection{L'espace projectif $\PP_k^n$}
 

@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {1.3}Vari\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques}{4}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{4}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Dimension}{5}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Normalit\IeC {\'e}}{6}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.3}Normalit\IeC {\'e}}{5}{subsection.1.3.3}
 \contentsline {subsection}{\numberline {1.3.4}Quelques r\IeC {\'e}sultats sur les morphismes}{6}{subsection.1.3.4}
 \contentsline {subsubsection}{G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{6}{section*.4}
 \contentsline {subsubsection}{Dimension des fibres}{6}{section*.5}
@@ -35,17 +35,17 @@
 \contentsline {section}{\numberline {1.7}Diviseurs}{17}{section.1.7}
 \contentsline {subsection}{\numberline {1.7.1}Diviseurs de Weil}{17}{subsection.1.7.1}
 \contentsline {subsection}{\numberline {1.7.2}Diviseurs de Cartier et groupe de Picard}{19}{subsection.1.7.2}
-\contentsline {subsection}{\numberline {1.7.3}Fibr\IeC {\'e}s en droites}{19}{subsection.1.7.3}
+\contentsline {subsection}{\numberline {1.7.3}Fibr\IeC {\'e}s en droites, $\mathbb {G}_m$-fibr\IeC {\'e}s principaux}{19}{subsection.1.7.3}
 \contentsline {subsection}{\numberline {1.7.4}L'espace projectif $\mathbb {P}_k^n$}{20}{subsection.1.7.4}
 \contentsline {subsubsection}{Faisceaux inversibles sur $\mathbb {P}_k^n$}{20}{section*.13}
 \contentsline {subsubsection}{Morphismes vers l'espace projectif}{20}{section*.14}
-\contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux inversible tr\IeC {\`e}s amples}{20}{section*.15}
+\contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux inversible tr\IeC {\`e}s amples}{21}{section*.15}
 \contentsline {section}{\numberline {1.8}Alg\IeC {\`e}bres divisorielles}{21}{section.1.8}
 \contentsline {subsection}{\numberline {1.8.1}Faisceau d'alg\IeC {\`e}bres divisorielles}{21}{subsection.1.8.1}
 \contentsline {subsection}{\numberline {1.8.2}Factorialit\IeC {\'e} de l'anneau des sections globales}{22}{subsection.1.8.2}
 \contentsline {chapter}{\numberline {2}Anneaux de Cox}{23}{chapter.2}
 \contentsline {section}{\numberline {2.1}Un exemple introductif}{23}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Le spectre relatif d'un faisceau d'alg\IeC {\`e}bres divisorielles}{23}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.1}Le spectre relatif d'un faisceau d'alg\IeC {\`e}bres quasi-coh\IeC {\'e}rentes}{23}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Exemple d'une vari\IeC {\'e}t\IeC {\'e} projective}{23}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Groupe des classes sans torsion}{23}{section.2.2}
 \contentsline {section}{\numberline {2.3}Groupe des classes avec torsion}{23}{section.2.3}
