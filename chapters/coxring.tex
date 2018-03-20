@@ -2,19 +2,34 @@
 
 \section{Un exemple introductif}
 
-\subsection{Le spectre relatif d'un faisceau d'algèbres quasi-cohérentes}
 
-\begin{cons}\label{relspec}[Spectre relatif]
 
-\end{cons}
 
-\begin{ex}\label{relspec}
-Si on se donne un faisceau inversible $\mathcal{L}$ sur un $k$-schéma $X$, le fibré en droites qu'on lui associe dans la discussion \ref{linebundle} n'est autre que Spec$_X($Sym$(\mathcal{L}))$, où Sym$(\mathcal{L}))$ est l'algèbre symétrique associée à $\mathcal{L}$ sur $\mathcal{O}_X$. En effet, on recolle les Spec$_{U_i}($Sym$(\mathcal{O}_{U_i}))\simeq $ Spec$_{U_i}( \mathcal{O}_{U_i}[t])\simeq U_i \times_k \AAA^1_k$, où $U_i$ est un recouvrement qui trivialise $\mathcal{L}$.
-\end{ex}
+Considérons une variété irréductible $X$ est un diviseur très ample $D$ tel que $\mathcal{O}_X(D)\simeq i^*\mathcal{O}_{\PP^n_k}$ où $X\xhookrightarrow{i}\PP^n_k $ est une immersion fermée. Le fibré en droites $L=$ Spec$_{\PP^n_k}($Sym$(\mathcal{O}_{\PP^n_k}(1))) = \oplus_{k\geq 0}\mathcal{O}_{\PP^n_k}(k)$ est l'éclatement en l'origine de $\AAA^{n+1}$. En effet, on montre facilement que le $\mathcal{O}_{\PP^n_k}$-module des sections de l'éclatement en l'origine de $\AAA^{n+1}$ vu comme fibré en droites sur $\PP_k^n$ est $ \mathcal{O}_{\PP^n_k}(-1)$, ce qui permet de conclure d'après la discussion \ref{linebundle}. On a le diagramme commutatif suivant, où $L_X$ est le fibré en droites Spec$_X($Sym$(i^*\mathcal{O}_{\PP^n_k}(D)))$, $j$ est une immersion fermée (comme recollement d'immersions fermées) et $\pi$ est propre.
 
-\subsection{Exemple d'une variété projective}
+	\begin{center}
+	\begin{tikzcd}
+  		L_X \arrow[r, hook, "j"] \arrow[d, "p_X"]& L \arrow[d, "p"] \arrow[r, "\pi"]& \AAA^{n+1}_k\\ 
+  		X \arrow[r, hook, "i"] & \PP^n_k &
+	\end{tikzcd}\\
+	\end{center}
 
-Considérons l'espace projectif $\PP^n_k=$Proj$[x_0,...,x_n]$ et le diviseur premier $D$ correspondant à l'hyperplan $x_0=0$. Le fibré en droites $L=$ Spec$_{\PP^n_k}($Sym$(\mathcal{O}_{\PP^n_k}(D)))\simeq \oplus_{k\geq 0}\mathcal{O}_{\PP^n_k}(kD)$ est isomorphe à l'éclatement en l'origine de $\AAA^{n+1}$.
+
+On considère comme en \ref{linebundle} l'action de $\GG_m$ sur les fibres de $L$, $L_0$ l'ensemble des points fixes, et $L^\times$ son complémentaire. $L^\times$ est constitué de recollements de schémas isomorphes à Spec$_{U_i}( \mathcal{O}_{U_i}[t,t^{-1}])\simeq U_i \times_k \GG_m$, on a en fait $L^\times=$ Spec$_{\PP^n_k}(\oplus_{k\in \ZZ}\mathcal{O}_{\PP^n_k}(kD))$. De plus, $L^\times$ est isomorphe à $\AAA^{n+1}\setminus\lbrace 0 \rbrace$ par restriction de $\pi$. D'autre part, $p$ se restreint en une application $p^\times:L^\times \rightarrow \PP^n_k$ qui est le quotient géométrique de l'action de $\GG_m$. On résume cela dans le diagramme ci-dessous:
+
+	\begin{center}
+	\begin{tikzcd}
+  		\widetilde{X}:=L_X^\times \arrow[r, hook, "j"] \arrow[d, "p_X^\times"]& L^\times \arrow[d, "p^\times"] \arrow[r, "\simeq"]& \AAA^{n+1}_k\setminus \lbrace 0 \rbrace\\ 
+  		X \arrow[r, hook, "i"] & \PP^n_k &
+	\end{tikzcd}\\
+	\end{center}
+
+Notons encore $\pi$ la restriction $\pi j$, c'est une application propre. Ainsi, $\pi_*\mathcal{O}_{L_X}$ est un $\mathcal{O}_{\AAA_k^{n+1}}$-module cohérent. On en déduit que $\mathcal{O}(L_X)=\pi_*\mathcal{O}_{L_X}(\AAA_k^{n+1})$ est un $k[x_0,...,x_n]$-module de type fini, c'est en particulier une $k$-algèbre de type fini. De plus comme les $\mathcal{O}_X(n)$ n'ont pas de sections globales non nulles pour $n<0$, on en déduit que $\mathcal{O}(\tilde{X})=\Gamma(X,\oplus_{k\in \ZZ}\mathcal{O}_X(kD))=\mathcal{O}(L_X)$ est de type fini sur $k$. C'est de plus une algèbre $\NN$-graduée, son spectre $\bar{X}$ est donc muni d'une action de $\GG_m$ avec un unique point fixe $p_0$ appartenant à l'adhérence de tout orbite. 
+
+Enfin, considérons l'application canonique $\alpha: \oplus_{l\in\ZZ}\mathcal{O}_{\PP^n_k}(l)\rightarrow i_*i^*\oplus_{l\in \ZZ}\mathcal{O}_{\PP^n_k}(l)=i_*\oplus_{l\in \ZZ}\mathcal{O}_X(l)$. Sur les sections globales cela donne $\alpha(\PP^n_k): k[x_0,...,x_n]\rightarrow \mathcal{O}_{\widetilde{X}}(\widetilde{X})$.\\
+Sur chaque $U_i=D_+(x_i)$, on a $\mathcal{O}_{\widetilde{X}}(p_X^{\times-1}(U_i))=\Gamma(U_i,\oplus_{k\in \ZZ}\mathcal{O}_X(kD))=\Gamma(X,\oplus_{k\in \ZZ}\mathcal{O}_X(kD))_{x_i}=\mathcal{O}_{L_X}(L_X)_{x_i}$. L'unique maximal contenant chaque $x_i$ correspond à $p_0$, on voit ainsi que ces spectres se recollent en $\widetilde{X}=\bar{X}\setminus \lbrace p_0 \rbrace$.\\
+
+Prenons un exemple concret, soit $X\subset \PP^3_k$ la quadrique projective d'équation en coordonnées homogènes $s_1s_2-s_3s_4=0$. L'algèbre des coordonnées homogènes est normal, donc en reprenant les notations précédentes on obtient que $\bar{X}$ est la quadrique affine d'équation $t_1t_2-t_3t_4$ dans $\AAA^4$.
 
 \section{Groupe des classes sans torsion}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  14 MAR 2018 17:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  20 MAR 2018 21:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1092,11 +1092,7 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \mc@col@check@num=\count167
 )
 (./MemoireM2.aux (./chapters/introduction.aux) (./chapters/preliminaires.aux)
-(./chapters/coxring.aux
-
-LaTeX Warning: Label `relspec' multiply defined.
-
-))
+(./chapters/coxring.aux))
 \openout1 = `MemoireM2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -1118,7 +1114,8 @@ LaTeX Info: Redefining \dots on input line 39.
 LaTeX Info: Redefining \up on input line 39.
 \AtBeginShipoutBox=\box68
 Package hyperref Info: Link coloring ON on input line 39.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1247,57 +1244,79 @@ iso-mor-phisme est $\OML/cmm/m/it/10 ev[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 G
 
 [10] [11] [12] [13] [14] [15] [16]
 
-LaTeX Warning: Reference `' on page 17 undefined on input line 655.
+LaTeX Warning: Reference `' on page 17 undefined on input line 658.
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 727--729
+Underfull \hbox (badness 10000) in paragraph at lines 730--732
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 746--749
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 759--760
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 730.
+(hyperref)                removing `math shift' on input line 761.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 730.
+(hyperref)                removing `math shift' on input line 761.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 730.
-
-[19]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 744.
+(hyperref)                removing `math shift' on input line 764.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 744.
+(hyperref)                removing `subscript' on input line 764.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 744.
+(hyperref)                removing `superscript' on input line 764.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 744.
+(hyperref)                removing `math shift' on input line 764.
 
 [20] [21]) [22]
 \openout2 = `chapters/coxring.aux'.
 
  (./chapters/coxring.tex
 Chapitre 2.
-) [23
+
+Overfull \hbox (0.9469pt too wide) in paragraph at lines 29--31
+\T1/cmr/m/n/10 Sur chaque $\OML/cmm/m/it/10 U[] \OT1/cmr/m/n/10 = \OML/cmm/m/it
+/10 D[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )$\T1/cmr/m/n/10 , 
+on a $\OMS/cmsy/m/n/10 O[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 
+(\OML/cmm/m/it/10 U[]\OT1/cmr/m/n/10 )) = ^^@(\OML/cmm/m/it/10 U[]; \OMS/cmsy/m
+/n/10 ^^H[]O[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 kD\OT1/cmr/m/n/10 )) = ^^@(\OML
+/cmm/m/it/10 X; \OMS/cmsy/m/n/10 ^^H[]O[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 kD\O
+T1/cmr/m/n/10 ))[] = \OMS/cmsy/m/n/10 O[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 L[]\
+OT1/cmr/m/n/10 )[]$\T1/cmr/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
+
+ []
+
+[23
 
 
 
-] (./MemoireM2.bbl
+]) [24] (./MemoireM2.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 35.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [24
+)) [25
 
 
 ]
@@ -1309,21 +1328,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
 Package rerunfilecheck Info: File `MemoireM2.out' has not changed.
-(rerunfilecheck)             Checksum: E6A102A6F42D41148E5A78C80F27B56F;3111.
+(rerunfilecheck)             Checksum: EFA0D5E8605762CD121E1657A79AD25B;2960.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
  ) 
 Here is how much of TeX's memory you used:
- 21035 strings out of 492995
- 391684 string characters out of 6132704
- 471282 words of memory out of 5000000
- 23943 multiletter control sequences out of 15000+600000
+ 21126 strings out of 492995
+ 394017 string characters out of 6132704
+ 471998 words of memory out of 5000000
+ 24034 multiletter control sequences out of 15000+600000
  25361 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,15n,84p,1652b,1109s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1334,36 +1350,37 @@ t, replaced by a fixed one
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on MemoireM2.pdf (25 pages, 495483 bytes).
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/cm-super/sftt1000.pfb>
+Output written on MemoireM2.pdf (26 pages, 508728 bytes).
 PDF statistics:
- 659 PDF objects out of 1000 (max. 8388607)
- 597 compressed objects within 6 object streams
+ 663 PDF objects out of 1000 (max. 8388607)
+ 599 compressed objects within 6 object streams
  212 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 

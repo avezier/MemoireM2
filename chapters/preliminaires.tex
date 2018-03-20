@@ -644,9 +644,12 @@ Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-
 
 \section{Faisceaux quasi-cohérents}
 
-\subsection{Faisceaux quasi-cohérents sur une variété affine}
+\subsection{Faisceaux quasi-cohérents sur une variété}
 
 \subsection{Faisceaux quasi-cohérents sur une variété projective}
+
+
+
 
 \section{Diviseurs}
 
@@ -727,18 +730,35 @@ Soit $X$ une variété irréductible. L'application $D\mapsto \mathcal{O}_X(D)$ 
 On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur  premier $Y$, on choisit un indice $i\in I$ tel que $U_i\cap Y\neq \emptyset$ et on prend $v_Y(f_i)$ pour coefficient de $Y$. Cette somme est finie par la même preuve que \ref{noetherienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \mathcal{O}_X^\times(U_i\cap U_j)$ par définition, donc $v_Y(f_i)=v_Y(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir CaCl$(X)$ comme un sous-groupe de Cl$(X)$ (on vérifie que les diviseurs principaux se correspondent).\\ 
 Ce sous-groupe est propre en général (cf \cite{Hartshorne} 6.11.3). En revanche, si $X$ est lisse, tout diviseur de Weil est localement principal . En effet dans ce cas, les anneaux locaux sont factoriels, on obtient ainsi en tout point une équation locale d'un diviseur premier car un idéal premier de hauteur 1 d'un anneau factoriel est principal, ce qui permet de conclure.\\
 
-\subsection{Fibrés en droites, $\GG_m$-fibrés principaux}
+\subsection{Fibrés en droites}
 \label{linebundle}
+\begin{defn}
 Soit $X$ une variété. Un fibré en droite sur $X$ est une variété $L$ munie d'un morphisme $\pi:L\rightarrow X$ tel que $X$ admet un recouvrement ouvert $(U_i)_{i\in I}$ satisfaisant:
 
 \begin{enumerate}
-\item $\forall i\in I$, il existe un isomorphisme $\phi_i :\pi^{-1}(U_i):\rightarrow U_i\times\AAA^1$ de variétés sur $U_i$.
+\item $\forall i\in I$, il existe un isomorphisme $\phi_i :\pi^{-1}(U_i)\rightarrow U_i\times\AAA^1$ de variétés sur $U_i$.
 \item $\forall i, j\in I$, l'isomorphisme $\phi_j\circ \phi_i^{-1}: (U_i\cap U_j)\times \AAA^1\rightarrow (U_i\cap U_j)\times \AAA^1$ est de la forme $(x, z)\mapsto (x, a_{ij}(x)z)$.
 \end{enumerate}
+Un morphisme de fibrés en droites sur $X$ est un morphisme de variétés sur $X$ avec la conditions supplémentaire que les morphismes induits sur les fibres soient linéaires.
+Une section d'un fibré en droites $(L, \pi)$ est une section de $\pi$, et on a la version locale de cette notion.
+\end{defn}
 
-Deux fibrés en droites sont isomorphes si ils le sont en tant que variétés sur $X$ avec la conditions supplémentaire que les automorphismes induits sur les fibres soient linéaires. Une section d'un fibré en droites $(L, \pi)$ est une section de $\pi$, et on a la version locale de cette notion. On définit ainsi le $\mathcal{O}_X$-module des sections de $L$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{X|U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est à dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible.\\
-Réciproquement, si on se donne un faisceau inversible $\mathcal{L}$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\mathcal{L}(U_i)$ sur chaque $U_i$, on a sur $U_i\cap U_j$, $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. Ces deux opérations sont inverses l'une de l'autre à isomorphisme près, ce qui permet de transporter la structure du groupe de Picard sur les classes d'isomorphie de fibrés en droites.\\
-Enfin, notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$ sur ses fibres. L'ensemble $L_0$ des points fixes sous $\GG_m$ est le fermé correspondant à l'image de la section nulle. $L^\times:=L\setminus L_0$ est une $\GG_m$-variété et $\pi$ se restreint en $\pi^\times: L^\times \rightarrow X$ qui est un quotient géométrique. En effet sur les $U_i$, on a $\pi^{\times-1}(U_i) \simeq U_i\times_k \GG_m$ et l'action de $\GG_m$ se fait par multiplication sur le facteur de droite.
+Considérons un faisceau inversible $\mathcal{L}$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\mathcal{L}(U_i)$ sur chaque $U_i$. Sur $U_i\cap U_j$, on a $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. On a ainsi construit un fibré en droites sur $X$.\\
+Réciproquement, considérons le $\mathcal{O}_X$-module des sections d'un fibré en droite $L$ sur $X$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{X|U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est à dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible.\\
+En composant les deux opérations on trouve le faisceau inversible dual du faisceau de départ. Ces opération sont fonctorielles et réalisent une anti-équivalence de catégorie entre faisceaux inversibles sur $X$ et fibrés en droites sur $X$. Cela permet de transporter la structure du groupe de Picard sur les classes d'isomorphie de fibrés en droites.\\
+
+On introduit ci-dessous la version relative du spectre d'un anneau. Ceci va nous permettre de construire les fibrés en droite de manière plus intrinsèque.
+
+\begin{cons}\label{relspec}[Spectre relatif]
+
+\end{cons}
+
+Si on se donne un faisceau inversible $\mathcal{L}$ sur une variété $X$, le fibré en droites qu'on lui associe dans la discussion précédente n'est autre que Spec$_X($Sym$(\mathcal{L}))$, où Sym$(\mathcal{L}))$ est l'algèbre symétrique associée à $\mathcal{L}$ sur $\mathcal{O}_X$. En effet, on recolle les Spec$_{U_i}($Sym$(\mathcal{L}_{|U_i}))\simeq $ Spec$_{U_i}( \mathcal{O}_{U_i}[t])\simeq U_i \times_k \AAA^1_k$, où $(U_i)_i$ est un recouvrement qui trivialise $\mathcal{L}$.
+
+
+Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$ sur ses fibres. L'ensemble $L_0$ des points fixes sous $\GG_m$ est le fermé correspondant à l'image de la section nulle. Son complémentaire $L^\times:=L\setminus L_0$ est une $\GG_m$-variété et $\pi$ se restreint en $\pi^\times: L^\times \rightarrow X$ qui est un quotient géométrique. En effet sur les $U_i$, on a $\pi^{\times-1}(U_i) \simeq U_i\times_k \GG_m$ et l'action de $\GG_m$ se fait par multiplication sur le facteur de droite.\\
+
+\subsection{$G$-linearisation d'un fibré en droite}
 
 
 \subsection{L'espace projectif $\PP_k^n$}
@@ -763,7 +783,7 @@ Si $X$ est normale et irréductible, un diviseur de Cartier $D$ est dit très am
 \end{defn}
 
 
-Supposons maintenant $X$ lisse (donc normale) et projective munie d'un faisceau inversible $\mathcal{L}$ et $s$ une section globale non nulle. Soit $(U_i)_i$ un recouvrement qui trivialise $\mathcal{L}$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\mathcal{L}_{|U_i}\rightarrow\mathcal{O}_X{|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des $\phi_i$. On l'appelle le diviseur des zéros de $s$.\\
+Supposons maintenant $X$ lisse (donc normale) et projective munie d'un faisceau inversible $\mathcal{L}$ et $s$ une section globale non nulle. Soit $(U_i)_i$ un recouvrement qui trivialise $\mathcal{L}$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\mathcal{L}_{|U_i}\rightarrow\mathcal{O}_{X|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des $\phi_i$. On l'appelle le diviseur des zéros de $s$.\\
 Par exemple pour $\mathcal{L}=\mathcal{O}_X(D)$, où $D\in $ WDiv$(X)=$ CaDiv$(X)$, le diviseur des zéros de $s$ est div$(s)+D$, il est linéairement équivalent à $D$. Réciproquement on voit que tout diviseur effectif linéairement équivalent à $D$ est de la forme div$(s)+D$ pour une section globale $s$ de $\mathcal{O}_X(D)$. D'autre part deux sections globales $s, s'$ non nulles ont même diviseur des zéros si et seulement si elles sont colinéaires dans le $k$-ev $\Gamma(X, \mathcal{O}_X(D))$, en effet dans ce cas $s/s'\in \mathcal{O}_X^\times(X)=k^*$, car $k$ est algébriquement clos. Notons que $\Gamma(X, \mathcal{O}_X(D))$ est de dimension finie (\cite{Hartshorne} II.5.19), ainsi l'ensemble des diviseurs effectifs linéairement équivalent à $D$ est naturellement muni d'une structure d'espace projectif, cela amène la définition suivante:
 \begin{defn}[Système linéaire, point de base]
 Soit $X$ une variété lisse et projective, et $D$ un diviseur. L'ensemble des diviseurs effectifs linéairement équivalents à $D$ est le système linéaire complet définit par $D$, on le note $|D|$.\\ Un système linéaire est une partie de $|D|$ correspondant à un sous espace projectif.\\

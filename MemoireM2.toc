@@ -30,13 +30,14 @@
 \contentsline {subsubsection}{Quotient g\IeC {\'e}om\IeC {\'e}trique}{16}{section*.11}
 \contentsline {subsubsection}{Un exemple: La construction Proj}{16}{section*.12}
 \contentsline {section}{\numberline {1.6}Faisceaux quasi-coh\IeC {\'e}rents}{17}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}Faisceaux quasi-coh\IeC {\'e}rents sur une vari\IeC {\'e}t\IeC {\'e} affine}{17}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.1}Faisceaux quasi-coh\IeC {\'e}rents sur une vari\IeC {\'e}t\IeC {\'e}}{17}{subsection.1.6.1}
 \contentsline {subsection}{\numberline {1.6.2}Faisceaux quasi-coh\IeC {\'e}rents sur une vari\IeC {\'e}t\IeC {\'e} projective}{17}{subsection.1.6.2}
 \contentsline {section}{\numberline {1.7}Diviseurs}{17}{section.1.7}
 \contentsline {subsection}{\numberline {1.7.1}Diviseurs de Weil}{17}{subsection.1.7.1}
 \contentsline {subsection}{\numberline {1.7.2}Diviseurs de Cartier et groupe de Picard}{19}{subsection.1.7.2}
-\contentsline {subsection}{\numberline {1.7.3}Fibr\IeC {\'e}s en droites, $\mathbb {G}_m$-fibr\IeC {\'e}s principaux}{19}{subsection.1.7.3}
-\contentsline {subsection}{\numberline {1.7.4}L'espace projectif $\mathbb {P}_k^n$}{20}{subsection.1.7.4}
+\contentsline {subsection}{\numberline {1.7.3}Fibr\IeC {\'e}s en droites}{19}{subsection.1.7.3}
+\contentsline {subsection}{\numberline {1.7.4}$G$-linearisation d'un fibr\IeC {\'e} en droite}{20}{subsection.1.7.4}
+\contentsline {subsection}{\numberline {1.7.5}L'espace projectif $\mathbb {P}_k^n$}{20}{subsection.1.7.5}
 \contentsline {subsubsection}{Faisceaux inversibles sur $\mathbb {P}_k^n$}{20}{section*.13}
 \contentsline {subsubsection}{Morphismes vers l'espace projectif}{20}{section*.14}
 \contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux inversible tr\IeC {\`e}s amples}{21}{section*.15}
@@ -45,7 +46,5 @@
 \contentsline {subsection}{\numberline {1.8.2}Factorialit\IeC {\'e} de l'anneau des sections globales}{22}{subsection.1.8.2}
 \contentsline {chapter}{\numberline {2}Anneaux de Cox}{23}{chapter.2}
 \contentsline {section}{\numberline {2.1}Un exemple introductif}{23}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Le spectre relatif d'un faisceau d'alg\IeC {\`e}bres quasi-coh\IeC {\'e}rentes}{23}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Exemple d'une vari\IeC {\'e}t\IeC {\'e} projective}{23}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Groupe des classes sans torsion}{23}{section.2.2}
-\contentsline {section}{\numberline {2.3}Groupe des classes avec torsion}{23}{section.2.3}
+\contentsline {section}{\numberline {2.2}Groupe des classes sans torsion}{24}{section.2.2}
+\contentsline {section}{\numberline {2.3}Groupe des classes avec torsion}{24}{section.2.3}
