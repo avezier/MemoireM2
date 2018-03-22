@@ -47,4 +47,6 @@
 \contentsline {chapter}{\numberline {2}Anneaux de Cox}{24}{chapter.2}
 \contentsline {section}{\numberline {2.1}Un exemple introductif}{24}{section.2.1}
 \contentsline {section}{\numberline {2.2}Groupe des classes sans torsion}{25}{section.2.2}
-\contentsline {section}{\numberline {2.3}Groupe des classes avec torsion}{25}{section.2.3}
+\contentsline {subsection}{\numberline {2.2.1}D\IeC {\'e}finition de l'anneau de Cox}{25}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Le spectre relatif de $\mathcal {R}$}{25}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Groupe des classes avec torsion}{26}{section.2.3}

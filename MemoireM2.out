@@ -33,4 +33,6 @@
 \BOOKMARK [0][-]{chapter.2}{Anneaux de Cox}{}% 33
 \BOOKMARK [1][-]{section.2.1}{Un exemple introductif}{chapter.2}% 34
 \BOOKMARK [1][-]{section.2.2}{Groupe des classes sans torsion}{chapter.2}% 35
-\BOOKMARK [1][-]{section.2.3}{Groupe des classes avec torsion}{chapter.2}% 36
+\BOOKMARK [2][-]{subsection.2.2.1}{D\351finition de l'anneau de Cox}{section.2.2}% 36
+\BOOKMARK [2][-]{subsection.2.2.2}{Le spectre relatif de R}{section.2.2}% 37
+\BOOKMARK [1][-]{section.2.3}{Groupe des classes avec torsion}{chapter.2}% 38
