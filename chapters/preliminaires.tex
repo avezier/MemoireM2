@@ -122,6 +122,12 @@ Si un point $p\in X$ d'une variété se situe à l'intersection de deux composan
 
 On note que une variété irréductible $X$ est normale si et seulement si pour tout ouvert affine $U\subset X$, $\mathcal{O}_X(U)$ est normal au sens de la définition \ref{normalring}.
 
+\begin{prop}\label{codimesingnormal}
+Le lieu singulier d'une variété normale est un fermé de codimension $\geq 2$
+\end{prop}
+\begin{proof}
+
+\end{proof}
 
 \subsection{Quelques résultats sur les morphismes}
 \subsubsection{Généralités}
@@ -784,7 +790,7 @@ Ce sous-groupe est propre en général (cf \cite{Hartshorne} 6.11.3). En revanch
 \subsubsection{Faisceaux inversibles sur $\PP_k^n$}
 
 \subsubsection{Morphismes vers l'espace projectif}
-
+\label{morphismeproj}
 Soit $X$ une variété munie d'un morphisme $(f,f^\sharp):X\rightarrow \PP^n_k$, où $\PP^n_k=$Proj$k[x_0,...,x_n]$. On considère le faisceau tordu de Serre $\mathcal{O}(1)$ sur $\PP^n_k$. C'est un faisceau inversible engendré par les sections globales $x_0,...,x_n$. $f^*\mathcal{O}(1)$ est également inversible et on a un morphisme canonique de $\mathcal{O}_{\PP^n_k}$-module $\alpha:\mathcal{O}(1)\rightarrow f_*f^*\mathcal{O}(1)$ où la structure de $\mathcal{O}_{\PP^n_k}$-module sur $f_*f^*\mathcal{O}(1)$ est donnée par $\lambda.t=f^\sharp(\lambda)t$ pour tout ouvert $V\subset \PP^n_k$, $\lambda\in \mathcal{O}_{\PP^n_k}(V)$, $t\in f_*f^*\mathcal{O}(1)(V)$. On définit des sections globales $f^*(x_0):=s_0:=\alpha(\PP^n_k)(x_0),...,f^*(x_n):=s_n:=\alpha(\PP^n_k)(x_n)$ de $f^*\mathcal{O}(1)$ dont on voit facilement qu'elles engendrent $f^*\mathcal{O}(1)$.\\
 Considérons un faisceau inversible $\mathcal{L}$ sur une variété $Y$, une section globale $l$, et un morphisme $(g,g^\sharp):X\rightarrow Y$. On définit l'ouvert $$Y_l:=\lbrace y\in Y\mid \mathcal{O}_{Y,y}l_y=\mathcal{L}_y\rbrace=\lbrace y\in Y\mid l_y\notin m_y\mathcal{L}_y\rbrace$$
 Si $\mathcal{L}=\mathcal{O}_Y$ c'est tout simplement l'ouvert principal $Y_l$, et on a de plus $g^{-1}(Y_l)=X_{g^\sharp(l)}=X_{g^*(l)}$ car $g^*\mathcal{O}_Y=\mathcal{O}_X$ et $\alpha=g^\sharp$ dans ce cas. Revenant dans le cas général, on voit facilement que $g^*\mathcal{L}$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\mathcal{L}$, on voit d'après ce qui précède que $g^{-1}(Y_l)=X_{g^*(l)}$. D'autre part, si $l_1,...,l_n$ sont des sections globales qui engendrent $\mathcal{L}$, on voit que $(Y_{l_i})$ est un recouvrement de $Y$ qui trivialise $\mathcal{L}$. En effet, sur chaque $Y_{l_i}$, on a un isomorphisme $\mathcal{O}_{Y|Y_l}\rightarrow \mathcal{L}_{Y|Y_l}$, $\lambda \mapsto \lambda l_i$, et par hypothèse, l'intersection des complémentaires des $Y_{l_i}$ est vide. Enfin, on note sans ambiguïté $l_j/l_i$ l'unique élément de $\mathcal{O}_{Y|Y_l}(Y_l)$ tel que $l_j/l_i.l_i=l_j$ par l'isomorphisme précédent.\\
