@@ -436,9 +436,7 @@ Soit $A$ une algèbre affine $K$-graduée munie de l'action de $H:=\spec k[K]$ s
 \end{enumerate}
 \end{defn}
 
-
-\label{staborbitegroup}
-\begin{prop}
+\begin{prop}\label{staborbitegroup}
 Soit $A$ une algèbre affine $K$-graduée, $X:=\spec A$ muni de l'action de $H:=\spec k[K]$, et $x\in X$. On a le diagramme commutatif suivant, dont les deux lignes sont exactes:
 	\begin{center}
 		\begin{tikzcd}
@@ -609,7 +607,7 @@ Soit $G$ un groupe algébrique et $H$ un sous-groupe fermé. Dans la catégorie 
 \end{ex}
 
 \begin{ex}
-Un bon quotient $(X//G, \pi)$ est un quotient géométrique si les fibres de $\pi$ sont exactement les orbites. En effet, d'après ce qui précède, il reste à vérifier que $X//G$ est muni de la topologie quotient. Soit un ouvert de X de la forme $\pi^{-1}(A)$ où $A$ est une partie de $X//G$. En tenant compte de \ref{goodquotientthm} (iii) et de la surjectivité de $\pi$ on a: $\pi(X\setminus \pi^{-1}(A))=Y\setminus A$ qui est fermé, donc $A$ est ouvert.
+Un bon quotient $(X//G, \pi)$ est un quotient géométrique si les fibres de $\pi$ sont exactement les orbites. En effet, d'après ce qui précède, il reste alors à vérifier que $X//G$ est muni de la topologie quotient. Soit un ouvert de X de la forme $\pi^{-1}(A)$ où $A$ est une partie de $X//G$. En tenant compte de \ref{goodquotientthm} (iii) et de la surjectivité de $\pi$ on a: $\pi(X\setminus \pi^{-1}(A))=Y\setminus A$ qui est fermé, donc $A$ est ouvert.
 \end{ex}
 
 \subsubsection{Un exemple: La construction Proj}
@@ -664,16 +662,12 @@ Soit $X$ une variété. Un faisceau inversible $\mathcal{L}$ sur $X$ est un $\ma
 
 On peut toujours trivialiser deux faisceaux inversibles sur un même recouvrement ouvert de $X$. On voit ainsi que le produit tensoriel sur $\mathcal{O}_X$ de faisceaux inversibles est inversible. Blabla dual, groupe... Les classes d'isomorphie de faisceaux inversible sur $X$ munies du produit tensoriel forment un groupe appelé groupe de Picard de $X$, noté Pic$(X)$. 
 
-\label{expicaff}
-
-\begin{ex}
+\begin{ex}\label{expicaff}
 Si $X=\spec (A)$ est affine et irréductible, se donner un faisceau inversible sur $X$ revient (à isomorphisme près) à se donner un sous $A$-module projectif de $k(X)$, c'est à dire un $I$ idéal fractionnaire de $k[X]$ qui est inversible, son inverse est alors $I^{-1}:=(A:I)$. Les idéaux fractionnaires inversibles donnant le faisceau inversible trivial sont les les idéaux fractionnaires principaux. Le groupe de Picard de $X$ est ainsi isomorphe au groupe des idéaux fractionnaires inversibles modulo les idéaux fractionnaires principaux. Les idéaux de $A$ qui sont inversibles forment une partie génératrice de ce groupe. \\
 Si de plus $A$ est localement factoriel, par exemple si $X$ est lisse, les idéaux inversibles sont les idéaux de hauteur 1 pure, c'est à dire tels que ses idéaux premiers associés sont tous de hauteur 1. De plus tout idéal inversible s'écrit de manière unique comme produit de puissances d'idéaux premiers de hauteur 1. Pic(X) est donc le quotient du groupe libre sur les idéaux premiers de hauteur 1 par les idéaux fractionnaires principaux.
 \end{ex}
 
-\label{linebundle}
-
-\begin{defn}
+\begin{defn}\label{linebundle}
 Soit $X$ une variété. Un fibré en droite sur $X$ est une variété $L$ munie d'un morphisme $\pi:L\rightarrow X$ tel que $X$ admet un recouvrement ouvert $(U_i)_{i\in I}$ satisfaisant:
 
 \begin{enumerate}
@@ -737,9 +731,7 @@ C'est une conséquence de \ref{factonormal} et \ref{UFDPID}. Voir \cite{Hartshor
 Cl$(\mathbb{A} ^1_k)=0$
 \end{cor}
 
-\label{divexactseq}
-
-\begin{thm}
+\begin{thm}\label{divexactseq}
 Soit $X$ une variété normale et irréductible et $Z$ une sous-variété fermée propre. On pose $U=X\setminus Z$. Alors:
 \begin{enumerate}
 \item Cl$(X)\rightarrow$ Cl$(U)$ défini par $\sum_i n_iD_i\mapsto \sum_i n_i(D_i\cap U)$, avec $D_i\cap U = 0$ si $D_i\cap U=\emptyset $, est un morphisme de groupe surjectif.
@@ -777,8 +769,7 @@ Un diviseur de Cartier $(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i$, 
 Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang 1, c'est à dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)^\times$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceau inversible de $k(X)^\times$. Par cette correspondance, deux diviseurs sont linéairement équivalents si et seulement si les faisceaux inversibles sont isomorphes. On a ainsi définit une application injective CaCl$(X)\rightarrow$ Pic$(X)$ dont on voit facilement que c'est un morphisme de groupe. Comme $X$ est supposé irréductible, c'est un isomorphisme car tout faisceau inversible est isomorphe à un sous-faisceau inversible de $k(X)^\times$. En résumé on a le résultat suivant:
 
 
-\label{isopic}
-\begin{prop}
+\begin{prop}\label{isopic}
 Soit $X$ une variété irréductible. L'application $D\mapsto \mathcal{O}_X(D)$ définit un isomorphisme de groupe CaCl$(X)\simeq $ Pic$(X)$.
 \end{prop}
 
@@ -825,8 +816,7 @@ Autrement dit dans ce langage, se donner un morphisme $X\rightarrow \PP^n_k$ est
 
 La proposition suivante montre que l'on peut caractériser les sections globales du faisceau structural de $X$ en terme de diviseurs.
 
-\label{caracfaisceaustructdiv}
-\begin{prop}
+\begin{prop}\label{caracfaisceaustructdiv}
 Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors 
 \begin{enumerate}
 \item div$(f)\geq 0\iff f \in\Oo_X(X)$
@@ -841,8 +831,7 @@ Pour la deuxième assertion, on remarque que div$(f)=0\iff$div$(f)\geq 0$ et div
 Plus généralement, on définit pour chaque diviseur $D$ un $\Oo_X$-module $\Oo_X(D)$ dont les sections sur un ouvert $U\subset X$ sont définies par $$\Gamma(U,\Oo_X(D)):=\lbrace f\in k(X)^* \mid (\textrm{div}(f)+D)_{|U}\geq 0\rbrace\cup \lbrace 0 \rbrace$$
 On vérifie, grâce aux propriétés des valuations $v_D$, qu'il s'agit d'un sous $\Oo_X(U)$-module de $k(X)$, autrement dit un idéal fractionnaire de $\Oo_X(U)$, pour tout ouvert $U$. C'est donc un sous $\Oo_X$-module de la  $\Oo_X$-algèbre $k(X)$. Dans le cas où $X$ est affine on a une description explicite des sections globales:
 
-\label{divaff}
-\begin{prop}
+\begin{prop}\label{divaff}
 Soit $X$ une variété affine normale et irréductible, $A:=k[X]$. 
 \begin{enumerate}
 \item Soit un diviseur de Weil $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$, on a $\Gamma(X,\Oo_X(D))=\bigcap_{ht(p)=1}p^{-a_p}A_p$.

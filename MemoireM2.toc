@@ -46,8 +46,8 @@
 \contentsline {subsection}{\numberline {1.8.2}Factorialit\IeC {\'e} de l'anneau des sections globales}{23}{subsection.1.8.2}
 \contentsline {chapter}{\numberline {2}Anneaux de Cox}{24}{chapter.2}
 \contentsline {section}{\numberline {2.1}Un exemple introductif}{24}{section.2.1}
-\contentsline {section}{\numberline {2.2}Groupe des classes sans torsion}{25}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}D\IeC {\'e}finition de l'anneau de Cox}{25}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.2}Cas d'un groupe des classes sans torsion}{25}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Faisceau et anneau de Cox}{26}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Le spectre relatif de $\mathcal {R}$}{26}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{28}{subsection.2.2.3}
 \contentsline {section}{\numberline {2.3}Groupe des classes avec torsion}{29}{section.2.3}

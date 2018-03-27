@@ -31,16 +31,15 @@
 % spacings
 \renewcommand{\baselinestretch}{1}
 
-\newtheorem{thm}{Th\'{e}or\`{e}me}[section]
-\newtheorem{prop}{Proposition}[section]
-\newtheorem{cor}{Corollaire}[section]
-\newtheorem{alg}{Procedure}
-\newtheorem{lem}{Lemme}[section]
+\newtheorem{thm}{Th\'{e}or\`{e}me}[subsection]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollaire}
+\newtheorem{lem}[thm]{Lemme}
 \theoremstyle{definition}
-\newtheorem{defn}{D\'{e}finition}[section]
-\newtheorem{ex}{Exemple}[section]
-\newtheorem{cons}{Construction}[section]
-\newtheorem{rem}{Remarque}[section]
+\newtheorem{defn}[thm]{D\'{e}finition}
+\newtheorem{ex}[thm]{Exemple}
+\newtheorem{cons}[thm]{Construction}
+\newtheorem{rem}[thm]{Remarque}
 
 
 \theoremstyle{remark}
@@ -180,83 +179,12 @@
 \DeclareMathOperator{\rg}{rg}
 \DeclareMathOperator{\interop}{int}
 
-% regularity
-\newcommand{\Calpha}{\mathrm{C}^\al}
-\newcommand{\Cbeta}{\mathrm{C}^\be}
-\newcommand{\Cal}{\text{C}^\al}
-\newcommand{\Cdeux}{\text{C}^{2}}
-\newcommand{\Calt}[1]{\text{C}^{#1}}
-\newcommand{\Cder}[1]{\mathscr{C}^{#1}}
-% Lp spaces
-\newcommand{\lun}{\ell^1}
-\newcommand{\ldeux}{\ell^2}
-\newcommand{\linf}{\ell^\infty}
-\newcommand{\ldeuxj}{{\ldeux_j}}
-\newcommand{\Lun}{\text{\upshape L}^1}
-\newcommand{\Ldeux}{\text{\upshape L}^2}
-\newcommand{\Linf}{\text{\upshape L}^\infty}
-\newcommand{\lzero}{\ell^0}
-\newcommand{\lp}{\ell^p}
-% circle
-\newcommand{\Sun}{\text{S}^1}
-% little space after forall
-\newcommand{\foralls}{\forall \,}
-%% for derivatives
-\renewcommand{\d}{\ins{d}}
 %% Use french comparaison operator
 \renewcommand{\leq}{\leqslant}
 \renewcommand{\geq}{\geqslant}
 
 
 %%%%%%%%%%%%%%% MATHS CONSTRUCTS %%%%%%%%%%%%%%%
-
-%% over-symbols
-\newcommand{\ol}[1]{\overline{#1}}
-\newcommand{\wh}[1]{\widehat{#1}}
-\newcommand{\whwh}[1]{\hat{\hat{#1}}}
-\newcommand{\wt}[1]{\widetilde{#1}}
-%% partial derivatives
-\newcommand{\pd}[2]{ \frac{ \partial #1}{\partial #2} }
-\newcommand{\pdd}[2]{ \frac{ \partial^2 #1}{\partial #2^2} }
-%% nice epsilon
-\renewcommand{\epsilon}{\varepsilon}
-%% Pour avoir un joli i pour les complexes
-\renewcommand{\imath}{\mathrm{i}}
-\newcommand{\interior}[1]{\ensuremath{\overset{\circ}{#1}}}
-
-%% Legendre symbol
-\newcommand{\legsymb}[2]{ \genfrac{(}{)}{}{}{#1}{#2} }
-%% exposant pour les ordinaux
-\newcommand{\ordin}[2]{ ${#1}^{ \text{#2} }$ }
-%% Dot product and cross product
-% \newcommand{\dotp}[2]{ \left\langle #1,\,#2 \right\rangle }
-\newcommand{\dotp}[2]{\langle #1,\,#2\rangle}
-\newcommand{\dotps}[2]{\langle #1,\,#2\rangle}
-\newcommand{\crossp}[2]{ #1 \hat #2 }
-\newcommand{\seg}[2]{\llbracket #1,\,#2 \rrbracket}
-\newcommand{\norm}[1]{|\!| #1 |\!|}
-% \newcommand{\norm}[1]{\left\| #1 \right\|} 
-\newcommand{\normb}[1]{\Big|\!\Big| #1 \Big |\!\Big|}
-\newcommand{\normB}[1]{\left|\!\left| #1 \right|\!\right|}
-\DeclareMathOperator{\diverg}{div}
-\newcommand{\normT}[1]{\norm{#1}_{\text{T}}}
-\newcommand{\normu}[1]{\norm{#1}_{1}}
-\newcommand{\normi}[1]{\norm{#1}_{\infty}}
-\newcommand{\normd}[1]{\norm{#1}_{2}}
-\newcommand{\normz}[1]{\norm{#1}_{0}}
-\newcommand{\abs}[1]{\left\lvert#1\right\rvert} % modified by Vincent
-\newcommand{\absb}[1]{\Big| #1 \Big|}
-
-
-%% Convex analysis
-\DeclareMathOperator{\sat}{sat} % saturation points
-\DeclareMathOperator{\Prox}{Prox}
-\DeclareMathOperator{\rProx}{rProx}
-\DeclareMathOperator{\Proj}{Proj}
-\DeclareMathOperator{\dom}{dom} % domain of a function.
-\DeclareMathOperator{\inter}{int} % relating interio.
-\DeclareMathOperator{\relint}{relint} % relating interio.
-\DeclareMathOperator{\epi}{epi} % epigraph
 
 %% Function definition
 \newcommand{\func}[4]{ {\left\{  \begin{array}{ccc} #1 & \longrightarrow & #2 \\ #3 & \longmapsto & #4 \end{array}  \right.} }
@@ -320,44 +248,3 @@
 \newcommand{\qqobjqq}[1]{\quad \text{#1} \quad}
         
        
-
-%%%%%%%%%  specifics to this paper
-%\usepackage{subfig}
-
-
-\def\ones{\mathds{1}}
-\def\zeros{\textbf{0}}
-
-\newcommand{\Corr}{C}
-
-
-% Draft
-\newcommand{\todo}[1]{\textbf{\textcolor{red}{[ToDo: #1]}}}
-\newcommand{\blue}[1]{\textcolor{blue}{ #1}}
-
-% Set of points 
-\newcommand{\Z}{Z}
-
-
-% wrapper figure
-\newcommand{\wrapf}[2]{%
-\begin{wrapfigure}{r}{.25\linewidth}
-  \centering
-  \includegraphics[width=.9\linewidth]{#1}
-  \caption{#2}
-\end{wrapfigure}%
-}
-
-% figure
-\newcommand{\myfigure}[3]{
-    \begin{figure}[ht]
-    \begin{center}
-        #1                          % usual include graphics
-    \end{center}
-    \caption{#2}       % caption
-    \label{#3}          % label
-    \end{figure}
-}
-
-\newcommand{\image}[3]{\includegraphics[width=#2\linewidth]{#1/#3}}
-\newcommand{\myrot}[1]{\rotatebox{90}{\quad\;#1}\hspace{-2mm}}
