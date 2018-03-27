@@ -5,10 +5,6 @@ auteur.
 \newblock titre.
 \newblock {\em journal}, 2015.
 
-\bibitem{CoxToric}
-D.Cox.
-\newblock Toric varieties, 2009.
-
 \bibitem{MumfordRedBook}
 D.Mumford.
 \newblock {\em The red book of varieties and schemes}.
@@ -35,17 +31,17 @@ I.Arzhantsev.
 \newblock \url{http://halgebra.math.msu.su/staff/arzhan/driver.pdf}.
 \newblock Accessed: 2018-23-01.
 
-\bibitem{AGMilne}
-JS.Milne.
-\newblock Algebraic geometry.
-\newblock \url{http://www.jmilne.org/math/CourseNotes/AG.pdf}.
-\newblock Accessed: 2018-23-01.
-
 \bibitem{LAGBrion}
 M.Brion.
 \newblock Introduction to actions of algebraic groups.
 \newblock \url{https://www-fourier.ujf-grenoble.fr/~mbrion/notes_luminy.pdf}.
 \newblock Accessed: 2018-23-01.
+
+\bibitem{LinearizationGBrion}
+M.Brion.
+\newblock Linearization of algebraic group actions.
+\newblock \url{https://www-fourier.ujf-grenoble.fr/~mbrion/lin_rev.pdf}.
+\newblock Accessed: 2018-18-03.
 
 \bibitem{LAGSpringer}
 T.A.Springer.

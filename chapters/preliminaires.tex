@@ -2,9 +2,6 @@
 
 \section{Résultats d'algèbre commutative}
 
-\subsection{Lemme de normalisation de Noether et applications}
-\subsection{Décomposition primaire des modules noetheriens}
-
 \subsection{Extensions entières d'anneaux}
 
 \begin{defn}\label{normalring}
@@ -34,7 +31,18 @@ Alors, $A$ est factoriel $\iff$ Tout idéal premier de hauteur 1 est principal.
 
 \subsection{Anneaux de valuation discrète}
 
-
+\begin{thm}\label{ideauxinversibles}
+Soit $A$ un anneau intègre et $I$ un idéal fractionnaire de $A$. Les assertions suivantes sont équivalentes:
+\begin{enumerate}
+\item $I$ est inversible
+\item $I$ est un $A$-module projectif
+\item $I$ est de type fini, et pour tout idéal maximal $m$ de $A$, l'idéal fractionnaire $I_m$ de $A_m$ est principal.
+\end{enumerate}
+Alors, $A$ est factoriel $\iff$ Tout idéal premier de hauteur 1 est principal.
+\end{thm}
+\begin{proof}
+Voir \cite{Matsumura} 11.3
+\end{proof}
 
 \section{Algèbres graduées}
 
@@ -583,7 +591,7 @@ Soit $I$ (resp. $I'$) l'idéal de $Z$ (resp. $Z'$) dans $k[X]$. L'idéal de $Z\c
 \end{enumerate}
 \end{proof}
 
-On remarque que les propriétés du théorème précédent s'étendent automatiquement au cas d'une $G$-variété $X$ si le théorème est vérifié localement sur un recouvrement affine d'un candidat $Y$ pour le quotient $X//G$. De ce constat découle la notion de bon quotient.
+On remarque que les propriétés du théorème précédent s'étendent automatiquement au cas d'une $G$-variété $X$ si le théorème est vérifié localement sur un recouvrement affine d'un candidat $(Y,\pi)$ pour le quotient $X//G$. De ce constat découle la notion de bon quotient.
 
 \begin{defn}[Bon quotient]
 Soit $G$ un groupe réductif et $X$ une $G$-variété. Une paire $(Y, \pi)$ où $Y$ est une variété et $\pi$ un morphisme $X\rightarrow Y$ est un bon quotient si elle vérifie:\\
@@ -645,16 +653,13 @@ On note $A_{(f)}:=(A_f)_0$ en remarquant qu'il s'agit de l'algèbre des invarian
 Les flèches horizontales du diagramme de droite sont des immersions ouvertes, en effet on a $U_{f_if_j}\simeq (U_{f_i})_{f_j}$. Les conditions de la construction \ref{gluevar} sont satisfaites, on peut former une prevariété Proj($A$) par recollement des $U_{f_i}$ le long de ces immersions. De plus, les $(U_{f_i},\pi_i)$ sont des quotients géométriques et le diagramme exprime que l'on a les conditions de recollement sur les intersections qui font de Proj($A$) le quotient géométrique global $W//k^*$.\\
 Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-stables de $W$, c'est à dire aux idéaux radicaux homogènes qui ne contiennent pas l'idéal inconvenant. On appelle ces fermés des variétés projectives. La topologie quotient sur Proj($A$) que l'on vient de définir est aussi appelé la topologie de Zariski.
 
-\textcolor{red}{Pourquoi c'est séparé? => Cf Stacks 8.8 construction of schemes}
-\textcolor{red}{Est ce que c'est irréductible?}
-\textcolor{red}{sections globales (cf hartshorne chap 1 si A0=k et A engendré par A1)? c'est complet?}
-
-\textcolor{red}{bijection avec les fermées qui sont des cones}
-\textcolor{red}{Action de $PGL$ sur $(P^1)^4$. Quotient = $P1$ avec birapport?}
+\textcolor{red}{A ajouter?:}\\
+\textcolor{red}{ Séparé => Cf Stacks 8.8 construction of schemes}\\
+\textcolor{red}{irréductible = Cf critére avec recovrement}\\
+\textcolor{red}{sections globales (cf hartshorne chap 1 si A0=k et A engendré par A1)? c'est propre?}\\
+\textcolor{red}{Fonctorialité de Proj}\\
+\textcolor{red}{Action de $PGL$ sur $(P^1)^4$. Quotient = $P1$ avec birapport?}\\
 \textcolor{red}{Quid de l 'exemple des matrice diagonalisables?}
-\textcolor{red}{Ajouter le truc sur les morphismes qliu p53 et définir une variété projective}
-
-
 
 \section{Faisceaux quasi-cohérents}
 
@@ -866,5 +871,3 @@ Soit $X$ une variété normale et irréductible. Le faisceau d'algèbres divisor
 On considère la droite projective $\PP^1$, $D=\lbrace\infty\rbrace$ et $K=\ZZ D$. Cherchons la forme d'une section $f\in S_{nD}(\PP^1)$. On se place sur la carte affine $U_0=\PP^1\setminus \lbrace \infty\rbrace$ associée au repère projectif $(\infty, 0, 1)=(e_0,e_1,e_0+e_1)$, on note $z$ la coordonnée associée. Par hypothèse, $f$ est régulière sur $U_0$, c'est donc un polynôme en $z$. On fait agir l'homographie $z\mapsto w=1/z$  pour se placer sur la carte $U_1=\PP^1\setminus \lbrace e_1 \rbrace$ associée au repère $(0, \infty,1)$. Sur cette carte, la fonction qui coïncide avec $f$ sur $U_0\cap U_1$ est $g(w)=f(1/w)$. Or si on écrit $f(z)=z^kh(z)$ avec $z\nmid h(z)$, on obtient $g(w)=w^{-k-\textrm{deg}(h)}h(w)$. Comme on doit avoir $k+\textrm{deg}(h)\leq n$, on obtient que $f$ est un polynôme de degré $\leq n$.\\
 Ainsi on voit que l'application $\phi_n:k[t_0,t_1]_n\rightarrow S_{nD}(\PP^1), f\mapsto f(1,z)$ est un isomorphisme de $k$-ev. De plus, on a facilement $\phi_n\phi_m=\phi_{n+m}$. Finalement, $(\phi, \widetilde{\phi})$ avec $\phi: k[t_0,t_n]\rightarrow S(\PP^1), f\mapsto f(1,z)$ et $\widetilde{\phi}:\ZZ\rightarrow K, n\mapsto nD$ est un isomorphisme d'algèbres graduées.
 \end{ex}
-
-\subsection{Factorialité de l'anneau des sections globales}
