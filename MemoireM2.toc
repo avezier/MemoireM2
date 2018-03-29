@@ -39,11 +39,11 @@
 \contentsline {subsection}{\numberline {1.7.4}L'espace projectif $\mathbb {P}_k^n$}{23}{subsection.1.7.4}
 \contentsline {subsubsection}{Faisceaux inversibles sur $\mathbb {P}_k^n$}{23}{section*.13}
 \contentsline {subsubsection}{Morphismes vers l'espace projectif}{23}{section*.14}
-\contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux inversible tr\IeC {\`e}s amples}{23}{section*.15}
+\contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux inversible tr\IeC {\`e}s amples}{24}{section*.15}
 \contentsline {chapter}{\numberline {2}Anneaux de Cox}{25}{chapter.2}
 \contentsline {section}{\numberline {2.1}Un exemple introductif}{25}{section.2.1}
 \contentsline {section}{\numberline {2.2}Cas d'un groupe des classes sans torsion}{26}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Faisceau et anneau de Cox}{26}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Faisceau et anneau de Cox}{27}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Le spectre relatif de $\mathcal {R}$}{27}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{29}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{30}{subsection.2.2.3}
 \contentsline {section}{\numberline {2.3}Groupe des classes avec torsion}{30}{section.2.3}

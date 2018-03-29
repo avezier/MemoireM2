@@ -732,10 +732,10 @@ On introduit maintenant pour chaque diviseur $D$ une valuation sur $k(X)$ donnan
 Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors $v_D(f)=0$ sauf pour un nombre fini de diviseurs premiers $D$.
 \end{prop}
 \begin{proof}
-Soit $f=g/h\in k(X)^*$, où l'on peut supposer $X$ affine. Comme $v_D(f)=v_D(g)-v_D(h)$, on peut supposer $f\in k[X]$. Soit $D$ une diviseur et $p$ son idéal. Si $f\in k[X]_p^\times$ alors $v_D(f)=0$. Sinon, $f\in p$ et donc $D \subset \mathcal{V}_X(f)$. Or, d'après le théorème \ref{dimsousvariete}, les composantes irréductibles $Z_i$ de $\mathcal{V}_X(f)$ sont des diviseurs premiers. Ainsi $v_D(f)=0$ à moins que $D$ ne soit l'un des $Z_i$.
+Soit $f=g/h\in k(X)^*$, où l'on peut supposer $X$ affine. Comme $v_D(f)=v_D(g)-v_D(h)$, on peut supposer $f\in k[X]$. Soit $D$ une diviseur premier et $p$ son point générique. Si $f\in k[X]_p^\times$ alors $v_D(f)=0$. Sinon, $f\in p$ et donc $D \subset \mathcal{V}_X(f)$. Or, d'après le théorème \ref{dimsousvariete}, les composantes irréductibles $Z_i$ de $\mathcal{V}_X(f)$ sont des diviseurs premiers. Ainsi $v_D(f)=0$ à moins que $D$ ne soit l'un des $Z_i$.
 \end{proof}
 
-Ainsi l'application $k(X)^*\rightarrow $ WDiv$(X),\, f\mapsto $ div$(f):=\sum_D v_D(f)D$ définit un morphisme de groupe. Son image est le \textit{groupe des diviseurs principaux} noté PDiv$(X)$. La relation modulo PDiv$(X)$ s'appelle \textit{l'équivalence linéaire}, et le groupe quotient Cl$(X)$ est le \textit{groupe des classes de diviseurs}.\\
+Ainsi l'application $k(X)^*\rightarrow $ WDiv$(X),\, f\mapsto $ div$(f):=\sum_D v_D(f)D$ définit un morphisme de groupes. Son image est le \textit{groupe des diviseurs principaux} noté PDiv$(X)$. La relation modulo PDiv$(X)$ s'appelle \textit{l'équivalence linéaire}, et le groupe quotient Cl$(X)$ est le \textit{groupe des classes de diviseurs}.\\
 Cl$(X)$ est un invariant en général difficile à calculer. Ci-dessous on liste quelques outils et exemples.
 
 
@@ -747,11 +747,11 @@ C'est une conséquence de \ref{factonormal} et \ref{UFDPID}. Voir \cite{Hartshor
 \end{proof}
 
 \begin{cor}
-Cl$(\mathbb{A} ^n_k)=0$
+Cl$(\mathbb{A} ^n_k)=0 pour n\geq 1$
 \end{cor}
 
 \begin{thm}\label{divexactseq}
-Soit $X$ une variété normale et irréductible et $Z$ une sous-variété fermée propre. On pose $U=X\setminus Z$. Alors:
+Soit $X$ une variété normale et irréductible et $Z$ une sous-variété fermée propre. On pose $U:=X\setminus Z$. Alors:
 \begin{enumerate}
 \item Cl$(X)\rightarrow$ Cl$(U)$ défini par $\sum_i n_iD_i\mapsto \sum_i n_i(D_i\cap U)$, avec $D_i\cap U = 0$ si $D_i\cap U=\emptyset $, est un morphisme de groupe surjectif.
 \item Si codim$(Z,X)\geq 2$, then Cl$(X)\rightarrow$Cl$(U)$ est un isomorphisme.
@@ -760,7 +760,7 @@ Soit $X$ une variété normale et irréductible et $Z$ une sous-variété fermé
 \end{thm}
 \begin{proof}
 \begin{enumerate}
-\item Si $D\cap U\neq \emptyset$ alors dim$(X)$=dim$(U)$ et dim$(D)$=dim$(D\cap U)$ car ce sont des ouverts de variétés irréductibles donc la dimension est préservée. Ainsi cela définit une application WDiv$(X)\rightarrow$ WDiv$(U)$ qui est un morphisme par construction. De plus, comme un diviseur principal est envoyé sur un diviseur principal, on a bien le morphisme attendu. Il est surjectif car pour $D\in$ WDiv$(U)$, on a $D=\overline{D}\cap U$.
+\item Si $D\cap U\neq \emptyset$ alors dim$(X)$=dim$(U)$ et dim$(D)$=dim$(D\cap U)$ car ce sont des ouverts de variétés irréductibles donc la dimension est préservée. Ainsi cela définit une application WDiv$(X)\rightarrow$ WDiv$(U)$ qui est un morphisme par construction. De plus, comme un diviseur principal est envoyé sur un diviseur principal, on a bien le morphisme attendu. Il est surjectif car pour tout $D\in$ WDiv$(U)$ premier, on a $D=\overline{D}\cap U$.
 \item Dans ce cas on ne peut avoir $D\subset Z$ cause de la dimension donc $D\cap U\neq \emptyset$. Ainsi, le noyau du morphisme WDiv$(X)\rightarrow$ WDiv$(U)$ est exactement PDiv$(X)$ d'où l'isomorphisme.
 \item Le noyau de $.\cap U$ est exactement l'ensemble des $\pi(D)$ où $D$ est un diviseur dont le support est contenu dans $X\setminus U=Z$, d'où le résultat.
 \end{enumerate}
@@ -824,18 +824,23 @@ On considère la droite projective $\PP^1$, $D=\lbrace\infty\rbrace$ et $K=\ZZ D
 Ainsi on voit que l'application $\phi_n:k[t_0,t_1]_n\rightarrow S_{nD}(\PP^1), f\mapsto f(1,z)$ est un isomorphisme de $k$-ev. De plus, on a facilement $\phi_n\phi_m=\phi_{n+m}$. Finalement, $(\phi, \widetilde{\phi})$ avec $\phi: k[t_0,t_n]\rightarrow S(\PP^1), f\mapsto f(1,z)$ et $\widetilde{\phi}:\ZZ\rightarrow K, n\mapsto nD$ est un isomorphisme d'algèbres graduées.
 \end{ex}
 
-
-\begin{prop}
-Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors $\Oo_X(D)$ est un $\Oo_X$-module cohérent. En particulier, le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est une $\Oo_X$-algèbre quasi-cohérente.
+\begin{prop}\label{somorphismcodim2}
+Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors pour tous ouverts $V\subset U\subset X$ tels que $U\setminus V$ soit de codimension $\geq 2$ dans $U$, on a $\Oo_X(D)_{|V}\simeq \Oo_X(D)_{|U}$.
 \end{prop}
 \begin{proof}
-Si $D$ est localement principal c'est immédiat car alors le module est inversible. Mais on peut toujours le supposer, voir \ref{preimagecodim2} qui s'applique dans ce cas et \ref{extregularnormal}.
+\end{proof}
+
+\begin{cor}
+Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors $\Oo_X(D)$ est un $\Oo_X$-module cohérent. En particulier, le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est une $\Oo_X$-algèbre quasi-cohérente.
+\end{cor}
+\begin{proof}
+Si $D$ est localement principal c'est immédiat car alors le module est inversible. Mais on peut toujours le supposer d'après la proposition précédente et \ref{codimesingnormal}.
 \end{proof}
 
 
 \subsection{Diviseurs de Cartier et groupe de Picard}
 
-Sur des variétés plus générales, par exemple avec des singularités, les anneaux locaux associés aux diviseurs de Weil ne sont plus en général des DVR. On a alors des difficultés pour définir par exemple le diviseur d'une fonction rationnelle. On a néanmoins la notion générale de diviseur de Cartier, qui dans le cadre des variétés normales irréductibles correspondra aux diviseur de Weil "localement principaux".
+Sur des variétés plus générales, par exemple avec des singularités, les anneaux locaux associés aux diviseurs premiers ne sont plus en général des DVR. On a alors des difficultés pour définir par exemple le diviseur d'une fonction rationnelle. On a néanmoins la notion générale de diviseur de Cartier, qui dans le cadre des variétés normales irréductibles correspondra aux diviseur de Weil "localement principaux".
 
 \begin{defn}[Diviseur de Cartier]
 Soit $X$ une variété irréductible. Un diviseur de Cartier sur $X$ est une section globale du faisceau $k(X)^\times/\mathcal{O}_X^\times$. Ainsi un diviseur de Cartier est la donnée d'une famille $(U_i, f_i)_{i\in I}$ telle que pour tout $i$, $U_i$ est un ouvert de $X$, $(U_i)_{i\in I}$ est un recouvrement de $X$, $f_i\in k(X)^\times$, et pour tout $i,j \in I$, $f_if_j^{-1}\in \mathcal{O}_X^\times(U_i\cap U_j)$.\\
@@ -865,7 +870,7 @@ Soit $X$ une variété normale irréductible, $D,E\in\wdiv X$ avec $E$ de Cartie
 Il suffit d'effectuer le calcul localement sur des ouverts qui trivialisent $\Oo_X(D+E)$. On obtient ainsi des isomorphismes qui se recollent.
 \end{proof}
 
-Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée section canonique et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_i$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{X|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des $\phi_i$, et donc de $\Ll$ à isomorphisme près. On l'appelle le diviseur des zéros de $s$ et on le note $\divi_D(s)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
+Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée section canonique et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{X|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des $\phi_i$, et donc de $\Ll$ à isomorphisme près. On l'appelle le diviseur des zéros de $s$ et on le note $\divi_D(s)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
 
 $$
 \left\{
@@ -891,12 +896,13 @@ $$
 \subsubsection{Morphismes vers l'espace projectif}
 \label{morphismeproj}
 Soit $X$ une variété munie d'un morphisme $(f,f^\sharp):X\rightarrow \PP^n_k$, où $\PP^n_k=$Proj$k[x_0,...,x_n]$. On considère le faisceau tordu de Serre $\Oo(1)$ sur $\PP^n_k$. C'est un faisceau inversible engendré par les sections globales $x_0,...,x_n$. $f^*\Oo(1)$ est également inversible et on a un morphisme canonique de $\Oo_{\PP^n_k}$-module $\alpha:\Oo(1)\rightarrow f_*f^*\Oo(1)$ où la structure de $\Oo_{\PP^n_k}$-module sur $f_*f^*\Oo(1)$ est donnée par $\lambda.t=f^\sharp(\lambda)t$ pour tout ouvert $V\subset \PP^n_k$, $\lambda\in \Oo_{\PP^n_k}(V)$, $t\in f_*f^*\Oo(1)(V)$. On définit des sections globales $f^*(x_0):=s_0:=\alpha(\PP^n_k)(x_0),...,f^*(x_n):=s_n:=\alpha(\PP^n_k)(x_n)$ de $f^*\Oo(1)$ dont on voit facilement qu'elles engendrent $f^*\Oo(1)$.\\
-Considérons un faisceau inversible $\Ll$ sur une variété $Y$, une section globale $l$, et un morphisme $(g,g^\sharp):X\rightarrow Y$. On définit l'ouvert $$Y_l:=\lbrace y\in Y\mid \Oo_{Y,y}l_y=\Ll_y\rbrace=\lbrace y\in Y\mid l_y\notin m_y\Ll_y\rbrace$$
-Si $\Ll=\Oo_Y$ c'est tout simplement l'ouvert principal $Y_l$, et on a de plus $g^{-1}(Y_l)=X_{g^\sharp(l)}=X_{g^*(l)}$ car $g^*\Oo_Y=\Oo_X$ et $\alpha=g^\sharp$ dans ce cas. Revenant dans le cas général, on voit facilement que $g^*\Ll$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\Ll$, on voit d'après ce qui précède que $g^{-1}(Y_l)=X_{g^*(l)}$. D'autre part, si $l_1,...,l_n$ sont des sections globales qui engendrent $\Ll$, on voit que $(Y_{l_i})$ est un recouvrement de $Y$ qui trivialise $\Ll$. En effet, sur chaque $Y_{l_i}$, on a un isomorphisme $\Oo_{Y|Y_l}\rightarrow \Ll_{Y|Y_l}$, $\lambda \mapsto \lambda l_i$, et par hypothèse, l'intersection des complémentaires des $Y_{l_i}$ est vide. Enfin, on note sans ambiguïté $l_j/l_i$ l'unique élément de $\Oo_{Y|Y_l}(Y_l)$ tel que $l_j/l_i.l_i=l_j$ par l'isomorphisme précédent.\\
+Considérons un faisceau inversible $\Ll$ sur une variété $Y$, une section globale $l$, et un morphisme $(g,g^\sharp):X\rightarrow Y$. On définit l'ouvert 
+$$Y_l:=\lbrace y\in Y\mid \Oo_{Y,y}l_y=\Ll_y\rbrace=\lbrace y\in Y\mid l_y\notin m_y\Ll_y\rbrace$$
+C'est tout simplement le complémentaire du support du diviseur des zéros associé au couple $(\Ll,l)$. Si $\Ll=\Oo_Y$ il s'agit de l'ouvert principal $Y_l$, et on a de plus $g^{-1}(Y_l)=X_{g^\sharp(l)}=X_{g^*(l)}$ car $g^*\Oo_Y=\Oo_X$ et $\alpha=g^\sharp$ dans ce cas. Revenant dans le cas général, on voit facilement que $g^*\Ll$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\Ll$, on voit d'après ce qui précède que $g^{-1}(Y_l)=X_{g^*(l)}$. D'autre part, si $l_1,...,l_n$ sont des sections globales qui engendrent $\Ll$, on voit que $(Y_{l_i})$ est un recouvrement de $Y$ qui trivialise $\Ll$. En effet, sur chaque $Y_{l_i}$, on a un isomorphisme $\Oo_{Y|Y_{l_i}}\rightarrow \Ll_{Y|Y_{l_i}}$, $\lambda \mapsto \lambda l_i$, et par hypothèse, l'intersection des complémentaires des $Y_{l_i}$ est vide. Enfin, on note sans ambiguïté $l_j/l_i$ l'unique élément de $\Oo_{Y|Y_{l_i}}(Y_l)$ tel que $l_j/l_i.l_i=l_j$ par l'isomorphisme précédent.\\
 Revenons au cas initial et notons $U_i=D_+(x_i)=\Oo(1)_{x_i}$. La $k$-algèbre $\Oo_{P^n_k}(U_i)$ est engendrée par les éléments $x_j/x_i$ et on a $s_j/s_i.s_i=s_j=\alpha(U_i)(x_j)=\alpha(U_i)(x_j/x_i.x_i)=f^\sharp(x_j/x_i).\alpha(U_i)(x_i)=f^\sharp(x_j/x_i).s_i$. On a donc nécessairement $f^\sharp(x_j/x_i)=s_j/s_i$. Comme les $U_i$ sont affines, cela définit des morphismes $f_i:X_{s_i}\rightarrow P^n_k$ en composant avec l'inclusion. C'est morphismes se recollent en un unique morphisme, car ils coïncident sur les $X_{s_i}\cap X_{s_j}$. Autrement dit, on récupère $f$ par la donnée des $s_i$, et $f$ est ainsi l'unique morphisme tel que $f^*(x_i)=s_i$.\\
 Réciproquement montrons que la donnée d'un faisceau inversible $\Ll$ sur $X$ et de sections globales $l_0,...,l_n$ qui l'engendrent définissent un unique morphisme $f:X\rightarrow \PP^n_k$ tel que $\Ll\simeq f^*\Oo(1)$, ce dernier isomorphisme étant celui qui envoie $f^*(x_i)$ sur $l_i$. Si $f$ existe avec ces propriétés, il est unique d'après ce qui précède. Pour l'existence, on construit comme précédemment des morphismes $f_i:X_{l_i}\rightarrow U_i$ qui se recollent en un morphisme $f:X\rightarrow \PP^n_k$. Par construction, $\Ll$ et $f^*\Oo(1)$ se trivialisent sur le même recouvrement $(f^{-1}(U_i)=X_{l_i}=X_{f^*(x_i)})_i$. On a des isomorphismes locaux $\phi_i:\Ll_{|f^{-1}(U_i)}\rightarrow f^*\Oo(1)_{|f^{-1}(U_i)}$, $l_i\mapsto f^*x_i$. Ce sont des sections locales de $\mathscr{H}om_{\Oo_X}(\Ll,\Oo(1))$ sur un recouvrement de $X$. Pour vérifier qu'elles coïncident aux intersections $X_{l_i}\cap X_{l_j}$, on remarque que l'on a $l_i/l_j=f^\sharp(U_i\cap U_j)(x_i/x_j)= f^*(x_i)/f^*(x_j)\in \Oo_X(X_{l_i}\cap X_{l_j})^\times$. Ces sections se recollent donc en un unique isomorphisme $\Ll\simeq f^*\Oo(1)$ qui est bien l'isomorphisme recherché.
 
-Notons que cette propriété caractérise l'espace projectif sur $k$ à isomorphisme près. En effet il représente le foncteur (voir stacks)...
+Notons que cette propriété caractérise l'espace projectif $\PP^n_k$ à isomorphisme près. En effet il représente le foncteur (voir stacks)...
 
 \subsubsection{Variétés quasi-projectives, faisceaux inversible très amples}
 
