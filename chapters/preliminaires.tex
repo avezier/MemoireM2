@@ -27,7 +27,14 @@ Alors, $A$ est factoriel $\iff$ Tout idéal premier de hauteur 1 est principal.
 \begin{proof}
 \end{proof}
 
-\subsection{Anneaux de valuation discrète}
+\subsection{Anneaux locaux}
+
+\begin{thm}\label{reglocufd}
+Un anneau local régulier est factoriel.
+\end{thm}
+\begin{proof}
+Voir \cite{Matsumura} 20.3
+\end{proof}
 
 \begin{thm}\label{ideauxinversibles}
 Soit $A$ un anneau intègre et $I$ un idéal fractionnaire de $A$. Les assertions suivantes sont équivalentes:
@@ -146,7 +153,7 @@ Soit $X$ une variété affine irréductible. Pour toute variété $Y$ contenant 
 Soit $X$ une variété normale irréductible. Pour toute sous-variété fermée $Y$ de codimension $\geq 2$, la restriction $\Oo(X)\rightarrow \Oo(X\setminus Y)$ est un isomorphisme.
 \end{prop}
 \begin{proof}
-Par irréductibilité de $X$, cette flèche est injective. Pour la surjectivité on peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $X\setminus Y$, alors $f\in A_p$ pour tout $p\in \spec A$ de hauteur $1$. En effet, $p\notin Y$ car dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $X\setminus Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit que $f\in A=\Oo(X)$ par application de \ref{factonormal}.
+On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $p\in \spec A$ de hauteur $1$ appartient à $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit que $f$ est définie en tous ces $p$ et induit un élément en chaque tige $A_p$ via les injections $\Oo_X(U)\xhookrightarrow{} \Oo_p=A_p$, par irréductibilité de $A$. On en déduit que d'après \ref{factonormal}, un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_p A_p=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
 \end{proof}
 \subsection{Quelques résultats sur les morphismes}
 \subsubsection{Généralités}
@@ -766,15 +773,6 @@ Soit $X$ une variété normale et irréductible et $Z$ une sous-variété fermé
 \end{enumerate}
 \end{proof}
 
-\begin{ex}
-On écrit $\PP ^1=k\cup \lbrace\infty\rbrace$. En choisissant une carte affine contenant $\lbrace\infty\rbrace$ on voit tout de suite que  $\lbrace\infty\rbrace$ est un diviseur. D'autre part, le théorème précédent nous donne la suite exacte 
-\begin{center}
- $\ZZ \lbrace\infty\rbrace \xrightarrow{\pi}$ Cl$(\PP ^1) \xrightarrow{.\cap k} $ Cl$(k) \rightarrow 0 $
-\end{center}
-Mais d'après \ref{factonormal}, on a Cl$(k)=\lbrace 0 \rbrace$, donc $\pi$ est surjective. Elle est injective car $a\lbrace\infty\rbrace=$ div$(f)$ donne    
-div$(f)\cap k = 0$ donc $f$ est constante, ce qui force $a=0$. Enfin, on a Cl$(\PP ^1)=\ZZ$.
-\end{ex}
-
 \subsection{Faisceau d'algèbres divisorielles}
 
 La proposition suivante montre que l'on peut caractériser les sections du faisceau structural de $X$ en terme de diviseurs.
@@ -797,7 +795,7 @@ On vérifie, grâce aux propriétés des valuations $v_D$, qu'il s'agit d'un sou
 \begin{prop}\label{divaff}
 Soit $X$ une variété affine normale et irréductible, $A:=k[X]$. 
 \begin{enumerate}
-\item Soit un diviseur de Weil $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$, on a $\Gamma(X,\Oo_X(D))=\bigcap_{ht(p)=1}p^{-a_p}A_p$.
+\item Soit un diviseur de Weil $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$, on a $\Gamma(X,\Oo_X(D))=\bigcap_{ht(p)=1}p^{-a_p}A_p$, où $a_p=0$ si $p\notin \lbrace p_1,...,p_r\rbrace$.
 \item Soit $(Y_i)_{i\leq r}$ des diviseurs premiers de Cartier et $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$, on a $\Gamma(X,\Oo_X(D))=\prod_{i=1}^n p^{-a_p}$.
 \item Pour un diviseur premier $Y_p$, on a $\Gamma(X,\Oo_X(-Y_p))=p$. Si de plus $p$ est inversible et $a\in \ZZ$, on a $\Gamma(X,\Oo_X(aY_p))=p^{-a}$.
 \end{enumerate}
@@ -824,19 +822,19 @@ On considère la droite projective $\PP^1$, $D=\lbrace\infty\rbrace$ et $K=\ZZ D
 Ainsi on voit que l'application $\phi_n:k[t_0,t_1]_n\rightarrow S_{nD}(\PP^1), f\mapsto f(1,z)$ est un isomorphisme de $k$-ev. De plus, on a facilement $\phi_n\phi_m=\phi_{n+m}$. Finalement, $(\phi, \widetilde{\phi})$ avec $\phi: k[t_0,t_n]\rightarrow S(\PP^1), f\mapsto f(1,z)$ et $\widetilde{\phi}:\ZZ\rightarrow K, n\mapsto nD$ est un isomorphisme d'algèbres graduées.
 \end{ex}
 
-\begin{prop}\label{somorphismcodim2}
-Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors pour tous ouverts $V\subset U\subset X$ tels que $U\setminus V$ soit de codimension $\geq 2$ dans $U$, on a $\Oo_X(D)_{|V}\simeq \Oo_X(D)_{|U}$.
+\begin{prop}
+Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors $\Oo_X(D)$ est un $\Oo_X$-module cohérent. En particulier, le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est une $\Oo_X$-algèbre quasi-cohérente.
 \end{prop}
 \begin{proof}
+On peut supposer $X=\spec A$ affine car le problème est local.  Alors d'après \ref{quasicoaff}, $\Oo_X(D)\simeq \tilde{M}$ où $M=\Gamma(X,\Oo_X(D))$. Il s'agit donc de montrer que $M$ est un $A$-module de type fini. Mais d'après \ref{divaff}, on voit que $\Gamma(X,\Oo_X(D))$ est un idéal fractionnaire de $A$, il est donc isomorphe à un idéal de $A$ en tant $A$-module après multiplication par une certaine fonction rationnelle. Comme $A$ est noetherien cela conclut la preuve. En fait, cela revient à constater que les fonctions $f\in \Gamma(X,\Oo_X(D))$ peuvent admettre des pôles uniquement sur les diviseurs premiers intervenant dans l'écriture de $D$, soit un nombre fini. L'ordre de ces pôle peut  donc être borné par un même $d\in \NN$.
 \end{proof}
 
-\begin{cor}
-Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors $\Oo_X(D)$ est un $\Oo_X$-module cohérent. En particulier, le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est une $\Oo_X$-algèbre quasi-cohérente.
-\end{cor}
+\begin{prop}\label{somorphismcodim2}
+Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors pour tout ouvert $U\subset X$ tels que $X\setminus U$ soit de codimension $\geq 2$ dans $X$, on a $\Gamma(U,\Oo_X(D))\simeq \Gamma(X,\Oo_X(D))$.
+\end{prop}
 \begin{proof}
-Si $D$ est localement principal c'est immédiat car alors le module est inversible. Mais on peut toujours le supposer d'après la proposition précédente et \ref{codimesingnormal}.
+Encore une fois, on peut traiter le problème localement et supposer $X=\spec A$ affine. La restriction est injective et comme en \ref{extregularnormal}, on remarque que $U$ contient tous les premiers $p$ de hauteur 1. Toujours comme en \ref{extregularnormal} et en écrivant $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$ comme en \ref{divaff}, on considère les injections dans les tiges $\Gamma(X,\Oo_X(D))_p=p^{-a_p}A_p$ et on construit l'inverse de la restriction $\Gamma(U, \Oo_X(D))\xhookrightarrow{}\Gamma(X,\Oo_X(D))=\bigcap_{ht(p)=1}p^{-a_p}A_p$.
 \end{proof}
-
 
 \subsection{Diviseurs de Cartier et groupe de Picard}
 
@@ -859,23 +857,23 @@ Soit $X$ une variété irréductible. L'application $D\mapsto \mathcal{O}_X(D)$ 
 \end{prop}
 
 
-On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur premier $Y$, on choisit un indice $i\in I$ tel que $U_i\cap Y\neq \emptyset$ et on prend $v_Y(f_i)$ pour coefficient de $Y$. Cette somme est finie par la même preuve que \ref{noetherienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \Oo_X^\times(U_i\cap U_j)$ par définition, donc $v_Y(f_i)=v_Y(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir CaCl$(X)$ comme un sous-groupe de Cl$(X)$ (on vérifie que les diviseurs principaux se correspondent).\\ 
+On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur premier $Y$, on choisit un indice $i\in I$ tel que $U_i\cap Y\neq \emptyset$ et on prend $v_Y(f_i)$ pour coefficient de $Y$. Cette somme est finie par la même preuve que \ref{noetherienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \Oo_X^\times(U_i\cap U_j)$ par définition, donc $v_Y(f_i)=v_Y(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir CaCl$(X)$ comme un sous-groupe de Cl$(X)$ (on vérifie que les diviseurs principaux se correspondent).
+
 Ce sous-groupe est propre en général (cf \cite{Hartshorne} 6.11.3). En revanche, si $X$ est lisse, tout diviseur de Weil est localement principal . En effet dans ce cas, les anneaux locaux sont factoriels, on obtient ainsi en tout point une équation locale d'un diviseur premier car un idéal premier de hauteur 1 d'un anneau factoriel est principal, ce qui permet de conclure.\\
-Le résultat suivant est un outil pratique pour calculer les sections d'un faisceau d'algèbres divisorielles.
 
 \begin{prop}
-Soit $X$ une variété normale irréductible, $D,E\in\wdiv X$ avec $E$ de Cartier. Alors le morphisme naturel $\Oo_X(D)\otimes_{\Oo_X}\Oo_X(E)\rightarrow \Oo_X(D+E)$ est un isomorphisme.
+Soit $X$ une variété normale irréductible, $D,E\in\wdiv X$ avec $D$ de Cartier. Alors le morphisme naturel $\alpha:\Oo_X(D)\otimes_{\Oo_X}\Oo_X(E)\rightarrow \Oo_X(D+E)$ est un isomorphisme.
 \end{prop}
 \begin{proof}
-Il suffit d'effectuer le calcul localement sur des ouverts qui trivialisent $\Oo_X(D+E)$. On obtient ainsi des isomorphismes qui se recollent.
+Écrivons $D=(U_i,f_i)_{i\in I}$. Alors sur chaque $U_i$, $\alpha$ induit un isomorphisme de $\Oo_X$-module. En effet on a un morphisme inverse, il s'agit de la multiplication par $f_i^{-1}$ composée avec l'isomorphisme  $\Oo_{U_i}(E)\simeq   \Oo_{U_i}(D)\otimes_{\Oo_{U_i}}\Oo_{U_i}(E)$.
 \end{proof}
 
-Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée section canonique et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{X|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des $\phi_i$, et donc de $\Ll$ à isomorphisme près. On l'appelle le diviseur des zéros de $s$ et on le note $\divi_D(s)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
+Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée section canonique et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{X|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des $\phi_i$, et donc du couple $(\Ll,s)$ à isomorphisme près. On l'appelle le diviseur des zéros de $s$ et on le note $\divi_D(s)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
 
 $$
 \left\{
 \begin{matrix}
-\text{Diviseur de Cartier effectif sur }X
+\text{Diviseurs de Cartier effectif sur }X
 \end{matrix}
 \right\}
 \leftrightarrow
@@ -887,7 +885,7 @@ $$
 \right\}
 $$
 
-
+Considérons un diviseur de Cartier $D$ quelconque et $\Oo_X(D)$ le sous-faisceau inversible de $k(X)$ qui lui correspond. En faisant varier $s$ non-nulle dans les couples $(\Oo_X(D),s)$ tels que ci-dessus, on obtient tous les diviseurs de Cartier effectifs linéairement équivalent à $D$. En effet, $\divi_D(s)$ est par définition un diviseur effectif linéairement équivalent à $D$. Réciproquement un diviseur effectif linéairement équivalent à $D$ s'écrit $D+\divi(s)\geq 0$ où $s$ est donc une section globale $s$ de $\Oo_X(D)$.
 
 \subsection{L'espace projectif $\PP_k^n$}
 
@@ -911,8 +909,7 @@ Soit $X$ une variété et $\Ll$ un faisceau inversible sur $X$ engendré par une
 Si $X$ est normale et irréductible, un diviseur de Cartier $D$ est dit très ample si on a $\Oo_X(D)\simeq i^*\Oo(1)$ pour une immersion $i:\xhookrightarrow{}\PP_k^n$.
 \end{defn}
 
-Supposons maintenant $X$ lisse (donc normale) et projective, $\Ll\simeq \Oo_X(D), D\in \wdiv(X)$ un faisceau inversible, et $s$ une section globale non nulle. Par définition, $\divi_D(s)$ est un diviseur effectif linéairement équivalent à $D$.
-Réciproquement on voit que tout diviseur effectif linéairement équivalent à $D$ est de la forme $\divi_D(s)+D$ pour une section globale $s$ de $\Oo_X(D)$. D'autre part deux sections globales $s, s'$ non nulles ont même diviseur des zéros si et seulement si elles sont colinéaires dans le $k$-ev $\Gamma(X, \Oo_X(D))$, en effet dans ce cas $s/s'\in \Oo_X^\times(X)=k^*$, car $k$ est algébriquement clos. Notons que $\Gamma(X, \Oo_X(D))$ est de dimension finie (\cite{Hartshorne} II.5.19), ainsi l'ensemble des diviseurs effectifs linéairement équivalent à $D$ est naturellement muni d'une structure d'espace projectif, cela amène la définition suivante:
+Supposons maintenant $X$ lisse (donc normale) et projective, $D\in \wdiv(X)$, $\Oo_X(D)$ le faisceau inversible associé. On a vu que l'ensemble des diviseurs effectifs linéairement équivalents à $D$ est $\lbrace \divi_D(s)\mid s\in\Gamma(X,\Oo_X(D))\setminus\lbrace0\rbrace \rbrace$. D'autre part deux sections globales $s, s'$ non nulles ont même diviseur des zéros si et seulement si elles sont colinéaires dans le $k$-ev $\Gamma(X, \Oo_X(D))$, en effet dans ce cas $s/s'\in \Oo_X^\times(X)=k^*$, car $k$ est algébriquement clos. Notons enfin que $\Gamma(X, \Oo_X(D))$ est de dimension finie (\cite{Hartshorne} II.5.19). Ainsi l'ensemble des diviseurs effectifs linéairement équivalent à $D$ est naturellement muni d'une structure d'espace projectif, cela amène la définition suivante:
 \begin{defn}[Système linéaire, point de base]
 Soit $X$ une variété lisse et projective, et $D$ un diviseur. Le système linéaire complet définit par $D$ est l'ensemble des diviseurs effectifs linéairement équivalents à $D$, on le note $|D|$. Un système linéaire est une partie de $|D|$ correspondant à un sous espace projectif. On dit que $p\in X$ est un point de base d'un système linéaire $\PP(V)\subset |D|$ si l'intersection des $X\setminus X_s$ pour $s\in V$ est non vide. 
 \end{defn}
