@@ -153,7 +153,7 @@ Soit $X$ une variété affine irréductible. Pour toute variété $Y$ contenant 
 Soit $X$ une variété normale irréductible. Pour toute sous-variété fermée $Y$ de codimension $\geq 2$, la restriction $\Oo(X)\rightarrow \Oo(X\setminus Y)$ est un isomorphisme.
 \end{prop}
 \begin{proof}
-On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $p\in \spec A$ de hauteur $1$ appartient à $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit que $f$ est définie en tous ces $p$ et induit un élément en chaque tige $A_p$ via les injections $\Oo_X(U)\xhookrightarrow{} \Oo_p=A_p$, par irréductibilité de $A$. On en déduit que d'après \ref{factonormal}, un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_p A_p=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
+On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $p\in \spec A$ de hauteur $1$ appartient à $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit, en tenant compte de l'irréductibilité de $X$, des injections $\Oo_X(U)\xhookrightarrow{} \Oo_p=A_p$ dans les tiges qui peuvent être vues comme des inclusions dans le corps des fonctions rationnelles de $X$. On a ainsi en tenant compte de \ref{factonormal} un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_p A_p=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
 \end{proof}
 \subsection{Quelques résultats sur les morphismes}
 \subsubsection{Généralités}
@@ -637,8 +637,10 @@ Un bon quotient $(X//G, \pi)$ est un quotient géométrique si les fibres de $\p
 \end{ex}
 
 \subsubsection{Un exemple: La construction Proj}
-Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n$($k$). On considère $A$ une algèbre affine $\NN$-graduée et on pose $X:=\spec(A)$. $X$ est donc muni d'une action de $k^*$. Une orbite $k^*.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $k^*.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir.\\
-On note $F$ l'ensemble des points fixes et on remarque que $F=\mathcal{V}_X(A_{>0})$, où $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d>0)$ est l'idéal dit inconvenant. En effet, $F$ est l'ensemble des idéaux maximaux qui sont $k^*$-stables. Or on peut remarquer qu'un idéal radical est $k^*$-stable si et seulement si il est homogène. Enfin, un idéal maximal et homogène contient nécessairement $A_{>0}$.\\
+Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n$($k$). On considère $A$ une algèbre affine $\NN$-graduée et on pose $X:=\spec(A)$. $X$ est donc muni d'une action de $k^*$. Une orbite $k^*.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $k^*.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir.
+
+On note $F$ l'ensemble des points fixes et on remarque que $F=\mathcal{V}_X(A_{>0})$, où $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d>0)$ est l'idéal dit inconvenant. En effet, $F$ est l'ensemble des idéaux maximaux qui sont $k^*$-stables. Or, un idéal maximal et homogène contient nécessairement $A_{>0}$.
+
 On remarque que $A^{k^*}=A_0=A/A_{>0}$, et comme le bon quotient $Y_0:=X//k^*=\spec (A_0)$ paramètre les orbites fermés, on obtient en particulier que si $k^*.x$ n'est pas fermé, son adhérence contient un unique point fixe. En résumé, $W:=X\setminus F$ est la réunion des orbites de dimension 1, et ils sont tous fermés dans $W$. On va montrer que $W$ admet un quotient géométrique, c'est la construction Proj.\\
 Pour tout $f\in A_{>0}$ homogène, la localisation $A_f$ est $\ZZ$-graduée de la manière suivante:
 \begin{center}
@@ -661,16 +663,9 @@ On note $A_{(f)}:=(A_f)_0$ en remarquant qu'il s'agit de l'algèbre des invarian
 	\end{tikzcd}\\
 	\end{center}
 \end{multicols}
-Les flèches horizontales du diagramme de droite sont des immersions ouvertes, en effet on a $U_{f_if_j}\simeq (U_{f_i})_{f_j}$. Les conditions de la construction \ref{gluevar} sont satisfaites, on peut former une prevariété Proj($A$) par recollement des $U_{f_i}$ le long de ces immersions. De plus, les $(U_{f_i},\pi_i)$ sont des quotients géométriques et le diagramme exprime que l'on a les conditions de recollement sur les intersections qui font de Proj($A$) le quotient géométrique global $W//k^*$.\\
-Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-stables de $W$, c'est à dire aux idéaux radicaux homogènes qui ne contiennent pas l'idéal inconvenant. On appelle ces fermés des variétés projectives. La topologie quotient sur Proj($A$) que l'on vient de définir est aussi appelé la topologie de Zariski.
+Les flèches horizontales du diagramme de droite sont des immersions ouvertes, en effet on a $U_{f_if_j}\simeq (U_{f_i})_{f_j}$. Les conditions de la construction \ref{gluevar} sont satisfaites, on peut former une prevariété Proj($A$) par recollement des $U_{f_i}$ le long de ces immersions. De plus, les $(U_{f_i},\pi_i)$ sont des quotients géométriques et le diagramme exprime que l'on a les conditions de recollement sur les intersections qui font de Proj($A$) le quotient géométrique global $W//k^*$.
 
-\textcolor{red}{A ajouter?:}\\
-\textcolor{red}{ Séparé => Cf Stacks 8.8 construction of schemes}\\
-\textcolor{red}{irréductible = Cf critére avec recovrement}\\
-\textcolor{red}{sections globales (cf hartshorne chap 1 si A0=k et A engendré par A1)? c'est propre?}\\
-\textcolor{red}{Fonctorialité de Proj}\\
-\textcolor{red}{Action de $PGL$ sur $(P^1)^4$. Quotient = $P1$ avec birapport?}\\
-\textcolor{red}{Quid de l 'exemple des matrice diagonalisables?}
+Enfin, on remarque que les fermés de Proj($A$) correspondent aux fermés $k^*$-stables de $W$, c'est à dire aux idéaux radicaux homogènes qui ne contiennent pas l'idéal inconvenant. On appelle ces fermés des variétés projectives. La topologie quotient sur Proj($A$) que l'on vient de définir est aussi appelé la topologie de Zariski.
 
 \section{Faisceaux quasi-cohérents}
 
@@ -733,7 +728,7 @@ Partant de l'observation qu'en géométrie classique dans le plan projectif, il 
 \begin{defn}[Diviseur premier, WDiv($X$), diviseur de Weil, diviseur effectif]
 Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une sous-variété fermée irréductible de codimension 1. On définit WDiv($X$) le groupe libre engendré par les diviseurs premiers. Un élément de WDiv($X$) est appelé un diviseur de Weil. Enfin, un diviseur est dit effectif si il est à coefficients $\geq 0$. 
 \end{defn}
-On introduit maintenant pour chaque diviseur $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles sur $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. Soit $\eta$ le point générique de $D$, et $\mathcal{O}_{\eta,X}$ son anneau local. Par hypothèse et grâce aux propriétés de la localisation, il est noethérien normal et de dimension 1, c'est donc un anneau de valuation discrète, où DVR. La valuation associée $v_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
+On introduit maintenant pour chaque diviseur $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles sur $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. Soit $\eta$ le point générique de $D$, et $\mathcal{O}_{\eta,X}$ son anneau local. Par hypothèse et grâce aux propriétés de la localisation, il est noethérien normal et de dimension 1, c'est donc un anneau de valuation discrète. La valuation associée $v_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
 
 \begin{prop}\label{noetherienPWDivBienDef}
 Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors $v_D(f)=0$ sauf pour un nombre fini de diviseurs premiers $D$.
@@ -833,7 +828,7 @@ On peut supposer $X=\spec A$ affine car le problème est local.  Alors d'après 
 Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors pour tout ouvert $U\subset X$ tels que $X\setminus U$ soit de codimension $\geq 2$ dans $X$, on a $\Gamma(U,\Oo_X(D))\simeq \Gamma(X,\Oo_X(D))$.
 \end{prop}
 \begin{proof}
-Encore une fois, on peut traiter le problème localement et supposer $X=\spec A$ affine. La restriction est injective et comme en \ref{extregularnormal}, on remarque que $U$ contient tous les premiers $p$ de hauteur 1. Toujours comme en \ref{extregularnormal} et en écrivant $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$ comme en \ref{divaff}, on considère les injections dans les tiges $\Gamma(X,\Oo_X(D))_p=p^{-a_p}A_p$ et on construit l'inverse de la restriction $\Gamma(U, \Oo_X(D))\xhookrightarrow{}\Gamma(X,\Oo_X(D))=\bigcap_{ht(p)=1}p^{-a_p}A_p$.
+Encore une fois, on peut traiter le problème localement et supposer $X=\spec A$ affine. La restriction est injective et comme en \ref{extregularnormal}, on remarque que $U$ contient tous les premiers $p$ de hauteur 1. On écrit $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$ comme en \ref{divaff}, et on considère les injections dans les tiges $\Gamma(X,\Oo_X(D))_p=p^{-a_p}A_p$. On construit ainsi l'inverse de la restriction $\Gamma(U, \Oo_X(D))\xhookrightarrow{}\Gamma(X,\Oo_X(D))=\bigcap_{ht(p)=1}p^{-a_p}A_p$, en procédant comme en \ref{extregularnormal}.
 \end{proof}
 
 \subsection{Diviseurs de Cartier et groupe de Picard}
