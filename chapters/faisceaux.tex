@@ -1,0 +1,452 @@
+\chapter{Faisceaux divisoriels sur une variété algébrique}
+
+
+\section{Faisceaux quasi-cohérents}
+
+\subsection{Faisceaux quasi-cohérents sur une variété}
+
+\subsection{Faisceaux quasi-cohérents sur une variété projective}
+
+\subsection{Faisceaux inversibles, Fibrés en droites}
+\begin{defn}
+Soit $X$ une variété. Un faisceau inversible $\Ll$ sur $X$ est un $\mathcal{O}_X$-module localement libre de rang 1. Autrement dit, tout point $x\in X$ admet un voisinage ouvert $U \subset X$ tel que ${\mathcal L}|_U$ est isomorphe à ${\mathcal O}_U$.
+\end{defn}
+
+On peut toujours trivialiser deux faisceaux inversibles sur un même recouvrement ouvert de $X$. On voit ainsi que le produit tensoriel sur $\mathcal{O}_X$ de faisceaux inversibles est inversible. Par ailleurs, le faisceau $\Hh om(\Ll,\Oo_X)$ est clairement inversible car sur les ouverts $U$ où $\Ll$ est trivial, se donner un morphisme $\Ll_{|U}\rightarrow\Oo_{|U}$ revient à se donner une section de $\Oo(U)$. De plus, l'application naturelle $\Ll\otimes_{\Oo_X} \Hh om(\Ll,\Oo_X)\rightarrow \Oo_X, (s,f)\mapsto f(s)$ est un isomorphisme. Ainsi, les classes d'isomorphie de faisceaux inversible sur $X$ munies du produit tensoriel forment un groupe appelé groupe de Picard de $X$, noté $\pic(X)$. 
+
+\begin{ex}\label{expicaff}
+Soit $X=\spec (A)$ irréductible. Alors se donner un faisceau inversible sur $X$ revient (à isomorphisme près) à se donner un idéal fractionnaire $I$ de $k[X]$ qui est inversible (cf \ref{ideauxinversibles}), son inverse est alors $I^{-1}:=(A:I)$. Les idéaux fractionnaires inversibles donnant le faisceau inversible trivial sont les idéaux fractionnaires principaux. Le groupe de Picard de $X$ est ainsi isomorphe au groupe des idéaux fractionnaires inversibles modulo les idéaux fractionnaires principaux. Les idéaux de $A$ qui sont inversibles forment une partie génératrice de ce groupe. 
+
+Si de plus $A$ est localement factoriel, par exemple si $X$ est lisse, les idéaux inversibles sont les idéaux de hauteur 1 pure, c'est à dire tels que ses idéaux premiers associés sont tous de hauteur 1. De plus tout idéal inversible s'écrit de manière unique comme produit de puissances d'idéaux premiers de hauteur 1. Pic(X) est donc le quotient du groupe libre sur les idéaux premiers de hauteur 1 par les idéaux fractionnaires principaux.
+\end{ex}
+
+
+On introduit ci-dessous la version relative du spectre d'un anneau. Ceci va nous permettre de construire les fibrés en droite de manière plus intrinsèque.
+
+\begin{cons}\label{relspec}[Spectre relatif]
+
+\end{cons}
+
+Si on se donne un faisceau inversible $\Ll$ sur une variété $X$, le fibré en droites qu'on lui associe dans la discussion précédente n'est autre que $\spec_X(\sym(\Ll))$, où $\sym(\Ll))$ est l'algèbre symétrique associée à $\Ll$ sur $\mathcal{O}_X$. En effet, on recolle les $\spec_{U_i}(\sym(\Ll_{|U_i}))\simeq\spec_{U_i}( \mathcal{O}_{U_i}[t])\simeq U_i \times_k \AAA^1_k$, où $(U_i)_i$ est un recouvrement qui trivialise $\Ll$.
+
+On va maintenant voir que les faisceaux inversibles sur $X$ s'incarnent naturellement en des variétés sur $X$, ce sont les fibrés en droites.
+
+\begin{defn}[Fibré en droites]\label{linebundle}
+Soit $X$ une variété. Un fibré en droite sur $X$ est une variété $L$ munie d'un morphisme $\pi:L\rightarrow X$ tel que $X$ admet un recouvrement ouvert $(U_i)_{i\in I}$ satisfaisant:
+
+\begin{enumerate}
+\item $\forall i\in I$, il existe un isomorphisme $\phi_i :\pi^{-1}(U_i)\rightarrow U_i\times\AAA^1$ de variétés sur $U_i$.
+\item $\forall i, j\in I$, l'isomorphisme $\phi_j\circ \phi_i^{-1}: (U_i\cap U_j)\times \AAA^1\rightarrow (U_i\cap U_j)\times \AAA^1$ est de la forme $(x, z)\mapsto (x, a_{ij}(x)z)$.
+\end{enumerate}
+Un morphisme de fibrés en droites sur $X$ est un morphisme de variétés sur $X$ avec la conditions supplémentaire que les morphismes induits sur les fibres soient linéaires.
+Une section d'un fibré en droites $(L, \pi)$ est une section de $\pi$, et on a la version locale de cette notion.
+\end{defn}
+
+On constate qu'un fibré en droite $(L,\pi)$ sur $X$ est obtenu en recollant des fibrés en droites de la forme $U_i\times \AAA^1\rightarrow U_i$ appelés fibrés triviaux via des automorphismes linéaires définis par des fonctions $a_{ij}\in \Oo(U_i\cap U_j)^*$, dites de transition. De plus, un automorphisme de fibré en droites est donnée par une fonction $f\in \Oo(X)^*$. En effet, localement il s'agit d'automorphismes de fibrés triviaux qui sont nécessairement de cette forme.
+
+Soit $(L,\pi)$ un fibré en droite sur $X$, et $f:X'\rightarrow X$ un morphisme de variétés. L'image inverse de $f^*(L)$ est le produit fibré $X'\times_X L$ muni de sa projection vers $X'$. C'est un fibré en droites sur $X'$, en effet c'est un recollement des fibrés triviaux $f^{-1}(U_i)\times \AAA^1\rightarrow f^{-1}(U_i)$ via les fonctions de transition $f^\sharp(a_{ij})$. Si on a $L=\spec_X(\sym(\Ll))$ pour un faisceau inversible $\Ll$, on constate que $f^*(L)$ est le fibré en droites construit à partir du faisceau inversible $f^*(\Ll)$. Enfin, si on se donne un morphisme $\phi:(L_1,\pi_1)\rightarrow (L_2,\pi_2)$ de fibrés en droites sur $X$ et un morphisme de variétés $f:X'\rightarrow X$ on définit l'image inverse $f^*(\phi)$ comme l'unique morphisme faisant commuter le diagramme ci-dessous:
+
+	\begin{center}
+	\begin{tikzcd}
+  		f^*(L_1)=X'\times_X L_1 \arrow[r, ""] \arrow[rd, dashed, "f^*(\phi)"] \arrow[rdd, bend right, ""] & L_1 \arrow[rd, bend left, "\phi"] &\\ 
+  		& f^*(L_2)=X'\times_X L_2 \arrow[r, ""]  \arrow[d, ""] & L_2 \arrow[d, "\pi_2"] \\ 
+		& X' \arrow[r, "f"] & X
+	\end{tikzcd}
+	\end{center}
+ 
+
+Considérons un faisceau inversible $\Ll$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\Ll(U_i)$ sur chaque $U_i$. Sur $U_i\cap U_j$, on a $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. On a ainsi construit un fibré en droites sur $X$.
+
+Réciproquement, considérons le $\mathcal{O}_X$-module des sections d'un fibré en droite $L$ sur $X$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{X|U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est à dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible.
+
+En composant les deux opérations on trouve le faisceau inversible dual du faisceau de départ. Ces opération sont fonctorielles et réalisent une anti-équivalence de catégorie entre faisceaux inversibles sur $X$ et fibrés en droites sur $X$. Cela permet de transporter la structure du groupe de Picard sur les classes d'isomorphie de fibrés en droites.
+
+
+Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$ sur ses fibres. L'ensemble $L_0$ des points fixes sous $\GG_m$ est le fermé correspondant à l'image de la section nulle. Son complémentaire $L^\times:=L\setminus L_0$ est une $\GG_m$-variété et $\pi$ se restreint en $\pi^\times: L^\times \rightarrow X$ qui est un quotient géométrique. En effet sur les $U_i$, on a $\pi^{\times-1}(U_i) \simeq U_i\times_k \GG_m$ et l'action de $\GG_m$ se fait par multiplication sur le facteur de droite.\\
+
+\subsection{$G$-linearisation d'un fibré en droite}
+
+Dans cette section on se pose la question de la possibilité d'étendre une action d'un groupe algébrique $G$ sur une variété $X$ à un fibré en droite $(L,\pi)$ sur $X$ tout en préservant la structure du fibré. C'est la notion de $G$-linéarisation. 
+
+\begin{defn}
+Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $(L,\pi)$ un fibré en droites. Une $G$-linéarisation de  $(L,\pi)$ est une action de $G$ sur $L$ telle que $\pi$ est $G$-équivariante et pour tout $(g,x)\in G\times X$ l'application $L_x\rightarrow L_{g.x},\, l\mapsto g.l$ est linéaire.
+\end{defn}
+
+Autrement dit, le morphisme associé à une $G$-linéarisation est à valeurs dans le groupe d'automorphisme de fibrés en droites de $(L,\pi)$. On note $\alpha: G\times X\rightarrow X$ l'action de $G$ sur $X$ et $p_2:G\times X\rightarrow X$ la projection sur $X$. Pour tout $g\in G$ on a une application:
+$$g\times \id: X\rightarrow G\times X,\,\, x\mapsto (g,x)$$ 
+Les images inverses de ces deux fibrés en droites par cette application sont explicitement: 
+$$(g\times \id)^*\alpha^*(L)=X\times_{G\times X}(G\times X)\times_X L=\lbrace (x,(g',x'),l)\mid \alpha(g',x')=\pi(l)\text{ et } (g,x)=(g',x')\rbrace$$
+$$(g\times \id)^*p_2^*(L)=X\times_{G\times X}(G\times X)\times_X L=\lbrace (x,(g',x'),l)\mid x'=\pi(l)\text{ et } (g,x)=(g',x')\rbrace$$
+On obtient ainsi des isomorphismes canoniques $(g\times \id)^*\alpha^*(L)\simeq g^*L$ et $(g\times \id)^*p_2^*(L)\simeq L$, où $g^*L$ est l'image inverse de $L$ par l'automorphisme de $X$ associé à l'action de $g$, et on fait ces identifications par la suite. Ainsi, vu la discussion suivant \ref{linebundle}, tout morphisme de fibrés en droites $\Phi: \alpha^*(L)\rightarrow p_2^*(L)$ induit pour tout $g\in G$ un morphisme $\Phi_g:g^*(L)\rightarrow L$.
+
+\begin{lem}
+Avec les notations ci-dessus, on a une correspondance bijective entre les $G$-linéarisations de $L$ et les isomorphismes
+$$\Phi: \alpha^*(L)\rightarrow p_2^*(L)$$
+de fibrés en droites sur $G\times X$ tels que $\Phi_{gh}=\Phi_h\circ h^*(\Phi_g)$ pour tous $g,h\in G$.
+\end{lem}
+\begin{proof}
+Soit $\beta:G\times L\rightarrow L$ une $G$-linéarisation. Par définition, on a un diagramme commutatif:
+	\begin{center}
+	\begin{tikzcd}
+  		G\times L \arrow[r, "\beta"] \arrow[d, "id\times\pi"]& L\arrow[d, "\pi"] \\ 
+  		G\times X \arrow[r, "\alpha"] & X
+	\end{tikzcd}\\
+	\end{center}
+Par la propriété universelle du produit fibré on a donc un morphisme $\gamma:G\times L\rightarrow\alpha^*(L)$ de variétés sur $G\times X$. On remarque que l'on a un isomorphisme canonique $G\times L\rightarrow p_2^*(L),\, (g,l)\mapsto ((g,\pi (l)),l)$. Avec cette identification, $\gamma$ s'écrit explicitement $\gamma(g,l)=((g,\pi(l)),\beta(g,l))$. C'est un isomorphisme car on a un inverse évident $\Phi((g,x),l)=(g,\beta(g^{-1},l))$. Pour $g\in G$ fixé, l'image inverse de $\gamma$ par $g\times \id$ est simplement $\gamma_g:L\rightarrow g^*L, l\mapsto (\pi(l),\beta(g,l))$. Soit maintenant $h\in G$, et on note également $h$ l'automorphisme de $X$ donné par son action. En tenant compte des identifications précédentes on a pour $l\in L$ les formules $h^*(\gamma_g)\circ\gamma_h(l)=h^*(\gamma_g)(\pi(l),\beta(h,l))=(\pi(l),\beta(g,\beta(h,l)))=(\pi(l),\beta(gh,l))=\gamma_{gh}(l)$. Ainsi, $\Phi$ satisfait la condition de l'énoncé.
+
+Réciproquement, étant donné un $\Phi$ comme dans l'énoncé, on note $\gamma:=\Phi^{-1}$ et $p_L:\alpha^*(L)\rightarrow L$ la projection sur $L$. On a alors un morphisme $\beta:=p_L\circ\gamma : G\times L \rightarrow L$. La condition sur $\Phi$ exprime qu'il s'agit d'une action de $G$  sur $L$. Enfin, pour $g\in G$ fixé, $p_L\circ \gamma_g$ est un automorphisme de $(L,\pi)$, autrement dit on obtient un diagramme commutatif comme ci-dessus. On a donc bien une $G$-linéarisation.
+\end{proof}
+
+\begin{lem}\label{existenceGLin}
+Soient $G$ un groupe algébrique connexe, $X$ une $G$-variété irréductible, et $(L,\pi)$ un fibré en droites sur $X$. Alors $L$ admet une $G$-linéarisation si et seulement si $\alpha^*(L)$ et $p_2^*(L)$ sont isomorphes en tant que fibrés en droites sur $G\times X$.
+\end{lem}
+\begin{proof}
+L'implication directe est contenue dans le lemme précédent. Pour la réciproque, on considère un isomorphisme $\Phi:\alpha^*(L)\rightarrow p_2^*(L)$ de fibrés en droites sur $G\times X$. Comme $\alpha(e,x)=x$ pour tout $x\in X$, on a une identification canonique $(e\times \id)^*\alpha^*(L)\simeq L$, d'où un automorphisme $(e\times \id)^*(\Phi):L\rightarrow L$ de fibré en droites. Cet automorphisme est donné d'après \ref{linebundle} par une fonction $f\in \Oo(X)^*$. En remplaçant $\Phi$ par $\Phi\circ p_2^\sharp(f^{-1})$, on peut supposer $f=1$. On obtient ainsi un morphisme  $\beta: G\times L \rightarrow L$ qui satisfait le diagramme commutatif suivant:
+	\begin{center}
+	\begin{tikzcd}
+  		G\times L \arrow[r, "\beta"] \arrow[d, "id\times\pi"]& L\arrow[d, "\pi"] \\ 
+  		G\times X \arrow[r, "\alpha"] & X
+	\end{tikzcd}\\
+	\end{center}
+De plus, on a modifié $\Phi$ de telle manière que l'on ait $\forall l\in L,\,\beta(e,l)=l$. Il reste maintenant à prouver que la condition d'associativité d'une action de groupe est satisfaite. On note $\beta_1:G\times G\times X\rightarrow X, (g,h,x)\mapsto \beta(g,\beta(h, x))$, $\beta_2:G\times G\times X\rightarrow X, (g,h,x)\mapsto \beta(gh, x)$, et par abus $\alpha:G\times G\times X\rightarrow X, (g,h,x)\mapsto \alpha(gh, x)$. On obtient deux diagrammes commutatifs:
+	\begin{center}
+	\begin{tikzcd}
+  		G\times G\times L \arrow[r, "\beta_1"] \arrow[d, "id\times\pi"]& L\arrow[d, "\pi"] \\ 
+  		G\times G\times X \arrow[r, "\alpha"] & X
+	\end{tikzcd}
+	\,\,\,\,\,\,\,\,\,\,\,\,
+	\begin{tikzcd}
+  		G\times G\times L \arrow[r, "\beta_2"] \arrow[d, "id\times\pi"]& L\arrow[d, "\pi"] \\ 
+  		G\times G\times X \arrow[r, "\alpha"] & X
+	\end{tikzcd}
+	\end{center}
+	On obtient ainsi deux isomorphismes $\gamma_1:G\times G\times L\rightarrow\alpha^*(L), (g,h,l)\mapsto ((g,h,\pi(l)), \beta_1(g,h,l))$ et $\gamma_2:G\times G\times L\rightarrow\alpha^*(L), (g,h,l)\mapsto ((g,h,\pi(l)), \beta_2(g,h,l))$. La condition d'associativité correspond à $\gamma_1\gamma_2^{-1}=\id$. Or $\gamma_1\gamma_2^{-1}$ est un automorphisme du fibré en droite $(G\times G\times L,\id\time \pi)$, donc correspond à une fonction $\phi\in \Oo(G\times G\times X)^*$. D'après \ref{}, il existe $\chi\in X^*(G\times G)$ et $\psi\in\Oo(X)^*$ tels que $\phi(g,h,x)=\chi(g,h)\psi(x)$ pour tout $g,h\in G$ et $x\in X$. En évaluant en $g=h=e$ on obtient $\psi=1$, puis comme $\phi(g,e,x)=1=\phi(e,g,x)$ pour tout $g\in G$ et $x\in X$, on obtient $\chi(g,e)=\chi(e,g)$ pour tout $g\in G$. Comme l'application naturelle $X^*(G)\times X^*(G)\rightarrow X^*(G\times G)$ est un isomorphisme, on conclut que $\chi=1$ et donc $\phi=1$, ce qui termine la preuve.
+\end{proof}
+
+\begin{prop}
+Soit $X$ une $G$-variété et $L$ un fibré en droite $G$-linéarisé sur $X$. Alors le $k$-ev des sections globales $\Gamma(X, L)$ a une structure naturelle de $G$-module.
+\end{prop}
+\begin{proof}
+
+\end{proof}
+
+\section{Diviseurs}
+
+\subsection{Diviseurs de Weil}
+
+Partant de l'observation qu'en géométrie classique dans le plan projectif, il existe une dualité entre les droites et les points, il parait intéressant de s'intéresser aux sous-variétés fermées de codimension 1 et de conférer une structure naturelle à cet ensemble. C'est l'idée de diviseur, dont on va voir qu'un cadre privilégié est celui d'une variété normale, que l'on supposera de plus irréductible suivant la remarque \ref{normaluniondisjointe}.
+
+\begin{defn}[Diviseur premier, WDiv($X$), diviseur de Weil, diviseur effectif]
+Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une sous-variété fermée irréductible de codimension 1. On définit WDiv($X$) le groupe libre engendré par les diviseurs premiers. Un élément de WDiv($X$) est appelé un diviseur de Weil. Enfin, un diviseur est dit effectif si il est à coefficients $\geq 0$. 
+\end{defn}
+On introduit maintenant pour chaque diviseur $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles sur $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. Soit $\eta$ le point générique de $D$, et $\mathcal{O}_{\eta,X}$ son anneau local. Par hypothèse et grâce aux propriétés de la localisation, il est noethérien normal et de dimension 1, c'est donc un anneau de valuation discrète. La valuation associée $v_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
+
+\begin{prop}\label{noetherienPWDivBienDef}
+Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors $v_D(f)=0$ sauf pour un nombre fini de diviseurs premiers $D$.
+\end{prop}
+\begin{proof}
+Soit $f=g/h\in k(X)^*$, où l'on peut supposer $X$ affine. Comme $v_D(f)=v_D(g)-v_D(h)$, on peut supposer $f\in k[X]$. Soit $D$ une diviseur premier et $p$ son point générique. Si $f\in k[X]_p^\times$ alors $v_D(f)=0$. Sinon, $f\in p$ et donc $D \subset \mathcal{V}_X(f)$. Or, d'après le théorème \ref{dimsousvariete}, les composantes irréductibles $Z_i$ de $\mathcal{V}_X(f)$ sont des diviseurs premiers. Ainsi $v_D(f)=0$ à moins que $D$ ne soit l'un des $Z_i$.
+\end{proof}
+
+Ainsi l'application $k(X)^*\rightarrow $ WDiv$(X),\, f\mapsto $ div$(f):=\sum_D v_D(f)D$ définit un morphisme de groupes. Son image est le \textit{groupe des diviseurs principaux} noté PDiv$(X)$. La relation modulo PDiv$(X)$ s'appelle \textit{l'équivalence linéaire}, et le groupe quotient Cl$(X)$ est le \textit{groupe des classes de diviseurs}.\\
+Cl$(X)$ est un invariant en général difficile à calculer. Ci-dessous on liste quelques outils et exemples.
+
+
+\begin{prop}
+Soit $X=\spec(A)$ une variété affine normale et irréductible. Alors $A$ est factoriel si et seulement si Cl$(X)=0$
+\end{prop}
+\begin{proof}
+C'est une conséquence de \ref{factonormal} et \ref{UFDPID}. Voir \cite{Hartshorne} II.6.2.
+\end{proof}
+
+\begin{cor}
+Cl$(\mathbb{A} ^n_k)=0 pour n\geq 1$
+\end{cor}
+
+\begin{thm}\label{divexactseq}
+Soit $X$ une variété normale et irréductible et $Z$ une sous-variété fermée propre. On pose $U:=X\setminus Z$. Alors:
+\begin{enumerate}
+\item Cl$(X)\rightarrow$ Cl$(U)$ défini par $\sum_i n_iD_i\mapsto \sum_i n_i(D_i\cap U)$, avec $D_i\cap U = 0$ si $D_i\cap U=\emptyset $, est un morphisme de groupe surjectif.
+\item Si codim$(Z,X)\geq 2$, then Cl$(X)\rightarrow$Cl$(U)$ est un isomorphisme.
+\item Soient $D_1,..., D_s$ les composantes irréductibles de $Z$ qui sont des diviseurs. Alors la suite ci-dessous exacte $$\bigoplus_{j=1}^s \ZZ D_j \xrightarrow{\pi} Cl(X) \xrightarrow{.\cap U} Cl(U) \rightarrow 0 $$
+\end{enumerate}
+\end{thm}
+\begin{proof}
+\begin{enumerate}
+\item Si $D\cap U\neq \emptyset$ alors dim$(X)$=dim$(U)$ et dim$(D)$=dim$(D\cap U)$ car ce sont des ouverts de variétés irréductibles donc la dimension est préservée. Ainsi cela définit une application WDiv$(X)\rightarrow$ WDiv$(U)$ qui est un morphisme par construction. De plus, comme un diviseur principal est envoyé sur un diviseur principal, on a bien le morphisme attendu. Il est surjectif car pour tout $D\in$ WDiv$(U)$ premier, on a $D=\overline{D}\cap U$.
+\item Dans ce cas on ne peut avoir $D\subset Z$ cause de la dimension donc $D\cap U\neq \emptyset$. Ainsi, le noyau du morphisme WDiv$(X)\rightarrow$ WDiv$(U)$ est exactement PDiv$(X)$ d'où l'isomorphisme.
+\item Le noyau de $.\cap U$ est exactement l'ensemble des $\pi(D)$ où $D$ est un diviseur dont le support est contenu dans $X\setminus U=Z$, d'où le résultat.
+\end{enumerate}
+\end{proof}
+
+\subsection{Faisceau d'algèbres divisorielles}
+
+La proposition suivante montre que l'on peut caractériser les sections du faisceau structural de $X$ en terme de diviseurs.
+
+\begin{prop}\label{caracfaisceaustructdiv}
+Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors 
+\begin{enumerate}
+\item div$(f)\geq 0\iff f \in\Oo_X(X)$
+\item div$(f)= 0\iff f\in\Oo_X(X)^\times$
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Il est suffisant de vérifier ces propriétés localement sur les ouverts affines. Or dans ce cas, $f$ est une section globale si et seulement si $f$ appartient à tous les anneaux locaux des diviseurs premier d'après \ref{factonormal}. Cette dernière condition revient à dire que div$(f)$ est effectif, cela prouve 1).  \\
+Pour la deuxième assertion, on remarque que div$(f)=0\iff$div$(f)\geq 0$ et div$(f^{-1})\geq 0$.
+\end{proof}
+
+Plus généralement, on définit pour chaque diviseur $D$ un $\Oo_X$-module $\Oo_X(D)$ dont les sections sur un ouvert $U\subset X$ sont définies par $$\Gamma(U,\Oo_X(D)):=\lbrace f\in k(X)^* \mid (\textrm{div}(f)+D)_{|U}\geq 0\rbrace\cup \lbrace 0 \rbrace$$
+On vérifie, grâce aux propriétés des valuations $v_D$, qu'il s'agit d'un sous $\Oo_X(U)$-module de $k(X)$, autrement dit un idéal fractionnaire de $\Oo_X(U)$, pour tout ouvert affine $U$. C'est donc un sous $\Oo_X$-module de la  $\Oo_X$-algèbre $k(X)$. Dans le cas où $X$ est affine on a une description explicite des sections globales:
+
+\begin{prop}\label{divaff}
+Soit $X$ une variété affine normale et irréductible, $A:=k[X]$. 
+\begin{enumerate}
+\item Soit un diviseur de Weil $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$, on a $\Gamma(X,\Oo_X(D))=\bigcap_{ht(p)=1}p^{-a_p}A_p$, où $a_p=0$ si $p\notin \lbrace p_1,...,p_r\rbrace$.
+\item Soit $(Y_i)_{i\leq r}$ des diviseurs premiers de Cartier et $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$, on a $\Gamma(X,\Oo_X(D))=\prod_{i=1}^n p^{-a_p}$.
+\item Pour un diviseur premier $Y_p$, on a $\Gamma(X,\Oo_X(-Y_p))=p$. Si de plus $p$ est inversible et $a\in \ZZ$, on a $\Gamma(X,\Oo_X(aY_p))=p^{-a}$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\begin{enumerate}
+\item Pour tout idéal premier $p$ de hauteur 1, $A_p$ est un DVR. On a donc $pA_p=(\pi)$ pour un certain $\pi \in A_p\subset k(X)$. Pour tout entier $a\in \ZZ$, on définit un sous $A_p$-module de $k(X)$ isomorphe à $pA_p$ en posant $p^aA_p:= (\pi^a)$. C'est un idéal fractionnaire de $A_p$ et on a pour $f\in k(X)^*$, $v_{Y_p}(f)\geq a \iff f\in p^a A_p$.
+Or, $f\in \Gamma(X,\Oo_X(D)) \iff $ div$(f)\geq -D \iff v_{Y_p}(f)\geq -a_p$, pour tout $p$ de hauteur 1, avec $a_p$ le coefficient de $Y_p$ dans $D$.
+\item Cela est une conséquence de \ref{isopic} et \ref{expicaff}.
+
+\item Dans ce cas, $Y_p$ est effectif, donc $\Gamma(X,\Oo_X(-Y_p))$ est un sous-module de $A$, donc un idéal. On a donc $\Gamma(X,\Oo_X(-Y_p))=pA_p\cap A=p$. Pour l'autre assertion, c'est immédiat car $\Oo_X(Y_p)$ est alors inversible d'après \ref{expicaff}, c'est à dire que $Y_p$ est de Cartier.
+\end{enumerate}
+\end{proof}
+
+On forme maintenant la somme directe des $\Oo_X(D)$ et on la munit d'un produit de la façon suivante: pour $f_1\in \Oo_X(D_1),\, f_2\in \Oo_X(D_2)$, on définit le produit de $f_1$ et $f_2$ comme l'élément $f_1f_2$ de $\Oo_X(D_1+D_2)$. On voit que cette algèbre est naturellement WDiv-graduée, avec pour chaque degré $D$ un contrôle prescrit quant au comportement des fonctions sur le support de $D$. Ceci mène à la définition suivante.
+
+\begin{defn}[Faisceau d'algèbres divisorielles]
+Soit $X$ une variété normale et irréductible. Le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est le faisceau de $\Oo_X$-algèbres $K$-graduées $$\bigoplus_{D\in K}S_D,\,\,\,\,\,\,\,\,\, S_D:=\Oo_X(D)$$ 
+\end{defn}
+
+
+\begin{ex}
+On considère la droite projective $\PP^1$, $D=\lbrace\infty\rbrace$ et $K=\ZZ D$. Cherchons la forme d'une section $f\in S_{nD}(\PP^1)$. On se place sur la carte affine $U_0=\PP^1\setminus \lbrace \infty\rbrace$ associée au repère projectif $(\infty, 0, 1)=(e_0,e_1,e_0+e_1)$, on note $z$ la coordonnée associée. Par hypothèse, $f$ est régulière sur $U_0$, c'est donc un polynôme en $z$. On fait agir l'homographie $z\mapsto w=1/z$  pour se placer sur la carte $U_1=\PP^1\setminus \lbrace e_1 \rbrace$ associée au repère $(0, \infty,1)$. Sur cette carte, la fonction qui coïncide avec $f$ sur $U_0\cap U_1$ est $g(w)=f(1/w)$. Or si on écrit $f(z)=z^kh(z)$ avec $z\nmid h(z)$, on obtient $g(w)=w^{-k-\textrm{deg}(h)}h(w)$. Comme on doit avoir $k+\textrm{deg}(h)\leq n$, on obtient que $f$ est un polynôme de degré $\leq n$.\\
+Ainsi on voit que l'application $\phi_n:k[t_0,t_1]_n\rightarrow S_{nD}(\PP^1), f\mapsto f(1,z)$ est un isomorphisme de $k$-ev. De plus, on a facilement $\phi_n\phi_m=\phi_{n+m}$. Finalement, $(\phi, \widetilde{\phi})$ avec $\phi: k[t_0,t_n]\rightarrow S(\PP^1), f\mapsto f(1,z)$ et $\widetilde{\phi}:\ZZ\rightarrow K, n\mapsto nD$ est un isomorphisme d'algèbres graduées.
+\end{ex}
+
+\begin{prop}
+Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors $\Oo_X(D)$ est un $\Oo_X$-module cohérent. En particulier, le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est une $\Oo_X$-algèbre quasi-cohérente.
+\end{prop}
+\begin{proof}
+On peut supposer $X=\spec A$ affine car le problème est local.  Alors d'après \ref{quasicoaff}, $\Oo_X(D)\simeq \tilde{M}$ où $M=\Gamma(X,\Oo_X(D))$. Il s'agit donc de montrer que $M$ est un $A$-module de type fini. Mais d'après \ref{divaff}, on voit que $\Gamma(X,\Oo_X(D))$ est un idéal fractionnaire de $A$, il est donc isomorphe à un idéal de $A$ en tant $A$-module après multiplication par une certaine fonction rationnelle. Comme $A$ est noetherien cela conclut la preuve. En fait, cela revient à constater que les fonctions $f\in \Gamma(X,\Oo_X(D))$ peuvent admettre des pôles uniquement sur les diviseurs premiers intervenant dans l'écriture de $D$, soit un nombre fini. L'ordre de ces pôle peut  donc être borné par un même $d\in \NN$.
+\end{proof}
+
+\begin{prop}\label{somorphismcodim2}
+Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors pour tout ouvert $U\subset X$ tels que $X\setminus U$ soit de codimension $\geq 2$ dans $X$, on a $\Gamma(U,\Oo_X(D))\simeq \Gamma(X,\Oo_X(D))$.
+\end{prop}
+\begin{proof}
+Encore une fois, on peut traiter le problème localement et supposer $X=\spec A$ affine. La restriction est injective et comme en \ref{extregularnormal}, on remarque que $U$ contient tous les premiers $p$ de hauteur 1. On écrit $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$ comme en \ref{divaff}, et on considère les injections dans les tiges $\Gamma(X,\Oo_X(D))_p=p^{-a_p}A_p$. On construit ainsi l'inverse de la restriction $\Gamma(U, \Oo_X(D))\xhookrightarrow{}\Gamma(X,\Oo_X(D))=\bigcap_{ht(p)=1}p^{-a_p}A_p$, en procédant comme en \ref{extregularnormal}.
+\end{proof}
+
+\subsection{Diviseurs de Cartier et groupe de Picard}
+
+Sur des variétés plus générales, par exemple avec des singularités, les anneaux locaux associés aux diviseurs premiers ne sont plus en général des DVR. On a alors des difficultés pour définir par exemple le diviseur d'une fonction rationnelle. On a néanmoins la notion générale de diviseur de Cartier, qui dans le cadre des variétés normales irréductibles correspondra aux diviseur de Weil "localement principaux".
+
+\begin{defn}[Diviseur de Cartier]
+Soit $X$ une variété irréductible. Un diviseur de Cartier sur $X$ est une section globale du faisceau $k(X)^\times/\mathcal{O}_X^\times$. Ainsi un diviseur de Cartier est la donnée d'une famille $(U_i, f_i)_{i\in I}$ telle que pour tout $i$, $U_i$ est un ouvert de $X$, $(U_i)_{i\in I}$ est un recouvrement de $X$, $f_i\in k(X)^\times$, et pour tout $i,j \in I$, $f_if_j^{-1}\in \mathcal{O}_X^\times(U_i\cap U_j)$.\\
+Un diviseur de cartier est dit principal si il provient d'une section globale de $k(X)^\times$ c'est à dire d'une fonction rationnelle. Deux diviseurs de Cartier sont dits linéairement équivalents si ils sont égaux modulo le sous-groupe des diviseurs principaux. Le groupe quotient se note CaCl$(X)$.
+\end{defn}
+
+
+
+
+
+Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang 1, c'est à dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)^\times$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceau inversible de $k(X)^\times$. Par cette correspondance, deux diviseurs sont linéairement équivalents si et seulement si les faisceaux inversibles sont isomorphes. On a ainsi définit une application injective CaCl$(X)\rightarrow$ Pic$(X)$ dont on voit facilement que c'est un morphisme de groupe. Comme $X$ est supposé irréductible, c'est un isomorphisme car tout faisceau inversible est isomorphe à un sous-faisceau inversible de $k(X)^\times$. En résumé on a le résultat suivant:
+
+
+\begin{prop}\label{isopic}
+Soit $X$ une variété irréductible. L'application $D\mapsto \mathcal{O}_X(D)$ définit un isomorphisme de groupe CaCl$(X)\simeq $ Pic$(X)$.
+\end{prop}
+
+
+On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur premier $Y$, on choisit un indice $i\in I$ tel que $U_i\cap Y\neq \emptyset$ et on prend $v_Y(f_i)$ pour coefficient de $Y$. Cette somme est finie par la même preuve que \ref{noetherienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \Oo_X^\times(U_i\cap U_j)$ par définition, donc $v_Y(f_i)=v_Y(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir CaCl$(X)$ comme un sous-groupe de Cl$(X)$ (on vérifie que les diviseurs principaux se correspondent).
+
+Ce sous-groupe est propre en général (cf \cite{Hartshorne} 6.11.3). En revanche, si $X$ est lisse, tout diviseur de Weil est localement principal . En effet dans ce cas, les anneaux locaux sont factoriels, on obtient ainsi en tout point une équation locale d'un diviseur premier car un idéal premier de hauteur 1 d'un anneau factoriel est principal, ce qui permet de conclure.\\
+
+\begin{prop}
+Soit $X$ une variété normale irréductible, $D,E\in\wdiv X$ avec $D$ de Cartier. Alors le morphisme naturel $\alpha:\Oo_X(D)\otimes_{\Oo_X}\Oo_X(E)\rightarrow \Oo_X(D+E)$ est un isomorphisme.
+\end{prop}
+\begin{proof}
+Écrivons $D=(U_i,f_i)_{i\in I}$. Alors sur chaque $U_i$, $\alpha$ induit un isomorphisme de $\Oo_X$-module. En effet on a un morphisme inverse, il s'agit de la multiplication par $f_i^{-1}$ composée avec l'isomorphisme  $\Oo_{U_i}(E)\simeq   \Oo_{U_i}(D)\otimes_{\Oo_{U_i}}\Oo_{U_i}(E)$.
+\end{proof}
+
+Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée section canonique et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{X|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des $\phi_i$, et donc du couple $(\Ll,s)$ à isomorphisme près. On l'appelle le diviseur des zéros de $s$ et on le note $\divi_D(s)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
+
+$$
+\left\{
+\begin{matrix}
+\text{Diviseurs de Cartier effectif sur }X
+\end{matrix}
+\right\}
+\leftrightarrow
+\left\{
+\begin{matrix}
+\text{couples }(\mathcal{L}, s)\text{ constitués d'un faisceau}\\
+\text{inversible et d'une section globale}
+\end{matrix}
+\right\}
+$$
+
+Considérons un diviseur de Cartier $D$ quelconque et $\Oo_X(D)$ le sous-faisceau inversible de $k(X)$ qui lui correspond. En faisant varier $s$ non-nulle dans les couples $(\Oo_X(D),s)$ tels que ci-dessus, on obtient tous les diviseurs de Cartier effectifs linéairement équivalent à $D$. En effet, $\divi_D(s)$ est par définition un diviseur effectif linéairement équivalent à $D$. Réciproquement un diviseur effectif linéairement équivalent à $D$ s'écrit $D+\divi(s)\geq 0$ où $s$ est donc une section globale $s$ de $\Oo_X(D)$.
+
+\subsection{L'espace projectif $\PP_k^n$}
+
+\subsubsection{Faisceaux inversibles sur $\PP_k^n$}
+
+\subsubsection{Morphismes vers l'espace projectif}
+\label{morphismeproj}
+Soit $X$ une variété munie d'un morphisme $(f,f^\sharp):X\rightarrow \PP^n_k$, où $\PP^n_k=$Proj$k[x_0,...,x_n]$. On considère le faisceau tordu de Serre $\Oo(1)$ sur $\PP^n_k$. C'est un faisceau inversible engendré par les sections globales $x_0,...,x_n$. $f^*\Oo(1)$ est également inversible et on a un morphisme canonique de $\Oo_{\PP^n_k}$-module $\alpha:\Oo(1)\rightarrow f_*f^*\Oo(1)$ où la structure de $\Oo_{\PP^n_k}$-module sur $f_*f^*\Oo(1)$ est donnée par $\lambda.t=f^\sharp(\lambda)t$ pour tout ouvert $V\subset \PP^n_k$, $\lambda\in \Oo_{\PP^n_k}(V)$, $t\in f_*f^*\Oo(1)(V)$. On définit des sections globales $f^*(x_0):=s_0:=\alpha(\PP^n_k)(x_0),...,f^*(x_n):=s_n:=\alpha(\PP^n_k)(x_n)$ de $f^*\Oo(1)$ dont on voit facilement qu'elles engendrent $f^*\Oo(1)$.\\
+Considérons un faisceau inversible $\Ll$ sur une variété $Y$, une section globale $l$, et un morphisme $(g,g^\sharp):X\rightarrow Y$. On définit l'ouvert 
+$$Y_l:=\lbrace y\in Y\mid \Oo_{Y,y}l_y=\Ll_y\rbrace=\lbrace y\in Y\mid l_y\notin m_y\Ll_y\rbrace$$
+C'est tout simplement le complémentaire du support du diviseur des zéros associé au couple $(\Ll,l)$. Si $\Ll=\Oo_Y$ il s'agit de l'ouvert principal $Y_l$, et on a de plus $g^{-1}(Y_l)=X_{g^\sharp(l)}=X_{g^*(l)}$ car $g^*\Oo_Y=\Oo_X$ et $\alpha=g^\sharp$ dans ce cas. Revenant dans le cas général, on voit facilement que $g^*\Ll$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\Ll$, on voit d'après ce qui précède que $g^{-1}(Y_l)=X_{g^*(l)}$. D'autre part, si $l_1,...,l_n$ sont des sections globales qui engendrent $\Ll$, on voit que $(Y_{l_i})$ est un recouvrement de $Y$ qui trivialise $\Ll$. En effet, sur chaque $Y_{l_i}$, on a un isomorphisme $\Oo_{Y|Y_{l_i}}\rightarrow \Ll_{Y|Y_{l_i}}$, $\lambda \mapsto \lambda l_i$, et par hypothèse, l'intersection des complémentaires des $Y_{l_i}$ est vide. Enfin, on note sans ambiguïté $l_j/l_i$ l'unique élément de $\Oo_{Y|Y_{l_i}}(Y_l)$ tel que $l_j/l_i.l_i=l_j$ par l'isomorphisme précédent.\\
+Revenons au cas initial et notons $U_i=D_+(x_i)=\Oo(1)_{x_i}$. La $k$-algèbre $\Oo_{P^n_k}(U_i)$ est engendrée par les éléments $x_j/x_i$ et on a $s_j/s_i.s_i=s_j=\alpha(U_i)(x_j)=\alpha(U_i)(x_j/x_i.x_i)=f^\sharp(x_j/x_i).\alpha(U_i)(x_i)=f^\sharp(x_j/x_i).s_i$. On a donc nécessairement $f^\sharp(x_j/x_i)=s_j/s_i$. Comme les $U_i$ sont affines, cela définit des morphismes $f_i:X_{s_i}\rightarrow P^n_k$ en composant avec l'inclusion. C'est morphismes se recollent en un unique morphisme, car ils coïncident sur les $X_{s_i}\cap X_{s_j}$. Autrement dit, on récupère $f$ par la donnée des $s_i$, et $f$ est ainsi l'unique morphisme tel que $f^*(x_i)=s_i$.\\
+Réciproquement montrons que la donnée d'un faisceau inversible $\Ll$ sur $X$ et de sections globales $l_0,...,l_n$ qui l'engendrent définissent un unique morphisme $f:X\rightarrow \PP^n_k$ tel que $\Ll\simeq f^*\Oo(1)$, ce dernier isomorphisme étant celui qui envoie $f^*(x_i)$ sur $l_i$. Si $f$ existe avec ces propriétés, il est unique d'après ce qui précède. Pour l'existence, on construit comme précédemment des morphismes $f_i:X_{l_i}\rightarrow U_i$ qui se recollent en un morphisme $f:X\rightarrow \PP^n_k$. Par construction, $\Ll$ et $f^*\Oo(1)$ se trivialisent sur le même recouvrement $(f^{-1}(U_i)=X_{l_i}=X_{f^*(x_i)})_i$. On a des isomorphismes locaux $\phi_i:\Ll_{|f^{-1}(U_i)}\rightarrow f^*\Oo(1)_{|f^{-1}(U_i)}$, $l_i\mapsto f^*x_i$. Ce sont des sections locales de $\mathscr{H}om_{\Oo_X}(\Ll,\Oo(1))$ sur un recouvrement de $X$. Pour vérifier qu'elles coïncident aux intersections $X_{l_i}\cap X_{l_j}$, on remarque que l'on a $l_i/l_j=f^\sharp(U_i\cap U_j)(x_i/x_j)= f^*(x_i)/f^*(x_j)\in \Oo_X(X_{l_i}\cap X_{l_j})^\times$. Ces sections se recollent donc en un unique isomorphisme $\Ll\simeq f^*\Oo(1)$ qui est bien l'isomorphisme recherché.
+
+Notons que cette propriété caractérise l'espace projectif $\PP^n_k$ à isomorphisme près. En effet il représente le foncteur (voir stacks)...
+
+\subsubsection{Variétés quasi-projectives, faisceaux inversible très amples}
+
+\begin{defn}
+Soit $X$ une variété et $\Ll$ un faisceau inversible sur $X$ engendré par une famille finie de sections globales. Si ces sections définissent une immersion $X\xhookrightarrow{}\PP_k^n$, on dit que $\Ll$ est très ample. Cela revient à dire que $\Ll\simeq i^*\Oo(1)$  pour une immersion $i:\xhookrightarrow{}\PP_k^n$.\\
+Si $X$ est normale et irréductible, un diviseur de Cartier $D$ est dit très ample si on a $\Oo_X(D)\simeq i^*\Oo(1)$ pour une immersion $i:\xhookrightarrow{}\PP_k^n$.
+\end{defn}
+
+Supposons maintenant $X$ lisse (donc normale) et projective, $D\in \wdiv(X)$, $\Oo_X(D)$ le faisceau inversible associé. On a vu que l'ensemble des diviseurs effectifs linéairement équivalents à $D$ est $\lbrace \divi_D(s)\mid s\in\Gamma(X,\Oo_X(D))\setminus\lbrace0\rbrace \rbrace$. D'autre part deux sections globales $s, s'$ non nulles ont même diviseur des zéros si et seulement si elles sont colinéaires dans le $k$-ev $\Gamma(X, \Oo_X(D))$, en effet dans ce cas $s/s'\in \Oo_X^\times(X)=k^*$, car $k$ est algébriquement clos. Notons enfin que $\Gamma(X, \Oo_X(D))$ est de dimension finie (\cite{Hartshorne} II.5.19). Ainsi l'ensemble des diviseurs effectifs linéairement équivalent à $D$ est naturellement muni d'une structure d'espace projectif, cela amène la définition suivante:
+\begin{defn}[Système linéaire, point de base]
+Soit $X$ une variété lisse et projective, et $D$ un diviseur. Le système linéaire complet définit par $D$ est l'ensemble des diviseurs effectifs linéairement équivalents à $D$, on le note $|D|$. Un système linéaire est une partie de $|D|$ correspondant à un sous espace projectif. On dit que $p\in X$ est un point de base d'un système linéaire $\PP(V)\subset |D|$ si l'intersection des $X\setminus X_s$ pour $s\in V$ est non vide. 
+\end{defn}
+
+Autrement dit dans ce langage, se donner un morphisme $X\rightarrow \PP^n_k$ est équivalent à se donner un système linéaire $\PP(V)\subset |D|$ sans point de base et une base de $V$.
+
+
+\section{Le spectre relatif d'une algèbre divisorielle}
+
+On souhaiterait réaliser géométriquement un faisceau d'algèbre divisorielles $\Ss$ d'une variété normale irréductible $X$ associé à un sous-groupe $K\leq \wdiv(X)$ de type fini. Une idée naturelle est de prendre le spectre relatif $(\widetilde{X}, p)$ de ce faisceau d'algèbres quasi-cohérent. Toutefois, ce spectre relatif ne définira pas une variété en général. Il faudrait pouvoir recouvrir $X$ par un nombre fini d'ouverts affines $U_i$ tels que $\mathcal{R}(U_i)$ soit de type fini réduit, on dit alors que $\Ss$ est localement de type fini. Sous certaines conditions, on pourra s'en assurer. Par exemple si $X$ est lisse, tous les diviseurs sont de Cartier, et notons dans ce cas $D_1,...,D_s$ une base de $K$ et $U$ un ouvert sur lequel chaque $D_i$ est principal. On a localement un isomorphisme d'algèbres graduées:
+\begin{equation} \label{eq:1}
+\Oo_X(U)\otimes_k k[t_1^{\pm},...,t_s^{\pm}] \rightarrow \mathcal{R}(U),\, g\otimes t_1^{\nu_1}...t_s^{\nu_s}\mapsto gf_1^{-\nu_1}...f_s^{-\nu_s}
+\end{equation}
+
+Par recollement on obtient que $\widetilde{X}$ est le produit $L_1^\times\times...\times L_s^\times$ où, avec les notation de l'exemple d'introduction, $L_i$ est le fibré en droite correspondant à $\Oo_X(D_i)$. 
+
+\begin{cons}\label{specrelatifdivi}
+Soit $X$ une variété normale et irréductible, $K\subset \wdiv(X)$ un sous-groupe de type fini, $\Ss$ le faisceau d'algèbres divisorielles associé. On suppose que $\Ss$ est localement de type fini.
+
+Alors le spectre relatif $\widetilde{X}=\spec_X(\Ss)$ muni de son morphisme structural $p$ est naturellement équipé d'une action du tore $H:=\spec k[K]$ pour laquelle $(X,p)$ est un bon quotient.
+\end{cons}
+\begin{proof}
+En effet, $p$ est affine par construction et sur chaque $U_i$, $\Rr(U_i)$ est $K$-graduée avec pour éléments homogènes de degré zéro $\Ss(U_i)_0=\Oo_X(U_i)$. Ces quotients locaux coïncident aux intersections et se recollent globalement en $p$.
+\end{proof}
+
+Reprenons les données de la construction précédente en supposant de plus que $X$ est lisse. Alors, l'isomorphisme \ref{eq:1} nous dit que localement on a un diagramme commutatif dans lequel les flèches sont $H$-équivariantes et $H$ agit sur le produit par multiplication sur le premier facteur:
+\begin{center}
+	\begin{tikzcd}
+		p^{-1}(U) \arrow[r,"\simeq"] \arrow[d,"p"] & H\times U \arrow[dl, "pr_U"] \\
+		U
+	\end{tikzcd}
+\end{center}
+
+\begin{prop}\label{preimagecodim2}
+Avec les données de \ref{specrelatifdivi}, $\widetilde{X}$ est une variété irréductible et normale. De plus, pour tout fermé $A\subset X$ de codimension $\geq 2$, $p^{-1}(A)$ est aussi de codimension $\geq 2$.
+\end{prop}
+\begin{proof}
+Tout d'abord, $\widetilde{X}$ est séparé comme spectre relatif sur une variété. Ensuite, on recouvre l'ouvert des points réguliers $X_{reg}$ par un nombre fini d'ouverts $U_i$ comme dans le diagramme ci-dessus, ce qui est possible car tout ouvert de $X$ est quasi-compact. Ainsi les $p^{-1}(U_i)$ sont irréductibles, et leur réunion $p^{-1}(X_{reg})$ également car leur intersection est non-vide (cf \ref{}). De plus, $p^{-1}(X_{reg})$ est lisse car c'est vrai localement par le diagramme. On recouvre maintenant $X$ par des ouverts affines $V_1,...,V_s$ et on a d'après \ref{somorphismcodim2}, $\Ss(V_i\cap X_{reg})=\Ss(V_i)=\Oo_{\widetilde{X}}(p^{-1}(V_i))$. Ces anneaux sont normaux et intègre car $p^{-1}(X_{reg})$ est irréductible et lisse. Comme les $p^{-1}(V_i)$ recouvrent $\widetilde{X}$ on en déduit la normalité et l'irréductibilité.
+Pour la dernière assertion, c'est une conséquence directe du fait que $p_*\Oo_{\widetilde{X}}=\Ss$ et de \ref{cohomologie locale}.
+\end{proof}
+
+Remarquons qu'une section de $s\in \Ss(U)$ homogène de degré $D\in K$ sur un ouvert $U\subset X$ peut être vue à la fois comme une fonction rationnelle sur $X$ vérifiant $\divi(s)+D\geq 0$ et comme une fonction régulière sur $\widetilde{X}$ qui est homogène de degré $D$ pour l'action de $H$. De plus, si $D$ est Cartier, $\divi(s)+D$ est le diviseur des zéros de $s$ sur $X$. Dans tous les cas on adopte la notation $\divi_D(s)$ pour ce diviseur effectif et $X_{D,s}$ pour le complémentaire de son support. On explore maintenant les relation entre ces points de vue. Notons tout d'abord que comme $p$ est un morphisme dominant de variétés irréductibles, on peut définir le pullback $p^*(D)$ d'un diviseur de Cartier simplement par le pullback de ses équations locales. Pour un diviseur de Weil $D$, on considère sa restriction $D'$ à $X_{reg}$ et on définit $p^*(D)$ comme l'unique diviseur de Weil à correspondant à $p^*(D')$ via l'isomorphisme $\wdiv(\widetilde{X})\simeq\wdiv(p^{-1}(X_{reg}))$. Le pullback envoie les diviseurs principaux sur des diviseurs principaux et on obtient un morphisme de groupes $\clg(X)\rightarrow \clg(\widetilde{X})$.
+
+\begin{prop}\label{pstarprincipal}
+Avec les données de \ref{specrelatifdivi}, pour tout $D\in K$ et $s\in\Ss_D(X)$, on a $\divi(s)=p^*(\divi_D(s))$. Si de plus $X_s$ est affine, on a $\supp(\divi(s))=p^{-1}(\supp(\divi_D(s))$.
+\end{prop}
+\begin{proof}
+Comme $\widetilde{X}\setminus p^{-1}(X_{reg})$ est de codimension $\geq 2$ on peut supposer pour ce problème $X$ et donc $\widetilde{X}$ lisse. On écrit $D=(U_i, f_i)$, on a ainsi $s_i:=s_{|U_i}=\alpha_i f_i^{-1}$ avec $\alpha_i\in \Oo_X(U_i)$, et localement on a $p^*(\divi_D(s)_{|U_i})=p^*(\divi(\alpha_i))=\divi(p^\sharp(\alpha_i))=\divi(\alpha_i)=\divi(\alpha_i f_i^{-1})=\divi(s_{|U_i})$, l'avant dernière égalité étant due au fait que $f_i$ est inversible sur $p^{-1}(U_i)$. En effet, sur $U_i$ on a $D=\divi(f_i)$ donc $f_i\in \Ss_{-D}(U_i)\subset\Oo_{\widetilde{X}}(p^{-1}(U_i))$ et $f_i^{-1}\in \Ss_D(U_i)\subset\Oo_{\widetilde{X}}(p^{-1}(U_i))$.
+
+La deuxième assertion, il faut montrer $p^{-1}(X_{D,s})=\widetilde{X}_s$. On remarque $s^{-1}\in \Ss_{-D}(X_{D,s})$ donc $s$ est inversible sur $p^{-1}(X_{D,s})$, ce qui montre $p^{-1}(X_{D,s})\subset \widetilde{X}_s$. Par ailleurs, $\divi_D(s)$ est de Cartier sur $X_{reg}$ et son pullback est le pullback de ses équations locales, on obtient donc $p^{-1}(X_{D,s})\cap p^{-1}(X_{reg})=\widetilde{X}_s \cap p^{-1}(X_{reg})$. Ainsi $\widetilde{X}_s \setminus p^{-1}(X_{D,s})$ est le complémentaire d'un ouvert affine de codimension $\geq 2$, donc est vide d'après \ref{codimaffinenormal}.
+\end{proof}
+
+\begin{cor}\label{zerosspecrelatif}
+Avec les données de \ref{specrelatifdivi}. Soit $\tilde{x}\in\widetilde{X}$ tel que $H.\tilde{x}$ est fermé dans $\widetilde{X}$. Pour tout $D\in K, f\in \Ss_D(X)$ non-nulle, on a:
+$$f(\tilde{x})=0 \iff p(\tilde{x})\in \supp(\divi_D(f))$$
+\end{cor}
+\begin{proof}
+Remarquons que l'on a $\supp(p^*(D))\subset p^{-1}(\supp(D))$. Puis comme $p$ est surjective, on trouve $p(\supp(p^*(D)))\subset \supp(D)$. En effet, on peut supposer $D$ effectif et on a $p(\supp(p^*(D)))=p(\overline{\supp(p^*(D'))})\subset\overline{p(\supp(p^*(D')))}$, où on a noté $D'=D\cap X_{reg}$. Or $x\in \supp(p^*(D'))\iff x\in \Vv_{p^{-1}(U_i)}(p^\sharp(f_i))$ en écrivant $D'=(U_i,f_i)_i$. On en déduit $p(x)\in \Vv_{U_i}(f_i)$, d'où $p(x)\in\supp(D')$. Comme $\overline{\supp(D')}=\supp(D)$, on a bien le résultat annoncé. De plus, $p(\supp(p^*(D)))$ et $\supp(D)$ coïncident sur l'ouvert dense $X_{reg}$ et $p(\supp(p^*(D)))$ est fermé d'après \ref{goodquotientthm}. On a donc l'égalité:$$p(\supp(p^*(D)))=\supp(D)$$
+Ainsi en appliquant la proposition précédente, on a $p(\supp(\divi(f)))= \supp(\divi_D(f))$ et donc $f(\tilde{x})=0 \implies p(\tilde{x})\in\supp \divi_D(f)$. Réciproquement, si $p(\tilde{x})\in\supp \divi_D(f)$, on a $p(\tilde{x})=p(\tilde{x}')$ pour un $\tilde{x}'\in \supp(\divi(f))$. Toujours d'après \ref{goodquotientthm} et en utilisant que $H.\tilde{x}$ est fermé on obtient $H.\tilde{x}\subset\overline{H.\tilde{x}'}$ ce qui prouve $f(\tilde{x})=0$ car $f$ est nulle sur $H.\tilde{x}'$, étant homogène et s'annulant en $\tilde{x}'$.
+\end{proof}
+
+Toujours avec les données de \ref{specrelatifdivi}, on établit maintenant un résultat important sur le groupe des classes de $\widetilde{X}$. On a d'abord besoin d'un lemme préliminaire assurant l'existence de $H$-linéarisations sur les fibrés en droites sur $\widetilde{X}$.
+
+\begin{lem}\label{existenceGLinTore}
+Soit $X$ une variété irréductible munie d'une action d'un tore $H$, et $(L,\pi)$ un fibré en droites sur $X$. Alors il existe une $H$-linéarisation de cette action sur $L$.
+\end{lem}
+\begin{proof}
+On note $p_2:H\times X\rightarrow X$ la projection. En utilisant \cite{Hartshorne} II.6.6, on obtient in isomorphisme $p_2^*:\pic(X)\rightarrow \pic(H\times X)$, d'où avec les notations de \ref{existenceGLin}, $\alpha^*(L)\simeq p_2^*(M)$ pour un certain fibré en droites $M$ sur $X$. En prenant l'image inverse par $e\times \id$ on obtient un isomorphisme de fibré en droites $L\simeq M$. On a ainsi un isomorphisme de fibrés en droites $\alpha^*(L)\simeq p_2^*(L)$, ce qui conclut la preuve d'après \ref{existenceGLin}.
+\end{proof}
+
+\begin{thm}\label{clgtrivial}
+Avec les données de \ref{specrelatifdivi} et en supposant de plus que $X$ est lisse. Les assertions suivantes sont équivalentes:
+\begin{enumerate}
+\item La projection $c:K\rightarrow \clg(X)$ est surjective.
+\item Le groupe des classes $\clg(\widetilde{X})$ est trivial.
+\end{enumerate}
+\end{thm}
+\begin{proof}
+Supposons la projection $c$ surjective. Soit $\widetilde{D}\in \wdiv(\widetilde{X})$ un diviseur. Il est de Cartier par hypothèse et on veut montrer qu'il est principal. $\widetilde{X}$ est muni d'une action du tore $H\spec k[K]$ par la $K$-graduation de $\Oo_{\widetilde{X}}$. En utilisant \ref{existenceGLinTore} et \ref{preimagecodim2},  on muni $L$ d'une H-linéarisation et on obtient un $H$-module $\Gamma(\widetilde{X}, \Oo_{\widetilde{X}}(\widetilde{D}))$ d'après \ref{}. On en déduit que pour tout $h\in H$, $f\in \Gamma(\widetilde{X}, \Oo_{\widetilde{X}}(\widetilde{D}))$, on a $\divi_{\widetilde{D}}(h.f)=h.\divi_{\widetilde{D}}(f)$. Choisissant $f$ homogène pour cette représentation (cf \ref{}) on a ainsi construit un diviseur $\divi_{\widetilde{D}}(f)$ fixe pour l'action de $H$ et linéairement équivalent à $D$. On peut donc supposer que $\widetilde{D}$ est $H$-invariant. En utilisant le diagramme du début de cette partie qui s'applique localement ici et en remarquant que $H$ agit transitivement sur lui même on conclut que via cette isomorphisme, $\widetilde{D}$ est de la forme $H\times Z$. On en déduit en posant $D=p(\widetilde{D})$ que $\widetilde{D}=p^*(D)$. Or, par hypothèse $D$ est linéairement équivalent à un $D'\in K$, on a ainsi le résultat car $p^*(D')$ est principal d'après la proposition précédente.
+
+Supposons maintenant $\clg(\widetilde{X})$ trivial.
+\end{proof}
+
+On remarque que si on ne suppose plus que $X$ est lisse, l'implication $1\implies 2$ reste vraie. En effet, comme $p^{-1}(X_{sing})$ est de codimension $\geq 2$ on peut alors supposer $X$ et donc $\widetilde{X}$ lisse car on a un isomorphisme $\clg(\widetilde{X})\simeq\clg(\widetilde{X}\setminus p^{-1}(X_{sing}))$.
+
+\begin{cor}
+Soit $X$ vérifiant $(\dagger)$. Alors $\widetilde{X}$ est quasi-affine.
+\end{cor}
+\begin{proof}
+On recouvre $X$ par des ouverts affine $X_1,...,X_r$. D'après \ref{codimaffinenormal} chaque $X\setminus X_i$ est purement de codimension $1$, c'est donc le support d'un diviseur effectif $D_i\in \wdiv(X)$. Sur $X_{reg}$, on a donc $\supp(D_i)=\supp(\divi_{D_i}(1))$ où $1$ est vu comme une section globale de $\Oo_X(D_i)$. Cette égalité reste vrai sur $X$ grâce aux isomorphismes $\Gamma(X ,\Oo_X(D_i)\simeq\Gamma(X_{reg} ,\Oo_X(D_i))$ et $\wdiv(X)\simeq\wdiv(X_{reg})$. Ainsi, d'après \ref{pstarprincipal}, $\widetilde{X}$ est recouvert par des $\widetilde{X}_{f_i}$ qui sont affines car les $X_i=X_{D_i,1}$ le sont. Maintenant, notons que la propriété de finitude locale du faisceau structural de $\widetilde{X}$ reste vrai sur tout recouvrement affine de $\widetilde{X}$, on a donc en particulier pour tout $i$, $\Oo(\widetilde{X}_{f_i})=k[(g_{ij})_{1\leq j\leq n}]$. Comme $f_i$ est inversible sur chaque $\widetilde{X}_{f_i}$, on ne change rien en multipliant les $g_{ij}$ par une puissance $f_i^m$, ce qui permet de supposer que les $g_{ij}$ proviennent de sections globales en prenant un $m$ suffisamment grand (Cf \ref{}). On a ainsi construit une sous-algèbre de type fini $R=k[(g_{ij})_{1\leq i\leq r, 1\leq j\leq n}]$ de $\Oo(\widetilde{X})$ telle que pour tout $i$, on a $R_{f_i}=\Oo({\widetilde{X}_{f_i}})=\Oo({\widetilde{X}})_{f_i}$, la dernière égalité venant de \ref{cox 1.3.1.7}. On en déduit des immersions ouvertes $\widetilde{X}_{f_i}\xhookrightarrow{} \spec(R)$ qui se recollent en une immersion ouverte $\widetilde{X}\xhookrightarrow{} \spec(R)$ d'où le résultat.
+\end{proof}
+
+\begin{cor}
+Soit $X$ vérifiant $(\dagger)$, $x\in X$, $K_x^0\subset K$ le sous-groupe des diviseurs localement principaux en $x$, et $\tilde{x}\in p^{-1}(x)$ tel que $H.\tilde{x}$ est fermé. Alors le stabilisateur $H_{\tilde{x}}$ est égal à $\spec k[K/K_x^0]$.
+\end{cor}
+\begin{proof}
+Comme $H$ agit localement sur $\widetilde{X}$ on peut se placer sur un voisinage affine de $x$, on suppose ainsi $X$ et $\widetilde{X}$ affines. Ainsi, en appliquant \ref{staborbitegroup}, on a $H_{\tilde{x}}=\spec k[K/K_{\tilde{x}}]$, où $K_{\tilde{x}}$ est le groupe d'orbite de $\tilde{x}$. Supposons que $D\in K$ soit principal sur ce voisinage de $x$, c'est à dire $D=\divi(g)$ avec $g\in k(X)$. Choisissons $\alpha \in k[X]$ tel que $\alpha(x)\neq 0$. Alors $f:=\alpha g^{-1}\in \Ss_D(X)$ et $\divi_D(f)=\divi(\alpha)$. En utilisant \ref{zerosspecrelatif}, on obtient $f(\tilde{x})\neq 0$ et donc $D\in K_{\tilde{x}}$. Réciproquement, prenons $D\in K_{\tilde{x}}$, c'est à dire $f(\tilde{x})\neq 0$ pour un $f\in \Ss_D(X)$. Alors $x\notin \divi_D(f)$, et on a $D=-\divi(f)$ au voisinage de $x$. Cela qui montre que $D$ est localement principal.
+\end{proof}
+
+\begin{cor}
+Soit $X$ vérifiant $(\dagger)$, et telle que tout diviseur soit de Cartier, par exemple si X est lisse. Alors $H$ agit librement sur $\widetilde{X}$.
+\end{cor}
+
+
+\subsection{Propriétés algébriques de l'anneau de Cox}
+
+\begin{prop}
+Soit $X$ vérifiant $(\dagger)$. Alors:
+\begin{enumerate}
+\item L'anneau de Cox $\Ss(X)$ est factoriel.
+\item Le groupe des unités de l'anneau de Cox est $\Rr(X)^\times=\Gamma(X,\Oo^\times)$
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\begin{enumerate}
+\item On peut supposer $X$ lisse car $X_{sing}$ est de codimension $\geq 2$ donc $\Gamma(X, \Rr)=\Gamma(X_{reg}, X)$. Ainsi $\widetilde{X}$ est lisse (par vérification locale immédiate) et le théorème \ref{clgtrivial} s'applique. Soit $f\in \Rr(X)=p_*\Oo_{\widetilde{X}}(X)=\Oo_{\widetilde{X}}(\widetilde{X})$. On a donc le diviseur effectif $\divi(f)= \sum n_iD_i=\sum n_i\divi(f_i)=\divi(\prod f_i^{n_i})$ où les $D_i$ sont des diviseurs premiers, chaque $f_i\in \Rr(X)$ d'après \ref{caracfaisceaustructdiv} et est irréductible. L'unicité de l'écriture sur $\wdiv(X))$ donne l'unicité de l'écriture $f=u\prod f_i^{n_i}$ où $u\in \Rr(X)^\times$.
+\item Une inclusion est évidente. Pour l'autre prenons $f\in\Rr(X)^\times$, qui est homogène d'après \ref{Coxgraded}, disons de degré $D$. Alors, $fg=1\in \Rr_0(X)$ pour un $g\in\Rr(X)^\times$ homogène de degré $-D$. Ainsi on a $0=\divi_0(1)=\divi_{D-D}(fg)=\divi_D(f)+\divi_{-D}(g)$. Les deux derniers diviseurs étant effectifs, on a $\divi_D(f)=0$ et donc $D=-\divi(f)$, ce qui donne $f\in\Rr_0(X)=\Oo(X)^\times$ d'où le résultat.
+\end{enumerate}
+\end{proof}
+
+\begin{ex}
+Reprenons le cas du cône affine de l'exemple introductif.  $\Rr(Y)$ est l'algèbre de polynômes sur $k$ à $4$ indéterminés, donc est factoriel en particulier.  Par ailleurs, $\Oo(Y)^{\times}=k^*$ car en inversant par exemple $t_1$  on obtient $Y_{t_1}\simeq \AAA^{1}\setminus \lbrace0\rbrace\times\AAA^{2}$, d'où le résultat.
+\end{ex}
+
+\begin{prop}
+Soit $X$ vérifiant $(\dagger)$. Alors:
+\begin{enumerate}
+\item Soient $f\in \Rr_D(X)$ et $g\in \Rr_E(X)$ non nulles. Alors $f\mid g\iff \divi_D(f)\leq\divi_E(g)$.
+\item Soit $f\in \Rr_D(X)$ non nulle. Alors $f$ est premier si et seulement si $\divi_D(f)$ est premier.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Soit $f,g$ des fonctions régulières non-nulles sur $\widetilde{X}$. Comme $\widetilde{X}$ est intègre, on peut les voir comme des éléments de $k(X)^*$. Ainsi $f\mid g$ dans $\Rr(X)$ si et seulement si $\divi(f^{-1}g)\geq 0$. Prenant $f,g$ comme dans l'énoncé et en utilisant \ref{pstarprincipal}, que c'est équivalent à $\divi_D(f)\leq\divi_E(g)$. La preuve du deuxième énoncé est similaire.
+\end{proof}
