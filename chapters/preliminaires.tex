@@ -27,7 +27,7 @@ Alors, $A$ est factoriel $\iff$ Tout idéal premier de hauteur 1 est principal.
 \begin{proof}
 \end{proof}
 
-\subsection{Anneaux locaux}
+\subsection{Anneaux locaux, Anneaux de valuation discrète}
 
 \begin{thm}\label{reglocufd}
 Un anneau local régulier est factoriel.
@@ -50,20 +50,14 @@ Voir \cite{Matsumura} 11.3
 
 \section{Algèbres graduées}
 
-\begin{prop}\label{noethgrad}
-Soit $A$ un anneau $\ZZ$-gradué. Les assertions suivantes sont équivalentes:\\
-(i) $A$ est noetherien\\
-(ii) $A_0$ est noetherien et $A$ est de type fini en tant que $A_0$-algèbre
-\end{prop}
-\begin{proof}
-AtiyahMcdo p106
-\end{proof}
+
 
 \section{Variétés algébriques}
 
 \subsection{Généralités}
 
-Dans ce mémoire, on travaille dans la catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos de caractéristique zéro fixé. Ces objets sont appelés des $k$-variétés algèbriques, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I.\\
+Dans ce mémoire, on travaille dans la catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos de caractéristique zéro fixé. Ces objets sont appelés des $k$-variétés algèbriques, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I.
+
 On note que la sous-catégorie pleine des variétés affines est anti-équivalente à celle des $k$-algèbre de type fini réduites via le foncteur sections globales, noté $k[.]$ dans ce cas pour coller aux notations traditionnelles. Un schéma de type fini sur un corps est noetherien, on en déduit que toute partie localement fermée d'une variété admet une unique structure de variété, et tout fermé se décompose de manière unique en une union finie de sous-variétés fermées irréductibles maximales. Enfin, le produit sur $k$ préserve l'irréductibilité.
 
 \begin{cons}\label{gluevar}[Recollement de variétés]
@@ -78,7 +72,6 @@ Soit $(X_i)_{u\in I}$ une famille finie de variétés. Supposons $\forall i,j$ o
   		 & X_{ji}\cap X_{jk} \arrow[ru, "f_{jk}"] &
 	\end{tikzcd}
 	$$
-	
 	\end{enumerate}
 Alors on peut définir une variété X comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $x\sim x' \iff §x\in X_{ij}, x'\in X_{ji}$ et $f_{ij}(x)=x')$. On note $f_i:X_i\rightarrow X$ les applications canoniques, et on munit 
 $X$ de la topologie finale associée aux $f_i$. On vérifie que chaque $f_i$ est une immersion ouverte dont on note $U_i$ l'image. Le faisceau structural est définit en recollant les $\mathcal{O}_{U_i}:=f_{i\star}\mathcal{O}_{X_i}$, ses sections sur un ouvert $W\subset X$ étant $$
@@ -89,8 +82,6 @@ s_i \in \mathcal{O}_{U_i}(W \cap U_i),
 f_{ij}(s_i|_{W \cap U_i \cap U_j}) = s_j|_{W \cap U_i \cap U_j}
 \}
 $$
-
-
 \end{cons}
 
 
@@ -141,13 +132,6 @@ Le lieu singulier d'une variété normale est un fermé de codimension $\geq 2$
 
 \end{proof}
 
-\begin{prop}\label{codimaffinenormal}
-Soit $X$ une variété affine irréductible. Pour toute variété $Y$ contenant $X$, le complémentaire $Y\setminus X$ est de codimension 1.
-\end{prop}
-\begin{proof}
-
-\end{proof}
-
 
 \begin{prop}\label{extregularnormal}
 Soit $X$ une variété normale irréductible. Pour toute sous-variété fermée $Y$ de codimension $\geq 2$, la restriction $\Oo(X)\rightarrow \Oo(X\setminus Y)$ est un isomorphisme.
@@ -155,6 +139,17 @@ Soit $X$ une variété normale irréductible. Pour toute sous-variété fermée 
 \begin{proof}
 On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $p\in \spec A$ de hauteur $1$ appartient à $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit, en tenant compte de l'irréductibilité de $X$, des injections $\Oo_X(U)\xhookrightarrow{} \Oo_p=A_p$ dans les tiges qui peuvent être vues comme des inclusions dans le corps des fonctions rationnelles de $X$. On a ainsi en tenant compte de \ref{factonormal} un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_p A_p=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
 \end{proof}
+
+\begin{prop}\label{codimaffinenormal}
+Soit $X$ une variété affine irréductible. Pour toute variété irréductible $Y$ contenant $X$, le complémentaire $Y\setminus X$ est de codimension 1.
+\end{prop}
+\begin{proof}
+On considère l'application de normalisation $\eta_Y$. Alors l'application induite $\eta_Y^{-1}(X)\rightarrow X$ est l'application de normalisation de $X$. On en déduit que $\eta_Y^{-1}(X)$ est affine. De plus, comme $\eta_Y$ est finie, la dimension du complémentaire de $X$ ne change pas en remplaçant $Y$ par sa normalisation et $X$ par sa préimage. On peut donc supposer $Y$ normal.
+
+Quitte à soustraire de $Y$ les composantes irréductibles de codimension $1$ de $Y\setminus X$, on peut supposer $\codime_Y(Y\setminus X)\geq 2$. Soit $V$ un ouvert affine de $Y$. Par irréductibilité de $Y$, on a $U:=X\cap V$ non-vide et $\codime_V(V\setminus U)=\codime_Y(Y\setminus X)\geq 2$. Ainsi d'après \ref{extregularnormal}, la restriction $\Oo(V)\rightarrow \Oo(U)$ est un isomorphisme. Comme $U$ et $V$ sont affines, cela signifie que l'inclusion $U\subset V$ est un isomorphisme, d'où $U=V$ puis $X=Y$.
+\end{proof}
+
+
 \subsection{Quelques résultats sur les morphismes}
 \subsubsection{Généralités}
 
@@ -681,7 +676,8 @@ Soit $X$ une variété. Un faisceau inversible $\Ll$ sur $X$ est un $\mathcal{O}
 On peut toujours trivialiser deux faisceaux inversibles sur un même recouvrement ouvert de $X$. On voit ainsi que le produit tensoriel sur $\mathcal{O}_X$ de faisceaux inversibles est inversible. Par ailleurs, le faisceau $\Hh om(\Ll,\Oo_X)$ est clairement inversible car sur les ouverts $U$ où $\Ll$ est trivial, se donner un morphisme $\Ll_{|U}\rightarrow\Oo_{|U}$ revient à se donner une section de $\Oo(U)$. De plus, l'application naturelle $\Ll\otimes_{\Oo_X} \Hh om(\Ll,\Oo_X)\rightarrow \Oo_X, (s,f)\mapsto f(s)$ est un isomorphisme. Ainsi, les classes d'isomorphie de faisceaux inversible sur $X$ munies du produit tensoriel forment un groupe appelé groupe de Picard de $X$, noté $\pic(X)$. 
 
 \begin{ex}\label{expicaff}
-Soit $X=\spec (A)$ irréductible. Alors se donner un faisceau inversible sur $X$ revient (à isomorphisme près) à se donner un idéal fractionnaire $I$ de $k[X]$ qui est inversible (cf \ref{ideauxinversibles}), son inverse est alors $I^{-1}:=(A:I)$. Les idéaux fractionnaires inversibles donnant le faisceau inversible trivial sont les idéaux fractionnaires principaux. Le groupe de Picard de $X$ est ainsi isomorphe au groupe des idéaux fractionnaires inversibles modulo les idéaux fractionnaires principaux. Les idéaux de $A$ qui sont inversibles forment une partie génératrice de ce groupe. \\
+Soit $X=\spec (A)$ irréductible. Alors se donner un faisceau inversible sur $X$ revient (à isomorphisme près) à se donner un idéal fractionnaire $I$ de $k[X]$ qui est inversible (cf \ref{ideauxinversibles}), son inverse est alors $I^{-1}:=(A:I)$. Les idéaux fractionnaires inversibles donnant le faisceau inversible trivial sont les idéaux fractionnaires principaux. Le groupe de Picard de $X$ est ainsi isomorphe au groupe des idéaux fractionnaires inversibles modulo les idéaux fractionnaires principaux. Les idéaux de $A$ qui sont inversibles forment une partie génératrice de ce groupe. 
+
 Si de plus $A$ est localement factoriel, par exemple si $X$ est lisse, les idéaux inversibles sont les idéaux de hauteur 1 pure, c'est à dire tels que ses idéaux premiers associés sont tous de hauteur 1. De plus tout idéal inversible s'écrit de manière unique comme produit de puissances d'idéaux premiers de hauteur 1. Pic(X) est donc le quotient du groupe libre sur les idéaux premiers de hauteur 1 par les idéaux fractionnaires principaux.
 \end{ex}
 
@@ -699,8 +695,10 @@ Un morphisme de fibrés en droites sur $X$ est un morphisme de variétés sur $X
 Une section d'un fibré en droites $(L, \pi)$ est une section de $\pi$, et on a la version locale de cette notion.
 \end{defn}
 
-Considérons un faisceau inversible $\Ll$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\Ll(U_i)$ sur chaque $U_i$. Sur $U_i\cap U_j$, on a $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. On a ainsi construit un fibré en droites sur $X$.\\
-Réciproquement, considérons le $\mathcal{O}_X$-module des sections d'un fibré en droite $L$ sur $X$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{X|U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est à dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible.\\
+Considérons un faisceau inversible $\Ll$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\Ll(U_i)$ sur chaque $U_i$. Sur $U_i\cap U_j$, on a $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. On a ainsi construit un fibré en droites sur $X$.
+
+Réciproquement, considérons le $\mathcal{O}_X$-module des sections d'un fibré en droite $L$ sur $X$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{X|U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est à dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible.
+
 En composant les deux opérations on trouve le faisceau inversible dual du faisceau de départ. Ces opération sont fonctorielles et réalisent une anti-équivalence de catégorie entre faisceaux inversibles sur $X$ et fibrés en droites sur $X$. Cela permet de transporter la structure du groupe de Picard sur les classes d'isomorphie de fibrés en droites.\\
 
 On introduit ci-dessous la version relative du spectre d'un anneau. Ceci va nous permettre de construire les fibrés en droite de manière plus intrinsèque.
@@ -716,8 +714,31 @@ Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$ sur s
 
 \subsection{$G$-linearisation d'un fibré en droite}
 
+Dans cette partie, on se donne un groupe algébrique $G$.
 
+\begin{defn}
+Soit $X$ une $G$-variété, et $(L,\pi)$ un fibré en droites. Une $G$-linéarisation de  $(L,\pi)$ est une action de $G$ sur $L$ telle que $\pi$ est $G$-équivariante et pour tout $(g,x)\in G\times X$ l'application $L_x\rightarrow L_{g.x},\, l\mapsto g.l$ est linéaire.
+\end{defn}
 
+On note $\alpha: G\times X\rightarrow X$ l'action de $G$ et $p_2:G\times X\rightarrow X$. Pour tout $g\in G$ on a une application:
+$$g\times id: X\rightarrow G\times X,\,\, x\mapsto (g,x)$$
+qui satisfait $(g\times id)^*\alpha^*(L)=g^*(L)$ et $(g\times id)^*p_2^*(L)=L$. Ainsi, tout morphisme de fibré en droites $\Phi: \alpha^*(L)\rightarrow p_2^*(L)$ induit pour tout $g\in G$ un morphisme $\Phi_g:g^*(L)\rightarrow L$.
+
+\begin{lem}
+Avec les notations ci-dessus, on a une correspondance bijective entre les $G$-linéarisations de $L$ et les isomorphismes
+$$\Phi: \alpha^*(L)\rightarrow p_2^*(L)$$
+de fibrés en droites sur $G\times X$ tels que $\Phi_{gh}=\Phi_h\circ h^*(\Phi_g)$ pour tous $g,h\in G$.
+\end{lem}
+\begin{proof}
+Soit $\beta:G\times L\rightarrow L$ une $G$-linéarisation. Par définition, on a un diagramme commutatif:
+	\begin{center}
+	\begin{tikzcd}
+  		G\times L \arrow[r, "\beta"] \arrow[d, "id\times\pi"]& L\arrow[d, "\pi"] \\ 
+  		G\times X \arrow[r, "\alpha"] & X
+	\end{tikzcd}\\
+	\end{center}
+Par la propriété universelle du produit fibré on a donc un morphisme $\gamma:G\times L\rightarrow\alpha^*(L)$ de variété sur $G\tmes X$. On remarque que l'on a un isomorphisme $G\times L\rightarrow p_2^*(L),\, (g,l)\mapsto ((g,\pi (l)),l)$.
+\end{proof}
 
 \section{Diviseurs}
 

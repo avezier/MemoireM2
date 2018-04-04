@@ -49,7 +49,7 @@ Dans cette partie on définit l'anneau de Cox d'une variété $X$ normale irréd
 \subsection{Faisceau et anneau de Cox}
 
 \begin{cons}[Faisceau de Cox, Anneau de Cox]
-Soit $X$ normale irréductible avec un groupe des classes libre de type fini et un sous-groupe $K\subset \clg(X)$ se projetant isomorphiquement sur Cl$(X)$. Il existe de tels $K$ car $\clg(X)$ est libre de type fini. On définit le faisceau de Cox sur $X$, noté $\Rr$ comme le faisceau d'algèbres divisorielles associé à $K$. Cette description ne dépend qu'à isomorphisme près du choix de $K$. L'anneau de Cox de $X$ est l'algèbre des sections globales du faisceau de Cox. 
+Soit $X$ normale irréductible avec un groupe des classes libre de type fini et un sous-groupe $K\subset \clg(X)$ se projetant isomorphiquement sur Cl$(X)$. Il existe de tels $K$ car $\clg(X)$ est libre de type fini donc la projection admet des sections. On définit le faisceau de Cox sur $X$, noté $\Rr$ comme le faisceau d'algèbres divisorielles associé à $K$. Cette description ne dépend qu'à isomorphisme près du choix de $K$. L'anneau de Cox de $X$ est l'algèbre des sections globales du faisceau de Cox. 
 \end{cons}
 \begin{proof}
 Soient $K,K'$ deux sous-groupes de $\wdiv(X)$ se projetant isomorphiquement sur $\clg(X)$, et $\Rr,\Rr'$ les faisceaux de Cox correspondants. On choisit une base $(D_1,...,D_s)$ de $K$. Cette base définit une section de la projection $c:\wdiv(X)\rightarrow \clg(X)$ et on peut modifier cette section par des éléments du noyau, cela fournissant autant de bases de sous-groupes de $\wdiv(X)$ se projetant isomorphiquement sur $\clg(X)$. Par ailleurs, chaque $D_i+\Ker c$ rencontre nécessairement $K'$ sinon on aurait $\rg K' < \rg \clg(X)$ comme rang de modules libres de type fini. On choisit ainsi $f_1,...,f_s\in k(X)$ tels que $(D_i-\divi(f_i))_i$ forme une base de $K'$. On définit un morphisme $\alpha:K\rightarrow k(X)^*, a_1D_1+...+a_sD_s\mapsto f_1^{a_1}...f_s^{a_s}$. Avec cela, l'isomorphisme linéaire faisant correspondre les bases de $K$ et $K'$ est $\widetilde{\psi}:K\rightarrow K',\, D\mapsto -\divi(\alpha(D))+D$. Enfin on définit un isomorphisme d'algèbres divisorielles $(\psi, \widetilde{\psi}): \Rr\rightarrow\Rr'$ en posant $f\in \Gamma(U, \Rr_D)\mapsto \alpha(D)f$.
@@ -166,4 +166,51 @@ Soit $X$ vérifiant $(\dagger)$. Alors:
 Soit $f,g$ des fonctions régulières non-nulles sur $\widetilde{X}$. Comme $\widetilde{X}$ est intègre, on peut les voir comme des éléments de $k(X)^*$. Ainsi $f\mid g$ dans $\Rr(X)$ si et seulement si $\divi(f^{-1}g)\geq 0$. Prenant $f,g$ comme dans l'énoncé et en utilisant \ref{pstarprincipal}, que c'est équivalent à $\divi_D(f)\leq\divi_E(g)$. La preuve du deuxième énoncé est similaire.
 \end{proof}
 
-\section{Groupe des classes avec torsion}
+\section{Cas d'un groupe des classes avec torsion}
+
+\subsection{Faisceau et anneau de Cox}
+
+\begin{cons}\label{conscoxtorsion}
+Soit $X$ une variété irréductible, normale, telle que $\Gamma(X,\Oo^\times)=k^*$ et $\clg(X)$ est de type fini. On se fixe un sous-groupe $K\subset \wdiv(X)$ tel que la projection $c:K\rightarrow \clg(X)$ est surjective. Soit $K^0:=\ker c$ et $\chi:K^0\rightarrow k(X)^*$ un caractère, c'est à dire un morphisme de groupes tel que $\divi(\chi(E))=E,\,\forall E\in K^0$. Soit $\Ss$ le faisceau d'algèbres divisorielles associé à $K$. Soit $\Ii$ le faisceau d'idéaux défini par l'image du morphisme 
+$$\bigoplus_{E\in K^0}\Ss\rightarrow \Ss,\, E\mapsto 1-\chi(E),\,\,\, 1\in \Ss_0$$
+Le faisceau de Cox associé à $K$ et $\chi$ est le faisceau quotient $\Rr:=\Ss/\Ii$. C'est une $\Oo_X$-algèbre quasi-cohérente et $\clg(X)$-graduée de la manière suivante: 
+$$\Rr=\bigoplus_{[D]\in \clg(X)}\Rr_{[D]},\,\,\,\,\,\, \Rr_{[D]}:=\pi(\bigoplus_{D'\in c^{-1}([D])}\Ss_{D'}),\,\,\,\, \text{où }\pi:\Ss\rightarrow \Rr\text{ est la projection}$$
+L'anneau de Cox associé à $K$ et $\chi$ est l'anneau des sections globales de $\Rr$.
+\end{cons}
+
+La $\clg(X)$-graduation de $\Rr$ annoncée ci-dessus n'est pas évidente à priori. On clarifie cela dans la proposition ci-dessous.
+
+\begin{prop}
+Avec les notation de la construction \ref{conscoxtorsion}, $\Ss$ est naturellement muni d'une $\clg(X)$-graduation:
+$$\Ss=\bigoplus_{[D]\in\clg(X)}\Ss_{[D]},\,\,\,\,\,\,\, \Ss_{[D]}:=\bigoplus_{D'\in c^{-1}([D])}\Ss_{D'}$$
+Soit $f\in\Gamma(U,\Ii)$ et $D\in K$, alors la composante $\clg(X)$-homogène $f_{[D]}\in \Gamma(U,\Ss_{[D]})$ s'écrit de manière unique sous la forme:
+$$f_{[D]}=\sum_{E\in K^0}(1-\chi(E))f_E, \text{  où } f_E\in\Gamma(U,\Ss_D), \text{ et }\chi(E)\in \Gamma(U, \Ss_{-E})$$
+En particulier, $\Ii$ est un faisceau d'idéaux $\clg(X)$-homogènes, et $\pi$ est un morphisme de $\Oo_X$-algèbres $\clg(X)$-graduées. De plus, si $f\in \Gamma(U,\Ii)$ est $K$-homogène, alors c'est la section nulle.
+\end{prop}
+\begin{proof}
+On montre d'abord l'unicité. Si on obtient une telle écriture alors les composantes $K$-homogènes  $f_{[D]}$ sont facilement identifiables, il s'agit pour chaque degré $D-E\in c^{-1}([D])$ de $-\chi(E)f_E$.
+
+Montrons l'existence. Par définition de $\Ii$, chaque germe $f_{[D],x}$ a une représentation sur un voisinage ouvert $U_x$ de $x$ par une section 
+$$g=\sum_{E\in K^0}(1-\chi(E))g_E \in \Gamma(U_x, \Ii)\text{, où }g_E\in \Gamma(U_x, \Ss_{[D]})$$
+On écrit la décomposition en composantes $K$-homogènes de chaque $g_E$:
+$$g_E=\sum_{D'\in D+K^0}g_{E,D'}, \text{ où } g_{E,D'}\in\Gamma(U_x, \Ss_{D'})$$
+La section $g'_{E,D'}:=\chi(D'-D)g_{E,D'}$ est $K$-homogène de degré $D$ et on a l'identité 
+$$(1-\chi(E))g_{E,D'}=(1-\chi(E+D-D'))g'_{E,D'}-(1-\chi(D-D'))g'_{E,D'}$$
+On obtient ainsi l'écriture désirée localement sur des ouverts qui recouvrent $X$. Par irréductibilité de $X$ on obtient l'unicité de l'écriture globalement en recollant ces sections.
+\end{proof}
+
+\begin{cor}
+Supposons $K$ de type fini, et soit $E_1,...,E_s$ une base de $K^0$. Alors pour tout ouvert $U\subset X$, l'idéal $\Gamma(U,\Ii)$ est engendré par $1-\chi(E_i)$, $1\leq i\leq s$.
+\end{cor}
+\begin{proof}
+C'est une conséquence de la proposition précédente et des identités suivantes:
+$$1-\chi(E+E')=(1-\chi(E))+(1-\chi(E'))\chi(E)$$
+$$1-\chi(-E)=(1-\chi(E))(-\chi(-E))$$
+\end{proof}
+
+\begin{prop}
+Avec les notations de \ref{conscoxtorsion}, on a pour tout $D\in K$ un isomorphisme de faisceaux $\pi_{|\Ss_D}:\Ss_D\rightarrow \Rr_{[D]}$.
+\end{prop}
+\begin{proof}
+
+\end{proof}
