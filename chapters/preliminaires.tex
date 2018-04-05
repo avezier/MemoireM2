@@ -4,9 +4,11 @@
 
 \subsection{Extensions entières d'anneaux}
 
-\begin{defn}\label{normalring}
-Soit $A$ un anneau intègre. $A$ est dit intégralement clos si il est égal à sa clôture intégrale. Soit $B$ un anneau, on dit que $B$ est normal si tout localisé de $B$ en idéal premier est un anneau intègre et intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal.
+\begin{defn}[Anneau intègralement clos]\label{normalring}
+Soit $A$ un anneau intègre. $A$ est dit intégralement clos si il est égal à sa clôture intégrale. 
 \end{defn}
+
+Pour un anneau quelconque $A$, on dit que $A$ est normal si tout localisé de $A$ en idéal premier est un anneau intègre et intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13).
 
 \begin{thm}\label{factonormal}
 Soit $A$ un anneau intègre noetherien intégralement clos. Alors
@@ -60,8 +62,8 @@ Dans ce mémoire, on travaille dans la catégorie des $k$-schémas réduits sép
 
 On note que la sous-catégorie pleine des variétés affines est anti-équivalente à celle des $k$-algèbre de type fini réduites via le foncteur sections globales, noté $k[.]$ dans ce cas pour coller aux notations traditionnelles. Un schéma de type fini sur un corps est noetherien, on en déduit que toute partie localement fermée d'une variété admet une unique structure de variété, et tout fermé se décompose de manière unique en une union finie de sous-variétés fermées irréductibles maximales. Enfin, le produit sur $k$ préserve l'irréductibilité.
 
-\begin{cons}\label{gluevar}[Recollement de variétés]
-Soit $(X_i)_{u\in I}$ une famille finie de variétés. Supposons $\forall i,j$ on ait des ouverts $X_{ij}\subset X_i$ et des isomorphismes $f_{ij}:X_{ij}\rightarrow X_{ji}$ tels que $\forall i,j,k\in I$ on ait:
+\begin{cons}\label{gluevar}[Recollement de schémas]
+Soit $(X_i)_{u\in I}$ une famille de schémas. Supposons $\forall i,j$ on ait des ouverts $X_{ij}\subset X_i$ et des isomorphismes $f_{ij}:X_{ij}\rightarrow X_{ji}$ tels que $\forall i,j,k\in I$ on ait:
 	\begin{enumerate}
 	\item $X_{ii}=X_i$ et $f_{ii}=id$
 	\item $f_{ij}^{-1}(X_{ji} \cap X_{jk}) =  X_{ij} \cap X_{ik}$
@@ -73,7 +75,7 @@ Soit $(X_i)_{u\in I}$ une famille finie de variétés. Supposons $\forall i,j$ o
 	\end{tikzcd}
 	$$
 	\end{enumerate}
-Alors on peut définir une variété X comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $x\sim x' \iff §x\in X_{ij}, x'\in X_{ji}$ et $f_{ij}(x)=x')$. On note $f_i:X_i\rightarrow X$ les applications canoniques, et on munit 
+Alors on peut définir un schéma $X$ comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $x\sim x' \iff (x\in X_{ij}, x'\in X_{ji}$ et $f_{ij}(x)=x')$. On note $f_i:X_i\rightarrow X$ les applications canoniques, et on munit 
 $X$ de la topologie finale associée aux $f_i$. On vérifie que chaque $f_i$ est une immersion ouverte dont on note $U_i$ l'image. Le faisceau structural est définit en recollant les $\mathcal{O}_{U_i}:=f_{i\star}\mathcal{O}_{X_i}$, ses sections sur un ouvert $W\subset X$ étant $$
 \mathcal{O}_X(W) =
 \{
@@ -99,7 +101,7 @@ Soit $X, Y$ des variétés. Supposons que $X$ soit une variété sur $Y$ par un 
 \begin{proof}
 \end{proof}
 
-On déduit de la proposition précédente que le spectre relatif d'une variété $X$ est séparé.
+
 
 \subsection{Dimension}
 
@@ -137,7 +139,7 @@ Le lieu singulier d'une variété normale est un fermé de codimension $\geq 2$
 Soit $X$ une variété normale irréductible. Pour toute sous-variété fermée $Y$ de codimension $\geq 2$, la restriction $\Oo(X)\rightarrow \Oo(X\setminus Y)$ est un isomorphisme.
 \end{prop}
 \begin{proof}
-On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $p\in \spec A$ de hauteur $1$ appartient à $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit, en tenant compte de l'irréductibilité de $X$, des injections $\Oo_X(U)\xhookrightarrow{} \Oo_p=A_p$ dans les tiges qui peuvent être vues comme des inclusions dans le corps des fonctions rationnelles de $X$. On a ainsi en tenant compte de \ref{factonormal} un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_p A_p=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
+On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $p\in \spec A$ de hauteur $1$ est un point de $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit, en tenant compte de l'irréductibilité de $X$, des injections $\Oo_X(U)\xhookrightarrow{} \Oo_p=A_p$ dans les tiges qui peuvent être vues comme des inclusions dans le corps des fonctions rationnelles de $X$. On a ainsi en tenant compte de \ref{factonormal} un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_p A_p=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
 \end{proof}
 
 \begin{prop}\label{codimaffinenormal}
@@ -264,7 +266,7 @@ On étend cette définition au cas où $V$ est de dimension infinie, on demande 
 On dit qu'un $G$-module est simple si il n'admet pas de sous $G$-module non trivial. On dit qu'un $G$-module est semi-simple si tout sous $G$-module admet un $G$-module supplémentaire.
 \end{defn}
 
-\begin{prop}
+\begin{prop}\label{GmoduleSectionsGlobales}
 Soit $G$ un groupe algébrique et $X$ une $G$-variété. $k[X]$ est naturellement muni d'une action $(g.f)(x):=f(g^{-1}.x), \forall f\in k[X], g\in G,x\in X$\\
 Muni de cette action, $k[X]$ un $G$-module.
 \end{prop}
