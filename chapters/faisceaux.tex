@@ -15,6 +15,36 @@ On déduit de la proposition précédente que le spectre relatif d'une variété
 
 \subsection{Faisceaux quasi-cohérents sur une variété projective}
 
+\subsection{Cohomologie des faisceaux et applications}
+
+\subsubsection{Généralités}
+
+\noindent On rappel sans démonstration les définitions et résultats de base, la référence principale est \cite{Hartshorne} chap III.\\
+
+Soit $X$ un schéma, on considère les catégories $\Aa b(X)$ des faisceaux de groupes abéliens sur $X$, et $\Mm od(X)$ la catégorie des $\Oo_X$-modules. Soit $A^.$ un complexe dans $\Aa b(X)$, c'est à dire une famille d'objets $(A^i)$ et des morphismes $d^i:A^i\rightarrow A^{i+1}$ tels que $d^{i+1}d^i=0$ pour tout $i$. Un morphisme de complexes $f:A^.\rightarrow B^.$ est une famille de morphismes $f^i:A^i\rightarrow B^i$ qui commutent avec les applications $d^i$. Le $i^e$ groupe de cohomologie $h^i(A^.)$ du complexe $A^.$ est le groupe $\ker d^i/\Im d^{i-1}$. Soit $0\rightarrow A^.\rightarrow B^. \rightarrow C^. \rightarrow 0$ une suite exacte de complexes, on obtient grâce au lemme du serpent (\cite{atiyahmacdo} 2.10) des morphismes $\delta ^i:h^i(C^.)\rightarrow h^{i+1}(A^.) $ donnant une suite exacte longue:
+
+\begin{equation}
+...\rightarrow h^i(A^.) \rightarrow h^i(B^.) \rightarrow h^i(C^.) \xrightarrow{\delta ^i} h^{i+1}(A^.) \rightarrow ...
+\end{equation}
+
+Ces définitions ont un sens dans la catégorie $\Aa b$ des groupes abéliens, et si on se donne un foncteur $F:\Aa b(X)\rightarrow \Aa b$, alors $F$ envoie des complexes de faisceaux sur des complexes de groupes. Donnons nous de plus un faisceau $\Ff\in \Aa b(X)$. Une résolution injective de $\Ff$ est une suite exacte:
+$$0\rightarrow \Ff \xrightarrow{\epsilon} I^0\rightarrow I^1\rightarrow ...$$
+telle que les faisceaux $I^k$ soient injectifs, c'est à dire tels que les foncteurs $\Hom(.,I^k)$ soient exacts (ils sont exacts seulement à gauche en général). Dans $\Aa b(X)$ et $\Mm od(X)$, tout objet admet une résolution injective. Supposons que $F$ soit exacte à gauche, on définit les foncteurs dérivés $R^iF$ de $F$ pour $i\geq 0$ par $R^i F(\Ff)=h^i(F(I^.))$. Des choix différents de résolutions injectives donnent des foncteurs $R^i F$ isomorphes.
+
+\begin{defn}
+Soit $\Gamma(X,.):\Aa b(X)\rightarrow \Aa b$ le foncteur sections globales. Les foncteurs de cohomologie $H^i(X,.)$ sont les foncteurs dérivés de $\Gamma(X,.)$. Pour tout $\Ff\in \Aa b(X)$, les groupes $H^i(X,\Ff)$ sont les groupes de cohomologie de $\Ff$.
+\end{defn}
+
+Un faisceau $\Ff$ est dit acyclique si $H^i(X,\Ff)$ sont nuls pour tout $i>0$. On peut toujour remplacer une résolution injective de $\Ff$ par une résolution acyclique pour le calcul des groupes de cohomologie de $\Ff$. Les faisceaux flasques donne une classe de faisceau acycliques, ce sont les faisceaux dont les flèches de restriction sont surjectives. De plus, tout faisceau injectif est flasque, on en déduit que l'on peut utiliser des résolutions injectives dans $\Mm od(X)$ pour calculer les groupes de cohomologie d'un $\Oo_X$-module.
+
+\subsubsection{Cohomologie d'un schéma affine noetherien}
+
+\subsubsection{Cohomologie de l'espace projectif}
+
+
+\subsubsection{Cohomologie à support}
+
+
 \subsection{Faisceaux inversibles, Fibrés en droites}
 \begin{defn}
 Soit $X$ une variété. Un faisceau inversible $\Ll$ sur $X$ est un $\mathcal{O}_X$-module localement libre de rang 1. Autrement dit, tout point $x\in X$ admet un voisinage ouvert $U \subset X$ tel que ${\mathcal L}|_U$ est isomorphe à ${\mathcal O}_U$.
