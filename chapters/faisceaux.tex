@@ -46,7 +46,7 @@ $$0\rightarrow \Hh^0 _Z(\Ff) \rightarrow \Ff \rightarrow j_*(\Ff_{|U})$$
 \begin{ex}\label{cohomsupportaffineex}
 Soit $X=\spec A$ un schéma affine noetherien, $M$ un $A$-module et $\Ff=\widetilde{M}$, $\mathfrak{a}$ un idéal et $Z=\Vv(\mathfrak{a})$. Soit $m\in M=\Gamma(X,\Ff)$, alors $\supp m=\Vv(\ann m)$, où $\ann M=\lbrace,a\in A\mid am=0\rbrace$ est l'annulateur de $m$. En effet, soit $p\in X$, alors $m_p\neq 0\iff \forall a\in A\setminus p, fm\neq 0\iff \ann(m)\subset p$.
 
-On définit un sous-module $\Gamma_\mathfrak{a}(M)$ de $M$ par $\Gamma_\mathfrak{a}(M):=\lbrace m\in M\mid \mathfrak{a}^nm=0 \text{ pour un } n>0 \rbrace$. Alors on a $\Gamma_\mathfrak{a}(M)^{\widetilde{}} = \Hh ^0 _Z(\Ff)$. En effet, tout d'abord $\Hh^0 _Z(\Ff)$ est quasi-cohérent comme noyau d'un morphisme entre faisceaux quasi-cohérents, cela d'après la suite exacte ci-dessus et \ref{j* qch}. Ol reste donc à montrer que $\Gamma_\mathfrak{a}(M)\simeq\Gamma_Z(X,\Ff)$ en tant que $A$-modules. Soit $m\in\Gamma_Z(X,\Ff)$, on a donc $\supp m=\Vv(\ann m)\subset \Vv(\mathfrak{a})$, d'où $\mathfrak{a}\subset \sqrt{\ann m}$. Comme $A$ est noetherien, $\mathfrak{a}$ est de type fini, on en conclut que $m\in \Gamma_\mathfrak{a}(M)$. Réciproquement, si $m\in \Gamma_\mathfrak{a}(M)$, alors $\mathfrak{a}^n\subset \ann m$ pour un $n>0$, ce qui donne $\supp m \subset\Vv(\mathfrak{a}^n)=\Vv(\mathfrak{a})$. On a donc $\Gamma_\mathfrak{a}(M)=\Gamma_Z(X,\Ff)$.
+On définit un sous-module $\Gamma_\mathfrak{a}(M)$ de $M$ par $\Gamma_\mathfrak{a}(M):=\lbrace m\in M\mid \mathfrak{a}^nm=0 \text{ pour un } n>0 \rbrace$. Alors on a $\Gamma_\mathfrak{a}(M)^{\widetilde{}} = \Hh ^0 _Z(\Ff)$. En effet, tout d'abord $\Hh^0 _Z(\Ff)$ est quasi-cohérent comme noyau d'un morphisme entre faisceaux quasi-cohérents, cela d'après la suite exacte ci-dessus et \ref{j* qch}. Il reste donc à montrer que $\Gamma_\mathfrak{a}(M)\simeq\Gamma_Z(X,\Ff)$ en tant que $A$-modules. Soit $m\in\Gamma_Z(X,\Ff)$, on a donc $\supp m=\Vv(\ann m)\subset \Vv(\mathfrak{a})$, d'où $\mathfrak{a}\subset \sqrt{\ann m}$. Or, $\mathfrak{a}$ est de type fini car $A$ est noetherien, on en conclut que $m\in \Gamma_\mathfrak{a}(M)$. Réciproquement, si $m\in \Gamma_\mathfrak{a}(M)$, alors $\mathfrak{a}^n\subset \ann m$ pour un $n>0$, ce qui donne $\supp m \subset\Vv(\mathfrak{a}^n)=\Vv(\mathfrak{a})$. On a donc $\Gamma_\mathfrak{a}(M)=\Gamma_Z(X,\Ff)$.
 \end{ex}
 
 Notons maintenant que $\Gamma_Z(X, .)$ est un foncteur exact à gauche. Si $\Ff$ est flasque, on a de plus une suite exacte:
@@ -54,13 +54,26 @@ $$0\rightarrow \Gamma_Z(X,\Ff)\rightarrow \Gamma(X,\Ff)\rightarrow \Gamma(U,\Ff)
 
 On choisit maintenant une résolution injective $\Ii^.$ de $\Ff$. Alors $\Ii^.$ est flasque et donc $\Ii^._{|U}$ aussi, on peut donc utiliser cette dernière pour calculer les groupes de cohomologie de $\Ff_{|U}$. En utilisant la suite exacte ci-dessus on obtient une suite exacte de complexes de groupes abéliens:
 
-$$0\rightarrow \Gamma_Y(X,\Ii^.)\rightarrow \Gamma(X,\Ii^.)\rightarrow \Gamma(U,\Ii^.)\rightarrow 0$$
+$$0\rightarrow \Gamma_Z(X,\Ii^.)\rightarrow \Gamma(X,\Ii^.)\rightarrow \Gamma(U,\Ii^.)\rightarrow 0$$
 
-Les techniques utilisées pour obtenir la suite exacte longue \ref{eq:longSES} s'appliquent dans la catégorie des groupes abéliens on obtient ainsi une suite exacte longue, dans laquelle les $H_Y^i(X,.)$ sont les foncteurs dérivés à droite de $\Gamma_Y(X,.)$:
-$$0\rightarrow H_Y^0(X,\Ff)\rightarrow H^0(X,\Ff)\rightarrow H^0(U,\Ff_{|U})\rightarrow$$
-$$\text{  }\rightarrow H_Y^1(X,\Ff)\rightarrow H^1(X,\Ff)\rightarrow H^1(U,\Ff_{|U})\rightarrow ...$$
+Les techniques utilisées pour obtenir la suite exacte longue \ref{eq:longSES} s'appliquent dans la catégorie des groupes abéliens et on obtient ainsi une suite exacte longue, dans laquelle les $H_Z^i(X,.)$ sont les foncteurs dérivés à droite de $\Gamma_Z(X,.)$:
 
-Remarquons qu'avec les notations de l'exemple \ref{cohomsupportaffineex}, on a $\Gamma_Z(X, .)\circ \widetilde{}=\Gamma_\mathfrak{a}(.)$ en tant que foncteurs $A$-$\Mm od\rightarrow A$-$\Mm od$. On en déduit que le foncteur $\Gamma_\mathfrak{a}(.)$ est exact et ses foncteurs dérivés à droite, notés $H_\mathfrak{a}^i$ sont égaux aux foncteurs $H_Z^i(X,.)\circ \widetilde{}$ . En effet, comme le tilde réalise une équivalence de catégories, il enverra une résolution injective de $M$ sur une résolution injective de $\widetilde{M}$. Donnons maintenant une interprétation cohomologique de la profondeur.
+\begin{equation}\label{eq:longSESSupport}
+0\rightarrow H_Z^0(X,\Ff)\rightarrow H^0(X,\Ff)\rightarrow H^0(U,\Ff_{|U})\rightarrow  H_Z^1(X,\Ff)\rightarrow H^1(X,\Ff)\rightarrow H^1(U,\Ff_{|U})\rightarrow ...
+\end{equation}
+
+
+Remarquons qu'avec les notations de l'exemple \ref{cohomsupportaffineex}, on a $\Gamma_Z(X, .)\circ \widetilde{}=\Gamma_\mathfrak{a}(.)$ en tant que foncteurs $A$-$\Mm od\rightarrow A$-$\Mm od$. On en déduit que le foncteur $\Gamma_\mathfrak{a}(.)$ est exact et ses foncteurs dérivés à droite, notés $H_\mathfrak{a}^i$ sont égaux aux foncteurs $H_Z^i(X,.)\circ \widetilde{}$ . En effet, comme le tilde réalise une équivalence de catégories, il envoie une résolution injective de $M$ sur une résolution injective de $\widetilde{M}$. En utilisant cette dernière pour calculer les groupes de cohomologie de $H^i_Z(X, \widetilde{M})$ on obtient le résultat par l'égalité des foncteurs $\Gamma_Z(X, .)\circ \widetilde{}=\Gamma_\mathfrak{a}(.)$.
+
+\subsubsection{Cohomologie sur un schéma affine}
+
+\begin{thm}\label{cohomoaffine}
+Soit $X=\spec A$ un schéma affine noetherien. Alors pour tout faisceau quasi-cohérent $\Ff$ sur $X$, et pour tout $i>0$, on a $H^i(X,\Ff)=0$. 
+\end{thm}
+
+\subsubsection{Une application}
+
+On commence par donner une interprétation cohomologique de la profondeur d'un idéal. On en déduit un corollaire qui donne une réciproque à \ref{extregularnormal} et nous sera utile par la suite.
 
 \begin{prop}
 Soit $A$ un anneau noetherien, $\mathfrak{a}$ un idéal, et $M$ un $A$-module de type fini. Alors pour tout $n\geq 0$, les conditions suivantes sont équivalentes:
@@ -70,24 +83,26 @@ Soit $A$ un anneau noetherien, $\mathfrak{a}$ un idéal, et $M$ un $A$-module de
 \end{enumerate}
 \end{prop}
 \begin{proof}
-Montrons cette équivalence par récurrence. Supposons $n=1$, et $\depth_\mathfrak{a} M\geq 1$. Alors il existe $x\in\mathfrak{a}$ tel que $x$ n'est pas diviseur de zéro de $M$. Soit $m\in \Gamma_ \mathfrak{a}(M)$, ainsi il existe $k\geq 0$ tel que $m \mathfrak{a}^k=0$. En particulier, $x^nm=0$, ce qui prouve $m=0$. D'où $H^0_\mathfrak{a}(M)=0$. Réciproquement, supposons $H^0_\mathfrak{a}(M)=0$. Cela signifie que pour tout $m\in M$ et $k\geq 0$, il existe $x\in \mathfrak{a}^k$ tel que $mx\neq 0$. On en déduit que $\mathfrak{a}\not\subset $
+Montrons cette équivalence par récurrence. Supposons $n=1$, et $\depth_\mathfrak{a} M\geq 1$. Alors il existe $x\in\mathfrak{a}$ tel que $x$ n'est pas diviseur de zéro de $M$. Soit $m\in \Gamma_ \mathfrak{a}(M)$, ainsi il existe $k\geq 0$ tel que $m \mathfrak{a}^k=0$. En particulier, $x^nm=0$, ce qui prouve $m=0$. D'où $H^0_\mathfrak{a}(M)=0$. Réciproquement, supposons $H^0_\mathfrak{a}(M)=0$. Cela signifie que pour tout $m\in M$ et $k\geq 0$, il existe $x\in \mathfrak{a}^k$ tel que $mx\neq 0$. On en déduit que $\mathfrak{a}$ n'est inclus dans aucun idéal premier associé à $M$ (voir \ref{}), d'où $\mathfrak{a}\nsubseteq \cup_{p\in \asso M}p$ par le lemme d'évitement \ref{}. Cette dernière union étant d'après \ref{} l'ensemble des éléments de $A$ qui annule un élément de $M$. On peut ainsi trouver un $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$, c'est à dire $\depth_\mathfrak{a}M\geq 1$.
 
+Supposons maintenant le résultat acquis pour $n\geq 1$. Pour le sens direct on suppose $\depth_\mathfrak{a} M\geq n+1$. Compte tenu de l'hypothèse de récurrence il reste à montrer que $H^n_\mathfrak{a}(M)=0$. Par hypothèse, il existe $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$. On considère alors la suite exacte de $A$-modules:
+$$0\rightarrow M \xrightarrow{.x} M\rightarrow M/xM\rightarrow 0$$
+
+\noindent et la suite exacte longue de cohomologie associée:
+
+$$..\rightarrow H^{n-1}_\mathfrak{a}(M/xM) \rightarrow H^n_\mathfrak{a}(M) \rightarrow  H^n_\mathfrak{a}(M) \rightarrow ...$$
+
+\noindent Or on a $\depth_\mathfrak{a} M/xM \geq n$, et donc $H^{n-1}_\mathfrak{a}(M/xM)=0$ par hypothèse de récurrence. Ainsi, l'application $H^n_\mathfrak{a}(M) \rightarrow  H^n_\mathfrak{a}(M)$ est injective. Or ceci ne peut être le cas que si $H^n_\mathfrak{a}(M)=0$ car on peut remarquer que $H^n_\mathfrak{a}$ est un quotient d'un $\Gamma_\mathfrak{a}(N)$ pour un module $N$, ses éléments sont donc annulés par des puissances de $x$. 
+
+Montrons maintenant la réciproque. On suppose $H^i_\mathfrak{a}(M)=0$ pour tout $i<n+1$. Par hypothèse de récurrence et comme $n\geq 1$, il existe $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$. On peut à nouveau utiliser la suite exacte longue ci-dessus et en déduire immédiatement que $H^{i}_\mathfrak{a}(M/xM)=0$ pour $i<n$. Ainsi, $\depth_\mathfrak{a} M/xM\geq n$, ce qui montre $\depth_\mathfrak{a} M \geq n+1$.
 \end{proof}
 
 \begin{cor}\label{cohomcodimgeq2}
-Soit $X$ un schéma affine noetherien, et $Z\subset X$ un fermé tel que la restriction $\Oo_(X)\rightarrow \Oo(X\setminus Z)$ soit un isomorphisme. Alors $Z$ est de codimension au moins $2$ dans $X$.
+Soit $X$ une variété affine et $Z\subset X$ un fermé tel que la restriction $\Oo(X)\rightarrow \Oo(X\setminus Z)$ soit un isomorphisme. Alors $Z$ est de codimension au moins $2$ dans $X$.
 \end{cor}
 \begin{proof}
-
+On pose $U:=X\setminus Z$ et on utilise la suite exacte longue \ref{eq:longSESSupport}. Compte tenu de l'hypothèse et de \ref{cohomoaffine} on obtient que $H^0_Z(X,\Oo_X)=H^1_Z(X,\Oo_X)=0$. D'après la propriété précédente cela donne $\depth_\mathfrak{a}(\Oo(X))\geq 2$, où $\mathfrak{a}:=\Ii(Z)$. Mais d'après, \ref{dimsousvariete} on obtient facilement $\codime_X(Z)\geq \depth_\mathfrak{a}(\Oo(X))$.
 \end{proof}
-
-\subsubsection{Cohomologie sur un schéma affine}
-
-
-
-\subsubsection{Cohomologie de l'espace projectif}
-
-
 
 
 \subsection{Faisceaux inversibles, Fibrés en droites}
@@ -248,7 +263,7 @@ C'est une conséquence de \ref{factonormal} et \ref{UFDPID}. Voir \cite{Hartshor
 \end{proof}
 
 \begin{cor}
-Cl$(\mathbb{A} ^n_k)=0 pour n\geq 1$
+$\clg(\mathbb{A} ^n_k)=0$ pour $n\geq 1$
 \end{cor}
 
 \begin{thm}\label{divexactseq}

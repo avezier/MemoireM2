@@ -35,23 +35,23 @@
 \contentsline {subsubsection}{G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{19}{section*.13}
 \contentsline {subsubsection}{Cohomologie \IeC {\`a} support}{20}{section*.14}
 \contentsline {subsubsection}{Cohomologie sur un sch\IeC {\'e}ma affine}{21}{section*.15}
-\contentsline {subsubsection}{Cohomologie de l'espace projectif}{21}{section*.16}
+\contentsline {subsubsection}{Une application}{21}{section*.16}
 \contentsline {subsection}{\numberline {2.1.4}Faisceaux inversibles, Fibr\IeC {\'e}s en droites}{21}{subsection.2.1.4}
 \contentsline {subsection}{\numberline {2.1.5}$G$-linearisation d'un fibr\IeC {\'e} en droite}{23}{subsection.2.1.5}
-\contentsline {section}{\numberline {2.2}Diviseurs}{24}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Diviseurs de Weil}{24}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.2}Diviseurs}{25}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Diviseurs de Weil}{25}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Faisceau d'alg\IeC {\`e}bres divisorielles}{26}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Diviseurs de Cartier et groupe de Picard}{27}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}L'espace projectif $\mathbb {P}_k^n$}{28}{subsection.2.2.4}
-\contentsline {subsubsection}{Faisceaux inversibles sur $\mathbb {P}_k^n$}{28}{section*.17}
-\contentsline {subsubsection}{Morphismes vers l'espace projectif}{28}{section*.18}
-\contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux inversible tr\IeC {\`e}s amples}{29}{section*.19}
+\contentsline {subsection}{\numberline {2.2.3}Diviseurs de Cartier et groupe de Picard}{28}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}L'espace projectif $\mathbb {P}_k^n$}{29}{subsection.2.2.4}
+\contentsline {subsubsection}{Faisceaux inversibles sur $\mathbb {P}_k^n$}{29}{section*.17}
+\contentsline {subsubsection}{Morphismes vers l'espace projectif}{29}{section*.18}
+\contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux inversible tr\IeC {\`e}s amples}{30}{section*.19}
 \contentsline {section}{\numberline {2.3}Le spectre relatif d'une alg\IeC {\`e}bre divisorielle}{30}{section.2.3}
-\contentsline {chapter}{\numberline {3}Anneaux de Cox}{33}{chapter.3}
-\contentsline {section}{\numberline {3.1}Un exemple introductif}{33}{section.3.1}
-\contentsline {section}{\numberline {3.2}Cas d'un groupe des classes sans torsion}{34}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Faisceau et anneau de Cox}{35}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Le spectre relatif de $\mathcal {R}$}{35}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{38}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Cas d'un groupe des classes avec torsion}{38}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Faisceau et anneau de Cox}{38}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {3}Anneaux de Cox}{34}{chapter.3}
+\contentsline {section}{\numberline {3.1}Un exemple introductif}{34}{section.3.1}
+\contentsline {section}{\numberline {3.2}Cas d'un groupe des classes sans torsion}{35}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Faisceau et anneau de Cox}{36}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Le spectre relatif de $\mathcal {R}$}{36}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{39}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Cas d'un groupe des classes avec torsion}{39}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Faisceau et anneau de Cox}{39}{subsection.3.3.1}
