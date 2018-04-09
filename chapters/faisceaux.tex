@@ -78,13 +78,69 @@ Remarquons enfin qu'avec les notations de l'exemple \ref{cohomsupportaffineex}, 
 
 \subsubsection{Cohomologie sur un schéma affine}
 
+L'objectif de cette partie est de montrer que les $\Oo_X$-module quasi-cohérents sur un schéma affine noetherien $X=\spec A$ sont acycliques. Le point clé sera de montrer que pour un $A$-module injectif $I$, le faisceau $\widetilde{I}$ est flasque. On commence par des préliminaires d'algèbre commutative:
+
+\begin{thm}[de Krull]
+Soit $A$ un anneau noetherien, $M\subset N$ des $A$-modules de type fini, et $\mathfrak{a}$ un idéal de $A$. Alors, la topologie $\mathfrak{a}$-adic sur $M$ est induite par la topologie $\mathfrak{a}$-adic sur $N$. En particulier, pour tout $n>0$, il existe $n'\geq n$ tel que $\mathfrak{a}^{n'}N\cap M\subset\mathfrak{a}^nM$.
+\end{thm}
+\begin{proof}
+Voir \cite{atiyahmacdo} 10.11
+\end{proof}
+
+\begin{cor}\label{cohomAffLemme1}
+$\mathfrak{a}$ un idéal de $A$, et $I$ un $A$-module injectif. Alors le sous-module $\Gamma_\mathfrak{a}(I)$ est aussi un $A$-module injectif.
+\end{cor}
+\begin{proof}
+Voir \cite{Hartshorne} III.3.2
+\end{proof}
+
+\begin{lem}
+Soit $A$ un anneau noetherien et $I$ un $A$-module injectif. Alors pour tout $f\in A$, la flèche de localisation $I\rightarrow I_f$ est surjective.
+\end{lem}
+\begin{proof}
+Voir \cite{Hartshorne} III.3.3
+\end{proof}
+
+\begin{prop}\label{cohomAffProp1}
+Soit $A$ un anneau noetherien et $I$ un $A$-module injectif. Alors le faisceau $\widetilde{I}$ est flasque.
+\end{prop}
+\begin{proof}
+On prouve le résultat par récurrence sur les fermés de la forme $Y:=\overline{\supp \widetilde{I}}$ en utilisant le fait que $X$ est un espace topologique noetherien, c'est à dire que tout ensemble non-vide de fermés de $X$ admet un élément minimal. Les fermés minimums de la forme $\overline{\supp \widetilde{I}}$ sont les points fermés, et on en déduit facilement la proposition dans ce cas. En effet, supposons $p=\overline{\supp \widetilde{I}}$ un point fermé. Alors la seule tige non-nulle est $I_p$ et on a car $\widetilde{I}(U)=I_p$ si $p\in U$, $\widetilde{I}(U)=\lbrace 0 \rbrace$ sinon.
+
+Supposons maintenant le résultat montré pour tout fermé propre de $Y:=\overline{\supp \widetilde{I}}$. Il est suffisant de montrer que $\Gamma(X,\widetilde{I})\rightarrow\Gamma(U,\widetilde{I})$ est surjectif pour tout ouvert $U\subset X$. Si $Y\cap U=\emptyset$ il n'y a rien à montrer. Sinon, il existe $f\in A$ tel que $X_f\subset U$ et $X_f\cap Y\neq \emptyset$. On note $Z= X\setminus X_f$, et on Considère le diagramme commutatif:
+
+	\begin{center}
+	\begin{tikzcd}
+  		\Gamma(X,\widetilde{I}) \arrow[r, ""] & \Gamma(U,\widetilde{I}) \arrow[r, ""] & \Gamma(X_f,\widetilde{I})\\ 
+  		\Gamma_Z(X,\widetilde{I}) \arrow[u, hook, ""] \arrow[r, ""] & \Gamma_Z(U,\widetilde{I}) \arrow[u, hook, ""] &
+	\end{tikzcd}\\
+	\end{center}
+Soit une section $s\in\Gamma(U,\widetilde{I})$, et $s'$ son image dans $\Gamma(X_f,\widetilde{I})$. D'après le lemme précédent et \ref{}, $s'$ admet un antécédent $t\in \Gamma(X,\widetilde{I})$. On note $t'$ la restriction de $t$ à $U$. Alors $s-t'$ se restreint en la section nulle sur $X_f$, et a donc support dans $Z$. Si on peut trouver un antécédent $u$ de $s-t'$ dans $\Gamma_Z(X,\widetilde{I})$, alors $t+u$ est antécédent de $s$ dans $\Gamma(X,\widetilde{I})$. On est donc ramenés à prouver la surjectivité de $\Gamma_Z(X,\widetilde{I})\rightarrow\Gamma_Z(U,\widetilde{I})$.
+
+Posons $J=\Gamma_Z(X,\widetilde{I})$, et $\mathfrak{a}=fA$. Alors d'après l'exemple \ref{cohomsupportaffineex}, on a $J=\Gamma_\mathfrak{a}(I)$. Puis d'après \ref{cohomAffLemme1}, $J$ est un $A$-module injectif. Enfin, le support de $\widetilde{J}$ est contenu dans $Y\cap Z$ qui est fermé propre de $Y$. Par hypothèse de récurrence, on obtient donc que $\widetilde{J}$ est flasque. Mais toujours d'après l'exemple \ref{cohomsupportaffineex}, on a $\widetilde{J} = \Hh ^0 _Z(\Ff)$ ce qui termine la preuve.
+\end{proof}
+
+
 \begin{thm}\label{cohomoaffine}
 Soit $X=\spec A$ un schéma affine noetherien. Alors pour tout faisceau quasi-cohérent $\Ff$ sur $X$, et pour tout $i>0$, on a $H^i(X,\Ff)=0$. 
 \end{thm}
+\begin{proof}
+Soit $M=\Gamma(X,\Ff)$, et $M\rightarrow I^.$ une résolution injective de $M$. On obtient d'après \ref{} et \ref{cohomAffProp1} une résolution flasque $\Ff\simeq \widetilde{M}\rightarrow \widetilde{I}^.$. On en déduit le théorème car une résolution flasque de faisceau est acyclique.
+\end{proof}
 
 \subsubsection{Une application}
 
-On introduit la notion de profondeur d'un module et on en donne une interprétation en termes de cohomologie à support. On en déduit un corollaire qui donne une réciproque à \ref{extregularnormal} et nous sera utile par la suite.
+On introduit la notion de profondeur d'un $A$-module $M$ relative à un idéal $\mathfrak{a}\subset A$ et on en donne une interprétation en termes de cohomologie à support. On en déduit un corollaire qui donne une réciproque à \ref{extregularnormal} et nous sera utile par la suite.
+
+\begin{defn}[suite $M$-régulière]
+Soit $A$ un anneau, $M$ un $A$-module. Une suite $x_1,...,x_r$ d'éléments de $A$ est $M$-régulière si $x_1$ n'est pas diviseur de zéro dans $M$, et pour tout $i=2,...,r$, $x_i$ n'est pas diviseur de zéro dans $M/(x_1,...,x_r)M$.
+\end{defn}
+
+\begin{defn}[Profondeur]
+Soit $A$ un anneau, $M$ un $A$-module et $\mathfrak{a}\subset A$ un idéal. La $mathfrak{a}$-profondeur de $M$ est la longueur maximale des suites régulières de $M$ contenues dans $mathfrak{a}$.
+\end{defn}
+
+
 
 \begin{prop}
 Soit $A$ un anneau noetherien, $\mathfrak{a}$ un idéal, et $M$ un $A$-module de type fini. Alors pour tout $n\geq 0$, les conditions suivantes sont équivalentes:
@@ -94,16 +150,16 @@ Soit $A$ un anneau noetherien, $\mathfrak{a}$ un idéal, et $M$ un $A$-module de
 \end{enumerate}
 \end{prop}
 \begin{proof}
-Montrons cette équivalence par récurrence. Le cas $n=0$ est trivial, mais nous aurons besoin du cas $n=1$ dans la récurrence, on le démontre maintenant. Supposons $n=1$, et $\depth_\mathfrak{a} M\geq 1$. Alors il existe $x\in\mathfrak{a}$ tel que $x$ n'est pas diviseur de zéro de $M$. Soit $m\in \Gamma_ \mathfrak{a}(M)$, ainsi il existe $k\geq 0$ tel que $m \mathfrak{a}^k=0$. En particulier, $x^nm=0$, ce qui prouve $m=0$. D'où $H^0_\mathfrak{a}(M)=0$. Réciproquement, supposons $H^0_\mathfrak{a}(M)=0$. Cela signifie que pour tout $m\in M$ et $k\geq 0$, il existe $x\in \mathfrak{a}^k$ tel que $mx\neq 0$. On en déduit que $\mathfrak{a}$ n'est inclus dans aucun idéal premier associé à $M$ (voir \ref{}), d'où $\mathfrak{a}\nsubseteq \cup_{p\in \asso M}p$ par le lemme d'évitement \ref{}. Cette dernière union étant d'après \ref{} l'ensemble des éléments de $A$ qui annule un élément de $M$. On peut ainsi trouver un $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$, c'est à dire $\depth_\mathfrak{a}M\geq 1$.
+Montrons cette équivalence par récurrence. Le cas $n=0$ est trivial, mais nous aurons besoin du cas $n=1$ dans la récurrence, on le démontre maintenant. Supposons $n=1$, et $\depth_\mathfrak{a} M\geq 1$. Alors il existe $x\in\mathfrak{a}$ tel que $x$ n'est pas diviseur de zéro dans $M$. Soit $m\in \Gamma_ \mathfrak{a}(M)$, ainsi il existe $k\geq 0$ tel que $\mathfrak{a}^k m=0$. En particulier, $x^nm=0$, ce qui prouve $m=0$. D'où $H^0_\mathfrak{a}(M)=0$. Réciproquement, supposons $H^0_\mathfrak{a}(M)=0$. Cela signifie que pour tout $m\in M$ et $k\geq 0$, il existe $x\in \mathfrak{a}^k$ tel que $mx\neq 0$. On en déduit que $\mathfrak{a}$ n'est inclus dans aucun idéal premier associé à $M$ (voir \ref{}), d'où $\mathfrak{a}\nsubseteq \cup_{p\in \asso M}p$ par le lemme d'évitement \ref{}. Cette dernière union étant d'après \ref{} l'ensemble des éléments de $A$ qui annule un élément de $M$. On peut ainsi trouver un $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$, c'est à dire $\depth_\mathfrak{a}M\geq 1$.
 
-Supposons maintenant le résultat acquis pour $n\geq 1$. Pour le sens direct on suppose $\depth_\mathfrak{a} M\geq n+1$. Compte tenu de l'hypothèse de récurrence il reste à montrer que $H^n_\mathfrak{a}(M)=0$. Par hypothèse, il existe $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$. On considère alors la suite exacte de $A$-modules:
+Supposons maintenant le résultat acquis pour $n\geq 1$. Pour le sens direct on suppose $\depth_\mathfrak{a} M\geq n+1$. Compte tenu de l'hypothèse de récurrence il reste à montrer que $H^n_\mathfrak{a}(M)=0$. Choisissons $x\in \mathfrak{a}$ égal au premier terme d'une suite $M$-régulière de longueur $n+1$, ce qui est possible par hypothèse. Alors $x$ n'est pas diviseur de zéro dans $M$ et $\depth_\mathfrak{a} M/xM \geq n$. On considère alors la suite exacte de $A$-modules:
 $$0\rightarrow M \xrightarrow{.x} M\rightarrow M/xM\rightarrow 0$$
 
 \noindent et la suite exacte longue de cohomologie associée:
 
 $$..\rightarrow H^{n-1}_\mathfrak{a}(M/xM) \rightarrow H^n_\mathfrak{a}(M) \rightarrow  H^n_\mathfrak{a}(M) \rightarrow ...$$
 
-\noindent Or on a $\depth_\mathfrak{a} M/xM \geq n$, et donc $H^{n-1}_\mathfrak{a}(M/xM)=0$ par hypothèse de récurrence. Ainsi, l'application $H^n_\mathfrak{a}(M) \rightarrow  H^n_\mathfrak{a}(M)$ est injective. Or ceci ne peut être le cas que si $H^n_\mathfrak{a}(M)=0$ car on peut remarquer que $H^n_\mathfrak{a}$ est un quotient d'un $\Gamma_\mathfrak{a}(N)$ pour un module $N$, ses éléments sont donc annulés par des puissances de $x$. 
+\noindent Comme $H^{n-1}_\mathfrak{a}(M/xM)=0$ par hypothèse de récurrence, l'application $H^n_\mathfrak{a}(M) \rightarrow  H^n_\mathfrak{a}(M)$ est injective. Or ceci ne peut être le cas que si $H^n_\mathfrak{a}(M)=0$ car on peut remarquer que $H^n_\mathfrak{a}$ est un quotient d'un $\Gamma_\mathfrak{a}(N)$ pour un module $N$, ses éléments sont donc annulés par des puissances de $x$. 
 
 Montrons maintenant la réciproque. On suppose $H^i_\mathfrak{a}(M)=0$ pour tout $i<n+1$. Par hypothèse de récurrence et comme $n\geq 1$, il existe $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$. On peut à nouveau utiliser la suite exacte longue ci-dessus et en déduire immédiatement que $H^{i}_\mathfrak{a}(M/xM)=0$ pour $i<n$. Ainsi, $\depth_\mathfrak{a} M/xM\geq n$, ce qui montre $\depth_\mathfrak{a} M \geq n+1$.
 \end{proof}
