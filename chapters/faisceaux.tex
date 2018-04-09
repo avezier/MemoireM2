@@ -19,51 +19,62 @@ On déduit de la proposition précédente que le spectre relatif d'une variété
 
 \subsubsection{Généralités}
 
-\noindent On rappel sans démonstration les définitions et résultats de base, la référence principale est \cite{Hartshorne} chap III.\\
+\noindent On rappelle sans démonstrations quelques définitions et résultats de base, l'objectif étant de définir les groupes de cohomologie d'un faisceau sur un schéma relatifs au foncteur sections globales. La référence principale est \cite{Hartshorne} chap III.\\
 
-Soit $X$ un schéma, on considère les catégories $\Aa b(X)$ des faisceaux de groupes abéliens sur $X$, et $\Mm od(X)$ la catégorie des $\Oo_X$-modules. Soit $A^.$ un complexe dans $\Aa b(X)$, c'est à dire une famille d'objets $(A^i)$ et des morphismes $d^i:A^i\rightarrow A^{i+1}$ tels que $d^{i+1}d^i=0$ pour tout $i$. Un morphisme de complexes $f:A^.\rightarrow B^.$ est une famille de morphismes $f^i:A^i\rightarrow B^i$ qui commutent avec les applications $d^i$. Le $i^e$ groupe de cohomologie $h^i(A^.)$ du complexe $A^.$ est le groupe $\ker d^i/\Im d^{i-1}$. Soit $0\rightarrow A^.\rightarrow B^. \rightarrow C^. \rightarrow 0$ une suite exacte de complexes, on obtient grâce au lemme du serpent (\cite{atiyahmacdo} 2.10) des morphismes $\delta ^i:h^i(C^.)\rightarrow h^{i+1}(A^.) $ donnant une suite exacte longue:
-
+Soit $X$ un schéma, on considère la catégorie $\Aa b(X)$ des faisceaux de groupes abéliens sur $X$, et la catégorie $\Mm od(X)$ des $\Oo_X$-modules. Soit $A^.$ un complexe dans $\Aa b(X)$, c'est à dire une famille d'objets $(A^i)_{i\geq 0}$ et des morphismes $d^i:A^i\rightarrow A^{i+1}$ tels que $d^{i+1}d^i=0$ pour tout $i\geq 0$. Un morphisme de complexes $f:A^.\rightarrow B^.$ est une famille de morphismes $f^i:A^i\rightarrow B^i$ qui commutent avec les applications $d^i$. Le $i^e$ groupe de cohomologie $h^i(A^.)$ du complexe $A^.$ est le groupe $\ker d^i/\Im d^{i-1}$. Soit $0\rightarrow A^.\rightarrow B^. \rightarrow C^. \rightarrow 0$ une suite exacte courte de complexes, on obtient grâce au lemme du serpent (\cite{atiyahmacdo} 2.10) des morphismes $\delta ^i:h^i(C^.\rightarrow h^{i+1}(A^.) $ dits de connexion, donnant une suite exacte longue:
 \begin{equation}\label{eq:longSES}
 ...\rightarrow h^i(A^.) \rightarrow h^i(B^.) \rightarrow h^i(C^.) \xrightarrow{\delta ^i} h^{i+1}(A^.) \rightarrow ...
 \end{equation}
 
-Ces définitions ont un sens dans la catégorie $\Aa b$ des groupes abéliens, et si on se donne un foncteur $F:\Aa b(X)\rightarrow \Aa b$, alors $F$ envoie des complexes de faisceaux sur des complexes de groupes. Donnons nous de plus un faisceau $\Ff\in \Aa b(X)$. Une résolution injective de $\Ff$ est une suite exacte:
+Ces définitions ont également un sens dans la catégorie $\Aa b$ des groupes abéliens, et si on se donne un foncteur $F:\Aa b(X)\rightarrow \Aa b$, alors $F$ envoie des complexes de faisceaux sur des complexes de groupes. On suppose de plus que $F$ est covariant exact à gauche. Pour tout faisceau $\Ff\in \Aa b(X)$ (resp. tout $\Oo_X$-module) on peut obtenir une résolution injective, c'est à dire une suite exacte:
 $$0\rightarrow \Ff \xrightarrow{\epsilon} I^0\rightarrow I^1\rightarrow ...$$
-telle que les faisceaux $I^k$ soient injectifs, c'est à dire tels que les foncteurs $\Hom(.,I^k)$ soient exacts (ils sont exacts seulement à gauche en général). Dans $\Aa b(X)$ et $\Mm od(X)$, tout objet admet une résolution injective. Supposons que $F$ soit exacte à gauche, on définit les foncteurs dérivés à droite $R^iF$ de $F$ pour $i\geq 0$ par $R^i F(\Ff)=h^i(F(I^.))$. Des choix différents de résolutions injectives donnent des foncteurs $R^i F$ isomorphes.
+telle que les faisceaux $I^k$ soient injectifs. Cela signifie que les foncteurs $\Hom(.,I^k)$ sont exacts (ils sont exacts seulement à gauche en général). On définit les foncteurs dérivés à droite $R^iF$ de $F$ pour $i\geq 0$ par $R^i F(\Ff)=h^i(F(I^.))$, et on a le résultat fondamental suivant:
+
+\begin{thm}
+\begin{enumerate}
+\item Les $R^i F$ définissent des foncteurs $\Aa b(X)\rightarrow \Aa b$. De plus, ils ne dépendent pas du choix des résolutions injectives à isomorphisme près.
+\item On a un isomorphisme $F\simeq R^0F$
+\item Pour tout suite exacte courte $0\rightarrow \Ff'\rightarrow \Ff \rightarrow \Ff'' \rightarrow 0$ dans $\Aa b(X)$, il existe un morphisme naturel de connexion $\delta^i:R^iF(\Ff'')\rightarrow R^{i+1}F(\Ff')$, tel que l'on obtient une suite exacte longue:
+$$...\rightarrow R^iF(\Ff') \rightarrow R^iF(\Ff) \rightarrow R^iF(\Ff'') \xrightarrow{\delta ^i} R^{i+1}F(R^{i+1}) \rightarrow ...$$
+\end{enumerate}
+\end{thm}
 
 \begin{defn}
-Soit $\Gamma(X,.):\Aa b(X)\rightarrow \Aa b$ le foncteur sections globales. Les foncteurs de cohomologie $H^i(X,.)$ sont les foncteurs dérivés de $\Gamma(X,.)$. Pour tout $\Ff\in \Aa b(X)$, les groupes $H^i(X,\Ff)$ sont les groupes de cohomologie de $\Ff$.
+Soit $\Gamma(X,.):\Aa b(X)\rightarrow \Aa b$ le foncteur sections globales. Les foncteurs de cohomologie $H^i(X,.)$ sont les foncteurs dérivés à droite de $\Gamma(X,.)$. Pour tout $\Ff\in \Aa b(X)$, les groupes $H^i(X,\Ff)$ sont appelés les groupes de cohomologie de $\Ff$.
 \end{defn}
 
-Un faisceau $\Ff$ est dit acyclique si $H^i(X,\Ff)$ sont nuls pour tout $i>0$. On peut toujour remplacer une résolution injective de $\Ff$ par une résolution acyclique pour le calcul des groupes de cohomologie de $\Ff$. Les faisceaux flasques donne une classe de faisceau acycliques, ce sont les faisceaux dont les flèches de restriction sont surjectives. De plus, tout faisceau injectif est flasque, on en déduit que l'on peut utiliser des résolutions injectives dans $\Mm od(X)$ pour calculer les groupes de cohomologie d'un $\Oo_X$-module.
+
+Un faisceau $\Ff$ est dit acyclique si $H^i(X,\Ff)$ est nul pour tout $i>0$. On peut toujour remplacer une résolution injective de $\Ff$ par une résolution acyclique pour le calcul des groupes de cohomologie de $\Ff$. Les faisceaux flasques donne une classe de faisceaux acycliques, ce sont les faisceaux dont les flèches de restriction sont surjectives. De plus, tout faisceau injectif est flasque, on en déduit que l'on peut utiliser des résolutions injectives dans $\Mm od(X)$ pour calculer les groupes de cohomologie d'un $\Oo_X$-module.
 
 \subsubsection{Cohomologie à support}
 
 Soit $X$ un schéma, $\Ff\in \Aa b(X)$, et $Z$ un fermé de $X$. Le support $\supp\Ff$ est l'ensemble des points où la tige et non-nulle. De même, le support d'une section est l'ensemble des points où le germe est non-nul, c'est un fermé de $X$. On définit le sous-faisceau $\Hh ^0 _Z(\Ff):V\mapsto \Gamma_{Z\cap V}(V,\Ff)$ où $\Gamma_{Z\cap V}(V,\Ff)$ est le sous-groupe de $\Gamma(V,\Ff)$ constitué des sections à support contenu dans $Z\cap V$. C'est bien un faisceau car les sections locales se recollent de manière unique en sections de $\Ff$ qui restent à support dans $Z$. On a de plus une suite exacte:
 
-$$0\rightarrow \Hh^0 _Z(\Ff) \rightarrow \Ff \rightarrow j_*(\Ff_{|U})$$
+
+\begin{equation}\label{eq:ESSupport}
+0\rightarrow \Hh^0 _Z(\Ff) \rightarrow \Ff \rightarrow j_*(\Ff_{|U})
+\end{equation}
 
 \begin{ex}\label{cohomsupportaffineex}
-Soit $X=\spec A$ un schéma affine noetherien, $M$ un $A$-module et $\Ff=\widetilde{M}$, $\mathfrak{a}$ un idéal et $Z=\Vv(\mathfrak{a})$. Soit $m\in M=\Gamma(X,\Ff)$, alors $\supp m=\Vv(\ann m)$, où $\ann M=\lbrace,a\in A\mid am=0\rbrace$ est l'annulateur de $m$. En effet, soit $p\in X$, alors $m_p\neq 0\iff \forall a\in A\setminus p, fm\neq 0\iff \ann(m)\subset p$.
+Soit $X=\spec A$ un schéma affine noetherien, $M$ un $A$-module et $\Ff=\widetilde{M}$, $\mathfrak{a}$ un idéal et $Z=\Vv(\mathfrak{a})$. Soit $m\in M=\Gamma(X,\Ff)$, alors $\supp m=\Vv(\ann m)$, où $\ann M=\lbrace a\in A\mid am=0\rbrace$ est l'annulateur de $m$. En effet, soit $p\in X$, alors $m_p\neq 0\iff \forall a\in A\setminus p, fm\neq 0\iff \ann(m)\subset p$.
 
-On définit un sous-module $\Gamma_\mathfrak{a}(M)$ de $M$ par $\Gamma_\mathfrak{a}(M):=\lbrace m\in M\mid \mathfrak{a}^nm=0 \text{ pour un } n>0 \rbrace$. Alors on a $\Gamma_\mathfrak{a}(M)^{\widetilde{}} = \Hh ^0 _Z(\Ff)$. En effet, tout d'abord $\Hh^0 _Z(\Ff)$ est quasi-cohérent comme noyau d'un morphisme entre faisceaux quasi-cohérents, cela d'après la suite exacte ci-dessus et \ref{j* qch}. Il reste donc à montrer que $\Gamma_\mathfrak{a}(M)\simeq\Gamma_Z(X,\Ff)$ en tant que $A$-modules. Soit $m\in\Gamma_Z(X,\Ff)$, on a donc $\supp m=\Vv(\ann m)\subset \Vv(\mathfrak{a})$, d'où $\mathfrak{a}\subset \sqrt{\ann m}$. Or, $\mathfrak{a}$ est de type fini car $A$ est noetherien, on en conclut que $m\in \Gamma_\mathfrak{a}(M)$. Réciproquement, si $m\in \Gamma_\mathfrak{a}(M)$, alors $\mathfrak{a}^n\subset \ann m$ pour un $n>0$, ce qui donne $\supp m \subset\Vv(\mathfrak{a}^n)=\Vv(\mathfrak{a})$. On a donc $\Gamma_\mathfrak{a}(M)=\Gamma_Z(X,\Ff)$.
+On définit un sous-module $\Gamma_\mathfrak{a}(M)$ de $M$ par $\Gamma_\mathfrak{a}(M):=\lbrace m\in M\mid \mathfrak{a}^nm=0 \text{ pour un } n>0 \rbrace$. Alors on a $\Gamma_\mathfrak{a}(M)^{\widetilde{}} = \Hh ^0 _Z(\Ff)$. En effet, tout d'abord $\Hh^0 _Z(\Ff)$ est quasi-cohérent comme noyau d'un morphisme entre faisceaux quasi-cohérents, cela d'après la suite exacte ci-dessus et \ref{j* qch}. En utilisant \ref{}, il reste donc à montrer que $\Gamma_\mathfrak{a}(M)\simeq\Gamma_Z(X,\Ff)$ en tant que $A$-modules. Soit $m\in\Gamma_Z(X,\Ff)$, on a par définition $\supp m=\Vv(\ann m)\subset \Vv(\mathfrak{a})$, d'où $\mathfrak{a}\subset \sqrt{\ann m}$. Or, $\mathfrak{a}$ est de type fini car $A$ est noetherien, on en conclut que $m\in \Gamma_\mathfrak{a}(M)$. En effet, si on a $k$ générateurs $x_1,...,x_k$ de $\mathfrak{a}$, on peut trouver un exposant commun $n$ tel que $x^n_i$ annule $m$ pour tout $i$. Alors on a par exemple $\mathfrak{a}^{n^k}m=0$. Réciproquement, si $m\in \Gamma_\mathfrak{a}(M)$, alors $\mathfrak{a}^n\subset \ann m$ pour un $n>0$, ce qui donne $\supp m \subset\Vv(\mathfrak{a}^n)=\Vv(\mathfrak{a})$, puis $m\in \Gamma_Z(X,\Ff)$. Finalement on a bien $\Gamma_\mathfrak{a}(M)=\Gamma_Z(X,\Ff)$.
 \end{ex}
 
-Notons maintenant que $\Gamma_Z(X, .)$ est un foncteur exact à gauche. Si $\Ff$ est flasque, on a de plus une suite exacte:
+Il est facile de montrer que $\Gamma_Z(X, .)$ est un foncteur exact à gauche, on définit alors les groupes de cohomologie de $\Ff$ à support dans $Z$ comme ses foncteurs dérivés à droite, on les note $H_Z^i(X,\Ff)$. Si $\Ff$ est flasque, en appliquant le foncteur sections globales $\Gamma(X,.)$ à la suite exacte \ref{eq:ESSupport}, on obtient la suite exacte courte ci-dessous:
 $$0\rightarrow \Gamma_Z(X,\Ff)\rightarrow \Gamma(X,\Ff)\rightarrow \Gamma(U,\Ff)\rightarrow 0$$
 
-On choisit maintenant une résolution injective $\Ii^.$ de $\Ff$. Alors $\Ii^.$ est flasque et donc $\Ii^._{|U}$ aussi, on peut donc utiliser cette dernière pour calculer les groupes de cohomologie de $\Ff_{|U}$. En utilisant la suite exacte ci-dessus on obtient une suite exacte de complexes de groupes abéliens:
+On choisit maintenant une résolution injective $\Ii^.$ de $\Ff$. Alors $\Ii^.$ est flasque et donc $\Ii^._{|U}$ aussi, on peut donc utiliser cette dernière pour calculer les groupes de cohomologie de $\Ff_{|U}$.   En utilisant la suite exacte courte ci-dessus on obtient une suite exacte courte de complexes de groupes abéliens:
 
 $$0\rightarrow \Gamma_Z(X,\Ii^.)\rightarrow \Gamma(X,\Ii^.)\rightarrow \Gamma(U,\Ii^.)\rightarrow 0$$
 
-Les techniques utilisées pour obtenir la suite exacte longue \ref{eq:longSES} s'appliquent dans la catégorie des groupes abéliens et on obtient ainsi une suite exacte longue, dans laquelle les $H_Z^i(X,.)$ sont les foncteurs dérivés à droite de $\Gamma_Z(X,.)$:
-
+Les techniques utilisées pour obtenir la suite exacte longue \ref{eq:longSES} s'appliquent dans la catégorie des groupes abéliens et on obtient ainsi une suite exacte longue:
 \begin{equation}\label{eq:longSESSupport}
 0\rightarrow H_Z^0(X,\Ff)\rightarrow H^0(X,\Ff)\rightarrow H^0(U,\Ff_{|U})\rightarrow  H_Z^1(X,\Ff)\rightarrow H^1(X,\Ff)\rightarrow H^1(U,\Ff_{|U})\rightarrow ...
 \end{equation}
 
 
-Remarquons qu'avec les notations de l'exemple \ref{cohomsupportaffineex}, on a $\Gamma_Z(X, .)\circ \widetilde{}=\Gamma_\mathfrak{a}(.)$ en tant que foncteurs $A$-$\Mm od\rightarrow A$-$\Mm od$. On en déduit que le foncteur $\Gamma_\mathfrak{a}(.)$ est exact et ses foncteurs dérivés à droite, notés $H_\mathfrak{a}^i$ sont égaux aux foncteurs $H_Z^i(X,.)\circ \widetilde{}$ . En effet, comme le tilde réalise une équivalence de catégories, il envoie une résolution injective de $M$ sur une résolution injective de $\widetilde{M}$. En utilisant cette dernière pour calculer les groupes de cohomologie de $H^i_Z(X, \widetilde{M})$ on obtient le résultat par l'égalité des foncteurs $\Gamma_Z(X, .)\circ \widetilde{}=\Gamma_\mathfrak{a}(.)$.
+Remarquons enfin qu'avec les notations de l'exemple \ref{cohomsupportaffineex}, on a $\Gamma_Z(X, .)\circ\, \widetilde{}=\Gamma_\mathfrak{a}(.)$ en tant que foncteurs $A$-$\Mm od\rightarrow A$-$\Mm od$. On en déduit que le foncteur $\Gamma_\mathfrak{a}(.)$ est exact à gauche et que ses foncteurs dérivés à droite, notés $H_\mathfrak{a}^i$, sont égaux aux foncteurs $H_Z^i(X,.)\circ \widetilde{}$ . En effet, soit $\Ff \in \Aa b(X)$ et $M:=\Gamma(X,\Ff)$. Comme le tilde réalise une équivalence de catégories (voir \ref{}), il envoie une résolution injective de $M$ sur une résolution injective de $\Ff\simeq \widetilde{M}$. En utilisant cette dernière pour calculer les groupes de cohomologie de $\Ff$ à support dans $Z$, on obtient le résultat par l'égalité des foncteurs $\Gamma_Z(X, .)\circ\, \widetilde{}=\Gamma_\mathfrak{a}(.)$.
 
 \subsubsection{Cohomologie sur un schéma affine}
 
@@ -73,7 +84,7 @@ Soit $X=\spec A$ un schéma affine noetherien. Alors pour tout faisceau quasi-co
 
 \subsubsection{Une application}
 
-On commence par donner une interprétation cohomologique de la profondeur d'un idéal. On en déduit un corollaire qui donne une réciproque à \ref{extregularnormal} et nous sera utile par la suite.
+On introduit la notion de profondeur d'un module et on en donne une interprétation en termes de cohomologie à support. On en déduit un corollaire qui donne une réciproque à \ref{extregularnormal} et nous sera utile par la suite.
 
 \begin{prop}
 Soit $A$ un anneau noetherien, $\mathfrak{a}$ un idéal, et $M$ un $A$-module de type fini. Alors pour tout $n\geq 0$, les conditions suivantes sont équivalentes:
@@ -83,7 +94,7 @@ Soit $A$ un anneau noetherien, $\mathfrak{a}$ un idéal, et $M$ un $A$-module de
 \end{enumerate}
 \end{prop}
 \begin{proof}
-Montrons cette équivalence par récurrence. Supposons $n=1$, et $\depth_\mathfrak{a} M\geq 1$. Alors il existe $x\in\mathfrak{a}$ tel que $x$ n'est pas diviseur de zéro de $M$. Soit $m\in \Gamma_ \mathfrak{a}(M)$, ainsi il existe $k\geq 0$ tel que $m \mathfrak{a}^k=0$. En particulier, $x^nm=0$, ce qui prouve $m=0$. D'où $H^0_\mathfrak{a}(M)=0$. Réciproquement, supposons $H^0_\mathfrak{a}(M)=0$. Cela signifie que pour tout $m\in M$ et $k\geq 0$, il existe $x\in \mathfrak{a}^k$ tel que $mx\neq 0$. On en déduit que $\mathfrak{a}$ n'est inclus dans aucun idéal premier associé à $M$ (voir \ref{}), d'où $\mathfrak{a}\nsubseteq \cup_{p\in \asso M}p$ par le lemme d'évitement \ref{}. Cette dernière union étant d'après \ref{} l'ensemble des éléments de $A$ qui annule un élément de $M$. On peut ainsi trouver un $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$, c'est à dire $\depth_\mathfrak{a}M\geq 1$.
+Montrons cette équivalence par récurrence. Le cas $n=0$ est trivial, mais nous aurons besoin du cas $n=1$ dans la récurrence, on le démontre maintenant. Supposons $n=1$, et $\depth_\mathfrak{a} M\geq 1$. Alors il existe $x\in\mathfrak{a}$ tel que $x$ n'est pas diviseur de zéro de $M$. Soit $m\in \Gamma_ \mathfrak{a}(M)$, ainsi il existe $k\geq 0$ tel que $m \mathfrak{a}^k=0$. En particulier, $x^nm=0$, ce qui prouve $m=0$. D'où $H^0_\mathfrak{a}(M)=0$. Réciproquement, supposons $H^0_\mathfrak{a}(M)=0$. Cela signifie que pour tout $m\in M$ et $k\geq 0$, il existe $x\in \mathfrak{a}^k$ tel que $mx\neq 0$. On en déduit que $\mathfrak{a}$ n'est inclus dans aucun idéal premier associé à $M$ (voir \ref{}), d'où $\mathfrak{a}\nsubseteq \cup_{p\in \asso M}p$ par le lemme d'évitement \ref{}. Cette dernière union étant d'après \ref{} l'ensemble des éléments de $A$ qui annule un élément de $M$. On peut ainsi trouver un $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$, c'est à dire $\depth_\mathfrak{a}M\geq 1$.
 
 Supposons maintenant le résultat acquis pour $n\geq 1$. Pour le sens direct on suppose $\depth_\mathfrak{a} M\geq n+1$. Compte tenu de l'hypothèse de récurrence il reste à montrer que $H^n_\mathfrak{a}(M)=0$. Par hypothèse, il existe $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$. On considère alors la suite exacte de $A$-modules:
 $$0\rightarrow M \xrightarrow{.x} M\rightarrow M/xM\rightarrow 0$$
