@@ -46,12 +46,12 @@
 \contentsline {subsubsection}{Faisceaux inversibles sur $\mathbb {P}_k^n$}{30}{section*.17}
 \contentsline {subsubsection}{Morphismes vers l'espace projectif}{30}{section*.18}
 \contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux inversible tr\IeC {\`e}s amples}{31}{section*.19}
+\contentsline {subsection}{\numberline {2.2.5}Le groupe des unit\IeC {\'e}s d'une vari\IeC {\'e}t\IeC {\'e} irr\IeC {\'e}ductible}{32}{subsection.2.2.5}
 \contentsline {section}{\numberline {2.3}Le spectre relatif d'une alg\IeC {\`e}bre divisorielle}{32}{section.2.3}
-\contentsline {chapter}{\numberline {3}Anneaux de Cox}{35}{chapter.3}
-\contentsline {section}{\numberline {3.1}Un exemple introductif}{35}{section.3.1}
-\contentsline {section}{\numberline {3.2}Cas d'un groupe des classes sans torsion}{36}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Faisceau et anneau de Cox}{37}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Le spectre relatif de $\mathcal {R}$}{37}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{40}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Cas d'un groupe des classes avec torsion}{40}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Faisceau et anneau de Cox}{40}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {3}Anneaux de Cox}{36}{chapter.3}
+\contentsline {section}{\numberline {3.1}Un exemple introductif}{36}{section.3.1}
+\contentsline {section}{\numberline {3.2}Cas d'un groupe des classes sans torsion}{37}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Faisceau et anneau de Cox}{38}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{38}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Cas d'un groupe des classes avec torsion}{39}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Faisceau et anneau de Cox}{39}{subsection.3.3.1}
