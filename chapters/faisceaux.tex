@@ -137,7 +137,7 @@ Soit $A$ un anneau, $M$ un $A$-module. Une suite $x_1,...,x_r$ d'éléments de $
 \end{defn}
 
 \begin{defn}[Profondeur]
-Soit $A$ un anneau, $M$ un $A$-module et $\mathfrak{a}\subset A$ un idéal. La $mathfrak{a}$-profondeur de $M$ est la longueur maximale des suites régulières de $M$ contenues dans $mathfrak{a}$.
+Soit $A$ un anneau, $M$ un $A$-module et $\mathfrak{a}\subset A$ un idéal. La $\mathfrak{a}$-profondeur de $M$ est la longueur maximale des suites régulières de $M$ contenues dans $\mathfrak{a}$.
 \end{defn}
 
 
@@ -495,7 +495,7 @@ Autrement dit dans ce langage, se donner un morphisme $X\rightarrow \PP^n_k$ est
 
 \subsection{Le groupe des unités d'une variété irréductible}
 
-Soit $X$ une variété, le groupe des unités $U(X)$ de $X$ est le quotient du groupe $\Oo(X)^*$ des fonctions régulières inversibles par le sous-groupe $k^*$ des fonctions constantes. On va appliquer les techniques précédentes pour obtenir un résultat de finitude de $U(X)$ lorsque $X$ est irréductible, ainsi que le groupe des caractères d'un groupe algébrique.
+Soit $X$ une variété, le groupe des unités $U(X)$ de $X$ est le quotient du groupe $\Oo(X)^*$ des fonctions régulières inversibles par le sous-groupe $k^*$ des fonctions constantes. On va appliquer les techniques précédentes pour obtenir un résultat de finitude de $U(X)$ lorsque $X$ est irréductible, ainsi que du groupe des caractères d'un groupe algébrique.
 
 \begin{prop}
 Soit $X$ une variété irréductible. Alors $U(X)$ est libre de type fini.
@@ -506,7 +506,17 @@ Comme $\Oo(X)^*$ s'injecte dans $\Oo(U)^*$ pour tout ouvert $U\subset X$, on peu
 D'après \ref{}, on peut supposer que $X$ est un ouvert d'une variété projective normale $\bar{X}$. On note $D_1,...,D_r$ les composantes irréductibles de $\bar{X}\setminus X$. Ceux sont des diviseurs premiers car ils sont définis par l'équation de l'hyperplan à l'infini. Dans chaque carte affine qui les rencontre, il s'agit donc de sous-variétés fermés de codimension $1$ d'après \ref{dimsousvariete}. Chacun de ces diviseurs premiers $D_i$ définit un anneau de valuation discrète dont on note $v_i$ la valuation. On considère l'application:
 $$\Oo(X)^*\rightarrow \ZZ^r, f\mapsto (v_1(f),...,v_r(f))$$
 C'est un morphisme de groupes de noyau $k^*$ d'après \cite{Hartshorne} I.3.4. ce qui conclut la preuve.
+\end{proof}
 
+\begin{prop}
+Soit $X, Y$ des variétés irréductibles. Alors le morphisme:
+$$\Oo(X)^*\times\Oo(Y)^*\rightarrow\Oo(X\times Y)^*,\,(f,g)\mapsto ((x,y )\mapsto f(x)g(y))$$
+est surjectif.
+\end{prop}
+\begin{proof}
+Il suffit de montrer que $f\in \Oo(X\times Y)^*$ peut s'écrire $f=gh$ pour $g\in k(X)$ et $h\in k(Y)$. En effet, on considère un point $y\in Y$ où $h$ est régulière. D'autre part on constate que $f_y:x\mapsto f(x,y)$ est régulière sur $X$, ce qui se voit sur les ouverts affines $U\times V$. En effet $\Oo(U\times V)$ est alors le coproduit des algèbres de coordonnées $\Oo(U)$ et $\Oo(V)$, c'est à dire leur produit tensoriel. De plus, $f_y$ ne s'annule pas donc est inversible dans $\Oo(X)$. Cela prouve que $g$ est en fait régulière, et $h$ aussi par le même raisonnement.
+
+On peut ainsi remplacer $X$ et $Y$ par deux ouverts affines lisses. Le produit  $X\times Y$ est encore affine et lisse d'après \ref{}. D'après \ref{}, on peut supposer que $X$ est un ouvert d'une variété projective normale $\bar{X}$, et on note $D_1,...,D_r$ les diviseurs premiers correspondants aux composantes irréductibles de $\bar{X}\setminus X$. Soit $f\in \Oo(X\times Y)^*$ que l'on regarde comme une fonction rationnelle sur $\bar{X}\times Y$, qui est normal d'après \ref{}. Le diviseur associé à $f$ est à support dans $(\bar{X}\setminus X)\times Y$, on a donc $\divi(f)=\sum_{i=1}^rn_iD_i\times Y$ pour des entiers $n_1,...n_r$. On en déduit $\divi(f_y)=\sum_{i=1}^rn_iD_i$ pour tout $y$ dans un ouvert $V$ non-vide de $Y$. Choisissons $y_0\in V$, alors $\divi(f_yf_{y_0}^{-1})$ est constante sur $X$ car $\bar{X}$ est complète et normale (voir \ref{}). Ainsi $h:=f/f_{y_0}$ est une fonction rationnelle qui ne dépend que de $y$. On a donc $f=f_{y_0}h$ comme désiré.
 \end{proof}
 
 \section{Le spectre relatif d'une algèbre divisorielle}
