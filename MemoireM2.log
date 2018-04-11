@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  10 APR 2018 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  11 APR 2018 19:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1181,22 +1181,22 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 42.
 
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Memo
-ireM2.toc)
+ireM2.tocpdfTeX warning (ext4): destination with the same identifier (name{page
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.58 ...iques de l'anneau de Cox}{41}{section.3.4}
+                                                   [1
+
+])
 \tf@toc=\write5
 \openout5 = `MemoireM2.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.44 \include{chapters/introduction}
-                                     [1
-
-] [2]
+ [2]
 \openout2 = `chapters/introduction.aux'.
 
- (./chapters/introduction.tex
-[3
+
+(./chapters/introduction.tex [3
 
 
 ]) [4
@@ -1212,20 +1212,16 @@ Chapitre 1.
 
 ] [6] [7] [8]
 
-LaTeX Warning: Reference `' on page 9 undefined on input line 255.
+LaTeX Warning: Reference `' on page 9 undefined on input line 258.
 
 
-LaTeX Warning: Reference `' on page 9 undefined on input line 256.
+LaTeX Warning: Reference `' on page 9 undefined on input line 259.
 
 
-LaTeX Warning: Reference `' on page 9 undefined on input line 257.
+LaTeX Warning: Reference `' on page 9 undefined on input line 260.
 
-[9]
-
-LaTeX Warning: Reference `' on page 10 undefined on input line 320.
-
-[10]
-Overfull \hbox (0.88939pt too wide) in paragraph at lines 358--359
+[9] [10]
+Overfull \hbox (0.88939pt too wide) in paragraph at lines 361--362
 \T1/cmr/m/it/10 tant que groupes al-gé-briques par trans-port de struc-ture. L'
 iso-mor-phisme est $\OML/cmm/m/it/10 ev[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 G 
 \OMS/cmsy/m/n/10 ! []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 (\OML
@@ -1235,7 +1231,7 @@ iso-mor-phisme est $\OML/cmm/m/it/10 ev[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 G
 
 [11] [12] [13] [14] [15]
 
-LaTeX Warning: Reference `noethgrad' on page 16 undefined on input line 559.
+LaTeX Warning: Reference `noethgrad' on page 16 undefined on input line 562.
 
 [16] [17]) [18]
 \openout2 = `chapters/faisceaux.aux'.
@@ -1325,44 +1321,44 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 [30] [31]
 
-LaTeX Warning: Reference `' on page 32 undefined on input line 506.
+LaTeX Warning: Reference `' on page 32 undefined on input line 508.
 
 
-LaTeX Warning: Reference `' on page 32 undefined on input line 519.
+LaTeX Warning: Reference `' on page 32 undefined on input line 521.
 
 
-LaTeX Warning: Reference `' on page 32 undefined on input line 519.
+LaTeX Warning: Reference `' on page 32 undefined on input line 521.
 
 
-LaTeX Warning: Reference `' on page 32 undefined on input line 519.
+LaTeX Warning: Reference `' on page 32 undefined on input line 521.
 
 
-LaTeX Warning: Reference `' on page 32 undefined on input line 519.
+LaTeX Warning: Reference `' on page 32 undefined on input line 521.
 
-[32]
+[32] [33]
 
-LaTeX Warning: Reference `' on page 33 undefined on input line 554.
-
-[33]
-
-LaTeX Warning: Reference `' on page 34 undefined on input line 595.
+LaTeX Warning: Reference `' on page 34 undefined on input line 588.
 
 [34]
 
-LaTeX Warning: Reference `' on page 35 undefined on input line 606.
+LaTeX Warning: Reference `' on page 35 undefined on input line 629.
+
+[35]
+
+LaTeX Warning: Reference `' on page 36 undefined on input line 646.
 
 
-LaTeX Warning: Reference `cox 1.3.1.7' on page 35 undefined on input line 606.
+LaTeX Warning: Reference `cox 1.3.1.7' on page 36 undefined on input line 646.
 
-) [35]
+) [36]
 \openout2 = `chapters/coxring.aux'.
 
  (./chapters/coxring.tex
 Chapitre 3.
 
-LaTeX Warning: Reference `' on page 36 undefined on input line 7.
+LaTeX Warning: Reference `' on page 37 undefined on input line 7.
 
-[36
+[37
 
 
 
@@ -1380,10 +1376,10 @@ n/10 [\OML/cmm/m/it/10 z[]z[]; z[]z[]; z[]z[]; z[]z[]\OT1/cmr/m/n/10 ]$
  []
 
 
-LaTeX Warning: Reference `consFreeCoxRing' on page 37 undefined on input line 5
+LaTeX Warning: Reference `consFreeCoxRing' on page 38 undefined on input line 5
 1.
 
-[37]
+[38]
 Overfull \hbox (7.19707pt too wide) in paragraph at lines 73--74
 []\T1/cmr/m/n/10 On peut sup-po-ser $\OML/cmm/m/it/10 X$ \T1/cmr/m/n/10 lisse c
 ar $\OML/cmm/m/it/10 X[]$ \T1/cmr/m/n/10 est de co-di-men-sion $\U/msa/m/n/10 >
@@ -1393,14 +1389,28 @@ ar $\OML/cmm/m/it/10 X[]$ \T1/cmr/m/n/10 est de co-di-men-sion $\U/msa/m/n/10 >
  []
 
 
-LaTeX Warning: Reference `Coxgraded' on page 38 undefined on input line 74.
+LaTeX Warning: Reference `Coxgraded' on page 39 undefined on input line 74.
 
-[38] [39]) [40] (./MemoireM2.bbl
+[39] [40]
+
+LaTeX Warning: Reference `' on page 41 undefined on input line 182.
+
+[41]
+
+LaTeX Warning: Reference `' on page 42 undefined on input line 191.
+
+
+LaTeX Warning: Reference `' on page 42 undefined on input line 191.
+
+
+LaTeX Warning: Reference `' on page 42 undefined on input line 193.
+
+) [42] (./MemoireM2.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 31.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [41
+)) [43
 
 
 ]
@@ -1412,7 +1422,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
 Package rerunfilecheck Info: File `MemoireM2.out' has not changed.
-(rerunfilecheck)             Checksum: C4A3854CD751D89EA0591C412E60D037;3294.
+(rerunfilecheck)             Checksum: DE89BA210A0ABF47132DB2893C0B1724;3453.
 
 
 LaTeX Warning: There were undefined references.
@@ -1420,10 +1430,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
- 21532 strings out of 492995
- 404021 string characters out of 6132704
- 483784 words of memory out of 5000000
- 24337 multiletter control sequences out of 15000+600000
+ 21591 strings out of 492995
+ 405197 string characters out of 6132704
+ 484235 words of memory out of 5000000
+ 24382 multiletter control sequences out of 15000+600000
  26777 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,15n,84p,1666b,1112s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1463,10 +1473,10 @@ mf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on MemoireM2.pdf (42 pages, 620751 bytes).
+Output written on MemoireM2.pdf (44 pages, 636321 bytes).
 PDF statistics:
- 918 PDF objects out of 1000 (max. 8388607)
- 833 compressed objects within 9 object streams
- 302 named destinations out of 1000 (max. 500000)
- 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 969 PDF objects out of 1000 (max. 8388607)
+ 882 compressed objects within 9 object streams
+ 316 named destinations out of 1000 (max. 500000)
+ 341 words of extra memory for PDF output out of 10000 (max. 10000000)
 

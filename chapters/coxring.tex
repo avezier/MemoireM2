@@ -90,7 +90,7 @@ Soit $X$ vérifiant $(\dagger)$. Alors:
 Soit $f,g$ des fonctions régulières non-nulles sur $\widetilde{X}$. Comme $\widetilde{X}$ est intègre, on peut les voir comme des éléments de $k(X)^*$. Ainsi $f\mid g$ dans $\Rr(X)$ si et seulement si $\divi(f^{-1}g)\geq 0$. Prenant $f,g$ comme dans l'énoncé et en utilisant \ref{pstarprincipal}, que c'est équivalent à $\divi_D(f)\leq\divi_E(g)$. La preuve du deuxième énoncé est similaire.
 \end{proof}
 
-\section{Cas d'un groupe des classes avec torsion}
+\section{Cas général}
 
 \subsection{Faisceau et anneau de Cox}
 
@@ -104,7 +104,7 @@ L'anneau de Cox associé à $K$ et $\chi$ est l'anneau des sections globales de 
 
 La $\clg(X)$-graduation de $\Rr$ annoncée ci-dessus n'est pas évidente à priori. On clarifie cela dans la proposition ci-dessous.
 
-\begin{prop}
+\begin{prop}\label{coxidealform}
 Avec les notation de la construction \ref{conscoxtorsion}, $\Ss$ est naturellement muni d'une $\clg(X)$-graduation:
 $$\Ss=\bigoplus_{[D]\in\clg(X)}\Ss_{[D]},\,\,\,\,\,\,\, \Ss_{[D]}:=\bigoplus_{D'\in c^{-1}([D])}\Ss_{D'}$$
 Soit $f\in\Gamma(U,\Ii)$ et $D\in K$, alors la composante $\clg(X)$-homogène $f_{[D]}\in \Gamma(U,\Ss_{[D]})$ s'écrit de manière unique sous la forme:
@@ -123,6 +123,7 @@ $$(1-\chi(E))g_{E,D'}=(1-\chi(E+D-D'))g'_{E,D'}-(1-\chi(D-D'))g'_{E,D'}$$
 On obtient ainsi l'écriture désirée localement sur des ouverts qui recouvrent $X$. Par irréductibilité de $X$ on obtient l'unicité de l'écriture globalement en recollant ces sections.
 \end{proof}
 
+\label{genreatorsCoxIdeal}
 \begin{cor}
 Supposons $K$ de type fini, et soit $E_1,...,E_s$ une base de $K^0$. Alors pour tout ouvert $U\subset X$, l'idéal $\Gamma(U,\Ii)$ est engendré par $1-\chi(E_i)$, $1\leq i\leq s$.
 \end{cor}
@@ -132,9 +133,63 @@ $$1-\chi(E+E')=(1-\chi(E))+(1-\chi(E'))\chi(E)$$
 $$1-\chi(-E)=(1-\chi(E))(-\chi(-E))$$
 \end{proof}
 
-\begin{prop}
+\begin{prop}\label{coxsheafiso2}
 Avec les notations de \ref{conscoxtorsion}, on a pour tout $D\in K$ un isomorphisme de faisceaux $\pi_{|\Ss_D}:\Ss_D\rightarrow \Rr_{[D]}$.
 \end{prop}
 \begin{proof}
 
+\end{proof}
+
+\begin{prop}\label{coxsheafiso}
+Avec les notations de \ref{conscoxtorsion}, on a pour tout ouvert $U\subset X$ un isomorphisme canonique $\Rr(U)\simeq \Ss(U)/\Ii(U)$.
+\end{prop}
+\begin{proof}
+
+\end{proof}
+
+\section{Propriétés algébriques de l'anneau de Cox} 
+
+\subsection{Intégrité et normalité}
+
+Notre objectif est de montrer que les anneaux de Cox sont intégralement clos. Remarquons tout de suite que l'on peut travailler avec une variété lisse pour cela.
+
+\begin{prop}
+On considère les données de la construction \ref{conscoxtorsion}. Alors pour tous ouverts $V\subset U\subset X$ tels que $U\setminus V$ est de codimension $\geq 2$ dans $U$, la restriction $\Rr(U)\rightarrow \Rr(V)$ est un isomorphisme.
+\end{prop}
+\begin{proof}
+On a déjà vu l'isomorphisme $\Ss(U)\rightarrow \Ss(V)$ en \ref{isomorphismcodim2}. De plus, la proposition \ref{coxidealform} montre que la restriction $\Ii(U)\rightarrow \Ii(V)$ est un isomorphisme. On conclut en appliquant la proposition \ref{coxsheafiso}.
+\end{proof}
+
+\begin{cons}\label{conscoxtorsionlisse}
+On considère les données de la construction \ref{conscoxtorsion}. On suppose de plus que $X$ est lisse. On considère les spectres relatifs $(\widetilde{X}, p)=\spec_X \Ss$ et $(\widehat{X},p_X)=\spec_X \Rr$. De plus, on peut toujours supposer $K$ de type fini et ces spectres sont sont munis respectivement d'une action du tore $H:=\spec k[K]$ et du groupe diagonalisable $k[\clg(X)]$. On a une immersion fermée $\widehat{X}\xhookrightarrow{i}\widetilde{X}$ d'image $\Vv(\Ii)$ qui donne un diagramme commutatif
+
+	\begin{center}
+	\begin{tikzcd}
+  		\widehat{X}\arrow[rd, swap, "p_X"] \arrow[rr, "i"] & & \widetilde{X} \arrow[ld, "p"] \\ 
+  		& X &
+	\end{tikzcd}
+	\end{center}
+De même, $H_X$ se plonge dans $H$, et l'immersion fermée $i$ est $H_X$ équivariante pour ce plongement. Les morphismes $p_X$ et $p$ sont des quotients géométriques. En particulier, $(p_X, \widehat{X})$ et $(p, \widetilde{X})$ sont des fibrés principaux. 
+Enfin, $\widehat{X}$ est une variété lisse et quasi-affine.
+Enfin
+\end{cons}
+\begin{proof}
+Les actions de $H$ et $H_X$ sont dues aux graduations respectives de $\Ss$ et $\Rr$ par $K$ et $\clg(X)$. Pour tout ouvert affine $U\subset X$, notons $U_1:=p_X^{-1}(U)$ et $U_2:=p^{-1}(U)$. La projection $\Ss(U)\rightarrow \Rr(U)$ donne localement une immersion fermée $U_1\xhookrightarrow{} U_2$ d'image $\Vv_{U_2}(\Ii(U_2))$. De plus, ces immersions respectent les graduation par la projection $c:K\rightarrow \clg(X)$. Ces immersions se recollent en une immersion $i$ d'image $\Vv(\Ii)$ qui est $H_X$-équivariante. De plus les mêmes arguments qu'en \ref{specrelatifdivi} nous donne que $p_X$ et $p$ sont des bon quotients car on a
+
+$$(p_X)_*(\Oo_{\widehat{X}})_0\simeq \Rr_0\simeq\Oo_X\simeq\Ss_0\simeq  p_*(\Oo_{\widetilde{X}})_0$$
+Puis la remarque \ref{lisseGoodQuotient} nous dit que ce sont en fait des quotients géométriques.
+
+Montrons que maintenant que $\widehat{X}\simeq \Vv_{\widetilde{X}}(\Ii)$ est une variété. C'est un schéma de type fini sur $k$ et séparé d'après \ref{}, il reste à montrer qu'il est réduit. On peut travailler localement sur un ouvert affine que l'on peut choisir de la forme $\widetilde{U}=p^{-1}(U)=\spec(\Ss(U))$ pour un ouvert affine $U$ de $X$. Soit $f\in\sqrt{\Ii(U)}$, comme c'est un idéal $\clg(X)$-homogène, il contient les composantes $\clg(X)$-homogènes de $f$. Soit $f_{[D]}$ l'une d'entre elles, elle s'écrit $f_{[D]}=f_D+g$ avec $f_D\in \Ss_D(U)$ et $g\in\Ii(U)$ (voir \ref{coxsheafiso2}). On obtient facilement $f_D^n\in \Ii(U)$ pour un $n>0$. Cela impose $f_D^n=0$ compte tenu de \ref{coxidealform} et donc $f_D=0$. Finalement, $f\in\Ii(U)$ ce qui montre que $\Ii(U)$ est radical.
+
+Elle est de plus quasi-affine d'après \ref{specrelatifQuasiAff}. Montrons pour finir qu'elle est lisse.
+\end{proof}
+
+\begin{thm}
+On considère les données de la construction \ref{conscoxtorsion}. On suppose de plus que $\Rr$ est localement de type fini. Alors pour tout ouvert $U\in X$, l'anneau $\Rr(U)$ est intégralement clos.
+\end{thm}
+\begin{proof}
+On peut supposer $X$ lisse donc être dans le contexte de \ref{conscoxtorsionlisse}. Alors $\widehat{X}$ est lisse donc normale. Il suffit donc de prouver son irréductibilité d'après \ref{} et \ref{}. Comme $p_X$ est surjective, une de ses composantes irréductibles $\widehat{X}_1$ domine $X$ car une variété irréductible ne peut être réunion de fermés irréductibles de codimensions non-nulles. Soit $U$ un ouvert de $X$. Si $p_X^{-1}(U)$ est irréductible alors il est inclus dans $\widehat{X}_1$. Par ailleurs, comme $p_X^{-1}(U)$ est isomorphe à la sous variété de $p^{-1}(U)$ définie par $\Ii(U)$. Il suffit de montrer que l'on peut recouvrir $X$ par des ouverts $U$ tels que $\Vv_{p^{-1}(U)}(\Ii(U))$ est irréductible, on aura alors $\widehat{X}_1=\widehat{X}$.
+
+On peut supposer $K$ de type fini d'après \ref{}. Soit $(D_1,...,D_s)$ une base de $K$ telle que $(n_1D_1,...,n_kD_k)$ soit une base de $K^0$ avec $1\leq k\leq s$. Une telle base existe d'après la théorie des $\ZZ$-modules. On peut également supposer que les $D_i$ ne sont pas des multiples dans $K$, quitte à remplacer $K$ si nécessaire. On choisit un ouvert $U\subset X$ tel que chaque $D_i$ est principal, disons égal à $\divi(f_i)$ avec $f_i\in k(X)$. D'après le corollaire \ref{genreatorsCoxIdeal}, l'idéal $\Ii(U)$ est engendré par les générateurs $1-\chi(n_iD_i)$ pour $1\leq i\leq k$. L'isomorphisme \ref{eq:1} identifie $p^{-1}(U)$ à $U\times \GG_m^s$. Par cet identification, $p_X^{-1}(U)$ est donné par les équations $1-\chi(n_iD_i)f_i^{n_i}t_i^{n_i}$. 
+Maintenant, comme $X$ est lisse, on peut la recouvrir par de tels ouverts.
 \end{proof}

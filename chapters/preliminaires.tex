@@ -5,10 +5,13 @@
 \subsection{Extensions entières d'anneaux}
 
 \begin{defn}[Anneau intègralement clos]\label{normalring}
-Soit $A$ un anneau intègre. $A$ est dit intégralement clos si il est égal à sa clôture intégrale. 
+Soit $A$ un anneau. $A$ est dit intégralement clos si il est intègre et égal à sa clôture intégrale. 
 \end{defn}
 
-Pour un anneau quelconque $A$, on dit que $A$ est normal si tout localisé de $A$ en idéal premier est un anneau intègre et intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13).
+\begin{rem}
+Il existe une notion plus générale qu'il est utile de mentionner pour la consistance avec la terminologie de variété normale que nous verrons plus loin. Pour un anneau quelconque $A$, on dit que $A$ est normal si tout localisé de $A$ en idéal premier est un anneau intègre et intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13). Mentionnons que nous ne rencontrerons pas dans ce mémoire d'anneaux normaux non-intègres, donc la définition ci-dessus sera suffisante.
+\end{rem}
+
 
 \begin{thm}\label{factonormal}
 Soit $A$ un anneau intègre noetherien intégralement clos. Alors
@@ -317,7 +320,7 @@ Alors il existe une unique factorisation
 \subsection{Groupes diagonalisables, actions de groupes diagonalisables}
 
 \subsubsection{Groupes diagonalisables}
-Soit $G$ un groupe algébrique. Le groupe $X^*(G)$ des caractères de $G$ est un sous-groupe de $k[G]^\times$ qui est de type fini comme on le verra en \ref{}. On remarque que $X^*$ est un foncteur contravariant de la catégorie des groupes algébriques dans la catégorie des groupes abéliens de type fini, l'image d'un morphisme $G_1\xrightarrow{\phi}G_2$ étant simplement la (co)-restriction $\phi^* \,_{|X^*(G_2)}^{|X^*(G_1)}$ du comorphisme $\phi^*$ entre les algèbres de coordonnées. On signale qu'en caractéristique $p>0$, les groupes de caractères ont de plus la propriété d'être sans $p$-torsion. Tout ce qui suit reste vrai en caractéristique $p$, avec cette contrainte supplémentaire sur les groupes de caractères.
+Soit $G$ un groupe algébrique. Le groupe $X^*(G)$ des caractères de $G$ est un sous-groupe de $k[G]^\times$ qui est de type fini comme on le verra dans la partie \ref{unitGroupFiniteType}. On remarque que $X^*$ est un foncteur contravariant de la catégorie des groupes algébriques dans la catégorie des groupes abéliens de type fini, l'image d'un morphisme $G_1\xrightarrow{\phi}G_2$ étant simplement la (co)-restriction $\phi^* \,_{|X^*(G_2)}^{|X^*(G_1)}$ du comorphisme $\phi^*$ entre les algèbres de coordonnées. On signale qu'en caractéristique $p>0$, les groupes de caractères ont de plus la propriété d'être sans $p$-torsion. Tout ce qui suit reste vrai en caractéristique $p$, avec cette contrainte supplémentaire sur les groupes de caractères.
 
 \begin{ex}
 \begin{enumerate}
