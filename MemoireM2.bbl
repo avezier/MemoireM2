@@ -1,10 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{article}
-auteur.
-\newblock titre.
-\newblock {\em journal}, 2015.
-
 \bibitem{MumfordRedBook}
 D.Mumford.
 \newblock {\em The red book of varieties and schemes}.
@@ -48,13 +43,18 @@ M.Brion.
 \newblock \url{https://www-fourier.ujf-grenoble.fr/~mbrion/lin_rev.pdf}.
 \newblock Accessed: 2018-18-03.
 
+\bibitem{QingLiu}
+Q.Liu.
+\newblock Algebraic geometry and arithmetic curves.
+\newblock 2006.
+
 \bibitem{LAGSpringer}
 T.A.Springer.
 \newblock {\em Linear Algebraic Groups}.
 \newblock Birkhauser, 1998.
 
 \bibitem{LAGFerrer}
-Alvaro~Rittatore Walter Ferrer~Santos.
+A.Rittatore W.Ferrer~Santos.
 \newblock {\em Actions and invariants of algebraic groups}.
 \newblock Chapman and Hall, 2005.
 

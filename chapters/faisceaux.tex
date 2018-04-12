@@ -3,15 +3,37 @@
 
 \section{Faisceaux quasi-cohérents}
 
-\subsection{Faisceaux quasi-cohérents sur une variété}
+\subsection{Faisceaux quasi-cohérents sur un schéma}
 
-On introduit ci-dessous la version relative du spectre d'un anneau. Ceci va nous permettre de construire les fibrés en droite de manière plus intrinsèque.
 
-\begin{cons}\label{relspec}[Spectre relatif]
+\subsubsection{Spectre relatif d'une $\Oo_X$-algèbre}
 
+Soit $X=\spec A$ un schéma affine, et $B$ une $A$-algèbre. C'est en particulier un $A$-module, et on remarque que $\widetilde{B}$ est naturellement munit de faisceau d'algèbres dans le sens où pour tout ouvert $U\subset X$, l'anneau $\widetilde{B}(U)$ est naturellement une $\Oo_X(U)$-algèbre. Cela mène à la définition suivante.
+
+\begin{defn}[$\Oo_X$-algèbre]
+Soit $X$ un schéma. Une $\Oo_X$-algèbre est un faisceau d'anneaux $\Ss$ sur $X$ muni d'un morphisme $\Oo_X\rightarrow \Ss$. On dit que $\Ss$ est quasi-cohérente si elle l'est en tant que $\Oo_X$-module. On dit qu'elle est localement de type fini si tout point $x\in X$ admet un voisinage ouvert $U$ tel que $\Ss(U)$ soit de type fini en tant que $\Oo_X(U)$-algèbre.
+\end{defn}
+
+On introduit ci-dessous la version relative du spectre d'un anneau. Cette construction nous sera très utile par la suite.
+
+\begin{cons}[Spectre relatif]	\label{relspec}
+Soit $X$ un schéma séparé, $\Ss$ une $\Oo_X$-algèbre quasi-cohérente, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Il existe un schéma $\spec_X \Ss$ construit par recollement des schémas affines $\spec(\Ss(U_i))$, unique à isomorphisme canonique près. Ce schéma est séparé sur $X$ via le recollement des morphismes $\spec(\Ss(U_i))\rightarrow U_i$ donnés par la structure d'algèbre. De plus, le morphisme $p$ est affine est on a l'égalité de faisceaux
+$$p_*(\Oo_{\spec_X\Ss})=\Ss$$
+Enfin, si $X$ est une variété et que $\Ss$ est faisceau d'algèbres réduites localement de type fini, alors $\spec_X \Ss$ est une variété.
 \end{cons}
+\begin{proof}
+On note $U_{ij}:=U_i\cap U_j$, $A_i:=\Ss(U_i)$ et $A_{ij}:=\Ss(U_{ij})$. Les données donnent naturellement un diagramme commutatif
 
-On déduit de la proposition précédente que le spectre relatif d'une variété $X$ est séparé.
+	\begin{center}
+	\begin{tikzcd}
+  		\widetilde{X}_{ij}:=\spec A_{ij} \arrow[r, "\phi_i"] \arrow[d, "p_{ij}"]& \widetilde{X}_i:=\spec A_i \arrow[d, "p_i"] \\ 
+  		U_{ij} \arrow[r, "\iota=\subset"] & U_i
+	\end{tikzcd}\\
+	\end{center}
+	
+On a $\Ss_{|U_{ij}}=\iota^*(\Ss_{|U_i})$ donc $\widetilde{A_{ij}}=\iota^*(\widetilde{A_i})=\widetilde{R_{ij}\otimes_{R_i}A_i}$, où $R_i:=\Oo_X(U_i)$ et $R_{ij}:=\Oo_X(U_{ij})$, ce qui donne $A_{ij}\simeq R_{ij}\otimes_{R_i}A_i$, puis $\widetilde{X}_{ij}\simeq U_{ij}\times_{U_i}\widetilde{X}_i$. Cela prouve que $\phi_i$ est une immersion ouverte. On a de même une immersion ouverte $\phi_j:\widetilde{X}_{ij}\rightarrow \widetilde{X}_j$. Les $\phi_{ij}:=\phi_j\phi_i^{-1}$ vérifient bient les conditions de recollement de \ref{gluevar}. On a donc un schéma $\widetilde{X}$ sur $X$ car les $p_i$ se recollent en un morphisme $p:\widetilde{X}\rightarrow X$ qui est affine par construction. Ce morphisme est séparé d'après \ref{sepCritere}. La dernière assertion est claire par définition.
+\end{proof}
+
 
 \subsection{Faisceaux quasi-cohérents sur une variété projective}
 
@@ -105,7 +127,7 @@ Voir \cite{Hartshorne} III.3.3
 Soit $A$ un anneau noetherien et $I$ un $A$-module injectif. Alors le faisceau $\widetilde{I}$ est flasque.
 \end{prop}
 \begin{proof}
-On prouve le résultat par récurrence sur les fermés de la forme $Y:=\overline{\supp \widetilde{I}}$ en utilisant le fait que $X$ est un espace topologique noetherien, c'est à dire que tout ensemble non-vide de fermés de $X$ admet un élément minimal. Les fermés minimums de la forme $\overline{\supp \widetilde{I}}$ sont les points fermés, et on en déduit facilement la proposition dans ce cas. En effet, supposons $p=\overline{\supp \widetilde{I}}$ un point fermé. Alors la seule tige non-nulle est $I_p$ et on a car $\widetilde{I}(U)=I_p$ si $p\in U$, $\widetilde{I}(U)=\lbrace 0 \rbrace$ sinon.
+On prouve le résultat par induction noetherienne sur les fermés  non-vides de la forme $Y:=\overline{\supp \widetilde{I}}$ en utilisant le fait que $X$ est un espace topologique noetherien, c'est à dire que tout ensemble non-vide de fermés de $X$ admet un élément minimal. On remarque que le résultat est immédiatement vérifié si $Y$ est l'ensemble vide. Il suffit donc de montrer qu'étant donné un fermé $Y$ de la forme $\overline{\supp \widetilde{I}}$ on est ramené à montrer le résultat pour un fermé propre de $Y$ de même forme.
 
 Supposons maintenant le résultat montré pour tout fermé propre de $Y:=\overline{\supp \widetilde{I}}$. Il est suffisant de montrer que $\Gamma(X,\widetilde{I})\rightarrow\Gamma(U,\widetilde{I})$ est surjectif pour tout ouvert $U\subset X$. Si $Y\cap U=\emptyset$ il n'y a rien à montrer. Sinon, il existe $f\in A$ tel que $X_f\subset U$ et $X_f\cap Y\neq \emptyset$. On note $Z= X\setminus X_f$, et on Considère le diagramme commutatif:
 
@@ -125,7 +147,7 @@ Posons $J=\Gamma_Z(X,\widetilde{I})$, et $\mathfrak{a}=fA$. Alors d'après l'exe
 Soit $X=\spec A$ un schéma affine noetherien. Alors pour tout faisceau quasi-cohérent $\Ff$ sur $X$, et pour tout $i>0$, on a $H^i(X,\Ff)=0$. 
 \end{thm}
 \begin{proof}
-Soit $M=\Gamma(X,\Ff)$, et $M\rightarrow I^.$ une résolution injective de $M$. On obtient d'après \ref{} et \ref{cohomAffProp1} une résolution flasque $\Ff\simeq \widetilde{M}\rightarrow \widetilde{I}^.$. On en déduit le théorème car une résolution flasque de faisceau est acyclique.
+Soit $M=\Gamma(X,\Ff)$, et $M\rightarrow I^.$ une résolution injective de $M$. On obtient d'après \ref{} une résolution injective $\Ff\simeq \widetilde{M}\rightarrow \widetilde{I}^.$ de $\Ff$ dans la catégorie des $\Oo_X$-modules quasi-cohérents. Or cette résolution est flasque d'après \ref{cohomAffProp1}. Cela suffit à montrer le théorème car une résolution flasque de faisceau est acyclique, et peut être utiliser pour calculer la cohomologie.
 \end{proof}
 
 \subsubsection{Une application}
@@ -153,11 +175,11 @@ Soit $A$ un anneau noetherien, $\mathfrak{a}$ un idéal, et $M$ un $A$-module de
 Montrons cette équivalence par récurrence. Le cas $n=0$ est trivial, mais nous aurons besoin du cas $n=1$ dans la récurrence, on le démontre maintenant. Supposons $n=1$, et $\depth_\mathfrak{a} M\geq 1$. Alors il existe $x\in\mathfrak{a}$ tel que $x$ n'est pas diviseur de zéro dans $M$. Soit $m\in \Gamma_ \mathfrak{a}(M)$, ainsi il existe $k\geq 0$ tel que $\mathfrak{a}^k m=0$. En particulier, $x^nm=0$, ce qui prouve $m=0$. D'où $H^0_\mathfrak{a}(M)=0$. Réciproquement, supposons $H^0_\mathfrak{a}(M)=0$. Cela signifie que pour tout $m\in M$ et $k\geq 0$, il existe $x\in \mathfrak{a}^k$ tel que $mx\neq 0$. On en déduit que $\mathfrak{a}$ n'est inclus dans aucun idéal premier associé à $M$ (voir \ref{}), d'où $\mathfrak{a}\nsubseteq \cup_{p\in \asso M}p$ par le lemme d'évitement \ref{}. Cette dernière union étant d'après \ref{} l'ensemble des éléments de $A$ qui annule un élément de $M$. On peut ainsi trouver un $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$, c'est à dire $\depth_\mathfrak{a}M\geq 1$.
 
 Supposons maintenant le résultat acquis pour $n\geq 1$. Pour le sens direct on suppose $\depth_\mathfrak{a} M\geq n+1$. Compte tenu de l'hypothèse de récurrence il reste à montrer que $H^n_\mathfrak{a}(M)=0$. Choisissons $x\in \mathfrak{a}$ égal au premier terme d'une suite $M$-régulière de longueur $n+1$, ce qui est possible par hypothèse. Alors $x$ n'est pas diviseur de zéro dans $M$ et $\depth_\mathfrak{a} M/xM \geq n$. On considère alors la suite exacte de $A$-modules:
-$$0\rightarrow M \xrightarrow{.x} M\rightarrow M/xM\rightarrow 0$$
+$$0\rightarrow M \xrightarrow{x.} M\rightarrow M/xM\rightarrow 0$$
 
 \noindent et la suite exacte longue de cohomologie associée:
 
-$$..\rightarrow H^{n-1}_\mathfrak{a}(M/xM) \rightarrow H^n_\mathfrak{a}(M) \rightarrow  H^n_\mathfrak{a}(M) \rightarrow ...$$
+$$..\rightarrow H^{n-1}_\mathfrak{a}(M/xM) \rightarrow H^n_\mathfrak{a}(M) \xrightarrow{x.}  H^n_\mathfrak{a}(M) \rightarrow ...$$
 
 \noindent Comme $H^{n-1}_\mathfrak{a}(M/xM)=0$ par hypothèse de récurrence, l'application $H^n_\mathfrak{a}(M) \rightarrow  H^n_\mathfrak{a}(M)$ est injective. Or ceci ne peut être le cas que si $H^n_\mathfrak{a}(M)=0$ car on peut remarquer que $H^n_\mathfrak{a}$ est un quotient d'un $\Gamma_\mathfrak{a}(N)$ pour un module $N$, ses éléments sont donc annulés par des puissances de $x$. 
 
@@ -549,111 +571,3 @@ Si $X$ est de plus une $G$-variété. Alors pour tout $f\in \Oo(X)^*$, il existe
 \begin{proof}
 L'application est bien surjective d'après le corollaire et la proposition précédente et son noyau est clairement trivial. Pour le deuxième point, il suffit de considérer l'application $(g,x)\mapsto f(g.x)\in \Oo(G\times X)^*$.
 \end{proof}
-
-\section{Le spectre relatif d'une algèbre divisorielle}
-
-\setcounter{subsection}{1}
-
-On souhaiterait réaliser géométriquement un faisceau d'algèbre divisorielles $\Ss$ d'une variété normale irréductible $X$ associé à un sous-groupe $K\leq \wdiv(X)$ de type fini. Une idée naturelle est de prendre le spectre relatif $(\widetilde{X}, p)$ de ce faisceau d'algèbres quasi-cohérent. Toutefois, ce spectre relatif ne définira pas une variété en général. Il faudrait pouvoir recouvrir $X$ par un nombre fini d'ouverts affines $U_i$ tels que $\mathcal{R}(U_i)$ soit de type fini réduit, on dit alors que $\Ss$ est localement de type fini. Sous certaines conditions, on pourra s'en assurer. Par exemple si $X$ est lisse, tous les diviseurs sont de Cartier, et notons dans ce cas $D_1,...,D_s$ une base de $K$ et $U$ un ouvert sur lequel chaque $D_i$ est principal. On a localement un isomorphisme d'algèbres graduées:
-\begin{equation} \label{eq:1}
-\Oo_X(U)\otimes_k k[t_1^{\pm},...,t_s^{\pm}] \rightarrow \mathcal{R}(U),\, g\otimes t_1^{\nu_1}...t_s^{\nu_s}\mapsto gf_1^{-\nu_1}...f_s^{-\nu_s}
-\end{equation}
-
-Par recollement on obtient que $\widetilde{X}$ est le produit $L_1^\times\times...\times L_s^\times$ où, avec les notation de l'exemple d'introduction, $L_i$ est le fibré en droite correspondant à $\Oo_X(D_i)$. 
-
-\begin{cons}\label{specrelatifdivi}
-Soit $X$ une variété normale et irréductible, $K\subset \wdiv(X)$ un sous-groupe de type fini, $\Ss$ le faisceau d'algèbres divisorielles associé. On suppose que $\Ss$ est localement de type fini.
-
-Alors le spectre relatif $\widetilde{X}=\spec_X(\Ss)$ muni de son morphisme structural $p$ est naturellement équipé d'une action du tore $H:=\spec k[K]$ pour laquelle $(X,p)$ est un bon quotient.
-\end{cons}
-\begin{proof}
-En effet, $p$ est affine par construction et sur chaque $U_i$, $\Rr(U_i)$ est $K$-graduée avec pour éléments homogènes de degré zéro $\Ss(U_i)_0=\Oo_X(U_i)$. Ces quotients locaux coïncident aux intersections et se recollent globalement en $p$.
-\end{proof}
-
-\begin{rem}\label{lisseGoodQuotient}
-Reprenons les données de la construction précédente en supposant de plus que $X$ est lisse. Alors, l'isomorphisme \ref{eq:1} nous dit que localement on a un diagramme commutatif dans lequel les flèches sont $H$-équivariantes et $H$ agit sur le produit par multiplication sur le premier facteur:
-\begin{center}
-	\begin{tikzcd}
-		p^{-1}(U) \arrow[r,"\simeq"] \arrow[d,"p"] & H\times U \arrow[dl, "pr_U"] \\
-		U
-	\end{tikzcd}
-\end{center}
-\end{rem}
-
-
-\begin{prop}\label{preimagecodim2}
-Avec les données de \ref{specrelatifdivi}, $\widetilde{X}$ est une variété irréductible et normale. De plus, pour tout fermé $A\subset X$ de codimension $\geq 2$, $p^{-1}(A)$ est aussi de codimension $\geq 2$.
-\end{prop}
-\begin{proof}
-Tout d'abord, $\widetilde{X}$ est séparé comme spectre relatif sur une variété. Ensuite, on recouvre l'ouvert des points réguliers $X_{reg}$ par un nombre fini d'ouverts $U_i$ comme dans le diagramme ci-dessus, ce qui est possible car tout ouvert de $X$ est quasi-compact. Ainsi les $p^{-1}(U_i)$ sont irréductibles, et leur réunion $p^{-1}(X_{reg})$ également car leur intersection est non-vide (cf \ref{}). De plus, $p^{-1}(X_{reg})$ est lisse car c'est vrai localement par le diagramme. On recouvre maintenant $X$ par des ouverts affines $V_1,...,V_s$ et on a d'après \ref{isomorphismcodim2}, $\Ss(V_i\cap X_{reg})=\Ss(V_i)=\Oo_{\widetilde{X}}(p^{-1}(V_i))$. Ces anneaux sont normaux et intègre car $p^{-1}(X_{reg})$ est irréductible et lisse. Comme les $p^{-1}(V_i)$ recouvrent $\widetilde{X}$ on en déduit la normalité et l'irréductibilité.
-Pour la dernière assertion, c'est une conséquence directe du fait que $p_*\Oo_{\widetilde{X}}=\Ss$ et de \ref{cohomcodimgeq2}.
-\end{proof}
-
-Remarquons qu'une section de $s\in \Ss(U)$ homogène de degré $D\in K$ sur un ouvert $U\subset X$ peut être vue à la fois comme une fonction rationnelle sur $X$ vérifiant $\divi(s)+D\geq 0$ et comme une fonction régulière sur $\widetilde{X}$ qui est homogène de degré $D$ pour l'action de $H$. De plus, si $D$ est Cartier, $\divi(s)+D$ est le diviseur des zéros de $s$ sur $X$. Dans tous les cas on adopte la notation $\divi_D(s)$ pour ce diviseur effectif et $X_{D,s}$ pour le complémentaire de son support. On explore maintenant les relation entre ces points de vue. Notons tout d'abord que comme $p$ est un morphisme dominant de variétés irréductibles, on peut définir le pullback $p^*(D)$ d'un diviseur de Cartier simplement par le pullback de ses équations locales, c'est un morphisme de groupe injectif $\wdiv(X)\xhookrightarrow{}\wdiv(\widetilde{X})$. Pour un diviseur de Weil $D$, on considère sa restriction $D'$ à $X_{reg}$ et on définit $p^*(D)$ comme l'unique diviseur de Weil à correspondant à $p^*(D')$ via l'isomorphisme $\wdiv(\widetilde{X})\simeq\wdiv(p^{-1}(X_{reg}))$. Le pullback envoie les diviseurs principaux sur des diviseurs principaux et on obtient un morphisme de groupes $\clg(X)\rightarrow \clg(\widetilde{X})$.
-
-\begin{prop}\label{pstarprincipal}
-Les données sont celles de \ref{specrelatifdivi}. Pour tout $D\in K$ et $s\in\Ss_D(X)$, on a $\divi(s)=p^*(\divi_D(s))$. Si de plus $X_s$ est affine, on a $\supp(\divi(s))=p^{-1}(\supp(\divi_D(s))$.
-\end{prop}
-\begin{proof}
-Comme $\widetilde{X}\setminus p^{-1}(X_{reg})$ est de codimension $\geq 2$ on peut supposer pour ce problème $X$ et donc $\widetilde{X}$ lisse. On écrit $D=(U_i, f_i)$, on a ainsi $s_i:=s_{|U_i}=\alpha_i f_i^{-1}$ avec $\alpha_i\in \Oo_X(U_i)$, et localement on a $p^*(\divi_D(s)_{|U_i})=p^*(\divi(\alpha_i))=\divi(p^\sharp(\alpha_i))=\divi(\alpha_i)=\divi(\alpha_i f_i^{-1})=\divi(s_{|U_i})$, l'avant dernière égalité étant due au fait que $f_i$ est inversible sur $p^{-1}(U_i)$. En effet, sur $U_i$ on a $D=\divi(f_i)$ donc $f_i\in \Ss_{-D}(U_i)\subset\Oo_{\widetilde{X}}(p^{-1}(U_i))$ et $f_i^{-1}\in \Ss_D(U_i)\subset\Oo_{\widetilde{X}}(p^{-1}(U_i))$.
-
-La deuxième assertion, il faut montrer $p^{-1}(X_{D,s})=\widetilde{X}_s$. On remarque $s^{-1}\in \Ss_{-D}(X_{D,s})$ donc $s$ est inversible sur $p^{-1}(X_{D,s})$, ce qui montre $p^{-1}(X_{D,s})\subset \widetilde{X}_s$. Par ailleurs, $\divi_D(s)$ est de Cartier sur $X_{reg}$ et son pullback est le pullback de ses équations locales, on obtient donc $p^{-1}(X_{D,s})\cap p^{-1}(X_{reg})=\widetilde{X}_s \cap p^{-1}(X_{reg})$. Ainsi $\widetilde{X}_s \setminus p^{-1}(X_{D,s})$ est le complémentaire d'un ouvert affine de codimension $\geq 2$, donc est vide d'après \ref{codimaffinenormal}.
-\end{proof}
-
-\begin{cor}\label{zerosspecrelatif}
-Les données sont celles de \ref{specrelatifdivi}. Soit $\tilde{x}\in\widetilde{X}$ tel que $H.\tilde{x}$ est fermé dans $\widetilde{X}$. Pour tout $D\in K, f\in \Ss_D(X)$ non-nulle, on a:
-$$f(\tilde{x})=0 \iff p(\tilde{x})\in \supp(\divi_D(f))$$
-\end{cor}
-\begin{proof}
-Remarquons que l'on a $\supp(p^*(D))\subset p^{-1}(\supp(D))$. Puis comme $p$ est surjective, on trouve $p(\supp(p^*(D)))\subset \supp(D)$. En effet, on peut supposer $D$ effectif et on a $p(\supp(p^*(D)))=p(\overline{\supp(p^*(D'))})\subset\overline{p(\supp(p^*(D')))}$, où on a noté $D'=D\cap X_{reg}$. Or $x\in \supp(p^*(D'))\iff x\in \Vv_{p^{-1}(U_i)}(p^\sharp(f_i))$ en écrivant $D'=(U_i,f_i)_i$. On en déduit $p(x)\in \Vv_{U_i}(f_i)$, d'où $p(x)\in\supp(D')$. Comme $\overline{\supp(D')}=\supp(D)$, on a bien le résultat annoncé. De plus, $p(\supp(p^*(D)))$ et $\supp(D)$ coïncident sur l'ouvert dense $X_{reg}$ et $p(\supp(p^*(D)))$ est fermé d'après \ref{goodquotientthm}. On a donc l'égalité:$$p(\supp(p^*(D)))=\supp(D)$$
-Ainsi en appliquant la proposition précédente, on a $p(\supp(\divi(f)))= \supp(\divi_D(f))$ et donc $f(\tilde{x})=0 \implies p(\tilde{x})\in\supp \divi_D(f)$. Réciproquement, si $p(\tilde{x})\in\supp \divi_D(f)$, on a $p(\tilde{x})=p(\tilde{x}')$ pour un $\tilde{x}'\in \supp(\divi(f))$. Toujours d'après \ref{goodquotientthm} et en utilisant que $H.\tilde{x}$ est fermé on obtient $H.\tilde{x}\subset\overline{H.\tilde{x}'}$ ce qui prouve $f(\tilde{x})=0$ car $f$ est nulle sur $H.\tilde{x}'$, étant homogène et s'annulant en $\tilde{x}'$.
-\end{proof}
-
-Toujours avec les données de \ref{specrelatifdivi}, on établit maintenant un résultat important sur le groupe des classes de $\widetilde{X}$. On a d'abord besoin d'un lemme préliminaire assurant l'existence de $H$-linéarisations sur les fibrés en droites sur $\widetilde{X}$.
-
-\begin{lem}\label{existenceGLinTore}
-Soit $X$ une variété irréductible munie d'une action d'un tore $H$, et $(L,\pi)$ un fibré en droites sur $X$. Alors il existe une $H$-linéarisation de cette action sur $L$.
-\end{lem}
-\begin{proof}
-On note $p_2:H\times X\rightarrow X$ la projection. En utilisant \cite{Hartshorne} II.6.6, on obtient in isomorphisme $p_2^*:\pic(X)\rightarrow \pic(H\times X)$, d'où avec les notations de \ref{existenceGLin}, $\alpha^*(L)\simeq p_2^*(M)$ pour un certain fibré en droites $M$ sur $X$. En prenant l'image inverse par $e\times \id$ on obtient un isomorphisme de fibré en droites $L\simeq M$. On a ainsi un isomorphisme de fibrés en droites $\alpha^*(L)\simeq p_2^*(L)$, ce qui conclut la preuve d'après \ref{existenceGLin}.
-\end{proof}
-
-\begin{thm}\label{clgtrivial}
-Les données sont celles de \ref{specrelatifdivi}, en supposant de plus que $X$ est lisse. Les assertions suivantes sont équivalentes:
-\begin{enumerate}
-\item La projection $c:K\rightarrow \clg(X)$ est surjective.
-\item Le groupe des classes $\clg(\widetilde{X})$ est trivial.
-\end{enumerate}
-\end{thm}
-\begin{proof}
-Supposons la projection $c$ surjective. Soit $\widetilde{D}\in \wdiv(\widetilde{X})$ un diviseur. Il est de Cartier par hypothèse et on veut montrer qu'il est principal. On a une action du tore $H=\spec k[K]$ sur $\widetilde{X}$ par la $K$-graduation de $\Oo_{\widetilde{X}}$. En utilisant \ref{existenceGLinTore} et \ref{preimagecodim2}, on munit $L$ d'une H-linéarisation et on obtient un $H$-module $\Ss_{\widetilde{D}}(\widetilde{X})$ d'après \ref{GmoduleSectionsGlobalesGlin}. On en déduit que pour tout $h\in H$ et $f\in \Ss_{\widetilde{D}}(\widetilde{X})$, on a $\divi_{\widetilde{D}}(h.f)=h.\divi_{\widetilde{D}}(f)$. Choisissant $f$ homogène pour cette représentation (cf \ref{}) on a ainsi construit un diviseur $\divi_{\widetilde{D}}(f)$ fixe pour l'action de $H$ et linéairement équivalent à $D$. On peut donc supposer que $\widetilde{D}$ est $H$-invariant. En utilisant le diagramme du début de cette partie qui s'applique localement ici et en remarquant que $H$ agit transitivement sur lui même on conclut que via cet isomorphisme, $\widetilde{D}$ est de la forme $H\times D$, pour un diviseur $D\in \wdiv(X)$. On en déduit que $D=p(\widetilde{D})$ et $\widetilde{D}=p^*(D)$. Or, par hypothèse $D$ est linéairement équivalent à un $D'\in K$, on a ainsi le résultat car $p^*(D')$ est principal d'après la proposition précédente.
-
-Supposons maintenant $\clg(\widetilde{X})$ trivial. Soit $D\in\wdiv(X)$, on veut montrer que $D$ est linéairement équivalent à un $D'\in K$, et on remarque que l'on peut supposer $D$ effectif. L'image inverse $p^*(D)$ est principal par hypothèse et effectif. Donc $p^*(D)=\divi(f)$ pour un $f\in \Oo(\widetilde{X})$, et on affirme que $f$ est homogène pour la $K$-graduation. On introduit pour montrer cela une fonction régulière inversible sur $H\times \widetilde{X}$:
-$$F:H\times \widetilde{X}\rightarrow k,\,(h,x)\mapsto f(h.x)/f(x)$$
-En effet, $p^*(D)$ est $H$-invariant en tant qu'image inverse par l'application quotient $p$. On en déduit que pour tout $h\in H$, on a $\divi(x\mapsto f(h.x)/f(x))=0$, ce qui prouve que $F\in \Oo(H\times \widetilde{X})^*$ d'après \ref{caracfaisceaustructdiv}. Comme $H$ est connexe en tant que tore, on peut appliquer le résultat \ref{rosenlicht1}. Ainsi il existe $\chi \in X^*(H)$ et $g\in\Oo(\widetilde{X})^*$ tel que $F(h,x)=\chi(h)g(x)$ pour tout $h\in H$ et $x\in \widetilde{X}$. Fixons $h=e$, on obtient $g=1$, d'où $f(h.x)=\chi(h)f(x)$. Ainsi, $f\in \Gamma(X, \Ss_{D'})$ pour un $D'\in K$. Avec \ref{pstarprincipal}, on tire l'égalité $p^*(D)=\divi(f)=p^*(\divi_{D'}(f))$, et on conclut que $D=D'+\divi(f)$, ce qu'on voulait montrer.
-
-\end{proof}
-
-\begin{rem}
-On remarque que si on ne suppose plus que $X$ est lisse, l'implication $1\implies 2$ reste vraie dans le théorème précédent. En effet, comme $p^{-1}(X_{sing})$ est de codimension $\geq 2$ on peut alors supposer $X$ et donc $\widetilde{X}$ lisse car on a un isomorphisme $\clg(\widetilde{X})\simeq\clg(\widetilde{X}\setminus p^{-1}(X_{sing}))$. 
-\end{rem}
-
-
-\begin{cor}\label{specrelatifQuasiAff}
-Les données sont celles de \ref{specrelatifdivi}. Alors $\widetilde{X}$ est quasi-affine.
-\end{cor}
-\begin{proof}
-On recouvre $X$ par des ouverts affine $X_1,...,X_r$. D'après \ref{codimaffinenormal} chaque $X\setminus X_i$ est purement de codimension $1$, c'est donc le support d'un diviseur effectif $D_i\in \wdiv(X)$. Sur $X_{reg}$, on a donc $\supp(D_i)=\supp(\divi_{D_i}(1))$ où $1$ est vu comme une section globale de $\Oo_X(D_i)$. Cette égalité reste vrai sur $X$ grâce aux isomorphismes $\Gamma(X ,\Oo_X(D_i)\simeq\Gamma(X_{reg} ,\Oo_X(D_i))$ et $\wdiv(X)\simeq\wdiv(X_{reg})$. Ainsi, d'après \ref{pstarprincipal}, $\widetilde{X}$ est recouvert par des $\widetilde{X}_{f_i}$ qui sont affines car les $X_i=X_{D_i,1}$ le sont. Maintenant, notons que la propriété de finitude locale du faisceau structural de $\widetilde{X}$ reste vrai sur tout recouvrement affine de $\widetilde{X}$, on a donc en particulier pour tout $i$, $\Oo(\widetilde{X}_{f_i})=k[(g_{ij})_{1\leq j\leq n}]$. Comme $f_i$ est inversible sur chaque $\widetilde{X}_{f_i}$, on ne change rien en multipliant les $g_{ij}$ par une puissance $f_i^m$, ce qui permet de supposer que les $g_{ij}$ proviennent de sections globales en prenant un $m$ suffisamment grand (Cf \ref{}). On a ainsi construit une sous-algèbre de type fini $R=k[(g_{ij})_{1\leq i\leq r, 1\leq j\leq n}]$ de $\Oo(\widetilde{X})$ telle que pour tout $i$, on a $R_{f_i}=\Oo({\widetilde{X}_{f_i}})=\Oo({\widetilde{X}})_{f_i}$, la dernière égalité venant de \ref{cox 1.3.1.7}. On en déduit des immersions ouvertes $\widetilde{X}_{f_i}\xhookrightarrow{} \spec(R)$ qui se recollent en une immersion ouverte $\widetilde{X}\xhookrightarrow{} \spec(R)$ d'où le résultat.
-\end{proof}
-
-\begin{cor}
-Les données sont celles de \ref{specrelatifdivi}. Soient $x\in X$, $K_x^0\subset K$ le sous-groupe des diviseurs localement principaux en $x$, et $\tilde{x}\in p^{-1}(x)$ tel que $H.\tilde{x}$ est fermé. Alors le stabilisateur $H_{\tilde{x}}$ est égal à $\spec k[K/K_x^0]$.
-\end{cor}
-\begin{proof}
-Comme $H$ agit localement sur $\widetilde{X}$ on peut se placer sur un voisinage affine de $x$, on suppose ainsi $X$ et $\widetilde{X}$ affines. Ainsi, en appliquant \ref{staborbitegroup}, on a $H_{\tilde{x}}=\spec k[K/K_{\tilde{x}}]$, où $K_{\tilde{x}}$ est le groupe d'orbite de $\tilde{x}$. Supposons que $D\in K$ soit principal sur ce voisinage de $x$, c'est à dire $D=\divi(g)$ avec $g\in k(X)$. Choisissons $\alpha \in k[X]$ tel que $\alpha(x)\neq 0$. Alors $f:=\alpha g^{-1}\in \Ss_D(X)$ et $\divi_D(f)=\divi(\alpha)$. En utilisant \ref{zerosspecrelatif}, on obtient $f(\tilde{x})\neq 0$ et donc $D\in K_{\tilde{x}}$. Réciproquement, prenons $D\in K_{\tilde{x}}$, c'est à dire $f(\tilde{x})\neq 0$ pour un $f\in \Ss_D(X)$. Alors $x\notin \divi_D(f)$, et on a $D=-\divi(f)$ au voisinage de $x$. Cela montre que $D$ est localement principal.
-\end{proof}
-
-\begin{cor}
-Soit $X$ vérifiant $(\dagger)$, et telle que tout diviseur soit de Cartier, par exemple si X est lisse. Alors $H$ agit librement sur $\widetilde{X}$.
-\end{cor}
-
