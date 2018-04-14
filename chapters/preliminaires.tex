@@ -5,7 +5,7 @@
 \subsection{Extensions entières d'anneaux}
 
 \begin{defn}[Anneau intègralement clos]\label{normalring}
-Soit $A$ un anneau. $A$ est dit intégralement clos si il est intègre et égal à sa clôture intégrale. 
+Un anneau $A$ est intégralement clos si il est intègre et égal à sa clôture intégrale. 
 \end{defn}
 
 \begin{rem}
@@ -34,6 +34,10 @@ Alors, $A$ est factoriel $\iff$ Tout idéal premier de hauteur 1 est principal.
 
 \subsection{Anneaux locaux, Anneaux de valuation discrète}
 
+\begin{defn}
+Un anneau local noethérien $A$ de corps résiduel $k=A/\mathfrak{m}$ est régulier si $\dim A =\mathfrak{m}/\mathfrak{m}^2$.
+\end{defn}
+
 \begin{thm}\label{reglocufd}
 Un anneau local régulier est factoriel.
 \end{thm}
@@ -59,7 +63,7 @@ Voir \cite{Matsumura} 11.3
 
 \section{Schémas}
 
-Notre principale référence est \cite{Hartshorne}. On résume dans cette partie certains faits et définitions. En particulier, on donne les démonstrations de certains résultats donnés en exercices. Soit $A$ un anneau, $\mathfrak{p}$ un idéal premier de $A$, et $f\in A$ un élément. On note $A_\mathfrak{p}$ la localisation de $A$ en la partie multiplicative $A\setminus \mathfrak{p}$, et $A_f$ la localisation de $A$ en la partie multiplicative $\lbrace 1, f, f^2, ....\rbrace$.
+Notre principale référence est \cite{Hartshorne}. On résume dans cette partie certains faits et définitions, souvent sans démonstration. Soit $A$ un anneau, $\mathfrak{p}$ un idéal premier de $A$, et $f\in A$ un élément. On note $A_\mathfrak{p}$ la localisation de $A$ en la partie multiplicative $A\setminus \mathfrak{p}$, et $A_f$ la localisation de $A$ en la partie multiplicative $\lbrace 1, f, f^2, ....\rbrace$.
 
 \subsection{Généralités}
 
@@ -79,7 +83,7 @@ Tout morphisme d'anneaux $\phi:A\rightarrow B$ définit un morphisme de schémas
 Réciproquement, tout morphisme entre schémas affines $f:\spec B\rightarrow \spec A$ définit un morphisme d'anneaux en prenant les sections globales $\Gamma(\spec A, f^\sharp):A\rightarrow B$. Ces deux procédés sont inverses l'un de l'autre et on obtient:
 
 
-\begin{prop}
+\begin{prop}\label{EqCat}
 Les foncteurs $\spec$ et $\Gamma(.)$ définissent une anti-équivalence de catégories entre la catégorie des schémas affines et la catégorie des anneaux (commutatifs).
 \end{prop}
 
@@ -92,9 +96,7 @@ On remarque que si on considère une algèbre affine, c'est à dire une $k$-alg�
 Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ d'un schéma $X$ peuvent être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Dans le cas d'une variété affine, c'est à dire $X=\spec A$ où $A$ est une $k$-algèbre affine sur un corps algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est à dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant est $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique que les morphismes entre ensembles algébriques sont les applications polynomiales.
 \end{rem}
 
-\noindent On rappelle maintenant la construction de schémas par recollement qui nous sera très utile par la suite.
-
-\begin{cons}\label{gluevar}[Recollement de schémas]
+\begin{cons}[Recollement de schémas]\label{gluevar}
 Soit $(X_i)_{u\in I}$ une famille de schémas. Supposons $\forall i,j$ on ait des ouverts $X_{ij}\subset X_i$ et des isomorphismes $f_{ij}:X_{ij}\rightarrow X_{ji}$ tels que $\forall i,j,k\in I$ on ait:
 	\begin{enumerate}
 	\item $X_{ii}=X_i$ et $f_{ii}=id$
@@ -119,7 +121,12 @@ $$
 \end{cons}
 
 
+\begin{defn}
+Soit $S$ un schéma. Un $S$-schéma, où schéma sur $S$ est un schéma $X$ muni d'un morphisme $X\rightarrow S$ appelé morphisme structural.
+\end{defn}
 
+Le produit fibré existe dans la catégorie des schémas. Cette construction se fait par recollement en remarquant que pour des schémas affines $X,Y$ sur un schéma affine $S$, le produit fibré $X\times_S Y$ est naturellement $\spec \Oo_X(X)\otimes_{\Oo_S(S)}\Oo_Y(Y)$. En effet, cela vient de \ref{EqCat} et du fait que le produit tensoriel sur $\Oo_S(S)$ est le co-produit dans la catégorie des $\Oo_S(S)$-algèbres. 
+Comme tout anneau est naturellement une $ZZ$-algèbre, tout schéma est naturellement un schéma sur $\spec \ZZ$ est le produit de deux schéma est par définition le produit sur $\spec \ZZ$.
 
 \subsection{Quelques propriétés des schémas}
 
@@ -151,7 +158,7 @@ Un schéma $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal.
 \end{prop}
 
 \begin{defn}
-Un schéma $X$ est dit noetherien si c'est une union finie d'ouverts affines $U_i$ tels que $\Oo(U)$ est un anneau noetherien
+Un schéma $X$ est dit noetherien si c'est une union finie d'ouverts affines $U_i$ tels que $\Oo(U)$ est un anneau noetherien.
 \end{defn}
 
 \begin{prop}
@@ -164,7 +171,6 @@ Soit $X$ un schéma noetherien. Alors
 
 Par le lemme de Zorn, on montre que l'ensemble des fermés irréductibles d'un schéma $X$ admet des éléments maximaux, appelés composantes irréductibles. Si $X$ est noetherien, ce nombre est fini et $X$ s'écrit donc de manière unique comme réunion de ses composantes irréductibles. Pour tout point $x\in X$, les composantes irréductibles de $\spec \Oo_{X,x}$ correspondent bijectivement aux composantes irréductibles de $X$ passant par $x$.
 
-Un point $x$ d'un espace topologique $X$ est dit générique si $\overline{\lbrace x\rbrace}=X$. Ainsi, si $X$ admet un point générique, il est irréductible. Pour un schéma $X$ on a en fait une correspondance bijective entre fermés irréductibles de $X$ et points génériques donnée par $x\mapsto \overline{\lbrace x\rbrace}$. Dans le cas d'un schéma affine
 
 \begin{defn}
 Un schéma $X$ est intègre si il est réduit et irréductible.
@@ -174,22 +180,49 @@ Un schéma $X$ est intègre si il est réduit et irréductible.
 Un schéma $X$ est intègre si et seulement si $\Oo(U)$ est intègre pour tout ouvert $U\subset X$ non-vide.
 \end{prop}
 
+Un point $x$ d'un espace topologique $X$ est dit générique si $\overline{\lbrace x\rbrace}=X$. Ainsi, si $X$ admet un point générique, il est irréductible. Pour un schéma $X$ on a en fait une correspondance bijective entre fermés irréductibles de $X$ et points génériques donnée par $x\mapsto \overline{\lbrace x\rbrace}$. 
+
 Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$ est $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est à dire le corps des fractions de $A$. Plus généralement, on introduit le de corps des fonctions rationnelles d'un schéma intègre $X$ comme les fonctions régulières sur un ouvert non-vide de $X$. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce que précède, on le note $k(X)$.
 
 \begin{prop}
-Un schéma $X$ un schéma intègre et $k(X)$ son corps des fonctions rationnelles. Alors 
+Un schéma $X$ un schéma intègre et $k(X)$ son corps des fonctions rationnelles. 
 \begin{enumerate}
-\item Les tiges de $X$ sont des anneaux noetheriens. Tout sous-schéma ouvert ou fermé de $X$ est noetherien.
-\item $X$ est quasi-compact et $\Oo(U)$ est noetherien pour tout ouvert affine $U\subset X$.
+\item Pour tous ouverts $U\subset V\subset X$ non-vides, les applications suivantes sont injectives
+$$\Oo(V)\xhookrightarrow{res_{V,U}}\Oo(U)\xhookrightarrow{f\mapsto f_\eta} k(X)$$
+\item Pour tout ouvert non-vide $U\subset X$ et tout recouvrement $U=\cup_i U_i$, on a 
+$$\Oo(U)=\bigcap_i \Oo(U_i)=\bigcap_{x\in U}\Oo_{X,x}$$
 \end{enumerate}
 \end{prop}
 
-
-\subsubsection{Schémas quasi-affines}
-
 \subsection{Quelques propriétés des morphismes de schémas}
 
-\subsubsection{morphismes de type fini, morphismes finis}
+
+
+\subsubsection{Immersions ouvertes, immersions fermées}
+
+
+\begin{defn}
+Un morphisme de schémas $(f,f^\sharp):X\rightarrow Y$ est une immersion ouverte (resp. fermée) si $f$ est une immersion ouverte topologique (resp. immersion fermée topologique), et si $f^\sharp_x:\Oo_{X,f(x)}\rightarrow \Oo_{X,x}$ est un isomorphisme (resp. surjective) pour tout $x\in X$.
+\end{defn}
+
+
+\begin{defn}
+Un schéma $X$ est quasi-affine si il est quasi-compact et il existe une immersion ouverte dans un schéma affine.
+\end{defn}
+
+\subsubsection{Morphismes de type fini}
+
+\begin{defn}
+Un morphisme de schémas $f:X\rightarrow Y$ est quasi-compact si l'image réciproque tout ouvert affine de $Y$ est quasi-compact. 
+\end{defn}
+
+\begin{defn}
+Un morphisme de schémas $f:X\rightarrow Y$ est localement de type fini si il est quasi-compact et pour tout ouvert affine $V\subset Y$, et tout ouvert affine $U\subset f^{-1}(V)$, le morphisme canonique $\Oo_Y(V)\rightarrow \Oo_X(U)$ fait de $\Oo_X(U)$ une $\Oo_Y(V)$-algèbre de type fini. Un $S$-schéma est dit de type fini si son morphisme structural est de type fini.
+\end{defn}
+
+\begin{rem}
+Pour qu'un morphisme soit de type fini il suffit qu'il existe un recouvrement par des ouverts affines qui satisfont la condition de la définition.
+\end{rem}
 
 \subsubsection{Morphismes finis, normalité}
 
@@ -197,14 +230,29 @@ Un schéma $X$ un schéma intègre et $k(X)$ son corps des fonctions rationnelle
 Soit $f:X \rightarrow Y$ un morphisme de schémas. On dit que $f$ est fini si pour tout ouvert affine $V$ de $Y$, si la $\Oo_Y(V)$-algèbre $(\Oo_X(f^{-1}(V)), f^\sharp)$ est finie.
 \end{defn}
 
-\subsubsection{morphismes affines}
+\begin{rem}
+Pour qu'un morphisme soit fini il suffit qu'il existe un recouvrement par des ouverts affines qui satisfont la condition de la définition.
+\end{rem}
+
+
+\begin{defn}
+Un schéma est dit normal si tous ses anneaux locaux intégralement clos.
+\end{defn}
+
+\begin{prop}
+Un schéma intègre $X$ est normal si et seulement si pour tout ouvert affine $U\subset X$ non-vide, $\Oo(U)$ est intégralement clos.
+\end{prop}
+
+Soit $X$ un schéma intègre, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Pour chaque $U_i=\spec A_i$ on pose $\widetilde{U}_i=\spec \widetilde{A}_i$ où $\widetilde{A}_i$ est la clôture intégrale de $A_i$, c'est naturellement un schéma intègre sur $U_i$. De plus, comme la normalisation commute à la localisation, on a des isomorphismes naturels $\widetilde{U_i\cap U_j}\simeq \widetilde{U_i}\cap \widetilde{U_j}$. On construit alors par recollement un schéma intègre et normal $\widetilde{X}$ sur $X$ qui satisfait de plus la propriété universelle que tout morphisme dominant d'un schéma intègre $Z$ vers $X$ se factorise de manière unique à travers $\widetilde{X}$. On dit que $\widetilde{X}$ est la normalisation de $X$. De plus, si $X$ est de type fini sur un corps $k$, alors d'après \ref{}, le morphisme structural de $\widetilde{X}$ est fini.
+
+\subsubsection{Morphismes affines}
 
 \begin{defn}[Morphisme affine]
 Un morphisme de variétés algébriques $\phi: X\rightarrow Y$ est dit affine si pour tout ouvert affine $V\subset Y$, l'image réciproque $\phi^{-1}(V)$ est affine.
 \end{defn}
 
 \begin{ex}\label{exaff}
-Un morphisme de variétés affines $\phi: X\rightarrow Y$ est affine. En effet, soit $V$ un ouvert affine de $Y$ et $U=\phi^{-1}(V)$. En considérant le diagramme commutatif ci-dessous on constate que l'on a $U \simeq (\phi\times i_2)^{-1}(\Delta_Y)=\lbrace (x,\phi(x))\mid x\in U \rbrace \subset X\times V$. Comme $X\times V$ est affine, $U$ aussi.
+Un morphisme de schémas affines $\phi: X\rightarrow Y$ est affine. En effet, soit $V$ un ouvert affine de $Y$ et $U=\phi^{-1}(V)$. En considérant le diagramme commutatif ci-dessous on constate que l'on a $U \simeq (\phi\times i_2)^{-1}(\Delta_Y)=\lbrace (x,\phi(x))\mid x\in U \rbrace \subset X\times V$. Comme $X\times V$ est affine, $U$ aussi.
 	\begin{center}
 	\begin{tikzcd}
   		U \arrow[r, "\phi"] \arrow[d, "i_1"]& V \arrow[d, "i_2"] \\ 
@@ -214,36 +262,65 @@ Un morphisme de variétés affines $\phi: X\rightarrow Y$ est affine. En effet, 
 
 \end{ex}
 
-\subsubsection{morphismes séparés}
+\subsubsection{Morphismes séparés}
 
-
-\begin{defn}
-Soit $X, Y$ des variétés. Supposons que $X$ soit une variété sur $Y$ par un morphisme $f:X\rightarrow Y$. On dit que $X$ est séparé sur $Y$ si $f$ est séparé, c'est à dire que l'image du morphisme diagonal dans $X\times_Y X$ est fermé.
+\begin{defn}[Morphisme séparé, schéma séparé]
+Soit $f:X\rightarrow Y$ un morphisme de schémas. Le morphisme diagonal $\Delta:X\rightarrow X\times_Y X$ est l'unique morphisme $X\rightarrow X\times_Y X$ tel que la composition avec les projections $p_1,p_2:X\times_Y X\rightarrow X$ est l'identité. On dit que $f$ est séparé si le morphisme diagonal est une immersion fermée.
+Un $S$-schéma est séparé si son morphisme structural est séparé. En particulier un schéma est séparé si il est séparé sur $\spec\ZZ$.
 \end{defn}
 
+Les morphismes entre schémas affines sont séparés et en particulier les schémas affines sont séparés. En effet, considérons $X=\spec A$ et $Y=\spec B$ et $X\rightarrow Y$ le morphisme diagonal est donné par $\rho: B\otimes_A B\rightarrow B, x\otimes 1\mapsto x, 1\otimes y \mapsto y$ qui est clairement surjectif, c'est donc une immersion fermée. Le critère suivant est utile et nous dit de plus que les intersections d'affines sont affines dans les schémas séparés.
+
 \begin{prop}\label{sepCritere}
+Soit $X$ un schéma. Les assertions suivantes sont équivalentes
+	\begin{enumerate}
+	\item $X$ est séparé
+	\item Pour tous ouverts affines $U$ et $V$ de $X$, $U\cap V$ est affine et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$
+	\item Il existe un recouvrement affine $(U_i)$ tel que pour tout $i,j$, $U_i\cap U_j$ est affine et le morphisme naturel $\Oo(U_i)\otimes_\ZZ \Oo(U_j)\rightarrow\Oo(U_i\cap U_j), f\otimes g\mapsto f_{U_i\cap U_j}g_{U_i\cap U_j}$
+	\end{enumerate}
+\end{prop}
+
+
+\begin{prop}\label{sepCritere}
+Soit $X$ un schéma. Les assertions suivantes sont équivalentes
 	\begin{enumerate}
 	\item la composition de deux morphismes séparés est séparé.
 	\item Lemme 25.21.8 stacks
 	\end{enumerate}
 \end{prop}
-\begin{proof}
-\end{proof}
+
+
+\begin{prop}\label{sepCritere2}
+Le morphisme composé de deux morphismes séparés est séparé.
+\end{prop}
+
 
 \subsubsection{morphismes propres}
 
 
-\subsection{Variétés algébriques}
+\section{Variétés algébriques}
 
 Dans ce mémoire, on travaille principalement dans la catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos de caractéristique zéro fixé. Ces objets sont appelés des $k$-variétés algèbriques, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I.
 
-On note que la sous-catégorie pleine des variétés affines est anti-équivalente à celle des $k$-algèbre de type fini réduites via le foncteur sections globales, noté $k[.]$ dans ce cas pour coller aux notations traditionnelles. Un schéma de type fini sur un corps est noetherien, on en déduit que toute partie localement fermée d'une variété admet une unique structure de variété, et tout fermé se décompose de manière unique en une union finie de sous-variétés fermées irréductibles maximales. Enfin, le produit sur $k$ préserve l'irréductibilité.
-
-
-
-
+Un schéma de type fini sur un corps est noetherien, on en déduit que toute partie localement fermée d'une variété admet une unique structure de variété, et tout fermé se décompose de manière unique en une union finie de composantes irréductibles. Enfin, le produit sur $k$ préserve l'irréductibilité.
 
 \subsection{Dimension des variétés algébriques}
+
+
+\subsection{Variétés lisses}
+
+\begin{defn}[Variété lisse, point régulier]
+Soit $X$ une variété. On dit que $x\in X$ est un point régulier si l'anneau local $\Oo_{X,x}$ est régulier. On dit que la variété est lisse si chacun de ses points est régulier. Un point est singulier si il n'est pas régulier.
+\end{defn}
+
+Un point $x$ d'une variété $X$ irréductible est régulier si l'espace tangent $\mathfrak{m}_x/\mathfrak{m}_x^2$ en $x$ est de dimension $\dim X$. L'ensemble des point singulier d'une variété est un fermé propre.
+
+
+
+
+\subsubsection{Généralités}
+
+\subsubsection{Dimension des sous-variétés}
 
 \begin{thm}\label{dimsousvariete}
 Soit $X$ une variété irréductible, $U\subset X$ un ouvert non-vide et $f\in \Oo_X(U)^*$ non inversible. Soit $Z$ une composante irréductible de $\lbrace x \in U \mid f(x)=0 \rbrace$. Alors $\dime Z= \dime(X)-1$.
@@ -252,49 +329,8 @@ Soit $X$ une variété irréductible, $U\subset X$ un ouvert non-vide et $f\in \
 Voir \cite{MumfordRedBook} I.7 Th.2, après réduction au cas $X$ affine, la preuve consiste en une réduction au cas facile où $\Oo(X)$ est factoriel. 
 \end{proof}
 
-\subsection{Propriétés des variétés normales}
 
-\begin{defn}
-Une variété est dite normale si tous ses anneaux locaux sont intègres et intégralement clos.
-\end{defn}
-
-
-
-\begin{prop}\label{normaluniondisjointe}
-Une variété normale est union disjointe de ses composantes irréductibles.
-\end{prop}
-\begin{proof}
-Si un point $p\in X$ d'une variété se situe à l'intersection de deux composantes irréductibles, l'anneau local en $p$ contient au moins deux premiers minimaux et n'est donc pas intègre.
-\end{proof}
-
-On note que une variété irréductible $X$ est normale si et seulement si pour tout ouvert affine $U\subset X$, $\mathcal{O}_X(U)$ est normal au sens de la définition \ref{normalring}.
-
-\begin{prop}\label{codimesingnormal}
-Le lieu singulier d'une variété normale est un fermé de codimension $\geq 2$
-\end{prop}
-\begin{proof}
-
-\end{proof}
-
-
-\begin{prop}\label{extregularnormal}
-Soit $X$ une variété normale irréductible. Pour toute sous-variété fermée $Y$ de codimension $\geq 2$, la restriction $\Oo(X)\rightarrow \Oo(X\setminus Y)$ est un isomorphisme.
-\end{prop}
-\begin{proof}
-On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $p\in \spec A$ de hauteur $1$ est un point de $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit, en tenant compte de l'irréductibilité de $X$, des injections $\Oo_X(U)\xhookrightarrow{} \Oo_p=A_p$ dans les tiges qui peuvent être vues comme des inclusions dans le corps des fonctions rationnelles de $X$. On a ainsi en tenant compte de \ref{factonormal} un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_p A_p=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
-\end{proof}
-
-\begin{prop}\label{codimaffinenormal}
-Soit $X$ une variété affine irréductible. Pour toute variété irréductible $Y$ contenant $X$, le complémentaire $Y\setminus X$ est de codimension 1.
-\end{prop}
-\begin{proof}
-On considère l'application de normalisation $\eta_Y$. Alors l'application induite $\eta_Y^{-1}(X)\rightarrow X$ est l'application de normalisation de $X$. On en déduit que $\eta_Y^{-1}(X)$ est affine. De plus, comme $\eta_Y$ est finie, la dimension du complémentaire de $X$ ne change pas en remplaçant $Y$ par sa normalisation et $X$ par sa préimage. On peut donc supposer $Y$ normal.
-
-Quitte à soustraire de $Y$ les composantes irréductibles de codimension $1$ de $Y\setminus X$, on peut supposer $\codime_Y(Y\setminus X)\geq 2$. Soit $V$ un ouvert affine de $Y$. Par irréductibilité de $Y$, on a $U:=X\cap V$ non-vide et $\codime_V(V\setminus U)=\codime_Y(Y\setminus X)\geq 2$. Ainsi d'après \ref{extregularnormal}, la restriction $\Oo(V)\rightarrow \Oo(U)$ est un isomorphisme. Comme $U$ et $V$ sont affines, cela signifie que l'inclusion $U\subset V$ est un isomorphisme, d'où $U=V$ puis $X=Y$.
-\end{proof}
-
-
-\subsection{Fibres des morphismes}
+\subsubsection{Dimension des fibres d'un morphisme}
 
 \begin{defn}[Morphisme quasi-fini]
 Soit $f:X \rightarrow Y$ un morphisme de variétés. On dit que $f$ est quasi-fini si les fibres de $f$ sont finies.
@@ -352,5 +388,42 @@ Soit $f:X \mapsto Y$ un morphisme dominant de variétés irréductibles. Soit $g
 \end{proof}
 
 
+
+
+
+\subsection{Propriétés des variétés normales}
+
+\begin{prop}\label{normaluniondisjointe}
+Une variété normale est union disjointe de ses composantes irréductibles.
+\end{prop}
+\begin{proof}
+Si un point $p\in X$ d'une variété se situe à l'intersection de deux composantes irréductibles, l'anneau local en $p$ contient au moins deux premiers minimaux et n'est donc pas intègre.
+\end{proof}
+
+On note que une variété irréductible $X$ est normale si et seulement si pour tout ouvert affine $U\subset X$, $\mathcal{O}_X(U)$ est normal au sens de la définition \ref{normalring}.
+
+\begin{prop}\label{codimesingnormal}
+Le lieu singulier d'une variété normale est un fermé de codimension $\geq 2$
+\end{prop}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{prop}\label{extregularnormal}
+Soit $X$ une variété normale irréductible. Pour toute sous-variété fermée $Y$ de codimension $\geq 2$, la restriction $\Oo(X)\rightarrow \Oo(X\setminus Y)$ est un isomorphisme.
+\end{prop}
+\begin{proof}
+On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $p\in \spec A$ de hauteur $1$ est un point de $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit, en tenant compte de l'irréductibilité de $X$, des injections $\Oo_X(U)\xhookrightarrow{} \Oo_p=A_p$ dans les tiges qui peuvent être vues comme des inclusions dans le corps des fonctions rationnelles de $X$. On a ainsi en tenant compte de \ref{factonormal} un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_p A_p=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
+\end{proof}
+
+\begin{prop}\label{codimaffinenormal}
+Soit $X$ une variété affine irréductible. Pour toute variété irréductible $Y$ contenant $X$, le complémentaire $Y\setminus X$ est de codimension 1.
+\end{prop}
+\begin{proof}
+On considère l'application de normalisation $\eta_Y$. Alors l'application induite $\eta_Y^{-1}(X)\rightarrow X$ est l'application de normalisation de $X$. On en déduit que $\eta_Y^{-1}(X)$ est affine. De plus, comme $\eta_Y$ est finie, la dimension du complémentaire de $X$ ne change pas en remplaçant $Y$ par sa normalisation et $X$ par sa préimage. On peut donc supposer $Y$ normal.
+
+Quitte à soustraire de $Y$ les composantes irréductibles de codimension $1$ de $Y\setminus X$, on peut supposer $\codime_Y(Y\setminus X)\geq 2$. Soit $V$ un ouvert affine de $Y$. Par irréductibilité de $Y$, on a $U:=X\cap V$ non-vide et $\codime_V(V\setminus U)=\codime_Y(Y\setminus X)\geq 2$. Ainsi d'après \ref{extregularnormal}, la restriction $\Oo(V)\rightarrow \Oo(U)$ est un isomorphisme. Comme $U$ et $V$ sont affines, cela signifie que l'inclusion $U\subset V$ est un isomorphisme, d'où $U=V$ puis $X=Y$.
+\end{proof}
 
 
