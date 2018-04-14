@@ -92,7 +92,7 @@ On remarque que si on considère une algèbre affine, c'est à dire une $k$-alg�
 Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ d'un schéma $X$ peuvent être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Dans le cas d'une variété affine, c'est à dire $X=\spec A$ où $A$ est une $k$-algèbre affine sur un corps algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est à dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant est $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique que les morphismes entre ensembles algébriques sont les applications polynomiales.
 \end{rem}
 
-On rappelle maintenant la construction de schémas par recollement qui nous sera très utile par la suite.
+\noindent On rappelle maintenant la construction de schémas par recollement qui nous sera très utile par la suite.
 
 \begin{cons}\label{gluevar}[Recollement de schémas]
 Soit $(X_i)_{u\in I}$ une famille de schémas. Supposons $\forall i,j$ on ait des ouverts $X_{ij}\subset X_i$ et des isomorphismes $f_{ij}:X_{ij}\rightarrow X_{ji}$ tels que $\forall i,j,k\in I$ on ait:
@@ -123,9 +123,67 @@ $$
 
 \subsection{Quelques propriétés des schémas}
 
-\subsubsection{Schémas réduits}
+\subsubsection{Schémas réduits, irréductibles, intègres, noetheriens}
 
-\subsubsection{Schémas intègres}
+\begin{defn}
+Un schéma $X$ est réduit si pour tout $x\in X$ les anneaux locaux $\Oo_{X,x}$ sont réduits. 
+\end{defn}
+
+\begin{prop}
+Un schéma $X$ est réduit si et seulement si pour tout ouvert $U\subset X$, l'anneau $\Oo(U)$ est réduit.
+\end{prop}
+\begin{proof}
+Supposons $X$ réduit et $f\in \Oo(U)$ nilpotent. Si $f$ est non-nul, alors il existe un germe $f_x$ non-nul pour un point $x\in U$. Mais alors $f_x^n=0$ pour un $n>0$, et donc $f_x=0$, contradiction.
+Réciproquement, soit $f_x\in \Oo_{X,x}$ nilpotent alors $f_x$ est la classe d'une fonction nilpotente $f\in \Oo(U)$ pour un ouvert $U\subset X$. Cela implique $f_x=0$.
+\end{proof}
+
+\begin{defn}
+Un schéma est dit irréductible si l'espace topologique sous-jacent est irréductible, c'est à dire qu'il est non vide et n'est pas réunion de deux fermés propres.
+\end{defn}
+
+\begin{prop}
+Un schéma $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal.
+\begin{enumerate}
+\item $\Vv_X(\mathfrak{a})$ est irréductible si et seulement si $\sqrt{\mathfrak{a}}$ est premier
+\item Soit $(\mathfrak{p}_i)$ les premiers minimaux de $A$. Alors $(\Vv_X(\mathfrak{p}_i))$ sont les composantes irréductibles de $X$.
+\item $X$ est irréductible si et seulement si $A$ admet un unique idéal premier minimal. Dans ce cas, cet idéal est nécessairement $(0)$, et $A$ est intègre.
+\end{enumerate}
+\end{prop}
+
+\begin{defn}
+Un schéma $X$ est dit noetherien si c'est une union finie d'ouverts affines $U_i$ tels que $\Oo(U)$ est un anneau noetherien
+\end{defn}
+
+\begin{prop}
+Soit $X$ un schéma noetherien. Alors 
+\begin{enumerate}
+\item Les tiges de $X$ sont des anneaux noetheriens. Tout sous-schéma ouvert ou fermé de $X$ est noetherien.
+\item $X$ est quasi-compact et $\Oo(U)$ est noetherien pour tout ouvert affine $U\subset X$.
+\end{enumerate}
+\end{prop}
+
+Par le lemme de Zorn, on montre que l'ensemble des fermés irréductibles d'un schéma $X$ admet des éléments maximaux, appelés composantes irréductibles. Si $X$ est noetherien, ce nombre est fini et $X$ s'écrit donc de manière unique comme réunion de ses composantes irréductibles. Pour tout point $x\in X$, les composantes irréductibles de $\spec \Oo_{X,x}$ correspondent bijectivement aux composantes irréductibles de $X$ passant par $x$.
+
+Un point $x$ d'un espace topologique $X$ est dit générique si $\overline{\lbrace x\rbrace}=X$. Ainsi, si $X$ admet un point générique, il est irréductible. Pour un schéma $X$ on a en fait une correspondance bijective entre fermés irréductibles de $X$ et points génériques donnée par $x\mapsto \overline{\lbrace x\rbrace}$. Dans le cas d'un schéma affine
+
+\begin{defn}
+Un schéma $X$ est intègre si il est réduit et irréductible.
+\end{defn}
+
+\begin{prop}
+Un schéma $X$ est intègre si et seulement si $\Oo(U)$ est intègre pour tout ouvert $U\subset X$ non-vide.
+\end{prop}
+
+Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$ est $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est à dire le corps des fractions de $A$. Plus généralement, on introduit le de corps des fonctions rationnelles d'un schéma intègre $X$ comme les fonctions régulières sur un ouvert non-vide de $X$. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce que précède, on le note $k(X)$.
+
+\begin{prop}
+Un schéma $X$ un schéma intègre et $k(X)$ son corps des fonctions rationnelles. Alors 
+\begin{enumerate}
+\item Les tiges de $X$ sont des anneaux noetheriens. Tout sous-schéma ouvert ou fermé de $X$ est noetherien.
+\item $X$ est quasi-compact et $\Oo(U)$ est noetherien pour tout ouvert affine $U\subset X$.
+\end{enumerate}
+\end{prop}
+
 
 \subsubsection{Schémas quasi-affines}
 
