@@ -168,13 +168,13 @@ Soit $X=\proj B/I$ une variété projective normale et irréductible, où $B=k[x
 
 \subsection{Propriétés algébriques de l'anneau de Cox}
 
-\begin{prop}
+\begin{thm}\label{coxFreeFactoriel}
 Soit $X$ une variété normale irréductible avec un groupe des classes libre de type fini. Alors:
 \begin{enumerate}
 \item L'anneau de Cox $\Rr(X)$ est factoriel.
 \item Le groupe des unités de l'anneau de Cox est $\Rr(X)^\times=\Gamma(X,\Oo^\times)$
 \end{enumerate}
-\end{prop}
+\end{thm}
 \begin{proof}
 \begin{enumerate}
 \item On peut supposer $X$ lisse car $X_{sing}$ est de codimension $\geq 2$ donc $\Gamma(X, \Rr)=\Gamma(X_{reg}, X)$. Ainsi $\widetilde{X}$ est lisse (par vérification locale immédiate) et le théorème \ref{clgtrivial} s'applique. Soit $f\in \Rr(X)=p_*\Oo_{\widetilde{X}}(X)=\Oo_{\widetilde{X}}(\widetilde{X})$. On a donc le diviseur effectif $\divi(f)= \sum n_iD_i=\sum n_i\divi(f_i)=\divi(\prod f_i^{n_i})$ où les $D_i$ sont des diviseurs premiers, chaque $f_i$ est irréductible et appartient à $\Rr(X)$ d'après \ref{caracfaisceaustructdiv}. L'unicité de l'écriture sur $\wdiv(X)$ donne l'unicité de l'écriture $f=u\prod f_i^{n_i}$ où $u\in \Rr(X)^\times$.
@@ -186,7 +186,7 @@ Soit $X$ une variété normale irréductible avec un groupe des classes libre de
 Reprenons le cas du cône affine de l'exemple introductif.  $\Rr(Y)$ est l'algèbre de polynômes sur $k$ à $4$ indéterminés, donc est factoriel en particulier.  Par ailleurs, $\Oo(Y)^{\times}=k^*$ car en inversant par exemple $t_1$  on obtient $Y_{t_1}\simeq \AAA^{1}\setminus \lbrace0\rbrace\times\AAA^{2}$, d'où le résultat.
 \end{ex}
 
-\begin{prop}
+\begin{prop}\label{divisibilitePropsFreeCox}
 Soit $X$ une variété normale irréductible avec un groupe des classes libre de type fini.  Alors:
 \begin{enumerate}
 \item Soient $f\in \Rr_D(X)$ et $g\in \Rr_E(X)$ non nulles. Alors $f\mid g\iff \divi_D(f)\leq\divi_E(g)$.
@@ -202,7 +202,7 @@ Soit $f,g$ des fonctions régulières non-nulles sur $\widetilde{X}$. Comme $\wi
 \subsection{Faisceau et anneau de Cox}
 
 \begin{cons}\label{conscoxtorsion}
-Soit $X$ une variété irréductible, normale, telle que $\Gamma(X,\Oo^\times)=k^*$ et $\clg(X)$ est de type fini. On se fixe un sous-groupe $K\subset \wdiv(X)$ tel que la projection $c:K\rightarrow \clg(X)$ est surjective. Soit $K^0:=\ker c$ et $\chi:K^0\rightarrow k(X)^*$ un caractère, c'est à dire un morphisme de groupes tel que $\divi(\chi(E))=E,\,\forall E\in K^0$. Soit $\Ss$ le faisceau d'algèbres divisorielles associé à $K$. Soit $\Ii$ le faisceau d'idéaux défini par l'image du morphisme 
+Soit $X$ une variété normale irréductible, telle que $\Gamma(X,\Oo^\times)=k^*$ et $\clg(X)$ est de type fini. On se fixe un sous-groupe $K\subset \wdiv(X)$ tel que la projection $c:K\rightarrow \clg(X)$ est surjective. Soit $K^0:=\ker c$ et $\chi:K^0\rightarrow k(X)^*$ un caractère, c'est à dire un morphisme de groupes tel que $\divi(\chi(E))=E,\,\forall E\in K^0$. Soit $\Ss$ le faisceau d'algèbres divisorielles associé à $K$. Soit $\Ii$ le faisceau d'idéaux défini par l'image du morphisme 
 $$\bigoplus_{E\in K^0}\Ss\rightarrow \Ss,\, E\mapsto 1-\chi(E),\,\,\, 1\in \Ss_0$$
 Le faisceau de Cox associé à $K$ et $\chi$ est le faisceau quotient $\Rr:=\Ss/\Ii$. C'est une $\Oo_X$-algèbre quasi-cohérente et $\clg(X)$-graduée de la manière suivante: 
 $$\Rr=\bigoplus_{[D]\in \clg(X)}\Rr_{[D]},\,\,\,\,\,\, \Rr_{[D]}:=\pi(\bigoplus_{D'\in c^{-1}([D])}\Ss_{D'}),\,\,\,\, \text{où }\pi:\Ss\rightarrow \Rr\text{ est la projection}$$
@@ -263,7 +263,7 @@ Avec les notations de \ref{conscoxtorsion}, on a pour tout ouvert $U\subset X$ u
 
 Notre objectif est de montrer que les anneaux de Cox sont intégralement clos. Remarquons tout de suite que l'on peut travailler avec une variété lisse pour cela.
 
-\begin{prop}
+\begin{prop}\label{isomcodime2CoxTorsion}
 On considère les données de la construction \ref{conscoxtorsion}. Alors pour tous ouverts $V\subset U\subset X$ tels que $U\setminus V$ est de codimension $\geq 2$ dans $U$, la restriction $\Rr(U)\rightarrow \Rr(V)$ est un isomorphisme.
 \end{prop}
 \begin{proof}
@@ -306,7 +306,7 @@ Maintenant, comme $X$ est lisse, on peut la recouvrir par de tels ouverts.
 
 \subsection{Localisation et groupe des unités}
 
-\begin{cons}
+\begin{cons}\label{conscoxtorsion}
 Dans la situation de la construction \ref{conscoxtorsion}, considérons un diviseur $D\in K$ et une section globale homogène $f\in\Rr_{[D]}(X)$. D'après la proposition \ref{coxsheafiso2}, il existe un unique élément $\tilde{f}\in\Ss_D(X)$ tel que $\pi(\tilde{f})=f$. On définit le $[D]$-diviseur de $f$ comme le diviseur de Weil effectif
 $$\divi_{[D]}(f):=\divi_D(\tilde{f})=\divi(\tilde{f})+D$$
 Ce diviseur ne dépend ni du choix de $D\in c^{-1}(D)$, ni des choix faits en \ref{conscoxtorsion}.
@@ -320,7 +320,7 @@ $$D_2+\divi(\tilde{f}_2)=D_1+\divi(\tilde{f}_1)$$
 \begin{prop}\label{diviCoxTorsFormulas}
 Avec les notations de la proposition précédentes, on a:
 \begin{enumerate}
-\item Pour tout diviseur de Weil effectif, il existe $[D]\in\clg(X)$ et $f\in\Rr_{[D]}(X)$ tels que $E=\divi_{[D]}(f)$.
+\item Pour tout diviseur de Weil effectif $E$, il existe $[D]\in\clg(X)$ et $f\in\Rr_{[D]}(X)$ tels que $E=\divi_{[D]}(f)$.
 \item Soit $[D]\in\clg(X)$ et $f\in\Rr_{[D]}(X)$ non-nulle. Alors $\divi_{[D]}(f)=0\implies [D]=0$ dans $\clg(X)$.
 \item Pour tous $f\in\Rr_{[D_1]}(X)$ et $g\in\Rr_{[D_2]}(X)$, on a $\divi_{[D_1]+[D_2]}(fg)=\divi_{[D_1]}(f)+\divi_{[D_2]}(g)$.
 \end{enumerate}
@@ -379,16 +379,75 @@ Soit $K$ un groupe abélien et $R$ une algèbre $K$-graduée intègre.
 \end{enumerate}
 \end{defn}
 
-On peut considérer ces notions d'un point de vue géométrique. Soit $H$ un groupe algébrique et $X$ une $H$-variété affine irréductible et normale. Alors $\wdiv(X)$ est naturellement muni d'une action de $H$ par 
+On peut considérer ces notions d'un point de vue géométrique. Soit $H=\spec k[K]$ un groupe diagonalisable et $X$ une $H$-variété affine irréductible et normale. Alors $\wdiv(X)$ est naturellement muni d'une action de $H$ par 
 $$h.\sum a_DD=\sum A_D(h.D)$$
-Considérons le support d'un diviseur, c'est à dire la réunion des supports d'un nombre fini de diviseurs premiers. Ce support est $H$-stable si et seulement si l'idéal $\mathfrak{a}$ qu'il définit est homogène. De plus, dire que $\mathfrak{a}$ est $K$-premier, revient à dire que l'on ne peut pas l'écrire comme intersection d'idéaux homogènes strictement plus gros. On voit que cela est équivalent au fait  que $H$ agisse transitivement sur les diviseurs premiers envisagés. Cela amène la définition suivante.
+Considérons le support d'un diviseur, c'est à dire la réunion des supports d'un nombre fini de diviseurs premiers. Ce support est $H$-stable si et seulement si l'idéal $\mathfrak{a}$ qu'il définit est $K$-homogène. De plus, dire que $\mathfrak{a}$ est $K$-premier, revient à dire que l'on ne peut pas l'écrire comme intersection d'idéaux $K$-homogènes qui le contiennent strictement. On voit que cela est équivalent au fait  que $H$ agisse transitivement sur les diviseurs premiers envisagés. Cela amène la définition suivante.
 
 \begin{defn}
-Soit $H$ un groupe algébrique et $X$ une $H$-variété irréductible et normale.
+Soit $H=\spec k[K]$ un groupe diagonalisable et $X$ une $H$-variété irréductible et normale.
 \begin{enumerate}
-\item Un diviseur $H$-premiers est un diviseur de Weil non-nul $\sum a_DD$ tel les $D$ sont premiers, $a_D\in\lbrace 0,1\rbrace$, et les $a_D$ égaux à $1$ sont permutés transitivement par l'action de $H$.
+\item Un diviseur $H$-premier est un diviseur de Weil non-nul $\sum a_DD$ tel les $D$ sont premiers, $a_D\in\lbrace 0,1\rbrace$, et les $a_D$ égaux à $1$ sont permutés transitivement par l'action de $H$.
 \item Un fonction rationnelle $H$-homogène est un élément $f\in k(X)$ défini sur un ouvert $H$-invariant de $X$, et qui est $H$-homogène sur cet ouvert.
 \item On dit que $X$ est $H$-factoriel si tout diviseur de Weil $H$-invariant est le diviseur d'une fonction rationnelle $H$-homogène.
 \end{enumerate}
 \end{defn}
+
+\begin{prop}
+Soit $H=\spec k[K]$ un groupe diagonalisable et $X$ une $H$-variété irréductible quasi-affine et normale. Considérons l'algèbre $K$-graduée $R:=\Oo(X)$. Les conditions suivantes sont équivalentes: 
+\begin{enumerate}
+\item Tout idéal $K$-premier de $K$-hauteur $1$ de $R$ est $K$-principal.
+\item La variété $X$ est $H$-factoriel.
+\item L'algèbre $R$ est $K$-factoriel.
+\end{enumerate}
+De plus si une de ces assertions est vérifiée, alors un élément homogène non-nul et non-inversible $f\in R$ est $K$-premier si et seulement si le diviseur $\divi(f)$ est $H$-premier, et tout diviseur $H$-premier est de la forme $\divi(f)$ pour un élément $K$-premier $f\in R$.
+\end{prop}
+\begin{proof}
+On suppose que $1$ est vérifié et on veut montrer $2$. Soit $D$ un diviseur de Weil $H$-invariant. On vérifie immédiatement que l'on peut l'écrire de manière unique $D=a_1D_1+...+a_rD_r$ où les $D_i$ sont des diviseurs $H$-premiers. Si $\mathfrak{a}_i=\Ii(\supp(D_i))$ est de $K$-hauteur $1$, alors par hypothèse $D_i=\divi(f_i)$ avec $f_i\in R$ homogène, puis on obtient $D=\divi(f_1^{a_1}...f_r^{a_r})$. On voit donc qu'il suffit de montrer que $\mathfrak{a}_i$ est de hauteur $1$. Supposons que $X$ soit affine, on montrera ensuite que l'on peut faire cette simplification. Par l'absurde, supposons qu'il existe un idéal $K$-premier non-nul $\mathfrak{a}$ strictement contenu dans $\mathfrak{a}_i$. On peut donc trouver $f\in \mathfrak{a}_i\setminus\mathfrak{a}$	 que l'on peut de plus choisir homogène. Remarquons que $\Vv(\mathfrak{a})$ est de codimension $1$ car il contient $\Vv(\mathfrak{a}_i)$ et que $\mathfrak{a}$ est non-nul. Sa décomposition en composantes irréductibles s'écrit donc $\Vv(\mathfrak{a})=D'_1\cup...\cup D'_s\cup Z_1\cup ...\cup Z_t$, où les $D'_i$ sont les diviseurs premiers intervenant dans l'écriture de $D_i$. Notons $Z=Z_1\cup ...\cup Z_t$, alors $f$ s'annule sur $\supp(D_i)$ mais pas sur $Z$ car sinon une puissance de $f$ appartiendrai à $\mathfrak{a}$, et donc $f$ aussi car cet idéal est $K$-premier. Par ailleurs, $W:=\overline{Z\setminus \supp(D_i)}$ est un fermé propre non-vide de $X$ (et de $\Vv(\mathfrak{a})$), qui est de plus $H$-invariant. On peut donc trouver une fonction $g$ homogène non-nulle s'annulant sur $Z$ mais pas sur $\supp(D_i)$. On obtient ainsi $(fg)^n\in\mathfrak{a}$ pour un $n>0$ alors que $f\notin \mathfrak{a}$ et $g\notin\mathfrak{a}$, contradiction. Enfin, revenons au cas où $X$ est quasi-affine. On plonge $X$ dans une $H$-variété $Y$ affine normale irréductible, par une immersion ouverte $H$-équivariante telle qu'il existe des fonctions régulières homogènes $f\in\mathfrak{a}_i\setminus \mathfrak{a}$, et $h\in\mathfrak{a}$ qui s'étendent en des fonctions régulières sur $Y$. Alors l'idéal $\mathfrak{b}=\mathfrak{a}\cap \Oo(Y)$ est $K$-premier, non-nul, et strictement contenu dans l'idéal $K$-premier $\mathfrak{b}_i=\mathfrak{a}_i\cap \Oo(Y)$. On a de plus $\Vv_Y(\mathfrak{b}_i)=\overline{D_i}$ qui est un diviseur de Weil $H$-premier de $Y$. On s'est donc ramené au cas affine.
+
+Supposons $2$ et montrons $3$. Soit $f\in R\setminus R^*$ non-nul. Écrivons $\divi(f)=D_1+...+D_r$ où les $D_i$ sont $H$-premiers. Par hypothèse, $D_i=\divi(f_i)$ pour un élément $f_i\in R$ homogène, qui est de plus $K$-premier. On en déduit $f=uf_1...f_r$ où $u$ est une unité homogène de $R$. C'est ce qu'on voulait montrer.
+
+Enfin, supposons $3$ et considérons un idéal $\mathfrak{a}$ $K$-premier de hauteur $1$. Soit $f\in\mathfrak{a}$ non-nul et non-inversible. Par hypothèse on peut trouver un facteur $K$-premier $f_1$ de $f$ qui de plus appartient à $\mathfrak{a}$. On obtient ainsi une chaine d'idéaux $K$-premiers $\lbrace 0\rbrace\varsubsetneq (f_1)\subset \mathfrak{a}$, ce qui force $(f_1)=\mathfrak{a}$.
+\end{proof}
+
+On remarque avec cette proposition que la factorialité de $R$ entraine sa $K$ factorialité. Munit de ces définitions on va pouvoir généraliser les résultats de divisibilité dans l'anneau de Cox obtenus en \ref{divisibilitePropsFreeCox} dans le cas sans torsion.
+
+\begin{lem}
+Avec les données de \ref{conscoxtorsionlisse}, on a pour tout élément non-nul $f\in \Rr_{[D]}(X)$
+$$\divi(f)=p^*_X(\divi_{[D]}(f))$$
+\end{lem}
+\begin{proof}
+Avec les notations de \ref{conscoxtorsionlisse}, soit $D\in c^{-1}([D])$ et $\tilde{f}\in\Rr_D(X)$ se projetant sur $f$. Le diagramme commutatif de \ref{conscoxtorsionlisse} donne
+$$\divi(f)=i^*(\divi(\tilde{f}))=i^*(p^*(\divi_D(\tilde{f})))=p_X^*(\divi_{[D]}(f))$$
+\end{proof}
+
+\begin{prop}
+Soit $X$ une variété normale irréductible telle que $\Oo(X)^*=k^*$ et $\clg(X)$ est de type fini.
+\begin{enumerate}
+\item Soient $f\in \Rr_{[D]}(X)$ et $g\in \Rr_{[E]}(X)$ non-nuls. Alors $f\mid g\iff \divi_{[D]}(f)\leq\divi_{[E]}(g)$.
+\item Soient $f\in \Rr_{[D]}(X)$ et $g\in \Rr_{[E]}(X)$ non-nuls. Alors ces éléments sont associés si et seulement si $\divi_{[D]}(f)=\divi_{[E]}(g)$. Dans ce cas, on a $[D]=[E]$.
+\item Soit $f\in \Rr_D(X)$ non-nuls. Alors $f$ est $\clg(X)$-premier si et seulement si $\divi_D(f)$ est $\clg(X)$-premier.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+En utilisant \ref{isomcodime2CoxTorsion} on peut supposer $X$ lisse et donc se placer dans la situation de la construction $\ref{conscoxtorsionlisse}$. Alors la variété quasi-affine $\widehat{X}$ est lisse et son algèbre de fonction régulières est $\Rr(X)$. Ainsi on a $f\mid g$ dans $\Rr(X)$ si et seulement si $\divi(f)\leq \divi(g)$ dans $WDiv(\widehat{X})$. D'après le lemme précédent, c'est équivalent à $\divi_{[D]}(f)\leq\divi_{[E]}(g)$. Avec cela on obtient directement $2$.
+
+Montrons le point $3$. Supposons $\divi_{[D]}(f)$ premier. Comme il est non-trivial, $\divi(f)$ l'est aussi d'après le lemme précédent. Ainsi $f$ est non-nul et non-inversible. Si $f$ divise un produit $f_1f_2$ d'éléments homogènes non-nuls de $\Rr(X)$ alors d'après $1$, il divise l'un des deux car $\divi_{[D]}(f)$ étant premier, il est nécessairement inférieur ou égal à l'un des deux diviseurs effectifs  $\divi_{[D]}(f_i)$. Ainsi $f$ est $\clg(X)$-premier. Réciproquement, supposons par l'absurde que $f$ est $\clg(X)$-premier et $\divi_{[D]}(f)$ non-premier. Alors $\divi_{[D]}(f)=D_1+D_2$ avec chaque $D_i$ non-nul et effectif. D'après \ref{diviCoxTorsFormulas} $1$), on obtient des $f_i\Rr_{[D_i]}(X)$ tels que $\divi_{[D_i]}(f_i)=D_i$. D'après $1$), $f$ divise $f_1f_2$ mais ne divise aucun des facteurs, contradiction.
+\end{proof}
+
+En particulier, la seconde assertion nous indique que l'élément $f\in \Rr_{[D]}(X)$ avec $E=\divi_{[D]}(f)$ obtenu en \ref{diviCoxTorsFormulas} 1) pour un diviseur effectif $E$ donné est unique à association près. On l'appel la section canonique de $E$. On termine par une généralisation du théorème \ref{coxFreeFactoriel}.
+
+\begin{thm}
+Avec les données de \ref{conscoxtorsion}, L'anneau de Cox $\Rr(X)$ est $\clg(X)$-factoriel.
+\end{thm}
+\begin{proof}
+Soit $f\in\Rr_{[D]}(X)$ non-nul et non-inversible. On écrit $\divi_{[D]}(f)=D_1+...+D_r$ où les diviseurs $D_i$ sont premiers et effectifs. D'après \ref{diviCoxTorsFormulas} on obtient des éléments $f_i\in\Rr_{[D_i]}(X)$ tels que $\divi_{[D_i]}(f_i)=D_i$. Or d'après la proposition précédente, chaque $f_i$ est $\clg(X)$-premier et on a $f=uf_1...f_r$ où $u\in\Rr(X)^*$.
+\end{proof}
+
+\begin{rem}
+Avec les données de \ref{conscoxtorsion}, l'application $f\mapsto \divi_{[D]}(f)$ induit un isomorphisme entre le monoïde des éléments homogènes de $\Rr(X)$ modulo les inversibles et le monoïde $\wdiv^+(X)$ des diviseurs de Weil effectifs. Le fait que $\Rr(X)$ soit factoriel reflète le fait tout diviseur de Weil effectif s'écrit de manière unique comme une combinaison linéaire à coefficients dans $\NN$ de diviseur premiers.
+\end{rem}
+
+\begin{ex}
+Dans l'exemple \ref{}, l'anneau de Cox est $\ZZ/2\ZZ$-factoriel mais pas factoriel.
+\end{ex}
 
