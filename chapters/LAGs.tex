@@ -70,7 +70,9 @@ Soit $G$ un groupe algébrique et $H\leq G$ fermé. \\Alors il existe un $G$-mod
 \begin{thm}
 Soit $G$ un groupe algébrique et $H\lhd G$ fermé. \\Alors il existe un $G$-module $(V, \rho)$ de dimension finie tel que $H=\Ker{\rho}$.
 \end{thm}
+
 Le théorème suivant est le résultat principal de cette section. Il prouve l'existence des groupes quotients dans la catégorie des groupes algébriques. Le groupe quotient est alors unique à isomorphisme près, c'est une conséquence formelle de la propriété universelle du quotient.
+
 \begin{thm}[Car. 0]\label{groupequotient}
 Soient $G, H, (V, \rho)$ comme dans le théorème précédent, et $f:G \rightarrow G'$ un morphisme de groupes algébriques tel que $H\subset \Ker f$.\\
 Alors il existe une unique factorisation 	
@@ -80,10 +82,34 @@ Alors il existe une unique factorisation
 	\end{tikzcd}
 \end{thm}
 \begin{proof}
-	Le morphisme $\phi$ recherché existe en tant que morphisme de groupes abstraits, il est G-équivariant pour les actions naturelles de G sur $\rho(G)$ et $G'$ via $\rho$ et $f$. Concrètement cela signifie $\forall g_1, g_2 \in G, \phi(\rho(g_1)\rho(g_2))=f(g_1)\phi(\rho(g_2))$. Si $G$ est connexe, d'après la proposition \ref{facto}, $\phi$ est algébrique sur un ouvert $U$ non-vide de $\rho(G)$. Or on a un recouvrement de $\rho(G)$ par des $g.U$. En écrivant pour $x\in g.U,  \phi(x)=f(g)\phi(g^{-1}.x))$, on constate que $\phi$ est un morphisme de groupes algébriques.
+	Le morphisme $\phi$ recherché existe en tant que morphisme de groupes abstraits, il est G-équivariant pour les actions naturelles de G sur $\rho(G)$ et $G'$ via $\rho$ et $f$. Concrètement cela signifie $\forall g_1, g_2 \in G, \phi(\rho(g_1)\rho(g_2))=f(g_1)\phi(\rho(g_2))$. Si $G$ est connexe, d'après le lemme suivant, $\phi$ est un morphisme sur un ouvert $U$ non-vide de $\rho(G)$. Or on a un recouvrement de $\rho(G)$ par des $g.U$. En écrivant pour $x\in g.U,  \phi(x)=f(g)\phi(g^{-1}.x))$, on constate que $\phi$ est un morphisme de groupes algébriques.
 	\\Supposons $G$ quelconque mais $H\leq G^\circ$. Comme $\phi$ est algébrique sur le sous-groupe $G^\circ/H$ d'après ce qui précède, on a $\phi$ algébrique partout à nouveau par G-équivariance.\\
 	On peut se ramener au cas précédent en procédant en deux étapes. Dans un premier temps, on quotiente par le sous-groupe normal connexe $H^\circ$ (on a bien $H^\circ\leq G^\circ$), puis on quotiente par le sous-groupe normal fini $H/H^\circ$. Il reste donc à prouver le cas $H$ fini, c'est un corollaire direct du théorème \ref{goodquotientthm}.
-	\end{proof}
+\end{proof}
+
+\begin{lem}
+Soit $f:X \mapsto Y$ un morphisme dominant de variétés irréductibles. Soit $g:X \rightarrow Z$ constant sur les fibres de $f$. Alors il existe $h\in \Oo(Y)^*$ et une factorisation
+	\begin{tikzcd}
+		X_h \arrow[r,"g"] \arrow[d,"f"] & Z \\
+		Y_h \arrow[ru, dashed]
+	\end{tikzcd}
+\end{lem}
+\begin{proof}
+	\begin{multicols}{2}
+	On considère $\phi=(f,g):X\rightarrow Y\times Z$ et le diagramme commutatif ci-contre. Comme $f$ est dominant, $\pi_1$ l'est aussi. De plus $\overline{\phi(X)}$ est irréductible et $\phi(X)$ contient un ouvert dense de $\overline{\phi(X)}$. Par ailleurs comme $g$ est constante sur les fibres de $f$ on vérifie que $\pi_1$ est injective sur $\phi(X)$. Par le corollaire \ref{injectiveBirationel}, $\pi_1$ réalise un isomorphisme $\overline{\phi(X)}_h \xrightarrow{\pi_1} Y_h$ pour un $h\in \Oo(Y)$ non-nul. Finalement, le morphisme recherché est  $Y_h \xrightarrow{\pi_2\pi_1^{-1}} Z$.
+	
+	\columnbreak
+	\begin{center}
+	\begin{tikzcd}
+  		& X \arrow[ldd,bend right,swap, "f"] \arrow[d, "\phi"] \arrow[rdd, bend left,"g"]  &\\ 
+  		& \overline{\phi(X)} \arrow[ld,swap,"\pi_1"] \arrow[d,"i=\subset"] \arrow[rd,"\pi_2"]  &\\ 
+		Y & \arrow[l,"p_1"]  Y\times Z \arrow[r,swap,"p_2"]  & Z
+	\end{tikzcd}\\
+	\end{center}
+	\end{multicols}
+\end{proof}
+
+
 \subsection{Groupes diagonalisables, actions de groupes diagonalisables}
 
 \subsubsection{Groupes diagonalisables}
@@ -246,7 +272,7 @@ La deuxième ligne est obtenue par le théorème \ref{groupequotient}, puis appl
 Comme $\overline{H.x}$ est $H$-stable, la graduation est préservée sur $k[\overline{H.x}]$ d'après la proposition \ref{stablehomogene}. De plus si $f\in k[X]_{\omega}$ est telle que $f(x)\neq 0$, cela reste le cas modulo $\mathcal{I}_{X}(\overline{H.x})_\omega$ et réciproquement. Ainsi, $S_x$ et $K_x$ ne sont pas modifiés si on remplace $X$ par $\overline{H.x}$. \\
 Considérons le fermé propre $\overline{H.x}\setminus H.x$, éventuellement vide. Il est $H$-stable comme réunion d'orbites. Alors $\mathcal{I}_{\overline{H.x}}(\overline{H.x}\setminus H.x)$ est homogène d'après la proposition \ref{stablehomogene}, et $\neq \lbrace 0\rbrace$. Choisissons $f\neq0$ homogène dans ce $H$-module, c'est donc un vecteur propre. Ainsi, $f$ est non-nulle quelque part sur $H.x$ et donc partout par transitivité et choix de $f$. On en conclut $H.x=(\overline{H.x})_f$. Considérons la graduation naturelle associée à $k[\overline{H.x}]_f$. Comme on a inversé $f$, le monoïde de poids est potentiellement plus gros. En revanche on voit facilement que $K_x$ n'est pas modifié.\\
 Supposons donc $X=H.x$. Dans ce cas, on voit qu'une fonction homogène non-nulle est partout non-nulle, donc inversible. On a donc dans ce cas $S_x=K_x=S(k[H.x])=K(k[H.x])$, où $S(k[H.x])$ et $K(k[H.x])$ sont respectivement les monoïdes et groupes de poids de l'algèbre $K$-graduée $k[H.x]$. \\
-D'après la proposition \ref{facto} et le théorème \ref{ZMT} on a le diagramme commutatif de gauche ci-dessous. Le diagramme de droite est obtenu par application du foncteur $k[.]$.
+D'après \ref{facto} (ou \ref{groupQuotientGeometrique}) et \ref{ZMTCor} on a le diagramme commutatif de gauche ci-dessous. Le diagramme de droite est obtenu par application du foncteur $k[.]$.
 \begin{multicols}{2}
 	\begin{center}
 	\begin{tikzcd}
@@ -397,7 +423,7 @@ Soit $G$ un groupe algébrique et $X$ une $G$-variété. Une paire $(Y, \pi)$ o�
 
 On remarque que pour un quotient géométrique $(X//G, \pi)$, tous les orbites sont fermés dans $X$ et l'application quotient est ouverte. En effet, soit $U$ un ouvert de $X$, on a $\pi^{-1}(\pi(U))=\cup_{g\in G}g.U$ qui est ouvert.
 
-\begin{ex}
+\begin{ex}\label{groupQuotientGeometrique}
 Soit $G$ un groupe algébrique et $H$ un sous-groupe fermé. Dans la catégorie des ensemble, le quotient $(G/H,\pi)$ est exactement le quotient catégorique $(G//H,\pi)$ pour l'action de $H$ sur $G$ par multiplication à droite. Dans \cite{LAGSpringer} 5.5.5, en caractéristique quelconque, on munit $G/H$ d'une structure d'espace annelé en lui attribuant la topologie quotient puis en définissant le faisceau structural par $\Oo_{G/H}(U):=\lbrace f\in\textrm{Map}(U,k)\mid f\pi \in \Oo_G(\pi^{-1}(U))\rbrace$. Par construction, il vérifie la propriété universelle de factorisation. De plus, on montre ensuite que cet espace annelé est isomorphe à une variété quasi-projective, ce qui montre l'existence du quotient catégorique $(G//H,\pi)$ dans la catégorie des variétés algébriques. Par définition de $\Oo_{G/H}$, on a une flèche $\Oo_Y \xrightarrow{\pi^*} (\pi_*\Oo_X)^G$. Elle est injective par la surjectivité de $\pi$, et elle est surjective, par la propriété universelle du quotient. $(G//H,\pi)$ est donc un quotient géométrique. Cela généralise bien sur le théorème \ref{groupequotient}.
 \end{ex}
 

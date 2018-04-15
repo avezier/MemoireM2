@@ -2,6 +2,8 @@
 
 \section{Algèbre commutative}
 
+On collecte dans cette partie des définitions et résultats utilisés sans la suite. Soit $A$ un anneau, $\mathfrak{p}$ un idéal premier de $A$, et $f\in A$ un élément. On note $A_\mathfrak{p}$ la localisation de $A$ en la partie multiplicative $A\setminus \mathfrak{p}$, et $A_f$ la localisation de $A$ en la partie multiplicative $\lbrace 1, f, f^2, ....\rbrace$.
+
 \subsection{Extensions entières d'anneaux}
 
 \begin{defn}[Anneau intègralement clos]\label{normalring}
@@ -16,26 +18,27 @@ Il existe une notion plus générale qu'il est utile de mentionner pour la consi
 \begin{thm}\label{factonormal}
 Soit $A$ un anneau intègre noetherien intégralement clos. Alors
 \begin{enumerate}
-\item Tous les diviseurs premiers d'un idéal principal non-nul sont de hauteur 1.
-\item $A=\cap_{p \textrm{ premier, } \textrm{ht}(p)=1} A_p$
+\item Tous les premiers associés d'un idéal principal non-nul sont de hauteur 1.
+\item $A=\bigcap_{\mathfrak{p}\in \spec A, \haut \mathfrak{p}=1} A_\mathfrak{p}$.
 \end{enumerate}
 \end{thm}
 \begin{proof}
-Prendre la preuve dans \cite{Matsumura} thm 11.5 p81
+Voir \cite{Matsumura} 11.5
 \end{proof}
 
 
 \begin{thm}\label{UFDPID}
-Soit $A$ un anneau intègre noetherien intégralement clos. \\
-Alors, $A$ est factoriel $\iff$ Tout idéal premier de hauteur 1 est principal.
+Soit $A$ un anneau noetherien intégralement clos. Alors, \\
+$A$ est factoriel $\iff$ Tout idéal premier de hauteur 1 est principal.
 \end{thm}
 \begin{proof}
+Voir \cite{Matsumura} 20.1
 \end{proof}
 
 \subsection{Anneaux locaux, Anneaux de valuation discrète}
 
 \begin{defn}
-Un anneau local noethérien $A$ de corps résiduel $k=A/\mathfrak{m}$ est régulier si $\dim A =\mathfrak{m}/\mathfrak{m}^2$.
+Un anneau local noethérien $A$ de corps résiduel $k=A/\mathfrak{m}$ est régulier si $\dim A =\dim_k\mathfrak{m}/\mathfrak{m}^2$.
 \end{defn}
 
 \begin{thm}\label{reglocufd}
@@ -50,7 +53,7 @@ Soit $A$ un anneau intègre et $I$ un idéal fractionnaire de $A$. Les assertion
 \begin{enumerate}
 \item $I$ est inversible
 \item $I$ est un $A$-module projectif
-\item $I$ est de type fini, et pour tout idéal maximal $m$ de $A$, l'idéal fractionnaire $I_m$ de $A_m$ est principal.
+\item $I$ est de type fini, et pour tout idéal maximal $\mathfrak{m}$ de $A$, l'idéal fractionnaire $I_\mathfrak{m}$ de $A_\mathfrak{m}$ est principal.
 \end{enumerate}
 \end{thm}
 \begin{proof}
@@ -63,7 +66,7 @@ Voir \cite{Matsumura} 11.3
 
 \section{Schémas}
 
-Notre principale référence est \cite{Hartshorne}. On résume dans cette partie certains faits et définitions, souvent sans démonstration. Soit $A$ un anneau, $\mathfrak{p}$ un idéal premier de $A$, et $f\in A$ un élément. On note $A_\mathfrak{p}$ la localisation de $A$ en la partie multiplicative $A\setminus \mathfrak{p}$, et $A_f$ la localisation de $A$ en la partie multiplicative $\lbrace 1, f, f^2, ....\rbrace$.
+Notre principale référence est \cite{Hartshorne}. On résume dans cette partie certains faits et définitions. 
 
 \subsection{Généralités}
 
@@ -122,17 +125,17 @@ $$
 
 
 \begin{defn}
-Soit $S$ un schéma. Un $S$-schéma, où schéma sur $S$ est un schéma $X$ muni d'un morphisme $X\rightarrow S$ appelé morphisme structural.
+Soit $S$ un schéma. Un $S$-schéma, où schéma sur $S$, est un schéma $X$ muni d'un morphisme $X\rightarrow S$ appelé morphisme structural.
 \end{defn}
 
 Le produit fibré existe dans la catégorie des schémas. Cette construction se fait par recollement en remarquant que pour des schémas affines $X,Y$ sur un schéma affine $S$, le produit fibré $X\times_S Y$ est naturellement $\spec \Oo_X(X)\otimes_{\Oo_S(S)}\Oo_Y(Y)$. En effet, cela vient de \ref{EqCat} et du fait que le produit tensoriel sur $\Oo_S(S)$ est le co-produit dans la catégorie des $\Oo_S(S)$-algèbres. 
-Comme tout anneau est naturellement une $ZZ$-algèbre, tout schéma est naturellement un schéma sur $\spec \ZZ$ est le produit de deux schéma est par définition le produit sur $\spec \ZZ$.
+Comme tout anneau est naturellement une $\ZZ$-algèbre, tout schéma est naturellement un schéma sur $\spec \ZZ$. Le produit de deux schéma est par définition le produit sur $\spec \ZZ$.
 
 \subsection{Quelques propriétés des schémas}
 
 \subsubsection{Schémas réduits, irréductibles, intègres, noetheriens}
 
-\begin{defn}
+\begin{defn}[Schéma réduit]
 Un schéma $X$ est réduit si pour tout $x\in X$ les anneaux locaux $\Oo_{X,x}$ sont réduits. 
 \end{defn}
 
@@ -144,21 +147,12 @@ Supposons $X$ réduit et $f\in \Oo(U)$ nilpotent. Si $f$ est non-nul, alors il e
 Réciproquement, soit $f_x\in \Oo_{X,x}$ nilpotent alors $f_x$ est la classe d'une fonction nilpotente $f\in \Oo(U)$ pour un ouvert $U\subset X$. Cela implique $f_x=0$.
 \end{proof}
 
-\begin{defn}
-Un schéma est dit irréductible si l'espace topologique sous-jacent est irréductible, c'est à dire qu'il est non vide et n'est pas réunion de deux fermés propres.
+\begin{defn}[Schéma irréductible]
+Un schéma irréductible si l'espace topologique sous-jacent est irréductible, c'est à dire qu'il est non vide et n'est pas réunion de deux fermés propres.
 \end{defn}
 
-\begin{prop}
-Un schéma $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal.
-\begin{enumerate}
-\item $\Vv_X(\mathfrak{a})$ est irréductible si et seulement si $\sqrt{\mathfrak{a}}$ est premier
-\item Soit $(\mathfrak{p}_i)$ les premiers minimaux de $A$. Alors $(\Vv_X(\mathfrak{p}_i))$ sont les composantes irréductibles de $X$.
-\item $X$ est irréductible si et seulement si $A$ admet un unique idéal premier minimal. Dans ce cas, cet idéal est nécessairement $(0)$, et $A$ est intègre.
-\end{enumerate}
-\end{prop}
-
-\begin{defn}
-Un schéma $X$ est dit noetherien si c'est une union finie d'ouverts affines $U_i$ tels que $\Oo(U)$ est un anneau noetherien.
+\begin{defn}[Schéma noetherien]
+Un schéma $X$ est noetherien si c'est une union finie d'ouverts affines $U_i$ tels que $\Oo(U)$ est un anneau noetherien.
 \end{defn}
 
 \begin{prop}
@@ -171,6 +165,14 @@ Soit $X$ un schéma noetherien. Alors
 
 Par le lemme de Zorn, on montre que l'ensemble des fermés irréductibles d'un schéma $X$ admet des éléments maximaux, appelés composantes irréductibles. Si $X$ est noetherien, ce nombre est fini et $X$ s'écrit donc de manière unique comme réunion de ses composantes irréductibles. Pour tout point $x\in X$, les composantes irréductibles de $\spec \Oo_{X,x}$ correspondent bijectivement aux composantes irréductibles de $X$ passant par $x$.
 
+\begin{prop}
+Un schéma $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal.
+\begin{enumerate}
+\item $\Vv_X(\mathfrak{a})$ est irréductible si et seulement si $\sqrt{\mathfrak{a}}$ est premier
+\item Soit $(\mathfrak{p}_i)$ les premiers minimaux de $A$. Alors $(\Vv_X(\mathfrak{p}_i))$ sont les composantes irréductibles de $X$.
+\item $X$ est irréductible si et seulement si $A$ admet un unique idéal premier minimal. Dans ce cas, cet idéal est nécessairement $(0)$, et $A$ est intègre.
+\end{enumerate}
+\end{prop}
 
 \begin{defn}
 Un schéma $X$ est intègre si il est réduit et irréductible.
@@ -182,14 +184,14 @@ Un schéma $X$ est intègre si et seulement si $\Oo(U)$ est intègre pour tout o
 
 Un point $x$ d'un espace topologique $X$ est dit générique si $\overline{\lbrace x\rbrace}=X$. Ainsi, si $X$ admet un point générique, il est irréductible. Pour un schéma $X$ on a en fait une correspondance bijective entre fermés irréductibles de $X$ et points génériques donnée par $x\mapsto \overline{\lbrace x\rbrace}$. 
 
-Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$ est $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est à dire le corps des fractions de $A$. Plus généralement, on introduit le de corps des fonctions rationnelles d'un schéma intègre $X$ comme les fonctions régulières sur un ouvert non-vide de $X$. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce que précède, on le note $k(X)$.
+Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$ est $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est à dire le corps des fractions de $A$. Plus généralement, on définit le corps des fonctions rationnelles d'un schéma intègre $X$ comme les fonctions régulières sur un ouvert non-vide de $X$. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce qui précède. On le note $k(X)$.
 
 \begin{prop}
-Un schéma $X$ un schéma intègre et $k(X)$ son corps des fonctions rationnelles. 
+Soit $X$ un schéma intègre et $k(X)$ son corps des fonctions rationnelles. 
 \begin{enumerate}
 \item Pour tous ouverts $U\subset V\subset X$ non-vides, les applications suivantes sont injectives
 $$\Oo(V)\xhookrightarrow{res_{V,U}}\Oo(U)\xhookrightarrow{f\mapsto f_\eta} k(X)$$
-\item Pour tout ouvert non-vide $U\subset X$ et tout recouvrement $U=\cup_i U_i$, on a 
+\item Pour tout ouvert non-vide $U\subset X$ et tout recouvrement $U=\cup_i U_i$, on a dans $k(X)$:
 $$\Oo(U)=\bigcap_i \Oo(U_i)=\bigcap_{x\in U}\Oo_{X,x}$$
 \end{enumerate}
 \end{prop}
@@ -227,7 +229,7 @@ Pour qu'un morphisme soit de type fini il suffit qu'il existe un recouvrement pa
 \subsubsection{Morphismes finis, normalité}
 
 \begin{defn}[Morphisme fini]
-Soit $f:X \rightarrow Y$ un morphisme de schémas. On dit que $f$ est fini si pour tout ouvert affine $V$ de $Y$, si la $\Oo_Y(V)$-algèbre $(\Oo_X(f^{-1}(V)), f^\sharp)$ est finie.
+Soit $f:X \rightarrow Y$ un morphisme de schémas. On dit que $f$ est fini si pour tout ouvert affine $V$ de $Y$, si la $\Oo_Y(V)$-algèbre $(\Oo_X(f^{-1}(V)), f^\sharp(V))$ est finie.
 \end{defn}
 
 \begin{rem}
@@ -236,7 +238,8 @@ Pour qu'un morphisme soit fini il suffit qu'il existe un recouvrement par des ou
 
 
 \begin{defn}
-Un schéma est dit normal si tous ses anneaux locaux intégralement clos.
+Un point d'un schéma est dit normal si l'anneau local en ce point est intégralement clos.
+Un schéma est dit normal si il est normal en chacun de ses points.
 \end{defn}
 
 \begin{prop}
@@ -280,22 +283,12 @@ Soit $X$ un schéma. Les assertions suivantes sont équivalentes
 	\end{enumerate}
 \end{prop}
 
-
-\begin{prop}\label{sepCritere}
-Soit $X$ un schéma. Les assertions suivantes sont équivalentes
-	\begin{enumerate}
-	\item la composition de deux morphismes séparés est séparé.
-	\item Lemme 25.21.8 stacks
-	\end{enumerate}
-\end{prop}
-
-
 \begin{prop}\label{sepCritere2}
 Le morphisme composé de deux morphismes séparés est séparé.
 \end{prop}
 
 
-\subsubsection{morphismes propres}
+\subsubsection{Morphismes propres}
 
 
 \section{Variétés algébriques}
@@ -306,21 +299,21 @@ Un schéma de type fini sur un corps est noetherien, on en déduit que toute par
 
 \subsection{Dimension des variétés algébriques}
 
-
-\subsection{Variétés lisses}
-
-\begin{defn}[Variété lisse, point régulier]
-Soit $X$ une variété. On dit que $x\in X$ est un point régulier si l'anneau local $\Oo_{X,x}$ est régulier. On dit que la variété est lisse si chacun de ses points est régulier. Un point est singulier si il n'est pas régulier.
-\end{defn}
-
-Un point $x$ d'une variété $X$ irréductible est régulier si l'espace tangent $\mathfrak{m}_x/\mathfrak{m}_x^2$ en $x$ est de dimension $\dim X$. L'ensemble des point singulier d'une variété est un fermé propre.
-
-
-
-
 \subsubsection{Généralités}
 
-\subsubsection{Dimension des sous-variétés}
+\begin{defn}[Dimension]
+Soit $X$ une variété. La dimension de $X$ est la borne supérieure des longueurs de chaînes de parties fermées irréductibles
+$$\emptyset \varsubsetneq Z_0 \varsubsetneq Z_1 \varsubsetneq ... \varsubsetneq Z_r$$
+Soit $F\subset X$ un fermé irréductible. La codimension de $F$ dans $X$, notée $\codime_X F$ est la borne supérieure des longueurs de chaînes de parties fermées irréductibles
+$$F \varsubsetneq Z_1 \varsubsetneq ... \varsubsetneq Z_r$$
+
+
+\end{defn}
+
+Soit $X$ une variété, et $X=\cup_{i=1}^rX_i$ sa décomposition en composantes irréductibles. Alors $\dim X=\sup_i \dim X_i$. De plus, si $X$ est irréductible (i.e $r=1$), alors pour tout ouvert $U\subset X$ non-vide, on a $\dim X=\dim U$. On se ramène donc ainsi à l'étude de la dimension des variétés affines. On suppose donc $X=\spec A$ affine. Par la correspondance entre fermés irréductibles de $X$ et idéaux premier de $A$ on obtient $\dim X= \dim A$, où $\dim A$ est la dimension de Krull de $A$. En particulier, comme $A$ est une $k$-algèbre de type fini intègre, la dimension de $X$ est finie. Plus précisément, on a le résultat fondamental
+$$\dim X=\dim A=\trdeg_k \fract A$$
+La hauteur d'un idéal premier $\mathfrak{p}$ de $A$ correspond à la codimension de la sous-variété $F$ qu'il définit. Pour une $k$-algèbre de type fini intègre, on a $\haut \mathfrak{p}+ \dim A/\mathfrak{p}=\dim A$. On en déduit
+$$\dim X=\dim F+\codime_X F,\,\,\,\,\,\,\, \text{ et } \dim X=\dim\Oo_{X,x} \text{, pour tout } x\in X$$
 
 \begin{thm}\label{dimsousvariete}
 Soit $X$ une variété irréductible, $U\subset X$ un ouvert non-vide et $f\in \Oo_X(U)^*$ non inversible. Soit $Z$ une composante irréductible de $\lbrace x \in U \mid f(x)=0 \rbrace$. Alors $\dime Z= \dime(X)-1$.
@@ -332,12 +325,23 @@ Voir \cite{MumfordRedBook} I.7 Th.2, après réduction au cas $X$ affine, la pre
 
 \subsubsection{Dimension des fibres d'un morphisme}
 
+\begin{thm}\label{dimensionfibres}
+Soit $f:X\rightarrow Y$ un morphisme dominant de variétés irréductibles. Alors il existe un ouvert $U\subset Y$ tel que
+\begin{enumerate}
+\item $U\subset f(X)$
+\item Pour tout fermé irréductible $W\subset Y$ tel que $U\cap X\neq \emptyset$, et pour toute composante irréductible $Z$ de $f^{-1}(W)$  telle que $f^{-1}(U)\cap Z\neq \emptyset$, on a $\dim Z=\dim W + r$, où $r:=\dim X -\dim Y$
+\end{enumerate}
+En particulier, pour tout $Y\in U$, on a $\dim f^{-1}(y)=r.$
+\end{thm}
+
+On s'intéresse maintenant aux morphismes dont les fibres sont des ensembles finis. Cette étude s'achève avec un résultat important pour la suite, on obtient un critère pour qu'un morphisme bijectif en caractéristique zéro soit un isomorphisme. 
+
 \begin{defn}[Morphisme quasi-fini]
 Soit $f:X \rightarrow Y$ un morphisme de variétés. On dit que $f$ est quasi-fini si les fibres de $f$ sont finies.
 \end{defn}
 
 \begin{thm}[Théorème principal de Zariski]\label{ZMT}
-Soit $f:X\rightarrow Y$ un morphisme birationnel quasi-fini (séparé?) de variétés irréductibles. On suppose de plus que $Y$ est normale. Alors $f$ est une immersion ouverte.
+Soit $f:X\rightarrow Y$ un morphisme birationnel quasi-fini séparé de variétés irréductibles. On suppose de plus que $Y$ est normale. Alors $f$ est une immersion ouverte.
 \end{thm}
 \begin{proof}
 Voir \cite{QingLiu} 4.4.6
@@ -351,8 +355,7 @@ Par hypothèse, l'extension $k(Y) \xrightarrow{f^*} k(X)$ est algébrique finie,
 On a donc une factorisation de $f^*:\Oo(Y)_v\xrightarrow{p_1^*}\Oo(Y)_v[T]\xrightarrow{\pi}\Oo(Y)_v[T]/(P)\xrightarrow{\overline{ev_f}}\Oo(Y)_v[u]$ qui donne $f:X_v \xrightarrow{\simeq} \lbrace (y,t) \in Y_v\times \mathbb{A}^1\mid P(y)(t)=0\rbrace \hookrightarrow Y_v\times \mathbb{A}^1 \xrightarrow{p_1} Y_v$. Ainsi le cardinal de la fibre $f^{-1}(y), y\in Y_v$ est le cardinal de l'ensemble des zéros du polynôme $P(y)(T)$. On peut s'assurer que cet ensemble est de cardinal constant en intersectant à nouveau avec l'ouvert principal du discriminant de $P$ qui est un polynôme en les coefficients de $P$.
 \end{proof}
 
-Ce résultat reste vrai en caractéristique positive, voir 
-~\cite{LAGSpringer} 5.1.6 pour une preuve légèrement différente dans ce cadre. On y montre que le cardinal de la fibre générale est $[k(X):k(Y)]_s$. En revanche pour le corollaire immédiat suivant, la caractéristique zéro est essentielle (penser par exemple au morphisme de Frobenius $\AAA^1 \xrightarrow{x \mapsto x^p} \AAA^1$ ). 
+Ce résultat reste vrai en caractéristique positive, voir \cite{LAGSpringer} 5.1.6 pour une preuve légèrement différente dans ce cadre. On y montre que le cardinal de la fibre générale est $[k(X):k(Y)]_s$. En revanche pour le corollaire immédiat suivant, la caractéristique zéro est essentielle (penser par exemple au morphisme de Frobenius $\AAA^1 \xrightarrow{x \mapsto x^p} \AAA^1$ ). 
 
 \begin{cor}\label{injectiveBirationel}
 Avec les hypothèses de \ref{fibersCardinal}, si de plus $f$ est injectif, alors il existe $g\in \Oo(Y)$ non-nulle tel que le morphisme induit $f:X_g \mapsto Y_g$ soit un isomorphisme.
@@ -362,32 +365,16 @@ Avec les hypothèses de \ref{fibersCardinal}, si de plus $f$ est injectif, alors
 Soit $f:X \mapsto Y$ un morphisme bijectif de variétés irréductibles avec $Y$ normale. Alors $f$ est un isomorphisme.
 \end{thm}
 \begin{proof}
-D'après \ref{dimension fibres} on peut appliquer \ref{injectiveBirationel} et on obtient ainsi que $f$ est birationnel. Ensuite, \ref{ZMT} nous dit que $f$ est une immersion ouverte. Mais $f$ est surjective par hypothèse, c'est donc un isomorphisme.
+D'après \ref{dimensionfibres} on peut appliquer \ref{injectiveBirationel} et on obtient ainsi que $f$ est birationnel. Ensuite, \ref{ZMT} nous dit que $f$ est une immersion ouverte. Mais $f$ est surjective par hypothèse, c'est donc un isomorphisme.
 \end{proof}
 
-\begin{prop}\label{facto}
-Soit $f:X \mapsto Y$ un morphisme dominant de variétés irréductibles. Soit $g:X \rightarrow Z$ constant sur les fibres de $f$. Alors il existe $h\in \Oo(Y)^*$ et une factorisation
-	\begin{tikzcd}
-		X_h \arrow[r,"g"] \arrow[d,"f"] & Z \\
-		Y_h \arrow[ru, dashed]
-	\end{tikzcd}
-\end{prop}
-\begin{proof}
-	\begin{multicols}{2}
-	On considère $\phi=(f,g):X\rightarrow Y\times Z$ et le diagramme commutatif ci-contre. Comme $f$ est dominant, $\pi_1$ l'est aussi. De plus $\overline{\phi(X)}$ est irréductible et $\phi(X)$ contient un ouvert dense de $\overline{\phi(X)}$. Par ailleurs comme $g$ est constante sur les fibres de $f$ on vérifie que $\pi_1$ est injective sur $\phi(X)$. Par le corollaire \ref{injectiveBirationel}, $\pi_1$ réalise un isomorphisme $\overline{\phi(X)}_h \xrightarrow{\pi_1} Y_h$ pour un $h\in \Oo(Y)$ non-nul. Finalement, le morphisme recherché est  $Y_h \xrightarrow{\pi_2\pi_1^{-1}} Z$.
-	
-	\columnbreak
-	\begin{center}
-	\begin{tikzcd}
-  		& X \arrow[ldd,bend right,swap, "f"] \arrow[d, "\phi"] \arrow[rdd, bend left,"g"]  &\\ 
-  		& \overline{\phi(X)} \arrow[ld,swap,"\pi_1"] \arrow[d,"i=\subset"] \arrow[rd,"\pi_2"]  &\\ 
-		Y & \arrow[l,"p_1"]  Y\times Z \arrow[r,swap,"p_2"]  & Z
-	\end{tikzcd}\\
-	\end{center}
-	\end{multicols}
-\end{proof}
+\subsection{Variétés lisses}
 
+\begin{defn}[Variété lisse, point régulier]
+Soit $X$ une variété. On dit que $x\in X$ est un point régulier si l'anneau local $\Oo_{X,x}$ est régulier. On dit que la variété est lisse si chacun de ses points est régulier. Un point est singulier si il n'est pas régulier.
+\end{defn}
 
+Par définition, un point $x$ d'une variété $X$ irréductible est régulier si l'espace tangent $(\mathfrak{m}_x/\mathfrak{m}_x^2)^*$ en $x$ est de dimension $\dim X$. L'ensemble des point singulier d'une variété est un fermé propre. Par ailleurs, le théorème \ref{reglocufd} entraine qu'un point lisse est un point normal. 
 
 
 
@@ -399,8 +386,6 @@ Une variété normale est union disjointe de ses composantes irréductibles.
 \begin{proof}
 Si un point $p\in X$ d'une variété se situe à l'intersection de deux composantes irréductibles, l'anneau local en $p$ contient au moins deux premiers minimaux et n'est donc pas intègre.
 \end{proof}
-
-On note que une variété irréductible $X$ est normale si et seulement si pour tout ouvert affine $U\subset X$, $\mathcal{O}_X(U)$ est normal au sens de la définition \ref{normalring}.
 
 \begin{prop}\label{codimesingnormal}
 Le lieu singulier d'une variété normale est un fermé de codimension $\geq 2$
