@@ -96,7 +96,7 @@ $$\Ii_X(Y)=\bigcap_{\mathfrak{p}\in Y}\mathfrak{p},\,\,\,\,\, \Ii_X(\Vv_X(\mathf
 \begin{rem}
 On remarque que si on considère une algèbre affine, c'est à dire une $k$-algèbre de type fini réduite, et que l'on suppose de plus le corps algébriquement clos. Alors si l'on remplace "premier" par "maximal" dans les formules ci-dessus relatives aux opérations $\Vv$ et $\Ii$, on retombe sur les définitions classiques de ces opérations qui donnent les ensemble algébriques et leurs équations dans un espace affine de dimension finie sur $k$. En effet le Nullstellensatz assure dans ce cas que les points de l'ensemble algébrique correspondent aux idéaux maximaux de l'algèbre et que $\Ii(Y)=\bigcap_{y\in Y}\mathfrak{m}_y$.
 
-Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ d'un schéma $X$ peuvent être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Dans le cas d'une variété affine, c'est à dire $X=\spec A$ où $A$ est une $k$-algèbre affine sur un corps algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est à dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant est $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique que les morphismes entre ensembles algébriques sont les applications polynomiales.
+Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ d'un schéma $X$ peuvent être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Dans le cas d'une variété affine, c'est à dire $X=\spec A$ où $A$ est une $k$-algèbre affine sur un corps algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est à dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant s'identifie à $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique que les morphismes entre ensembles algébriques sont les applications polynomiales.
 \end{rem}
 
 \begin{cons}[Recollement de schémas]\label{gluevar}
@@ -174,7 +174,7 @@ Un schéma $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal.
 \end{enumerate}
 \end{prop}
 
-\begin{defn}
+\begin{defn}[Schéma intègre]
 Un schéma $X$ est intègre si il est réduit et irréductible.
 \end{defn}
 
@@ -200,13 +200,11 @@ $$\Oo(U)=\bigcap_i \Oo(U_i)=\bigcap_{x\in U}\Oo_{X,x}$$
 
 
 
-\subsubsection{Immersions ouvertes, immersions fermées}
+\subsubsection{Immersion ouverte, immersion fermée}
 
-
-\begin{defn}
+\begin{defn}[Immersion ouverte, immersion fermée]
 Un morphisme de schémas $(f,f^\sharp):X\rightarrow Y$ est une immersion ouverte (resp. fermée) si $f$ est une immersion ouverte topologique (resp. immersion fermée topologique), et si $f^\sharp_x:\Oo_{X,f(x)}\rightarrow \Oo_{X,x}$ est un isomorphisme (resp. surjective) pour tout $x\in X$.
 \end{defn}
-
 
 \begin{defn}
 Un schéma $X$ est quasi-affine si il est quasi-compact et il existe une immersion ouverte dans un schéma affine.
@@ -214,12 +212,12 @@ Un schéma $X$ est quasi-affine si il est quasi-compact et il existe une immersi
 
 \subsubsection{Morphismes de type fini}
 
-\begin{defn}
+\begin{defn}[Morphisme quasi-compact]
 Un morphisme de schémas $f:X\rightarrow Y$ est quasi-compact si l'image réciproque tout ouvert affine de $Y$ est quasi-compact. 
 \end{defn}
 
-\begin{defn}
-Un morphisme de schémas $f:X\rightarrow Y$ est localement de type fini si il est quasi-compact et pour tout ouvert affine $V\subset Y$, et tout ouvert affine $U\subset f^{-1}(V)$, le morphisme canonique $\Oo_Y(V)\rightarrow \Oo_X(U)$ fait de $\Oo_X(U)$ une $\Oo_Y(V)$-algèbre de type fini. Un $S$-schéma est dit de type fini si son morphisme structural est de type fini.
+\begin{defn}[Morphisme de type fini]
+Un morphisme de schémas $f:X\rightarrow Y$ est de type fini si il est quasi-compact et pour tout ouvert affine $V\subset Y$, et tout ouvert affine $U\subset f^{-1}(V)$, le morphisme canonique $\Oo_Y(V)\rightarrow \Oo_X(U)$ fait de $\Oo_X(U)$ une $\Oo_Y(V)$-algèbre de type fini. Un $S$-schéma est dit de type fini si son morphisme structural est de type fini.
 \end{defn}
 
 \begin{rem}
@@ -237,7 +235,7 @@ Pour qu'un morphisme soit fini il suffit qu'il existe un recouvrement par des ou
 \end{rem}
 
 
-\begin{defn}
+\begin{defn}[Schéma normal]
 Un point d'un schéma est dit normal si l'anneau local en ce point est intégralement clos.
 Un schéma est dit normal si il est normal en chacun de ses points.
 \end{defn}
@@ -268,11 +266,11 @@ Un morphisme de schémas affines $\phi: X\rightarrow Y$ est affine. En effet, so
 \subsubsection{Morphismes séparés}
 
 \begin{defn}[Morphisme séparé, schéma séparé]
-Soit $f:X\rightarrow Y$ un morphisme de schémas. Le morphisme diagonal $\Delta:X\rightarrow X\times_Y X$ est l'unique morphisme $X\rightarrow X\times_Y X$ tel que la composition avec les projections $p_1,p_2:X\times_Y X\rightarrow X$ est l'identité. On dit que $f$ est séparé si le morphisme diagonal est une immersion fermée.
+Soit $f:X\rightarrow Y$ un morphisme de schémas. Le morphisme diagonal $\Delta:X\rightarrow X\times_Y X$ est l'unique morphisme $X\rightarrow X\times_Y X$ tel que la composition avec les projections $p_1,p_2:X\times_Y X\rightarrow X$ est l'identité de $X$. On dit que $f$ est séparé si le morphisme diagonal est une immersion fermée.
 Un $S$-schéma est séparé si son morphisme structural est séparé. En particulier un schéma est séparé si il est séparé sur $\spec\ZZ$.
 \end{defn}
 
-Les morphismes entre schémas affines sont séparés et en particulier les schémas affines sont séparés. En effet, considérons $X=\spec A$ et $Y=\spec B$ et $X\rightarrow Y$ le morphisme diagonal est donné par $\rho: B\otimes_A B\rightarrow B, x\otimes 1\mapsto x, 1\otimes y \mapsto y$ qui est clairement surjectif, c'est donc une immersion fermée. Le critère suivant est utile et nous dit de plus que les intersections d'affines sont affines dans les schémas séparés.
+Les morphismes entre schémas affines sont séparés et en particulier les schémas affines sont séparés. En effet, considérons $X=\spec A$ et $Y=\spec B$, le morphisme diagonal est donné par $\rho: B\otimes_A B\rightarrow B, x\otimes 1\mapsto x, 1\otimes y \mapsto y$ qui est clairement surjectif, c'est donc une immersion fermée. Le critère suivant est utile et nous dit de plus que les intersections d'affines sont affines dans les schémas séparés.
 
 \begin{prop}\label{sepCritere}
 Soit $X$ un schéma. Les assertions suivantes sont équivalentes
@@ -293,7 +291,7 @@ Le morphisme composé de deux morphismes séparés est séparé.
 
 \section{Variétés algébriques}
 
-Dans ce mémoire, on travaille principalement dans la catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos de caractéristique zéro fixé. Ces objets sont appelés des $k$-variétés algèbriques, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I.
+Dans ce mémoire, on travaille principalement dans la catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos fixé. Ces objets sont appelés des $k$-variétés algèbriques, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I. On rappel que le corps de base est supposé de caractéristique nulle.
 
 Un schéma de type fini sur un corps est noetherien, on en déduit que toute partie localement fermée d'une variété admet une unique structure de variété, et tout fermé se décompose de manière unique en une union finie de composantes irréductibles. Enfin, le produit sur $k$ préserve l'irréductibilité.
 
@@ -301,27 +299,26 @@ Un schéma de type fini sur un corps est noetherien, on en déduit que toute par
 
 \subsubsection{Généralités}
 
-\begin{defn}[Dimension]
+\begin{defn}[Dimension d'une variété]
 Soit $X$ une variété. La dimension de $X$ est la borne supérieure des longueurs de chaînes de parties fermées irréductibles
 $$\emptyset \varsubsetneq Z_0 \varsubsetneq Z_1 \varsubsetneq ... \varsubsetneq Z_r$$
 Soit $F\subset X$ un fermé irréductible. La codimension de $F$ dans $X$, notée $\codime_X F$ est la borne supérieure des longueurs de chaînes de parties fermées irréductibles
 $$F \varsubsetneq Z_1 \varsubsetneq ... \varsubsetneq Z_r$$
-
-
 \end{defn}
 
-Soit $X$ une variété, et $X=\cup_{i=1}^rX_i$ sa décomposition en composantes irréductibles. Alors $\dim X=\sup_i \dim X_i$. De plus, si $X$ est irréductible (i.e $r=1$), alors pour tout ouvert $U\subset X$ non-vide, on a $\dim X=\dim U$. On se ramène donc ainsi à l'étude de la dimension des variétés affines. On suppose donc $X=\spec A$ affine. Par la correspondance entre fermés irréductibles de $X$ et idéaux premier de $A$ on obtient $\dim X= \dim A$, où $\dim A$ est la dimension de Krull de $A$. En particulier, comme $A$ est une $k$-algèbre de type fini intègre, la dimension de $X$ est finie. Plus précisément, on a le résultat fondamental
+Soit $X$ une variété, et $X=\cup_{i=1}^rX_i$ sa décomposition en composantes irréductibles. Alors $\dim X=\sup_i \dim X_i$. De plus, si $X$ est irréductible (i.e $r=1$), alors pour tout ouvert $U\subset X$ non-vide, on a $\dim X=\dim U$. On se ramène donc ainsi à l'étude de la dimension des variétés affines. On suppose donc $X=\spec A$ affine. Par la correspondance entre fermés irréductibles de $X$ et idéaux premier de $A$ on obtient $\dim X= \dim A$, où $\dim A$ est la dimension de Krull de $A$. En particulier, comme $A$ est une $k$-algèbre de type fini intègre, on a le résultat fondamental (Voir \cite{Matsumura} 5.6)
 $$\dim X=\dim A=\trdeg_k \fract A$$
-La hauteur d'un idéal premier $\mathfrak{p}$ de $A$ correspond à la codimension de la sous-variété $F$ qu'il définit. Pour une $k$-algèbre de type fini intègre, on a $\haut \mathfrak{p}+ \dim A/\mathfrak{p}=\dim A$. On en déduit
+Cela assure en particulier que la dimension d'une variété est finie. Par ailleurs, la hauteur d'un idéal premier $\mathfrak{p}$ de $A$ correspond à la codimension de la sous-variété $F$ qu'il définit. Pour une $k$-algèbre de type fini intègre, on a $\haut \mathfrak{p}+ \dim A/\mathfrak{p}=\dim A$. On en déduit
 $$\dim X=\dim F+\codime_X F,\,\,\,\,\,\,\, \text{ et } \dim X=\dim\Oo_{X,x} \text{, pour tout } x\in X$$
 
 \begin{thm}\label{dimsousvariete}
-Soit $X$ une variété irréductible, $U\subset X$ un ouvert non-vide et $f\in \Oo_X(U)^*$ non inversible. Soit $Z$ une composante irréductible de $\lbrace x \in U \mid f(x)=0 \rbrace$. Alors $\dime Z= \dime(X)-1$.
+Soit $X$ une variété irréductible, $U\subset X$ un ouvert non-vide et $f\in \Oo_X(U)$ non nul et non-inversible. Soit $Z$ une composante irréductible de $\Vv_U((f))$. Alors $\dime Z= \dime(X)-1$.
 \end{thm}
 \begin{proof}
 Voir \cite{MumfordRedBook} I.7 Th.2, après réduction au cas $X$ affine, la preuve consiste en une réduction au cas facile où $\Oo(X)$ est factoriel. 
 \end{proof}
 
+Ce théorème peut aussi être vu comme une version géométrique du théorème de l'idéal principal de Krull qui assure les idéaux premiers minimaux sur un idéal principal d'un anneau noetherien sont au plus de hauteur $1$.
 
 \subsubsection{Dimension des fibres d'un morphisme}
 

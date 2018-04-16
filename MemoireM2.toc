@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {1.2.2}Quelques propri\IeC {\'e}t\IeC {\'e}s des sch\IeC {\'e}mas}{7}{subsection.1.2.2}
 \contentsline {subsubsection}{Sch\IeC {\'e}mas r\IeC {\'e}duits, irr\IeC {\'e}ductibles, int\IeC {\`e}gres, noetheriens}{7}{section*.4}
 \contentsline {subsection}{\numberline {1.2.3}Quelques propri\IeC {\'e}t\IeC {\'e}s des morphismes de sch\IeC {\'e}mas}{9}{subsection.1.2.3}
-\contentsline {subsubsection}{Immersions ouvertes, immersions ferm\IeC {\'e}es}{9}{section*.5}
+\contentsline {subsubsection}{Immersion ouverte, immersion ferm\IeC {\'e}e}{9}{section*.5}
 \contentsline {subsubsection}{Morphismes de type fini}{9}{section*.6}
 \contentsline {subsubsection}{Morphismes finis, normalit\IeC {\'e}}{9}{section*.7}
 \contentsline {subsubsection}{Morphismes affines}{9}{section*.8}
@@ -66,7 +66,8 @@
 \contentsline {section}{\numberline {4.3}Faisceau et anneau de Cox dans le cas g\IeC {\'e}n\IeC {\'e}ral}{46}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Faisceau et anneau de Cox}{46}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Invariance de l'anneau de Cox}{47}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{47}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Int\IeC {\'e}grit\IeC {\'e} et normalit\IeC {\'e}}{47}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Localisation et groupe des unit\IeC {\'e}s}{48}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Propri\IeC {\'e}t\IeC {\'e}s de divisibilit\IeC {\'e}}{50}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.3.3}Exemples}{49}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{49}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Int\IeC {\'e}grit\IeC {\'e} et normalit\IeC {\'e}}{49}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Localisation et groupe des unit\IeC {\'e}s}{50}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Propri\IeC {\'e}t\IeC {\'e}s de divisibilit\IeC {\'e}}{51}{subsection.4.4.3}

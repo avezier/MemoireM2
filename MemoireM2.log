@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  15 APR 2018 23:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  16 APR 2018 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1219,7 +1219,7 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ] [6]
 [7] [8]
 
-LaTeX Warning: Reference `' on page 9 undefined on input line 249.
+LaTeX Warning: Reference `' on page 9 undefined on input line 247.
 
 [9] [10] [11] [12]) [13]
 \openout2 = `chapters/LAGs.aux'.
@@ -1318,12 +1318,7 @@ LaTeX Warning: Reference `' on page 33 undefined on input line 322.
 
 LaTeX Warning: Reference `quasicoaff' on page 35 undefined on input line 427.
 
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
-
- []
-
-[36]
+[35] [36]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 488.
@@ -1411,41 +1406,46 @@ LaTeX Warning: Reference `Coxgraded' on page 45 undefined on input line 181.
 
 [45] [46] [47]
 
-LaTeX Warning: Reference `' on page 48 undefined on input line 292.
+LaTeX Warning: Command \textsection invalid in math mode on input line 278.
 
-
-LaTeX Warning: Reference `' on page 48 undefined on input line 301.
-
-
-LaTeX Warning: Reference `' on page 48 undefined on input line 301.
-
-
-LaTeX Warning: Reference `' on page 48 undefined on input line 303.
-
+Missing character: There is no Ÿ in font cmr10!
 [48]
 
-LaTeX Warning: Reference `' on page 49 undefined on input line 329.
+LaTeX Warning: Reference `' on page 49 undefined on input line 330.
 
 
-LaTeX Warning: Reference `' on page 49 undefined on input line 345.
+LaTeX Warning: Reference `' on page 49 undefined on input line 339.
 
 
-LaTeX Warning: Reference `' on page 49 undefined on input line 362.
+LaTeX Warning: Reference `' on page 49 undefined on input line 339.
 
 [49]
 
-LaTeX Warning: Reference `' on page 50 undefined on input line 369.
+LaTeX Warning: Reference `' on page 50 undefined on input line 341.
 
-[50] [51]
 
-LaTeX Warning: Reference `' on page 52 undefined on input line 451.
+LaTeX Warning: Reference `' on page 50 undefined on input line 367.
 
-) [52] (./MemoireM2.bbl
+
+LaTeX Warning: Reference `' on page 50 undefined on input line 383.
+
+[50]
+
+LaTeX Warning: Reference `' on page 51 undefined on input line 400.
+
+
+LaTeX Warning: Reference `' on page 51 undefined on input line 407.
+
+[51] [52]
+
+LaTeX Warning: Reference `' on page 53 undefined on input line 489.
+
+) [53] (./MemoireM2.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 26.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [53
+)) [54
 
 
 ]
@@ -1457,7 +1457,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
 Package rerunfilecheck Info: File `MemoireM2.out' has not changed.
-(rerunfilecheck)             Checksum: F199402C0B2D354364335307D4C545ED;4146.
+(rerunfilecheck)             Checksum: 6E95E914779F01324C143F488DBB5F8A;4208.
 
 
 LaTeX Warning: There were undefined references.
@@ -1468,10 +1468,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 55.
  ) 
 Here is how much of TeX's memory you used:
- 21756 strings out of 492995
- 407574 string characters out of 6132704
- 482621 words of memory out of 5000000
- 24446 multiletter control sequences out of 15000+600000
+ 21765 strings out of 492995
+ 407711 string characters out of 6132704
+ 482717 words of memory out of 5000000
+ 24450 multiletter control sequences out of 15000+600000
  26777 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,15n,84p,2451b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1510,10 +1510,10 @@ exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on MemoireM2.pdf (54 pages, 679607 bytes).
+Output written on MemoireM2.pdf (55 pages, 691036 bytes).
 PDF statistics:
- 1171 PDF objects out of 1200 (max. 8388607)
- 1073 compressed objects within 11 object streams
- 410 named destinations out of 1000 (max. 500000)
- 397 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1197 PDF objects out of 1200 (max. 8388607)
+ 1098 compressed objects within 11 object streams
+ 415 named destinations out of 1000 (max. 500000)
+ 405 words of extra memory for PDF output out of 10000 (max. 10000000)
 

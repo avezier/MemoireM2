@@ -201,9 +201,12 @@ Soit $f,g$ des fonctions régulières non-nulles sur $\widetilde{X}$. Comme $\wi
 
 \subsection{Faisceau et anneau de Cox}
 
+On souhaite maintenant définir l'anneau de Cox d'une variété $X$ dans le cas où le groupe des classes est de type fini avec de la torsion. On suppose comme toujours $X$
+normale et irréductible. L'idée est de construire le faisceau d'algèbres divisorielles $\Ss$ associé à un sous-groupe $K\subset \wdiv(X)$ se projetant surjectivement sur $\clg(X)$, puis d'identifier des composantes homogènes $\Ss_{D_1}$ et  $\Ss_{D_2}$ si $D_1=D_2+E$, où $E\in \ker (c:K\rightarrow \clg(X))$. Pour cela on remarque que l'on a, d'après \ref{isomophismeOTimes}, un isomorphisme $\Ss_{D_1}\simeq \Ss_{D_2}\otimes_{\Oo_X}\Ss_E$. Posons $E=\divi(g)$ avec $g\in k(X)$, et considérons $f_2\in \Ss_{D_2}(U)$ une section sur un ouvert $U\in X$. Par l'isomorphisme, on voit que $f_2$ est de la forme $g_{|U}f_1$, où $f_1\in \Ss_{D_1}(U)$. Pour identifier $f_1$ et $f_2$, il faut imposer $g_{|U}=1_{|U}$, où $1\in\Ss_0(X)$, c'est ce que l'on fait dans la construction ci-dessous.
+
 \begin{cons}\label{conscoxtorsion}
-Soit $X$ une variété normale irréductible, telle que $\Gamma(X,\Oo^\times)=k^*$ et $\clg(X)$ est de type fini. On se fixe un sous-groupe $K\subset \wdiv(X)$ tel que la projection $c:K\rightarrow \clg(X)$ est surjective. Soit $K^0:=\ker c$ et $\chi:K^0\rightarrow k(X)^*$ un caractère, c'est à dire un morphisme de groupes tel que $\divi(\chi(E))=E,\,\forall E\in K^0$. Soit $\Ss$ le faisceau d'algèbres divisorielles associé à $K$. Soit $\Ii$ le faisceau d'idéaux défini par l'image du morphisme 
-$$\bigoplus_{E\in K^0}\Ss\rightarrow \Ss,\, E\mapsto 1-\chi(E),\,\,\, 1\in \Ss_0$$
+Soit $X$ une variété normale irréductible, telle que $\Gamma(X,\Oo^\times)=k^*$ et $\clg(X)$ est de type fini. On se fixe un sous-groupe $K\subset \wdiv(X)$ tel que la projection $c:K\rightarrow \clg(X)$ est surjective. Soit $K^0:=\ker c$ et $\chi:K^0\rightarrow k(X)^*$ un caractère, c'est à dire un morphisme de groupes tel que $\divi(\chi(E))=E$, pour tout $E\in K^0$. Soit $\Ss$ le faisceau d'algèbres divisorielles sur $X$ associé à $K$. Soit $\Ii$ le faisceau d'idéaux défini par l'image du morphisme 
+$$\bigoplus_{E\in K^0}\Ss\rightarrow \Ss,\, E\mapsto 1-\chi(E),\,\,\, \text{ où }1\in \Ss_0(X)$$
 Le faisceau de Cox associé à $K$ et $\chi$ est le faisceau quotient $\Rr:=\Ss/\Ii$. C'est une $\Oo_X$-algèbre quasi-cohérente et $\clg(X)$-graduée de la manière suivante: 
 $$\Rr=\bigoplus_{[D]\in \clg(X)}\Rr_{[D]},\,\,\,\,\,\, \Rr_{[D]}:=\pi(\bigoplus_{D'\in c^{-1}([D])}\Ss_{D'}),\,\,\,\, \text{où }\pi:\Ss\rightarrow \Rr\text{ est la projection}$$
 L'anneau de Cox associé à $K$ et $\chi$ est l'anneau des sections globales de $\Rr$.
@@ -227,7 +230,7 @@ On écrit la décomposition en composantes $K$-homogènes de chaque $g_E$:
 $$g_E=\sum_{D'\in D+K^0}g_{E,D'}, \text{ où } g_{E,D'}\in\Gamma(U_x, \Ss_{D'})$$
 La section $g'_{E,D'}:=\chi(D'-D)g_{E,D'}$ est $K$-homogène de degré $D$ et on a l'identité 
 $$(1-\chi(E))g_{E,D'}=(1-\chi(E+D-D'))g'_{E,D'}-(1-\chi(D-D'))g'_{E,D'}$$
-On obtient ainsi l'écriture désirée localement sur des ouverts qui recouvrent $X$. Par irréductibilité de $X$ on obtient l'unicité de l'écriture globalement en recollant ces sections.
+On obtient ainsi l'écriture désirée localement sur des ouverts qui recouvrent $X$. Par irréductibilité de $X$, on obtient l'unicité de l'écriture globalement en recollant ces sections.
 \end{proof}
 
 \begin{cor}\label{genreatorsCoxIdeal}
@@ -243,19 +246,54 @@ $$1-\chi(-E)=(1-\chi(E))(-\chi(-E))$$
 
 Notre objectif est maintenant de vérifier que l'anneau de Cox construit en \ref{conscoxtorsion} est indépendants des choix faits à isomorphisme près. On aura donc une construction intrinsèque car elle ne dépend à isomorphisme près que de données intrinsèques de la variété (faisceau structural, groupe des classes).
 
+\begin{lem}\label{LemmeCoxRelevelement}
+Avec les données de \ref{conscoxtorsion}. Soit $f\in \Ss(U)$ une section locale $\clg(X)$-homogène de degré $[D]$, avec $D\in K$. Alors il existe $f'\in \Ss_D(U)$ tel que $f-f'\in\Ii(U)$.
+\end{lem}
+\begin{proof}
+Cela se voit grâce à l'astuce d'écriture
+$$f=\sum_{D'\in D+K^0}f_{D'}=\sum_{D'\in D+K^0}\chi(D'-D)f_{D'}+ \sum_{D'\in D+K^0}(1-\chi(D'-D))f_{D'}$$
+\end{proof}
+
+
 \begin{prop}\label{coxsheafiso2}
-Avec les notations de \ref{conscoxtorsion}, on a pour tout $D\in K$ un isomorphisme de faisceaux $\pi_{|\Ss_D}:\Ss_D\rightarrow \Rr_{[D]}$.
+Avec les données de \ref{conscoxtorsion}, on a pour tout $D\in K$ un isomorphisme de faisceaux $\pi_{|\Ss_D}:\Ss_D\rightarrow \Rr_{[D]}$.
 \end{prop}
 \begin{proof}
-
+Considérons pour $x\in X$ le morphisme induit entre les tiges $\pi_x:\Ss_{D,x}\rightarrow \Rr_{[D],x}$, et montrons que c'est un isomorphisme. La proposition \ref{coxidealform} montre qu'il existe un unique élément de $\Ss_{D,x}$ se projetant sur $0$, on a donc l'injectivité. Pour la surjectivité, il suffit de montrer que toute section $f$ de $\Ss_{[D]}$ sur un voisinage $U$ de $x$ s'écrit, éventuellement sur un voisinage $V$ de $x$ plus petit, sous la forme $f'+s$ avec $f'\in \Ss_D(V)$, et $s\in \Ii(V)$. Il suffit d'appliquer le lemme précédent.
 \end{proof}
 
 \begin{prop}\label{coxsheafiso}
-Avec les notations de \ref{conscoxtorsion}, on a pour tout ouvert $U\subset X$ un isomorphisme canonique $\Rr(U)\simeq \Ss(U)/\Ii(U)$.
+Avec les données de \ref{conscoxtorsion}, on a pour tout ouvert $U\subset X$ un isomorphisme canonique $\Rr(U)\simeq \Ss(U)/\Ii(U)$.
 \end{prop}
 \begin{proof}
-
+L'application canonique $\psi_U:\Gamma(U,\Ss)/\Gamma(U,\Ii)\rightarrow\Gamma(U,\Ss/\Ii)$ est $\clg(X)$-homogène et injective, montrons qu'elle est surjective. Soit $h\in\Gamma(U,\Ss/\Ii)$, c'est donc un recollement de sections locales $h_i:=\phi_{U_i}(g_i)$, avec $U=\cup_{i\in I}U_i$, et telles que la restriction de $g_i-g_j$ à $U_i\cap U_j$ appartient à $\Ii(U_i\cap U_j)$ pour tout couple $(i,j)\in I$. Soit $g_{i,[D]}\in \Ss_{[D]}(U_i)$ la composante $\clg(X)$-homogène de degré $[D]$ de $g_i$. Comme $\Ii$ est $\clg(X)$-homogène d'après \ref{coxidealform}, on a $g_{j,[D]}-g_{i,[D]}\in\Ii(U_i\cap U_j)$ pour tout couple $(i,j)\in I$. De plus, d'après le lemme \ref{LemmeCoxRelevelement}, il existe des éléments $f_{i,D}\in \Ss_D(U_i)$ tels que $g_{i,[D]}-f_{i,D}\in \Ii(U_i)$, et on a $f_{i,D}-f_{j,D}\in\Ii(U_i\cap U_j)$. Ainsi $f_{i,D}=f_{j,D}$ sur $U_i\cap U_j$ d'après \ref{coxidealform}, et on obtient que les $f_{i,D}$ se recollent en un section $f_D\in \Ss_D(U)$ telle que $\psi(f_D)=h_{[D]}$. Finalement, $f=\sum f_D$ est un antécédent de $h$ par $\psi$.
 \end{proof}
+
+\begin{thm}\label{InvarianceCoxTorsion}
+Avec les données de \ref{conscoxtorsion}. Soit $K', \chi'$ un autre choix de sous-groupe et de caractères. Alors les faisceaux de Cox associés sont isomorphes en tant que faisceaux d'algèbre $\clg(X)$-graduées.
+\end{thm}
+\begin{proof}
+Dans un premier temps, montrons que l'on peut se ramener à des faisceaux de Cox définis par un sous-groupe de $\wdiv(X)$ de type fini. Soit donc $K_1\subset K$ de type fini se projetant surjectivement sur $\clg(X)$. Un tel $K_1$ existe car il suffit par exemple de prendre le sous-groupe de $K$ engendré par des antécédents par $c$ de générateurs de $\clg(X)$. La restriction de $\chi$ à $K_1$ définit un caractère $\chi_1:K_1^0\rightarrow k(X)^*$. L'inclusion $K_1\subset K$ définit une injection $\Ss_1\rightarrow \Ss$, qui envoie l'idéal $\Ii_1$ défini par $\chi_1$ dans $\Ii$. Cela donne une injection $\clg(X)$-graduée $\Rr_1\rightarrow \Rr$, où $\Rr_1$ est le faisceau de Cox associé à $K_1$ et $\chi_1$. Mais dans lemme \ref{LemmeCoxRelevelement}, on peut toujours choisir $D\in K_1$, cela donne la surjectivité de ce morphisme.
+
+On suppose donc $K$ de type fini. Montrons que tout choix de caractères $\chi,\chi':K^0\rightarrow k(X)^*$ définit un isomorphisme entre les faisceaux de cox $\Rr$ et $\Rr'$ associés. Notons que $\chi^{-1}\chi'$ envoie $K^0$ dans $\Oo(X)^*=k^*$. On peut étendre $\chi^{-1}\chi'$ en un caractère $\theta:K\rightarrow k^*$, en effet considérons une $\ZZ$-base $(D_1,....,D_r)$ de $K$ adaptée à $K^0$. Il existe donc des entiers positifs $n_1,...n_s$ avec $s\leq k$ tels que $§n_1D_1,...,n_sD_s$ soit une $\ZZ$-base de $K^0$. Soit $\alpha_i := \chi^{-1}\chi'(n_iD_i)$ pour $1\leq i\leq s$. Choisissons une racine $n_i$-iéme de $\alpha_i$ que l'on note $\beta_i$, pour $1\leq i\leq s$. En posant $\theta(D_i)=\beta_i$ pour $1\leq i\leq s$, et $\theta(D_i)=1$ pour $s+1\leq i\leq r$ on définit un prolongement de $\chi^{-1}\chi'$. Enfin, on définit un automorphisme $K$-gradué $(\alpha,\id)$ de $\Ss$ en posant:
+$$\alpha_D:\Ss_D\rightarrow \Ss_D,\,\,\, f\mapsto \theta(D)f$$
+Cet automorphisme envoie $\Ii'$ sur $\Ii$ par construction et induit donc un isomorphisme entre $\Ss/\Ii'$ et $\Ss/\Ii$.
+
+Pour finir considérons deux sous-groupes de type fini $K,K'\subset \wdiv(X)$ se projetant chacun surjectivement sur $\clg(X)$. Soit $(D_1,...,D_r)$ une $\ZZ$-base de $K$. On choisit $E_i\in c^{-1}([D_i])\cap K'=(D_i+\ker c)\cap K'$ pour $1\leq i\leq r$ et on définit un morphisme $\tilde{\alpha}:K\rightarrow K'$ en posant $\alpha(D_i)=E_i$. Comme $E_i$ est de la forme $D_i-\divi(f_i)$ avec $f_i\in k(X)^*$, on voit que $\tilde{\alpha}$ est de la forme $\tilde{\alpha}(D)=D-\divi(\eta(D))$, où $\eta:K\rightarrow k(X)^*$ est un morphisme de groupes. Choisissons un caractère $\chi':K'^0\rightarrow k(X)^*$ associé à $K'$. Alors, pour $D\in K^0$, on a
+$$D-\divi(\eta(D))=\tilde{\alpha}(D)=\divi(\chi'(\tilde{\alpha}(D)))$$
+On obtient que $D$ est le diviseur de la fonction $\chi(D):=\chi'(\tilde{\alpha}(D))\eta(D)$, et cette formule définit un caractère $\chi:K^0\rightarrow k(X)^*$. On obtient ainsi un morphisme $K$-gradué $(\alpha,\tilde{\alpha}):\Ss\rightarrow \Ss'$ entre les faisceaux associés à $K$ et $K'$ défini par
+$$\alpha_D:\Ss_D\rightarrow \Ss'_{\tilde{\alpha}(D)},\,\,\, f\mapsto\eta(D)f$$
+Ce morphisme envoie l'idéal $\Ii$ défini par $\chi$ dans l'idéal $\Ii'$ défini par $\chi'$, et induit un un morphisme injectif $\Rr\rightarrow \Rr'$. Comme les $\alpha_D$ sont des isomorphismes de $\Oo_X$-modules on voit que ce morphisme est également surjectif en utilisant \ref{coxsheafiso2}.
+\end{proof}
+
+\begin{rem}
+Avec les données de \ref{conscoxtorsion}. Si on se donne un point régulier $x\in X$, on peut définir de manière canonique le faisceau de Cox de la variété pointée $(X, x)$. Soit $K^x:=\lbrace D\in\wdiv(X)\mid x\notin \supp D\rbrace$.  Ce sous-groupe de $\wdiv(X)$ se projette surjectivement sur $\clg(X)$. En effet pour tout $[D]\in \clg(X)$, choisissons $D\in c^{-1}([D])$. Si $D\notin K^x$, alors comme $\Oo_{X,x}$ est factoriel, on a localement $D=\divi(f)$ avec $f\in k(X)$. Ainsi, $D-\divi(f)\in K^x$ et $c(D-\divi(f)) =[D]$. Pour tout $E\in K^{x,0}$, on a $E=\divi(f_E)$ pour un $f_E\in k(X)$ défini sur un voisinage de $x$, car $x\notin \supp E$. Si l'on impose $f_E(x)=1$, alors $f_E$ est unique et on définit ainsi un caractère $\chi^x:K^x\rightarrow k(X)^*,\,E\mapsto f_E$. On note $\Rr^x$ le faisceau de Cox obtenu canoniquement à partir de ces données.
+
+\end{rem}
+
+\subsection{Exemples}
+
+
 
 \section{Propriétés algébriques de l'anneau de Cox} 
 
