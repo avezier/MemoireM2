@@ -60,6 +60,24 @@ Soit $A$ un anneau intègre et $I$ un idéal fractionnaire de $A$. Les assertion
 Voir \cite{Matsumura} 11.3
 \end{proof}
 
+\begin{thm}[Critère de Serre pour la normalité]\label{SerreCritere}
+Soit $A$ un anneau intègre. Alors $A$ est intégralement clos si et seulement si il satisfait les deux conditions suivantes
+\begin{enumerate}
+\item Pour tout idéal premier de hauteur $\leq 1$, L'anneau local $A_\mathfrak{p}$ est régulier.
+\item Les idéaux premiers associés d'un idéal principal non-nul sont de hauteur $1$.
+\end{enumerate}
+\end{thm}
+\begin{proof}
+Voir \cite{Matsumura} 23.8
+\end{proof}
+
+\begin{prop}[Critère de Serre pour la normalité]\label{SerreCritere2}
+Soit $k[x_1,...,x_n]$ un anneau de polynômes, et $f\in A$ un élément premier. Alors $A=k[x_1,...,x_n]/(f)$ satisfait la condition $2$ du théorème précédent. 
+\end{prop}
+\begin{proof}
+Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de hauteur $1$. En remplaçant $A$ par sa localisation en $\mathfrak{p}$, on peut supposer $A$ local d'idéal maximal $\mathfrak{p}$. Par définition, il existe $g\in A\setminus (f) $ tel que $\mathfrak{p}=\lbrace x\in A\mid gx=0 \,\modu (f)$. Soit $y=g/f\in \fract(A)$. Si $y\mathfrak{p}\subset\mathfrak{p}$, c'est à dire $(x\in A$ et $gx=0 \,\modu (f))\implies (g/f)x=0\,\modu (f)$, ou encore $(g/f^n)x=0\,\modu (f)$ pour tout $n>0$. On en déduit $g\in (f)$, contradiction. Ainsi $y\mathfrak{p}=\mathfrak{p}$, ou encore $\mathfrak{p}=(f/g)$. Par le théorème de l'idéal principal de Krull (voir \ref{dimsousvariete}) on en déduit $\haut \mathfrak{p}=1$.
+\end{proof}
+
 \subsection{Algèbres graduées}
 
 
@@ -90,7 +108,7 @@ Réciproquement, tout morphisme entre schémas affines $f:\spec B\rightarrow \sp
 Les foncteurs $\spec$ et $\Gamma(.)$ définissent une anti-équivalence de catégories entre la catégorie des schémas affines et la catégorie des anneaux (commutatifs).
 \end{prop}
 
-Soit $X$ un schéma, $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U=\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in p$. On peut alors par exemple parler de l'idéal de $\Oo(X)$ des fonctions régulières s'annulant sur un fermé $F$ de $X$, on le note $\Ii_X(F)$. Ainsi, $F$ définit un faisceau d'idéaux $\Ii_F:U\mapsto \Ii_U(F\cap U)$ radicaux qui définit une structure de schéma $(F, i^{-1}(\Oo_X/\Ii_F))$ sur $F$, où $i$ est l'inclusion. Si $X=\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
+Soit $X$ un schéma, $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U=\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$. On peut alors par exemple parler de l'idéal de $\Oo(X)$ des fonctions régulières s'annulant sur un fermé $F$ de $X$, on le note $\Ii_X(F)$. Ainsi, $F$ définit un faisceau d'idéaux $\Ii_F:U\mapsto \Ii_U(F\cap U)$ radicaux qui définit une structure de schéma $(F, i^{-1}(\Oo_X/\Ii_F))$ sur $F$, où $i$ est l'inclusion. Si $X=\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
 $$\Ii_X(Y)=\bigcap_{\mathfrak{p}\in Y}\mathfrak{p},\,\,\,\,\, \Ii_X(\Vv_X(\mathfrak{a}))=\sqrt{\mathfrak{a}},\,\,\,\,\,\,\Vv_X(\Ii_X(Y))=\overline{Y}$$
 
 \begin{rem}
@@ -152,7 +170,7 @@ Un schéma irréductible si l'espace topologique sous-jacent est irréductible, 
 \end{defn}
 
 \begin{defn}[Schéma noetherien]
-Un schéma $X$ est noetherien si c'est une union finie d'ouverts affines $U_i$ tels que $\Oo(U)$ est un anneau noetherien.
+Un schéma $X$ est noetherien si c'est une union finie d'ouverts affines $U_i$ tels que $\Oo(U_i)$ est un anneau noetherien.
 \end{defn}
 
 \begin{prop}
@@ -175,7 +193,7 @@ Un schéma $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal.
 \end{prop}
 
 \begin{defn}[Schéma intègre]
-Un schéma $X$ est intègre si il est réduit et irréductible.
+Un schéma est intègre si il est réduit et irréductible.
 \end{defn}
 
 \begin{prop}
@@ -184,7 +202,7 @@ Un schéma $X$ est intègre si et seulement si $\Oo(U)$ est intègre pour tout o
 
 Un point $x$ d'un espace topologique $X$ est dit générique si $\overline{\lbrace x\rbrace}=X$. Ainsi, si $X$ admet un point générique, il est irréductible. Pour un schéma $X$ on a en fait une correspondance bijective entre fermés irréductibles de $X$ et points génériques donnée par $x\mapsto \overline{\lbrace x\rbrace}$. 
 
-Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$ est $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est à dire le corps des fractions de $A$. Plus généralement, on définit le corps des fonctions rationnelles d'un schéma intègre $X$ comme les fonctions régulières sur un ouvert non-vide de $X$. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce qui précède. On le note $k(X)$.
+Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$, et $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est à dire le corps des fractions de $A$. Plus généralement, on définit le corps des fonctions rationnelles d'un schéma intègre $X$ comme les fonctions régulières sur un ouvert non-vide de $X$. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce qui précède. On le note $k(X)$.
 
 \begin{prop}
 Soit $X$ un schéma intègre et $k(X)$ son corps des fonctions rationnelles. 
@@ -309,7 +327,7 @@ $$F \varsubsetneq Z_1 \varsubsetneq ... \varsubsetneq Z_r$$
 Soit $X$ une variété, et $X=\cup_{i=1}^rX_i$ sa décomposition en composantes irréductibles. Alors $\dim X=\sup_i \dim X_i$. De plus, si $X$ est irréductible (i.e $r=1$), alors pour tout ouvert $U\subset X$ non-vide, on a $\dim X=\dim U$. On se ramène donc ainsi à l'étude de la dimension des variétés affines. On suppose donc $X=\spec A$ affine. Par la correspondance entre fermés irréductibles de $X$ et idéaux premier de $A$ on obtient $\dim X= \dim A$, où $\dim A$ est la dimension de Krull de $A$. En particulier, comme $A$ est une $k$-algèbre de type fini intègre, on a le résultat fondamental (Voir \cite{Matsumura} 5.6)
 $$\dim X=\dim A=\trdeg_k \fract A$$
 Cela assure en particulier que la dimension d'une variété est finie. Par ailleurs, la hauteur d'un idéal premier $\mathfrak{p}$ de $A$ correspond à la codimension de la sous-variété $F$ qu'il définit. Pour une $k$-algèbre de type fini intègre, on a $\haut \mathfrak{p}+ \dim A/\mathfrak{p}=\dim A$. On en déduit
-$$\dim X=\dim F+\codime_X F,\,\,\,\,\,\,\, \text{ et } \dim X=\dim\Oo_{X,x} \text{, pour tout } x\in X$$
+$$\dim X=\dim F+\codime_X F,\,\,\,\,\,\,\, \text{ et } \dim X=\dim\Oo_{X,x} \text{, pour tout } x\in X \text{ (fermé)}$$
 
 \begin{thm}\label{dimsousvariete}
 Soit $X$ une variété irréductible, $U\subset X$ un ouvert non-vide et $f\in \Oo_X(U)$ non nul et non-inversible. Soit $Z$ une composante irréductible de $\Vv_U((f))$. Alors $\dime Z= \dime(X)-1$.
@@ -349,7 +367,7 @@ Soient $X,Y$ deux variétés algébriques affines irréductibles de même dimens
 \end{prop}
 \begin{proof}
 Par hypothèse, l'extension $k(Y) \xrightarrow{f^*} k(X)$ est algébrique finie, disons de degré n. En caractéristique zéro on peut trouver $u\in k(X)$ tel que $k(X)=k(Y)[u]$. On remarque que l'on peut imposer $u\in \Oo(X)$. On considère $P:=P_{min}(u, k(Y))=T^n+a_1T^{n-1}+...+a_0$. En réduisant au même dénominateur on a $P\in \Oo(Y)_v[T]$ pour un $v\in \Oo(Y)$. De plus, en prenant l'intersection avec d'autres ouverts principaux on peut supposer $\Oo(X)_v$ entier sur $\Oo(Y)_v$, et $\Oo(Y)_v[u]$ intégralement clos, ce qui donne $\Oo(Y)_v[u]=\Oo(X)_v$ et $\Oo(X)_v$ entier sur $\Oo(Y)_v$. Ainsi $f:X_v \rightarrow Y_v$ est fini et donc surjectif car dominant.\\
-On a donc une factorisation de $f^*:\Oo(Y)_v\xrightarrow{p_1^*}\Oo(Y)_v[T]\xrightarrow{\pi}\Oo(Y)_v[T]/(P)\xrightarrow{\overline{ev_f}}\Oo(Y)_v[u]$ qui donne $f:X_v \xrightarrow{\simeq} \lbrace (y,t) \in Y_v\times \mathbb{A}^1\mid P(y)(t)=0\rbrace \hookrightarrow Y_v\times \mathbb{A}^1 \xrightarrow{p_1} Y_v$. Ainsi le cardinal de la fibre $f^{-1}(y), y\in Y_v$ est le cardinal de l'ensemble des zéros du polynôme $P(y)(T)$. On peut s'assurer que cet ensemble est de cardinal constant en intersectant à nouveau avec l'ouvert principal du discriminant de $P$ qui est un polynôme en les coefficients de $P$.
+On a donc une factorisation de $f^\sharp(Y_v):\Oo(Y)_v\xrightarrow{p_1^*}\Oo(Y)_v[T]\xrightarrow{\pi}\Oo(Y)_v[T]/(P)\xrightarrow{\overline{ev_f}}\Oo(Y)_v[u]$ qui donne $f:X_v \xrightarrow{\simeq} \lbrace (y,t) \in Y_v\times \mathbb{A}^1\mid P(y)(t)=0\rbrace \hookrightarrow Y_v\times \mathbb{A}^1 \xrightarrow{p_1} Y_v$. Ainsi le cardinal de la fibre $f^{-1}(y), y\in Y_v$ est le cardinal de l'ensemble des zéros du polynôme $P(y)(T)$. On peut s'assurer que cet ensemble est de cardinal constant en intersectant à nouveau avec l'ouvert principal du discriminant de $P$ qui est un polynôme en les coefficients de $P$.
 \end{proof}
 
 Ce résultat reste vrai en caractéristique positive, voir \cite{LAGSpringer} 5.1.6 pour une preuve légèrement différente dans ce cadre. On y montre que le cardinal de la fibre générale est $[k(X):k(Y)]_s$. En revanche pour le corollaire immédiat suivant, la caractéristique zéro est essentielle (penser par exemple au morphisme de Frobenius $\AAA^1 \xrightarrow{x \mapsto x^p} \AAA^1$ ). 
@@ -371,8 +389,14 @@ D'après \ref{dimensionfibres} on peut appliquer \ref{injectiveBirationel} et on
 Soit $X$ une variété. On dit que $x\in X$ est un point régulier si l'anneau local $\Oo_{X,x}$ est régulier. On dit que la variété est lisse si chacun de ses points est régulier. Un point est singulier si il n'est pas régulier.
 \end{defn}
 
-Par définition, un point $x$ d'une variété $X$ irréductible est régulier si l'espace tangent $(\mathfrak{m}_x/\mathfrak{m}_x^2)^*$ en $x$ est de dimension $\dim X$. L'ensemble des point singulier d'une variété est un fermé propre. Par ailleurs, le théorème \ref{reglocufd} entraine qu'un point lisse est un point normal. 
+Par définition, un point $x$ d'une variété $X$ irréductible est régulier si l'espace tangent $(\mathfrak{m}_x/\mathfrak{m}_x^2)^*$ en $x$ est de dimension $\dim X$. L'ensemble des point singuliers de $X$ est un fermé propre. Dans le cas d'une variété normale, ce fermé est de codimension $\geq 2$ comme on le verra en \ref{codimesingnormal}, on dit dans ce cas que la variété est régulière en codimension $1$. Cela explique d'ailleurs la nécessité de la condition $1$ de \ref{SerreCritere}. Réciproquement, le théorème \ref{reglocufd} entraine qu'un point lisse est un point normal. On dispose d'un critère effectif pour déterminer si un point d'une variété est lisse.
 
+\begin{prop}\label{CritereReg}
+Soit $X$ une variété affine que l'on peut supposer plongée dans $\AAA^n$ avec des équations $f_1,...f_t\in k[x_1,...,x_n]$. Un point $p$ de $X$ est régulier si et seulement si le rang de la matrice $((\partial f_i/\partial x_j)(p))_{i,j}$ est $n-r$, où $r:=\dim X$.
+\end{prop}
+\begin{proof}
+Voir \cite{Hartshorne} I.5.1
+\end{proof}
 
 
 \subsection{Propriétés des variétés normales}
