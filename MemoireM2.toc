@@ -69,5 +69,5 @@
 \contentsline {subsection}{\numberline {4.3.3}Exemples}{49}{subsection.4.3.3}
 \contentsline {section}{\numberline {4.4}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{50}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Int\IeC {\'e}grit\IeC {\'e} et normalit\IeC {\'e}}{50}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Localisation et groupe des unit\IeC {\'e}s}{51}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Propri\IeC {\'e}t\IeC {\'e}s de divisibilit\IeC {\'e}}{52}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.2}Localisation et groupe des unit\IeC {\'e}s}{52}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Propri\IeC {\'e}t\IeC {\'e}s de divisibilit\IeC {\'e}}{53}{subsection.4.4.3}

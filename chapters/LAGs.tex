@@ -322,15 +322,17 @@ Pour finir voyons une caractérisation algébrique des actions fidèles de group
 Soit $A$ une algèbre affine intègre $K$-graduée, $X:=\spec A$ muni de l'action de $H:=\spec k[K]$. L'action de $H$ est fidèle si et seulement si $K=K(A)$.
 \end{prop}
 \begin{proof}
-Soit $g\in \cap_{x\in X}H_x$. L'action de $g$ sur les fonctions régulières est triviale, donc en particulier sur les fonctions homogènes. Comme $A$ est intègre, $\forall \omega \in S(A), \exists f_\omega\neq 0\in A_\omega$, on en déduit $g\in \cap_{\chi \in S(A)} \Ker(\chi)$ puis facilement $g\in \cap_{\chi \in K(A)} \Ker(\chi)$ d'où $g=e_H$ si $K=K(A)$ car $H$ est un groupe diagonalisable.\\
+Soit $g\in \cap_{x\in X}H_x$. L'action de $g$ sur les fonctions régulières est triviale, donc en particulier sur les fonctions homogènes. Comme $A$ est intègre, $\forall \omega \in S(A), \exists f_\omega\neq 0\in A_\omega$, on en déduit $g\in \cap_{\chi \in S(A)} \Ker(\chi)$ puis facilement $g\in \cap_{\chi \in K(A)} \Ker(\chi)$ d'où $g=e_H$ si $K=K(A)$ car $H$ est un groupe diagonalisable.
+
 Sinon comme $K(A)\subsetneq K$, on peut choisir $g\neq e_H\in H$ tel que $g\in\cap_{\chi \in K(A)} \Ker(\chi)$. En effet $\cap_{\chi \in K(A)} \Ker(\chi)$ est un sous-groupe fermé non-trivial de $H$ car son groupe de caractère est $K/K(A)$. Ainsi $g$ agit trivialement sur les fonctions homogènes et donc sur les fonctions régulières. On en déduit que $g$ agit trivialement sur $X$.
 \end{proof}
 
 \section{Théorie des invariants}
 \subsection{L'algèbre des invariants}
 
-Soit $G$ un groupe algébrique et $X$ une $G$-variété affine. $k[X]$ est un $G$-module rationnel pour l'action naturelle de $G$ sur les fonctions régulières. on définit la sous-algèbre des invariants $k[X]^G:=\lbrace f\in k[X]\mid g.f=f,\, \forall g\in G\rbrace$. C'est par définition la sous-algèbre des fonctions constantes sur les orbites de l'action de $G$ sur $X$.\\
-Une question naturelle est de se demander si cette algèbre est de type fini. Ce n'est pas le cas en général. En effet, dans la perspective de répondre au 14e problème de Hilbert, Nagata exhiba en 1959 une algèbre d'invariants pour l'action d'un groupe algèbrique qui n'est pas de type fini. Avec des hypothèses sur $G$, on peut cependant montrer que c'est le cas, c'est l'objectif de cette partie.\\
+Soit $G$ un groupe algébrique et $X$ une $G$-variété affine. $k[X]$ est un $G$-module rationnel pour l'action naturelle de $G$ sur les fonctions régulières. On définit la sous-algèbre des invariants $k[X]^G:=\lbrace f\in k[X]\mid g.f=f,\, \forall g\in G\rbrace$. C'est par définition la sous-algèbre des fonctions constantes sur les orbites de l'action de $G$ sur $X$.
+
+Une question naturelle est de se demander si cette algèbre est de type fini sur $k$, c'est le $14$e des $23$ problèmes que Hilbert pose en $1900$ à la communauté mathématique. En $1959$, Nagata exhibe une algèbre d'invariants pour l'action d'un groupe algébrique qui n'est pas de type fini sur $k$, répondant ainsi au problème. Avec des hypothèses sur $G$, on peut cependant montrer que c'est le cas, c'est l'objectif de cette partie.\\
 Supposons $G$ réductif. Le $G$-module $k[X]$ est alors semi-simple, en particulier, $k[X]^G$ admet un supplémentaire $G$-stable que l'on note $k[X]_G$. On définit l'opérateur de Reynolds $R_{k[X]}$ comme la projection sur $k[X]^G$ associée à cette décomposition. Voici quelques propriétés de $R_{k[X]}$:
 
 
