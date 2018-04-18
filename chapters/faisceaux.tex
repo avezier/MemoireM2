@@ -155,7 +155,7 @@ Soit $M=\Gamma(X,\Ff)$, et $M\rightarrow I^.$ une résolution injective de $M$. 
 On introduit la notion de profondeur d'un $A$-module $M$ relative à un idéal $\mathfrak{a}\subset A$ et on en donne une interprétation en termes de cohomologie à support. On en déduit un corollaire qui donne une réciproque à \ref{extregularnormal} et nous sera utile par la suite.
 
 \begin{defn}[suite $M$-régulière]
-Soit $A$ un anneau, $M$ un $A$-module. Une suite $x_1,...,x_r$ d'éléments de $A$ est $M$-régulière si $x_1$ n'est pas diviseur de zéro dans $M$, et pour tout $i=2,...,r$, $x_i$ n'est pas diviseur de zéro dans $M/(x_1,...,x_r)M$.
+Soit $A$ un anneau, $M$ un $A$-module. Une suite $x_1,...,x_r$ d'éléments de $A$ est $M$-régulière si $x_1$ est $M$-régulier, et pour tout $i=2,...,r$, $x_i$ est $M/(x_1,...,x_r)M$-régulier.
 \end{defn}
 
 \begin{defn}[Profondeur]
@@ -172,7 +172,7 @@ Soit $A$ un anneau noetherien, $\mathfrak{a}$ un idéal, et $M$ un $A$-module de
 \end{enumerate}
 \end{prop}
 \begin{proof}
-Montrons cette équivalence par récurrence. Le cas $n=0$ est trivial, mais nous aurons besoin du cas $n=1$ dans la récurrence, on le démontre maintenant. Supposons $n=1$, et $\depth_\mathfrak{a} M\geq 1$. Alors il existe $x\in\mathfrak{a}$ tel que $x$ n'est pas diviseur de zéro dans $M$. Soit $m\in \Gamma_ \mathfrak{a}(M)$, ainsi il existe $k\geq 0$ tel que $\mathfrak{a}^k m=0$. En particulier, $x^nm=0$, ce qui prouve $m=0$. D'où $H^0_\mathfrak{a}(M)=0$. Réciproquement, supposons $H^0_\mathfrak{a}(M)=0$. Cela signifie que pour tout $m\in M$ et $k\geq 0$, il existe $x\in \mathfrak{a}^k$ tel que $mx\neq 0$. On en déduit que $\mathfrak{a}$ n'est inclus dans aucun idéal premier associé à $M$ (voir \ref{}), d'où $\mathfrak{a}\nsubseteq \cup_{p\in \asso M}p$ par le lemme d'évitement \ref{}. Cette dernière union étant d'après \ref{} l'ensemble des éléments de $A$ qui annule un élément de $M$. On peut ainsi trouver un $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$, c'est à dire $\depth_\mathfrak{a}M\geq 1$.
+Montrons cette équivalence par récurrence. Le cas $n=0$ est trivial, mais nous aurons besoin du cas $n=1$ dans la récurrence, on le démontre maintenant. Supposons $n=1$, et $\depth_\mathfrak{a} M\geq 1$. Alors il existe $x\in\mathfrak{a}$ tel que $x$ n'est pas diviseur de zéro dans $M$. Soit $m\in \Gamma_ \mathfrak{a}(M)$, ainsi il existe $k\geq 0$ tel que $\mathfrak{a}^k m=0$. En particulier, $x^nm=0$, ce qui prouve $m=0$. D'où $H^0_\mathfrak{a}(M)=0$. Réciproquement, supposons $H^0_\mathfrak{a}(M)=0$. Cela signifie que pour tout $m\in M$ et $k\geq 0$, il existe $x\in \mathfrak{a}^k$ tel que $mx\neq 0$. Ainsi, d'après \ref{AssociatedPrimesProp2} on peut trouver un $x\in \mathfrak{a}$ qui n'est pas diviseur de zéro pour $M$, c'est à dire $\depth_\mathfrak{a}M\geq 1$.
 
 Supposons maintenant le résultat acquis pour $n\geq 1$. Pour le sens direct on suppose $\depth_\mathfrak{a} M\geq n+1$. Compte tenu de l'hypothèse de récurrence il reste à montrer que $H^n_\mathfrak{a}(M)=0$. Choisissons $x\in \mathfrak{a}$ égal au premier terme d'une suite $M$-régulière de longueur $n+1$, ce qui est possible par hypothèse. Alors $x$ n'est pas diviseur de zéro dans $M$ et $\depth_\mathfrak{a} M/xM \geq n$. On considère alors la suite exacte de $A$-modules:
 $$0\rightarrow M \xrightarrow{x.} M\rightarrow M/xM\rightarrow 0$$

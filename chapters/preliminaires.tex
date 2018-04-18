@@ -4,14 +4,81 @@
 
 On collecte dans cette partie des définitions et résultats d'algèbre commutative utilisés dans la suite. Soit $A$ un anneau, $\mathfrak{p}$ un idéal premier de $A$, et $f\in A$ un élément. On note $A_\mathfrak{p}$ la localisation de $A$ en la partie multiplicative $A\setminus \mathfrak{p}$, et $A_f$ la localisation de $A$ en la partie multiplicative $\lbrace 1, f, f^2, ....\rbrace$.
 
+\subsection{Décomposition primaire des modules noetheriens}
+
+On fixe dans cette partie un $A$-module non-nul $M$ de type fini avec $A$ noetherien. On pense par exemple à $A/\mathfrak{a}$, où $\mathfrak{a}$ est un idéal de $A$.
+
+\begin{defn}[Idéal premier associé]
+Un idéal premier $\mathfrak{p}\subset A$ est dit associé à $M$ si c'est l'annulateur $\ann(m)$ d'un élément $m\in M$. On note $\assp_AM$ l'ensemble des idéaux premiers associés à $M$. Les éléments minimaux de $\assp_AM$ sont appelés premiers isolés, les autres sont appelés premiers immergés.
+\end{defn}
+
+\begin{ex}
+$A=k[x,y], M=A/(xy),\mathfrak{p}=(x)=\ann(\bar{y})=((xy):y)$.
+\end{ex}
+
+\begin{defn}[Élément $M$-régulier]
+Un élément $x\in A$ est $M$-régulier si la multiplication par $x$ est un endomorphisme injectif de $M$, c'est à dire que $x$ n'est pas diviseur de zéro d'un élément de $M$. Si $x$ n'est pas régulier on dit que c'est un diviseur de zéro de $M$.
+\end{defn}
+
+\begin{defn}[Support d'un module]
+Le support de $M$ est l'ensemble des idéaux premiers tels que $M_p\neq \lbrace 0\rbrace$.
+\end{defn}
+
+\begin{prop}\label{AssociatedPrimesProp1}
+\begin{enumerate}
+\item $\assp_A M$ est non-vide et fini.
+\item $\assp_A M\subset \supp M$ et leurs éléments minimaux coïncident.
+\item L'union des idéaux premiers associés à $M$ est l'ensemble des diviseurs de zéro de $M$.
+\end{enumerate}
+\end{prop}
+
+\begin{prop}
+Soient $\mathfrak{a}_1,...\mathfrak{a}_n, \mathfrak{b}$ des idéaux d'un anneau $B$, avec $\mathfrak{b}\subset \cup_{1\leq i\leq n}\mathfrak{a}_i$. Si au plus deux des $\mathfrak{a}_i$ ne sont pas premiers, alors $\mathfrak{b}$ est contenu dans au moins un idéal $\mathfrak{a}_i$, $1\leq i\leq n$.
+\end{prop}
+
+\begin{cor}\label{AssociatedPrimesProp2}
+Tout idéal constitué de diviseurs de zéros de $M$ annule au moins un élément de $M$.
+\end{cor}
+
+\begin{defn}[sous-module primaire]
+Un sous-module $N\subset M$ est dit primaire si $\assp_A(M/N)$ est réduit à un seul idéal premier $\mathfrak{p}$. On dit alors qu'il est $\mathfrak{p}$-primaire.
+\end{defn}
+
+\begin{prop}
+Les assertions suivantes sont équivalentes
+\begin{enumerate}
+\item $N\subset M$ est $\mathfrak{p}$-primaire.
+\item $\mathfrak{p}$ est minimal sur $\ann(M/N)$ et tout élément en dehors de $\mathfrak{p}$ est $M/N$-régulier.
+\item Une puissance de $\mathfrak{p}$ annule $M/N$ et tout élément en dehors de $\mathfrak{p}$ est $M/N$-régulier.
+\end{enumerate}
+\end{prop}
+
+\begin{rem}
+Ainsi pour un sous-module $\mathfrak{p}$-primaire $N$ de $M$, on a $\mathfrak{p}\subset \sqrt{\ann(M/N)}$. Or on aussi $\ann(M/N)\subset \mathfrak{p}$. D'où $\mathfrak{p}=\sqrt{\ann(M/N)}$. On a ainsi pour tout $a\in A$
+$$a\text{ est diviseur de zéro de } M/N \implies a\in\sqrt{\ann(M/N)}$$
+Réciproquement, si cette assertion est vérifiée pour un sous-module $N$, alors $\sqrt{\ann(M/N)}$ est l'ensemble des diviseurs de zéro de $M/N$, et on a $\assp_A(M/N)=\lbrace \mathfrak{p}:=\sqrt{\ann(M/N)}\rbrace$, ce qui montre que $N$ est $\mathfrak{p}$-primaire. Avec $M=A$ et $N=\mathfrak{a}$ un idéal de $A$ on retrouve la définition plus classique
+$$\mathfrak{a}\text{ est }\mathfrak{p}\text{-primaire} \iff (x\in A,\, y\in A\setminus\mathfrak{a},\,xy\in\mathfrak{a}\implies x\in \sqrt{\mathfrak{a}})=\mathfrak{p}$$
+\end{rem}
+
+Un sous-module $N$ est dit irréductible si on ne peut pas l'écrire comme une intersections de sous-modules qui le contiennent strictement. Une décomposition irréductible de $N$ est une écriture $N=N_1\cap...\cap N_r$ avec $N_i$ irréductible pour tout $i$. Cette écriture n'est pas unique en général, même si elle est réduite, c'est à dire qu'on ne peut ôter aucun facteur. 
+
+\begin{thm}
+\begin{enumerate}
+\item Un sous-module irréductible est primaire.
+\item Tout sous-module admet une décomposition irréductible.
+\item Soit $N$ un sous-module de $M$, et $N=N_1\cap...\cap N_r$ une décomposition irréductible réduite. Alors $\lbrace N_1,...,N_r\rbrace\rightarrow \assp M/N, N_i\mapsto \assp(M/N_i)$ définit une application surjective.
+\item Dans l'assertion précédente, si la décomposition est minimale en nombre de termes, l'application est une bijection.
+\end{enumerate}
+\end{thm}
+
 \subsection{Extensions entières d'anneaux}
 
 \begin{defn}[Anneau intègralement clos]\label{normalring}
-Un anneau $A$ est intégralement clos si il est intègre et égal à sa clôture intégrale. 
+Un anneau intègre $A$ est intégralement clos si il est égal à sa clôture intégrale. 
 \end{defn}
 
 \begin{rem}
-Il existe une notion plus générale qu'il est utile de mentionner pour la consistance avec la terminologie de variété normale que nous verrons plus loin. Pour un anneau quelconque $A$, on dit que $A$ est normal si tout localisé de $A$ en idéal premier est un anneau intègre et intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13). Mentionnons que nous ne rencontrerons pas dans ce mémoire d'anneaux normaux non-intègres, donc la définition ci-dessus sera suffisante.
+Il existe une notion plus générale qu'il est utile de mentionner pour la consistance avec la terminologie de variété normale que nous verrons plus loin. Pour un anneau quelconque $A$, on dit que $A$ est normal si tout localisé de $A$ en idéal premier est un anneau intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13). Mentionnons que nous ne rencontrerons pas dans ce mémoire d'anneaux normaux non-intègres, donc la définition ci-dessus sera suffisante.
 \end{rem}
 
 
@@ -79,6 +146,54 @@ Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de
 \end{proof}
 
 \subsection{Algèbres graduées}
+
+On fixe dans cette partie un anneau $R$ et un monoïde abélien $K$. A partir de $K$ on peut construire le groupe des différences $K^{\pm}$ comme l'ensemble des paires $(w_1,w_2)\in K^2$ modulo la relation d'équivalence $(w_1,w_2)\sim (z_1,z_2)\iff w_1+z_2=w_2+z_1$. 
+
+\begin{defn}[Algèbre graduée, élément homogène]
+Une $R$-algèbre $A$ est $K$-graduée si on a une décomposition en somme directe de sous $R$-modules 
+$$A=\bigoplus_{w\in K}A_w,\text{ où pour tout } w,w'\in K\text{, on a }A_wA_{w'}\subset A_{w+w'}$$
+Un élément $f\in A$ est $K$-homogène de degré $w$ si $f\in A_w$.
+
+Un morphisme d'une algèbre $K$-graduée $A$ vers une algèbre $K'$-graduée $A'$ est une paire $(\psi,\widetilde{\psi})$, où $\psi:A\rightarrow A'$ est un morphisme de $R$-algèbres, $\widetilde{\psi}:K\rightarrow K'$ est un morphisme de monoïdes, et
+$$\psi(A_w)\subset A'_{\widetilde{\psi}(w)}, \forall w\in K$$  
+\end{defn}
+
+\begin{defn}[Module gradué]
+Soit $A$ une $R$-algèbre $K$-graduée, et $M$ un $A$-module. $M$ est $K$-gradué si on a une décomposition en somme directe de sous-groupes
+$$M=\bigoplus_{w\in K}M_w,\text{ où pour tout } w,w'\in K\text{, on a }R_wM_{w'}\subset M_{w+w'}$$
+\end{defn}
+
+\begin{defn}[Idéal homogène]
+Soit $A$ une $R$-algèbre $K$-graduée. Un idéal $\mathfrak{a}$ de $A$ est homogène si c'est un sous-module gradué de $A$.
+\end{defn}
+
+\begin{prop}
+Un idéal $\mathfrak{a}$ de $A$ est homogène si et seulement si il est engendré par des éléments homogènes.
+\end{prop}
+
+\begin{rem}
+Soit $A$ une $R$-algèbre $K$-graduée et $\mathfrak{a}$ un idéal homogène. Alors, $A/\mathfrak{a}$ est une $R$-algèbre $K$-graduée, et la projection est un morphisme de $K$-algèbres graduées, le morphisme $K\rightarrow K$ associé étant l'identité.
+\end{rem}
+
+\begin{defn}[Monoïde de poids]
+Soit $A$ une $K$-algèbre graduée. Le monoïde de poids de $A$ est le sous-monoïde $S(A)\subset K$ engendré par les éléments $w\in K$ tels que $A_w\neq \lbrace 0 \rbrace$. Le groupe de poids de $A$ est le groupe sous-groupe $K(A)\subset K^{\pm}$ engendré par $S(A)$.
+\end{defn}
+
+\begin{rem}
+Si $A$ est intègre, alors $S(A)=\lbrace w\in K\mid A_w\neq \lbrace 0\rbrace$.
+\end{rem}
+
+\begin{prop}
+Soit $A$ une $R$-algèbre $\ZZ^r$-graduée telle que $ff'\neq 0$ pour tout $f,f'\in A$ non-nuls. Alors
+\begin{enumerate}
+\item $A$ est intègre
+\item Si $gg'$ est homogène pour deux éléments non-nuls $g,g'\in A$. Alors $g$ et $g'$ sont homogènes.
+\item Tout élément inversible est homogène.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+On se donne un ordre lexicographique sur $\ZZ^r$, et deux éléments $g,g'\in A$. On écrit les décompositions en éléments homogènes $g=\sum f_u$ et $g'=\sum f'_u$. Alors la composante maximale (resp.minimale) de $gg'$ est $f_wf'_{w'}\neq 0$ où $f_w$ et $f'_{w'}$ sont les composantes maximales (resp.minimales) de $g$ (resp. $g'$). Cela prouve les deux premières assertions. Pour la troisième, on observe que $1\in A$ est nécessairement homogène de degré zéro.
+\end{proof}
 
 
 
@@ -181,16 +296,19 @@ Soit $X$ un schéma noetherien. Alors
 \end{enumerate}
 \end{prop}
 
-Par le lemme de Zorn, on montre que l'ensemble des fermés irréductibles d'un schéma $X$ admet des éléments maximaux, appelés composantes irréductibles. Si $X$ est noetherien, ce nombre est fini et $X$ s'écrit donc de manière unique comme réunion de ses composantes irréductibles. Pour tout point $x\in X$, les composantes irréductibles de $\spec \Oo_{X,x}$ correspondent bijectivement aux composantes irréductibles de $X$ passant par $x$.
+Par le lemme de Zorn, on montre que l'ensemble des fermés irréductibles d'un schéma $X$ admet des éléments maximaux, appelés composantes irréductibles. Si $X$ est noetherien, ce nombre est fini. En effet, comme $X$ est quasi-compact, on peut le supposer affine, et le résultat découle de \ref{AssociatedPrimesProp1} car les composantes irréductibles correspondent aux idéaux premiers associés au $\Oo(X)$-module $\Oo(X)$ qui sont minimaux (c'est à dire ses idéaux premiers minimaux au sens large). Ainsi, $X$ s'écrit de manière unique comme réunion de ses composantes irréductibles. Pour tout point $x\in X$, les composantes irréductibles de $\spec \Oo_{X,x}$ correspondent bijectivement aux composantes irréductibles de $X$ passant par $x$.
 
 \begin{prop}
 Un schéma $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal.
 \begin{enumerate}
-\item $\Vv_X(\mathfrak{a})$ est irréductible si et seulement si $\sqrt{\mathfrak{a}}$ est premier
-\item Soit $(\mathfrak{p}_i)$ les premiers minimaux de $A$. Alors $(\Vv_X(\mathfrak{p}_i))$ sont les composantes irréductibles de $X$.
+\item $\Vv_X(\mathfrak{a})$ est irréductible si et seulement si $\sqrt{\mathfrak{a}}$ est premier.
+\item Soit $(\mathfrak{p}_i)$ les premiers minimaux de $A$. Alors $(\Vv_X(\mathfrak{p}_i))_i$ sont les composantes irréductibles de $X$.
 \item $X$ est irréductible si et seulement si $A$ admet un unique idéal premier minimal. Dans ce cas, cet idéal est nécessairement $(0)$, et $A$ est intègre.
 \end{enumerate}
 \end{prop}
+\begin{proof}
+On donne la preuve dans le cas où $X$ est noetherien. Dans ce cas, $\Vv_X(\mathfrak{a})$ est irréductible si et seulement si $\mathfrak{a}$ est irréductible, et dans ce cas, il est primaire, ce qui montre que $\sqrt{\mathfrak{a}}$ est premier. Réciproquement, si $\sqrt{\mathfrak{a}}$ est premier il est irréductible. Alors $\Vv_X(\mathfrak{a})=\Vv_X(\sqrt{\mathfrak{a}})$ est irréductible.
+\end{proof}
 
 \begin{defn}[Schéma intègre]
 Un schéma est intègre si il est réduit et irréductible.
