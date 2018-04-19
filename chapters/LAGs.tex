@@ -11,7 +11,7 @@ Un groupe algébrique est une variété affine $G$ munie d'une structure de grou
 $$\mu:G\times G\rightarrow G$$
 et l'inverse
 $$\iota:G\rightarrow G$$
-soient des morphismes de variétés.
+soient des morphismes de variétés. Les morphismes de groupes algébriques sont les morphisme de groupes  qui sont également des morphismes de variétés.
 \end{defn}
 
 \begin{ex}
@@ -27,14 +27,14 @@ Pour un groupe algébrique $G$, les composantes irréductibles et les composante
 \subsection{G-variétés, représentations}
 
 \begin{defn}[$G$-variété]
-Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique $X$ sur laquelle $G$ agit algébriquement. C'est à dire que l'action de $G$ est définie par un morphisme de variétés $a:G\times X\rightarrow X$. Un morphisme de $G$-variétés est un morphisme qui commute à l'action de $G$.
+Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique $X$ sur laquelle $G$ agit algébriquement. C'est à dire que l'action de $G$ est définie par un morphisme de variétés $a:G\times X\rightarrow X$. Un morphisme de $G$-variétés est un morphisme qui commute à l'action de $G$. 
 \end{defn}
 
 \begin{defn}[Orbite, stabilisateur]
 Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $x\in X$. L'orbite de $x$ est l'image de l'application d'orbite $a_x=(.,x):G\rightarrow X$, on le note $G.x$. Le stabilisateur est l'ensemble des $g\in G$ tels que $g.x=x$, on le note $Gx$. 
 \end{defn}
 
-Le stabilisateur d'un point $x$ de $G$ est un sous-groupe fermé de $G$. En effet, c'est la fibre de $x$ pour l'application d'orbite $a_x$. 
+Le stabilisateur d'un point $x$ de $G$ est un sous-groupe fermé de $G$. En effet, c'est la fibre de $x$ pour l'application d'orbite $a_x$. De plus pour tout $g.x$ dans l'image de $a_x$, la fibre de $g.x$ est $g.G_x$, donc toutes les fibres de $a_x$ sont isomorphes.
 
 \begin{prop}
 Soit $G$ un groupe algébrique, $X$ une $G$-variété et $x\in X$.
@@ -56,6 +56,14 @@ On suppose d'abord $G$ connexe.
 Enfin, $G$ n'est pas connexe, on écrit $G=\cup_{i=1}^{n}g_iG^\circ .x=\cup_{i=1}^{n}G^\circ g_i.x$ car $G^o$ est normal. D'où $\overline{G.x}=\cup_{i=1}^{n}\overline{g_iG^\circ .x}$. Les $\overline{g_iG^\circ}$ sont égales où disjointes, c'est donc la décomposition en composantes irréductibles. On construit un ouvert de $\overline{G.x}$ inclus dans $G.x$ en posant $U=G^\circ .x\setminus \cup_{i=2}^{n}\overline{g_iG^\circ .x}$. On a $\dim G^o-\dim (G^o) _x=\dim G -\dim G_x$ car $(G_x)^o \subset(G^o)_x \subset G_x$, d'où $\dim G_x=\dim (G^o) _x$. Or chaque composante de $G.x$ est l'adhérence d'un orbite pour $G^o$, d'où 2) d'après le cas connexe. On a $\overline{G.x}\setminus G.x=\cup_{i=1}^{n}\overline{g_iG^o .x}\setminus g_iG^o .x=\cup_{i=1}^{n}g_i(\overline{G^\circ .x}\setminus G^o .x)$ qui est une union finie de fermés de dimension inférieure à $\overline{G .x}$ ce qui prouve 3). On utilise le même argument pour prouver 4) dans le cas général.
 \end{proof}
 
+\begin{prop}
+Soit $f:G\rightarrow H$ un morphisme de groupes algébriques. Alors $\Im f$ est fermé, et $\dim G=\dim\Ker f+\dim\Im f$.
+\end{prop}
+\begin{proof}
+$G$ agit sur $H$ par $g.h=f(g).h$. Les orbites sont les classes à droite de $f(G)$, et elles sont toutes isomorphes. Comme il existe un orbite fermé, on obtient que $\Im f$ est fermé. Pour $h\neq e_H$, le stabilisateur $G_h$ est $\Ker f$, d'où $\dim f(G)=\dim G-\ker f$.
+\end{proof}
+
+
 \begin{defn}[$G$-module, simple, semi-simple]
 Une représentation de $G$, ou $G$-module (rationnel) est un couple $(V, \rho)$ où $V$ est un $k$-espace vectoriel de dimension finie et $\rho$ un morphisme de groupes algébriques de $G$ dans $GL(V)$. On étend cette définition au cas où $V$ est de dimension infinie en demandant que $V$ soit réunion de $G$-modules de dimension finie.
 
@@ -76,14 +84,14 @@ Finalement $\Oo(X)=\cup_{f\in \Oo(X)}V(f)$ est un G-module.
 Soit $G$ un groupe algébrique et $X$ une $G$ variété affine. $X$ est isomorphe en tant que $G$-variété à une sous $G$-variété fermée d'un $G$-module de dimension finie.
 \end{thm}
 \begin{proof}
-D'après la proposition précédente on voit que $\Oo(X)=k[f_1,...,f_n]$ est engendré comme $k$-algèbre par un sous $G$-module $V$ de $\Oo(X)$ de dimension finie, en prenant par exemple la somme des $V(f_i)$ pour $1\leq i\leq n$. On a une immersion fermée $\phi:X\rightarrow V^*, x\mapsto ev_x$. Pour montrer cela, il suffit de voir que $V$ est dans l'image de $\phi^\sharp$. En effet, on a $V^{**}\subset \Oo(V^*)$, et pour tout $ev_f\in V^{**}$, on a $\phi^\sharp(ev_f)=ev_f\circ\phi=f$. Enfin, en munissant $V^*$ de la représentation duale, on a pour tout $g\in G, x\in X,f\in V$, $\phi(g.x)(f)=ev_{g.x}(f)=ev_x\circ g^{-1}.f=(g^{-1})^t(ev_x)(f)=(g.\phi(x))(f)$, ainsi $\phi$ est un morphisme de $G$-variétés.
+D'après la proposition précédente on voit que $\Oo(X)=k[f_1,...,f_n]$ est engendré comme $k$-algèbre par un sous $G$-module $V$ de $\Oo(X)$ de dimension finie, en prenant par exemple la somme des $V(f_i)$ pour $1\leq i\leq n$. On introduit le morphisme $\phi:X\rightarrow V^*, x\mapsto ev_x$, on va montrer que c'est une immersion fermée. Il suffit de voir que $V$ est dans l'image de $\phi^\sharp$. En effet, on a $V^{**}\subset \Oo(V^*)$, et pour tout $ev_f\in V^{**}$, on a $\phi^\sharp(ev_f)=ev_f\circ\phi=f$. Enfin, en munissant $V^*$ de la représentation duale, on a pour tout $g\in G, x\in X,f\in V$, $\phi(g.x)(f)=ev_{g.x}(f)=ev_x( g^{-1}.f)=(g^{-1})^t(ev_x)(f)=(g.\phi(x))(f)$, ainsi $\phi$ est un morphisme de $G$-variétés.
 \end{proof}
 
 \begin{cor}
 Tout groupe algébrique est linéaire.
 \end{cor}
 \begin{proof}
-On munit $G$ de son action sur lui même par multiplication à gauche. D'après le théorème précédent on peut supposer $G\subset V$, où $(V,\rho)$ est un $G$-module avec $\rho(g).h=g.h$ pour tout $g,h\in G$. Montrons que $\rho$ est une immersion fermée. On a $\rho^\sharp(k[\gln(V)])=k[\lbrace g\in G\mapsto l(\rho(g).v)\mid l\in V^*,v\in V\rbrace]$, donc en prenant $v=e_G$, on voit que cet ensemble coïncident avec la restriction de $\Oo(X)$ à $G$. Cela montre que $\rho^\sharp$ est surjectif car $G$ est fermé dans $V$.
+On munit $G$ de son action sur lui même par multiplication à gauche. D'après le théorème précédent on peut supposer $G\subset V$, où $(V,\rho)$ est un $G$-module avec $\rho(g).h=g.h$ pour tout $g,h\in G$. Montrons que $\rho$ est une immersion fermée. On a $\rho^\sharp(k[\gln(V)])=k[\lbrace g\in G\mapsto l(\rho(g).v)\mid l\in V^*,v\in V\rbrace]$, donc en prenant $v=e_G$, on voit que cet algèbre coïncident avec la restriction des fonctions de $\Oo(V)$ à $G$. Cela montre que $\rho^\sharp$ est surjectif car $G$ est fermé dans $V$.
 \end{proof}
 
 \begin{defn}[Groupe réductif]
@@ -96,12 +104,21 @@ Les groupes finis et les groupe diagonalisables sont linéairement réductifs.
 
 \subsection{Groupes quotients}
 \begin{thm}[Chevalley]
-Soit $G$ un groupe algébrique et $H\leq G$ fermé. \\Alors il existe un $G$-module $V$ de dimension finie et une droite $L\subset V$ telle que $H=Stab_G(L):=\lbrace g\in G\mid g.v\in L,\forall v\in L\rbrace$.
+Soit $G$ un groupe algébrique et $H\subset G$ un sous-groupe fermé. Alors il existe un $G$-module $V$ de dimension finie et une droite $L\subset V$ telle que $H=Stab_G(L):=\lbrace g\in G\mid g.v\in L,\forall v\in L\rbrace$.
 \end{thm}
+\begin{proof}
+Soit $\mathfrak{a}:=\Ii_G(H)$, on a  $\mathfrak{a}=\lbrace g\in G\mid g.\mathfrak{a}=\mathfrak{a}\rbrace$. En effet, on a les équivalences
+$$g.\mathfrak{a}=\mathfrak{a}\iff Hg=H\iff g\in H$$
+L'idéal $\mathfrak{a}$ est de type fini, donc engendré par un sous $k$-espace vectoriel $E$ de dimension finie $H$-stable. Alors $H=\lbrace g\in G\mid g.E=E\rbrace$ car si $g$ stabilise $E$, il stabilise aussi l'idéal engendré par $E$, c'est à dire $\mathfrak{a}$. On choisit maintenant un $G$-module $F\subset \Oo(G)$ tel que $E\subset F$. Alors $G$ agit sur les sous-espaces vectoriels de $F$, et c'est en particulier le stabilisateur de $E$. Soit $m=\dim_k E$, alors $\wedge^mE$ est une droite de $\wedge^mF$, et ce dernier est naturellement un $G$-module. Or on a $\stab_G(E)=\stab_G(\wedge^mE)$. Une inclusion est facile, pour l'autre on choisit une base $(v_1,...,v_m)$ de $E$ que l'on complète en une base $(v_1,...,v_n)$ de $F$. Alors $(v_1\wedge...\wedge v_m)$ est une base de $\wedge^mE$, et on remarque que $E=\lbrace v\in F\mid v\wedge v_1\wedge...\wedge v_m=0\rbrace$.
+\end{proof}
+
 
 \begin{thm}[Chevalley]
-Soit $G$ un groupe algébrique et $H\lhd G$ fermé. \\Alors il existe un $G$-module $(V, \rho)$ de dimension finie tel que $H=\Ker{\rho}$.
+Soit $G$ un groupe algébrique et $H\lhd G$ n sous-groupe normal fermé. Alors il existe un $G$-module $(V, \rho)$ de dimension finie tel que $H=\Ker{\rho}$.
 \end{thm}
+\begin{proof}
+Soit $V,L$ comme dans le théorème précédent, alors $H$ agit sur $L$ via un caractère $\chi_1$, et on note $V_{\chi_1}:=\lbrace v\in V\mid h.v=\chi_1(h)v,\, \forall h\in H\rbrace$ le sous-espace propre associé à $\chi_1$. On note $V_{\chi_1},...,V_{\chi_n}$ tous les sous-espaces propres de $V$, ils sont en somme directe et cette somme est $G$-stable car $H$ est normal. On peut donc supposer $V=\bigoplus_{i=1}^nV_{\chi_i}$, et comme $L\subset V_{\chi_1}$, on a $H=\lbrace g\in G\mid g.V_{\chi_i}=\chi_i(g)V_{\chi_i}\rbrace$. Maintenant, $G$ agit linéairement sur $\End(V)$ par conjugaison, et en particulier $G$ agit sur $\prod_{i=1}^n\End V_{\chi_i}$. On peut voir $H$ est le noyau de cette action.
+\end{proof}
 
 Le théorème suivant est le résultat principal de cette section. Il prouve l'existence des groupes quotients dans la catégorie des groupes algébriques. Le groupe quotient est alors unique à isomorphisme près, c'est une conséquence formelle de la propriété universelle du quotient.
 
