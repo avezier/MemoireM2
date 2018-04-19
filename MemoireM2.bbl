@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{Eisenbud}
+D.Eisenbud.
+\newblock {\em Commutative algebra, with a view towards algebraic geometry}.
+\newblock Springer, 2004.
+
 \bibitem{MumfordRedBook}
 D.Mumford.
 \newblock {\em The red book of varieties and schemes}.

@@ -4,12 +4,13 @@
 
 On collecte dans cette partie des définitions et résultats d'algèbre commutative utilisés dans la suite. Soit $A$ un anneau, $\mathfrak{p}$ un idéal premier de $A$, et $f\in A$ un élément. On note $A_\mathfrak{p}$ la localisation de $A$ en la partie multiplicative $A\setminus \mathfrak{p}$, et $A_f$ la localisation de $A$ en la partie multiplicative $\lbrace 1, f, f^2, ....\rbrace$.
 
+
 \subsection{Décomposition primaire des modules noetheriens}
 
 On fixe dans cette partie un $A$-module non-nul $M$ de type fini avec $A$ noetherien. On pense par exemple à $A/\mathfrak{a}$, où $\mathfrak{a}$ est un idéal de $A$.
 
 \begin{defn}[Idéal premier associé]
-Un idéal premier $\mathfrak{p}\subset A$ est dit associé à $M$ si c'est l'annulateur $\ann(m)$ d'un élément $m\in M$. On note $\assp_AM$ l'ensemble des idéaux premiers associés à $M$. Les éléments minimaux de $\assp_AM$ sont appelés premiers isolés, les autres sont appelés premiers immergés.
+Un idéal premier $\mathfrak{p}\subset A$ est dit associé à $M$ si c'est l'annulateur $\ann(m)$ d'un élément $m\in M$. Si $M$ est de la forme $A/\mathfrak{a}$, on parle d'idéal premier associé à $\mathfrak{a}$. On note $\assp_AM$ l'ensemble des idéaux premiers associés à $M$. Les éléments minimaux de $\assp_AM$ sont appelés premiers isolés, les autres sont appelés premiers immergés.
 \end{defn}
 
 \begin{ex}
@@ -73,20 +74,34 @@ Un sous-module $N$ est dit irréductible si on ne peut pas l'écrire comme une i
 
 \subsection{Extensions entières d'anneaux}
 
-\begin{defn}[Anneau intègralement clos]\label{normalring}
-Un anneau intègre $A$ est intégralement clos si il est égal à sa clôture intégrale. 
-\end{defn}
+Soit $f:A\rightarrow B$ une extension d'anneau. Un élément $b\in B$ est dit entier sur $A$ si il existe un polynôme irréductible unitaire $P$ de $A[x]$ tel que $P^f(b)=0$, où $P^f$ désigne l'image de $P$ par l'application canonique $f:A[x]\rightarrow B[x]$. L'extension $f:A\rightarrow B$ est dite entière si $B$ est constitué d'éléments entiers sur $A$.
 
-\begin{rem}
-Il existe une notion plus générale qu'il est utile de mentionner pour la consistance avec la terminologie de variété normale que nous verrons plus loin. Pour un anneau quelconque $A$, on dit que $A$ est normal si tout localisé de $A$ en idéal premier est un anneau intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13). Mentionnons que nous ne rencontrerons pas dans ce mémoire d'anneaux normaux non-intègres, donc la définition ci-dessus sera suffisante.
-\end{rem}
+\begin{prop}
+Les assertions suivantes sont équivalentes
+\begin{enumerate}
+\item $b\in B$ est entier sur $A$.
+\item $A[b]$ est un $A$-module de type fini.
+\item Il existe un $A[b]$-module $M$ qui est fidèle et de type fini en tant que $A$-module.
+\end{enumerate}
+\end{prop}
+
+Ainsi, l'ensemble des éléments de $B$ entiers sur $A$ forment un sous-anneau de $B$, c'est la clôture intégrale de $A$ dans $B$, notée $\overline{A_B}$. Si $\overline{A_B}=B$, on dit que $A$ est intégralement clos dans $B$. Dans le cas où $A$ est intègre et $B=\fract A$, on dit tout simplement intégralement clos. Si $A$ n'est pas intègre, remarquons qu'il existe une notion plus générale qu'il est utile de mentionner pour la consistance avec la terminologie de variété normale que nous verrons plus loin. Pour un anneau quelconque $A$, on dit que $A$ est normal si tout localisé de $A$ en un idéal premier est un anneau intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13). Mentionnons que nous ne rencontrerons pas dans ce mémoire d'anneaux normaux non-intègres, donc la définition ci-dessus sera suffisante.
+
+\begin{cor}
+Soit $B$ une $A$-algèbre de type fini. Alors $B$ est entière sur $A$ si et seulement si elle est finie.
+\end{cor}
+
+\begin{defn}[Hauteur d'un idéal premier]
+La hauteur d'un idéal premier $\mathfrak{p}\subset A$, notée $\haut \mathfrak{p}$, est la borne supérieure des longueurs de chaînes d'idéaux premiers
+$$\mathfrak{p}_0=\mathfrak{p}\varsupsetneq \mathfrak{p}_1 \varsupsetneq...\varsupsetneq  \mathfrak{p}_r$$
+\end{defn}
 
 
 \begin{thm}\label{factonormal}
 Soit $A$ un anneau intègre noetherien intégralement clos. Alors
 \begin{enumerate}
-\item Tous les premiers associés d'un idéal principal non-nul sont de hauteur 1.
-\item $A=\bigcap_{\mathfrak{p}\in \spec A, \haut \mathfrak{p}=1} A_\mathfrak{p}$.
+\item Tous les idéaux premiers associés d'un idéal principal non-nul sont de hauteur 1.
+\item $A$ est l'intersection des localisés $A_\mathfrak{p}$, où $\mathfrak{p}$ parcourt les idéaux premiers de hauteur $1$.
 \end{enumerate}
 \end{thm}
 \begin{proof}
@@ -95,11 +110,64 @@ Voir \cite{Matsumura} 11.5
 
 
 \begin{thm}\label{UFDPID}
-Soit $A$ un anneau noetherien intégralement clos. Alors, \\
-$A$ est factoriel $\iff$ Tout idéal premier de hauteur 1 est principal.
+Soit $A$ un anneau noetherien intégralement clos. Alors,
+$A$ est factoriel si et seulement si tout idéal premier de hauteur $1$ est principal.
 \end{thm}
 \begin{proof}
 Voir \cite{Matsumura} 20.1
+\end{proof}
+
+\begin{thm}[Critère de Serre pour la normalité]\label{SerreCritere}
+Soit $A$ un anneau intègre. Alors $A$ est intégralement clos si et seulement si il satisfait les deux conditions suivantes
+\begin{enumerate}
+\item Pour tout idéal premier de hauteur $\leq 1$, L'anneau local $A_\mathfrak{p}$ est régulier.
+\item Les idéaux premiers associés d'un idéal principal non-nul sont de hauteur $1$.
+\end{enumerate}
+\end{thm}
+\begin{proof}
+Voir \cite{Matsumura} 23.8
+\end{proof}
+
+\begin{prop}\label{SerreCritere2}
+Soit $k[x_1,...,x_n]$ un anneau de polynômes, et $f\in A$ un élément premier. Alors $A=k[x_1,...,x_n]/(f)$ satisfait la condition $2$ du théorème précédent. 
+\end{prop}
+\begin{proof}
+Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de hauteur $1$. En remplaçant $A$ par sa localisation en $\mathfrak{p}$, on peut supposer $A$ local d'idéal maximal $\mathfrak{p}$. Par définition, il existe $g\in A\setminus (f) $ tel que $\mathfrak{p}=\lbrace x\in A\mid gx=0 \,\modu (f)$. Soit $y=g/f\in \fract(A)$. Si $y\mathfrak{p}\subset\mathfrak{p}$, c'est à dire $(x\in A$ et $gx=0 \,\modu (f))\implies (g/f)x=0\,\modu (f)$, ou encore $(g/f^n)x=0\,\modu (f)$ pour tout $n>0$. On en déduit $g\in (f)$, contradiction. Ainsi $y\mathfrak{p}=\mathfrak{p}$, ou encore $\mathfrak{p}=(f/g)$. Par le théorème de l'idéal principal de Krull (voir \ref{dimsousvariete}) on en déduit $\haut \mathfrak{p}=1$.
+\end{proof}
+
+\subsection{Lemme de normalisation de Noether et applications}
+
+\begin{thm}[Lemme de normalisation de Noether]\label{NoetherNormalisation}
+Soit $A$ une algèbre de type fini sur un corps quelconque $k$. Alors il existe des éléments $a_1,...,a_n\in A$ tels que $A$ soit une extension finie de $k[a_1,...,a_n]$.
+\end{thm}
+\begin{proof}
+Voir \cite{MumfordRedBook} I.1
+\end{proof}
+
+\begin{thm}\label{IntClosureFinite}
+Soit $A$ une algèbre de type fini intègre sur un corps $k$ quelconque, $K=\fract A$ son corps des fractions, et $K\rightarrow L$ une extension finie de $K$. Alors la clôture intégrale $\overline{A_L}$ de $A$ dans $L$ est une $k$-algèbre de type fini, et une extension finie de $A$.
+\end{thm}
+\begin{proof}
+Voir \cite{Eisenbud} 4.14
+\end{proof}
+
+\begin{thm}[Nullstellensatz]\label{Nullstellensatz}
+Soit $k$ un corps algébriquement clos, et $A=k[x_1,...,x_n]$ une algèbre de polynômes. Alors les idéaux maximaux de $A$ sont les $\mathfrak{m}_\alpha=(x_1-\alpha_1,...,x_n-\alpha_n)$ avec $\alpha=(\alpha_1,...,\alpha_n)\in k^n$.
+\end{thm}
+\begin{proof}
+Voir \cite{Eisenbud} 4.14
+\end{proof}
+
+\begin{defn}[Dimension de Krull]
+La dimension de Krull d'un anneau $A$, notée $\dim A$, est la borne supérieure des longueurs de chaînes d'idéaux premiers
+$$\mathfrak{p}_0\varsupsetneq \mathfrak{p}_1 \varsupsetneq...\varsupsetneq  \mathfrak{p}_r$$
+\end{defn}
+
+\begin{thm}\label{FundamentalDimTheory}
+Soit $A$ une algèbre de type fini intègre sur un corps $k$ quelconque, $K=\fract A$ son corps des fractions. Alors $\dim A=\trdeg_k A$.
+\end{thm}
+\begin{proof}
+Voir \cite{Matsumura} 5.6
 \end{proof}
 
 \subsection{Anneaux locaux, Anneaux de valuation discrète}
@@ -127,24 +195,6 @@ Soit $A$ un anneau intègre et $I$ un idéal fractionnaire de $A$. Les assertion
 Voir \cite{Matsumura} 11.3
 \end{proof}
 
-\begin{thm}[Critère de Serre pour la normalité]\label{SerreCritere}
-Soit $A$ un anneau intègre. Alors $A$ est intégralement clos si et seulement si il satisfait les deux conditions suivantes
-\begin{enumerate}
-\item Pour tout idéal premier de hauteur $\leq 1$, L'anneau local $A_\mathfrak{p}$ est régulier.
-\item Les idéaux premiers associés d'un idéal principal non-nul sont de hauteur $1$.
-\end{enumerate}
-\end{thm}
-\begin{proof}
-Voir \cite{Matsumura} 23.8
-\end{proof}
-
-\begin{prop}[Critère de Serre pour la normalité]\label{SerreCritere2}
-Soit $k[x_1,...,x_n]$ un anneau de polynômes, et $f\in A$ un élément premier. Alors $A=k[x_1,...,x_n]/(f)$ satisfait la condition $2$ du théorème précédent. 
-\end{prop}
-\begin{proof}
-Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de hauteur $1$. En remplaçant $A$ par sa localisation en $\mathfrak{p}$, on peut supposer $A$ local d'idéal maximal $\mathfrak{p}$. Par définition, il existe $g\in A\setminus (f) $ tel que $\mathfrak{p}=\lbrace x\in A\mid gx=0 \,\modu (f)$. Soit $y=g/f\in \fract(A)$. Si $y\mathfrak{p}\subset\mathfrak{p}$, c'est à dire $(x\in A$ et $gx=0 \,\modu (f))\implies (g/f)x=0\,\modu (f)$, ou encore $(g/f^n)x=0\,\modu (f)$ pour tout $n>0$. On en déduit $g\in (f)$, contradiction. Ainsi $y\mathfrak{p}=\mathfrak{p}$, ou encore $\mathfrak{p}=(f/g)$. Par le théorème de l'idéal principal de Krull (voir \ref{dimsousvariete}) on en déduit $\haut \mathfrak{p}=1$.
-\end{proof}
-
 \subsection{Algèbres graduées}
 
 On fixe dans cette partie un anneau $R$ et un monoïde abélien $K$. A partir de $K$ on peut construire le groupe des différences $K^{\pm}$ comme l'ensemble des paires $(w_1,w_2)\in K^2$ modulo la relation d'équivalence $(w_1,w_2)\sim (z_1,z_2)\iff w_1+z_2=w_2+z_1$. 
@@ -161,6 +211,7 @@ $$\psi(A_w)\subset A'_{\widetilde{\psi}(w)}, \forall w\in K$$
 \begin{defn}[Module gradué]
 Soit $A$ une $R$-algèbre $K$-graduée, et $M$ un $A$-module. $M$ est $K$-gradué si on a une décomposition en somme directe de sous-groupes
 $$M=\bigoplus_{w\in K}M_w,\text{ où pour tout } w,w'\in K\text{, on a }R_wM_{w'}\subset M_{w+w'}$$
+Un morphisme $\psi:M\rightarrow M'$ de $A$-modules gradués est un morphisme de $A$-modules tel que l'on ait $\psi(M_w)\subset M'_w$, pour tout $w\in K$.
 \end{defn}
 
 \begin{defn}[Idéal homogène]
@@ -172,7 +223,7 @@ Un idéal $\mathfrak{a}$ de $A$ est homogène si et seulement si il est engendr�
 \end{prop}
 
 \begin{rem}
-Soit $A$ une $R$-algèbre $K$-graduée et $\mathfrak{a}$ un idéal homogène. Alors, $A/\mathfrak{a}$ est une $R$-algèbre $K$-graduée, et la projection est un morphisme de $K$-algèbres graduées, le morphisme $K\rightarrow K$ associé étant l'identité.
+Soit $A$ une $R$-algèbre $K$-graduée et $\mathfrak{a}$ un idéal homogène. Alors, $A/\mathfrak{a}$ est une $R$-algèbre $K$-graduée, et la projection est un morphisme de $R$-algèbres $K$-graduées, le morphisme $K\rightarrow K$ associé étant l'identité.
 \end{rem}
 
 \begin{defn}[Monoïde de poids]
@@ -180,7 +231,7 @@ Soit $A$ une $K$-algèbre graduée. Le monoïde de poids de $A$ est le sous-mono
 \end{defn}
 
 \begin{rem}
-Si $A$ est intègre, alors $S(A)=\lbrace w\in K\mid A_w\neq \lbrace 0\rbrace$.
+Si $A$ est intègre, alors $S(A)=\lbrace w\in K\mid A_w\neq \lbrace 0\rbrace\rbrace$.
 \end{rem}
 
 \begin{prop}
@@ -427,7 +478,7 @@ Le morphisme composé de deux morphismes séparés est séparé.
 
 \section{Variétés algébriques}
 
-Dans ce mémoire, on travaille principalement dans la catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos fixé. Ces objets sont appelés des $k$-variétés algèbriques, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I. On rappel que le corps de base est supposé de caractéristique nulle.
+Dans ce mémoire, on travaille principalement dans la sous-catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos fixé. Ces objets sont appelés des $k$-variétés algèbriques, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I. On rappel que le corps de base est supposé de caractéristique nulle.
 
 Un schéma de type fini sur un corps est noetherien, on en déduit que toute partie localement fermée d'une variété admet une unique structure de variété, et tout fermé se décompose de manière unique en une union finie de composantes irréductibles. Enfin, le produit sur $k$ préserve l'irréductibilité.
 
@@ -442,7 +493,7 @@ Soit $F\subset X$ un fermé irréductible. La codimension de $F$ dans $X$, noté
 $$F \varsubsetneq Z_1 \varsubsetneq ... \varsubsetneq Z_r$$
 \end{defn}
 
-Soit $X$ une variété, et $X=\cup_{i=1}^rX_i$ sa décomposition en composantes irréductibles. Alors $\dim X=\sup_i \dim X_i$. De plus, si $X$ est irréductible (i.e $r=1$), alors pour tout ouvert $U\subset X$ non-vide, on a $\dim X=\dim U$. On se ramène donc ainsi à l'étude de la dimension des variétés affines. On suppose donc $X=\spec A$ affine. Par la correspondance entre fermés irréductibles de $X$ et idéaux premier de $A$ on obtient $\dim X= \dim A$, où $\dim A$ est la dimension de Krull de $A$. En particulier, comme $A$ est une $k$-algèbre de type fini intègre, on a le résultat fondamental (Voir \cite{Matsumura} 5.6)
+Soit $X$ une variété, et $X=\cup_{i=1}^rX_i$ sa décomposition en composantes irréductibles. Alors $\dim X=\sup_i \dim X_i$. De plus, si $X$ est irréductible (i.e $r=1$), alors pour tout ouvert $U\subset X$ non-vide, on a $\dim X=\dim U$, et pour tout fermé propre $F\subset X$, on a $\dim F<\dim X$. On se ramène ainsi à l'étude de la dimension des variétés affines. On suppose donc $X=\spec A$ affine. Par la correspondance entre fermés irréductibles de $X$ et idéaux premier de $A$ on obtient $\dim X= \dim A$, où $\dim A$ est la dimension de Krull de $A$. En particulier, comme $A$ est une $k$-algèbre de type fini intègre, on a d'après \ref{FundamentalDimTheory} le résultat fondamental
 $$\dim X=\dim A=\trdeg_k \fract A$$
 Cela assure en particulier que la dimension d'une variété est finie. Par ailleurs, la hauteur d'un idéal premier $\mathfrak{p}$ de $A$ correspond à la codimension de la sous-variété $F$ qu'il définit. Pour une $k$-algèbre de type fini intègre, on a $\haut \mathfrak{p}+ \dim A/\mathfrak{p}=\dim A$. On en déduit
 $$\dim X=\dim F+\codime_X F,\,\,\,\,\,\,\, \text{ et } \dim X=\dim\Oo_{X,x} \text{, pour tout } x\in X \text{ (fermé)}$$
@@ -466,12 +517,21 @@ Soit $f:X\rightarrow Y$ un morphisme dominant de variétés irréductibles. Alor
 \end{enumerate}
 En particulier, pour tout $Y\in U$, on a $\dim f^{-1}(y)=r.$
 \end{thm}
+\begin{proof}
+(Voir \cite{MumfordRedBook} I.8.3) Après réduction au cas où $X$ et $Y$ sont affines. On utilise le lemme clé \ref{NoetherNormalisation} pour obtenir une factorisation de $f$ de la forme 
+$$X_g\xrightarrow{\pi \text{ fini et surjectif}}U\times \AAA^r \xrightarrow{p_U}U:=Y_g$$
+
+\end{proof}
 
 On s'intéresse maintenant aux morphismes dont les fibres sont des ensembles finis. Cette étude s'achève avec un résultat important pour la suite, on obtient un critère pour qu'un morphisme bijectif en caractéristique zéro soit un isomorphisme. 
 
 \begin{defn}[Morphisme quasi-fini]
 Soit $f:X \rightarrow Y$ un morphisme de variétés. On dit que $f$ est quasi-fini si les fibres de $f$ sont finies.
 \end{defn}
+
+\begin{ex}
+Un morphisme fini de variété algébriques est quasi-fini.
+\end{ex}
 
 \begin{thm}[Théorème principal de Zariski]\label{ZMT}
 Soit $f:X\rightarrow Y$ un morphisme birationnel quasi-fini séparé de variétés irréductibles. On suppose de plus que $Y$ est normale. Alors $f$ est une immersion ouverte.
@@ -481,7 +541,7 @@ Voir \cite{QingLiu} 4.4.6
 \end{proof}
 
 \begin{prop}\label{fibersCardinal}
-Soient $X,Y$ deux variétés algébriques affines irréductibles de même dimension et $f:X \mapsto Y$ un morphisme dominant. Alors il existe $g\in \Oo(Y)$ non nulle tel que le morphisme induit $f:X_g \mapsto Y_g$ soit fini, surjectif avec des fibres de même cardinal.
+Soient $X,Y$ deux variétés algébriques affines irréductibles de même dimension et $f:X \mapsto Y$ un morphisme dominant. Alors il existe $g\in \Oo(Y)$ non nul tel que le morphisme induit $f:X_g \mapsto Y_g$ soit fini, surjectif avec des fibres de même cardinal.
 \end{prop}
 \begin{proof}
 Par hypothèse, l'extension $k(Y) \xrightarrow{f^*} k(X)$ est algébrique finie, disons de degré n. En caractéristique zéro on peut trouver $u\in k(X)$ tel que $k(X)=k(Y)[u]$. On remarque que l'on peut imposer $u\in \Oo(X)$. On considère $P:=P_{min}(u, k(Y))=T^n+a_1T^{n-1}+...+a_0$. En réduisant au même dénominateur on a $P\in \Oo(Y)_v[T]$ pour un $v\in \Oo(Y)$. De plus, en prenant l'intersection avec d'autres ouverts principaux on peut supposer $\Oo(X)_v$ entier sur $\Oo(Y)_v$, et $\Oo(Y)_v[u]$ intégralement clos, ce qui donne $\Oo(Y)_v[u]=\Oo(X)_v$ et $\Oo(X)_v$ entier sur $\Oo(Y)_v$. Ainsi $f:X_v \rightarrow Y_v$ est fini et donc surjectif car dominant.\\
@@ -538,11 +598,11 @@ Le lieu singulier d'une variété normale est un fermé de codimension $\geq 2$
 Soit $X$ une variété normale irréductible. Pour toute sous-variété fermée $Y$ de codimension $\geq 2$, la restriction $\Oo(X)\rightarrow \Oo(X\setminus Y)$ est un isomorphisme.
 \end{prop}
 \begin{proof}
-On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $p\in \spec A$ de hauteur $1$ est un point de $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit, en tenant compte de l'irréductibilité de $X$, des injections $\Oo_X(U)\xhookrightarrow{} \Oo_p=A_p$ dans les tiges qui peuvent être vues comme des inclusions dans le corps des fonctions rationnelles de $X$. On a ainsi en tenant compte de \ref{factonormal} un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_p A_p=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
+On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $\mathfrak{p}\in \spec A$ de hauteur $1$ est un point de $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit, en tenant compte de l'irréductibilité de $X$, des injections $\Oo_X(U)\xhookrightarrow{} \Oo_\mathfrak{p}=A_\mathfrak{p}$ dans les tiges qui peuvent être vues comme des inclusions dans le corps des fonctions rationnelles de $X$. On a ainsi en tenant compte de \ref{factonormal} un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_\mathfrak{p} A_\mathfrak{p}=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
 \end{proof}
 
 \begin{prop}\label{codimaffinenormal}
-Soit $X$ une variété affine irréductible. Pour toute variété irréductible $Y$ contenant $X$, le complémentaire $Y\setminus X$ est de codimension 1.
+Soit $X$ une variété affine irréductible. Pour toute variété irréductible $Y$ contenant $X$ comme ouvert, le complémentaire $Y\setminus X$ est de codimension 1.
 \end{prop}
 \begin{proof}
 On considère l'application de normalisation $\eta_Y$. Alors l'application induite $\eta_Y^{-1}(X)\rightarrow X$ est l'application de normalisation de $X$. On en déduit que $\eta_Y^{-1}(X)$ est affine. De plus, comme $\eta_Y$ est finie, la dimension du complémentaire de $X$ ne change pas en remplaçant $Y$ par sa normalisation et $X$ par sa préimage. On peut donc supposer $Y$ normal.

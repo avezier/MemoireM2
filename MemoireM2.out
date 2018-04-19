@@ -2,49 +2,50 @@
 \BOOKMARK [1][-]{section.1.1}{Alg\350bre commutative}{chapter.1}% 2
 \BOOKMARK [2][-]{subsection.1.1.1}{D\351composition primaire des modules noetheriens}{section.1.1}% 3
 \BOOKMARK [2][-]{subsection.1.1.2}{Extensions enti\350res d'anneaux}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.3}{Anneaux locaux, Anneaux de valuation discr\350te}{section.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.4}{Alg\350bres gradu\351es}{section.1.1}% 6
-\BOOKMARK [1][-]{section.1.2}{Sch\351mas}{chapter.1}% 7
-\BOOKMARK [2][-]{subsection.1.2.1}{G\351n\351ralit\351s}{section.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.2.2}{Quelques propri\351t\351s des sch\351mas}{section.1.2}% 9
-\BOOKMARK [2][-]{subsection.1.2.3}{Quelques propri\351t\351s des morphismes de sch\351mas}{section.1.2}% 10
-\BOOKMARK [1][-]{section.1.3}{Vari\351t\351s alg\351briques}{chapter.1}% 11
-\BOOKMARK [2][-]{subsection.1.3.1}{Dimension des vari\351t\351s alg\351briques}{section.1.3}% 12
-\BOOKMARK [2][-]{subsection.1.3.2}{Vari\351t\351s lisses}{section.1.3}% 13
-\BOOKMARK [2][-]{subsection.1.3.3}{Propri\351t\351s des vari\351t\351s normales}{section.1.3}% 14
-\BOOKMARK [0][-]{chapter.2}{Groupes alg\351briques et th\351orie des invariants}{}% 15
-\BOOKMARK [1][-]{section.2.1}{Groupes alg\351briques affines}{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.1.1}{G\351n\351ralit\351s}{section.2.1}% 17
-\BOOKMARK [2][-]{subsection.2.1.2}{G-vari\351t\351s, repr\351sentations}{section.2.1}% 18
-\BOOKMARK [2][-]{subsection.2.1.3}{Groupes quotients}{section.2.1}% 19
-\BOOKMARK [2][-]{subsection.2.1.4}{Groupes diagonalisables, actions de groupes diagonalisables}{section.2.1}% 20
-\BOOKMARK [1][-]{section.2.2}{Th\351orie des invariants}{chapter.2}% 21
-\BOOKMARK [2][-]{subsection.2.2.1}{L'alg\350bre des invariants}{section.2.2}% 22
-\BOOKMARK [2][-]{subsection.2.2.2}{Quotient d'une vari\351t\351 alg\351brique sous l'action d'un groupe alg\351brique}{section.2.2}% 23
-\BOOKMARK [0][-]{chapter.3}{Faisceaux divisoriels sur une vari\351t\351 alg\351brique}{}% 24
-\BOOKMARK [1][-]{section.3.1}{Faisceaux quasi-coh\351rents}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.1.1}{Faisceaux quasi-coh\351rents sur un sch\351ma}{section.3.1}% 26
-\BOOKMARK [2][-]{subsection.3.1.2}{Faisceaux quasi-coh\351rents sur une vari\351t\351 projective}{section.3.1}% 27
-\BOOKMARK [2][-]{subsection.3.1.3}{Cohomologie des faisceaux et applications}{section.3.1}% 28
-\BOOKMARK [2][-]{subsection.3.1.4}{Faisceaux inversibles, Fibr\351s en droites}{section.3.1}% 29
-\BOOKMARK [2][-]{subsection.3.1.5}{G-linearisation d'un fibr\351 en droite}{section.3.1}% 30
-\BOOKMARK [1][-]{section.3.2}{Diviseurs}{chapter.3}% 31
-\BOOKMARK [2][-]{subsection.3.2.1}{Diviseurs de Weil}{section.3.2}% 32
-\BOOKMARK [2][-]{subsection.3.2.2}{Faisceau d'alg\350bres divisorielles}{section.3.2}% 33
-\BOOKMARK [2][-]{subsection.3.2.3}{Diviseurs de Cartier et groupe de Picard}{section.3.2}% 34
-\BOOKMARK [2][-]{subsection.3.2.4}{L'espace projectif Pkn}{section.3.2}% 35
-\BOOKMARK [2][-]{subsection.3.2.5}{Le groupe des unit\351s d'une vari\351t\351 irr\351ductible}{section.3.2}% 36
-\BOOKMARK [0][-]{chapter.4}{Anneaux de Cox}{}% 37
-\BOOKMARK [1][-]{section.4.1}{Un exemple introductif}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.2}{Faisceau et anneau de Cox dans le cas sans torsion}{chapter.4}% 39
-\BOOKMARK [2][-]{subsection.4.2.1}{Le spectre relatif d'une alg\350bre divisorielle}{section.4.2}% 40
-\BOOKMARK [2][-]{subsection.4.2.2}{Faisceau et anneau de Cox}{section.4.2}% 41
-\BOOKMARK [2][-]{subsection.4.2.3}{Propri\351t\351s alg\351briques de l'anneau de Cox}{section.4.2}% 42
-\BOOKMARK [1][-]{section.4.3}{Faisceau et anneau de Cox dans le cas g\351n\351ral}{chapter.4}% 43
-\BOOKMARK [2][-]{subsection.4.3.1}{Faisceau et anneau de Cox}{section.4.3}% 44
-\BOOKMARK [2][-]{subsection.4.3.2}{Invariance de l'anneau de Cox}{section.4.3}% 45
-\BOOKMARK [2][-]{subsection.4.3.3}{Exemples}{section.4.3}% 46
-\BOOKMARK [1][-]{section.4.4}{Propri\351t\351s alg\351briques de l'anneau de Cox}{chapter.4}% 47
-\BOOKMARK [2][-]{subsection.4.4.1}{Int\351grit\351 et normalit\351}{section.4.4}% 48
-\BOOKMARK [2][-]{subsection.4.4.2}{Localisation et groupe des unit\351s}{section.4.4}% 49
-\BOOKMARK [2][-]{subsection.4.4.3}{Propri\351t\351s de divisibilit\351}{section.4.4}% 50
+\BOOKMARK [2][-]{subsection.1.1.3}{Lemme de normalisation de Noether et applications}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.4}{Anneaux locaux, Anneaux de valuation discr\350te}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.5}{Alg\350bres gradu\351es}{section.1.1}% 7
+\BOOKMARK [1][-]{section.1.2}{Sch\351mas}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.2.1}{G\351n\351ralit\351s}{section.1.2}% 9
+\BOOKMARK [2][-]{subsection.1.2.2}{Quelques propri\351t\351s des sch\351mas}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.3}{Quelques propri\351t\351s des morphismes de sch\351mas}{section.1.2}% 11
+\BOOKMARK [1][-]{section.1.3}{Vari\351t\351s alg\351briques}{chapter.1}% 12
+\BOOKMARK [2][-]{subsection.1.3.1}{Dimension des vari\351t\351s alg\351briques}{section.1.3}% 13
+\BOOKMARK [2][-]{subsection.1.3.2}{Vari\351t\351s lisses}{section.1.3}% 14
+\BOOKMARK [2][-]{subsection.1.3.3}{Propri\351t\351s des vari\351t\351s normales}{section.1.3}% 15
+\BOOKMARK [0][-]{chapter.2}{Groupes alg\351briques et th\351orie des invariants}{}% 16
+\BOOKMARK [1][-]{section.2.1}{Groupes alg\351briques affines}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.1.1}{G\351n\351ralit\351s}{section.2.1}% 18
+\BOOKMARK [2][-]{subsection.2.1.2}{G-vari\351t\351s, repr\351sentations}{section.2.1}% 19
+\BOOKMARK [2][-]{subsection.2.1.3}{Groupes quotients}{section.2.1}% 20
+\BOOKMARK [2][-]{subsection.2.1.4}{Groupes diagonalisables, actions de groupes diagonalisables}{section.2.1}% 21
+\BOOKMARK [1][-]{section.2.2}{Th\351orie des invariants}{chapter.2}% 22
+\BOOKMARK [2][-]{subsection.2.2.1}{L'alg\350bre des invariants}{section.2.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.2}{Quotient d'une vari\351t\351 alg\351brique sous l'action d'un groupe alg\351brique}{section.2.2}% 24
+\BOOKMARK [0][-]{chapter.3}{Faisceaux divisoriels sur une vari\351t\351 alg\351brique}{}% 25
+\BOOKMARK [1][-]{section.3.1}{Faisceaux quasi-coh\351rents}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.1.1}{Faisceaux quasi-coh\351rents sur un sch\351ma}{section.3.1}% 27
+\BOOKMARK [2][-]{subsection.3.1.2}{Faisceaux quasi-coh\351rents sur une vari\351t\351 projective}{section.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.1.3}{Cohomologie des faisceaux et applications}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.4}{Faisceaux inversibles, Fibr\351s en droites}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.5}{G-linearisation d'un fibr\351 en droite}{section.3.1}% 31
+\BOOKMARK [1][-]{section.3.2}{Diviseurs}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.2.1}{Diviseurs de Weil}{section.3.2}% 33
+\BOOKMARK [2][-]{subsection.3.2.2}{Faisceau d'alg\350bres divisorielles}{section.3.2}% 34
+\BOOKMARK [2][-]{subsection.3.2.3}{Diviseurs de Cartier et groupe de Picard}{section.3.2}% 35
+\BOOKMARK [2][-]{subsection.3.2.4}{L'espace projectif Pkn}{section.3.2}% 36
+\BOOKMARK [2][-]{subsection.3.2.5}{Le groupe des unit\351s d'une vari\351t\351 irr\351ductible}{section.3.2}% 37
+\BOOKMARK [0][-]{chapter.4}{Anneaux de Cox}{}% 38
+\BOOKMARK [1][-]{section.4.1}{Un exemple introductif}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.2}{Faisceau et anneau de Cox dans le cas sans torsion}{chapter.4}% 40
+\BOOKMARK [2][-]{subsection.4.2.1}{Le spectre relatif d'une alg\350bre divisorielle}{section.4.2}% 41
+\BOOKMARK [2][-]{subsection.4.2.2}{Faisceau et anneau de Cox}{section.4.2}% 42
+\BOOKMARK [2][-]{subsection.4.2.3}{Propri\351t\351s alg\351briques de l'anneau de Cox}{section.4.2}% 43
+\BOOKMARK [1][-]{section.4.3}{Faisceau et anneau de Cox dans le cas g\351n\351ral}{chapter.4}% 44
+\BOOKMARK [2][-]{subsection.4.3.1}{Faisceau et anneau de Cox}{section.4.3}% 45
+\BOOKMARK [2][-]{subsection.4.3.2}{Invariance de l'anneau de Cox}{section.4.3}% 46
+\BOOKMARK [2][-]{subsection.4.3.3}{Exemples}{section.4.3}% 47
+\BOOKMARK [1][-]{section.4.4}{Propri\351t\351s alg\351briques de l'anneau de Cox}{chapter.4}% 48
+\BOOKMARK [2][-]{subsection.4.4.1}{Int\351grit\351 et normalit\351}{section.4.4}% 49
+\BOOKMARK [2][-]{subsection.4.4.2}{Localisation et groupe des unit\351s}{section.4.4}% 50
+\BOOKMARK [2][-]{subsection.4.4.3}{Propri\351t\351s de divisibilit\351}{section.4.4}% 51
