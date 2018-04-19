@@ -254,7 +254,7 @@ Notre principale référence est \cite{Hartshorne}. On résume dans cette partie
 
 \subsection{Généralités}
 
-Soit $A$ un anneau, on note $X=\spec A$ l'ensemble de ses idéaux premiers, il est naturellement muni d'une topologie en définissant que les fermés sont les parties de la forme $\Vv_X(\mathfrak{a})=\lbrace \mathfrak{p}\in X\mid \mathfrak{a}\subset \mathfrak{p}\rbrace$, où $\mathfrak{a}$ est un idéal de $A$. On munit $X$ d'un faisceau d'anneaux $\Oo_X$, dit faisceau structural, constitué pour tout ouvert $U\subset X$ des sections $s: U\mapsto \bigsqcup_{\mathfrak{p}\in U}A_\mathfrak{p}$ telles que $s(\mathfrak{p})\in A_\mathfrak{p}$, et pour tout $\mathfrak{p}\in U$, il existe un voisinage $V\subset U$ de $\mathfrak{p}$ et des éléments $a,f\in A$ tels que pour tout $\mathfrak{q}\in V$, on ait $f\notin \mathfrak{q}$ et $s(\mathfrak{q})=a/f\in A_\mathfrak{q}$. Les sections $s$ sur un ouvert $U$ sont appelées les fonctions régulières sur $U$. On peut définir le même faisceau structural d'une manière différente en remarquant que $X$ possède une base d'ouverts, dits principaux, de la forme $X_f:=X\setminus \Vv_X((f))$ avec $f\in A$. On pose alors $\Oo(X_f)=A_f$ et on vérifie grâce aux propriétés $(A_f)_g\simeq A_{fg}$ et $X_{fg}=X_f\cap X_g$ que cela définit bien un "faisceau" sur cette base d'ouverts. qui se prolonge donc de manière unique en un faisceau sur $X$. En particulier on obtient immédiatement $A=\Gamma(X, \Oo_X)$, et sans difficulté $\Oo_{X,\mathfrak{p}}\simeq A_\mathfrak{p}$. 
+Soit $A$ un anneau, on note $X=\spec A$ l'ensemble de ses idéaux premiers, il est naturellement muni d'une topologie en définissant que les fermés sont les parties de la forme $\Vv_X(\mathfrak{a})=\supp A/\mathfrak{a}=\lbrace \mathfrak{p}\in X\mid \mathfrak{a}\subset \mathfrak{p}\rbrace$, où $\mathfrak{a}$ est un idéal de $A$. On munit $X$ d'un faisceau d'anneaux $\Oo_X$, dit faisceau structural, constitué pour tout ouvert $U\subset X$ des sections $s: U\mapsto \bigsqcup_{\mathfrak{p}\in U}A_\mathfrak{p}$ telles que $s(\mathfrak{p})\in A_\mathfrak{p}$, et pour tout $\mathfrak{p}\in U$, il existe un voisinage $V\subset U$ de $\mathfrak{p}$ et des éléments $a,f\in A$ tels que pour tout $\mathfrak{q}\in V$, on ait $f\notin \mathfrak{q}$ et $s(\mathfrak{q})=a/f\in A_\mathfrak{q}$. Les sections $s$ sur un ouvert $U$ sont appelées les fonctions régulières sur $U$. On peut définir le même faisceau structural d'une manière différente en remarquant que $X$ possède une base d'ouverts, dits principaux, de la forme $X_f:=X\setminus \Vv_X((f))$ avec $f\in A$. En effet, si $X_f\subset X_g$, alors on a une application canonique $A_g\rightarrow A_f$. On pose alors $\Oo(X_f)=A_f$ et on vérifie grâce aux propriétés $(A_f)_g\simeq A_{fg}$ et $X_{fg}=X_f\cap X_g$ que cela définit bien un "faisceau" sur cette base d'ouverts. qui se prolonge donc de manière unique en un faisceau sur $X$. En particulier on obtient immédiatement $A=\Gamma(X, \Oo_X)$, et sans difficulté $\Oo_{X,\mathfrak{p}}\simeq A_\mathfrak{p}$. 
 
 \begin{defn}[Espace annelé]
 Un espace annelé est un espace topologique $X$ muni d'un faisceau d'anneau $\Oo_X$ tel que les tiges $\Oo_{X,x}$ soient des anneaux locaux en tout point $x\in X$.
@@ -274,7 +274,7 @@ Réciproquement, tout morphisme entre schémas affines $f:\spec B\rightarrow \sp
 Les foncteurs $\spec$ et $\Gamma(.)$ définissent une anti-équivalence de catégories entre la catégorie des schémas affines et la catégorie des anneaux (commutatifs).
 \end{prop}
 
-Soit $X$ un schéma, $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U=\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$. On peut alors par exemple parler de l'idéal de $\Oo(X)$ des fonctions régulières s'annulant sur un fermé $F$ de $X$, on le note $\Ii_X(F)$. Ainsi, $F$ définit un faisceau d'idéaux $\Ii_F:U\mapsto \Ii_U(F\cap U)$ radicaux qui définit une structure de schéma $(F, i^{-1}(\Oo_X/\Ii_F))$ sur $F$, où $i$ est l'inclusion. Si $X=\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
+Soit $X$ un schéma, on peut étendre l'opération $\Vv_X(.)$ définie plus haut pour les schémas affines. On considère un faisceau d'idéaux $\Ii$ de $\Oo_X$, et on pose $\Vv_X(\Ii)=\supp \Oo_X/\Ii$. De même, soit $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U=\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$. On peut alors définir le faisceau d'idéaux des fonctions régulières s'annulant sur un fermé $F$ de $X$, on le note $\Ii_X(F)$, c'est un faisceau d'idéaux radicaux. Si $X=\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
 $$\Ii_X(Y)=\bigcap_{\mathfrak{p}\in Y}\mathfrak{p},\,\,\,\,\, \Ii_X(\Vv_X(\mathfrak{a}))=\sqrt{\mathfrak{a}},\,\,\,\,\,\,\Vv_X(\Ii_X(Y))=\overline{Y}$$
 
 \begin{rem}
@@ -385,17 +385,21 @@ $$\Oo(U)=\bigcap_i \Oo(U_i)=\bigcap_{x\in U}\Oo_{X,x}$$
 
 \subsection{Quelques propriétés des morphismes de schémas}
 
-
-
 \subsubsection{Immersion ouverte, immersion fermée}
 
 \begin{defn}[Immersion ouverte, immersion fermée]
 Un morphisme de schémas $(f,f^\sharp):X\rightarrow Y$ est une immersion ouverte (resp. fermée) si $f$ est une immersion ouverte topologique (resp. immersion fermée topologique), et si $f^\sharp_x:\Oo_{X,f(x)}\rightarrow \Oo_{X,x}$ est un isomorphisme (resp. surjective) pour tout $x\in X$.
 \end{defn}
 
+Soit $X=\spec A$ un schéma affine, $g\in A$. Considérons l'ouvert $X_g$ de $X$, on note $i$ l'inclusion. Vu la construction du faisceau structural $\Oo_X$, on voit que $(X_f, i^{-1}\Oo_X)$, est naturellement un schéma isomorphe à $\spec A_g$. Grâce à cette observation, on voit que tout ouvert $U$ d'un schéma $X$ est naturellement muni d'une structure de schéma en prenant la restriction du faisceau structural, c'est la notion de sous-schéma ouvert. De plus, tout immersion ouverte $X\rightarrow Y$ se factorise à travers un sous-schéma ouvert.
+
 \begin{defn}
 Un schéma $X$ est quasi-affine si il est quasi-compact et il existe une immersion ouverte dans un schéma affine.
 \end{defn}
+
+Soit $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal de $A$. Alors la projection $A\rightarrow A/\mathfrak{a}$ définit une immersion fermée $i:\spec A/\mathfrak{a}\rightarrow X$ d'image $\Vv_X(\mathfrak{a})$. On a un isomorphisme canonique $(\Vv_X(\mathfrak{a}), i^{-1}(\Oo_X/\ker i^\sharp))\simeq \spec A/\mathfrak{a}$ et on remarque que $\ker i^\sharp(X_g)=\mathfrak{a}_g$. Réciproquement, pour tout immersion fermée $j:Z\rightarrow X$, il existe un unique idéal $\mathfrak{a}$ tel que $j$ se factorise via un isomorphisme $Z\simeq \spec A/\mathfrak{a}$ et l'immersion fermée $\spec A/\mathfrak{a}\rightarrow X$. Un sous-schéma fermé d'un schéma $X$ est un fermé $Z$ de $X$ munit d'une structure de schéma et d'une immersion fermée $Z\rightarrow X$. Ainsi les sous-schémas fermés de $X$ sont donnés par des faisceaux d'idéaux quasicohérents (voir partie consacrée aux faisceaux de modules).
+
+
 
 \subsubsection{Morphismes de type fini}
 
@@ -544,17 +548,18 @@ Voir \cite{QingLiu} 4.4.6
 Soient $X,Y$ deux variétés algébriques affines irréductibles de même dimension et $f:X \mapsto Y$ un morphisme dominant. Alors il existe $g\in \Oo(Y)$ non nul tel que le morphisme induit $f:X_g \mapsto Y_g$ soit fini, surjectif avec des fibres de même cardinal.
 \end{prop}
 \begin{proof}
-Par hypothèse, l'extension $k(Y) \xrightarrow{f^*} k(X)$ est algébrique finie, disons de degré n. En caractéristique zéro on peut trouver $u\in k(X)$ tel que $k(X)=k(Y)[u]$. On remarque que l'on peut imposer $u\in \Oo(X)$. On considère $P:=P_{min}(u, k(Y))=T^n+a_1T^{n-1}+...+a_0$. En réduisant au même dénominateur on a $P\in \Oo(Y)_v[T]$ pour un $v\in \Oo(Y)$. De plus, en prenant l'intersection avec d'autres ouverts principaux on peut supposer $\Oo(X)_v$ entier sur $\Oo(Y)_v$, et $\Oo(Y)_v[u]$ intégralement clos, ce qui donne $\Oo(Y)_v[u]=\Oo(X)_v$ et $\Oo(X)_v$ entier sur $\Oo(Y)_v$. Ainsi $f:X_v \rightarrow Y_v$ est fini et donc surjectif car dominant.\\
-On a donc une factorisation de $f^\sharp(Y_v):\Oo(Y)_v\xrightarrow{p_1^*}\Oo(Y)_v[T]\xrightarrow{\pi}\Oo(Y)_v[T]/(P)\xrightarrow{\overline{ev_f}}\Oo(Y)_v[u]$ qui donne $f:X_v \xrightarrow{\simeq} \lbrace (y,t) \in Y_v\times \mathbb{A}^1\mid P(y)(t)=0\rbrace \hookrightarrow Y_v\times \mathbb{A}^1 \xrightarrow{p_1} Y_v$. Ainsi le cardinal de la fibre $f^{-1}(y), y\in Y_v$ est le cardinal de l'ensemble des zéros du polynôme $P(y)(T)$. On peut s'assurer que cet ensemble est de cardinal constant en intersectant à nouveau avec l'ouvert principal du discriminant de $P$ qui est un polynôme en les coefficients de $P$.
+Par hypothèse, l'extension $k(Y) \xrightarrow{f^*} k(X)$ est algébrique finie, disons de degré $n$. En caractéristique zéro on peut trouver $u\in k(X)$ tel que $k(X)=k(Y)[u]$. On remarque que l'on peut imposer $u\in \Oo(X)$. On considère $P:=P_{min}(u, k(Y))=t^n+a_1t^{n-1}+...+a_0$. En réduisant au même dénominateur on a $P\in \Oo(Y)_v[t]$ pour un $v\in \Oo(Y)$. De plus, en prenant l'intersection avec d'autres ouverts principaux on peut supposer $\Oo(X)_v$ entier sur $\Oo(Y)_v$, et $\Oo(Y)_v[u]$ intégralement clos, ce qui donne $\Oo(Y)_v[u]=\Oo(X)_v$ et $\Oo(X)_v$ entier sur $\Oo(Y)_v$. Ainsi $f:X_v \rightarrow Y_v$ est fini et donc surjectif car dominant.
+
+On a donc une factorisation de $f^\sharp(Y_v):\Oo(Y)_v\xrightarrow{p_1^\sharp}\Oo(Y)_v[t]\xrightarrow{\pi}\Oo(Y)_v[t]/(P)\xrightarrow{\overline{ev_u}}\Oo(Y)_v[u]$ qui donne $f:X_v \xrightarrow{\simeq} \lbrace (y,t) \in Y_v\times \mathbb{A}^1\mid P(y)(t)=0\rbrace \hookrightarrow Y_v\times \mathbb{A}^1 \xrightarrow{p_1} Y_v$. Ainsi, pour $y\in Y_v$ donné, le cardinal de la fibre $f^{-1}(y)$ est le cardinal de l'ensemble des zéros du polynôme $P(y)(t)$. On peut s'assurer que cet ensemble est de cardinal constant en intersectant à nouveau avec l'ouvert principal du discriminant de $P$ qui est un polynôme en les coefficients de $P$.
 \end{proof}
 
 Ce résultat reste vrai en caractéristique positive, voir \cite{LAGSpringer} 5.1.6 pour une preuve légèrement différente dans ce cadre. On y montre que le cardinal de la fibre générale est $[k(X):k(Y)]_s$. En revanche pour le corollaire immédiat suivant, la caractéristique zéro est essentielle (penser par exemple au morphisme de Frobenius $\AAA^1 \xrightarrow{x \mapsto x^p} \AAA^1$ ). 
 
-\begin{cor}\label{injectiveBirationel}
+\begin{cor}[Car. zéro]\label{injectiveBirationel}
 Avec les hypothèses de \ref{fibersCardinal}, si de plus $f$ est injectif, alors il existe $g\in \Oo(Y)$ non-nulle tel que le morphisme induit $f:X_g \mapsto Y_g$ soit un isomorphisme.
 \end{cor}
 
-\begin{thm}\label{ZMTCor}
+\begin{thm}[Car. zéro]\label{ZMTCor}
 Soit $f:X \mapsto Y$ un morphisme bijectif de variétés irréductibles avec $Y$ normale. Alors $f$ est un isomorphisme.
 \end{thm}
 \begin{proof}

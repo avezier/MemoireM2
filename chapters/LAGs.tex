@@ -1,73 +1,105 @@
 \chapter{Groupes algébriques et théorie des invariants}
 
-Notre principale référence pour les groupes algébriques est \cite{LAGSpringer}. Dans ce chapitre, pour coller aux notations traditionnelles, on notera $k[X]$ l'algèbre des coordonnées d'une variété affine $X$, au lieu de $\Oo(X)$.
+Notre principale référence pour les groupes algébriques est \cite{LAGSpringer}. On rappelle que dans ce mémoire, le terme groupe algébrique désigne un groupe algébrique affine.
 
-\section{Groupes algébriques affines}
+\section{Groupes algébriques}
+
 \subsection{Généralités}
+
+\begin{defn}[Groupe algébrique (affine)]
+Un groupe algébrique est une variété affine $G$ munie d'une structure de groupe telle que l'application produit
+$$\mu:G\times G\rightarrow G$$
+et l'inverse
+$$\iota:G\rightarrow G$$
+soient des morphismes de variétés.
+\end{defn}
+
+\begin{ex}
+\begin{enumerate}
+\item Tout groupe fini est algébrique
+\item Le groupe linéaire $\gln_n(k)$ est l'ouvert principal de $\mn_n(k)$ définit par le déterminant. En effet, le produit et l'inverse sont des applications polynomiales en les coordonnées. Par exemple le groupe $\GG_m:=\gln_1(k)$.
+\item Tout sous groupe fermé de $\gln_n(k)$ est un groupe algébrique. Par exemple D$_n$, le sous groupe des matrices diagonales est défini par l'annulation des coefficients hors-diagonale.
+\end{enumerate}
+\end{ex}
+
+Pour un groupe algébrique $G$, les composantes irréductibles et les composantes connexes coïncident. On note $G^o$ la composante connexe contenant le neutre $e_G$, on l'appelle la composante neutre. C'est un sous-groupe normal et fermé de $G$, et les autres composantes connexes de $G$ sont les classes à gauche de $G^o$.
+
 \subsection{G-variétés, représentations}
 
 \begin{defn}[$G$-variété]
-Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique $X$ sur laquelle $G$ agit algébriquement. C'est à dire qu'on a un morphisme de groupes de $G$ dans le groupe d'automorphismes $X$.
+Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique $X$ sur laquelle $G$ agit algébriquement. C'est à dire que l'action de $G$ est définie par un morphisme de variétés $a:G\times X\rightarrow X$. Un morphisme de $G$-variétés est un morphisme qui commute à l'action de $G$.
 \end{defn}
+
+\begin{defn}[Orbite, stabilisateur]
+Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $x\in X$. L'orbite de $x$ est l'image de l'application d'orbite $a_x=(.,x):G\rightarrow X$, on le note $G.x$. Le stabilisateur est l'ensemble des $g\in G$ tels que $g.x=x$, on le note $Gx$. 
+\end{defn}
+
+Le stabilisateur d'un point $x$ de $G$ est un sous-groupe fermé de $G$. En effet, c'est la fibre de $x$ pour l'application d'orbite $a_x$. 
 
 \begin{prop}
 Soit $G$ un groupe algébrique, $X$ une $G$-variété et $x\in X$.
 \begin{enumerate}
 \item $G.x$ est ouvert dans $\overline{G.x}$.
-\item Toute composante irréductible de $G.x$ a pour dimension $dim (G)-dim(G.x)$.
-\item $\overline{G.x}\setminus G.X$ est une union d'orbites de dimension $<dim(\overline{G.x})$.
+\item Toute composante irréductible de $G.x$ a pour dimension $\dim G-\dim G.x$.
+\item $\overline{G.x}\setminus G.X$ est une union d'orbites de dimension strictement inférieure à $\dim \overline{G.x}$.
 \item $G.x$ est ouvert dans $\overline{G.x}$.
 \end{enumerate}
 \end{prop}
 \begin{proof}
 On suppose d'abord $G$ connexe.
 \begin{enumerate}
-\item D'après \ref{}, $G.x$ contient un ouvert dense $U$ de $\overline{G.x}$. Or, $G$ est réunion de translatés de $U$.
-\item D'après \ref{}, il existe un ouvert dense de $G.x$ tel que toute les fibres de cet ouvert ont pour dimension dim($G$)$-$dim($G.x$)$=$dim($G_x$).
-\item $\overline{G.x}\setminus G.x$ est un fermé propre de $\overline{G.x}$ donc de dimension inférieure d'après \ref{}. Par ailleurs, $\overline{G.x}$ est $G$-stable donc $\overline{G.x}\setminus G.x$ est réunion d'orbites.
+\item D'après \ref{dimensionfibres}, $G.x$ contient un ouvert dense $U$ de $\overline{G.x}$. Or, $G$ est réunion de translatés de $U$.
+\item D'après \ref{dimensionfibres}, il existe un ouvert dense de $G.x$ tel que toute les fibres de cet ouvert ont pour dimension $\dim G-\dim G.x=\dim G_x$.
+\item $\overline{G.x}\setminus G.x$ est un fermé propre de $\overline{G.x}$ donc de dimension inférieure. Par ailleurs, $\overline{G.x}$ est $G$-stable donc $\overline{G.x}\setminus G.x$ est réunion d'orbites.
 \item Enfin si dim($G.x$) est minimal, $\overline{G.x}\setminus G.x$ est vide
 \end{enumerate}
-Enfin, $G$ n'est pas connexe, on écrit $G=\cup_{i=1}^{n}g_iG^\circ .x$ avec $g_1=e$. D'où $\overline{G.x}=\cup_{i=1}^{n}\overline{g_iG^\circ .x}$. Les $\overline{g_iG^\circ}$ sont égales où disjointes, c'est donc la décomposition en composantes irréductibles. On construit un ouvert de $\overline{G.x}$ inclus dans $G.x$ en posant $U=G^\circ .x\setminus \cup_{i=2}^{n}\overline{g_iG^\circ .x}$. On a dim($G^\circ$)$-$dim($(G^\circ) _x$)$=$dim($G$)$-$dim($G_x$) car $(G_x)^\circ \subset(G^\circ) _x \subset G_x$, d'où dim($G_x$)$=$dim($(G^\circ) _x$). Or chaque composante de $G.x$ est l'adhérence d'un orbite pour $G^\circ$, d'où 2) d'après le cas connexe. On a $\overline{G.x}\setminus G.x=\cup_{i=1}^{n}\overline{g_iG^\circ .x}\setminus g_iG^\circ .x=\cup_{i=1}^{n}g_i(\overline{G^\circ .x}\setminus G^\circ .x)$ qui est une union finie de fermés de dimension inférieure à $\overline{G .x}$ ce qui prouve 3). On utilise le même argument pour prouver 4) dans le cas général.
+Enfin, $G$ n'est pas connexe, on écrit $G=\cup_{i=1}^{n}g_iG^\circ .x=\cup_{i=1}^{n}G^\circ g_i.x$ car $G^o$ est normal. D'où $\overline{G.x}=\cup_{i=1}^{n}\overline{g_iG^\circ .x}$. Les $\overline{g_iG^\circ}$ sont égales où disjointes, c'est donc la décomposition en composantes irréductibles. On construit un ouvert de $\overline{G.x}$ inclus dans $G.x$ en posant $U=G^\circ .x\setminus \cup_{i=2}^{n}\overline{g_iG^\circ .x}$. On a $\dim G^o-\dim (G^o) _x=\dim G -\dim G_x$ car $(G_x)^o \subset(G^o)_x \subset G_x$, d'où $\dim G_x=\dim (G^o) _x$. Or chaque composante de $G.x$ est l'adhérence d'un orbite pour $G^o$, d'où 2) d'après le cas connexe. On a $\overline{G.x}\setminus G.x=\cup_{i=1}^{n}\overline{g_iG^o .x}\setminus g_iG^o .x=\cup_{i=1}^{n}g_i(\overline{G^\circ .x}\setminus G^o .x)$ qui est une union finie de fermés de dimension inférieure à $\overline{G .x}$ ce qui prouve 3). On utilise le même argument pour prouver 4) dans le cas général.
 \end{proof}
 
 \begin{defn}[$G$-module, simple, semi-simple]
-Une représentation de $G$, ou $G$-module (rationnel) est un couple $(V, \rho)$ où $V$ est un $k$-espace vectoriel de dimension finie et $\rho$ un morphisme de groupes algébriques de $G$ dans $GL(V)$.\\
-On étend cette définition au cas où $V$ est de dimension infinie, on demande alors que $V$ soit réunion de $G$-modules de dimension finie.\\
+Une représentation de $G$, ou $G$-module (rationnel) est un couple $(V, \rho)$ où $V$ est un $k$-espace vectoriel de dimension finie et $\rho$ un morphisme de groupes algébriques de $G$ dans $GL(V)$. On étend cette définition au cas où $V$ est de dimension infinie en demandant que $V$ soit réunion de $G$-modules de dimension finie.
+
 On dit qu'un $G$-module est simple si il n'admet pas de sous $G$-module non trivial. On dit qu'un $G$-module est semi-simple si tout sous $G$-module admet un $G$-module supplémentaire.
 \end{defn}
 
 \begin{prop}\label{GmoduleSectionsGlobales}
-Soit $G$ un groupe algébrique et $X$ une $G$-variété. $k[X]$ est naturellement muni d'une action $(g.f)(x):=f(g^{-1}.x), \forall f\in k[X], g\in G,x\in X$\\
-Muni de cette action, $k[X]$ un $G$-module.
+Soit $G$ un groupe algébrique et $X$ une $G$-variété. $\Oo(X)$ est naturellement muni d'une action $(g.f)(x):=f(g^{-1}.x), \forall f\in \Oo(X)$, pour tout $g\in G$, $x\in X$. Muni de cette action, $\Oo(X)$ un $G$-module.
 \end{prop}
 \begin{proof}
-On note $a:G\times X\rightarrow X$ le morphisme associé à l'action de $G$. Cela donne $\forall g,x \in G\times X$, $a^*(f)(g,x)=g^{-1}.f(x)=\sum_{i=1}^r\phi_i(g)\psi_i(x)$, d'où $g.f=\sum_{i=1}^r\phi_i(g)\psi_i\in k[X]$. Ainsi les translaté $g.f$ pour $g\in G$ engendrent un $k$-ev $V(f)$ de dimension finie et $G$-stable. \\
-De plus l'action est algébrique. En effet $\forall l\in V(f)^*$, qu'on prolonge en $l'\in \textrm{Vect}_k(\psi_1,...,\psi_r)^*$. On a $\forall h\in G, g\mapsto l(g.(h.f))=\sum_{i=1}^r\phi_i((gh)^{-1})l'(\psi_i)\in k[G]$.\\
-Finalement $k[X]=\cup_{f\in k[X]}V(f)$ est un G-module.
+On a pour tout $(g,x) \in G\times X$ et $f\in \Oo(X)$, $a^\sharp(X)(f)(g,x)=f(g.x)=\sum_{i=1}^r\phi_i(g)\psi_i(x)$, d'où $g^{-1}.f=\sum_{i=1}^r\phi_i(g)\psi_i\in \Oo(X)$. Ainsi les translaté $g.f$ pour $g\in G$ engendrent un $k$-espace vectoriel $V(f)$ de dimension finie et $G$-stable.
+
+Montrons que l'action est algébrique. Comme les translatés de $f$ engendrent $V(f)$, il suffit de montrer que pour tout $l\in V(f)^*$, $h,g\in G$, on a $g\mapsto l(g.(h.f))\in \Oo(G)$. On prolonge $l$ en $l'\in \vect_k(\psi_1,...,\psi_r)^*$. On a $ g\mapsto l(g.(h.f))=\sum_{i=1}^r\phi_i((gh)^{-1})l'(\psi_i)\in \Oo(G)$. 
+Finalement $\Oo(X)=\cup_{f\in \Oo(X)}V(f)$ est un G-module.
 \end{proof}
 
 \begin{thm}\label{embed}
-Soit $G$ un groupe algébrique et $X$ une $G$ variété. $X$ est isomorphe en tant que $G$-variété à une sous $G$-variété fermée d'un $G$-module de dimension finie.
+Soit $G$ un groupe algébrique et $X$ une $G$ variété affine. $X$ est isomorphe en tant que $G$-variété à une sous $G$-variété fermée d'un $G$-module de dimension finie.
 \end{thm}
+\begin{proof}
+D'après la proposition précédente on voit que $\Oo(X)=k[f_1,...,f_n]$ est engendré comme $k$-algèbre par un sous $G$-module $V$ de $\Oo(X)$ de dimension finie, en prenant par exemple la somme des $V(f_i)$ pour $1\leq i\leq n$. On a une immersion fermée $\phi:X\rightarrow V^*, x\mapsto ev_x$. Pour montrer cela, il suffit de voir que $V$ est dans l'image de $\phi^\sharp$. En effet, on a $V^{**}\subset \Oo(V^*)$, et pour tout $ev_f\in V^{**}$, on a $\phi^\sharp(ev_f)=ev_f\circ\phi=f$. Enfin, en munissant $V^*$ de la représentation duale, on a pour tout $g\in G, x\in X,f\in V$, $\phi(g.x)(f)=ev_{g.x}(f)=ev_x\circ g^{-1}.f=(g^{-1})^t(ev_x)(f)=(g.\phi(x))(f)$, ainsi $\phi$ est un morphisme de $G$-variétés.
+\end{proof}
 
 \begin{cor}
 Tout groupe algébrique est linéaire.
 \end{cor}
+\begin{proof}
+On munit $G$ de son action sur lui même par multiplication à gauche. D'après le théorème précédent on peut supposer $G\subset V$, où $(V,\rho)$ est un $G$-module avec $\rho(g).h=g.h$ pour tout $g,h\in G$. Montrons que $\rho$ est une immersion fermée. On a $\rho^\sharp(k[\gln(V)])=k[\lbrace g\in G\mapsto l(\rho(g).v)\mid l\in V^*,v\in V\rbrace]$, donc en prenant $v=e_G$, on voit que cet ensemble coïncident avec la restriction de $\Oo(X)$ à $G$. Cela montre que $\rho^\sharp$ est surjectif car $G$ est fermé dans $V$.
+\end{proof}
 
 \begin{defn}[Groupe réductif]
-Un groupe algébrique $G$ est dit réductif si tout $G$-module est semi-simple.
+Un groupe algébrique $G$ est linéairement réductif si tout $G$-module est semi-simple.
 \end{defn}
 
 \begin{ex}
-Les groupes finis et les groupe diagonalisables sont réductifs.
+Les groupes finis et les groupe diagonalisables sont linéairement réductifs.
 \end{ex}
 
 \subsection{Groupes quotients}
-\begin{thm}
-Soit $G$ un groupe algébrique et $H\leq G$ fermé. \\Alors il existe un $G$-module $V$ de dimension finie et une ligne $L\subset V$ telle que $H=Stab_G(L):=\lbrace g\in G\mid g.v\in L,\forall v\in L\rbrace$.
+\begin{thm}[Chevalley]
+Soit $G$ un groupe algébrique et $H\leq G$ fermé. \\Alors il existe un $G$-module $V$ de dimension finie et une droite $L\subset V$ telle que $H=Stab_G(L):=\lbrace g\in G\mid g.v\in L,\forall v\in L\rbrace$.
 \end{thm}
 
-\begin{thm}
+\begin{thm}[Chevalley]
 Soit $G$ un groupe algébrique et $H\lhd G$ fermé. \\Alors il existe un $G$-module $(V, \rho)$ de dimension finie tel que $H=\Ker{\rho}$.
 \end{thm}
 
@@ -113,7 +145,7 @@ Soit $f:X \mapsto Y$ un morphisme dominant de variétés irréductibles. Soit $g
 \subsection{Groupes diagonalisables, actions de groupes diagonalisables}
 
 \subsubsection{Groupes diagonalisables}
-Soit $G$ un groupe algébrique. Le groupe $X^*(G)$ des caractères de $G$ est un sous-groupe de $k[G]^\times$ qui est de type fini comme on le verra dans la partie \ref{unitGroupFiniteType}. On remarque que $X^*$ est un foncteur contravariant de la catégorie des groupes algébriques dans la catégorie des groupes abéliens de type fini, l'image d'un morphisme $G_1\xrightarrow{\phi}G_2$ étant simplement la (co)-restriction $\phi^* \,_{|X^*(G_2)}^{|X^*(G_1)}$ du comorphisme $\phi^*$ entre les algèbres de coordonnées. On signale qu'en caractéristique $p>0$, les groupes de caractères ont de plus la propriété d'être sans $p$-torsion. Tout ce qui suit reste vrai en caractéristique $p$, avec cette contrainte supplémentaire sur les groupes de caractères.
+Soit $G$ un groupe algébrique. Le groupe $X^*(G)$ des caractères de $G$ est un sous-groupe de $\Oo(G)^\times$ qui est de type fini comme on le verra dans la partie \ref{unitGroupFiniteType}. On remarque que $X^*$ est un foncteur contravariant de la catégorie des groupes algébriques dans la catégorie des groupes abéliens de type fini, l'image d'un morphisme $G_1\xrightarrow{\phi}G_2$ étant simplement la (co)-restriction $\phi^* \,_{|X^*(G_2)}^{|X^*(G_1)}$ du comorphisme $\phi^*$ entre les algèbres de coordonnées. On signale qu'en caractéristique $p>0$, les groupes de caractères ont de plus la propriété d'être sans $p$-torsion. Tout ce qui suit reste vrai en caractéristique $p$, avec cette contrainte supplémentaire sur les groupes de caractères.
 
 \begin{ex}
 \begin{enumerate}
@@ -129,15 +161,15 @@ On remarque que les caractères de $D_n$ engendrent $k[D_n]$ comme $k$-ev, ils e
 Soit $G$ un groupe algébrique. Les assertions suivantes sont équivalentes:
 \begin{enumerate}
 \item $G$ est diagonalisable (i.e. $\simeq$ à un sous-groupe fermé de $D_n$)
-\item $k[G]=\textrm{Vect}_k(X^*(G))$.
+\item $\Oo(G)=\textrm{Vect}_k(X^*(G))$.
 \item Tout $G$-module est somme directe $G$-modules de dimension 1.
 \end{enumerate}
 \end{prop}
 \begin{proof}
 \begin{enumerate}
-\item 1)$\implies$2) La restriction $k[D_n]\xrightarrow{res_G} k[G]$ est surjective et la restriction d'un caractère est un caractère.
+\item 1)$\implies$2) La restriction $k[D_n]\xrightarrow{res_G} \Oo(G)$ est surjective et la restriction d'un caractère est un caractère.
 \item 2)$\implies$3) $G$ est abélien, car $\forall \chi\in X^*(G),\,g,h\in G, \chi(gh)=\chi(hg)$. C'est donc vrai pour toute fonction régulière, on en conclut $gh=hg$.\\
-On observe que l'action naturelle de $G$ sur $k[G]$ est semi-simple. En effet, les caractères forment une base de diagonalisation de $k[G]$. Ainsi $G$ est semi-simple par la décomposition de Jordan. Soit $(V,\rho)$ le $G$-module considéré et $W\subset V$ un sous $G$-module de dimension finie, disons $n$. Par la décomposition de Jordan,  $\rho(G)$ est semi-simple. De plus, c'est un sous groupe abélien fermé de $GL_n$. Il est donc conjugué à un sous-groupe fermé de $D_n$. On voit ainsi que $V=\bigoplus_{\chi \in X^*(G)}V_\chi$, où $V_\chi:=\lbrace v\in v\mid g.f=\chi(g)f,\, \forall g\in G \rbrace$. En effet, ils sont en somme directe, et tout élément de $V$ se décompose de cette manière.
+On observe que l'action naturelle de $G$ sur $\Oo(G)$ est semi-simple. En effet, les caractères forment une base de diagonalisation de $\Oo(G)$. Ainsi $G$ est semi-simple par la décomposition de Jordan. Soit $(V,\rho)$ le $G$-module considéré et $W\subset V$ un sous $G$-module de dimension finie, disons $n$. Par la décomposition de Jordan,  $\rho(G)$ est semi-simple. De plus, c'est un sous groupe abélien fermé de $GL_n$. Il est donc conjugué à un sous-groupe fermé de $D_n$. On voit ainsi que $V=\bigoplus_{\chi \in X^*(G)}V_\chi$, où $V_\chi:=\lbrace v\in v\mid g.f=\chi(g)f,\, \forall g\in G \rbrace$. En effet, ils sont en somme directe, et tout élément de $V$ se décompose de cette manière.
 \item 3)$\implies$1) On peut supposer $G\subset GL_n$, et considérer l'action naturelle sur $k^n$ après choix d'une base $(e_1,...,e_n)$. Par hypothèse, on peut écrire $k^n=(f_1)\oplus...\oplus (f_n)$, avec les $(f_i)$ sous $G$-module de dimension 1. $G$ est donc conjugué à un sous-groupe de $D_n$.
 \end{enumerate}
 \end{proof}
@@ -145,7 +177,7 @@ On observe que l'action naturelle de $G$ sur $k[G]$ est semi-simple. En effet, l
 Ce constat motive la définition suivante:
 
 \begin{defn}[Tore, Groupe diagonalisable]
-Un groupe diagonalisable est un groupe algébrique $G$ tel que $k[G]=\textrm{Vect}_k(X^*(G))$. Un tore est un groupe diagonalisable connexe.
+Un groupe diagonalisable est un groupe algébrique $G$ tel que $\Oo(G)=\textrm{Vect}_k(X^*(G))$. Un tore est un groupe diagonalisable connexe.
 \end{defn}
 
 On travaille désormais dans la catégorie des groupes diagonalisables. On considère un groupe diagonalisable $G$ et le groupe $X^{**}(G):=(X^*)^2(G)$.
@@ -155,13 +187,13 @@ $G$ et $X^{**}(G)$ sont naturellement isomorphes en tant que groupes abstraits, 
 \end{prop}
 \begin{proof}
 ev$_G$ est injective: Soit $g\in G$ tel que $\chi(g)=1=\chi(e_G),\forall \chi\in X^*(G)$. Alors $g=e_G$ car $G$ est un groupe diagonalisable.\\
-ev$_G$ est surjective: Soit $\phi\in\chi^{**}(G)$. On a un prolongement unique de $\phi$ en un morphisme de $k$-algèbre $k[X^*(G)]=k[G]\rightarrow k$ qui est donc de la forme $k[G]\rightarrow k, f\mapsto f(g)$ pour un $g\in G$. En restreignant à $X^*(G)$, on trouve que $\phi=\textrm{ev}_G(g)$.
+ev$_G$ est surjective: Soit $\phi\in\chi^{**}(G)$. On a un prolongement unique de $\phi$ en un morphisme de $k$-algèbre $k[X^*(G)]=\Oo(G)\rightarrow k$ qui est donc de la forme $\Oo(G)\rightarrow k, f\mapsto f(g)$ pour un $g\in G$. En restreignant à $X^*(G)$, on trouve que $\phi=\textrm{ev}_G(g)$.
 \end{proof}
 
 Autrement dit on a un isomorphisme de foncteurs $(X^*)^2\simeq Id$, d'où une équivalence de catégories entre les groupes diagonalisables et les groupes abéliens de type fini. Une autre façon de voir cela est d'introduire l'algèbre de groupe d'un groupe abélien de type fini M, c'est par définition $k[M]=\lbrace \sum_{finie} \lambda_gg,\,\lambda_g\in k,g\in G \rbrace$ avec la multiplication définie par l'opération de groupe de $G$. La propriété suivante montre que l'on construit ainsi un autre inverse de $X^*(.)$
 \begin{prop}
 Soient, $M, M_1, M_2$ des groupes abéliens de type fini, et $G$ un groupe diagonalisable.\\
-Alors $k[M]$ est de type fini, réduite et on a $k[M_1\oplus M_2]\simeq k[M_1]\otimes k[M_2]$. De plus, $k[M]$ est naturellement muni d'une structure d'algèbre de Hopf et on a $k[G]=k[X^*(G)]$ et donc $G=\spec\circ k[X^*(G)]$.
+Alors $k[M]$ est de type fini, réduite et on a $k[M_1\oplus M_2]\simeq k[M_1]\otimes k[M_2]$. De plus, $k[M]$ est naturellement muni d'une structure d'algèbre de Hopf et on a $\Oo(G)=k[X^*(G)]$ et donc $G=\spec\circ k[X^*(G)]$.
 \end{prop}
 \begin{proof}
 On a deux morphismes d'algèbre $k[M_1]\rightarrow k[M_1\oplus M_2], e_{m_1}\mapsto e_{(m_1,0)}$ et $k[M_2]\rightarrow k[M_1\oplus M_2], e_{m_2}\mapsto e_{(0,e_{m_2})}$, d'où l'existence d'un morphisme $k[M_1]\otimes k[M_2]$ dont on vérifie que c'est un isomorphisme.\\
@@ -184,9 +216,9 @@ Soit $G$ un groupe diagonalisable. Alors:
 On a montré dans la partie précédente que l'algèbre des coordonnées d'un groupe diagonalisable $G$ était naturellement munie d'une $X^*(G)$-graduation. Cela peut être vu comme la traduction algébrique de l'action de $G$ sur lui même par multiplication à gauche. On précise, cela ci-dessous en montrant que les foncteurs $\spec$ et $k[.]$ réalisent une équivalence de catégories entre les variétés affines munies d'une action d'un groupe diagonalisable et les algèbres graduées par un groupe abélien de type fini. On a déjà l'équivalence entre variétés affines et algèbres affines. Il s'agit donc de vérifier que les (co)-restrictions des deux foncteurs $k[.]$ et $\spec$ sont bien définies et que les actions et graduations sont préservées.
 
 \begin{cons}
-Soit $H$ un groupe diagonalisable et X une $H$-variété affine. Le $H$-module $k[X]$ est somme directe de $H$-module de dimension 1 d'après la partie précédente et on peut écrire: 
+Soit $H$ un groupe diagonalisable et X une $H$-variété affine. Le $H$-module $\Oo(X)$ est somme directe de $H$-module de dimension 1 d'après la partie précédente et on peut écrire: 
 \begin{center}
-$k[X]=\bigoplus_{\chi \in X^*(H)}V_\chi$,  où $V_\chi:=\lbrace f\in k[X]\mid h.f=\chi(h)f,\, \forall h\in H \rbrace$ 
+$\Oo(X)=\bigoplus_{\chi \in X^*(H)}V_\chi$,  où $V_\chi:=\lbrace f\in \Oo(X)\mid h.f=\chi(h)f,\, \forall h\in H \rbrace$ 
 \end{center}
 On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, cette construction est fonctorielle, en effet en considérant les diagrammes commutatifs ci-dessous. Le premier est la traduction de la donnée d'un morphisme $(\widetilde{\phi},\phi)$ d'une $H$-variété affine $X$ vers une $H'$-variété affine $X'$. Le second est obtenu par passage aux algèbres de coordonnées.
 \begin{multicols}{2}
@@ -200,7 +232,7 @@ On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, c
 	\columnbreak
 	\begin{center}
 		\begin{tikzcd}
-  		k[H]\otimes k[X]   & k[X] \arrow[l, "a_1^*"] \\ 
+  		k[H]\otimes \Oo(X)   & \Oo(X) \arrow[l, "a_1^*"] \\ 
   		k[H']\otimes k[X'] \arrow[u, "\widetilde{\phi}^* \otimes \phi^*"] & k[X'] \arrow[u, "\phi"] \arrow[l, "a_2^*"] 
 	\end{tikzcd}
 	\end{center}
@@ -269,7 +301,7 @@ Soit $A$ une algèbre affine $K$-graduée, $X:=\spec A$ muni de l'action de $H:=
 \end{prop}
 \begin{proof}
 La deuxième ligne est obtenue par le théorème \ref{groupequotient}, puis application du foncteur $X^*$. Elle est bien exacte par exactitude du foncteur $X^*$. La flèche verticale centrale est l'isomorphisme canonique déduit de $X^*\circ\spec\circ k[.]\simeq Id$.\\ 
-Comme $\overline{H.x}$ est $H$-stable, la graduation est préservée sur $k[\overline{H.x}]$ d'après la proposition \ref{stablehomogene}. De plus si $f\in k[X]_{\omega}$ est telle que $f(x)\neq 0$, cela reste le cas modulo $\mathcal{I}_{X}(\overline{H.x})_\omega$ et réciproquement. Ainsi, $S_x$ et $K_x$ ne sont pas modifiés si on remplace $X$ par $\overline{H.x}$. \\
+Comme $\overline{H.x}$ est $H$-stable, la graduation est préservée sur $k[\overline{H.x}]$ d'après la proposition \ref{stablehomogene}. De plus si $f\in \Oo(X)_{\omega}$ est telle que $f(x)\neq 0$, cela reste le cas modulo $\mathcal{I}_{X}(\overline{H.x})_\omega$ et réciproquement. Ainsi, $S_x$ et $K_x$ ne sont pas modifiés si on remplace $X$ par $\overline{H.x}$. \\
 Considérons le fermé propre $\overline{H.x}\setminus H.x$, éventuellement vide. Il est $H$-stable comme réunion d'orbites. Alors $\mathcal{I}_{\overline{H.x}}(\overline{H.x}\setminus H.x)$ est homogène d'après la proposition \ref{stablehomogene}, et $\neq \lbrace 0\rbrace$. Choisissons $f\neq0$ homogène dans ce $H$-module, c'est donc un vecteur propre. Ainsi, $f$ est non-nulle quelque part sur $H.x$ et donc partout par transitivité et choix de $f$. On en conclut $H.x=(\overline{H.x})_f$. Considérons la graduation naturelle associée à $k[\overline{H.x}]_f$. Comme on a inversé $f$, le monoïde de poids est potentiellement plus gros. En revanche on voit facilement que $K_x$ n'est pas modifié.\\
 Supposons donc $X=H.x$. Dans ce cas, on voit qu'une fonction homogène non-nulle est partout non-nulle, donc inversible. On a donc dans ce cas $S_x=K_x=S(k[H.x])=K(k[H.x])$, où $S(k[H.x])$ et $K(k[H.x])$ sont respectivement les monoïdes et groupes de poids de l'algèbre $K$-graduée $k[H.x]$. \\
 D'après \ref{facto} (ou \ref{groupQuotientGeometrique}) et \ref{ZMTCor} on a le diagramme commutatif de gauche ci-dessous. Le diagramme de droite est obtenu par application du foncteur $k[.]$.
@@ -330,41 +362,41 @@ Sinon comme $K(A)\subsetneq K$, on peut choisir $g\neq e_H\in H$ tel que $g\in\c
 \section{Théorie des invariants}
 \subsection{L'algèbre des invariants}
 
-Soit $G$ un groupe algébrique et $X$ une $G$-variété affine. $k[X]$ est un $G$-module rationnel pour l'action naturelle de $G$ sur les fonctions régulières. On définit la sous-algèbre des invariants $k[X]^G:=\lbrace f\in k[X]\mid g.f=f,\, \forall g\in G\rbrace$. C'est par définition la sous-algèbre des fonctions constantes sur les orbites de l'action de $G$ sur $X$.
+Soit $G$ un groupe algébrique et $X$ une $G$-variété affine. $\Oo(X)$ est un $G$-module rationnel pour l'action naturelle de $G$ sur les fonctions régulières. On définit la sous-algèbre des invariants $\Oo(X)^G:=\lbrace f\in \Oo(X)\mid g.f=f,\, \forall g\in G\rbrace$. C'est par définition la sous-algèbre des fonctions constantes sur les orbites de l'action de $G$ sur $X$.
 
 Une question naturelle est de se demander si cette algèbre est de type fini sur $k$, c'est le $14$e des $23$ problèmes que Hilbert pose en $1900$ à la communauté mathématique. En $1959$, Nagata exhibe une algèbre d'invariants pour l'action d'un groupe algébrique qui n'est pas de type fini sur $k$, répondant ainsi au problème. Avec des hypothèses sur $G$, on peut cependant montrer que c'est le cas, c'est l'objectif de cette partie.\\
-Supposons $G$ réductif. Le $G$-module $k[X]$ est alors semi-simple, en particulier, $k[X]^G$ admet un supplémentaire $G$-stable que l'on note $k[X]_G$. On définit l'opérateur de Reynolds $R_{k[X]}$ comme la projection sur $k[X]^G$ associée à cette décomposition. Voici quelques propriétés de $R_{k[X]}$:
+Supposons $G$ réductif. Le $G$-module $\Oo(X)$ est alors semi-simple, en particulier, $\Oo(X)^G$ admet un supplémentaire $G$-stable que l'on note $\Oo(X)_G$. On définit l'opérateur de Reynolds $R_{\Oo(X)}$ comme la projection sur $\Oo(X)^G$ associée à cette décomposition. Voici quelques propriétés de $R_{\Oo(X)}$:
 
 
 \begin{prop}\label{reynolds}
 \begin{enumerate}
 \item Soit $f:V \rightarrow W$ un morphisme de $G$-module et $f^G:V^G \rightarrow W^G$ le morphisme induit. On a $R_Wf=fR_V$. En particulier, si $f$ est surjective, $f^G$ l'est aussi.
-\item $R_{k[X]}$ est $K[X]^G$-linéaire
+\item $R_{\Oo(X)}$ est $\Oo(X)^G$-linéaire
 \end{enumerate}
 
 \end{prop}
 \begin{proof}
 \begin{enumerate}
 \item Ok
-\item Soit $a\in k[X]^G$. on considère $m_a$ la multiplication par $a$ dans $k[X]$. C'est un endomorphisme de $G$-module, il commute donc avec $R_{k[X]}$. 
+\item Soit $a\in \Oo(X)^G$. on considère $m_a$ la multiplication par $a$ dans $\Oo(X)$. C'est un endomorphisme de $G$-module, il commute donc avec $R_{\Oo(X)}$. 
 \end{enumerate}
 \end{proof}
 
 \begin{thm}[Hilbert]\label{hilbert}
-Soit $G$ un groupe réductif et $X$ une $G$-variété affine. Alors l'algèbre des invariant $k[X]^G$ est de type fini.
+Soit $G$ un groupe réductif et $X$ une $G$-variété affine. Alors l'algèbre des invariant $\Oo(X)^G$ est de type fini.
 \end{thm}
 \begin{proof}
 Supposons que $X$ soit un $G$-module $V$ de dimension finie. L'action de $k^*$ sur $V$ par homothétie donne une $\NN$-graduation $k[V]=\bigoplus_{n=0}^{\infty}k[V]_n$, $k[V]_n$ étant le sous espace des polynômes homogènes de degré n. Cette graduation est $G$-stable et se restreint sur l'algèbre des invariants en une $\NN$-graduation $k[V]^G=\bigoplus_{n=0}^{\infty}k[V]^G_n$. Or on remarque que $k[V]^G$ est noetherien. En effet, soit $I$ un idéal de $k[V]^G$, et $J$ son extension dans $k[V]$. $J$ est un sous $G$-module, donc la contraction de $J$ dans $k[V]^G$ est $R_{k[V]}(J)=IR_{k[V]}(k[V])=I$. On voit donc que la condition de chaîne est satisfaite sur $k[V]^G$ si elle satisfaite sur $k[V]$, ce qui est le cas car ce dernier est noetherien par le théorème de la base de Hilbert. Ainsi, on a le résultat d'après la proposition \ref{noethgrad}.\\
-Dans le cas général, on peut d'après le théorème \ref{embed} supposer $X$ inclus dans un $G$-module $V$. On obtient alors un $G$-morphisme surjectif $k[V] \rightarrow k[X]$ qui induit un $G$-morphisme surjectif $k[V]^G \rightarrow k[X]^G$ d'après la proposition \ref{reynolds}. Cela montre que $k[X]^G$ est de type fini.
+Dans le cas général, on peut d'après le théorème \ref{embed} supposer $X$ inclus dans un $G$-module $V$. On obtient alors un $G$-morphisme surjectif $k[V] \rightarrow \Oo(X)$ qui induit un $G$-morphisme surjectif $k[V]^G \rightarrow \Oo(X)^G$ d'après la proposition \ref{reynolds}. Cela montre que $\Oo(X)^G$ est de type fini.
 \end{proof}
 
 On constate que cette preuve n'est pas effective. Il est en général difficile de calculer l'algèbre des invariants. On présente ci-dessous la méthode des sections qui permet le calcul dans certains cas.\\
-Soit $S\subset X$ une sous-variété fermée. Définissons $Z(S)=\lbrace g\in G\mid g.s=s,\,\forall s \in S\rbrace$ et $N(S)=\lbrace g\in G\mid g.s\in S,\,\forall s \in S\rbrace$. Clairement, $Z(S)$ est un sous-groupe normal de $N(S)$, et le quotient $W=N(S)/Z(S)$ agit sur $S$. La surjection $k[X]\rightarrow k[S]$, induit un morphisme $k[X]^G\xrightarrow{\phi} k[S]^W$.\\
-Supposons que l'on ait un ouvert dense $U\subset X$ tel que $\forall x\in U,\, G.x$ intersecte $S$, alors on voit que $\phi$ est injective. Si de plus, $k[S]^W$ est engendré par des $\phi(f_1),...,\phi(f_r)$, alors $\phi$ est un isomorphisme et $k[X]^G$ est engendré par $f_1,...,f_r$.
+Soit $S\subset X$ une sous-variété fermée. Définissons $Z(S)=\lbrace g\in G\mid g.s=s,\,\forall s \in S\rbrace$ et $N(S)=\lbrace g\in G\mid g.s\in S,\,\forall s \in S\rbrace$. Clairement, $Z(S)$ est un sous-groupe normal de $N(S)$, et le quotient $W=N(S)/Z(S)$ agit sur $S$. La surjection $\Oo(X)\rightarrow k[S]$, induit un morphisme $\Oo(X)^G\xrightarrow{\phi} k[S]^W$.\\
+Supposons que l'on ait un ouvert dense $U\subset X$ tel que $\forall x\in U,\, G.x$ intersecte $S$, alors on voit que $\phi$ est injective. Si de plus, $k[S]^W$ est engendré par des $\phi(f_1),...,\phi(f_r)$, alors $\phi$ est un isomorphisme et $\Oo(X)^G$ est engendré par $f_1,...,f_r$.
 
 \begin{ex}
 $G=GL_n$,\, $X=M_n$,\, $g.A=gAg^{-1},\, S=D_n,\, U=X_{disc(\chi )}$. En considérant un élément de $U$, qui a donc ses valeurs propres deux à deux distinctes, on a par un calcul direct $Z(S)=D_n$. Puis on a $N(S)=\lbrace\textrm{matrices monomiales}\rbrace$ car la conjugaison préserve les espaces propres. Ainsi, $W$ est isomorphe au groupe symétrique $\Sigma_n$ et agit sur $S$ en permutant les entrées diagonales. On a ainsi $k[S]^W=k[\sigma_1,...,\sigma _n]$, l'algèbre engendrée par les fonctions symétriques élémentaires. C'est une algèbre de polynômes.\\
-Soient $f_1,...,f_n$ les coefficient du polynôme caractéristique générique. Ce sont des éléments de $k[X]^G$, et on a $f_{i| S}=(-1)^i\sigma _i$, d'où $k[X]^G=k[f_1,...,f_n]$.
+Soient $f_1,...,f_n$ les coefficient du polynôme caractéristique générique. Ce sont des éléments de $\Oo(X)^G$, et on a $f_{i| S}=(-1)^i\sigma _i$, d'où $\Oo(X)^G=k[f_1,...,f_n]$.
 \end{ex}
 
 \subsection{Quotient d'une variété algébrique sous l'action d'un groupe algébrique}
@@ -378,7 +410,7 @@ On peut ainsi transporter cette définition dans la catégorie des variétés al
 On considère l'action naturelle de $GL_n$ sur $\AAA^n$. Le quotient catégorique existe et est un point. En effet soir $f:\AAA^n\rightarrow Z$ constant sur les orbites, alors $f$ est constante car il existe un orbite dense. En revanche il y a un deuxième orbite, c'est le fermé $\lbrace 0\rbrace$. 
 \end{ex}
 
-On suppose $X$ affine et $k[X]^G$ de type fini avec $f_1,...,f_r$ des générateurs, c'est en particulier le cas lorsque $G$ est réductif d'aprés le théorème \ref{hilbert}. Dans ce cadre, l'algèbre des invariants définit une variété algébrique affine, notons la $Y$. On définit le morphisme $\phi :X\rightarrow k^r,\, x\mapsto (f_1(x),...,f_r(x))$. Son comorphisme $\phi^*$ admet une factorisation: $k[t_1,...,t_r]\twoheadrightarrow k[X]^G\xrightarrow{\subset}k[X]$, d'où $Y\simeq \overline{\phi (X)}$. On peut donc voir $X \xrightarrow{\phi} \overline{\phi (X)}$ comme une réalisation du morphisme $\pi: X\rightarrow Y$ associé à $k[X]^G\subset k[X]$. On appelle ce morphisme, le morphisme quotient. De la même manière on voit que tout morphisme $G$-invariant de variétés affines $X\rightarrow Z$ se factorise à travers $Y$. De ce fait, $Y$ semble être un bon candidat pour le quotient catégorique. Toutefois il faut être prudent, dans \cite{LAGFerrer} 6.4.10, on exhibe un exemple de cette situation qui n'admet pas de quotient catégorique. On a toutefois le résultat suivant:
+On suppose $X$ affine et $\Oo(X)^G$ de type fini avec $f_1,...,f_r$ des générateurs, c'est en particulier le cas lorsque $G$ est réductif d'aprés le théorème \ref{hilbert}. Dans ce cadre, l'algèbre des invariants définit une variété algébrique affine, notons la $Y$. On définit le morphisme $\phi :X\rightarrow k^r,\, x\mapsto (f_1(x),...,f_r(x))$. Son comorphisme $\phi^*$ admet une factorisation: $k[t_1,...,t_r]\twoheadrightarrow \Oo(X)^G\xrightarrow{\subset}\Oo(X)$, d'où $Y\simeq \overline{\phi (X)}$. On peut donc voir $X \xrightarrow{\phi} \overline{\phi (X)}$ comme une réalisation du morphisme $\pi: X\rightarrow Y$ associé à $\Oo(X)^G\subset \Oo(X)$. On appelle ce morphisme, le morphisme quotient. De la même manière on voit que tout morphisme $G$-invariant de variétés affines $X\rightarrow Z$ se factorise à travers $Y$. De ce fait, $Y$ semble être un bon candidat pour le quotient catégorique. Toutefois il faut être prudent, dans \cite{LAGFerrer} 6.4.10, on exhibe un exemple de cette situation qui n'admet pas de quotient catégorique. On a toutefois le résultat suivant:
 
 \begin{thm}\label{goodquotientthm}
 Soit $G$ un groupe réductif et $X$ une $G$-variété affine.
@@ -391,10 +423,10 @@ Soit $G$ un groupe réductif et $X$ une $G$-variété affine.
 \end{thm}
 \begin{proof}
 \begin{enumerate}
-\item Soit $x\in Y$ et $m_x$ l'ideal maximal de $k[X]^G$ correspondant. La fibre $\pi^{-1}(x)$ correspond à l'ensemble des idéaux maximaux contenant l'extension $I$ de $m_x$ dans $k[X]$. Or on a déjà vu que l'extension dans $k[X]$ était injective, $I$ est donc un idéal propre contenu dans au moins un idéal maximal. La fibre étant non-vide, $\pi$ est surjective.
+\item Soit $x\in Y$ et $m_x$ l'idéal maximal de $\Oo(X)^G$ correspondant. La fibre $\pi^{-1}(x)$ correspond à l'ensemble des idéaux maximaux contenant l'extension $I$ de $m_x$ dans $\Oo(X)$. Or on a déjà vu que l'extension dans $\Oo(X)$ était injective, $I$ est donc un idéal propre contenu dans au moins un idéal maximal. La fibre étant non-vide, $\pi$ est surjective.
 \item L'existence de la factorisation a déjà était vue. Avec 1) on a maintenant l'unicité.
-\item On note $i$ l'inclusion $Z\subset X$. $\pi_Xi$ est constant sur les orbites de $Z$ d'où l'existence d'un unique morphisme $\phi:Z//G\rightarrow X//G$ tel que $\phi\pi_Z=\pi_Xi$. La projection $k[X] \rightarrow k[Z]$ est un morphisme de $G$-module surjectif. D'après la proposition \ref{reynolds}, cette projection induit un morphisme de $k$-algèbre surjectif $k[X]^G \xrightarrow{\phi^*} k[Z]^G$, donc $\phi$ est une immersion fermée.
-Soit $I$ (resp. $I'$) l'idéal de $Z$ (resp. $Z'$) dans $k[X]$. L'idéal de $Z\cap Z'$ est $I+I'$ et l'idéal de $\pi_X(Z)$ est $\mathcal{I}_{X//G}(\pi_X(Z))=I\cap k[X]^G=R_X(I)$. Ainsi $\mathcal{I}_{X//G}(\pi_X(Z\cap Z'))=R_X(I+I')=R_X(I)+R_X(I')=\mathcal{I}_{X//G}(\pi_X(Z)\cap \pi_X(Z'))$.
+\item On note $i$ l'inclusion $Z\subset X$. $\pi_Xi$ est constant sur les orbites de $Z$ d'où l'existence d'un unique morphisme $\phi:Z//G\rightarrow X//G$ tel que $\phi\pi_Z=\pi_Xi$. La projection $\Oo(X) \rightarrow k[Z]$ est un morphisme de $G$-module surjectif. D'après la proposition \ref{reynolds}, cette projection induit un morphisme de $k$-algèbre surjectif $\Oo(X)^G \xrightarrow{\phi^*} k[Z]^G$, donc $\phi$ est une immersion fermée.
+Soit $I$ (resp. $I'$) l'idéal de $Z$ (resp. $Z'$) dans $\Oo(X)$. L'idéal de $Z\cap Z'$ est $I+I'$ et l'idéal de $\pi_X(Z)$ est $\mathcal{I}_{X//G}(\pi_X(Z))=I\cap \Oo(X)^G=R_X(I)$. Ainsi $\mathcal{I}_{X//G}(\pi_X(Z\cap Z'))=R_X(I+I')=R_X(I)+R_X(I')=\mathcal{I}_{X//G}(\pi_X(Z)\cap \pi_X(Z'))$.
 \item d'après 3), $\pi_X$ envoie deux orbites fermés distincts sur deux points distincts.
 \end{enumerate}
 \end{proof}
