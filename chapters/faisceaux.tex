@@ -329,7 +329,7 @@ Comme $L^{-1}$ admet aussi une $G$-linéarisation d'après \ref{}, il s'agit d'u
 En se rappelant le résultat \ref{extregularnormal}, on voit que la "géométrie en codimension 1" d'une variété normale, c'est à dire le comportement des fonctions sur les fermés irréductibles de codimension 1, contient beaucoup d'information sur la variété. Ces fermés sont appelés des diviseurs premiers, on va voir qu'ils permettent de définir un invariant particulièrement intéressant de la variété, et fondamental pour la construction de l'anneau de Cox, c'est le groupe des classes. Notre cadre est celui d'une variété normale que l'on supposera de plus irréductible pour plus de simplicité, suivant la remarque \ref{normaluniondisjointe}.
 
 \begin{defn}[Diviseur premier, diviseur de Weil, diviseur effectif]
-Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une sous-variété fermée irréductible de codimension 1. On définit $\wdiv(X)$ le groupe libre engendré par les diviseurs premiers. Un élément de $\wdiv(X)$ est appelé un diviseur de Weil. Enfin, un diviseur est dit effectif si il est à coefficients $\geq 0$. 
+Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une sous-variété fermée irréductible de codimension 1. On définit $\wdiv(X)$ le groupe abélien libre engendré par les diviseurs premiers. Un élément de $\wdiv(X)$ est appelé un diviseur de Weil. Enfin, un diviseur est dit effectif si il est à coefficients $\geq 0$. 
 \end{defn}
 On introduit maintenant pour chaque diviseur premier $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles en $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. Soit $\eta$ le point générique de $D$, et $\mathcal{O}_{\eta,X}$ son anneau local. Par hypothèse et grâce aux propriétés de la localisation, il est noethérien normal et de dimension 1, c'est donc un anneau de valuation discrète. La valuation associée $v_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
 
@@ -501,6 +501,7 @@ Réciproquement montrons que la donnée d'un faisceau inversible $\Ll$ sur $X$ e
 Notons que cette propriété caractérise l'espace projectif $\PP^n_k$ à isomorphisme près. En effet il représente le foncteur (voir stacks)...
 
 \subsubsection{Variétés quasi-projectives, faisceaux inversible très amples}
+
 
 \begin{defn}
 Soit $X$ une variété et $\Ll$ un faisceau inversible sur $X$ engendré par une famille finie de sections globales. Si ces sections définissent une immersion $X\xhookrightarrow{}\PP_k^n$, on dit que $\Ll$ est très ample. Cela revient à dire que $\Ll\simeq i^*\Oo(1)$  pour une immersion $i:\xhookrightarrow{}\PP_k^n$.\\
