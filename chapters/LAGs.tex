@@ -18,7 +18,7 @@ soient des morphismes de variétés. Les morphismes de groupes algébriques sont
 \begin{enumerate}
 \item Tout groupe fini est algébrique
 \item Le groupe linéaire $\gln_n(k)$ est l'ouvert principal de $\mn_n(k)$ définit par le déterminant. En effet, le produit et l'inverse sont des applications polynomiales en les coordonnées. Par exemple le groupe $\GG_m:=\gln_1(k)$.
-\item Tout sous groupe fermé de $\gln_n(k)$ est un groupe algébrique. Par exemple D$_n$, le sous groupe des matrices diagonales est défini par l'annulation des coefficients hors-diagonale.
+\item Tout sous groupe fermé de $\gln_n(k)$ est un groupe algébrique. Par exemple $\sln_n(k)$ le sous-groupe des matrices de déterminant $1$. Mentionnons aussi D$_n$, le sous groupe des matrices diagonales est défini par l'annulation des coefficients hors-diagonale.
 \end{enumerate}
 \end{ex}
 
@@ -76,22 +76,21 @@ Soit $G$ un groupe algébrique et $X$ une $G$-variété. $\Oo(X)$ est naturellem
 \begin{proof}
 On a pour tout $(g,x) \in G\times X$ et $f\in \Oo(X)$, $a^\sharp(X)(f)(g,x)=f(g.x)=\sum_{i=1}^r\phi_i(g)\psi_i(x)$, d'où $g^{-1}.f=\sum_{i=1}^r\phi_i(g)\psi_i\in \Oo(X)$. Ainsi les translaté $g.f$ pour $g\in G$ engendrent un $k$-espace vectoriel $V(f)$ de dimension finie et $G$-stable.
 
-Montrons que l'action est algébrique. Comme les translatés de $f$ engendrent $V(f)$, il suffit de montrer que pour tout $l\in V(f)^*$, $h,g\in G$, on a $g\mapsto l(g.(h.f))\in \Oo(G)$. On prolonge $l$ en $l'\in \vect_k(\psi_1,...,\psi_r)^*$. On a $ g\mapsto l(g.(h.f))=\sum_{i=1}^r\phi_i((gh)^{-1})l'(\psi_i)\in \Oo(G)$. 
-Finalement $\Oo(X)=\cup_{f\in \Oo(X)}V(f)$ est un G-module.
+Montrons que l'action est algébrique. Comme les translatés de $f$ engendrent $V(f)$, il suffit de montrer que pour tout $l\in V(f)^*$, $h,g\in G$, on a $g\mapsto l(g.(h.f))\in \Oo(G)$. On prolonge $l$ en $l'\in \vect_k(\psi_1,...,\psi_r)^*$ et on a $ g\mapsto l(g.(h.f))=\sum_{i=1}^r\phi_i((gh)^{-1})l'(\psi_i)\in \Oo(G)$. Finalement $\Oo(X)=\cup_{f\in \Oo(X)}V(f)$ est un G-module.
 \end{proof}
 
 \begin{thm}\label{embed}
 Soit $G$ un groupe algébrique et $X$ une $G$ variété affine. $X$ est isomorphe en tant que $G$-variété à une sous $G$-variété fermée d'un $G$-module de dimension finie.
 \end{thm}
 \begin{proof}
-D'après la proposition précédente on voit que $\Oo(X)=k[f_1,...,f_n]$ est engendré comme $k$-algèbre par un sous $G$-module $V$ de $\Oo(X)$ de dimension finie, en prenant par exemple la somme des $V(f_i)$ pour $1\leq i\leq n$. On introduit le morphisme $\phi:X\rightarrow V^*, x\mapsto ev_x$, on va montrer que c'est une immersion fermée. Il suffit de voir que $V$ est dans l'image de $\phi^\sharp$. En effet, on a $V^{**}\subset \Oo(V^*)$, et pour tout $ev_f\in V^{**}$, on a $\phi^\sharp(ev_f)=ev_f\circ\phi=f$. Enfin, en munissant $V^*$ de la représentation duale, on a pour tout $g\in G, x\in X,f\in V$, $\phi(g.x)(f)=ev_{g.x}(f)=ev_x( g^{-1}.f)=(g^{-1})^t(ev_x)(f)=(g.\phi(x))(f)$, ainsi $\phi$ est un morphisme de $G$-variétés.
+D'après la proposition précédente on voit que $\Oo(X)=k[f_1,...,f_n]$ est engendré comme $k$-algèbre par un sous $G$-module $V$ de $\Oo(X)$ de dimension finie, en prenant par exemple la somme des $V(f_i)$ pour $1\leq i\leq n$. On introduit le morphisme $\phi:X\rightarrow V^*, x\mapsto ev_x$, c'est une immersion fermée. En effet, il suffit de montrer que $V$ est dans l'image de $\phi^\sharp$, or $V^{**}\subset \Oo(V^*)$, et pour tout $ev_f\in V^{**}$, on a $\phi^\sharp(ev_f)=ev_f\circ\phi=f$. Enfin, en munissant $V^*$ de la représentation duale, on a pour tout $g\in G, x\in X,f\in V$, $\phi(g.x)(f)=ev_{g.x}(f)=ev_x( g^{-1}.f)=(g^{-1})^t(ev_x)(f)=(g.\phi(x))(f)$, ainsi $\phi$ est un morphisme de $G$-variétés.
 \end{proof}
 
 \begin{cor}
 Tout groupe algébrique est linéaire.
 \end{cor}
 \begin{proof}
-On munit $G$ de son action sur lui même par multiplication à gauche. D'après le théorème précédent on peut supposer $G\subset V$, où $(V,\rho)$ est un $G$-module avec $\rho(g).h=g.h$ pour tout $g,h\in G$. Montrons que $\rho$ est une immersion fermée. On a $\rho^\sharp(k[\gln(V)])=k[\lbrace g\in G\mapsto l(\rho(g).v)\mid l\in V^*,v\in V\rbrace]$, donc en prenant $v=e_G$, on voit que cet algèbre coïncident avec la restriction des fonctions de $\Oo(V)$ à $G$. Cela montre que $\rho^\sharp$ est surjectif car $G$ est fermé dans $V$.
+On munit $G$ de son action sur lui même par multiplication à gauche. D'après le théorème précédent on peut supposer $G\subset V$, où $(V,\rho)$ est un $G$-module avec $\rho(g).h=g.h$ pour tout $g,h\in G$. Montrons que $\rho$ est une immersion fermée. On a $\rho^\sharp(k[\gln(V)])=k[\lbrace g\in G\mapsto l(\rho(g).v)\mid l\in V^*,v\in V\rbrace]$, donc en prenant $v=e_G$, on voit que cette algèbre contient la restriction des fonctions de $\Oo(V)$ à $G$. Cela montre que $\rho^\sharp$ est surjectif car $G$ est fermé dans $V$.
 \end{proof}
 
 \begin{defn}[Groupe réductif]
@@ -131,9 +130,9 @@ Alors il existe une unique factorisation
 	\end{tikzcd}
 \end{thm}
 \begin{proof}
-	Le morphisme $\phi$ recherché existe en tant que morphisme de groupes abstraits, il est G-équivariant pour les actions naturelles de G sur $\rho(G)$ et $G'$ via $\rho$ et $f$. Concrètement cela signifie $\forall g_1, g_2 \in G, \phi(\rho(g_1)\rho(g_2))=f(g_1)\phi(\rho(g_2))$. Si $G$ est connexe, d'après le lemme suivant, $\phi$ est un morphisme sur un ouvert $U$ non-vide de $\rho(G)$. Or on a un recouvrement de $\rho(G)$ par des $g.U$. En écrivant pour $x\in g.U,  \phi(x)=f(g)\phi(g^{-1}.x))$, on constate que $\phi$ est un morphisme de groupes algébriques.
+	Le morphisme $\phi$ recherché existe en tant que morphisme de groupes abstraits, il est G-équivariant pour les actions naturelles de G sur $\rho(G)$ et $G'$ via $\rho$ et $f$. Concrètement cela signifie $\forall g_1, g_2 \in G, \phi(\rho(g_1)\rho(g_2))=f(g_1)\phi(\rho(g_2))$. Si $G$ est connexe, d'après le lemme suivant, $\phi$ est un morphisme sur un ouvert $U$ non-vide de $\rho(G)$. Or on a un recouvrement de $\rho(G)$ par les ouverts $g.U$ pour $g\in G$. En écrivant pour $x\in g.U,  \phi(x)=f(g)\phi(g^{-1}.x))$, on constate que $\phi$ est un morphisme de groupes algébriques.
 	\\Supposons $G$ quelconque mais $H\leq G^\circ$. Comme $\phi$ est algébrique sur le sous-groupe $G^\circ/H$ d'après ce qui précède, on a $\phi$ algébrique partout à nouveau par G-équivariance.\\
-	On peut se ramener au cas précédent en procédant en deux étapes. Dans un premier temps, on quotiente par le sous-groupe normal connexe $H^\circ$ (on a bien $H^\circ\leq G^\circ$), puis on quotiente par le sous-groupe normal fini $H/H^\circ$. Il reste donc à prouver le cas $H$ fini, c'est un corollaire direct du théorème \ref{goodquotientthm}.
+	On peut se ramener au cas précédent en procédant en deux étapes. Dans un premier temps, on quotiente par le sous-groupe normal connexe $H^\circ$ (on a bien $H^\circ\leq G^\circ$), puis on quotiente par le sous-groupe normal fini $H/H^\circ$. Il reste donc à prouver le cas $H$ fini, qui sera un corollaire direct du théorème \ref{goodquotientthm}.
 \end{proof}
 
 \begin{lem}
@@ -162,40 +161,41 @@ Soit $f:X \mapsto Y$ un morphisme dominant de variétés irréductibles. Soit $g
 \subsection{Groupes diagonalisables, actions de groupes diagonalisables}
 
 \subsubsection{Groupes diagonalisables}
-Soit $G$ un groupe algébrique. Le groupe $X^*(G)$ des caractères de $G$ est un sous-groupe de $\Oo(G)^\times$ qui est de type fini comme on le verra dans la partie \ref{unitGroupFiniteType}. On remarque que $X^*$ est un foncteur contravariant de la catégorie des groupes algébriques dans la catégorie des groupes abéliens de type fini, l'image d'un morphisme $G_1\xrightarrow{\phi}G_2$ étant simplement la (co)-restriction $\phi^* \,_{|X^*(G_2)}^{|X^*(G_1)}$ du comorphisme $\phi^*$ entre les algèbres de coordonnées. On signale qu'en caractéristique $p>0$, les groupes de caractères ont de plus la propriété d'être sans $p$-torsion. Tout ce qui suit reste vrai en caractéristique $p$, avec cette contrainte supplémentaire sur les groupes de caractères.
+Soit $G$ un groupe algébrique. Le groupe $X^*(G)$ des caractères de $G$ est un sous-groupe de $\Oo(G)^*$ qui est de type fini comme on le verra dans la partie \ref{unitGroupFiniteType}. On remarque que $X^*$ est un foncteur contravariant de la catégorie des groupes algébriques dans la catégorie des groupes abéliens de type fini, l'image d'un morphisme $G_1\xrightarrow{\phi}G_2$ étant simplement la (co)-restriction $\phi^* \,_{|X^*(G_2)}^{|X^*(G_1)}$ du comorphisme $\phi^*$ entre les algèbres de coordonnées. On signale qu'en caractéristique $p>0$, les groupes de caractères ont de plus la propriété d'être sans $p$-torsion. Tout ce qui suit reste vrai en caractéristique $p$, avec cette contrainte supplémentaire sur les groupes de caractères.
 
 \begin{ex}
 \begin{enumerate}
-\item $X^*(GL_n)=\lbrace \textrm{det}^k\mid k\in \ZZ \rbrace\simeq\ZZ$. En effet, $k[GL_n]^\times =\lbrace \lambda\textrm{det}^k\mid k\in \ZZ, \lambda\in k^* \rbrace$, puisque $k[X_{ij}]$ est factoriel et det irréductible. En évaluant en $I_n$, on a nécessairement $\lambda=1$. Comme det$^k$ est un caractère, le résultat suit.
-\item $X^*(SL_n)={1}$ car $D(SL_n)=SL_n$.
-\item Les unités de $k[\GG_m]$ sont les monômes. On en déduit que les caractères sont exactement les $t\mapsto t^k, k\in \ZZ$. Par ailleurs, on remarque que $X^*(G_1\times G_2)=X^*(G_1)\times X^*(G_2)$, d'où $X^*(D_n)=\lbrace \textrm{monômes à coefficient unitaire} \rbrace \simeq \ZZ^n$.
+\item $X^*(\gln_n)=\lbrace \det^k\mid k\in \ZZ \rbrace\simeq\ZZ$. En effet, $\Oo(\gln_n)^* =\lbrace \lambda\textrm{det}^k\mid k\in \ZZ, \lambda\in k^* \rbrace$, puisque $k[X_{ij}]$ est factoriel et det irréductible. En évaluant en $I_n$, on a nécessairement $\lambda=1$. Comme det$^k$ est un caractère, le résultat suit.
+\item $X^*(\sln_n)={1}$ car $D(\sln_n)=\sln_n$.
+\item Les unités de $k[\GG_m]$ sont les monômes. On en déduit que les caractères sont exactement les $t\mapsto t^k, k\in \ZZ$. Par ailleurs, on montrera en \ref{unitGroupFiniteType} que $X^*(G_1\times G_2)\simeq X^*(G_1)\times X^*(G_2)$ pour tous groupes algébriques connexes $G_1$ et $G_2$, d'où $X^*(\dn_n)=\lbrace \textrm{monômes à coefficient unitaire} \rbrace \simeq \ZZ^n$.
 \end{enumerate}
 \end{ex}
 
-On remarque que les caractères de $D_n$ engendrent $k[D_n]$ comme $k$-ev, ils en forment donc une $k$-base par le lemme de Dedekind qui assurent que les caractères sont libres dans Map$(D_n, k)$. On a plus généralement:
+\begin{defn}[Groupe diagonalisable, tore]
+Un groupe diagonalisable est un groupe algébrique isomorphe à un sous groupe fermé de $\dn_n$. Un tore est un groupe diagonalisable connexe.
+\end{defn}
 
-\begin{prop}
+On remarque que les caractères de $\dn_n$ engendrent $\Oo(D_n)$ comme $k$-espace vectoriel, ils en forment donc une $k$-base par le lemme de Dedekind qui assurent que les caractères sont libres dans Map$(\dn_n, k)$. On a plus généralement:
+
+\begin{prop}\label{GroupeDiagCarac}
 Soit $G$ un groupe algébrique. Les assertions suivantes sont équivalentes:
 \begin{enumerate}
-\item $G$ est diagonalisable (i.e. $\simeq$ à un sous-groupe fermé de $D_n$)
-\item $\Oo(G)=\textrm{Vect}_k(X^*(G))$.
-\item Tout $G$-module est somme directe $G$-modules de dimension 1.
+\item $G$ est diagonalisable.
+\item $\Oo(G)=\vect_k(X^*(G))$.
+\item Tout $G$-module est somme directe $G$-modules de dimension $1$.
 \end{enumerate}
+Si l'une de ces assertions est vérifiée, tout $G$-module $V$ est naturellement un $k$-espace vectoriel $X^*(G)$ gradué
+$$V=\bigoplus_{\chi \in X^*(G)}V_{\chi}$$
+où les $V_{\chi}$ sont les sous-espaces propres pour l'action $G$. Réciproquement, tout $k$-espace vectoriel $X^*(G)$ gradué est naturellement un $G$-module.
 \end{prop}
 \begin{proof}
 \begin{enumerate}
-\item 1)$\implies$2) La restriction $k[D_n]\xrightarrow{res_G} \Oo(G)$ est surjective et la restriction d'un caractère est un caractère.
-\item 2)$\implies$3) $G$ est abélien, car $\forall \chi\in X^*(G),\,g,h\in G, \chi(gh)=\chi(hg)$. C'est donc vrai pour toute fonction régulière, on en conclut $gh=hg$.\\
-On observe que l'action naturelle de $G$ sur $\Oo(G)$ est semi-simple. En effet, les caractères forment une base de diagonalisation de $\Oo(G)$. Ainsi $G$ est semi-simple par la décomposition de Jordan. Soit $(V,\rho)$ le $G$-module considéré et $W\subset V$ un sous $G$-module de dimension finie, disons $n$. Par la décomposition de Jordan,  $\rho(G)$ est semi-simple. De plus, c'est un sous groupe abélien fermé de $GL_n$. Il est donc conjugué à un sous-groupe fermé de $D_n$. On voit ainsi que $V=\bigoplus_{\chi \in X^*(G)}V_\chi$, où $V_\chi:=\lbrace v\in v\mid g.f=\chi(g)f,\, \forall g\in G \rbrace$. En effet, ils sont en somme directe, et tout élément de $V$ se décompose de cette manière.
-\item 3)$\implies$1) On peut supposer $G\subset GL_n$, et considérer l'action naturelle sur $k^n$ après choix d'une base $(e_1,...,e_n)$. Par hypothèse, on peut écrire $k^n=(f_1)\oplus...\oplus (f_n)$, avec les $(f_i)$ sous $G$-module de dimension 1. $G$ est donc conjugué à un sous-groupe de $D_n$.
+\item 1)$\implies$2) La restriction $\Oo(D_n)\xrightarrow{res_G} \Oo(G)$ est surjective et la restriction d'un caractère est un caractère.
+\item 2)$\implies$3) $G$ est abélien, car $\forall \chi\in X^*(G),\,\,g,h\in G$, on a $\chi(gh)=\chi(hg)$. Cette relation est donc vérifiée pour toute fonction régulière sur $G$, on en conclut $gh=hg$. On observe que l'action naturelle de $G$ sur $\Oo(G)$ est semi-simple. En effet, les caractères forment une base de diagonalisation de $\Oo(G)$. Ainsi $G$ est semi-simple par la décomposition de Jordan. Soit $(V,\rho)$ le $G$-module considéré et $W\subset V$ un sous $G$-module de dimension finie, disons $n$. Par la décomposition de Jordan,  $\rho_{|W}(G)$ est semi-simple. De plus, c'est un sous-groupe abélien fermé de $\gln_n$. Il est donc conjugué à un sous-groupe fermé de $\dn_n$. On voit ainsi que $V=\bigoplus_{\chi \in X^*(G)}V_\chi$, où $V_\chi:=\lbrace v\in v\mid g.f=\chi(g)f,\, \forall g\in G \rbrace$. En effet, ils sont en somme directe, et tout élément de $V$ se décompose de cette manière.
+\item 3)$\implies$1) On peut supposer $G\subset \gln_n$, et considérer l'action naturelle sur $k^n$ après choix d'une base $(e_1,...,e_n)$. Par hypothèse, on peut écrire $k^n=(f_1)\oplus...\oplus (f_n)$, avec les $(f_i)$ sous $G$-module de dimension 1. On obtient donc que $G$ est conjugué à un sous-groupe de $\dn_n$.
 \end{enumerate}
 \end{proof}
 
-Ce constat motive la définition suivante:
-
-\begin{defn}[Tore, Groupe diagonalisable]
-Un groupe diagonalisable est un groupe algébrique $G$ tel que $\Oo(G)=\textrm{Vect}_k(X^*(G))$. Un tore est un groupe diagonalisable connexe.
-\end{defn}
 
 On travaille désormais dans la catégorie des groupes diagonalisables. On considère un groupe diagonalisable $G$ et le groupe $X^{**}(G):=(X^*)^2(G)$.
 
@@ -203,19 +203,17 @@ On travaille désormais dans la catégorie des groupes diagonalisables. On consi
 $G$ et $X^{**}(G)$ sont naturellement isomorphes en tant que groupes abstraits, et aussi en tant que groupes algébriques par transport de structure. L'isomorphisme est $ev_G : G\rightarrow \Hom (X^*(G),\GG _m), g\mapsto (\chi\mapsto \chi(g))$.
 \end{prop}
 \begin{proof}
-ev$_G$ est injective: Soit $g\in G$ tel que $\chi(g)=1=\chi(e_G),\forall \chi\in X^*(G)$. Alors $g=e_G$ car $G$ est un groupe diagonalisable.\\
-ev$_G$ est surjective: Soit $\phi\in\chi^{**}(G)$. On a un prolongement unique de $\phi$ en un morphisme de $k$-algèbre $k[X^*(G)]=\Oo(G)\rightarrow k$ qui est donc de la forme $\Oo(G)\rightarrow k, f\mapsto f(g)$ pour un $g\in G$. En restreignant à $X^*(G)$, on trouve que $\phi=\textrm{ev}_G(g)$.
+$ev_G$ est injective, en effet considérons $g\in G$ tel que $\chi(g)=1=\chi(e_G)$, pour tout $\chi\in X^*(G)$. Alors $g=e_G$ car $G$ est un groupe diagonalisable. $ev_G$ est surjective, en effet considérons $\phi\in X^{**}(G)$. On a un prolongement unique de $\phi$ en un morphisme de $k$-algèbre $k[X^*(G)]=\Oo(G)\rightarrow k$ qui est donc de la forme $\Oo(G)\rightarrow k, f\mapsto f(g)$ pour un $g\in G$. En restreignant à $X^*(G)$, on trouve que $\phi=\textrm{ev}_G(g)$.
 \end{proof}
 
-Autrement dit on a un isomorphisme de foncteurs $(X^*)^2\simeq Id$, d'où une équivalence de catégories entre les groupes diagonalisables et les groupes abéliens de type fini. Une autre façon de voir cela est d'introduire l'algèbre de groupe d'un groupe abélien de type fini M, c'est par définition $k[M]=\lbrace \sum_{finie} \lambda_gg,\,\lambda_g\in k,g\in G \rbrace$ avec la multiplication définie par l'opération de groupe de $G$. La propriété suivante montre que l'on construit ainsi un autre inverse de $X^*(.)$
+Autrement dit on a un isomorphisme de foncteurs $(X^*)^2\simeq Id$, d'où une anti-équivalence de catégories entre les groupes diagonalisables et les groupes abéliens de type fini. Une autre façon de voir cela est d'introduire l'algèbre de groupe d'un groupe abélien de type fini $M$, c'est par définition $k[M]=\lbrace \sum_{\text{finie}} \lambda_gg,\,\lambda_g\in k,g\in G \rbrace$ avec la multiplication définie par l'opération de groupe de $G$. La propriété suivante montre que l'on construit ainsi un autre inverse de $X^*(.)$
 \begin{prop}
 Soient, $M, M_1, M_2$ des groupes abéliens de type fini, et $G$ un groupe diagonalisable.\\
-Alors $k[M]$ est de type fini, réduite et on a $k[M_1\oplus M_2]\simeq k[M_1]\otimes k[M_2]$. De plus, $k[M]$ est naturellement muni d'une structure d'algèbre de Hopf et on a $\Oo(G)=k[X^*(G)]$ et donc $G=\spec\circ k[X^*(G)]$.
+Alors $k[M]$ est de type fini, réduite et on a $k[M_1\oplus M_2]\simeq k[M_1]\otimes k[M_2]$. De plus, $k[M]$ est naturellement muni d'une structure d'algèbre de Hopf et on a $G=\spec k[X^*(G)]$.
 \end{prop}
 \begin{proof}
-On a deux morphismes d'algèbre $k[M_1]\rightarrow k[M_1\oplus M_2], e_{m_1}\mapsto e_{(m_1,0)}$ et $k[M_2]\rightarrow k[M_1\oplus M_2], e_{m_2}\mapsto e_{(0,e_{m_2})}$, d'où l'existence d'un morphisme $k[M_1]\otimes k[M_2]$ dont on vérifie que c'est un isomorphisme.\\
-Comme on a $M\simeq \ZZ^r\oplus (\oplus_{i=1}^r \ZZ/d_i\ZZ)$, il suffit de traiter les cas $M=\ZZ$ et $M=\ZZ/d\ZZ$. On a $k[\ZZ]\simeq k[t,t^{-1}]$ qui est intègre, de type fini, et réduite. On a $k[\ZZ/d\ZZ]\simeq k[t]/(t^d-1)$. On voit, par le théorème chinois par exemple, que cette algèbre de type fini non-intègre est réduite si et seulement si les racine de $t^d-1$ sont simples, ce qui est le cas en caractéristique zéro.\\
-Enfin la structure d'algèbre de Hopf sur $k[M]$ est donnée par $\Delta(e_m)=e_m\otimes e_m,\, i(e_m)=e_{-m},\, e(e_m)=e_0$.
+On a deux morphismes d'algèbre $k[M_1]\rightarrow k[M_1\oplus M_2], e_{m_1}\mapsto e_{(m_1,0)}$ et $k[M_2]\rightarrow k[M_1\oplus M_2], e_{m_2}\mapsto e_{(0,e_{m_2})}$, d'où l'existence d'un morphisme $k[M_1]\otimes_k k[M_2]\rightarrow k[M_1\oplus M_2], $ dont on vérifie que c'est un isomorphisme.
+Pour la deuxième assertion, comme on a $M\simeq \ZZ^r\oplus (\oplus_{i=1}^r \ZZ/d_i\ZZ)$, il suffit de traiter les cas $M=\ZZ$ et $M=\ZZ/d\ZZ$. On a $k[\ZZ]\simeq k[t,t^{-1}]$ qui est intègre, de type fini, et réduite. On a $k[\ZZ/d\ZZ]\simeq k[t]/(t^d-1)$. On voit, par le théorème chinois par exemple, que cette algèbre de type fini non-intègre est réduite si et seulement si les racine de $t^d-1$ sont simples, ce qui est le cas en caractéristique zéro. La structure d'algèbre de Hopf sur $k[M]$ est donnée par $\Delta(e_m)=e_m\otimes e_m,\, i(e_m)=e_{-m},\, e(e_m)=e_0$. Pour la dernière assertion, il suffit de voir que $\Oo(G)=k[X^*(G)]$.
 \end{proof}
 
 \begin{cor}
@@ -227,17 +225,12 @@ Soit $G$ un groupe diagonalisable. Alors:
 \end{cor}
 
 
-
 \subsubsection{Action d'un groupe diagonalisable sur une variété affine}
 
-On a montré dans la partie précédente que l'algèbre des coordonnées d'un groupe diagonalisable $G$ était naturellement munie d'une $X^*(G)$-graduation. Cela peut être vu comme la traduction algébrique de l'action de $G$ sur lui même par multiplication à gauche. On précise, cela ci-dessous en montrant que les foncteurs $\spec$ et $k[.]$ réalisent une équivalence de catégories entre les variétés affines munies d'une action d'un groupe diagonalisable et les algèbres graduées par un groupe abélien de type fini. On a déjà l'équivalence entre variétés affines et algèbres affines. Il s'agit donc de vérifier que les (co)-restrictions des deux foncteurs $k[.]$ et $\spec$ sont bien définies et que les actions et graduations sont préservées.
+Les variétés affines munies d'une action d'un groupe diagonalisable forment une catégorie dans laquelle les morphismes sont les paires $(\phi,\widetilde{\phi})$, où $\phi:X\rightarrow X'$ est un morphisme de variétés affines, $\widetilde{\phi}:H\rightarrow H'$ est un morphisme de groupes diagonalisables, et pour tout $x\in X, h\in H$, on a $\phi(h.x)=\widetilde(\phi)(h)\phi(x)$.
 
-\begin{cons}
-Soit $H$ un groupe diagonalisable et X une $H$-variété affine. Le $H$-module $\Oo(X)$ est somme directe de $H$-module de dimension 1 d'après la partie précédente et on peut écrire: 
-\begin{center}
-$\Oo(X)=\bigoplus_{\chi \in X^*(H)}V_\chi$,  où $V_\chi:=\lbrace f\in \Oo(X)\mid h.f=\chi(h)f,\, \forall h\in H \rbrace$ 
-\end{center}
-On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, cette construction est fonctorielle, en effet en considérant les diagrammes commutatifs ci-dessous. Le premier est la traduction de la donnée d'un morphisme $(\widetilde{\phi},\phi)$ d'une $H$-variété affine $X$ vers une $H'$-variété affine $X'$. Le second est obtenu par passage aux algèbres de coordonnées.
+D'après \ref{GmoduleSectionsGlobales}, $\Oo(X)$ est un $H$-module, et aussi un $k$-espace vectoriel $K$-gradué, où $K:=X^*(H)$, d'après \ref{GroupeDiagCarac}. C'est en fait une $k$-algèbre $K$-graduée, en effet considérons $(f_1, f_2)\in \Oo(X)_{\chi_1}\times \Oo(X)_{\chi_2}$, alors pour tout $g\in G$, $g.f_1f_2=(g.f_1)(g.f_2)=(\chi_1(g)f_1)(\chi_2(g)f_2)=(\chi_1\chi_2)(g)f_1f_2$, ce qui prouve que $f_1f_2\in \Oo(X)_{\chi_1\chi_2}$. De plus, cette construction est fonctorielle, en effet considérons une $H'$-variété $X'$, ainsi qu'un morphisme $(\phi,\widetilde{\phi}):X\rightarrow X'$. On a donc par définition le diagramme de gauche ci-dessous, le second est obtenu par application de $\Oo(.)$.
+
 \begin{multicols}{2}
 	\begin{center}
 		\begin{tikzcd}
@@ -249,41 +242,41 @@ On voit immédiatement que cette somme directe est $X^*(H)$-graduée. De plus, c
 	\columnbreak
 	\begin{center}
 		\begin{tikzcd}
-  		k[H]\otimes \Oo(X)   & \Oo(X) \arrow[l, "a_1^*"] \\ 
-  		k[H']\otimes k[X'] \arrow[u, "\widetilde{\phi}^* \otimes \phi^*"] & k[X'] \arrow[u, "\phi"] \arrow[l, "a_2^*"] 
+  		\Oo(H)\otimes \Oo(X)   & \Oo(X) \arrow[l, "a_1^\sharp"] \\ 
+  		\Oo(H')\otimes \Oo(X') \arrow[u, "\widetilde{\phi}^\sharp \otimes \phi^\sharp"] & \Oo(X') \arrow[u, "\phi"] \arrow[l, "a_2^\sharp"] 
 	\end{tikzcd}
 	\end{center}
 \end{multicols}
-Le petit calcul ci-dessous montre que $\forall f\in V'_{\chi'}\subset k[X'],\,$ on a $\phi^*(f)\in V_{\widetilde{\phi}^*(\chi')}$, ce qui montre que $(\widetilde{\phi}^*,\phi^*)$ est un morphisme d'algèbres graduées. 
-$$\forall h\in H,\,x\in X,\, \phi^*(f)(h.x)=a_1^*\phi^*(f)(h, x)=(\widetilde{\phi}\otimes\phi)a_2^*(f)(h,x)=\widetilde{\phi}^*(\chi')(h)\phi^*(f)(x)$$ 
 
-\end{cons}
+Le petit calcul ci-dessous montre que $\forall f\in \Oo(X')_{\chi'},\,$ on a $\phi^\sharp(f)\in \Oo(X)_{\widetilde{\phi}^\sharp(\chi')}$. cela montre que $(\widetilde{\phi}^\sharp,\phi^\sharp)$ est un morphisme d'algèbres graduées car $\widetilde{\phi}^\sharp$ envoie des caractères sur des caractères en tant que comorphisme d'un morphisme de groupes diagonalisables. 
+$$\forall h\in H,\,x\in X,\, \phi^\sharp(f)(h.x)=a_1^\sharp\phi^\sharp(f)(h, x)=(\widetilde{\phi}\otimes\phi)a_2^\sharp(f)(h,x)=\widetilde{\phi}^\sharp(\chi')(h)\phi^\sharp(f)(x)$$ 
 
-\begin{cons}\label{consgraduegroupe diagonalisable}
-Soit $K$ un groupe abélien de type fini et $A$ une $k$-algèbre affine $K$-graduée. On pose $X:=\spec(A)$ et on choisit des générateurs homogènes $f_{\omega_1},...,f_{\omega_r}$ de $A$, ce qui donne une immersion fermée $i:X\rightarrow k^r, x\mapsto (f_1(x),...,f_r(x))$. On transporte la graduation à $k[k^r]=k[t_1,...,t_r]$ en posant deg$(t_i)=\omega _i$, ce qui fait de $k[i(X)]=k[t_1,...,t_r]/\Ker i^*\xrightarrow{\overline{i^*}}A$ un isomorphisme d'algèbres graduées. Enfin, on munit $k^r$ de l'action diagonale associée aux caractères $\chi^{\omega_1},...,\chi^{\omega_r}$ de $H:=\spec(k[K])$, c'est à dire $\forall h\in H,\, t\in k^r,\, h.t := (\chi^{\omega_1}(h)t_1,...,\chi^{\omega_r}(h)t_r)$. On a donc concrètement pour $f:=\sum\alpha_{i_1,...,i_r}t_1^{i_1}...t_r^{i_r}\in k[k^r]$, $f(h.t)=f(\chi^{\omega_1}(h)t_1,...,\chi^{\omega_r}(h)t_r)=\sum\alpha_{i_1,...,i_r}\chi^{\sum i_k\omega_k}(h)t_1^{i_1}...t_r^{i_r}$. Ainsi on a, $f\in k[k^r]_{\omega}\iff \forall (i_1,...,i_r),\, \sum_k i_k\omega_k=\omega \iff f(h.t)=\chi^{\omega}(h)\sum\alpha_{i_1,...,i_r}t_1^{i_1}...t_r^{i_r}=\chi^{\omega}(h)f(t), \forall h\in H$. Cette condition montre que l'idéal homogène $\Ker i^*$ est $H$-stable et donc que $i(X)$ est une $H$-variété. On transporte en retour cette action sur $X$ et on voit que l'action obtenue est indépendante du choix initiale des $f_i$, en effet la condition d'homogénéité exprimée ci-dessus définit complètement le comorphisme de l'action de $H$: $a^*:A\rightarrow k[K]\otimes A,\, f_{\omega}\mapsto \chi^{\omega}\otimes f_{\omega}$.\\
-Pour finir, vérifions la fonctorialité. Soit $(\widetilde{\phi},\phi)$ un morphisme entre la $K$-algèbre graduée $A$ et la $K'$-algèbre graduée $A'$. La construction montre que l'on définit deux morphismes $a_1:A\rightarrow k[K]\otimes A$ et $a_2:A'\rightarrow k[K']\otimes A'$. Et on a, $$\forall h_\omega \in A_\omega,\, (\widetilde{\phi}\otimes \phi)\circ a_1(h_\omega)=(\widetilde{\phi}\otimes \phi)(\chi^{\omega}\otimes h_\omega) = \chi'^{\widetilde{\phi}(\omega)}\otimes \phi(h_\omega)_{\widetilde{\phi}(\omega)}$$ 
-$$\forall h_\omega \in A_\omega,\, a_2\circ \phi(h_\omega)=a_2(\phi(h_\omega)_{\widetilde{\phi}(\omega)})=\chi'^{\widetilde{\phi}(\omega)}\otimes \phi(h_\omega)_{\widetilde{\phi}(\omega)}$$
+Réciproquement, considérons une $k$-algèbre affine $A$ graduée par un groupe abélien $K$ de type fini. On a un morphisme de $k$-algèbres affine naturel que l'on peut définir sur les éléments homogènes par $a:A\rightarrow k[K]\otimes A,\, f_{\omega}\mapsto \chi^{\omega}\otimes f_{\omega}$. On voit facilement que ce morphisme définit une action de $H:=\spec k[K]$ sur $X:=\spec A$. De plus, cette association est fonctorielle, en effet considérons une $K'$-algèbre graduée $A'$, ainsi qu'un morphisme $(\widetilde{\phi},\phi):A\rightarrow A'$ d'algèbres graduées. On a pour tout $f_w\in A_w$
+$$(\widetilde{\phi}\otimes \phi)\circ a(f_\omega)=(\widetilde{\phi}\otimes \phi)(\chi^{\omega}\otimes f_\omega) = \chi'^{\widetilde{\phi}(\omega)}\otimes \phi(f_\omega)_{\widetilde{\phi}(\omega)}$$ 
+$$a'\circ \phi(f_\omega)=a'(\phi(f_\omega)_{\widetilde{\phi}(\omega)})=\chi'^{\widetilde{\phi}(\omega)}\otimes \phi(f_\omega)_{\widetilde{\phi}(\omega)}$$
 D'où le diagramme commutatif de gauche ci-dessous, qui donne le diagramme de droite par application du foncteur $\spec$. Ce dernier diagramme finit de prouver la fonctorialité.
 \begin{multicols}{2}
 	\begin{center}
 			\begin{tikzcd}
-  		K\otimes A  \arrow[d, "\widetilde{\phi}^* \otimes \phi^*"]  & A \arrow[l, "a_1"] \arrow[d, "\phi"]  \\ 
-  		K'\otimes A' & A' \arrow[l, "a_2"] 
+  		K\otimes A  \arrow[d, "\widetilde{\phi}^* \otimes \phi^*"]  & A \arrow[l, "a"] \arrow[d, "\phi"]  \\ 
+  		K'\otimes A' & A' \arrow[l, "a'"] 
 	\end{tikzcd}
 	\end{center}
 
 	\columnbreak
 	\begin{center}
 		\begin{tikzcd}
-  		\spec(k[K])\times \spec(A) \arrow[r, "a_1^{\circ}"]  & \spec(A) \\ 
-  		\spec(k[K'])\times \spec(A') \arrow[r, "a_2^{\circ}"] \arrow[u, "\widetilde{\phi} \times \phi"] & \spec(A') \arrow[u, "\phi"] 
+  		\spec(k[K])\times \spec(A) \arrow[r, "a^o"]  & \spec(A) \\ 
+  		\spec(k[K'])\times \spec(A') \arrow[r, "a'^o"] \arrow[u, "\widetilde{\phi} \times \phi"] & \spec(A') \arrow[u, "\phi"] 
 	\end{tikzcd}
 	\end{center}
 \end{multicols}
-\end{cons}
 
-On voit que dans les deux constructions on a la même condition sur l'homogénéité qui détermine à la fois l'action et la graduation, c'est ce qu'on voulait vérifier.\\
-Ainsi les actions de groupe diagonalisable sur les variétés affines peuvent être caractérisé en terme algébrique  grâce à cette équivalence. C'est l'objet des propositions suivantes.
+Finalement on a obtenu le résultat suivant qui va nous permettre dans la suite caractériser l'action d'un groupe diagonalisable sur une variété affines en termes algébriques.
+
+\begin{prop}
+Les foncteurs $\spec$ et $\Oo(.)$ réalisent une équivalence de catégories entre les variétés affines munies d'une action d'un groupe diagonalisable et les algèbres affines graduées par un groupe abélien de type fini. 
+\end{prop}
 
 \begin{prop}\label{stablehomogene}
 Soit $A$ une algèbre affine $K$-graduée, $X:=\spec A$ muni de l'action de $H:=\spec k[K]$.  Soit $Y\subset X$ une sous variété fermée, et $I=\mathcal{I}(Y)$. Les assertions suivantes sont équivalentes:
@@ -333,7 +326,7 @@ D'après \ref{facto} (ou \ref{groupQuotientGeometrique}) et \ref{ZMTCor} on a le
 	\columnbreak
 	\begin{center}
 	\begin{tikzcd}
-		k[H] & & k[H.x] \arrow[lld, "\exists !\simeq \phi^*", dashed]\arrow[ll, hook, "f_\omega \mapsto f_\omega(x)\chi^{\omega}", swap]  \\
+		\Oo(H) & & k[H.x] \arrow[lld, "\exists !\simeq \phi^*", dashed]\arrow[ll, hook, "f_\omega \mapsto f_\omega(x)\chi^{\omega}", swap]  \\
 		k[H/H_x]  \arrow[u,"\pi^*", hook]  & &
 	\end{tikzcd}
 	\end{center}
