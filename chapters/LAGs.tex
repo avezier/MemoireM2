@@ -31,7 +31,7 @@ Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique 
 \end{defn}
 
 \begin{defn}[Orbite, stabilisateur]
-Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $x\in X$. L'orbite de $x$ est l'image de l'application d'orbite $a_x=(.,x):G\rightarrow X$, on le note $G.x$. Le stabilisateur est l'ensemble des $g\in G$ tels que $g.x=x$, on le note $Gx$. 
+Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $x\in X$. L'orbite de $x$ est l'image de l'application d'orbite $a_x=(.,x):G\rightarrow X$, on le note $G.x$. Le stabilisateur est l'ensemble des $g\in G$ tels que $g.x=x$, on le note $G_x$. 
 \end{defn}
 
 Le stabilisateur d'un point $x$ de $G$ est un sous-groupe fermé de $G$. En effet, c'est la fibre de $x$ pour l'application d'orbite $a_x$. De plus pour tout $g.x$ dans l'image de $a_x$, la fibre de $g.x$ est $g.G_x$, donc toutes les fibres de $a_x$ sont isomorphes.
@@ -186,7 +186,7 @@ Soit $G$ un groupe algébrique. Les assertions suivantes sont équivalentes:
 \end{enumerate}
 Si l'une de ces assertions est vérifiée, tout $G$-module $V$ est naturellement un $k$-espace vectoriel $X^*(G)$ gradué
 $$V=\bigoplus_{\chi \in X^*(G)}V_{\chi}$$
-où les $V_{\chi}$ sont les sous-espaces propres pour l'action $G$. Réciproquement, tout $k$-espace vectoriel $X^*(G)$ gradué est naturellement un $G$-module.
+où les sous-espaces $V_{\chi}$ sont les sous-espaces propres pour l'action $G$. On appelle $V_{\chi}$ le sous-espace de poids $\chi$. Réciproquement, tout $k$-espace vectoriel $X^*(G)$ gradué est naturellement un $G$-module.
 \end{prop}
 \begin{proof}
 \begin{enumerate}
@@ -323,7 +323,7 @@ Pour l'étude de la géométrie de l'orbite d'un point, les diagrammes ci-dessou
 
 
 
-\begin{prop}\label{staborbitegroup}
+\begin{prop}[Car. 0]\label{staborbitegroup}
 Soit $A$ une algèbre affine $K$-graduée, $X:=\spec A$ muni de l'action de $H:=\spec k[K]$, et $x\in X$. On a le diagramme commutatif suivant, dont les deux lignes sont exactes:
 	\begin{center}
 		\begin{tikzcd}
@@ -348,7 +348,7 @@ Soit $A$ une algèbre affine $K$-graduée, $X:=\spec A$ muni de l'action de $H:=
 \begin{proof}
 \end{proof}
 
-\begin{prop}
+\begin{prop}[Car. 0]
 Soit $A$ une algèbre affine $K$-graduée, $X:=\spec A$ muni de l'action de $H:=\spec k[K]$, et $x\in X$. Cette action induit une action de $H/H_x$ sur $\overline{H.x}$. De plus, $\overline{H.x}$ et $\spec(k[S_x])$ sont isomorphes en tant que $H/H_x$-variétés.
 \end{prop}
 \begin{proof}

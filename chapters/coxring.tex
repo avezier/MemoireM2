@@ -77,6 +77,14 @@ Reprenons les données de la construction précédente en supposant de plus que 
 \end{rem}
 
 
+\begin{prop}
+Avec les données de \ref{specrelatifdivi}, et supposons de plus que tout diviseur soit de Cartier (par exemple si X est lisse). Alors $H$ agit librement sur $\widetilde{X}$.
+\end{prop}
+\begin{proof}
+C'est immédiat avec le diagramme ci-dessus.
+\end{proof}
+
+
 \begin{prop}\label{preimagecodim2}
 Avec les données de \ref{specrelatifdivi}, $\widetilde{X}$ est une variété irréductible et normale. De plus, pour tout fermé $A\subset X$ de codimension $\geq 2$, $p^{-1}(A)$ est aussi de codimension $\geq 2$.
 \end{prop}
@@ -149,9 +157,6 @@ Les données sont celles de \ref{specrelatifdivi}. Soient $x\in X$, $K_x^0\subse
 Comme $H$ agit localement sur $\widetilde{X}$ on peut se placer sur un voisinage affine de $x$, on suppose ainsi $X$ et $\widetilde{X}$ affines. Ainsi, en appliquant \ref{staborbitegroup}, on a $H_{\tilde{x}}=\spec k[K/K_{\tilde{x}}]$, où $K_{\tilde{x}}$ est le groupe d'orbite de $\tilde{x}$. Supposons que $D\in K$ soit principal sur ce voisinage de $x$, c'est à dire $D=\divi(g)$ avec $g\in k(X)$. Choisissons $\alpha \in k[X]$ tel que $\alpha(x)\neq 0$. Alors $f:=\alpha g^{-1}\in \Ss_D(X)$ et $\divi_D(f)=\divi(\alpha)$. En utilisant \ref{zerosspecrelatif}, on obtient $f(\tilde{x})\neq 0$ et donc $D\in K_{\tilde{x}}$. Réciproquement, prenons $D\in K_{\tilde{x}}$, c'est à dire $f(\tilde{x})\neq 0$ pour un $f\in \Ss_D(X)$. Alors $x\notin \divi_D(f)$, et on a $D=-\divi(f)$ au voisinage de $x$. Cela montre que $D$ est localement principal.
 \end{proof}
 
-\begin{cor}
-Soit $X$ vérifiant $(\dagger)$, et telle que tout diviseur soit de Cartier, par exemple si X est lisse. Alors $H$ agit librement sur $\widetilde{X}$.
-\end{cor}
 
 
 
@@ -274,7 +279,7 @@ L'application canonique $\psi_U:\Gamma(U,\Ss)/\Gamma(U,\Ii)\rightarrow\Gamma(U,\
 \end{proof}
 
 \begin{thm}\label{InvarianceCoxTorsion}
-Avec les données de \ref{conscoxtorsion}. Soit $K', \chi'$ un autre choix de sous-groupe et de caractères. Alors les faisceaux de Cox associés sont isomorphes en tant que faisceaux d'algèbre $\clg(X)$-graduées.
+Avec les données de \ref{conscoxtorsion}. Soit $K', \chi'$ un autre choix de sous-groupe et de caractères. Alors les faisceaux de Cox associés sont isomorphes en tant que faisceaux d'algèbres $\clg(X)$-graduées.
 \end{thm}
 \begin{proof}
 Dans un premier temps, montrons que l'on peut se ramener à des faisceaux de Cox définis par un sous-groupe de $\wdiv(X)$ de type fini. Soit donc $K_1\subset K$ de type fini se projetant surjectivement sur $\clg(X)$. Un tel $K_1$ existe car il suffit par exemple de prendre le sous-groupe de $K$ engendré par des antécédents par $c$ de générateurs de $\clg(X)$. La restriction de $\chi$ à $K_1$ définit un caractère $\chi_1:K_1^0\rightarrow k(X)^*$. L'inclusion $K_1\subset K$ définit une injection $\Ss_1\rightarrow \Ss$, qui envoie l'idéal $\Ii_1$ défini par $\chi_1$ dans $\Ii$. Cela donne une injection $\clg(X)$-graduée $\Rr_1\rightarrow \Rr$, où $\Rr_1$ est le faisceau de Cox associé à $K_1$ et $\chi_1$. Mais dans lemme \ref{LemmeCoxRelevelement}, on peut toujours choisir $D\in K_1$, cela donne la surjectivité de ce morphisme.
@@ -312,7 +317,7 @@ $$\Rr(X)\simeq k[t_1,t_2,t_3^{\pm}]/(1-t_3^{-1})\simeq k[t_1,t_2]$$
 la $\clg(X)$-graduation étant donnée par $\deg(t_1)=\deg(t_2)=[D_2]$.
 \end{ex}
 
-\begin{ex}
+\begin{ex}\label{CoxRingEx3}
 Considérons la surface affine $X\subset \AAA_k^3$ d'équation $t_1^2-t_2t_3-1$. Cette surface est lisse et irréductible. On note $f_i$ la fonction régulière sur $X$ associée à la restriction de la coordonnée $t_i$ pour $1\leq i\leq 3$. Considérons les diviseurs premiers
 $$D_+=\Vv_X(f_1-1,f_2)=\lbrace 1\rbrace\times\lbrace 0\rbrace\times k$$
 $$D_-=\Vv_X(f_1+1,f_2)=\lbrace -1\rbrace\times\lbrace 0\rbrace\times k$$
@@ -348,7 +353,7 @@ On a déjà vu l'isomorphisme $\Ss(U)\rightarrow \Ss(V)$ en \ref{isomorphismcodi
 \end{proof}
 
 \begin{cons}\label{conscoxtorsionlisse}
-On considère les données de la construction \ref{conscoxtorsion}. On suppose de plus que $X$ est lisse. On considère les spectres relatifs $(\widetilde{X}, p)=\spec_X \Ss$ et $(\widehat{X},p_X)=\spec_X \Rr$. De plus, on peut toujours supposer $K$ de type fini et ces spectres sont sont munis respectivement d'une action du tore $H:=\spec k[K]$ et du groupe diagonalisable $k[\clg(X)]$. On a une immersion fermée $\widehat{X}\xhookrightarrow{i}\widetilde{X}$ d'image $\Vv(\Ii)$ qui donne un diagramme commutatif
+On considère les données de la construction \ref{conscoxtorsion}. On suppose de plus que $X$ est lisse. On considère les spectres relatifs $(\widetilde{X}, p)=\spec_X \Ss$ et $(\widehat{X},p_X)=\spec_X \Rr$. De plus, on peut toujours supposer $K$ de type fini et ces spectres sont munis respectivement d'une action du tore $H:=\spec k[K]$ et du groupe diagonalisable $H_X:=\spec k[\clg(X)]$. On a une immersion fermée $\widehat{X}\xhookrightarrow{i}\widetilde{X}$ d'image $\Vv(\Ii)$ qui donne un diagramme commutatif
 
 	\begin{center}
 	\begin{tikzcd}
@@ -356,9 +361,7 @@ On considère les données de la construction \ref{conscoxtorsion}. On suppose d
   		& X &
 	\end{tikzcd}
 	\end{center}
-De même, $H_X$ se plonge dans $H$, et l'immersion fermée $i$ est $H_X$ équivariante pour ce plongement. Les morphismes $p_X$ et $p$ sont des quotients géométriques. En particulier, $(p_X, \widehat{X})$ et $(p, \widetilde{X})$ sont des fibrés principaux. 
-Enfin, $\widehat{X}$ est une variété lisse et quasi-affine.
-Enfin
+De même, $H_X$ se plonge dans $H$, et l'immersion fermée $i$ est $H_X$ équivariante pour ce plongement. Les morphismes $p_X$ et $p$ sont des quotients géométriques. En particulier, $(p_X, \widehat{X})$ et $(p, \widetilde{X})$ sont des fibrés principaux. Enfin, $\widehat{X}$ est une variété lisse et quasi-affine.
 \end{cons}
 \begin{proof}
 Les actions de $H$ et $H_X$ sont dues aux graduations respectives de $\Ss$ et $\Rr$ par $K$ et $\clg(X)$. Pour tout ouvert affine $U\subset X$, notons $U_1:=p_X^{-1}(U)$ et $U_2:=p^{-1}(U)$. La projection $\Ss(U)\rightarrow \Rr(U)$ donne localement une immersion fermée $U_1\xhookrightarrow{} U_2$ d'image $\Vv_{U_2}(\Ii(U_2))$. De plus, ces immersions respectent les graduation par la projection $c:K\rightarrow \clg(X)$. Ces immersions se recollent en une immersion $i$ d'image $\Vv(\Ii)$ qui est $H_X$-équivariante. De plus les mêmes arguments qu'en \ref{specrelatifdivi} nous donne que $p_X$ et $p$ sont des bon quotients car on a
@@ -366,24 +369,24 @@ Les actions de $H$ et $H_X$ sont dues aux graduations respectives de $\Ss$ et $\
 $$(p_X)_*(\Oo_{\widehat{X}})_0\simeq \Rr_0\simeq\Oo_X\simeq\Ss_0\simeq  p_*(\Oo_{\widetilde{X}})_0$$
 Puis la remarque \ref{lisseGoodQuotient} nous dit que ce sont en fait des quotients géométriques.
 
-Montrons que maintenant que $\widehat{X}\simeq \Vv_{\widetilde{X}}(\Ii)$ est une variété. C'est un schéma de type fini sur $k$ et séparé d'après \ref{}, il reste à montrer qu'il est réduit. On peut travailler localement sur un ouvert affine que l'on peut choisir de la forme $\widetilde{U}=p^{-1}(U)=\spec(\Ss(U))$ pour un ouvert affine $U$ de $X$. Soit $f\in\sqrt{\Ii(U)}$, comme c'est un idéal $\clg(X)$-homogène, il contient les composantes $\clg(X)$-homogènes de $f$. Soit $f_{[D]}$ l'une d'entre elles, elle s'écrit $f_{[D]}=f_D+g$ avec $f_D\in \Ss_D(U)$ et $g\in\Ii(U)$ (voir \ref{coxsheafiso2}). On obtient facilement $f_D^n\in \Ii(U)$ pour un $n>0$. Cela impose $f_D^n=0$ compte tenu de \ref{coxidealform} et donc $f_D=0$. Finalement, $f\in\Ii(U)$ ce qui montre que $\Ii(U)$ est radical.
+Montrons maintenant que $\widehat{X}\simeq \Vv_{\widetilde{X}}(\Ii)$ est une variété. C'est un schéma de type fini sur $k$. De plus, il est séparé sur $k$ car \ref{sepCritere} est vérifié par construction, et comme $X$ est séparé sur $k$, on peut appliquer \ref{sepCritere2}. Il reste à montrer que ce schéma est réduit. On peut travailler localement sur un ouvert affine que l'on peut choisir de la forme $\widetilde{U}=p^{-1}(U)=\spec(\Ss(U))$ pour un ouvert affine $U$ de $X$. Soit $f\in\sqrt{\Ii(U)}$, comme c'est un idéal $\clg(X)$-homogène, il contient les composantes $\clg(X)$-homogènes de $f$. Soit $f_{[D]}$ l'une d'entre elles, elle s'écrit $f_{[D]}=f_D+g$ avec $f_D\in \Ss_D(U)$ et $g\in\Ii(U)$ d'après \ref{coxsheafiso2}. On obtient facilement $f_D^n\in \Ii(U)$ pour un $n>0$. Cela impose $f_D^n=0$ compte tenu de \ref{coxidealform} et donc $f_D=0$. Finalement, $f\in\Ii(U)$ ce qui montre que $\Ii(U)$ est radical.
 
-Elle est de plus quasi-affine d'après \ref{specrelatifQuasiAff}. Montrons pour finir qu'elle est lisse.
+Elle est de plus quasi-affine car $\widetilde{X}$ l'est d'après \ref{specrelatifQuasiAff}. Montrons pour finir qu'elle est lisse.
 \end{proof}
 
 \begin{thm}
 On considère les données de la construction \ref{conscoxtorsion}. On suppose de plus que $\Rr$ est localement de type fini. Alors pour tout ouvert $U\in X$, l'anneau $\Rr(U)$ est intégralement clos.
 \end{thm}
 \begin{proof}
-On peut supposer $X$ lisse donc être dans le contexte de \ref{conscoxtorsionlisse}. Alors $\widehat{X}$ est lisse donc normale. Il suffit donc de prouver son irréductibilité d'après \ref{} et \ref{}. Comme $p_X$ est surjective, une de ses composantes irréductibles $\widehat{X}_1$ domine $X$ car une variété irréductible ne peut être réunion de fermés irréductibles de codimensions non-nulles. Soit $U$ un ouvert de $X$. Si $p_X^{-1}(U)$ est irréductible alors il est inclus dans $\widehat{X}_1$. Par ailleurs, comme $p_X^{-1}(U)$ est isomorphe à la sous variété de $p^{-1}(U)$ définie par $\Ii(U)$. Il suffit de montrer que l'on peut recouvrir $X$ par des ouverts $U$ tels que $\Vv_{p^{-1}(U)}(\Ii(U))$ est irréductible, on aura alors $\widehat{X}_1=\widehat{X}$.
+On peut supposer $X$ lisse donc être dans le contexte de \ref{conscoxtorsionlisse}. Alors $\widehat{X}$ est lisse donc normale. Il reste donc à prouver que les anneaux $\Rr(U)$ sont intègres pour tout ouvert $U$ de $X$. Si on prouve l'irréductibilité de $\widehat{X}$, ce sera donc un schéma intègre est on aura le résultat d'après \ref{SchemaIntegreCritere}. Comme $p_X$ est surjective, une de ses composantes irréductibles $\widehat{X}_1$ domine $X$ car une variété irréductible ne peut être réunion de fermés irréductibles de codimensions non-nulles. Soit $U$ un ouvert de $X$, si $p_X^{-1}(U)$ est irréductible alors il est inclus dans $\widehat{X}_1$. Par ailleurs, comme $p_X^{-1}(U)$ est isomorphe à la sous variété de $p^{-1}(U)$ définie par $\Ii(U)$. Il suffit de montrer que l'on peut recouvrir $X$ par des ouverts $U$ tels que $\Vv_{p^{-1}(U)}(\Ii(U))$ est irréductible, on aura alors $\widehat{X}_1=\widehat{X}$.
 
-On peut supposer $K$ de type fini d'après \ref{}. Soit $(D_1,...,D_s)$ une base de $K$ telle que $(n_1D_1,...,n_kD_k)$ soit une base de $K^0$ avec $1\leq k\leq s$. Une telle base existe d'après la théorie des $\ZZ$-modules. On peut également supposer que les $D_i$ ne sont pas des multiples dans $K$, quitte à remplacer $K$ si nécessaire. On choisit un ouvert $U\subset X$ tel que chaque $D_i$ est principal, disons égal à $\divi(f_i)$ avec $f_i\in k(X)$. D'après le corollaire \ref{genreatorsCoxIdeal}, l'idéal $\Ii(U)$ est engendré par les générateurs $1-\chi(n_iD_i)$ pour $1\leq i\leq k$. L'isomorphisme \ref{eq:1} identifie $p^{-1}(U)$ à $U\times \GG_m^s$. Par cet identification, $p_X^{-1}(U)$ est donné par les équations $1-\chi(n_iD_i)f_i^{n_i}t_i^{n_i}$. 
+On peut supposer $K$ de type fini d'après \ref{InvarianceCoxTorsion}. Soit $(D_1,...,D_s)$ une base de $K$ telle que $(n_1D_1,...,n_kD_k)$ soit une base de $K^0$ avec $1\leq k\leq s$. Une telle base existe d'après la théorie des $\ZZ$-modules. On peut également supposer que les $D_i$ ne sont pas des multiples dans $K$, quitte à remplacer $K$ si nécessaire. On choisit un ouvert $U\subset X$ tel que chaque $D_i$ est principal, disons égal à $\divi(f_i)$ avec $f_i\in k(X)$. D'après le corollaire \ref{genreatorsCoxIdeal}, l'idéal $\Ii(U)$ est engendré par les générateurs $1-\chi(n_iD_i)$ pour $1\leq i\leq k$. L'isomorphisme \ref{eq:1} identifie $p^{-1}(U)$ à $U\times \GG_m^s$. Par cet identification, $p_X^{-1}(U)$ est donné par les équations $1-\chi(n_iD_i)f_i^{n_i}t_i^{n_i}$. 
 Maintenant, comme $X$ est lisse, on peut la recouvrir par de tels ouverts.
 \end{proof}
 
 \subsection{Localisation et groupe des unités}
 
-\begin{cons}\label{conscoxtorsion}
+\begin{cons}\label{conscoxtorsionDDiviseur}
 Dans la situation de la construction \ref{conscoxtorsion}, considérons un diviseur $D\in K$ et une section globale homogène $f\in\Rr_{[D]}(X)$. D'après la proposition \ref{coxsheafiso2}, il existe un unique élément $\tilde{f}\in\Ss_D(X)$ tel que $\pi(\tilde{f})=f$. On définit le $[D]$-diviseur de $f$ comme le diviseur de Weil effectif
 $$\divi_{[D]}(f):=\divi_D(\tilde{f})=\divi(\tilde{f})+D$$
 Ce diviseur ne dépend ni du choix de $D\in c^{-1}(D)$, ni des choix faits en \ref{conscoxtorsion}.
@@ -436,7 +439,7 @@ Considérons $f\in\Rr_{[D]}(X)$ inversible. Pour la première assertion, l'inver
 Montrons la seconde assertion. On doit montrer que tout $f\in\Rr(X)^*$ est de degré $0$. On considère la $K_0\oplus K_t$ où $K_t$ est le sous $\ZZ$-module de torsion de $K$.
 On considère la graduation épaissie 
 $$\Rr(X)=\bigoplus_{w\in K_0}R_w,\,\,\,\,\,\, R_w:=\bigoplus_{u\in K_t}\Rr(X)_{w+u}$$
-Avec cette graduation, on peut appliquer \ref{} et en déduire que $f$ et $f^{-1}$ sont homogènes de degré respectifs $w\in K_0$ et $-w$. On écrit les décompositions de $f$ et $f^{-1}$ en composantes $\clg(X)$-homogènes
+Avec cette graduation, on peut appliquer \ref{GradedProp1} et en déduire que $f$ et $f^{-1}$ sont homogènes de degré respectifs $w\in K_0$ et $-w$. On écrit les décompositions de $f$ et $f^{-1}$ en composantes $\clg(X)$-homogènes
 $$f=\sum_{u\in K_t}f_{w+u},\,\,\,\,\,\, f^{-1}=\sum_{u\in K_t}f^{-1}_{-w-u}$$
 Comme $fg=1$ on a $f_{w+u}f^{-1}_{-w-u}\neq 0$ pour au moins un $u\in K_t$. Comme $\Gamma(X, \Oo)=k$, $f_{w+u}f^{-1}_{-w-u}$ est une constante non-nulle, on en déduit $w+u=0$ comme plus haut et donc $w=0$. Ainsi, tous les $f_{w+u}$ sont de torsion pour la $\clg(X)$-graduation. Ainsi pour un certain $n>0$, on a $n\divi_{w+u}(f_{w+u})=0$, toujours en utilisant $\Gamma(X, \Oo)=k$. Cela force $f_{w+u}=0$ si $u\neq 0$. On en déduit que $f$ est homogène de degré $0$ donc constante.
 \end{proof}
@@ -479,7 +482,7 @@ Soit $H=\spec k[K]$ un groupe diagonalisable et $X$ une $H$-variété irréducti
 De plus si une de ces assertions est vérifiée, alors un élément homogène non-nul et non-inversible $f\in R$ est $K$-premier si et seulement si le diviseur $\divi(f)$ est $H$-premier, et tout diviseur $H$-premier est de la forme $\divi(f)$ pour un élément $K$-premier $f\in R$.
 \end{prop}
 \begin{proof}
-On suppose que $1$ est vérifié et on veut montrer $2$. Soit $D$ un diviseur de Weil $H$-invariant. On vérifie immédiatement que l'on peut l'écrire de manière unique $D=a_1D_1+...+a_rD_r$ où les $D_i$ sont des diviseurs $H$-premiers. Si $\mathfrak{a}_i=\Ii(\supp(D_i))$ est de $K$-hauteur $1$, alors par hypothèse $D_i=\divi(f_i)$ avec $f_i\in R$ homogène, puis on obtient $D=\divi(f_1^{a_1}...f_r^{a_r})$. On voit donc qu'il suffit de montrer que $\mathfrak{a}_i$ est de hauteur $1$. Supposons que $X$ soit affine, on montrera ensuite que l'on peut faire cette simplification. Par l'absurde, supposons qu'il existe un idéal $K$-premier non-nul $\mathfrak{a}$ strictement contenu dans $\mathfrak{a}_i$. On peut donc trouver $f\in \mathfrak{a}_i\setminus\mathfrak{a}$	 que l'on peut de plus choisir homogène. Remarquons que $\Vv(\mathfrak{a})$ est de codimension $1$ car il contient $\Vv(\mathfrak{a}_i)$ et que $\mathfrak{a}$ est non-nul. Sa décomposition en composantes irréductibles s'écrit donc $\Vv(\mathfrak{a})=D'_1\cup...\cup D'_s\cup Z_1\cup ...\cup Z_t$, où les $D'_i$ sont les diviseurs premiers intervenant dans l'écriture de $D_i$. Notons $Z=Z_1\cup ...\cup Z_t$, alors $f$ s'annule sur $\supp(D_i)$ mais pas sur $Z$ car sinon une puissance de $f$ appartiendrai à $\mathfrak{a}$, et donc $f$ aussi car cet idéal est $K$-premier. Par ailleurs, $W:=\overline{Z\setminus \supp(D_i)}$ est un fermé propre non-vide de $X$ (et de $\Vv(\mathfrak{a})$), qui est de plus $H$-invariant. On peut donc trouver une fonction $g$ homogène non-nulle s'annulant sur $Z$ mais pas sur $\supp(D_i)$. On obtient ainsi $(fg)^n\in\mathfrak{a}$ pour un $n>0$ alors que $f\notin \mathfrak{a}$ et $g\notin\mathfrak{a}$, contradiction. Enfin, revenons au cas où $X$ est quasi-affine. On plonge $X$ dans une $H$-variété $Y$ affine normale irréductible, par une immersion ouverte $H$-équivariante telle qu'il existe des fonctions régulières homogènes $f\in\mathfrak{a}_i\setminus \mathfrak{a}$, et $h\in\mathfrak{a}$ qui s'étendent en des fonctions régulières sur $Y$. Alors l'idéal $\mathfrak{b}=\mathfrak{a}\cap \Oo(Y)$ est $K$-premier, non-nul, et strictement contenu dans l'idéal $K$-premier $\mathfrak{b}_i=\mathfrak{a}_i\cap \Oo(Y)$. On a de plus $\Vv_Y(\mathfrak{b}_i)=\overline{D_i}$ qui est un diviseur de Weil $H$-premier de $Y$. On s'est donc ramené au cas affine.
+On suppose que $1$ est vérifié et on veut montrer $2$. Soit $D$ un diviseur de Weil $H$-invariant. On vérifie immédiatement que l'on peut l'écrire de manière unique $D=a_1D_1+...+a_rD_r$ où les $D_i$ sont des diviseurs $H$-premiers. Si $\mathfrak{a}_i:=\Ii_X(\supp(D_i))$ est de $K$-hauteur $1$, alors par hypothèse $D_i=\divi(f_i)$ avec $f_i\in R$ homogène, puis on obtient $D=\divi(f_1^{a_1}...f_r^{a_r})$. On voit donc qu'il suffit de montrer que $\mathfrak{a}_i$ est de hauteur $1$. Supposons que $X$ soit affine, on montrera ensuite que l'on peut faire cette simplification. Par l'absurde, supposons qu'il existe un idéal $K$-premier non-nul $\mathfrak{a}$ strictement contenu dans $\mathfrak{a}_i$. On peut donc trouver $f\in \mathfrak{a}_i\setminus\mathfrak{a}$	 que l'on peut de plus choisir homogène. Remarquons que $\Vv(\mathfrak{a})$ est de codimension $1$ car il contient $\Vv(\mathfrak{a}_i)$ et que $\mathfrak{a}$ est non-nul. Sa décomposition en composantes irréductibles s'écrit donc $\Vv(\mathfrak{a})=D'_1\cup...\cup D'_s\cup Z_1\cup ...\cup Z_t$, où les $D'_i$ sont les diviseurs premiers intervenant dans l'écriture de $D_i$. Notons $Z=Z_1\cup ...\cup Z_t$, alors $f$ s'annule sur $\supp(D_i)$ mais pas sur $Z$ car sinon une puissance de $f$ appartiendrai à $\mathfrak{a}$, et donc $f$ aussi car cet idéal est $K$-premier. Par ailleurs, $W:=\overline{Z\setminus \supp(D_i)}$ est un fermé propre non-vide de $X$ (et de $\Vv(\mathfrak{a})$), qui est de plus $H$-invariant. On peut donc trouver une fonction $g$ homogène non-nulle s'annulant sur $Z$ mais pas sur $\supp(D_i)$. On obtient ainsi $(fg)^n\in\mathfrak{a}$ pour un $n>0$ alors que $f\notin \mathfrak{a}$ et $g\notin\mathfrak{a}$, contradiction. Enfin, revenons au cas où $X$ est quasi-affine. On plonge $X$ dans une $H$-variété $Y$ affine normale irréductible, par une immersion ouverte $H$-équivariante telle qu'il existe des fonctions régulières homogènes $f\in\mathfrak{a}_i\setminus \mathfrak{a}$, et $h\in\mathfrak{a}$ qui s'étendent en des fonctions régulières sur $Y$. Alors l'idéal $\mathfrak{b}=\mathfrak{a}\cap \Oo(Y)$ est $K$-premier, non-nul, et strictement contenu dans l'idéal $K$-premier $\mathfrak{b}_i=\mathfrak{a}_i\cap \Oo(Y)$. On a de plus $\Vv_Y(\mathfrak{b}_i)=\overline{D_i}$ qui est un diviseur de Weil $H$-premier de $Y$. On s'est donc ramené au cas affine.
 
 Supposons $2$ et montrons $3$. Soit $f\in R\setminus R^*$ non-nul. Écrivons $\divi(f)=D_1+...+D_r$ où les $D_i$ sont $H$-premiers. Par hypothèse, $D_i=\divi(f_i)$ pour un élément $f_i\in R$ homogène, qui est de plus $K$-premier. On en déduit $f=uf_1...f_r$ où $u$ est une unité homogène de $R$. C'est ce qu'on voulait montrer.
 
@@ -506,7 +509,7 @@ Soit $X$ une variété normale irréductible telle que $\Oo(X)^*=k^*$ et $\clg(X
 \end{enumerate}
 \end{prop}
 \begin{proof}
-En utilisant \ref{isomcodime2CoxTorsion} on peut supposer $X$ lisse et donc se placer dans la situation de la construction $\ref{conscoxtorsionlisse}$. Alors la variété quasi-affine $\widehat{X}$ est lisse et son algèbre de fonction régulières est $\Rr(X)$. Ainsi on a $f\mid g$ dans $\Rr(X)$ si et seulement si $\divi(f)\leq \divi(g)$ dans $WDiv(\widehat{X})$. D'après le lemme précédent, c'est équivalent à $\divi_{[D]}(f)\leq\divi_{[E]}(g)$. Avec cela on obtient directement $2$.
+En utilisant \ref{isomcodime2CoxTorsion} on peut supposer $X$ lisse et donc se placer dans la situation de la construction \ref{conscoxtorsionlisse}. Alors la variété quasi-affine $\widehat{X}$ est lisse et son algèbre de fonction régulières est $\Rr(X)$. Ainsi on a $f\mid g$ dans $\Rr(X)$ si et seulement si $\divi(f)\leq \divi(g)$ dans $WDiv(\widehat{X})$. D'après le lemme précédent, c'est équivalent à $\divi_{[D]}(f)\leq\divi_{[E]}(g)$. Avec cela on obtient directement $2$.
 
 Montrons le point $3$. Supposons $\divi_{[D]}(f)$ premier. Comme il est non-trivial, $\divi(f)$ l'est aussi d'après le lemme précédent. Ainsi $f$ est non-nul et non-inversible. Si $f$ divise un produit $f_1f_2$ d'éléments homogènes non-nuls de $\Rr(X)$ alors d'après $1$, il divise l'un des deux car $\divi_{[D]}(f)$ étant premier, il est nécessairement inférieur ou égal à l'un des deux diviseurs effectifs  $\divi_{[D]}(f_i)$. Ainsi $f$ est $\clg(X)$-premier. Réciproquement, supposons par l'absurde que $f$ est $\clg(X)$-premier et $\divi_{[D]}(f)$ non-premier. Alors $\divi_{[D]}(f)=D_1+D_2$ avec chaque $D_i$ non-nul et effectif. D'après \ref{diviCoxTorsFormulas} $1$), on obtient des $f_i\Rr_{[D_i]}(X)$ tels que $\divi_{[D_i]}(f_i)=D_i$. D'après $1$), $f$ divise $f_1f_2$ mais ne divise aucun des facteurs, contradiction.
 \end{proof}
@@ -525,6 +528,6 @@ Avec les données de \ref{conscoxtorsion}, l'application $f\mapsto \divi_{[D]}(f
 \end{rem}
 
 \begin{ex}
-Dans l'exemple \ref{}, l'anneau de Cox est $\ZZ/2\ZZ$-factoriel mais pas factoriel.
+Dans l'exemple \ref{CoxRingEx3}, l'anneau de Cox est $\ZZ/2\ZZ$-factoriel mais pas factoriel.
 \end{ex}
 

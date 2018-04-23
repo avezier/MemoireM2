@@ -176,11 +176,25 @@ Voir \cite{Matsumura} 5.6
 Un anneau local noethérien $A$ de corps résiduel $k=A/\mathfrak{m}$ est régulier si $\dim A =\dim_k\mathfrak{m}/\mathfrak{m}^2$.
 \end{defn}
 
+\begin{prop}
+Soit $A$ un anneau local noetherien. Alors $$\dim_k\mathfrak{m}/\mathfrak{m}^2\geq \dim A $$
+\end{prop}
+\begin{proof}
+Voir \cite{Matsumura} V.14
+\end{proof}
+
+\begin{thm}
+Soit $A$ un anneau local régulier, et $\mathfrak{p}$ un idéal premier. Alors $A_\mathfrak{p}$ est encore régulier.
+\end{thm}
+\begin{proof}
+Voir \cite{Matsumura} VII.19.3
+\end{proof}
+
 \begin{thm}\label{reglocufd}
 Un anneau local régulier est factoriel.
 \end{thm}
 \begin{proof}
-Voir \cite{Matsumura} 20.3
+Voir \cite{Matsumura} VII.20.3
 \end{proof}
 
 \begin{thm}\label{ideauxinversibles}
@@ -192,7 +206,7 @@ Soit $A$ un anneau intègre et $I$ un idéal fractionnaire de $A$. Les assertion
 \end{enumerate}
 \end{thm}
 \begin{proof}
-Voir \cite{Matsumura} 11.3
+Voir \cite{Matsumura} IV.11.3
 \end{proof}
 
 \subsection{Algèbres graduées}
@@ -234,7 +248,7 @@ Soit $A$ une $K$-algèbre graduée. Le monoïde de poids de $A$ est le sous-mono
 Si $A$ est intègre, alors $S(A)=\lbrace w\in K\mid A_w\neq \lbrace 0\rbrace\rbrace$.
 \end{rem}
 
-\begin{prop}
+\begin{prop}\label{GradedProp1}
 Soit $A$ une $R$-algèbre $\ZZ^r$-graduée telle que $ff'\neq 0$ pour tout $f,f'\in A$ non-nuls. Alors
 \begin{enumerate}
 \item $A$ est intègre
@@ -274,13 +288,13 @@ Réciproquement, tout morphisme entre schémas affines $f:\spec B\rightarrow \sp
 Les foncteurs $\spec$ et $\Gamma(.)$ définissent une anti-équivalence de catégories entre la catégorie des schémas affines et la catégorie des anneaux (commutatifs).
 \end{prop}
 
-Soit $X$ un schéma, on peut étendre l'opération $\Vv_X(.)$ définie plus haut pour les schémas affines. On considère un faisceau d'idéaux $\Ii$ de $\Oo_X$, et on pose $\Vv_X(\Ii)=\supp \Oo_X/\Ii$. De même, soit $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U=\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$. On peut alors définir le faisceau d'idéaux des fonctions régulières s'annulant sur un fermé $F$ de $X$, on le note $\Ii_X(F)$, c'est un faisceau d'idéaux radicaux. Si $X=\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
+Soit $X$ un schéma, on peut étendre l'opération $\Vv_X(.)$ définie plus haut pour les schémas affines. On considère un faisceau d'idéaux $\Ii$ de $\Oo_X$, et on pose $\Vv_X(\Ii)=\supp \Oo_X/\Ii$. De même, soit $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U\simeq\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$. On peut alors définir l' idéal des fonctions régulières sur $X$ s'annulant sur un fermé $F$ de $X$, on le note $\Ii_X(F)$, c'est un idéal radical. Si $X=\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
 $$\Ii_X(Y)=\bigcap_{\mathfrak{p}\in Y}\mathfrak{p},\,\,\,\,\, \Ii_X(\Vv_X(\mathfrak{a}))=\sqrt{\mathfrak{a}},\,\,\,\,\,\,\Vv_X(\Ii_X(Y))=\overline{Y}$$
 
 \begin{rem}
 On remarque que si on considère une algèbre affine, c'est à dire une $k$-algèbre de type fini réduite, et que l'on suppose de plus le corps algébriquement clos. Alors si l'on remplace "premier" par "maximal" dans les formules ci-dessus relatives aux opérations $\Vv$ et $\Ii$, on retombe sur les définitions classiques de ces opérations qui donnent les ensemble algébriques et leurs équations dans un espace affine de dimension finie sur $k$. En effet le Nullstellensatz assure dans ce cas que les points de l'ensemble algébrique correspondent aux idéaux maximaux de l'algèbre et que $\Ii(Y)=\bigcap_{y\in Y}\mathfrak{m}_y$.
 
-Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ d'un schéma $X$ peuvent être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Dans le cas d'une variété affine, c'est à dire $X=\spec A$ où $A$ est une $k$-algèbre affine sur un corps algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est à dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant s'identifie à $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique que les morphismes entre ensembles algébriques sont les applications polynomiales.
+Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ d'un schéma $X$ peuvent être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Dans le cas d'une variété affine, c'est à dire $X=\spec A$ où $A$ est une $k$-algèbre affine sur un corps algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est à dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant s'identifie à $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique des morphismes entre ensembles algébriques, c'est à dire telles que sur sur chaque coordonnées les applications soient polynomiales.
 \end{rem}
 
 \begin{cons}[Recollement de schémas]\label{gluevar}
@@ -312,7 +326,7 @@ $$
 Soit $S$ un schéma. Un $S$-schéma, où schéma sur $S$, est un schéma $X$ muni d'un morphisme $X\rightarrow S$ appelé morphisme structural.
 \end{defn}
 
-Soit $S$ un schéma de base. Les $S$-schémas forment une sous-catégorie où l'on demande que morphismes soient compatibles avec les morphismes structuraux. Le produit existe dans cette catégorie, on l'appelle le produit fibré sur $S$. Cette construction se fait par recollement en remarquant que pour des schémas affines $X,Y$ sur un schéma affine $S$, le produit fibré $X\times_S Y$ est naturellement $\spec \Oo_X(X)\otimes_{\Oo_S(S)}\Oo_Y(Y)$. En effet, cela vient de \ref{EqCat} et du fait que le produit tensoriel sur $\Oo_S(S)$ est le co-produit dans la catégorie des $\Oo_S(S)$-algèbres. 
+Soit $S$ un schéma de base. Les $S$-schémas forment une sous-catégorie où l'on demande que morphismes soient compatibles avec les morphismes structuraux. Le produit existe dans cette catégorie, on l'appelle le produit fibré sur $S$. Cette construction se fait par recollement en remarquant que pour des schémas affines $X,Y$ sur un schéma affine $S$, le produit fibré $X\times_S Y$ est naturellement $\spec (\Oo_X(X)\otimes_{\Oo_S(S)}\Oo_Y(Y))$. En effet, cela vient de \ref{EqCat} et du fait que le produit tensoriel sur $\Oo_S(S)$ est le co-produit dans la catégorie des $\Oo_S(S)$-algèbres. 
 Comme tout anneau est naturellement une $\ZZ$-algèbre, tout schéma est naturellement un schéma sur $\spec \ZZ$. Le produit de deux schéma est par définition le produit sur $\spec \ZZ$.
 
 \subsection{Quelques propriétés des schémas}
@@ -365,7 +379,7 @@ On donne la preuve dans le cas où $X$ est noetherien. Dans ce cas, $\Vv_X(\math
 Un schéma est intègre si il est réduit et irréductible.
 \end{defn}
 
-\begin{prop}
+\begin{prop}\label{SchemaIntegreCritere}
 Un schéma $X$ est intègre si et seulement si $\Oo(U)$ est intègre pour tout ouvert $U\subset X$ non-vide.
 \end{prop}
 
@@ -464,11 +478,19 @@ Un $S$-schéma est séparé si son morphisme structural est séparé. En particu
 Les morphismes entre schémas affines sont séparés et en particulier les schémas affines sont séparés. En effet, considérons $X=\spec A$ et $Y=\spec B$, le morphisme diagonal est donné par $\rho: B\otimes_A B\rightarrow B, x\otimes 1\mapsto x, 1\otimes y \mapsto y$ qui est clairement surjectif, c'est donc une immersion fermée. Le critère suivant est utile et nous dit de plus que les intersections d'affines sont affines dans les schémas séparés.
 
 \begin{prop}\label{sepCritere}
+Soit $f:X\rightarrow S$ un morphisme de schémas.
+	\begin{enumerate}
+	\item Si $f$ est séparé, alors pour toute paire $(U,V)$ d'ouverts affines de $X$ dont les images sont contenues dans un même ouvert affine de $S$, l'ouvert $U\cap V$ est affine, et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif.
+	\item Si pour toute paire $(x_1,x_2)$ de points de $X$ au-dessus d'un même point $s\in S$, on a des ouverts affines $x_1\in U$ et $x_2\in V$ dont l'image est contenue dans un même ouvert affine de $S$, et qui vérifient: l'ouvert $U\cap V$ est affine, et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif. Alors $f$ est séparé.
+	\end{enumerate}
+\end{prop}
+
+\begin{prop}\label{sepCritere}
 Soit $X$ un schéma. Les assertions suivantes sont équivalentes
 	\begin{enumerate}
 	\item $X$ est séparé
-	\item Pour tous ouverts affines $U$ et $V$ de $X$, $U\cap V$ est affine et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$
-	\item Il existe un recouvrement affine $(U_i)$ tel que pour tout $i,j$, $U_i\cap U_j$ est affine et le morphisme naturel $\Oo(U_i)\otimes_\ZZ \Oo(U_j)\rightarrow\Oo(U_i\cap U_j), f\otimes g\mapsto f_{U_i\cap U_j}g_{U_i\cap U_j}$
+	\item Pour tous ouverts affines $U$ et $V$ de $X$, $U\cap V$ est affine et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif.
+	\item Il existe un recouvrement affine $(U_i)$ tel que pour tout $i,j$, $U_i\cap U_j$ est affine et le morphisme naturel $\Oo(U_i)\otimes_\ZZ \Oo(U_j)\rightarrow\Oo(U_i\cap U_j), f\otimes g\mapsto f_{U_i\cap U_j}g_{U_i\cap U_j}$ est surjectif.
 	\end{enumerate}
 \end{prop}
 
@@ -599,7 +621,7 @@ Si un point $p\in X$ d'une variété se situe à l'intersection de deux composan
 Le lieu singulier d'une variété normale est un fermé de codimension $\geq 2$
 \end{prop}
 \begin{proof}
-Supposons par l'absurde qu'il existe une composante irréductible $Y$ de $X_{\text{sing}}$ de codimension $1$ dans $X$. Soit $U=\spec A$ un ouvert affine qui intersecte $Y$, et $\mathfrak{p}\in U$ le point générique de $Y$. L'idéal premier $\mathfrak{p}$ est de hauteur $1$, et comme $A$ est normal et noetherien, $A_\mathfrak{p}$ est un anneau de valuation discrète, donc $\mathfrak{p}$ est un point régulier, c'est une contradiction.
+Supposons par l'absurde qu'il existe une composante irréductible $Y$ de $X_{\text{sing}}$ de codimension $1$ dans $X$, et notons $\eta_Y$ son point générique. La tige $\Oo_{X,\eta_Y}$ est un anneau de valuation discrète car il est local noetherien normal et de dimension $1$. Soit $\pi$ une uniformisante de cet anneau, il existe donc un ouvert affine $U$ contenant $\eta_Y$ tel que $Y':=Y\cap U=\Vv_U((\pi))$. Maintenant, $Y'$ en tant que sous-variété contient au moins un point non-singulier $y$. L'anneau local $\Oo_{Y',y}$ est régulier, c'est à dire que l'on a des paramètres locaux $u_1,...,u_{n-1}\in\mathfrak{m}_{Y',y}$ tels que leur image forment une base du $k$-espace vectoriel $\mathfrak{m}_{Y',y}/\mathfrak{m}_{Y',y}^2$. Comme $\Oo_{Y',y}\simeq \Oo_{U,\eta_Y}/(\pi)$, on voit que $\mathfrak{m}_{U,y}$ est engendré par $(v_1,...,v_{n-1},\pi)$, où les éléments $v_i$ sont des antécédents des éléments $u_i$ par la projection dans le quotient $\Oo_{U,\eta_Y}/(\pi)$. Ainsi $\dim_k \mathfrak{m}_{U,y}/\mathfrak{m}_{U,y}^2\leq n$ ce qui prouve que $y$ est un point régulier de $X'$ appartenant à $Y$, contradiction.
 \end{proof}
 
 

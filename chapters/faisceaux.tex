@@ -264,14 +264,14 @@ Dans cette section on se pose la question de la possibilité d'étendre une acti
 Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $(L,\pi)$ un fibré en droites. Une $G$-linéarisation de  $(L,\pi)$ est une action de $G$ sur $L$ telle que $\pi$ est $G$-équivariante et pour tout $(g,x)\in G\times X$ l'application $L_x\rightarrow L_{g.x},\, l\mapsto g.l$ est linéaire.
 \end{defn}
 
-Autrement dit, le morphisme associé à une $G$-linéarisation est à valeurs dans le groupe d'automorphisme de fibrés en droites de $(L,\pi)$. On note $\alpha: G\times X\rightarrow X$ l'action de $G$ sur $X$ et $p_2:G\times X\rightarrow X$ la projection sur $X$. Pour tout $g\in G$ on a une application:
+Une action $G$-linéarisée définit donc un morphisme $G\rightarrow \Aut L$ à valeurs dans le groupe d'automorphisme de fibrés en droites de $(L,\pi)$. On note $\alpha: G\times X\rightarrow X$ l'action de $G$ sur $X$ et $p_2:G\times X\rightarrow X$ la projection sur $X$. Pour tout $g\in G$ on a une application:
 $$g\times \id: X\rightarrow G\times X,\,\, x\mapsto (g,x)$$ 
 Les images inverses de ces deux fibrés en droites par cette application sont explicitement: 
 $$(g\times \id)^*\alpha^*(L)=X\times_{G\times X}(G\times X)\times_X L=\lbrace (x,(g',x'),l)\mid \alpha(g',x')=\pi(l)\text{ et } (g,x)=(g',x')\rbrace$$
 $$(g\times \id)^*p_2^*(L)=X\times_{G\times X}(G\times X)\times_X L=\lbrace (x,(g',x'),l)\mid x'=\pi(l)\text{ et } (g,x)=(g',x')\rbrace$$
 On obtient ainsi des isomorphismes canoniques $(g\times \id)^*\alpha^*(L)\simeq g^*L$ et $(g\times \id)^*p_2^*(L)\simeq L$, où $g^*L$ est l'image inverse de $L$ par l'automorphisme de $X$ associé à l'action de $g$, et on fait ces identifications par la suite. Ainsi, vu la discussion suivant \ref{linebundle}, tout morphisme de fibrés en droites $\Phi: \alpha^*(L)\rightarrow p_2^*(L)$ induit pour tout $g\in G$ un morphisme $\Phi_g:g^*(L)\rightarrow L$.
 
-\begin{lem}
+\begin{lem}\label{CritereExistenceGLin}
 Avec les notations ci-dessus, on a une correspondance bijective entre les $G$-linéarisations de $L$ et les isomorphismes
 $$\Phi: \alpha^*(L)\rightarrow p_2^*(L)$$
 de fibrés en droites sur $G\times X$ tels que $\Phi_{gh}=\Phi_h\circ h^*(\Phi_g)$ pour tous $g,h\in G$.
@@ -312,14 +312,14 @@ De plus, on a modifié $\Phi$ de telle manière que l'on ait $\forall l\in L,\,\
   		G\times G\times X \arrow[r, "\alpha"] & X
 	\end{tikzcd}
 	\end{center}
-	On obtient ainsi deux isomorphismes $\gamma_1:G\times G\times L\rightarrow\alpha^*(L), (g,h,l)\mapsto ((g,h,\pi(l)), \beta_1(g,h,l))$ et $\gamma_2:G\times G\times L\rightarrow\alpha^*(L), (g,h,l)\mapsto ((g,h,\pi(l)), \beta_2(g,h,l))$. La condition d'associativité correspond à $\gamma_1\gamma_2^{-1}=\id$. Or $\gamma_1\gamma_2^{-1}$ est un automorphisme du fibré en droite $(G\times G\times L,\id\times \pi)$, donc correspond à une fonction $\phi\in \Oo(G\times G\times X)^*$. D'après \ref{}, il existe $\chi\in X^*(G\times G)$ et $\psi\in\Oo(X)^*$ tels que $\phi(g,h,x)=\chi(g,h)\psi(x)$ pour tout $g,h\in G$ et $x\in X$. En évaluant en $g=h=e$ on obtient $\psi=1$, puis comme $\phi(g,e,x)=1=\phi(e,g,x)$ pour tout $g\in G$ et $x\in X$, on obtient $\chi(g,e)=\chi(e,g)$ pour tout $g\in G$. Comme l'application naturelle $X^*(G)\times X^*(G)\rightarrow X^*(G\times G)$ est un isomorphisme, on conclut que $\chi=1$ et donc $\phi=1$, ce qui termine la preuve.
+	On obtient ainsi deux isomorphismes $\gamma_1:G\times G\times L\rightarrow\alpha^*(L), (g,h,l)\mapsto ((g,h,\pi(l)), \beta_1(g,h,l))$ et $\gamma_2:G\times G\times L\rightarrow\alpha^*(L), (g,h,l)\mapsto ((g,h,\pi(l)), \beta_2(g,h,l))$. La condition d'associativité correspond à $\gamma_1\gamma_2^{-1}=\id$. Or $\gamma_1\gamma_2^{-1}$ est un automorphisme du fibré en droite $(G\times G\times L,\id\times \pi)$, donc correspond à une fonction $\phi\in \Oo(G\times G\times X)^*$. D'après \ref{rosenlicht1}, il existe $\chi\in X^*(G\times G)$ et $\psi\in\Oo(X)^*$ tels que $\phi(g,h,x)=\chi(g,h)\psi(x)$ pour tout $g,h\in G$ et $x\in X$. En évaluant en $g=h=e$ on obtient $\psi=1$, puis comme $\phi(g,e,x)=1=\phi(e,g,x)$ pour tout $g\in G$ et $x\in X$, on obtient $\chi(g,e)=\chi(e,g)$ pour tout $g\in G$. Comme l'application naturelle $X^*(G)\times X^*(G)\rightarrow X^*(G\times G)$ est un isomorphisme, on conclut que $\chi=1$ et donc $\phi=1$, ce qui termine la preuve.
 \end{proof}
 
 \begin{prop}\label{GmoduleSectionsGlobalesGlin}
 Soit $X$ une $G$-variété et $L$ un fibré en droite $G$-linéarisé sur $X$. Alors le $k$-ev des sections globales $\Gamma(X, L)$ a une structure naturelle de $G$-module.
 \end{prop}
 \begin{proof}
-Comme $L^{-1}$ admet aussi une $G$-linéarisation d'après \ref{}, il s'agit d'une $G\times \GG_m$-variété où l'action de $\GG_m$ est l'action naturelle sur les fibres par multiplication. D'après \ref{GmoduleSectionsGlobales}, $\Oo(L^{-1})$ est un $G\times \GG_m$-module, donc en particulier un $\GG_m$-module. Le sous-espace de poids $1$ pour l'action de $\GG_m$ de ce module est $\Gamma(X, L)$ d'après \ref{remfibsectionsglobales}. Il est facile de vérifier que ce sous-espace est stable par l'action de $G$, ce qui en fait un $G$-module.
+$L^{-1}$ admet aussi une $G$-linéarisation d'après \ref{CritereExistenceGLin} et le fait que l'image inverse d'un fibré en droite commute à la prise de son dual. $L^{-1}$ est en fait une $G\times \GG_m$-variété où l'action de $\GG_m$ est l'action naturelle sur les fibres par multiplication. D'après \ref{GmoduleSectionsGlobales}, $\Oo(L^{-1})$ est un $G\times \GG_m$-module, donc en particulier un $\GG_m$-module. Le sous-espace de poids $1$ pour l'action de $\GG_m$ de ce module est $\Gamma(X, L)$ d'après \ref{remfibsectionsglobales}. Il est facile de vérifier que ce sous-espace est stable par l'action de $G$, ce qui en fait un $G$-module.
 \end{proof}
 
 \section{Diviseurs}
