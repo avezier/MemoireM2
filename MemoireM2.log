@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  23 APR 2018 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  24 APR 2018 22:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1083,11 +1083,8 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \colbreak@box=\box67
 \mc@col@check@num=\count159
 )
-(./MemoireM2.aux (./chapters/introduction.aux) (./chapters/preliminaires.aux
-
-LaTeX Warning: Label `sepCritere' multiply defined.
-
-) (./chapters/LAGs.aux) (./chapters/faisceaux.aux) (./chapters/coxring.aux))
+(./MemoireM2.aux (./chapters/introduction.aux) (./chapters/preliminaires.aux)
+(./chapters/LAGs.aux) (./chapters/faisceaux.aux) (./chapters/coxring.aux))
 \openout1 = `MemoireM2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -1217,11 +1214,7 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 
 ] [6]
-[7] [8] [9] [10] [11] [12]
-
-LaTeX Warning: Reference `' on page 13 undefined on input line 452.
-
-[13] [14] [15] [16]) [17]
+[7] [8] [9] [10] [11] [12] [13] [14] [15] [16]) [17]
 \openout2 = `chapters/LAGs.aux'.
 
  (./chapters/LAGs.tex
@@ -1356,14 +1349,7 @@ al-gèbre des in-va-riants sous cette ac-tion est $\OML/cmm/m/it/10 k\OT1/cmr/m/
 n/10 [\OML/cmm/m/it/10 z[]z[]; z[]z[]; z[]z[]; z[]z[]\OT1/cmr/m/n/10 ]$
  []
 
-[46]
-
-LaTeX Warning: Reference `' on page 47 undefined on input line 92.
-
-[47] [48]
-
-LaTeX Warning: Reference `' on page 49 undefined on input line 133.
-
+[46] [47] [48]
 
 LaTeX Warning: Reference `' on page 49 undefined on input line 150.
 
@@ -1378,9 +1364,6 @@ ar $\OML/cmm/m/it/10 X[]$ \T1/cmr/m/n/10 est de co-di-men-sion $\U/msa/m/n/10 >
 ; \OMS/cmsy/m/n/10 R\OT1/cmr/m/n/10 ) = ^^@(\OML/cmm/m/it/10 X[]; X\OT1/cmr/m/n
 /10 )$\T1/cmr/m/n/10 .
  []
-
-
-LaTeX Warning: Reference `Coxgraded' on page 50 undefined on input line 190.
 
 [50] [51] [52]
 
@@ -1398,11 +1381,7 @@ LaTeX Warning: Reference `' on page 57 undefined on input line 409.
 
 LaTeX Warning: Reference `' on page 57 undefined on input line 425.
 
-[57]
-
-LaTeX Warning: Reference `' on page 58 undefined on input line 449.
-
-[58] [59]) [60] (./MemoireM2.bbl
+[57] [58] [59]) [60] (./MemoireM2.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 31.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -1419,24 +1398,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
 Package rerunfilecheck Info: File `MemoireM2.out' has not changed.
-(rerunfilecheck)             Checksum: 067A9827A5B26F761473C373D68A85AE;4406.
+(rerunfilecheck)             Checksum: 6A9C191EB64761199E528E4170D9415A;4372.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 55.
  ) 
 Here is how much of TeX's memory you used:
- 21874 strings out of 492995
- 408829 string characters out of 6132704
- 484313 words of memory out of 5000000
+ 21871 strings out of 492995
+ 408811 string characters out of 6132704
+ 484317 words of memory out of 5000000
  24486 multiletter control sequences out of 15000+600000
  26777 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,15n,84p,2454b,1082s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,15n,84p,2495b,1082s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{thm.2.2.1.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1475,10 +1451,10 @@ exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on MemoireM2.pdf (62 pages, 748513 bytes).
+Output written on MemoireM2.pdf (62 pages, 748543 bytes).
 PDF statistics:
  1363 PDF objects out of 1440 (max. 8388607)
  1255 compressed objects within 13 object streams
- 488 named destinations out of 1000 (max. 500000)
+ 485 named destinations out of 1000 (max. 500000)
  421 words of extra memory for PDF output out of 10000 (max. 10000000)
 

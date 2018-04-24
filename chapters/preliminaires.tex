@@ -10,7 +10,7 @@ On collecte dans cette partie des définitions et résultats d'algèbre commutat
 On fixe dans cette partie un $A$-module non-nul $M$ de type fini avec $A$ noetherien. On pense par exemple à $A/\mathfrak{a}$, où $\mathfrak{a}$ est un idéal de $A$.
 
 \begin{defn}[Idéal premier associé]
-Un idéal premier $\mathfrak{p}\subset A$ est dit associé à $M$ si c'est l'annulateur $\ann(m)$ d'un élément $m\in M$. Si $M$ est de la forme $A/\mathfrak{a}$, on parle d'idéal premier associé à $\mathfrak{a}$. On note $\assp_AM$ l'ensemble des idéaux premiers associés à $M$. Les éléments minimaux de $\assp_AM$ sont appelés premiers isolés, les autres sont appelés premiers immergés.
+Un idéal premier $\mathfrak{p}\subset A$ est un idéal premier associé à $M$ si c'est l'annulateur $\ann(m)$ d'un élément $m\in M$. Si $M$ est de la forme $A/\mathfrak{a}$, on parle d'idéal premier associé à $\mathfrak{a}$. On note $\assp_AM$ l'ensemble des idéaux premiers associés à $M$. Les éléments minimaux de $\assp_AM$ sont appelés premiers isolés, les autres sont appelés premiers immergés.
 \end{defn}
 
 \begin{ex}
@@ -55,13 +55,13 @@ Les assertions suivantes sont équivalentes
 \end{prop}
 
 \begin{rem}
-Ainsi pour un sous-module $\mathfrak{p}$-primaire $N$ de $M$, on a $\mathfrak{p}\subset \sqrt{\ann(M/N)}$. Or on aussi $\ann(M/N)\subset \mathfrak{p}$. D'où $\mathfrak{p}=\sqrt{\ann(M/N)}$. On a ainsi pour tout $a\in A$
+Ainsi pour un sous-module $\mathfrak{p}$-primaire $N$ de $M$, on a $\mathfrak{p}\subset \sqrt{\ann(M/N)}$. Or on a aussi $\ann(M/N)\subset \mathfrak{p}$. D'où $\mathfrak{p}=\sqrt{\ann(M/N)}$. On a ainsi pour tout $a\in A$
 $$a\text{ est diviseur de zéro de } M/N \implies a\in\sqrt{\ann(M/N)}$$
 Réciproquement, si cette assertion est vérifiée pour un sous-module $N$, alors $\sqrt{\ann(M/N)}$ est l'ensemble des diviseurs de zéro de $M/N$, et on a $\assp_A(M/N)=\lbrace \mathfrak{p}:=\sqrt{\ann(M/N)}\rbrace$, ce qui montre que $N$ est $\mathfrak{p}$-primaire. Avec $M=A$ et $N=\mathfrak{a}$ un idéal de $A$ on retrouve la définition plus classique
-$$\mathfrak{a}\text{ est }\mathfrak{p}\text{-primaire} \iff (x\in A,\, y\in A\setminus\mathfrak{a},\,xy\in\mathfrak{a}\implies x\in \sqrt{\mathfrak{a}})=\mathfrak{p}$$
+$$\mathfrak{a}\text{ est }\mathfrak{p}\text{-primaire} \iff (x\in A,\, y\in A\setminus\mathfrak{a},\,xy\in\mathfrak{a}\implies x\in \sqrt{\mathfrak{a}}=\mathfrak{p})$$
 \end{rem}
 
-Un sous-module $N$ est dit irréductible si on ne peut pas l'écrire comme une intersections de sous-modules qui le contiennent strictement. Une décomposition irréductible de $N$ est une écriture $N=N_1\cap...\cap N_r$ avec $N_i$ irréductible pour tout $i$. Cette écriture n'est pas unique en général, même si elle est réduite, c'est à dire qu'on ne peut ôter aucun facteur. 
+Un sous-module $N$ est dit irréductible si on ne peut pas l'écrire comme une intersection de sous-modules qui le contiennent strictement. Une décomposition irréductible de $N$ est une écriture $N=N_1\cap...\cap N_r$ avec $N_i$ irréductible pour tout $i$. Cette écriture n'est pas unique en général, même si elle est réduite, c'est à dire qu'on ne peut ôter aucun facteur. 
 
 \begin{thm}
 \begin{enumerate}
@@ -74,7 +74,7 @@ Un sous-module $N$ est dit irréductible si on ne peut pas l'écrire comme une i
 
 \subsection{Extensions entières d'anneaux}
 
-Soit $f:A\rightarrow B$ une extension d'anneau. Un élément $b\in B$ est dit entier sur $A$ si il existe un polynôme irréductible unitaire $P$ de $A[x]$ tel que $P^f(b)=0$, où $P^f$ désigne l'image de $P$ par l'application canonique $f:A[x]\rightarrow B[x]$. L'extension $f:A\rightarrow B$ est dite entière si $B$ est constitué d'éléments entiers sur $A$.
+Soit $f:A\rightarrow B$ une extension d'anneau. Un élément $b\in B$ est dit \textit{entier} sur $A$ si il existe un polynôme unitaire $P$ de $A[x]$ tel que $P^f(b)=0$, où $P^f$ désigne l'image de $P$ par l'application canonique $f:A[x]\rightarrow B[x]$. L'extension $f:A\rightarrow B$ est dite \textit{entière} si $B$ est constitué d'éléments entiers sur $A$.
 
 \begin{prop}
 Les assertions suivantes sont équivalentes
@@ -85,7 +85,7 @@ Les assertions suivantes sont équivalentes
 \end{enumerate}
 \end{prop}
 
-Ainsi, l'ensemble des éléments de $B$ entiers sur $A$ forment un sous-anneau de $B$, c'est la clôture intégrale de $A$ dans $B$, notée $\overline{A_B}$. Si $\overline{A_B}=B$, on dit que $A$ est intégralement clos dans $B$. Dans le cas où $A$ est intègre et $B=\fract A$, on dit tout simplement intégralement clos. Si $A$ n'est pas intègre, remarquons qu'il existe une notion plus générale qu'il est utile de mentionner pour la consistance avec la terminologie de variété normale que nous verrons plus loin. Pour un anneau quelconque $A$, on dit que $A$ est normal si tout localisé de $A$ en un idéal premier est un anneau intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13). Mentionnons que nous ne rencontrerons pas dans ce mémoire d'anneaux normaux non-intègres, donc la définition ci-dessus sera suffisante.
+Ainsi, l'ensemble des éléments de $B$ entiers sur $A$ forment un sous-anneau de $B$, c'est la \textit{clôture intégrale} de $A$ dans $B$, notée $\overline{A_B}$. Si $\overline{A_B}=B$, on dit que $A$ est \textit{intégralement clos} dans $B$. Dans le cas où $A$ est intègre et $B=\fract A$, on dit tout simplement intégralement clos. Si $A$ n'est pas intègre, remarquons qu'il existe une notion plus générale qu'il est utile de mentionner pour la consistance avec la terminologie de variété normale que nous verrons plus loin. Pour un anneau quelconque $A$, on dit que $A$ est \textit{normal} si tout localisé de $A$ en un idéal premier est un anneau intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13). Notons que nous ne rencontrerons pas dans ce mémoire d'anneaux normaux non-intègres.
 
 \begin{cor}
 Soit $B$ une $A$-algèbre de type fini. Alors $B$ est entière sur $A$ si et seulement si elle est finie.
@@ -132,7 +132,7 @@ Voir \cite{Matsumura} 23.8
 Soit $k[x_1,...,x_n]$ un anneau de polynômes, et $f\in A$ un élément premier. Alors $A=k[x_1,...,x_n]/(f)$ satisfait la condition $2$ du théorème précédent. 
 \end{prop}
 \begin{proof}
-Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de hauteur $1$. En remplaçant $A$ par sa localisation en $\mathfrak{p}$, on peut supposer $A$ local d'idéal maximal $\mathfrak{p}$. Par définition, il existe $g\in A\setminus (f) $ tel que $\mathfrak{p}=\lbrace x\in A\mid gx=0 \,\modu (f)$. Soit $y=g/f\in \fract(A)$. Si $y\mathfrak{p}\subset\mathfrak{p}$, c'est à dire $(x\in A$ et $gx=0 \,\modu (f))\implies (g/f)x=0\,\modu (f)$, ou encore $(g/f^n)x=0\,\modu (f)$ pour tout $n>0$. On en déduit $g\in (f)$, contradiction. Ainsi $y\mathfrak{p}=\mathfrak{p}$, ou encore $\mathfrak{p}=(f/g)$. Par le théorème de l'idéal principal de Krull (voir \ref{dimsousvariete}) on en déduit $\haut \mathfrak{p}=1$.
+Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de hauteur $1$. En remplaçant $A$ par sa localisation en $\mathfrak{p}$, on peut supposer $A$ local d'idéal maximal $\mathfrak{p}$. Par définition, il existe $g\in A\setminus (f) $ tel que $\mathfrak{p}=\lbrace x\in A\mid gx=0 \,\modu (f)\rbrace$. Soit $y:=g/f\in \fract(A)$. Si $y\mathfrak{p}\subset\mathfrak{p}$, c'est à dire $(x\in A$ et $gx=0 \,\modu (f))\implies g(x/f)=0\,\modu (f)$, ou encore $g(x/f^n)=0\,\modu (f)$ pour tout $n>0$. On en déduit $g\in (f)$, contradiction. Ainsi $y\mathfrak{p}=A$, ou encore $\mathfrak{p}=(f/g)$. Par le théorème de l'idéal principal de Krull (voir \ref{dimsousvariete}) on en déduit $\haut \mathfrak{p}=1$.
 \end{proof}
 
 \subsection{Lemme de normalisation de Noether et applications}
@@ -170,7 +170,7 @@ Soit $A$ une algèbre de type fini intègre sur un corps $k$ quelconque, $K=\fra
 Voir \cite{Matsumura} 5.6
 \end{proof}
 
-\subsection{Anneaux locaux, Anneaux de valuation discrète}
+\subsection{Anneaux locaux}
 
 \begin{defn}
 Un anneau local noethérien $A$ de corps résiduel $k=A/\mathfrak{m}$ est régulier si $\dim A =\dim_k\mathfrak{m}/\mathfrak{m}^2$.
@@ -268,7 +268,7 @@ Notre principale référence est \cite{Hartshorne}. On résume dans cette partie
 
 \subsection{Généralités}
 
-Soit $A$ un anneau, on note $X=\spec A$ l'ensemble de ses idéaux premiers, il est naturellement muni d'une topologie en définissant que les fermés sont les parties de la forme $\Vv_X(\mathfrak{a})=\supp A/\mathfrak{a}=\lbrace \mathfrak{p}\in X\mid \mathfrak{a}\subset \mathfrak{p}\rbrace$, où $\mathfrak{a}$ est un idéal de $A$. On munit $X$ d'un faisceau d'anneaux $\Oo_X$, dit faisceau structural, constitué pour tout ouvert $U\subset X$ des sections $s: U\mapsto \bigsqcup_{\mathfrak{p}\in U}A_\mathfrak{p}$ telles que $s(\mathfrak{p})\in A_\mathfrak{p}$, et pour tout $\mathfrak{p}\in U$, il existe un voisinage $V\subset U$ de $\mathfrak{p}$ et des éléments $a,f\in A$ tels que pour tout $\mathfrak{q}\in V$, on ait $f\notin \mathfrak{q}$ et $s(\mathfrak{q})=a/f\in A_\mathfrak{q}$. Les sections $s$ sur un ouvert $U$ sont appelées les fonctions régulières sur $U$. On peut définir le même faisceau structural d'une manière différente en remarquant que $X$ possède une base d'ouverts, dits principaux, de la forme $X_f:=X\setminus \Vv_X((f))$ avec $f\in A$. En effet, si $X_f\subset X_g$, alors on a une application canonique $A_g\rightarrow A_f$. On pose alors $\Oo(X_f)=A_f$ et on vérifie grâce aux propriétés $(A_f)_g\simeq A_{fg}$ et $X_{fg}=X_f\cap X_g$ que cela définit bien un "faisceau" sur cette base d'ouverts. qui se prolonge donc de manière unique en un faisceau sur $X$. En particulier on obtient immédiatement $A=\Gamma(X, \Oo_X)$, et sans difficulté $\Oo_{X,\mathfrak{p}}\simeq A_\mathfrak{p}$. 
+Soit $A$ un anneau, on note $X=\spec A$ l'ensemble de ses idéaux premiers, il est naturellement muni d'une topologie en définissant que les fermés sont les parties de la forme $\Vv_X(\mathfrak{a})=\supp A/\mathfrak{a}=\lbrace \mathfrak{p}\in X\mid \mathfrak{a}\subset \mathfrak{p}\rbrace$, où $\mathfrak{a}$ est un idéal de $A$. On munit $X$ d'un faisceau d'anneaux $\Oo_X$, dit \textit{faisceau structural}, constitué pour tout ouvert $U\subset X$ des sections $s: U\mapsto \bigsqcup_{\mathfrak{p}\in U}A_\mathfrak{p}$ telles que $s(\mathfrak{p})\in A_\mathfrak{p}$, et pour tout $\mathfrak{p}\in U$, il existe un voisinage $V\subset U$ de $\mathfrak{p}$ et des éléments $a,f\in A$ tels que pour tout $\mathfrak{q}\in V$, on ait $f\notin \mathfrak{q}$ et $s(\mathfrak{q})=a/f\in A_\mathfrak{q}$. Les sections $s$ sur un ouvert $U$ sont appelées les \textit{fonctions régulières} sur $U$. On peut définir le même faisceau structural d'une manière différente en remarquant que $X$ possède une base d'ouverts, dits \textit{principaux}, de la forme $X_f:=X\setminus \Vv_X((f))$ avec $f\in A$. En effet, si $X_f\subset X_g$, alors on a une application canonique $A_g\rightarrow A_f$. On pose alors $\Oo(X_f)=A_f$ et on vérifie grâce aux propriétés $(A_f)_g\simeq A_{fg}$ et $X_{fg}=X_f\cap X_g$ que cela définit bien un "faisceau" sur cette base d'ouverts. qui se prolonge donc de manière unique en un faisceau sur $X$. En particulier on obtient immédiatement $A=\Gamma(X, \Oo_X)$, et sans difficulté $\Oo_{X,\mathfrak{p}}\simeq A_\mathfrak{p}$. 
 
 \begin{defn}[Espace annelé]
 Un espace annelé est un espace topologique $X$ muni d'un faisceau d'anneau $\Oo_X$ tel que les tiges $\Oo_{X,x}$ soient des anneaux locaux en tout point $x\in X$.
@@ -288,17 +288,17 @@ Réciproquement, tout morphisme entre schémas affines $f:\spec B\rightarrow \sp
 Les foncteurs $\spec$ et $\Gamma(.)$ définissent une anti-équivalence de catégories entre la catégorie des schémas affines et la catégorie des anneaux (commutatifs).
 \end{prop}
 
-Soit $X$ un schéma, on peut étendre l'opération $\Vv_X(.)$ définie plus haut pour les schémas affines. On considère un faisceau d'idéaux $\Ii$ de $\Oo_X$, et on pose $\Vv_X(\Ii)=\supp \Oo_X/\Ii$. De même, soit $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U\simeq\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$. On peut alors définir l' idéal des fonctions régulières sur $X$ s'annulant sur un fermé $F$ de $X$, on le note $\Ii_X(F)$, c'est un idéal radical. Si $X=\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
+Soit $X$ un schéma, on peut étendre l'opération $\Vv_X(.)$ définie plus haut pour les schémas affines. On considère un faisceau d'idéaux $\Ii$ de $\Oo_X$, et on pose $\Vv_X(\Ii)=\supp \Oo_X/\Ii$. De même, soit $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U\simeq\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$. On peut alors définir l' idéal des fonctions régulières sur $X$ s'annulant sur une partie $Y$ de $X$, on le note $\Ii_X(Y)$, c'est un idéal radical. Si $X\simeq\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
 $$\Ii_X(Y)=\bigcap_{\mathfrak{p}\in Y}\mathfrak{p},\,\,\,\,\, \Ii_X(\Vv_X(\mathfrak{a}))=\sqrt{\mathfrak{a}},\,\,\,\,\,\,\Vv_X(\Ii_X(Y))=\overline{Y}$$
 
 \begin{rem}
-On remarque que si on considère une algèbre affine, c'est à dire une $k$-algèbre de type fini réduite, et que l'on suppose de plus le corps algébriquement clos. Alors si l'on remplace "premier" par "maximal" dans les formules ci-dessus relatives aux opérations $\Vv$ et $\Ii$, on retombe sur les définitions classiques de ces opérations qui donnent les ensemble algébriques et leurs équations dans un espace affine de dimension finie sur $k$. En effet le Nullstellensatz assure dans ce cas que les points de l'ensemble algébrique correspondent aux idéaux maximaux de l'algèbre et que $\Ii(Y)=\bigcap_{y\in Y}\mathfrak{m}_y$.
+On remarque que si on considère une \textit{algèbre affine}, c'est à dire une $k$-algèbre de type fini réduite, et que l'on suppose de plus le corps algébriquement clos. Alors si l'on remplace "premier" par "maximal" dans les formules ci-dessus relatives aux opérations $\Vv$ et $\Ii$, on retombe sur les définitions classiques de ces opérations qui donnent les ensemble algébriques et leurs équations dans un espace affine de dimension finie sur $k$. En effet le Nullstellensatz assure dans ce cas que les points de l'ensemble algébrique correspondent aux idéaux maximaux de l'algèbre et que $\Ii(Y)=\bigcap_{y\in Y}\mathfrak{m}_y$.
 
 Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ d'un schéma $X$ peuvent être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Dans le cas d'une variété affine, c'est à dire $X=\spec A$ où $A$ est une $k$-algèbre affine sur un corps algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est à dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant s'identifie à $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique des morphismes entre ensembles algébriques, c'est à dire telles que sur sur chaque coordonnées les applications soient polynomiales.
 \end{rem}
 
 \begin{cons}[Recollement de schémas]\label{gluevar}
-Soit $(X_i)_{u\in I}$ une famille de schémas. Supposons $\forall i,j$ on ait des ouverts $X_{ij}\subset X_i$ et des isomorphismes $f_{ij}:X_{ij}\rightarrow X_{ji}$ tels que $\forall i,j,k\in I$ on ait:
+Soit $(X_i)_{i\in I}$ une famille de schémas. Supposons que pour tout $i,j\in I$ on ait des ouverts $X_{ij}\subset X_i$ et des isomorphismes $f_{ij}:X_{ij}\rightarrow X_{ji}$ tels que pour tout $i,j,k\in I$ on ait:
 	\begin{enumerate}
 	\item $X_{ii}=X_i$ et $f_{ii}=id$
 	\item $f_{ij}^{-1}(X_{ji} \cap X_{jk}) =  X_{ij} \cap X_{ik}$
@@ -311,7 +311,7 @@ Soit $(X_i)_{u\in I}$ une famille de schémas. Supposons $\forall i,j$ on ait de
 	$$
 	\end{enumerate}
 Alors on peut définir un schéma $X$ comme la réunion disjointe des $X_i$ modulo la relation d'équivalence $x\sim x' \iff (x\in X_{ij}, x'\in X_{ji}$ et $f_{ij}(x)=x')$. On note $f_i:X_i\rightarrow X$ les applications canoniques, et on munit 
-$X$ de la topologie finale associée aux $f_i$. On vérifie que chaque $f_i$ est une immersion ouverte dont on note $U_i$ l'image. Le faisceau structural est définit en recollant les $\mathcal{O}_{U_i}:=f_{i\star}\mathcal{O}_{X_i}$, ses sections sur un ouvert $W\subset X$ étant $$
+$X$ de la topologie finale associée aux $f_i$. On vérifie que chaque $f_i$ est une immersion ouverte dont on note $U_i$ l'image. Le faisceau structural est défini en recollant les $\mathcal{O}_{U_i}:=f_{i*}\mathcal{O}_{X_i}$, ses sections sur un ouvert $W\subset X$ étant $$
 \mathcal{O}_X(W) =
 \{
 (s_i)_{i \in I} \mid
@@ -326,7 +326,7 @@ $$
 Soit $S$ un schéma. Un $S$-schéma, où schéma sur $S$, est un schéma $X$ muni d'un morphisme $X\rightarrow S$ appelé morphisme structural.
 \end{defn}
 
-Soit $S$ un schéma de base. Les $S$-schémas forment une sous-catégorie où l'on demande que morphismes soient compatibles avec les morphismes structuraux. Le produit existe dans cette catégorie, on l'appelle le produit fibré sur $S$. Cette construction se fait par recollement en remarquant que pour des schémas affines $X,Y$ sur un schéma affine $S$, le produit fibré $X\times_S Y$ est naturellement $\spec (\Oo_X(X)\otimes_{\Oo_S(S)}\Oo_Y(Y))$. En effet, cela vient de \ref{EqCat} et du fait que le produit tensoriel sur $\Oo_S(S)$ est le co-produit dans la catégorie des $\Oo_S(S)$-algèbres. 
+Soit $S$ un schéma de base. Les $S$-schémas forment une sous-catégorie où l'on demande que morphismes soient compatibles avec les morphismes structuraux. Le produit existe dans cette catégorie, on l'appelle le \textit{produit fibré sur $S$}. Cette construction se fait par recollement en remarquant que pour des schémas affines $X,Y$ sur un schéma affine $S$, le produit fibré $X\times_S Y$ est naturellement $\spec (\Oo_X(X)\otimes_{\Oo_S(S)}\Oo_Y(Y))$. En effet, cela vient de \ref{EqCat} et du fait que le produit tensoriel sur $\Oo_S(S)$ est le co-produit dans la catégorie des $\Oo_S(S)$-algèbres. 
 Comme tout anneau est naturellement une $\ZZ$-algèbre, tout schéma est naturellement un schéma sur $\spec \ZZ$. Le produit de deux schéma est par définition le produit sur $\spec \ZZ$.
 
 \subsection{Quelques propriétés des schémas}
@@ -361,7 +361,7 @@ Soit $X$ un schéma noetherien. Alors
 \end{enumerate}
 \end{prop}
 
-Par le lemme de Zorn, on montre que l'ensemble des fermés irréductibles d'un schéma $X$ admet des éléments maximaux, appelés composantes irréductibles. Si $X$ est noetherien, ce nombre est fini. En effet, comme $X$ est quasi-compact, on peut le supposer affine, et le résultat découle de \ref{AssociatedPrimesProp1} car les composantes irréductibles correspondent aux idéaux premiers associés au $\Oo(X)$-module $\Oo(X)$ qui sont minimaux (c'est à dire ses idéaux premiers minimaux au sens large). Ainsi, $X$ s'écrit de manière unique comme réunion de ses composantes irréductibles. Pour tout point $x\in X$, les composantes irréductibles de $\spec \Oo_{X,x}$ correspondent bijectivement aux composantes irréductibles de $X$ passant par $x$.
+Par le lemme de Zorn, on montre que l'ensemble des fermés irréductibles d'un schéma $X$ admet des éléments maximaux, appelés \textit{composantes irréductibles}. Si $X$ est noetherien, ce nombre est fini. En effet, comme $X$ est quasi-compact, on peut le supposer affine, et le résultat découle de \ref{AssociatedPrimesProp1} car les composantes irréductibles correspondent aux idéaux premiers associés au $\Oo(X)$-module $\Oo(X)$ qui sont minimaux (c'est à dire ses idéaux premiers minimaux au sens large). Ainsi, $X$ s'écrit de manière unique comme réunion de ses composantes irréductibles. Pour tout point $x\in X$, les composantes irréductibles de $\spec \Oo_{X,x}$ correspondent bijectivement aux composantes irréductibles de $X$ passant par $x$.
 
 \begin{prop}
 Un schéma $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal.
@@ -383,9 +383,9 @@ Un schéma est intègre si il est réduit et irréductible.
 Un schéma $X$ est intègre si et seulement si $\Oo(U)$ est intègre pour tout ouvert $U\subset X$ non-vide.
 \end{prop}
 
-Un point $x$ d'un espace topologique $X$ est dit générique si $\overline{\lbrace x\rbrace}=X$. Ainsi, si $X$ admet un point générique, il est irréductible. Pour un schéma $X$ on a en fait une correspondance bijective entre fermés irréductibles de $X$ et points génériques donnée par $x\mapsto \overline{\lbrace x\rbrace}$. 
+Un point $x$ d'un espace topologique $X$ est dit \textit{générique} si $\overline{\lbrace x\rbrace}=X$. Ainsi, si $X$ admet un point générique, il est irréductible. Pour un schéma $X$ on a en fait une correspondance bijective entre fermés irréductibles de $X$ et points génériques donnée par $x\mapsto \overline{\lbrace x\rbrace}$. 
 
-Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$, et $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est à dire le corps des fractions de $A$. Plus généralement, on définit le corps des fonctions rationnelles d'un schéma intègre $X$ comme les fonctions régulières sur un ouvert non-vide de $X$. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce qui précède. On le note $k(X)$.
+Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$, et $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est à dire le corps des fractions de $A$. Plus généralement, on définit le \textit{corps des fonctions rationnelles} d'un schéma intègre $X$ comme les fonctions régulières sur un ouvert non-vide de $X$. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce qui précède, on le note $k(X)$.
 
 \begin{prop}
 Soit $X$ un schéma intègre et $k(X)$ son corps des fonctions rationnelles. 
@@ -405,21 +405,25 @@ $$\Oo(U)=\bigcap_i \Oo(U_i)=\bigcap_{x\in U}\Oo_{X,x}$$
 Un morphisme de schémas $(f,f^\sharp):X\rightarrow Y$ est une immersion ouverte (resp. fermée) si $f$ est une immersion ouverte topologique (resp. immersion fermée topologique), et si $f^\sharp_x:\Oo_{X,f(x)}\rightarrow \Oo_{X,x}$ est un isomorphisme (resp. surjective) pour tout $x\in X$.
 \end{defn}
 
-Soit $X=\spec A$ un schéma affine, et $g\in A$. Considérons l'ouvert $X_g$ de $X$, on note $i$ l'inclusion. Vu la construction du faisceau structural $\Oo_X$, on voit que $(X_f, i^{-1}\Oo_X)$, est naturellement un schéma isomorphe à $\spec A_g$. Grâce à cette observation, on voit que tout ouvert $U$ d'un schéma $X$ est naturellement muni d'une structure de schéma en prenant la restriction du faisceau structural, c'est la notion de sous-schéma ouvert. De plus, tout immersion ouverte $X\rightarrow Y$ se factorise à travers un sous-schéma ouvert.
+Soit $X=\spec A$ un schéma affine, et $g\in A$. Considérons l'ouvert $X_g$ de $X$, et notons $i$ l'inclusion. Vu la construction du faisceau structural $\Oo_X$, on voit que $(X_g, i^{-1}\Oo_X)$, est naturellement un schéma isomorphe à $\spec A_g$. Grâce à cette observation, on voit que tout ouvert $U$ d'un schéma $X$ est naturellement muni d'une structure de schéma en prenant la restriction du faisceau structural, c'est la notion de sous-schéma ouvert. De plus, toute immersion ouverte $X\rightarrow Y$ se factorise à travers un sous-schéma ouvert.
 
-\begin{defn}
+\begin{defn}[Schéma quasi-affine]
 Un schéma $X$ est quasi-affine si il est quasi-compact et il existe une immersion ouverte dans un schéma affine.
 \end{defn}
-
-Soit $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal de $A$. Alors la projection $A\rightarrow A/\mathfrak{a}$ définit une immersion fermée $i:\spec A/\mathfrak{a}\rightarrow X$ d'image $\Vv_X(\mathfrak{a})$. On a un isomorphisme canonique $(\Vv_X(\mathfrak{a}), i^{-1}(\Oo_X/\ker i^\sharp))\simeq \spec A/\mathfrak{a}$ et on remarque que $\ker i^\sharp(X_g)=\mathfrak{a}_g$. Réciproquement, pour tout immersion fermée $j:Z\rightarrow X$, il existe un unique idéal $\mathfrak{a}$ tel que $j$ se factorise via un isomorphisme $Z\simeq \spec A/\mathfrak{a}$ et l'immersion fermée $\spec A/\mathfrak{a}\rightarrow X$. Un sous-schéma fermé d'un schéma $X$ est un fermé $Z$ de $X$ muni d'une structure de schéma et d'une immersion fermée $Z\rightarrow X$. Ainsi les sous-schémas fermés de $X$ sont donnés par des faisceaux d'idéaux quasicohérents (voir partie consacrée aux faisceaux de modules).
-
-
-
-\subsubsection{Morphismes de type fini}
 
 \begin{defn}[Morphisme quasi-compact]
 Un morphisme de schémas $f:X\rightarrow Y$ est quasi-compact si l'image réciproque tout ouvert affine de $Y$ est quasi-compact. 
 \end{defn}
+
+\begin{prop}\label{QuasiAffCritere}
+Un schéma $X$ est quasi-affine si il et seulement si le morphisme canonique $X\rightarrow \spec \Oo(X)$ est une immersion ouverte quasi-compacte.
+\end{prop}
+
+Soit $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal de $A$. Alors la projection $A\rightarrow A/\mathfrak{a}$ définit une immersion fermée $i:\spec A/\mathfrak{a}\rightarrow X$ d'image $\Vv_X(\mathfrak{a})$. On a un isomorphisme canonique $(\Vv_X(\mathfrak{a}), i^{-1}(\Oo_X/\ker i^\sharp))\simeq \spec A/\mathfrak{a}$ et on remarque que $\ker i^\sharp(X_g)=\mathfrak{a}_g$. Réciproquement, pour tout immersion fermée $j:Z\rightarrow X$, il existe un unique idéal $\mathfrak{a}$ tel que $j$ se factorise via un isomorphisme $Z\simeq \spec A/\mathfrak{a}$ et l'immersion fermée $\spec A/\mathfrak{a}\rightarrow X$. Un sous-schéma fermé d'un schéma $X$ est un fermé $Z$ de $X$ muni d'une structure de schéma et d'une immersion fermée $Z\rightarrow X$. Ainsi les sous-schémas fermés de $X$ sont donnés par des faisceaux d'idéaux quasi-cohérents (voir partie consacrée aux faisceaux de modules).
+
+
+
+\subsubsection{Morphismes de type fini}
 
 \begin{defn}[Morphisme de type fini]
 Un morphisme de schémas $f:X\rightarrow Y$ est de type fini si il est quasi-compact et pour tout ouvert affine $V\subset Y$, et tout ouvert affine $U\subset f^{-1}(V)$, le morphisme canonique $\Oo_Y(V)\rightarrow \Oo_X(U)$ fait de $\Oo_X(U)$ une $\Oo_Y(V)$-algèbre de type fini. Un $S$-schéma est dit de type fini si son morphisme structural est de type fini.
@@ -449,7 +453,7 @@ Un schéma est dit normal si il est normal en chacun de ses points.
 Un schéma intègre $X$ est normal si et seulement si pour tout ouvert affine $U\subset X$ non-vide, $\Oo(U)$ est intégralement clos.
 \end{prop}
 
-Soit $X$ un schéma intègre, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Pour chaque $U_i=\spec A_i$ on pose $\widetilde{U}_i=\spec \widetilde{A}_i$ où $\widetilde{A}_i$ est la clôture intégrale de $A_i$, c'est naturellement un schéma intègre sur $U_i$. De plus, comme la normalisation commute à la localisation, on a des isomorphismes naturels $\widetilde{U_i\cap U_j}\simeq \widetilde{U_i}\cap \widetilde{U_j}$. On construit alors par recollement un schéma intègre et normal $\widetilde{X}$ sur $X$ qui satisfait de plus la propriété universelle que tout morphisme dominant d'un schéma intègre $Z$ vers $X$ se factorise de manière unique à travers $\widetilde{X}$. On dit que $\widetilde{X}$ est la normalisation de $X$. De plus, si $X$ est de type fini sur un corps $k$, alors d'après \ref{}, le morphisme structural de $\widetilde{X}$ est fini.
+Soit $X$ un schéma intègre, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Pour chaque $U_i=\spec A_i$ on pose $\widetilde{U}_i=\spec \widetilde{A}_i$ où $\widetilde{A}_i$ est la clôture intégrale de $A_i$, c'est naturellement un schéma intègre sur $U_i$. De plus, comme la clôture intégrale  commute à la localisation, on a des isomorphismes naturels $\widetilde{U_i\cap U_j}\simeq \widetilde{U_i}\cap \widetilde{U_j}$. On construit alors par recollement un schéma intègre et normal $\widetilde{X}$ sur $X$ qui satisfait de plus la propriété universelle que tout morphisme dominant d'un schéma intègre $Z$ vers $X$ se factorise de manière unique à travers $\widetilde{X}$. On dit que $\widetilde{X}$ est la \textit{normalisation} de $X$. De plus, si $X$ est de type fini sur un corps $k$, alors d'après \ref{IntClosureFinite}, le morphisme structural de $\widetilde{X}$ est fini.
 
 \subsubsection{Morphismes affines}
 
@@ -485,14 +489,6 @@ Soit $f:X\rightarrow S$ un morphisme de schémas.
 	\end{enumerate}
 \end{prop}
 
-\begin{prop}\label{sepCritere}
-Soit $X$ un schéma. Les assertions suivantes sont équivalentes
-	\begin{enumerate}
-	\item $X$ est séparé
-	\item Pour tous ouverts affines $U$ et $V$ de $X$, $U\cap V$ est affine et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif.
-	\item Il existe un recouvrement affine $(U_i)$ tel que pour tout $i,j$, $U_i\cap U_j$ est affine et le morphisme naturel $\Oo(U_i)\otimes_\ZZ \Oo(U_j)\rightarrow\Oo(U_i\cap U_j), f\otimes g\mapsto f_{U_i\cap U_j}g_{U_i\cap U_j}$ est surjectif.
-	\end{enumerate}
-\end{prop}
 
 \begin{prop}\label{sepCritere2}
 Les deux assertions ci-dessous s'appliquent à des morphismes entre schémas noetheriens.
@@ -508,7 +504,7 @@ Les deux assertions ci-dessous s'appliquent à des morphismes entre schémas noe
 
 \section{Variétés algébriques}
 
-Dans ce mémoire, on travaille principalement dans la sous-catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos fixé. Ces objets sont appelés des $k$-variétés algèbriques, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I. On rappel que le corps de base est supposé de caractéristique nulle.
+Dans ce mémoire, on travaille principalement dans la sous-catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos fixé. Ces objets sont appelés des \textit{$k$-variétés algèbriques}, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I. On rappel que le corps de base est supposé de caractéristique nulle.
 
 Un schéma de type fini sur un corps est noetherien, on en déduit que toute partie localement fermée d'une variété admet une unique structure de variété, et tout fermé se décompose de manière unique en une union finie de composantes irréductibles. Enfin, le produit sur $k$ préserve l'irréductibilité.
 
@@ -543,7 +539,7 @@ Ce théorème peut aussi être vu comme une version géométrique du théorème 
 Soit $f:X\rightarrow Y$ un morphisme dominant de variétés irréductibles. Alors il existe un ouvert $U\subset Y$ tel que
 \begin{enumerate}
 \item $U\subset f(X)$
-\item Pour tout fermé irréductible $W\subset Y$ tel que $U\cap X\neq \emptyset$, et pour toute composante irréductible $Z$ de $f^{-1}(W)$  telle que $f^{-1}(U)\cap Z\neq \emptyset$, on a $\dim Z=\dim W + r$, où $r:=\dim X -\dim Y$
+\item Pour tout fermé irréductible $W\subset Y$ tel que $W\cap X\neq \emptyset$, et pour toute composante irréductible $Z$ de $f^{-1}(W)$  telle que $f^{-1}(U)\cap Z\neq \emptyset$, on a $\dim Z=\dim W + r$, où $r:=\dim X -\dim Y$
 \end{enumerate}
 En particulier, pour tout $Y\in U$, on a $\dim f^{-1}(y)=r.$
 \end{thm}
@@ -553,7 +549,7 @@ $$X_g\xrightarrow{\pi \text{ fini et surjectif}}U\times \AAA^r \xrightarrow{p_U}
 
 \end{proof}
 
-On s'intéresse maintenant aux morphismes dont les fibres sont des ensembles finis. Cette étude s'achève avec un résultat important pour la suite, on obtient un critère pour qu'un morphisme bijectif en caractéristique zéro soit un isomorphisme. 
+On s'intéresse maintenant aux morphismes dont les fibres sont des ensembles finis. Cette étude s'achève avec un résultat important pour la suite, c'est un critère pour qu'un morphisme bijectif en caractéristique zéro soit un isomorphisme. 
 
 \begin{defn}[Morphisme quasi-fini]
 Soit $f:X \rightarrow Y$ un morphisme de variétés. On dit que $f$ est quasi-fini si les fibres de $f$ sont finies.
@@ -598,7 +594,7 @@ D'après \ref{dimensionfibres} on peut appliquer \ref{injectiveBirationel} et on
 Soit $X$ une variété. On dit que $x\in X$ est un point régulier si l'anneau local $\Oo_{X,x}$ est régulier. On dit que la variété est lisse si chacun de ses points est régulier. Un point est singulier si il n'est pas régulier.
 \end{defn}
 
-Par définition, un point $x$ d'une variété $X$ irréductible est régulier si l'espace tangent $(\mathfrak{m}_x/\mathfrak{m}_x^2)^*$ en $x$ est de dimension $\dim X$. L'ensemble des point singuliers de $X$ est un fermé propre. Dans le cas d'une variété normale, ce fermé est de codimension $\geq 2$ comme on le verra en \ref{codimesingnormal}, on dit dans ce cas que la variété est régulière en codimension $1$. Cela explique d'ailleurs la nécessité de la condition $1$ de \ref{SerreCritere}. Réciproquement, le théorème \ref{reglocufd} entraine qu'un point lisse est un point normal. On dispose d'un critère effectif pour déterminer si un point d'une variété est lisse.
+Par définition, un point $x$ d'une variété $X$ irréductible est régulier si \textit{l'espace tangent $(\mathfrak{m}_x/\mathfrak{m}_x^2)^*$} en $x$ est de dimension $\dim X$. L'ensemble des point singuliers de $X$ est un fermé propre. Dans le cas d'une variété normale, ce fermé est de codimension $\geq 2$ comme on le verra en \ref{codimesingnormal}, on dit dans ce cas que la variété est régulière en codimension $1$. Cela explique d'ailleurs la nécessité de la condition $1$ de \ref{SerreCritere}. Réciproquement, le théorème \ref{reglocufd} entraine qu'un point lisse est un point normal. On dispose d'un critère effectif pour déterminer si un point d'une variété est lisse.
 
 \begin{prop}\label{CritereReg}
 Soit $X$ une variété affine que l'on peut supposer plongée dans $\AAA^n$ avec des équations $f_1,...f_t\in k[x_1,...,x_n]$. Un point $p$ de $X$ est régulier si et seulement si le rang de la matrice $((\partial f_i/\partial x_j)(p))_{i,j}$ est $n-r$, où $r:=\dim X$.
