@@ -202,7 +202,7 @@ où les sous-espaces $V_{\chi}$ sont les sous-espaces propres pour l'action $G$.
 
 On travaille désormais dans la catégorie des groupes diagonalisables. On considère un groupe diagonalisable $G$ et le groupe $X^{**}(G):=(X^*)^2(G)$.
 
-\begin{prop}
+\begin{prop}\label{GDiagNatuIsomBidualite}
 $G$ et $X^{**}(G)$ sont naturellement isomorphes en tant que groupes abstraits, et aussi en tant que groupes algébriques par transport de structure. L'isomorphisme est $ev_G : G\rightarrow \Hom (X^*(G),\GG _m), g\mapsto (\chi\mapsto \chi(g))$.
 \end{prop}
 \begin{proof}
@@ -227,14 +227,50 @@ On a deux morphismes d'algèbre $k[M_1]\rightarrow k[M_1\oplus M_2], e_{m_1}\map
 Pour la deuxième assertion, comme on a $M\simeq \ZZ^r\oplus (\oplus_{i=1}^r \ZZ/d_i\ZZ)$, il suffit de traiter les cas $M=\ZZ$ et $M=\ZZ/d\ZZ$. On a $k[\ZZ]\simeq k[t,t^{-1}]$ qui est intègre, de type fini, et réduite. On a $k[\ZZ/d\ZZ]\simeq k[t]/(t^d-1)$. On voit, par le théorème chinois par exemple, que cette algèbre de type fini non-intègre est réduite si et seulement si les racine de $t^d-1$ sont simples, ce qui est le cas en caractéristique zéro. La structure d'algèbre de Hopf sur $k[M]$ est donnée par $\Delta(e_m)=e_m\otimes e_m,\, i(e_m)=e_{-m},\, e(e_m)=e_0$. Pour la dernière assertion, il suffit de voir que $\Oo(G)=k[X^*(G)]$.
 \end{proof}
 
-\begin{cor}
+On déduit maintenant quelques résultats de base sur les groupes diagonalisables
+
+\begin{prop}
 Soit $G$ un groupe diagonalisable. Alors:
 \begin{enumerate}
 \item $G$ est isomorphe au produit direct d'un tore et d'un groupe abélien fini.
 \item $G$ est un tore $\iff X^*(G)$ est libre de type fini $\iff G$ est connexe.
 \end{enumerate}
-\end{cor}
+\end{prop}
 
+\begin{prop}
+Soit $G$ un groupe diagonalisable, et $H$ un sous-groupe fermé de $G$. Alors $H$ est diagonalisable, et de la forme $\cap_{\chi\in K}\Ker\chi$, pour un sous-groupe $K$ de $X^*(G)$. 
+
+Réciproquement, pour tout sous-groupe $K$ de $X^*(G)$, le sous-groupe diagonalisable $H:=\cap_{\chi\in K}\Ker\chi$ de $G$ est tel que $X^*(H)\simeq X^*(G)/K$.
+\end{prop}
+\begin{proof}
+$H$ est bien diagonalisable car la restriction $\Oo(G)\rightarrow \Oo(H)$ est surjective, et la restriction d'un caractère est un caractère, on conclut avec \ref{GroupeDiagCarac}. Notons $i:H\rightarrow G$ le morphisme d'inclusion. On a d'après \ref{GDiagNatuIsomBidualite}, 
+\begin{equation}
+\begin{split}
+H & \simeq\Hom_{gp}(X^*(H),\GG_m) \\
+    & \simeq\Hom_{gp}(X^*(G)/\ker i^\sharp,\GG_m)\\
+    &\simeq\lbrace ev_G(x)\in\Hom_{gp}(X^*(G),\GG_m)\mid\forall \chi\in\ker i^\sharp,\,\chi(x)=1\rbrace\\
+    &\simeq\cap_{\chi_{|H}=1}\ker \chi
+\end{split}
+\end{equation}
+Pour la seconde assertion, avec ce choix on a  $\Hom_{gp}(X^*(H),\GG_m)\simeq\Hom_{gp}(X^*(G)/K,\GG_m)$, on en déduit $X^*(H)\simeq X^*(G)/K$.
+
+
+
+\end{proof}
+
+\begin{prop}\label{GDiagSubtorusFacteurDirect}
+Soit $G$ un tore et $H$ un sous-tore. Alors $H$ est facteur direct dans $G$, c'est à dire qu'il existe un sous-tore $H'$ tel que le morphisme naturel $H\times H'\rightarrow G,\, (h,h')\mapsto hh'$ soit un isomorphisme. Si $H$ est seulement diagonalisable il existe un sous-tore $H'$ tel que le noyau du morphisme ci-dessus soit fini.
+\end{prop}
+\begin{proof}
+On note $i:H\rightarrow G$ le morphisme d'inclusion. Par \ref{EqCatGpDiagGpAb}, on obtient la suite exacte courte ci-dessous où $i^\sharp$ est la restriction des caractères de $
+G$ à $H$.
+\begin{center}
+$0\rightarrow X^*(G/H)\simeq\ker i^\sharp\rightarrow X^*(G)\xrightarrow{i^\sharp} X^*(H)\rightarrow 0$
+\end{center}
+Comme $X^*(G)$ et $X^*(H)$ sont des $\ZZ$-modules libres on trouve des bases respectives tels que la matrice de $i^\sharp$ soit $\diag(a_1,...a_r,0,...,0)$, on en déduit facilement une section $s$ de $i^\sharp$. On a ainsi $X^*(G)=\Ker i^\sharp\oplus s(X^*(H))$, puis $G\simeq H\times \spec k[s(X^*(H))]$.
+
+Dans le cas où $H$ est seulement diagonalisable adaptée, considérons une base de $X^*(G)$ adaptée à $\ker i^\sharp$. Cela fournit des coordonnées telles que $G\simeq \GG_m^n$ et $H\simeq \lbrace 1\rbrace\times...\times\lbrace 1\rbrace\times\mu_{n_1}\times...\times\mu_{n_s}\times\GG_m^r$. Par cet isomorphisme, $H':=\GG_m^{n-r}\times  \lbrace 1\rbrace\times...\times  \lbrace 1\rbrace$ convient.
+\end{proof}
 
 \subsubsection{Action d'un groupe diagonalisable sur une variété affine}
 
@@ -343,13 +379,11 @@ Considérons le fermé propre $\overline{H.x}\setminus H.x$, éventuellement vid
 Dans ce cas, on voit qu'une fonction homogène non-nulle est partout non-nulle, donc inversible. On a donc dans ce cas $S_x=K_x=S(\Oo(H.x))=K(\Oo(H.x))$, où $S(\Oo(H.x))$ et $K(\Oo(H.x))$ sont respectivement les monoïdes et groupes de poids de l'algèbre $K$-graduée $\Oo(H.x)$. Dans les deux diagrammes de \ref{eq:DiagOrbite1}, les flèches sont respectivement des morphismes de $H$-variétés, et des morphismes d'algèbres graduées. Ainsi, $\phi^\sharp$ induit un isomorphisme sur les groupes de poids $K(\Oo(H.x))=K_x \xrightarrow{w \mapsto\chi^w}K(\Oo(H/H_x))=X^*(H/H_x)$. Enfin, toujours en utilisant le diagramme, cet isomorphisme est l'unique faisant commuter le carré de gauche dans le diagramme de la proposition.
 \end{proof}
 
-Dans la preuve précédente, on en particulier le résultat intéressant suivant
+On extrait de la preuve précédente le lemme ci-dessous, puis on l'utilise pour donner une caractérisation de l'adhérence de l'orbite d'un point en terme de son monoïde d'orbite.
 
 \begin{lem}
 Soit $A$ une algèbre affine $K$-graduée, $X:=\spec A$ muni de l'action de $H:=\spec k[K]$, et $x\in X$. Alors il existe $f\in\Oo(\overline{H.x})$ homogène non-nul tel que $H.x=(\overline{H.x})_f$.
 \end{lem}
-\begin{proof}
-\end{proof}
 
 \begin{prop}[Car. 0]
 Soit $A$ une algèbre affine $K$-graduée, $X:=\spec A$ muni de l'action de $H:=\spec k[K]$, et $x\in X$. Cette action induit une action de $H/H_x$ sur $\overline{H.x}$. De plus, $\overline{H.x}$ et $\spec(k[S_x])$ sont isomorphes en tant que $H/H_x$-variétés.

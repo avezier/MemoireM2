@@ -172,7 +172,7 @@ Voir \cite{Matsumura} 5.6
 
 \subsection{Anneaux locaux}
 
-\begin{defn}
+\begin{defn}[Anneau local régulier]
 Un anneau local noethérien $A$ de corps résiduel $k=A/\mathfrak{m}$ est régulier si $\dim A =\dim_k\mathfrak{m}/\mathfrak{m}^2$.
 \end{defn}
 
@@ -197,12 +197,52 @@ Un anneau local régulier est factoriel.
 Voir \cite{Matsumura} VII.20.3
 \end{proof}
 
-\begin{thm}\label{ideauxinversibles}
-Soit $A$ un anneau intègre et $I$ un idéal fractionnaire de $A$. Les assertions suivantes sont équivalentes:
+\begin{defn}[Valuation discrète sur un corps]
+Soit $K$ un corps. Une valuation discrète sur $K$ est une application surjective $v:K^*\rightarrow \ZZ$ telle que
 \begin{enumerate}
-\item $I$ est inversible
-\item $I$ est un $A$-module projectif
-\item $I$ est de type fini, et pour tout idéal maximal $\mathfrak{m}$ de $A$, l'idéal fractionnaire $I_\mathfrak{m}$ de $A_\mathfrak{m}$ est principal.
+\item $v$ est un morphisme de groupes.
+\item $v(x+y)\geq \min(v(x),v(y))$
+\end{enumerate}
+L'ensemble constitué de $0$ et des éléments $x\in K^*$ tels que $v(x)\geq 0$ est un anneau, on dit que c'est \textit{l'anneau de valuation} associé à $v$.
+\end{defn}
+
+\begin{defn}[Anneau de valuation discrète]
+Un anneau intègre $A$ est un \textit{anneau de valuation discrète} si il existe une valuation discrète de son corps des fractions telle que $A$ soit l'anneau de valuation associé.
+\end{defn}
+
+\begin{prop}
+Soit $A$ un anneau intègre local noetherien de dimension $1$. Soit $\mathfrak{m}$ son idéal maximal. Les assertions suivantes sont équivalentes
+\begin{enumerate}
+\item $A$ est un anneau de valuation discrète.
+\item $A$ est intégralement clos.
+\item $\mathfrak{m}$ est principal.
+\item $A$ est régulier.
+\item Tout idéal non-nul est une puissance de $\mathfrak{m}$.
+En particulier, un générateur de l'idéal maximal d'un anneau de valuation discrète est appelé une uniformisante.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Voir \cite{atiyahmacdo} 9.2
+\end{proof}
+
+\begin{defn}[Idéal fractionnaire]
+Soit $A$ un anneau intègre et $K$ son corps des fractions. Un idéal fractionnaire est un sous $A$-module de $K$ tel qu'il existe $x\in A$ non-nul vérifiant $xM\subset A$.
+\end{defn}
+
+\begin{defn}[Idéal inversible]
+Un sous $A$-module $M$ de $K$ est inversible si il existe un sous $A$-module $N$ de $K$ tel que $MN=A$.
+\end{defn}
+
+Un sous $A$-module inversible $M$ de $K$ est nécessairement de type fini, donc est fractionnaire. De plus, on a $M^{-1}=(A:M)=\lbrace x\in K\mid xM\subset A\rbrace$. Si $A$ est noetherien, les idéaux fractionnaires sont exactement les sous $A$-modules de type fini de $K$. 
+
+Soit $A$ un anneau intègre, et $\mathfrak{p}$ un idéal premier de hauteur $1$ tel que Soit $A_\mathfrak{p}$ soit un anneau de valuation discrète, on note $\mathfrak{m}:=\mathfrak{p}A_\mathfrak{p}$ son idéal maximal. Tout idéal fractionnaire non-nul de $A_\mathfrak{p}$ est inversible. Cette condition est même suffisante pour que $A_\mathfrak{p}$ soit un anneau de valuation discrète (voir \cite{atiyahmacdo} 9.7). Pour tout
+
+\begin{thm}\label{ideauxinversibles}
+Soit $A$ un anneau intègre et $\mathfrak{a}$ un idéal fractionnaire de $A$. Les assertions suivantes sont équivalentes:
+\begin{enumerate}
+\item $\mathfrak{a}$ est inversible
+\item $\mathfrak{a}$ est un $A$-module projectif
+\item $\mathfrak{a}$ est de type fini, et pour tout idéal maximal $\mathfrak{m}$ de $A$, l'idéal fractionnaire $I_\mathfrak{m}$ de $A_\mathfrak{m}$ est principal.
 \end{enumerate}
 \end{thm}
 \begin{proof}
@@ -504,7 +544,7 @@ Les deux assertions ci-dessous s'appliquent à des morphismes entre schémas noe
 
 \section{Variétés algébriques}
 
-Dans ce mémoire, on travaille principalement dans la sous-catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos fixé. Ces objets sont appelés des \textit{$k$-variétés algèbriques}, ou tout simplement variétés.  Cette catégorie est équivalente à la catégorie des $k$-variétés algébriques au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I. On rappel que le corps de base est supposé de caractéristique nulle.
+Dans ce mémoire, on travaille principalement dans la sous-catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos fixé. Ces objets sont appelés des \textit{$k$-variétés algèbriques}, ou tout simplement \textit{variétés}.  Cette catégorie est équivalente à la catégorie des variétés au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I. On rappelle que le corps de base est supposé de caractéristique nulle.
 
 Un schéma de type fini sur un corps est noetherien, on en déduit que toute partie localement fermée d'une variété admet une unique structure de variété, et tout fermé se décompose de manière unique en une union finie de composantes irréductibles. Enfin, le produit sur $k$ préserve l'irréductibilité.
 

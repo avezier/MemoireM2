@@ -371,7 +371,35 @@ Puis la remarque \ref{lisseGoodQuotient} nous dit que ce sont en fait des quotie
 
 Montrons maintenant que $\widehat{X}\simeq \Vv_{\widetilde{X}}(\Ii)$ est une variété. C'est un schéma de type fini sur $k$. De plus, il est séparé sur $k$ car \ref{sepCritere} est vérifié par construction, et comme $X$ est séparé sur $k$, on peut appliquer \ref{sepCritere2}. Il reste à montrer que ce schéma est réduit. On peut travailler localement sur un ouvert affine que l'on peut choisir de la forme $\widetilde{U}=p^{-1}(U)=\spec(\Ss(U))$ pour un ouvert affine $U$ de $X$. Soit $f\in\sqrt{\Ii(U)}$, comme c'est un idéal $\clg(X)$-homogène, il contient les composantes $\clg(X)$-homogènes de $f$. Soit $f_{[D]}$ l'une d'entre elles, elle s'écrit $f_{[D]}=f_D+g$ avec $f_D\in \Ss_D(U)$ et $g\in\Ii(U)$ d'après \ref{coxsheafiso2}. On obtient facilement $f_D^n\in \Ii(U)$ pour un $n>0$. Cela impose $f_D^n=0$ compte tenu de \ref{coxidealform} et donc $f_D=0$. Finalement, $f\in\Ii(U)$ ce qui montre que $\Ii(U)$ est radical.
 
-Elle est de plus quasi-affine car $\widetilde{X}$ l'est d'après \ref{specrelatifQuasiAff}. Montrons pour finir qu'elle est lisse.
+La variété $\widehat{X}$ est quasi-affine car $\widetilde{X}$ l'est d'après \ref{specrelatifQuasiAff}. Montrons pour finir qu'elle est lisse. L'immersion $i$ est $H_X$ équivariante si bien que l'on peut supposer $\widehat{X}$ est une sous-variété $H_X$-stable de $\widetilde{X}$ pour l'action induite de $H_X\subset H$. De plus, on peut travailler localement et donc supposer que $\widetilde{X}\simeq H\times X$ avec l'action de $H$ sur le facteur de gauche, d'après \ref{lisseGoodQuotient} car $X$ est lisse. Supposons que $H_X$ soit un tore, alors c'est un facteur direct de $H$ d'après \ref{GDiagSubtorusFacteurDirect}, c'est à dire qu'il existe un sous-tore $H'\subset H$ tel que $ H_X\times H'\simeq H$ via le morphisme naturel $(h,h')\mapsto hh'$. Alors $\widehat{X}$ est égal à $H_X\times S$ pour une certaine sous-variété $S$ de $H'\times X$ qui est isomorphe à $X$ via la projection $p$. On obtient le diagramme ci-dessous, et donc le résultat.
+
+	\begin{center}
+	\begin{tikzcd}
+  		\widehat{X}=H_X\times S \arrow[r, hook,"\subset"] \arrow[d, "p_S"] & \widetilde{X}=H_X\times H'\times X \arrow[d, "p"] \\ 
+  		S \arrow[r, "\simeq"] & X
+	\end{tikzcd}
+	\end{center}
+
+Dans le cas général on peut d'après \ref{lisseGoodQuotient} trouver un sous-tore $H'$ de $H$ tel que $H_XH'=H$ et $H_X\cap H'$ est fini. Grâce à cela on va pouvoir construire un revêtement $S$ de $X$ tel que $\widehat{X}$ soit le quotient de $H_X\times S$ par le groupe fini $H_X\cap H'$. Comme $S$ sera lisse en tant que revêtement d'une variété lisse, le résulta suivra d'après \ref{}. On considère le carré cartésien, où $(\widetilde{X},\pi)$ est le quotient par $H_X\cap H'$
+
+	\begin{center}
+	\begin{tikzcd}
+  		Y=\pi^{-1}(\widehat{X}) \arrow[r, hook,"\subset"] \arrow[d, "\pi_Y"] \arrow[rd, phantom, "\square"]& H_X\times H'\times X \arrow[d, "\pi"] \\ 
+  		\widehat{X} \arrow[r, "\subset"] & \widetilde{X}=H\times X
+	\end{tikzcd}
+	\end{center}
+
+Comme dans le cas facile où $H_X$ était facteur direct, on a $Y=H_X\times S$, où $S$ est une sous-variété de $H'\times X$ telle que $X$ est le quotient de $S$ par $H_X\cap H'$. On a également que $(\widehat{X}, \pi_Y)$ est le quotient de $Y$ par $H_X\cap H'$ d'après \ref{goodquotientthm}. Ainsi $\pi_Y$ est étale d'après \ref{}. Finalement on obtient le diagramme commutatif ci-dessous, où $\pi_S$ est également étale pour la même raison que $\pi_Y$, ce qui finit la preuve.
+
+	\begin{center}
+	\begin{tikzcd}
+  		& Y=H_X\times S \arrow[r, hook,"\subset"] \arrow[d, "\pi_Y=/H_X\cap H'"] \arrow[ddl, "p_S"]& H_X\times H'\times X \arrow[d, "\pi=/H_X\cap H"] \\ 
+  		& \widehat{X} \arrow[d, "p_X=/H_X"] \arrow[r, "\subset"]& \widetilde{X}=H\times X \arrow[dl, "p=/H"] \\
+  		S \arrow[r,"\pi_S=/H_X\cap H'"] & X &
+	\end{tikzcd}
+	\end{center}
+
+
 \end{proof}
 
 \begin{thm}

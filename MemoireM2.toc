@@ -6,70 +6,70 @@
 \contentsline {subsection}{\numberline {1.1.2}Extensions enti\IeC {\`e}res d'anneaux}{6}{subsection.1.1.2}
 \contentsline {subsection}{\numberline {1.1.3}Lemme de normalisation de Noether et applications}{7}{subsection.1.1.3}
 \contentsline {subsection}{\numberline {1.1.4}Anneaux locaux}{8}{subsection.1.1.4}
-\contentsline {subsection}{\numberline {1.1.5}Alg\IeC {\`e}bres gradu\IeC {\'e}es}{8}{subsection.1.1.5}
-\contentsline {section}{\numberline {1.2}Sch\IeC {\'e}mas}{9}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{9}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.1.5}Alg\IeC {\`e}bres gradu\IeC {\'e}es}{9}{subsection.1.1.5}
+\contentsline {section}{\numberline {1.2}Sch\IeC {\'e}mas}{10}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{10}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Quelques propri\IeC {\'e}t\IeC {\'e}s des sch\IeC {\'e}mas}{11}{subsection.1.2.2}
 \contentsline {subsubsection}{Sch\IeC {\'e}mas r\IeC {\'e}duits, irr\IeC {\'e}ductibles, int\IeC {\`e}gres, noetheriens}{11}{section*.4}
-\contentsline {subsection}{\numberline {1.2.3}Quelques propri\IeC {\'e}t\IeC {\'e}s des morphismes de sch\IeC {\'e}mas}{12}{subsection.1.2.3}
-\contentsline {subsubsection}{Immersion ouverte, immersion ferm\IeC {\'e}e}{12}{section*.5}
+\contentsline {subsection}{\numberline {1.2.3}Quelques propri\IeC {\'e}t\IeC {\'e}s des morphismes de sch\IeC {\'e}mas}{13}{subsection.1.2.3}
+\contentsline {subsubsection}{Immersion ouverte, immersion ferm\IeC {\'e}e}{13}{section*.5}
 \contentsline {subsubsection}{Morphismes de type fini}{13}{section*.6}
 \contentsline {subsubsection}{Morphismes finis, normalit\IeC {\'e}}{13}{section*.7}
-\contentsline {subsubsection}{Morphismes affines}{13}{section*.8}
-\contentsline {subsubsection}{Morphismes s\IeC {\'e}par\IeC {\'e}s}{13}{section*.9}
+\contentsline {subsubsection}{Morphismes affines}{14}{section*.8}
+\contentsline {subsubsection}{Morphismes s\IeC {\'e}par\IeC {\'e}s}{14}{section*.9}
 \contentsline {subsubsection}{Morphismes propres}{14}{section*.10}
 \contentsline {section}{\numberline {1.3}Vari\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques}{14}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Dimension des vari\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques}{14}{subsection.1.3.1}
-\contentsline {subsubsection}{G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{14}{section*.11}
+\contentsline {subsection}{\numberline {1.3.1}Dimension des vari\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques}{15}{subsection.1.3.1}
+\contentsline {subsubsection}{G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{15}{section*.11}
 \contentsline {subsubsection}{Dimension des fibres d'un morphisme}{15}{section*.12}
-\contentsline {subsection}{\numberline {1.3.2}Vari\IeC {\'e}t\IeC {\'e}s lisses}{16}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Propri\IeC {\'e}t\IeC {\'e}s des vari\IeC {\'e}t\IeC {\'e}s normales}{16}{subsection.1.3.3}
-\contentsline {chapter}{\numberline {2}Groupes alg\IeC {\'e}briques et th\IeC {\'e}orie des invariants}{18}{chapter.2}
-\contentsline {section}{\numberline {2.1}Groupes alg\IeC {\'e}briques}{18}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{18}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}G-vari\IeC {\'e}t\IeC {\'e}s, repr\IeC {\'e}sentations}{18}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Groupes quotients}{20}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Groupes diagonalisables, actions de groupes diagonalisables}{21}{subsection.2.1.4}
-\contentsline {subsubsection}{Groupes diagonalisables}{21}{section*.13}
-\contentsline {subsubsection}{Action d'un groupe diagonalisable sur une vari\IeC {\'e}t\IeC {\'e} affine}{23}{section*.14}
-\contentsline {section}{\numberline {2.2}Th\IeC {\'e}orie des invariants}{26}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}L'alg\IeC {\`e}bre des invariants}{26}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Quotient d'une vari\IeC {\'e}t\IeC {\'e} alg\IeC {\'e}brique sous l'action d'un groupe alg\IeC {\'e}brique}{27}{subsection.2.2.2}
-\contentsline {subsubsection}{Quotient cat\IeC {\'e}gorique}{27}{section*.15}
-\contentsline {subsubsection}{Quotient g\IeC {\'e}om\IeC {\'e}trique}{28}{section*.16}
-\contentsline {subsubsection}{Un exemple: La construction Proj}{29}{section*.17}
-\contentsline {chapter}{\numberline {3}Faisceaux divisoriels sur une vari\IeC {\'e}t\IeC {\'e} alg\IeC {\'e}brique}{31}{chapter.3}
-\contentsline {section}{\numberline {3.1}Faisceaux quasi-coh\IeC {\'e}rents}{31}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Faisceaux quasi-coh\IeC {\'e}rents sur un sch\IeC {\'e}ma}{31}{subsection.3.1.1}
-\contentsline {subsubsection}{Spectre relatif d'une $\mathcal {O}_X$-alg\IeC {\`e}bre}{31}{section*.18}
-\contentsline {subsection}{\numberline {3.1.2}Faisceaux quasi-coh\IeC {\'e}rents sur une vari\IeC {\'e}t\IeC {\'e} projective}{32}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Cohomologie des faisceaux et applications}{32}{subsection.3.1.3}
-\contentsline {subsubsection}{G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{32}{section*.19}
-\contentsline {subsubsection}{Cohomologie \IeC {\`a} support}{33}{section*.20}
-\contentsline {subsubsection}{Cohomologie sur un sch\IeC {\'e}ma affine}{33}{section*.21}
-\contentsline {subsubsection}{Une application}{35}{section*.22}
-\contentsline {subsection}{\numberline {3.1.4}Faisceaux inversibles, Fibr\IeC {\'e}s en droites}{35}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}$G$-linearisation d'un fibr\IeC {\'e} en droite}{37}{subsection.3.1.5}
-\contentsline {section}{\numberline {3.2}Diviseurs}{39}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Diviseurs de Weil}{39}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Faisceau d'alg\IeC {\`e}bres divisorielles}{40}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Diviseurs de Cartier et groupe de Picard}{42}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}L'espace projectif $\mathbb {P}_k^n$}{43}{subsection.3.2.4}
-\contentsline {subsubsection}{Faisceaux inversibles sur $\mathbb {P}_k^n$}{43}{section*.23}
-\contentsline {subsubsection}{Morphismes vers l'espace projectif}{43}{section*.24}
-\contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux amples}{44}{section*.25}
-\contentsline {subsection}{\numberline {3.2.5}Le groupe des unit\IeC {\'e}s d'une vari\IeC {\'e}t\IeC {\'e} irr\IeC {\'e}ductible}{44}{subsection.3.2.5}
-\contentsline {chapter}{\numberline {4}Anneaux de Cox}{46}{chapter.4}
-\contentsline {section}{\numberline {4.1}Un exemple introductif}{46}{section.4.1}
-\contentsline {section}{\numberline {4.2}Faisceau et anneau de Cox dans le cas sans torsion}{48}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Le spectre relatif d'une alg\IeC {\`e}bre divisorielle}{48}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Faisceau et anneau de Cox}{51}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{51}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Faisceau et anneau de Cox dans le cas g\IeC {\'e}n\IeC {\'e}ral}{52}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Faisceau et anneau de Cox}{52}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Invariance de l'anneau de Cox}{53}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Exemples}{55}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{56}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Int\IeC {\'e}grit\IeC {\'e} et normalit\IeC {\'e}}{56}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Localisation et groupe des unit\IeC {\'e}s}{58}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Propri\IeC {\'e}t\IeC {\'e}s de divisibilit\IeC {\'e}}{59}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {1.3.2}Vari\IeC {\'e}t\IeC {\'e}s lisses}{17}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Propri\IeC {\'e}t\IeC {\'e}s des vari\IeC {\'e}t\IeC {\'e}s normales}{17}{subsection.1.3.3}
+\contentsline {chapter}{\numberline {2}Groupes alg\IeC {\'e}briques et th\IeC {\'e}orie des invariants}{19}{chapter.2}
+\contentsline {section}{\numberline {2.1}Groupes alg\IeC {\'e}briques}{19}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{19}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}G-vari\IeC {\'e}t\IeC {\'e}s, repr\IeC {\'e}sentations}{19}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Groupes quotients}{21}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Groupes diagonalisables, actions de groupes diagonalisables}{22}{subsection.2.1.4}
+\contentsline {subsubsection}{Groupes diagonalisables}{22}{section*.13}
+\contentsline {subsubsection}{Action d'un groupe diagonalisable sur une vari\IeC {\'e}t\IeC {\'e} affine}{25}{section*.14}
+\contentsline {section}{\numberline {2.2}Th\IeC {\'e}orie des invariants}{28}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}L'alg\IeC {\`e}bre des invariants}{28}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Quotient d'une vari\IeC {\'e}t\IeC {\'e} alg\IeC {\'e}brique sous l'action d'un groupe alg\IeC {\'e}brique}{29}{subsection.2.2.2}
+\contentsline {subsubsection}{Quotient cat\IeC {\'e}gorique}{29}{section*.15}
+\contentsline {subsubsection}{Quotient g\IeC {\'e}om\IeC {\'e}trique}{30}{section*.16}
+\contentsline {subsubsection}{Un exemple: La construction Proj}{31}{section*.17}
+\contentsline {chapter}{\numberline {3}Faisceaux divisoriels sur une vari\IeC {\'e}t\IeC {\'e} alg\IeC {\'e}brique}{32}{chapter.3}
+\contentsline {section}{\numberline {3.1}Faisceaux quasi-coh\IeC {\'e}rents}{32}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Faisceaux quasi-coh\IeC {\'e}rents sur un sch\IeC {\'e}ma}{32}{subsection.3.1.1}
+\contentsline {subsubsection}{Spectre relatif d'une $\mathcal {O}_X$-alg\IeC {\`e}bre}{32}{section*.18}
+\contentsline {subsection}{\numberline {3.1.2}Faisceaux quasi-coh\IeC {\'e}rents sur une vari\IeC {\'e}t\IeC {\'e} projective}{33}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Cohomologie des faisceaux et applications}{33}{subsection.3.1.3}
+\contentsline {subsubsection}{G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{33}{section*.19}
+\contentsline {subsubsection}{Cohomologie \IeC {\`a} support}{34}{section*.20}
+\contentsline {subsubsection}{Cohomologie sur un sch\IeC {\'e}ma affine}{34}{section*.21}
+\contentsline {subsubsection}{Une application}{36}{section*.22}
+\contentsline {subsection}{\numberline {3.1.4}Faisceaux inversibles, Fibr\IeC {\'e}s en droites}{36}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}$G$-linearisation d'un fibr\IeC {\'e} en droite}{38}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}Diviseurs}{40}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Diviseurs de Weil}{40}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Faisceau d'alg\IeC {\`e}bres divisorielles}{41}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Diviseurs de Cartier et groupe de Picard}{43}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}L'espace projectif $\mathbb {P}_k^n$}{44}{subsection.3.2.4}
+\contentsline {subsubsection}{Faisceaux inversibles sur $\mathbb {P}_k^n$}{44}{section*.23}
+\contentsline {subsubsection}{Morphismes vers l'espace projectif}{44}{section*.24}
+\contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux amples}{45}{section*.25}
+\contentsline {subsection}{\numberline {3.2.5}Le groupe des unit\IeC {\'e}s d'une vari\IeC {\'e}t\IeC {\'e} irr\IeC {\'e}ductible}{45}{subsection.3.2.5}
+\contentsline {chapter}{\numberline {4}Anneaux de Cox}{47}{chapter.4}
+\contentsline {section}{\numberline {4.1}Un exemple introductif}{47}{section.4.1}
+\contentsline {section}{\numberline {4.2}Faisceau et anneau de Cox dans le cas sans torsion}{49}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Le spectre relatif d'une alg\IeC {\`e}bre divisorielle}{49}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Faisceau et anneau de Cox}{52}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{52}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Faisceau et anneau de Cox dans le cas g\IeC {\'e}n\IeC {\'e}ral}{53}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Faisceau et anneau de Cox}{53}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Invariance de l'anneau de Cox}{54}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Exemples}{56}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{57}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Int\IeC {\'e}grit\IeC {\'e} et normalit\IeC {\'e}}{57}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Localisation et groupe des unit\IeC {\'e}s}{59}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Propri\IeC {\'e}t\IeC {\'e}s de divisibilit\IeC {\'e}}{61}{subsection.4.4.3}
