@@ -5,6 +5,11 @@ D.Eisenbud.
 \newblock {\em Commutative algebra, with a view towards algebraic geometry}.
 \newblock Springer, 2004.
 
+\bibitem{MumfordAbelianVarieties}
+D.Mumford.
+\newblock {\em Abelian Varieties}.
+\newblock Oxford University Press, 1974.
+
 \bibitem{MumfordRedBook}
 D.Mumford.
 \newblock {\em The red book of varieties and schemes}.
@@ -50,8 +55,8 @@ M.Brion.
 
 \bibitem{QingLiu}
 Q.Liu.
-\newblock Algebraic geometry and arithmetic curves.
-\newblock 2006.
+\newblock {\em Algebraic geometry and arithmetic curves}.
+\newblock Oxford GTM, 2006.
 
 \bibitem{LAGSpringer}
 T.A.Springer.

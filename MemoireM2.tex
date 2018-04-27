@@ -17,28 +17,48 @@
 \usepackage{tikz-cd}
 \usepackage{multicol}
 
-\graphicspath{{./figures/}}
-
-
-\newcommand{\myauthor}[3]{#1\protect\footnote{#2, \protect\url{#3}}}
-
-
-\title{\Huge \sf Mémoire M2\vspace{1cm}} 
-
-\author{%
-\begin{tabular}{c}
-	Antoine VEZIER \\
-\end{tabular}
-}
-
-
-\date{\today}
-
-%%
-
 \begin{document}
 
-\maketitle
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center
+
+\textsc{\LARGE Université Grenoble Alples}\\[0.5cm] 
+\textsc{\large Institut Fourier}\\[1.5cm] 
+
+\textsc{\Large Mémoire de Master 2 MF}\\[2.5cm] 
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Introduction aux anneaux de Cox}\\[0.4cm] 
+\HRule \\[1.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Étudiant:}\\
+Antoine \textsc{Vezier} 
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Encadrant:} \\
+Michel \textsc{Brion} 
+\end{flushright}
+\end{minipage}\\[2cm]
+
+{\large \today}\\[8cm] 
+
+
+{\large This work has been partially supported by the LabEx PERSYVAL-Lab (ANR-11-LABX-0025-01) funded by the French program Investissement d’avenir
+}\\[1cm] 
+
+ 
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
 
 \tableofcontents
 \include{chapters/introduction}

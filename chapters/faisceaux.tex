@@ -200,9 +200,9 @@ Soit $X$ une variété. Un faisceau inversible $\Ll$ sur $X$ est un $\mathcal{O}
 On peut toujours trivialiser deux faisceaux inversibles sur un même recouvrement ouvert de $X$. On voit ainsi que le produit tensoriel sur $\mathcal{O}_X$ de faisceaux inversibles est inversible. Par ailleurs, le faisceau dual $\Ll^\vee:=\Hh om(\Ll,\Oo_X)$ est clairement inversible car sur les ouverts $U$ où $\Ll$ est trivial, se donner un morphisme $\Ll_{|U}\rightarrow\Oo_{|U}$ revient à se donner une section de $\Oo(U)$. De plus, l'application naturelle $\Ll\otimes_{\Oo_X} \Hh om(\Ll,\Oo_X)\rightarrow \Oo_X, (s,f)\mapsto f(s)$ est un isomorphisme. Ainsi, les classes d'isomorphie de faisceaux inversible sur $X$ munies du produit tensoriel forment un groupe appelé groupe de Picard de $X$, noté $\pic(X)$. 
 
 \begin{ex}\label{expicaff}
-Soit $X=\spec (A)$ irréductible. Alors se donner un faisceau inversible sur $X$ revient (à isomorphisme près) à se donner un idéal fractionnaire $I$ de $k[X]$ qui est inversible (cf \ref{ideauxinversibles}), son inverse est alors $I^{-1}:=(A:I)$. Les idéaux fractionnaires inversibles donnant le faisceau inversible trivial sont les idéaux fractionnaires principaux. Le groupe de Picard de $X$ est ainsi isomorphe au groupe des idéaux fractionnaires inversibles modulo les idéaux fractionnaires principaux. Les idéaux de $A$ qui sont inversibles forment une partie génératrice de ce groupe. 
+Soit $X=\spec (A)$ irréductible. Alors se donner un faisceau inversible sur $X$ revient (à isomorphisme près) à se donner un idéal fractionnaire $I$ de $A$ qui est inversible (cf \ref{ideauxinversibles}), son inverse est alors $I^{-1}:=(A:I)$. Les idéaux fractionnaires inversibles donnant le faisceau inversible trivial sont les idéaux fractionnaires principaux. Le groupe de Picard de $X$ est ainsi isomorphe au groupe des idéaux fractionnaires inversibles modulo les idéaux fractionnaires principaux. Les idéaux de $A$ qui sont inversibles forment une partie génératrice de ce groupe. 
 
-Si de plus $A$ est localement factoriel, par exemple si $X$ est lisse, les idéaux inversibles sont les idéaux de hauteur 1 pure, c'est à dire tels que ses idéaux premiers associés sont tous de hauteur 1. De plus tout idéal inversible s'écrit de manière unique comme produit de puissances d'idéaux premiers de hauteur 1. Pic(X) est donc le quotient du groupe libre sur les idéaux premiers de hauteur 1 par les idéaux fractionnaires principaux.
+Si de plus $A$ est localement factoriel, par exemple si $X$ est lisse, les idéaux inversibles sont les idéaux de hauteur 1 pure, c'est à dire tels que ses idéaux premiers associés sont tous de hauteur 1. De plus tout idéal inversible s'écrit de manière unique comme produit de puissances d'idéaux premiers de hauteur 1. Ainsi $\pic(X)$ est donc le quotient du groupe libre sur les idéaux premiers de hauteur 1 par les idéaux fractionnaires principaux.
 \end{ex}
 
 On va maintenant voir que les faisceaux inversibles sur $X$ s'incarnent naturellement en des variétés sur $X$, ce sont les fibrés en droites.
@@ -363,7 +363,7 @@ Soit $X$ une variété normale et irréductible et $Z$ une sous-variété fermé
 \begin{proof}
 \begin{enumerate}
 \item Si $D\cap U\neq \emptyset$ alors $\dim X=\dim U$ et $\dim D=\dim D\cap U$ car ce sont des ouverts de variétés irréductibles donc la dimension est préservée. Ainsi cela définit une application $\wdiv(X)\rightarrow \wdiv(U)$ qui est un morphisme par construction. De plus, comme un diviseur principal est envoyé sur un diviseur principal, on a bien le morphisme attendu. Il est surjectif car pour tout $D\in\wdiv(U)$ premier, on a $D=\overline{D}\cap U$.
-\item Dans ce cas on ne peut avoir $D\subset Z$ cause de la dimension donc $D\cap U\neq \emptyset$. Ainsi, le noyau du morphisme WDiv$(X)\rightarrow$ WDiv$(U)$ est exactement PDiv$(X)$ d'où l'isomorphisme.
+\item Dans ce cas on ne peut avoir $D\subset Z$ cause de la dimension donc $D\cap U\neq \emptyset$. Ainsi, le noyau du morphisme $\wdiv(X)\rightarrow \wdiv(U)$ est exactement PDiv$(X)$ d'où l'isomorphisme.
 \item Le noyau de $.\cap U$ est exactement l'ensemble des $\pi(D)$ où $D$ est un diviseur dont le support est contenu dans $X\setminus U=Z$, d'où le résultat.
 \end{enumerate}
 \end{proof}
@@ -390,18 +390,14 @@ On vérifie, grâce aux propriétés des valuations $v_D$, qu'il s'agit d'un sou
 \begin{prop}\label{divaff}
 Soit $X$ une variété affine normale et irréductible, $A:=k[X]$. 
 \begin{enumerate}
-\item Soit un diviseur de Weil $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$, on a $\Gamma(X,\Oo_X(D))=\bigcap_{ht(p)=1}p^{-a_p}A_p$, où $a_p=0$ si $p\notin \lbrace p_1,...,p_r\rbrace$.
-\item Soit $(Y_i)_{i\leq r}$ des diviseurs premiers de Cartier et $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$, on a $\Gamma(X,\Oo_X(D))=\prod_{i=1}^n p^{-a_p}$.
-\item Pour un diviseur premier $Y_p$, on a $\Gamma(X,\Oo_X(-Y_p))=p$. Si de plus $p$ est inversible et $a\in \ZZ$, on a $\Gamma(X,\Oo_X(aY_p))=p^{-a}$.
+\item Soit un diviseur de Weil $D:=\sum_i a_iD_i$, on a $\Gamma(X,\Oo_X(D))=\bigcap_{\haut \mathfrak{p}_i=1}(\mathfrak{p}_iA_{\mathfrak{p}_i})^{-a_i}$.
+\item Pour un diviseur premier $D$ correspondant à un idéal premier $\mathfrak{p}$ de hauteur $1$, on a $\Gamma(X,\Oo_X(-D))=\mathfrak{p}$. Si de plus $\mathfrak{p}$ est inversible et $a\in \ZZ$, on a $\Gamma(X,\Oo_X(aD))=\mathfrak{p}^{-a}$.
 \end{enumerate}
 \end{prop}
 \begin{proof}
 \begin{enumerate}
-\item Pour tout idéal premier $p$ de hauteur 1, $A_p$ est un DVR. On a donc $pA_p=(\pi)$ pour un certain $\pi \in A_p\subset k(X)$. Pour tout entier $a\in \ZZ$, on définit un sous $A_p$-module de $k(X)$ isomorphe à $pA_p$ en posant $p^aA_p:= (\pi^a)$. C'est un idéal fractionnaire de $A_p$ et on a pour $f\in k(X)^*$, $v_{Y_p}(f)\geq a \iff f\in p^a A_p$.
-Or, $f\in \Gamma(X,\Oo_X(D)) \iff $ div$(f)\geq -D \iff v_{Y_p}(f)\geq -a_p$, pour tout $p$ de hauteur 1, avec $a_p$ le coefficient de $Y_p$ dans $D$.
-\item Cela est une conséquence de \ref{isopic} et \ref{expicaff}.
-
-\item Dans ce cas, $Y_p$ est effectif, donc $\Gamma(X,\Oo_X(-Y_p))$ est un sous-module de $A$, donc un idéal. On a donc $\Gamma(X,\Oo_X(-Y_p))=pA_p\cap A=p$. Pour l'autre assertion, c'est immédiat car $\Oo_X(Y_p)$ est alors inversible d'après \ref{expicaff}, c'est à dire que $Y_p$ est de Cartier.
+\item Cela vient de la discussion suivant \ref{DefIdealInvertible}.
+\item Dans ce cas, $D$ est effectif, donc $\Gamma(X,\Oo_X(-D))$ est un sous-module de $A$, donc un idéal. On a donc $\Gamma(X,\Oo_X(-D))=\mathfrak{p}A_\mathfrak{p}\cap A=\mathfrak{p}$. Pour l'autre assertion, c'est immédiat car $\Oo_X(D)$ est alors inversible d'après \ref{expicaff}, c'est à dire que $D$ est de Cartier.
 \end{enumerate}
 \end{proof}
 
@@ -421,14 +417,14 @@ Ainsi on voit que l'application $\phi_n:k[t_0,t_1]_n\rightarrow S_{nD}(\PP^1), f
 Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors $\Oo_X(D)$ est un $\Oo_X$-module cohérent. En particulier, le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est une $\Oo_X$-algèbre quasi-cohérente.
 \end{prop}
 \begin{proof}
-On peut supposer $X=\spec A$ affine car le problème est local.  Alors d'après \ref{quasicoaff}, $\Oo_X(D)\simeq \tilde{M}$ où $M=\Gamma(X,\Oo_X(D))$. Il s'agit donc de montrer que $M$ est un $A$-module de type fini. Mais d'après \ref{divaff}, on voit que $\Gamma(X,\Oo_X(D))$ est un idéal fractionnaire de $A$, il est donc isomorphe à un idéal de $A$ en tant $A$-module après multiplication par une certaine fonction rationnelle. Comme $A$ est noetherien cela conclut la preuve. En fait, cela revient à constater que les fonctions $f\in \Gamma(X,\Oo_X(D))$ peuvent admettre des pôles uniquement sur les diviseurs premiers intervenant dans l'écriture de $D$, soit un nombre fini. L'ordre de ces pôle peut  donc être borné par un même $d\in \NN$.
+On peut supposer $X=\spec A$ affine car le problème est local.  Alors d'après \ref{quasicoaff}, $\Oo_X(D)\simeq \tilde{M}$ où $M=\Gamma(X,\Oo_X(D))$. Il s'agit donc de montrer que $M$ est un $A$-module de type fini. Mais d'après \ref{divaff}, on voit que $\Gamma(X,\Oo_X(D))$ est un idéal fractionnaire de $A$, il est donc isomorphe à un idéal de $A$ en tant $A$-module après multiplication par une certaine fonction rationnelle. Comme $A$ est noetherien cela conclut la preuve.
 \end{proof}
 
 \begin{prop}\label{isomorphismcodim2}
 Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors pour tout ouvert $U\subset X$ tels que $X\setminus U$ soit de codimension $\geq 2$ dans $X$, on a $\Gamma(U,\Oo_X(D))\simeq \Gamma(X,\Oo_X(D))$.
 \end{prop}
 \begin{proof}
-Encore une fois, on peut traiter le problème localement et supposer $X=\spec A$ affine. La restriction est injective et comme en \ref{extregularnormal}, on remarque que $U$ contient tous les premiers $p$ de hauteur 1. On écrit $D=a_{p_1}Y_{p_1}+...+a_{p_r}Y_{p_r}$ comme en \ref{divaff}, et on considère les injections dans les tiges $\Gamma(X,\Oo_X(D))_p=p^{-a_p}A_p$. On construit ainsi l'inverse de la restriction $\Gamma(U, \Oo_X(D))\xhookrightarrow{}\Gamma(X,\Oo_X(D))=\bigcap_{ht(p)=1}p^{-a_p}A_p$, en procédant comme en \ref{extregularnormal}.
+Encore une fois, on peut traiter le problème localement et supposer $X=\spec A$ affine. La restriction est injective et comme en \ref{extregularnormal}, on remarque que $U$ contient tous les premiers $\mathfrak{p}$ de hauteur $1$. On écrit $D=a_1D_1+...+a_rD_r$ et on considère les injections dans les tiges $\Gamma(X,\Oo_X(D))_\mathfrak{p}=(\mathfrak{p}A_\mathfrak{p})^{-a_\mathfrak{p}}$ (voir \ref{divaff}). On construit ainsi l'inverse de la restriction $\Gamma(U, \Oo_X(D))\xhookrightarrow{}\Gamma(X,\Oo_X(D))=\bigcap_{\haut\mathfrak{p}=1}(\mathfrak{p}A_p)^{-a_\mathfrak{p}}$, en procédant comme en \ref{extregularnormal}.
 \end{proof}
 
 \subsection{Diviseurs de Cartier et groupe de Picard}

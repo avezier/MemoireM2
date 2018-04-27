@@ -253,9 +253,6 @@ H & \simeq\Hom_{gp}(X^*(H),\GG_m) \\
 \end{split}
 \end{equation}
 Pour la seconde assertion, avec ce choix on a  $\Hom_{gp}(X^*(H),\GG_m)\simeq\Hom_{gp}(X^*(G)/K,\GG_m)$, on en déduit $X^*(H)\simeq X^*(G)/K$.
-
-
-
 \end{proof}
 
 \begin{prop}\label{GDiagSubtorusFacteurDirect}
@@ -528,6 +525,13 @@ Soit $G$ un groupe algébrique et $H$ un sous-groupe fermé. Dans la catégorie 
 \begin{ex}
 Un bon quotient $(X//G, \pi)$ est un quotient géométrique si les fibres de $\pi$ sont exactement les orbites. En effet, d'après ce qui précède, il reste alors à vérifier que $X//G$ est muni de la topologie quotient. Soit un ouvert de X de la forme $\pi^{-1}(A)$ où $A$ est une partie de $X//G$. En tenant compte de \ref{goodquotientthm} (iii) et de la surjectivité de $\pi$ on a: $\pi(X\setminus \pi^{-1}(A))=Y\setminus A$ qui est fermé, donc $A$ est ouvert.
 \end{ex}
+
+\begin{prop}\label{GITEtaleFiniteGroup}
+Soit $X$ une $G$-variété avec $G$ fini agissant librement et telles que les orbites admettent des voisinages ouverts affines. Alors le bon quotient $(X//G,\pi)$ est un quotient géométrique, de plus le morphisme $\pi$ est fini et étale.
+\end{prop}
+\begin{proof}
+Voir \cite{MumfordAbelianVarieties} II.7
+\end{proof}
 
 \subsubsection{Un exemple: La construction Proj}
 Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n$($k$). On considère $A$ une algèbre affine $\NN$-graduée et on pose $X:=\spec(A)$, ainsi muni d'une action de $\GG_m$. Une orbite $\GG_m.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $\GG_m.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir.

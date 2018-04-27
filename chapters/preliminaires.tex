@@ -229,13 +229,18 @@ Voir \cite{atiyahmacdo} 9.2
 Soit $A$ un anneau intègre et $K$ son corps des fractions. Un idéal fractionnaire est un sous $A$-module de $K$ tel qu'il existe $x\in A$ non-nul vérifiant $xM\subset A$.
 \end{defn}
 
-\begin{defn}[Idéal inversible]
+\begin{defn}[Idéal inversible]\label{DefIdealInvertible}
 Un sous $A$-module $M$ de $K$ est inversible si il existe un sous $A$-module $N$ de $K$ tel que $MN=A$.
 \end{defn}
 
 Un sous $A$-module inversible $M$ de $K$ est nécessairement de type fini, donc est fractionnaire. De plus, on a $M^{-1}=(A:M)=\lbrace x\in K\mid xM\subset A\rbrace$. Si $A$ est noetherien, les idéaux fractionnaires sont exactement les sous $A$-modules de type fini de $K$. 
 
-Soit $A$ un anneau intègre, et $\mathfrak{p}$ un idéal premier de hauteur $1$ tel que Soit $A_\mathfrak{p}$ soit un anneau de valuation discrète, on note $\mathfrak{m}:=\mathfrak{p}A_\mathfrak{p}$ son idéal maximal. Tout idéal fractionnaire non-nul de $A_\mathfrak{p}$ est inversible. Cette condition est même suffisante pour que $A_\mathfrak{p}$ soit un anneau de valuation discrète (voir \cite{atiyahmacdo} 9.7). Pour tout
+Soit $A$ un anneau intègre, et $\mathfrak{p}$ un idéal premier de hauteur $1$ tel que $A_\mathfrak{p}$ soit un anneau de valuation discrète. L'idéal maximal $\mathfrak{p}A_\mathfrak{p}$ de $A_\mathfrak{p}$ est principal engendré par une uniformisante $\pi$. Tout idéal fractionnaire non-nul de $A_\mathfrak{p}$ est inversible, et cette condition est même suffisante pour que $A_\mathfrak{p}$ soit un anneau de valuation discrète (voir \cite{atiyahmacdo} 9.7). Pour tout entier $k\in \ZZ$ on a en tant que $A_\mathfrak{p}$-modules
+\begin{center}
+$(\mathfrak{p}A_\mathfrak{p})^k=(\pi)^k=\lbrace x\in K\mid v_\mathfrak{p}(x)\geq k \rbrace$,
+\end{center}
+et tout idéal fractionnaire de $A_\mathfrak{p}$ est de cette forme.
+
 
 \begin{thm}\label{ideauxinversibles}
 Soit $A$ un anneau intègre et $\mathfrak{a}$ un idéal fractionnaire de $A$. Les assertions suivantes sont équivalentes:
@@ -304,7 +309,7 @@ On se donne un ordre lexicographique sur $\ZZ^r$, et deux éléments $g,g'\in A$
 
 \section{Schémas}
 
-Notre principale référence est \cite{Hartshorne}. On résume dans cette partie certains faits et définitions. 
+\noindent Notre principale référence est \cite{Hartshorne}. On résume dans cette partie certains faits et définitions. 
 
 \subsection{Généralités}
 
@@ -643,6 +648,26 @@ Soit $X$ une variété affine que l'on peut supposer plongée dans $\AAA^n$ avec
 Voir \cite{Hartshorne} I.5.1
 \end{proof}
 
+\begin{defn}[Module plat]
+Soit $A$ un anneau. Un  $A$-module $M$ est plat sur $A$ si le foncteur $\Mm od(A)\rightarrow \Mm od(A),\, N\mapsto M\otimes_A N$ est exact.
+\end{defn}
+
+\begin{defn}[Morphisme plat]
+Un morphisme $f:X\rightarrow Y$ de variétés est plat si pour tout $x\in X$, le $\Oo_{Y,f(x)}$-module $\Oo_{X,x}$ est plat.
+\end{defn}
+
+
+\begin{defn}[Morphisme non-ramifié, morphisme/revêtement étale]
+Un morphisme $f:X\rightarrow Y$ est non-ramifié si pour tout $x\in X$, $f^\sharp_x(\mathfrak{m}_{f(x)})\Oo_{X,x}=\mathfrak{m}_x$. Le morphisme est étale si il est plat et non-ramifié. Si $f$ est surjectif, on dit  que $(X,f)$ est un revêtement étale de $Y$.
+\end{defn}
+
+
+\begin{prop}\label{EtaleLisse}
+Soit $(X,f)$ un revêtement étale d'une variété $Y$. Alors $X$ est lisse si et seulement si $Y$ est lisse.
+\end{prop}
+\begin{proof}
+Voir \cite{Hartshorne} ex III.10.4
+\end{proof}
 
 \subsection{Propriétés des variétés normales}
 
