@@ -60,7 +60,7 @@ Enfin, $G$ n'est pas connexe, on écrit $G=\cup_{i=1}^{n}g_iG^\circ .x=\cup_{i=1
 Soit $f:G\rightarrow H$ un morphisme de groupes algébriques. Alors $\Im f$ est fermé, et $\dim G=\dim\Ker f+\dim\Im f$.
 \end{prop}
 \begin{proof}
-$G$ agit sur $H$ par $g.h=f(g).h$. Les orbites sont les classes à droite de $f(G)$, et elles sont toutes isomorphes. Comme il existe un orbite fermé, on obtient que $\Im f$ est fermé. Pour $h\neq e_H$, le stabilisateur $G_h$ est $\Ker f$, d'où $\dim f(G)=\dim G-\ker f$.
+$G$ agit sur $H$ par $g.h=f(g).h$. Les orbites sont les classes à droite de $f(G)$, et elles sont toutes isomorphes. Comme il existe un orbite fermé, on obtient que $\Im f$ est fermé. Pour $h\neq e_H$, le stabilisateur $G_h$ est $\Ker f$, d'où $\dim f(G)=\dim G-\Ker f$.
 \end{proof}
 
 
@@ -247,9 +247,9 @@ $H$ est bien diagonalisable car la restriction $\Oo(G)\rightarrow \Oo(H)$ est su
 \begin{equation}
 \begin{split}
 H & \simeq\Hom_{gp}(X^*(H),\GG_m) \\
-    & \simeq\Hom_{gp}(X^*(G)/\ker i^\sharp,\GG_m)\\
-    &\simeq\lbrace ev_G(x)\in\Hom_{gp}(X^*(G),\GG_m)\mid\forall \chi\in\ker i^\sharp,\,\chi(x)=1\rbrace\\
-    &\simeq\cap_{\chi_{|H}=1}\ker \chi
+    & \simeq\Hom_{gp}(X^*(G)/\Ker i^\sharp,\GG_m)\\
+    &\simeq\lbrace ev_G(x)\in\Hom_{gp}(X^*(G),\GG_m)\mid\forall \chi\in\Ker i^\sharp,\,\chi(x)=1\rbrace\\
+    &\simeq\cap_{\chi_{|H}=1}\Ker \chi
 \end{split}
 \end{equation}
 Pour la seconde assertion, avec ce choix on a  $\Hom_{gp}(X^*(H),\GG_m)\simeq\Hom_{gp}(X^*(G)/K,\GG_m)$, on en déduit $X^*(H)\simeq X^*(G)/K$.
@@ -262,11 +262,11 @@ Soit $G$ un tore et $H$ un sous-tore. Alors $H$ est facteur direct dans $G$, c'e
 On note $i:H\rightarrow G$ le morphisme d'inclusion. Par \ref{EqCatGpDiagGpAb}, on obtient la suite exacte courte ci-dessous où $i^\sharp$ est la restriction des caractères de $
 G$ à $H$.
 \begin{center}
-$0\rightarrow X^*(G/H)\simeq\ker i^\sharp\rightarrow X^*(G)\xrightarrow{i^\sharp} X^*(H)\rightarrow 0$
+$0\rightarrow X^*(G/H)\simeq\Ker i^\sharp\rightarrow X^*(G)\xrightarrow{i^\sharp} X^*(H)\rightarrow 0$
 \end{center}
 Comme $X^*(G)$ et $X^*(H)$ sont des $\ZZ$-modules libres on trouve des bases respectives tels que la matrice de $i^\sharp$ soit $\diag(a_1,...a_r,0,...,0)$, on en déduit facilement une section $s$ de $i^\sharp$. On a ainsi $X^*(G)=\Ker i^\sharp\oplus s(X^*(H))$, puis $G\simeq H\times \spec k[s(X^*(H))]$.
 
-Dans le cas où $H$ est seulement diagonalisable adaptée, considérons une base de $X^*(G)$ adaptée à $\ker i^\sharp$. Cela fournit des coordonnées telles que $G\simeq \GG_m^n$ et $H\simeq \lbrace 1\rbrace\times...\times\lbrace 1\rbrace\times\mu_{n_1}\times...\times\mu_{n_s}\times\GG_m^r$. Par cet isomorphisme, $H':=\GG_m^{n-r}\times  \lbrace 1\rbrace\times...\times  \lbrace 1\rbrace$ convient.
+Dans le cas où $H$ est seulement diagonalisable adaptée, considérons une base de $X^*(G)$ adaptée à $\Ker i^\sharp$. Cela fournit des coordonnées telles que $G\simeq \GG_m^n$ et $H\simeq \lbrace 1\rbrace\times...\times\lbrace 1\rbrace\times\mu_{n_1}\times...\times\mu_{n_s}\times\GG_m^r$. Par cet isomorphisme, $H':=\GG_m^{n-r}\times  \lbrace 1\rbrace\times...\times  \lbrace 1\rbrace$ convient.
 \end{proof}
 
 \subsubsection{Action d'un groupe diagonalisable sur une variété affine}
@@ -534,6 +534,7 @@ Voir \cite{MumfordAbelianVarieties} II.7
 \end{proof}
 
 \subsubsection{Un exemple: La construction Proj}
+\label{ProjConstruction}
 Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n$($k$). On considère $A$ une algèbre affine $\NN$-graduée et on pose $X:=\spec(A)$, ainsi muni d'une action de $\GG_m$. Une orbite $\GG_m.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $\GG_m.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir.
 
 On note $F$ l'ensemble des points fixes et on remarque que $F=\mathcal{V}_X(A_{>0})$, où $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d>0)$ est l'idéal dit inconvenant. En effet, $F$ est l'ensemble des idéaux maximaux qui sont $\GG_m$-stables. Or, un idéal maximal et homogène contient nécessairement $A_{>0}$.
@@ -563,4 +564,4 @@ On note $A_{(f)}:=(A_f)_0$ en remarquant qu'il s'agit de l'algèbre des invarian
 \end{multicols}
 Les flèches horizontales du diagramme de droite sont des immersions ouvertes, en effet on a $U_{f_if_j}\simeq (U_{f_i})_{f_j}$. Les conditions de la construction \ref{gluevar} sont satisfaites, on peut former un schéma $\proj(A)$ par recollement des $U_{f_i}$ le long de ces immersions. Il est facile de montrer que $\proj k[t_1,...,t_n]$, où les $t_i$ sont des indéterminées, est séparé en utilisant \ref{sepCritere}. On en déduit que $\proj(A)$ est séparé en utilisant \ref{sepCritere2}, et donc que c'est une variété. Enfin, les $(U_{f_i},\pi_i)$ sont des quotients géométriques et le diagramme exprime que l'on a les conditions de recollement sur les intersections qui font de $\proj(A)$ le quotient géométrique global $W/\GG_m$. 
 
-Enfin, on remarque que les fermés de $\proj(A)$ correspondent aux fermés $k^*$-stables de $W$, c'est à dire aux idéaux radicaux homogènes qui ne contiennent pas l'idéal inconvenant. On appelle ces fermés des variétés projectives. La topologie quotient sur $\proj(A)$ que l'on vient de définir est aussi appelé la topologie de Zariski.
+Enfin, on remarque que les fermés de $\proj(A)$ correspondent aux fermés $k^*$-stables de $W$, c'est à dire aux idéaux radicaux homogènes qui ne contiennent pas l'idéal inconvenant. Si $A$ admet des générateurs homogènes de degré $1$, alors $\proj(A)$ est un fermé d'un espace projectif $\PP^n_k:=\proj B$, où $B:=k[x_0,...,x_n]$ avec la graduation habituelle. On appelle ce dernier type de fermé une \textit{variété projective}. La topologie quotient sur $\proj(A)$ que l'on vient de définir est aussi appelé la topologie de Zariski. Elle admet une base d'ouverts affines de la forme $X_f$ avec $f\in A$ homogène, ils sont appelés les \textit{ouverts principaux}. 

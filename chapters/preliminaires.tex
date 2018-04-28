@@ -135,6 +135,11 @@ Soit $k[x_1,...,x_n]$ un anneau de polynômes, et $f\in A$ un élément premier.
 Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de hauteur $1$. En remplaçant $A$ par sa localisation en $\mathfrak{p}$, on peut supposer $A$ local d'idéal maximal $\mathfrak{p}$. Par définition, il existe $g\in A\setminus (f) $ tel que $\mathfrak{p}=\lbrace x\in A\mid gx=0 \,\modu (f)\rbrace$. Soit $y:=g/f\in \fract(A)$. Si $y\mathfrak{p}\subset\mathfrak{p}$, c'est à dire $(x\in A$ et $gx=0 \,\modu (f))\implies g(x/f)=0\,\modu (f)$, ou encore $g(x/f^n)=0\,\modu (f)$ pour tout $n>0$. On en déduit $g\in (f)$, contradiction. Ainsi $y\mathfrak{p}=A$, ou encore $\mathfrak{p}=(f/g)$. Par le théorème de l'idéal principal de Krull (voir \ref{dimsousvariete}) on en déduit $\haut \mathfrak{p}=1$.
 \end{proof}
 
+\begin{prop}[Car. 0]\label{tensorproductNormalDomain}
+Soit $A$ et $B$ deux $k$-algèbres intégralement closes. Alors $A\otimes_k B$ est intégralement clos.
+\end{prop}
+
+
 \subsection{Lemme de normalisation de Noether et applications}
 
 \begin{thm}[Lemme de normalisation de Noether]\label{NoetherNormalisation}
@@ -273,6 +278,10 @@ $$M=\bigoplus_{w\in K}M_w,\text{ où pour tout } w,w'\in K\text{, on a }R_wM_{w'
 Un morphisme $\psi:M\rightarrow M'$ de $A$-modules gradués est un morphisme de $A$-modules tel que l'on ait $\psi(M_w)\subset M'_w$, pour tout $w\in K$.
 \end{defn}
 
+\begin{ex}[Module gradué décalé]\label{GradedTwistedModule}
+Soit $A$ une $R$-algèbre $\ZZ$-graduée et $M$ un $A$-module $\ZZ$-gradué. pour tout $n\in \ZZ$, on définit le $A$-module $M(d)$ tel que $M(n)_d=M_{n+d}$, pour tout $d\in \ZZ$.
+\end{ex}
+
 \begin{defn}[Idéal homogène]
 Soit $A$ une $R$-algèbre $K$-graduée. Un idéal $\mathfrak{a}$ de $A$ est homogène si c'est un sous-module gradué de $A$.
 \end{defn}
@@ -333,7 +342,7 @@ Réciproquement, tout morphisme entre schémas affines $f:\spec B\rightarrow \sp
 Les foncteurs $\spec$ et $\Gamma(.)$ définissent une anti-équivalence de catégories entre la catégorie des schémas affines et la catégorie des anneaux (commutatifs).
 \end{prop}
 
-Soit $X$ un schéma, on peut étendre l'opération $\Vv_X(.)$ définie plus haut pour les schémas affines. On considère un faisceau d'idéaux $\Ii$ de $\Oo_X$, et on pose $\Vv_X(\Ii)=\supp \Oo_X/\Ii$. De même, soit $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U\simeq\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$. On peut alors définir l' idéal des fonctions régulières sur $X$ s'annulant sur une partie $Y$ de $X$, on le note $\Ii_X(Y)$, c'est un idéal radical. Si $X\simeq\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
+Soit $X$ un schéma, on peut étendre l'opération $\Vv_X(.)$ définie plus haut pour les schémas affines. On considère un faisceau d'idéaux $\Ii$ de $\Oo_X$, et on pose $\Vv_X(\Ii)=\supp \Oo_X/\Ii$. De même, soit $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U\simeq\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$, on note toujours $X_f:=X\setminus \Vv_X(f\Oo_X)$. On peut alors définir l' idéal des fonctions régulières sur $X$ s'annulant sur une partie $Y$ de $X$, on le note $\Ii_X(Y)$, c'est un idéal radical. Si $X\simeq\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
 $$\Ii_X(Y)=\bigcap_{\mathfrak{p}\in Y}\mathfrak{p},\,\,\,\,\, \Ii_X(\Vv_X(\mathfrak{a}))=\sqrt{\mathfrak{a}},\,\,\,\,\,\,\Vv_X(\Ii_X(Y))=\overline{Y}$$
 
 \begin{rem}
@@ -464,7 +473,7 @@ Un morphisme de schémas $f:X\rightarrow Y$ est quasi-compact si l'image récipr
 Un schéma $X$ est quasi-affine si il et seulement si le morphisme canonique $X\rightarrow \spec \Oo(X)$ est une immersion ouverte quasi-compacte.
 \end{prop}
 
-Soit $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal de $A$. Alors la projection $A\rightarrow A/\mathfrak{a}$ définit une immersion fermée $i:\spec A/\mathfrak{a}\rightarrow X$ d'image $\Vv_X(\mathfrak{a})$. On a un isomorphisme canonique $(\Vv_X(\mathfrak{a}), i^{-1}(\Oo_X/\ker i^\sharp))\simeq \spec A/\mathfrak{a}$ et on remarque que $\ker i^\sharp(X_g)=\mathfrak{a}_g$. Réciproquement, pour tout immersion fermée $j:Z\rightarrow X$, il existe un unique idéal $\mathfrak{a}$ tel que $j$ se factorise via un isomorphisme $Z\simeq \spec A/\mathfrak{a}$ et l'immersion fermée $\spec A/\mathfrak{a}\rightarrow X$. Un sous-schéma fermé d'un schéma $X$ est un fermé $Z$ de $X$ muni d'une structure de schéma et d'une immersion fermée $Z\rightarrow X$. Ainsi les sous-schémas fermés de $X$ sont donnés par des faisceaux d'idéaux quasi-cohérents (voir partie consacrée aux faisceaux de modules).
+Soit $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal de $A$. Alors la projection $A\rightarrow A/\mathfrak{a}$ définit une immersion fermée $i:\spec A/\mathfrak{a}\rightarrow X$ d'image $\Vv_X(\mathfrak{a})$. On a un isomorphisme canonique $(\Vv_X(\mathfrak{a}), i^{-1}(\Oo_X/\Ker i^\sharp))\simeq \spec A/\mathfrak{a}$ et on remarque que $\Ker i^\sharp(X_g)=\mathfrak{a}_g$. Réciproquement, pour tout immersion fermée $j:Z\rightarrow X$, il existe un unique idéal $\mathfrak{a}$ tel que $j$ se factorise via un isomorphisme $Z\simeq \spec A/\mathfrak{a}$ et l'immersion fermée $\spec A/\mathfrak{a}\rightarrow X$. Un sous-schéma fermé d'un schéma $X$ est un fermé $Z$ de $X$ muni d'une structure de schéma et d'une immersion fermée $Z\rightarrow X$. Ainsi les sous-schémas fermés de $X$ sont donnés par des faisceaux d'idéaux quasi-cohérents (voir partie consacrée aux faisceaux de modules).
 
 
 

@@ -1,25 +1,73 @@
 \chapter{Faisceaux divisoriels sur une variété algébrique}
 
 
-\section{Faisceaux quasi-cohérents}
+\section{Faisceaux de modules}
 
-\subsection{Faisceaux quasi-cohérents sur un schéma}
+Soit $X$ un schéma. Un \textit{$\Oo_X$-module} est un faisceau $\Ff$ tel que $\Ff(U)$ soit un $\Oo_X(U)$-module pour tout ouvert $U\subset X$, en demandant de plus que les actions soit compatibles aux restrictions, c'est à dire que pour tout ouverts $V\subset U$, $a\in\Oo(U)$, $f\in \Ff(U)$, on ait $(af)_{|V}=a_Vf_v$. Un morphisme $\Ff\rightarrow\Gg$ de $\Oo_X$-modules est un morphisme de prefaisceaux tel que pour tout $U$ la flèche $\Ff(U)\rightarrow\Gg(U)$ soit un morphisme de $\Oo(U)$-modules. 
+
+\subsection{Faisceaux quasi-cohérents}
+
+Soit $X$ un schéma. Un $\Oo_X$-module $\Ff$ est \textit{quasi cohérent} si localement il admet une \textit{présentation}, c'est à dire que pour tout $x\in X$, il existe un voisinage ouvert $x\in U$ tel que on ait une suite exacte
+\begin{center}
+$\Oo_{X|U}^{(J)}\rightarrow\Oo_{X|U}^{(I)}\rightarrow \Ff_{|U}\rightarrow 0$
+\end{center}
+
+On dit que $\Ff$ est \textit{cohérent} si sur chaque voisinage, la présentation est finie, c'est à dire que les famille $I$ et $J$ sont finies.
+Soit $X\simeq \spec A$ un schéma affine, et $M$ un $A$-module. On définit un $\Oo_X$-module $\widetilde{M}$ sur le même modèle que le faisceau structural en posant $\widetilde{M}(X_f)=M_f$ pour chaque ouvert principal $X_f$. On vérifie que cela définit un $\Oo_X$-module tel que $\widetilde{M}_\mathfrak{p}=M_\mathfrak{p}$ pour tout $\mathfrak{p}\in X$, et $\widetilde{M}(X)=M$.
 
 
-\subsubsection{Spectre relatif d'une $\Oo_X$-algèbre}
+\begin{prop}
+L'application $M\mapsto \widetilde{M}$ définit un foncteur exact, plein et fidèle de la catégorie des $A$-module vers la catégorie des $\Oo_X$-module. De plus il commute aux sommes directes et au produit tensoriel.
+\end{prop}
 
-Soit $X=\spec A$ un schéma affine, et $B$ une $A$-algèbre. C'est en particulier un $A$-module, et on remarque que $\widetilde{B}$ est naturellement munit de faisceau d'algèbres dans le sens où pour tout ouvert $U\subset X$, l'anneau $\widetilde{B}(U)$ est naturellement une $\Oo_X(U)$-algèbre. Cela mène à la définition suivante.
+
+\begin{prop}\label{FQCProp2}
+Soit $\Ff$ un faisceau quasi-cohérent sur un schéma $X$. On suppose $X$ noetherien, ou quasi-compact et séparé. Alors pour tout $f\in \Oo(X)$, le morphisme canonique
+\begin{center}
+$\Ff(X)_f=\Ff(X)\otimes_{\Oo(X)}\Oo(X)_f\rightarrow \Ff(X_f)$
+\end{center}
+est un isomorphisme.
+\end{prop}
+
+\begin{thm}\label{FQCThm}
+Soit $\Ff$ un faisceau un $\Oo_X$-module sur un schéma $X$. Alors $\Ff$ est quasi-cohérent si et seulement si pour tout ouvert affine $U\subset X$, on a $\Ff(U)^{\widetilde{}}\simeq\Ff_{|U}$.
+
+En particulier, si $X\simeq \spec A$ est affine, alors les foncteurs $M\mapsto \widetilde{M}$ et $\Gamma(X,.)$ réalisent une équivalence de catégories entre la catégorie des $A$-module et la catégorie des faisceaux quasi-cohérents sur $X$.
+\end{thm}
+
+\begin{prop}
+Soit $\Ff$ un faisceau quasi-cohérent sur un schéma noetherien $X$. Alors $\Ff$ est cohérent si et seulement si pour tout ouvert affine $U\subset X$, le module $\Ff(U)$ est de type fini. 
+\end{prop}
+
+\begin{prop}\label{FQCProps3}
+Soit $X$ un schéma, alors on a les propriétés suivantes
+\begin{enumerate}
+\item Une somme directe de faisceaux quasi-cohérents définit un faisceau quasi-cohérent. Si $X$ est notherien, une somme directe finie de faisceaux cohérents définit un faisceau cohérent.
+\item Soit $\Ff$ et $\Gg$ des faisceaux quasi-cohérents sur $X$, alors $\Ff\otimes \Gg$ est quasi-cohérent. Si $X$ est noetherien et $\Ff,\Gg$ cohérents, alors $\Ff\otimes_{\Oo_X} \Gg$ est cohérent. Enfin, si $X$ est affine, alors $(\Ff\otimes_{\Oo_X}\Gg)(U)=\Ff(U)\otimes_{\Oo(U)}\Gg(U)$
+\item Soit $f:\Ff\rightarrow \Gg$ un morphisme de faisceaux quasi-cohérents. Alors $\Ker f$, $\Im f$ et $\Coker f$ sont quasi-cohérents. Si $X$ est noetherien, et $\Ff, \Gg$ cohérents, alors $\Ker f$, $\Im f$ et $\Coker f$ sont cohérents.
+\item Soit $f:X\rightarrow Y$ un morphisme de schémas, et $\Gg$ un $\Oo_Y$-module quasi-cohérent. Soit $U$ un ouvert affine de $X$ tel que $f(U)$ est contenu dans un ouvert affine $V$ de $Y$. Alors
+\begin{center}
+$f^*\Gg_{|U}\simeq(\Gg(V)\otimes_{\Oo_Y(V)}\Oo_X(U))^{\widetilde{}}$
+\end{center}
+en particulier, $f^*\Gg$ est quasi-cohérent sur $X$. Si $X$ est noetherien et $\Gg$ cohérent, alors $f^*\Gg$ est cohérent.
+\item Soit $\Ff$ quasi-cohérent sur $X$. Si $X$ est noetherien, ou si $f$ est séparé et quasi-compact, alors $f_*\Ff$ est quasi-cohérent sur $Y$.
+\end{enumerate}
+\end{prop}
+
+\subsection{Spectre relatif d'une $\Oo_X$-algèbre}
+
+Soit $X=\spec A$ un schéma affine, et $B$ une $A$-algèbre. Alors $Y:=\spec B$ est naturellement un schéma affine sur $X$. De plus, $\Oo_Y$ est un faisceau d'algèbres dans le sens où pour tout ouvert $U\subset X$, l'anneau $\Oo_Y(U)$ est naturellement une $\Oo_X(U)$-algèbre. En particulier, $\Oo_Y$ est un $\Oo_X$-module quasi-cohérent, car il s'agit de $\widetilde{B}$.
 
 \begin{defn}[$\Oo_X$-algèbre]
 Soit $X$ un schéma. Une $\Oo_X$-algèbre est un faisceau d'anneaux $\Ss$ sur $X$ muni d'un morphisme $\Oo_X\rightarrow \Ss$. On dit que $\Ss$ est quasi-cohérente si elle l'est en tant que $\Oo_X$-module. On dit qu'elle est localement de type fini si tout point $x\in X$ admet un voisinage ouvert $U$ tel que $\Ss(U)$ soit de type fini en tant que $\Oo_X(U)$-algèbre.
 \end{defn}
 
-On introduit ci-dessous la version relative du spectre d'un anneau. Cette construction nous sera très utile par la suite.
+On introduit ci-dessous la version relative du spectre d'un anneau. On se donne un schéma de base $X$ que l'on suppose séparé pour les applications que l'on a en vue, et une $\Oo_X$-algèbre $\Ss$. A partir de ces données, on souhaite construite un schéma $\spec_X S$ sur $X$ dont le morphisme structural est affine. Cette construction nous sera très utile par la suite.
 
 \begin{cons}[Spectre relatif]	\label{relspec}
-Soit $X$ un schéma séparé, $\Ss$ une $\Oo_X$-algèbre quasi-cohérente, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Il existe un schéma $\spec_X \Ss$ construit par recollement des schémas affines $\spec(\Ss(U_i))$, unique à isomorphisme canonique près. Ce schéma est séparé sur $X$ via le recollement des morphismes $\spec(\Ss(U_i))\rightarrow U_i$ donnés par la structure d'algèbre. De plus, le morphisme $p$ est affine est on a l'égalité de faisceaux
+Soit $X$ un schéma séparé, $\Ss$ une $\Oo_X$-algèbre quasi-cohérente, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Il existe un schéma $\spec_X \Ss$ construit par recollement des schémas affines $\spec(\Ss(U_i))$, unique à isomorphisme canonique près. Ce schéma est séparé sur $X$ via le recollement des morphismes $\spec(\Ss(U_i))\rightarrow U_i$ donnés par la structure d'algèbre. De plus, le morphisme structural $p$ est affine est on a l'égalité de faisceaux
 $$p_*(\Oo_{\spec_X\Ss})=\Ss$$
-Enfin, si $X$ est une variété et que $\Ss$ est faisceau d'algèbres réduites localement de type fini, alors $\spec_X \Ss$ est une variété.
+Enfin, si $X$ est une variété et que $\Ss$ est faisceau d'algèbres réduites, localement de type fini, alors $\spec_X \Ss$ est une variété.
 \end{cons}
 \begin{proof}
 On note $U_{ij}:=U_i\cap U_j$, $A_i:=\Ss(U_i)$ et $A_{ij}:=\Ss(U_{ij})$. Les données donnent naturellement un diagramme commutatif
@@ -31,11 +79,25 @@ On note $U_{ij}:=U_i\cap U_j$, $A_i:=\Ss(U_i)$ et $A_{ij}:=\Ss(U_{ij})$. Les don
 	\end{tikzcd}\\
 	\end{center}
 	
-On a $\Ss_{|U_{ij}}=\iota^*(\Ss_{|U_i})$ donc $\widetilde{A_{ij}}=\iota^*(\widetilde{A_i})=\widetilde{R_{ij}\otimes_{R_i}A_i}$, où $R_i:=\Oo_X(U_i)$ et $R_{ij}:=\Oo_X(U_{ij})$, ce qui donne $A_{ij}\simeq R_{ij}\otimes_{R_i}A_i$, puis $\widetilde{X}_{ij}\simeq U_{ij}\times_{U_i}\widetilde{X}_i$. Cela prouve que $\phi_i$ est une immersion ouverte. On a de même une immersion ouverte $\phi_j:\widetilde{X}_{ij}\rightarrow \widetilde{X}_j$. Les $\phi_{ij}:=\phi_j\phi_i^{-1}$ vérifient bient les conditions de recollement de \ref{gluevar}. On a donc un schéma $\widetilde{X}$ sur $X$ car les $p_i$ se recollent en un morphisme $p:\widetilde{X}\rightarrow X$ qui est affine par construction. Ce morphisme est séparé d'après \ref{sepCritere}. La dernière assertion est claire par définition.
+On a $\Ss_{|U_{ij}}=\iota^*(\Ss_{|U_i})$ donc $\widetilde{A_{ij}}=\iota^*(\widetilde{A_i})=\widetilde{A_i \otimes_{R_i}R_{ij}}$ d'après \ref{FQCProps3} $4$, où $R_i:=\Oo_X(U_i)$ et $R_{ij}:=\Oo_X(U_{ij})$, ce qui donne $A_{ij}\simeq A_i\otimes_{R_i}R_{ij}$ d'après \ref{FQCThm}, puis $\widetilde{X}_{ij}\simeq U_{ij}\times_{U_i}\widetilde{X}_i$. Cela prouve que $\phi_i$ est une immersion ouverte. On a de même une immersion ouverte $\phi_j:\widetilde{X}_{ij}\rightarrow \widetilde{X}_j$. Les $\phi_{ij}:=\phi_j\phi_i^{-1}$ vérifient bient les conditions de recollement de \ref{gluevar}. On a donc un schéma $\widetilde{X}$ sur $X$ car les $p_i$ se recollent en un morphisme $p:\widetilde{X}\rightarrow X$ qui est affine par construction. Ce morphisme est séparé d'après \ref{sepCritere}. La dernière assertion est claire par définition.
 \end{proof}
 
 
 \subsection{Faisceaux quasi-cohérents sur une variété projective}
+
+\label{FQCProj}
+
+Soit $X:=\proj A$ une variété projective, $A$ est donc une algèbre affine $\NN$-graduée (\ref{ProjConstruction}). Soit $M$ un $A$-module $\ZZ$-gradué. On définit un $\Oo_X$-module $\widetilde{M}$ en posant $\widetilde{M}(X_f):=M_{(f)}:=(M_f)_0$ pour tout ouvert principal $X_f$, avec $f\in A$ homogène. C'est un faisceau quasi-cohérent car $(\widetilde{M})_{|X_f}=\widetilde{M_{(f)}}$, où $M_{(f)}$ est un module sur $A_{(f)}=\Oo(X_f)$. Cette construction définit un foncteur exact de la catégorie des $A$-modules $\ZZ$-gradués vers la catégorie des faisceaux quasi-cohérents sur $X$, qui commute au produit tensoriel.
+
+Pour tout $n\in \ZZ$, on note $\Oo_X(n)$ le faisceau quasi-cohérent associé au $A$-module décalé $A(n)$. Plus généralement, étant donné un $\Oo_X$-module quasi-cohérent $\Ff$, on définit le faisceau décalé $\Ff(n):=\Ff\otimes_{\Oo_X}\Oo_X(n)$, c'est un faisceau quasi-cohérent. L'opération tilde commute au décalage, et on a $\Oo_X(n)=i^*(\Oo_{\PP_k^n})$, où $i$ est l'inclusion de $X$ dans un espace projectif. On pose 
+\begin{center}
+$\Gamma_*(\Ff):=\bigoplus_{d=-\infty}^{+\infty}\Gamma(X,\Ff(d))$
+\end{center}
+C'est naturellement un $A$-module $\ZZ$-gradué. En effet, tout élément homogène $f\in A_d$ définit une section globale de $\Oo_X(d)$ pour $d\in \ZZ$, puis pour tout $t\in \Gamma(X,\Ff(n)),\, n\in\ZZ$, on pose $ft=s\otimes_{\Oo(X)} t\in \Gamma(X, \Ff(n+d))$. Comme $A$ est engendré par des éléments homogènes de degré $1$, on a un isomorphisme naturel 
+\begin{center}
+$\Gamma_X(\Ff)^{\widetilde{}}\simeq \Ff$ (\cite{Hartshorne} II.5.15)\end{center}
+
+Si $X=\PP_n^k$, c'est à dire $A=k[x_0,....,x_n]$ on peut voir que l'on a un isomorphisme de $k$-algèbres graduées $\Gamma_*(\Oo_{\PP_k^n})\simeq k[x_0,...,x_n]$ (\cite{Hartshorne} II.5.13). En revanche on a pas général $\Gamma_*(\Oo_X)=A$ pour une algèbre affine $\NN$-graduée $A$ quelconque.
 
 \subsection{Cohomologie des faisceaux et applications}
 
@@ -43,7 +105,7 @@ On a $\Ss_{|U_{ij}}=\iota^*(\Ss_{|U_i})$ donc $\widetilde{A_{ij}}=\iota^*(\widet
 
 \noindent On rappelle sans démonstrations quelques définitions et résultats de base, l'objectif étant de définir les groupes de cohomologie d'un faisceau sur un schéma relatifs au foncteur sections globales. La référence principale est \cite{Hartshorne} chap III.\\
 
-Soit $X$ un schéma, on considère la catégorie $\Aa b(X)$ des faisceaux de groupes abéliens sur $X$, et la catégorie $\Mm od(X)$ des $\Oo_X$-modules. Soit $A^.$ un \textit{complexe} dans $\Aa b(X)$, c'est à dire une famille d'objets $(A^i)_{i\geq 0}$ et des morphismes $d^i:A^i\rightarrow A^{i+1}$ tels que $d^{i+1}d^i=0$ pour tout $i\geq 0$. Un morphisme de complexes $f:A^.\rightarrow B^.$ est une famille de morphismes $f^i:A^i\rightarrow B^i$ qui commutent avec les applications $d^i$. Le $i^e$ groupe de cohomologie $h^i(A^.)$ du complexe $A^.$ est le groupe $\ker d^i/\Im d^{i-1}$. Soit $0\rightarrow A^.\rightarrow B^. \rightarrow C^. \rightarrow 0$ une suite exacte courte de complexes, on obtient grâce au lemme du serpent (\cite{atiyahmacdo} 2.10) des morphismes $\delta ^i:h^i(C^.)\rightarrow h^{i+1}(A^.) $ dits de connexion, donnant une suite exacte longue:
+Soit $X$ un schéma, on considère la catégorie $\Aa b(X)$ des faisceaux de groupes abéliens sur $X$, et la catégorie $\Mm od(X)$ des $\Oo_X$-modules. Soit $A^.$ un \textit{complexe} dans $\Aa b(X)$, c'est à dire une famille d'objets $(A^i)_{i\geq 0}$ et des morphismes $d^i:A^i\rightarrow A^{i+1}$ tels que $d^{i+1}d^i=0$ pour tout $i\geq 0$. Un morphisme de complexes $f:A^.\rightarrow B^.$ est une famille de morphismes $f^i:A^i\rightarrow B^i$ qui commutent avec les applications $d^i$. Le $i^e$ groupe de cohomologie $h^i(A^.)$ du complexe $A^.$ est le groupe $\Ker d^i/\Im d^{i-1}$. Soit $0\rightarrow A^.\rightarrow B^. \rightarrow C^. \rightarrow 0$ une suite exacte courte de complexes, on obtient grâce au lemme du serpent (\cite{atiyahmacdo} 2.10) des morphismes $\delta ^i:h^i(C^.)\rightarrow h^{i+1}(A^.) $ dits de connexion, donnant une suite exacte longue:
 \begin{equation}\label{eq:longSES}
 ...\rightarrow h^i(A^.) \rightarrow h^i(B^.) \rightarrow h^i(C^.) \xrightarrow{\delta ^i} h^{i+1}(A^.) \rightarrow ...
 \end{equation}
@@ -80,7 +142,7 @@ Soit $X$ un schéma, $\Ff\in \Aa b(X)$, et $Z$ un fermé de $X$. Le support $\su
 \begin{ex}\label{cohomsupportaffineex}
 Soit $X=\spec A$ un schéma affine noetherien, $M$ un $A$-module et $\Ff=\widetilde{M}$, $\mathfrak{a}$ un idéal et $Z=\Vv(\mathfrak{a})$. Soit $m\in M=\Gamma(X,\Ff)$, alors $\supp m=\Vv(\ann m)$, où $\ann M=\lbrace a\in A\mid am=0\rbrace$ est l'annulateur de $m$. En effet, soit $p\in X$, alors $m_p\neq 0\iff \forall a\in A\setminus p, fm\neq 0\iff \ann(m)\subset p$.
 
-On définit un sous-module $\Gamma_\mathfrak{a}(M)$ de $M$ par $\Gamma_\mathfrak{a}(M):=\lbrace m\in M\mid \mathfrak{a}^nm=0 \text{ pour un } n>0 \rbrace$. Alors on a $\Gamma_\mathfrak{a}(M)^{\widetilde{}} = \Hh ^0 _Z(\Ff)$. En effet, tout d'abord $\Hh^0 _Z(\Ff)$ est quasi-cohérent comme noyau d'un morphisme entre faisceaux quasi-cohérents, cela d'après la suite exacte ci-dessus et \ref{j* qch}. En utilisant \ref{}, il reste donc à montrer que $\Gamma_\mathfrak{a}(M)\simeq\Gamma_Z(X,\Ff)$ en tant que $A$-modules. Soit $m\in\Gamma_Z(X,\Ff)$, on a par définition $\supp m=\Vv(\ann m)\subset \Vv(\mathfrak{a})$, d'où $\mathfrak{a}\subset \sqrt{\ann m}$. Or, $\mathfrak{a}$ est de type fini car $A$ est noetherien, on en conclut que $m\in \Gamma_\mathfrak{a}(M)$. En effet, si on a $k$ générateurs $x_1,...,x_k$ de $\mathfrak{a}$, on peut trouver un exposant commun $n$ tel que $x^n_i$ annule $m$ pour tout $i$. Alors on a par exemple $\mathfrak{a}^{n^k}m=0$. Réciproquement, si $m\in \Gamma_\mathfrak{a}(M)$, alors $\mathfrak{a}^n\subset \ann m$ pour un $n>0$, ce qui donne $\supp m \subset\Vv(\mathfrak{a}^n)=\Vv(\mathfrak{a})$, puis $m\in \Gamma_Z(X,\Ff)$. Finalement on a bien $\Gamma_\mathfrak{a}(M)=\Gamma_Z(X,\Ff)$.
+On définit un sous-module $\Gamma_\mathfrak{a}(M)$ de $M$ par $\Gamma_\mathfrak{a}(M):=\lbrace m\in M\mid \mathfrak{a}^nm=0 \text{ pour un } n>0 \rbrace$. Alors on a $\Gamma_\mathfrak{a}(M)^{\widetilde{}} = \Hh ^0 _Z(\Ff)$. En effet, tout d'abord $\Hh^0 _Z(\Ff)$ est quasi-cohérent comme noyau d'un morphisme entre faisceaux quasi-cohérents, cela d'après la suite exacte ci-dessus et \ref{FQCProps3} $5$ et $3$. En utilisant \ref{FQCThm}, il reste donc à montrer que $\Gamma_\mathfrak{a}(M)\simeq\Gamma_Z(X,\Ff)$ en tant que $A$-modules. Soit $m\in\Gamma_Z(X,\Ff)$, on a par définition $\supp m=\Vv(\ann m)\subset \Vv(\mathfrak{a})$, d'où $\mathfrak{a}\subset \sqrt{\ann m}$. Or, $\mathfrak{a}$ est de type fini car $A$ est noetherien, on en conclut que $m\in \Gamma_\mathfrak{a}(M)$. En effet, si on a $k$ générateurs $x_1,...,x_k$ de $\mathfrak{a}$, on peut trouver un exposant commun $n$ tel que $x^n_i$ annule $m$ pour tout $i$. Alors on a par exemple $\mathfrak{a}^{n^k}m=0$. Réciproquement, si $m\in \Gamma_\mathfrak{a}(M)$, alors $\mathfrak{a}^n\subset \ann m$ pour un $n>0$, ce qui donne $\supp m \subset\Vv(\mathfrak{a}^n)=\Vv(\mathfrak{a})$, puis $m\in \Gamma_Z(X,\Ff)$. Finalement on a bien $\Gamma_\mathfrak{a}(M)=\Gamma_Z(X,\Ff)$.
 \end{ex}
 
 Il est facile de montrer que $\Gamma_Z(X, .)$ est un foncteur exact à gauche, on définit alors les groupes de cohomologie de $\Ff$ à support dans $Z$ comme ses foncteurs dérivés à droite, on les note $H_Z^i(X,\Ff)$. Si $\Ff$ est flasque, il est acyclique pour $\Gamma_Z(X, .)$, et de plus, en appliquant le foncteur sections globales $\Gamma(X,.)$ à la suite exacte \ref{eq:ESSupport}, on obtient la suite exacte courte ci-dessous:
@@ -96,7 +158,7 @@ Les techniques utilisées pour obtenir la suite exacte longue \ref{eq:longSES} s
 \end{equation}
 
 
-Remarquons enfin qu'avec les notations de l'exemple \ref{cohomsupportaffineex}, on a $\Gamma_Z(X, .)\circ\, \widetilde{}=\Gamma_\mathfrak{a}(.)$ en tant que foncteurs $A$-$\Mm od\rightarrow A$-$\Mm od$. On en déduit que le foncteur $\Gamma_\mathfrak{a}(.)$ est exact à gauche et que ses foncteurs dérivés à droite, notés $H_\mathfrak{a}^i$, sont égaux aux foncteurs $H_Z^i(X,.)\circ \widetilde{}$ . En effet, soit $\Ff \in \Aa b(X)$ et $M:=\Gamma(X,\Ff)$. Comme le tilde réalise une équivalence de catégories (voir \ref{}), il envoie une résolution injective de $M$ sur une résolution injective de $\Ff\simeq \widetilde{M}$. En utilisant cette dernière pour calculer les groupes de cohomologie de $\Ff$ à support dans $Z$, on obtient le résultat par l'égalité des foncteurs $\Gamma_Z(X, .)\circ\, \widetilde{}=\Gamma_\mathfrak{a}(.)$.
+Remarquons enfin qu'avec les notations de l'exemple \ref{cohomsupportaffineex}, on a $\Gamma_Z(X, .)\circ\, \widetilde{}=\Gamma_\mathfrak{a}(.)$ en tant que foncteurs $A$-$\Mm od\rightarrow A$-$\Mm od$. On en déduit que le foncteur $\Gamma_\mathfrak{a}(.)$ est exact à gauche et que ses foncteurs dérivés à droite, notés $H_\mathfrak{a}^i$, sont égaux aux foncteurs $H_Z^i(X,.)\circ \widetilde{}$ . En effet, soit $\Ff \in \Aa b(X)$ et $M:=\Gamma(X,\Ff)$. Comme le tilde réalise une équivalence de catégories (\ref{FQCThm}), il envoie une résolution injective de $M$ sur une résolution injective de $\Ff\simeq \widetilde{M}$. En utilisant cette dernière pour calculer les groupes de cohomologie de $\Ff$ à support dans $Z$, on obtient le résultat par l'égalité des foncteurs $\Gamma_Z(X, .)\circ\, \widetilde{}=\Gamma_\mathfrak{a}(.)$.
 
 \subsubsection{Cohomologie sur un schéma affine}
 
@@ -137,7 +199,7 @@ Pour montrer que $\widetilde{I}$ est flasque, il est suffisant de montrer que $\
   		\Gamma_Z(X,\widetilde{I}) \arrow[u, hook, ""] \arrow[r, ""] & \Gamma_Z(U,\widetilde{I}) \arrow[u, hook, ""] &
 	\end{tikzcd}\\
 	\end{center}
-Soit une section $s\in\Gamma(U,\widetilde{I})$, et $s'$ son image dans $\Gamma(X_f,\widetilde{I})$. D'après le lemme précédent et \ref{}, $s'$ admet un antécédent $t\in \Gamma(X,\widetilde{I})$. On note $t'$ la restriction de $t$ à $U$. Alors $s-t'$ se restreint en la section nulle sur $X_f$, et a donc support dans $Z$. Si on peut trouver un antécédent $u$ de $s-t'$ dans $\Gamma_Z(X,\widetilde{I})$, alors $t+u$ est antécédent de $s$ dans $\Gamma(X,\widetilde{I})$. On est donc ramenés à prouver la surjectivité de $\Gamma_Z(X,\widetilde{I})\rightarrow\Gamma_Z(U,\widetilde{I})$.
+Soit une section $s\in\Gamma(U,\widetilde{I})$, et $s'$ son image dans $\Gamma(X_f,\widetilde{I})$. D'après le lemme précédent et \ref{FQCProp2}, $s'$ admet un antécédent $t\in \Gamma(X,\widetilde{I})$. On note $t'$ la restriction de $t$ à $U$. Alors $s-t'$ se restreint en la section nulle sur $X_f$, et a donc support dans $Z$. Si on peut trouver un antécédent $u$ de $s-t'$ dans $\Gamma_Z(X,\widetilde{I})$, alors $t+u$ est antécédent de $s$ dans $\Gamma(X,\widetilde{I})$. On est donc ramenés à prouver la surjectivité de $\Gamma_Z(X,\widetilde{I})\rightarrow\Gamma_Z(U,\widetilde{I})$.
 
 Posons $J=\Gamma_Z(X,\widetilde{I})$, et $\mathfrak{a}=fA$. Alors d'après l'exemple \ref{cohomsupportaffineex}, on a $J=\Gamma_\mathfrak{a}(I)$. Puis d'après \ref{cohomAffLemme1}, $J$ est un $A$-module injectif. Enfin, le support de $\widetilde{J}$ est contenu dans $Y\cap Z$ qui est fermé propre de $Y$.  Toujours d'après l'exemple \ref{cohomsupportaffineex}, on a $\widetilde{J} = \Hh ^0 _Z(\Ff)$. On est donc ramené à montrer que $\widetilde{J}$ est flasque, ce qui termine la preuve.
 \end{proof}
@@ -147,7 +209,7 @@ Posons $J=\Gamma_Z(X,\widetilde{I})$, et $\mathfrak{a}=fA$. Alors d'après l'exe
 Soit $X=\spec A$ un schéma affine noetherien. Alors pour tout faisceau quasi-cohérent $\Ff$ sur $X$, et pour tout $i>0$, on a $H^i(X,\Ff)=0$. 
 \end{thm}
 \begin{proof}
-Soit $M=\Gamma(X,\Ff)$, et $M\rightarrow I^.$ une résolution injective de $M$. On obtient d'après \ref{} une résolution injective $\Ff\simeq \widetilde{M}\rightarrow \widetilde{I}^.$ de $\Ff$ dans la catégorie des $\Oo_X$-modules quasi-cohérents. Or cette résolution est flasque d'après \ref{cohomAffProp1}. Cela suffit à montrer le théorème car une résolution flasque de faisceau est acyclique, et peut être utiliser pour calculer la cohomologie.
+Soit $M=\Gamma(X,\Ff)$, et $M\rightarrow I^.$ une résolution injective de $M$. On obtient d'après \ref{FQCThm} une résolution injective $\Ff\simeq \widetilde{M}\rightarrow \widetilde{I}^.$ de $\Ff$ dans la catégorie des $\Oo_X$-modules quasi-cohérents. Or cette résolution est flasque d'après \ref{cohomAffProp1}. Cela suffit à montrer le théorème car une résolution flasque de faisceau est acyclique, et peut être utiliser pour calculer la cohomologie.
 \end{proof}
 
 \subsubsection{Une application}
@@ -357,7 +419,11 @@ Soit $X$ une variété normale et irréductible et $Z$ une sous-variété fermé
 \begin{enumerate}
 \item Cl$(X)\rightarrow$ Cl$(U)$ défini par $\sum_i n_iD_i\mapsto \sum_i n_i(D_i\cap U)$, avec $D_i\cap U = 0$ si $D_i\cap U=\emptyset $, est un morphisme de groupe surjectif.
 \item Si codim$(Z,X)\geq 2$, alors $\clg(X)\rightarrow \clg(U)$ est un isomorphisme.
-\item Soient $D_1,..., D_s$ les composantes irréductibles de $Z$ qui sont des diviseurs. Alors la suite ci-dessous exacte $$\bigoplus_{j=1}^s \ZZ D_j \xrightarrow{\pi} \clg(X) \xrightarrow{.\cap U} \clg(U) \rightarrow 0 $$
+\item Soient $D_1,..., D_s$ les composantes irréductibles de $Z$ qui sont des diviseurs. Alors la suite ci-dessous exacte
+\begin{center}
+ $0\rightarrow\Oo(X)^*\rightarrow \Oo(X\setminus \cup_{i=1}^sD_i)\rightarrow \bigoplus_{i=1}^s \ZZ D_i \xrightarrow{\pi} \clg(X) \xrightarrow{.\cap U} \clg(U) \rightarrow 0 $
+\end{center}
+
 \end{enumerate}
 \end{thm}
 \begin{proof}
@@ -401,10 +467,10 @@ Soit $X$ une variété affine normale et irréductible, $A:=k[X]$.
 \end{enumerate}
 \end{proof}
 
-On forme maintenant la somme directe des $\Oo_X(D)$ et on la munit d'un produit de la façon suivante: pour $f_1\in \Oo_X(D_1),\, f_2\in \Oo_X(D_2)$, on définit le produit de $f_1$ et $f_2$ comme l'élément $f_1f_2$ de $\Oo_X(D_1+D_2)$. On voit que cette algèbre est naturellement WDiv-graduée, avec pour chaque degré $D$ un contrôle prescrit quant au comportement des fonctions sur le support de $D$. Ceci mène à la définition suivante.
+On forme maintenant la somme directe $\Ss:=\bigoplus_{D\in \wdiv(X)}\Oo_X(D)$. C'est naturellement une $\Oo_X$-algèbre $\wdiv$-graduée. En effet, pour tout ouvert $U\subset X$, prenons des éléments $s\in\Gamma(U,\Oo_X(D_1))$, $t\in \Gamma(U,\Oo_X(D_2))$, et formons le produit $st$ dans $k(X)$. On a alors $\divi(st)_{|U}+D_{1|U}+D_{2|U}=\divi(s)_{|U}+D_{1|U}+\divi(t)_{|U}+D_{2|U}\geq 0$, donc $st$ définit bien un élément de $\Gamma(U,\Oo_X(D_1+D_2))$.
 
 \begin{defn}[Faisceau d'algèbres divisorielles]
-Soit $X$ une variété normale et irréductible. Le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est le faisceau de $\Oo_X$-algèbres $K$-graduées $$\bigoplus_{D\in K}S_D,\,\,\,\,\,\,\,\,\, S_D:=\Oo_X(D)$$ 
+Soit $X$ une variété normale et irréductible. Le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est le faisceau de $\Oo_X$-algèbres $K$-graduées $$\bigoplus_{D\in K}\Ss_D,\,\,\,\,\,\,\,\,\, \Ss_D:=\Oo_X(D)$$ 
 \end{defn}
 
 
@@ -417,7 +483,7 @@ Ainsi on voit que l'application $\phi_n:k[t_0,t_1]_n\rightarrow S_{nD}(\PP^1), f
 Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors $\Oo_X(D)$ est un $\Oo_X$-module cohérent. En particulier, le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est une $\Oo_X$-algèbre quasi-cohérente.
 \end{prop}
 \begin{proof}
-On peut supposer $X=\spec A$ affine car le problème est local.  Alors d'après \ref{quasicoaff}, $\Oo_X(D)\simeq \tilde{M}$ où $M=\Gamma(X,\Oo_X(D))$. Il s'agit donc de montrer que $M$ est un $A$-module de type fini. Mais d'après \ref{divaff}, on voit que $\Gamma(X,\Oo_X(D))$ est un idéal fractionnaire de $A$, il est donc isomorphe à un idéal de $A$ en tant $A$-module après multiplication par une certaine fonction rationnelle. Comme $A$ est noetherien cela conclut la preuve.
+On peut supposer $X=\spec A$ affine car le problème est local.  Alors d'après \ref{FQCThm}, $\Oo_X(D)\simeq \tilde{M}$ où $M=\Gamma(X,\Oo_X(D))$. Il s'agit donc de montrer que $M$ est un $A$-module de type fini. Mais d'après \ref{divaff}, on voit que $\Gamma(X,\Oo_X(D))$ est un idéal fractionnaire de $A$, il est donc isomorphe à un idéal de $A$ en tant $A$-module après multiplication par une certaine fonction rationnelle. Comme $A$ est noetherien cela conclut la preuve.
 \end{proof}
 
 \begin{prop}\label{isomorphismcodim2}
@@ -432,15 +498,16 @@ Encore une fois, on peut traiter le problème localement et supposer $X=\spec A$
 Sur des variétés plus générales, par exemple avec des singularités, les anneaux locaux associés aux diviseurs premiers ne sont plus en général des DVR. On a alors des difficultés pour définir par exemple le diviseur d'une fonction rationnelle. On a néanmoins la notion générale de diviseur de Cartier, qui dans le cadre des variétés normales irréductibles correspondra aux diviseur de Weil "localement principaux".
 
 \begin{defn}[Diviseur de Cartier]
-Soit $X$ une variété irréductible. Un diviseur de Cartier sur $X$ est une section globale du faisceau $k(X)^\times/\mathcal{O}_X^\times$. Ainsi un diviseur de Cartier est la donnée d'une famille $(U_i, f_i)_{i\in I}$ telle que pour tout $i$, $U_i$ est un ouvert de $X$, $(U_i)_{i\in I}$ est un recouvrement de $X$, $f_i\in k(X)^\times$, et pour tout $i,j \in I$, $f_if_j^{-1}\in \mathcal{O}_X^\times(U_i\cap U_j)$.\\
-Un diviseur de cartier est dit principal si il provient d'une section globale de $k(X)^\times$ c'est à dire d'une fonction rationnelle. Deux diviseurs de Cartier sont dits linéairement équivalents si ils sont égaux modulo le sous-groupe des diviseurs principaux. Le groupe quotient se note CaCl$(X)$.
+Soit $X$ une variété irréductible. Un diviseur de Cartier sur $X$ est une section globale du faisceau $k(X)^*/\mathcal{O}_X^*$. Ainsi un diviseur de Cartier est la donnée d'une famille $(U_i, f_i)_{i\in I}$ telle que pour tout $i$, $U_i$ est un ouvert de $X$, $(U_i)_{i\in I}$ est un recouvrement de $X$, $f_i\in k(X)^*$, et pour tout $i,j \in I$, $f_if_j^{-1}\in \mathcal{O}_X^*(U_i\cap U_j)$.
+
+Un diviseur de cartier est dit principal si il provient d'une section globale de $k(X)^*$ c'est à dire d'une fonction rationnelle. Deux diviseurs de Cartier sont dits linéairement équivalents si ils sont égaux modulo le sous-groupe des diviseurs principaux. Le groupe quotient se note CaCl$(X)$.
 \end{defn}
 
 
 
 
 
-Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang 1, c'est à dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)^\times$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceau inversible de $k(X)^\times$. Par cette correspondance, deux diviseurs sont linéairement équivalents si et seulement si les faisceaux inversibles sont isomorphes. On a ainsi définit une application injective CaCl$(X)\rightarrow$ Pic$(X)$ dont on voit facilement que c'est un morphisme de groupe. Comme $X$ est supposé irréductible, c'est un isomorphisme car tout faisceau inversible est isomorphe à un sous-faisceau inversible de $k(X)^\times$. En résumé on a le résultat suivant:
+Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang 1, c'est à dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)^*$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceau inversible de $k(X)^*$. Par cette correspondance, deux diviseurs sont linéairement équivalents si et seulement si les faisceaux inversibles sont isomorphes. On a ainsi définit une application injective CaCl$(X)\rightarrow$ Pic$(X)$ dont on voit facilement que c'est un morphisme de groupe. Comme $X$ est supposé irréductible, c'est un isomorphisme car tout faisceau inversible est isomorphe à un sous-faisceau inversible de $k(X)^*$. En résumé on a le résultat suivant:
 
 
 \begin{prop}\label{isopic}
@@ -448,7 +515,7 @@ Soit $X$ une variété irréductible. L'application $D\mapsto \mathcal{O}_X(D)$ 
 \end{prop}
 
 
-On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur premier $Y$, on choisit un indice $i\in I$ tel que $U_i\cap Y\neq \emptyset$ et on prend $v_Y(f_i)$ pour coefficient de $Y$. Cette somme est finie par la même preuve que \ref{noetherienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \Oo_X^\times(U_i\cap U_j)$ par définition, donc $v_Y(f_i)=v_Y(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir CaCl$(X)$ comme un sous-groupe de Cl$(X)$ (on vérifie que les diviseurs principaux se correspondent).
+On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur premier $Y$, on choisit un indice $i\in I$ tel que $U_i\cap Y\neq \emptyset$ et on prend $v_Y(f_i)$ pour coefficient de $Y$. Cette somme est finie par la même preuve que \ref{noetherienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \Oo_X^*(U_i\cap U_j)$ par définition, donc $v_Y(f_i)=v_Y(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir CaCl$(X)$ comme un sous-groupe de Cl$(X)$ (on vérifie que les diviseurs principaux se correspondent).
 
 Ce sous-groupe est propre en général (cf \cite{Hartshorne} 6.11.3). En revanche, si $X$ est lisse, tout diviseur de Weil est localement principal . En effet dans ce cas, les anneaux locaux sont factoriels, on obtient ainsi en tout point une équation locale d'un diviseur premier car un idéal premier de hauteur 1 d'un anneau factoriel est principal, ce qui permet de conclure.
 
@@ -471,20 +538,36 @@ $$
 \left\{
 \begin{matrix}
 \text{couples }(\mathcal{L}, s)\text{ constitués d'un faisceau}\\
-\text{inversible et d'une section globale}
+\text{inversible et d'une section globale non-nulle}
 \end{matrix}
 \right\}
 $$
 
 Considérons un diviseur de Cartier $D$ quelconque et $\Oo_X(D)$ le sous-faisceau inversible de $k(X)$ qui lui correspond. En faisant varier $s$ non-nulle dans les couples $(\Oo_X(D),s)$ tels que ci-dessus, on obtient tous les diviseurs de Cartier effectifs linéairement équivalent à $D$. En effet, $\divi_D(s)$ est par définition un diviseur effectif linéairement équivalent à $D$. Réciproquement un diviseur effectif linéairement équivalent à $D$ s'écrit $D+\divi(s)\geq 0$ où $s$ est donc une section globale $s$ de $\Oo_X(D)$.
 
+On peut étendre la correspondance précédente aux diviseurs de Weil effectifs. En effet $\wdiv(X)\simeq\wdiv(X_{reg})$ et tout les diviseurs sont de Cartier sur $X_{reg}$. Partant d'un diviseur effectif $D\in \wdiv(X)$,
+
 \subsection{L'espace projectif $\PP_k^n$}
 
 \subsubsection{Faisceaux inversibles sur $\PP_k^n$}
 
+\begin{prop}
+Soit $X:=\PP_k^n=\proj k[x_0,...,x_n]$. Pour tout diviseur $D=\sum n_i D_i\in\wdiv()$, on définit le degré de $D$ par $\deg D:=\sum n_i\deg D_i$, où $\deg D_i$ est le degré de l'équation définissant $D_i$ dans une carte affine standard qui intersecte $D_i$. Soit $H$ l'hyperplan $x_0=0$. Alors
+\begin{enumerate}
+\item Si $D$ est un diviseur de degré $d\in \ZZ$, alors $D\sim dH$.
+\item Pour tout $f\in k(X)^*$, on a $\deg\divi(f)=0$.
+\item Le degré définit un isomorphisme $\clg(X)\simeq \ZZ$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\cite{Hartshorne} II.6.4
+\end{proof}
+
+La proposition précédente et \ref{isopic} nous dit que $\pic(X)$ est engendré librement par $\Oo_X(H)$ pour tout hyperplan $H$ de $\PP_n^k$. De plus, comme $k[x_0,...,x_n]$ est engendré par des éléments homogènes de degré $1$, le faisceau $\Oo_X(l)$ est inversible pour tout $l\in \ZZ$, et on a $\Oo_X(m)\otimes_{\Oo_X}\Oo_X(l)\simeq \Oo_X(m+l)$, pour tout $m,l\in \ZZ$. Comme $\Oo_X(1)$ est isomorphe à $\Oo_X(H)$, on en déduit que tout faisceau inversible sur $\PP_k^n$ est isomorphe à un faisceau $\Oo_X(l)$, pour un entier $l\in \ZZ$.
+
 \subsubsection{Morphismes vers l'espace projectif}
 \label{morphismeproj}
-Soit $X$ une variété munie d'un morphisme $(f,f^\sharp):X\rightarrow \PP^n_k$, où $\PP^n_k=$Proj$k[x_0,...,x_n]$. On considère le faisceau tordu de Serre $\Oo(1)$ sur $\PP^n_k$. C'est un faisceau inversible engendré par les sections globales $x_0,...,x_n$. $f^*\Oo(1)$ est également inversible et on a un morphisme canonique de $\Oo_{\PP^n_k}$-module $\alpha:\Oo(1)\rightarrow f_*f^*\Oo(1)$ où la structure de $\Oo_{\PP^n_k}$-module sur $f_*f^*\Oo(1)$ est donnée par $\lambda.t=f^\sharp(\lambda)t$ pour tout ouvert $V\subset \PP^n_k$, $\lambda\in \Oo_{\PP^n_k}(V)$, $t\in f_*f^*\Oo(1)(V)$. On définit des sections globales $f^*(x_0):=s_0:=\alpha(\PP^n_k)(x_0),...,f^*(x_n):=s_n:=\alpha(\PP^n_k)(x_n)$ de $f^*\Oo(1)$ dont on voit facilement qu'elles engendrent $f^*\Oo(1)$.\\
+Soit $X$ une variété munie d'un morphisme $(f,f^\sharp):X\rightarrow \PP^n_k$, où $\PP^n_k=$Proj$k[x_0,...,x_n]$. On considère le faisceau décalé $\Oo(1)$ sur $\PP^n_k$. C'est un faisceau inversible engendré par les sections globales $x_0,...,x_n$. $f^*\Oo(1)$ est également inversible et on a un morphisme canonique de $\Oo_{\PP^n_k}$-module $\alpha:\Oo(1)\rightarrow f_*f^*\Oo(1)$ où la structure de $\Oo_{\PP^n_k}$-module sur $f_*f^*\Oo(1)$ est donnée par $\lambda.t=f^\sharp(\lambda)t$ pour tout ouvert $V\subset \PP^n_k$, $\lambda\in \Oo_{\PP^n_k}(V)$, $t\in f_*f^*\Oo(1)(V)$. On définit des sections globales $f^*(x_0):=s_0:=\alpha(\PP^n_k)(x_0),...,f^*(x_n):=s_n:=\alpha(\PP^n_k)(x_n)$ de $f^*\Oo(1)$ dont on voit facilement qu'elles engendrent $f^*\Oo(1)$.\\
 Considérons un faisceau inversible $\Ll$ sur une variété $Y$, une section globale $l$, et un morphisme $(g,g^\sharp):X\rightarrow Y$. On définit l'ouvert 
 $$Y_l:=\lbrace y\in Y\mid \Oo_{Y,y}l_y=\Ll_y\rbrace=\lbrace y\in Y\mid l_y\notin m_y\Ll_y\rbrace$$
 C'est tout simplement le complémentaire du support du diviseur des zéros associé au couple $(\Ll,l)$. Si $\Ll=\Oo_Y$ il s'agit de l'ouvert principal $Y_l$, et on a de plus $g^{-1}(Y_l)=X_{g^\sharp(l)}=X_{g^*(l)}$ car $g^*\Oo_Y=\Oo_X$ et $\alpha=g^\sharp$ dans ce cas. Revenant dans le cas général, on voit facilement que $g^*\Ll$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\Ll$, on voit d'après ce qui précède que $g^{-1}(Y_l)=X_{g^*(l)}$. D'autre part, si $l_1,...,l_n$ sont des sections globales qui engendrent $\Ll$, on voit que $(Y_{l_i})$ est un recouvrement de $Y$ qui trivialise $\Ll$. En effet, sur chaque $Y_{l_i}$, on a un isomorphisme $\Oo_{Y|Y_{l_i}}\rightarrow \Ll_{Y|Y_{l_i}}$, $\lambda \mapsto \lambda l_i$, et par hypothèse, l'intersection des complémentaires des $Y_{l_i}$ est vide. Enfin, on note sans ambiguïté $l_j/l_i$ l'unique élément de $\Oo_{Y|Y_{l_i}}(Y_l)$ tel que $l_j/l_i.l_i=l_j$ par l'isomorphisme précédent.\\
@@ -534,7 +617,7 @@ est surjectif.
 \begin{proof}
 Il suffit de montrer que $f\in \Oo(X\times Y)^*$ peut s'écrire $f=gh$ pour $g\in k(X)$ et $h\in k(Y)$. En effet, on considère un point $y\in Y$ où $h$ est régulière. D'autre part on constate que $f_y:x\mapsto f(x,y)$ est régulière sur $X$, ce qui se voit sur les ouverts affines $U\times V$. En effet $\Oo(U\times V)$ est alors le coproduit des algèbres de coordonnées $\Oo(U)$ et $\Oo(V)$, c'est à dire leur produit tensoriel. De plus, $f_y$ ne s'annule pas donc est inversible dans $\Oo(X)$. Cela prouve que $g$ est en fait régulière, et $h$ aussi par le même raisonnement.
 
-On peut ainsi remplacer $X$ et $Y$ par deux ouverts affines lisses. Le produit  $X\times Y$ est encore affine et lisse d'après \ref{}. D'après \ref{}, on peut supposer que $X$ est un ouvert d'une variété projective normale $\bar{X}$, et on note $D_1,...,D_r$ les diviseurs premiers correspondants aux composantes irréductibles de $\bar{X}\setminus X$. Soit $f\in \Oo(X\times Y)^*$ que l'on regarde comme une fonction rationnelle sur $\bar{X}\times Y$, qui est normal d'après \ref{}. Le diviseur associé à $f$ est à support dans $(\bar{X}\setminus X)\times Y$, on a donc $\divi(f)=\sum_{i=1}^rn_iD_i\times Y$ pour des entiers $n_1,...,n_r$. Soit $\pi_i$ une uniformisante de l'anneau de valuation discrète $\Oo_{\bar{X},D_i}$. Il existe $x_0\in D_i$ tel que $\pi_i$ définisse une équation locale de $D_i$. Soit $y_0\in Y$, on peut écrire une équation locale de $D_i\times Y$ en $(x_0,y_0)$ s'écrit $f_i(x)u(x,y)$ avec $u$ inversible sur un voisinage de $(x_0,y_0)$. Ainsi il existe un ouvert non-vide $V\subset Y$ tel que pour tout $y\in V$, on ait $\divi(f_y)=\sum_{i=1}^rn_iD_i$. Choisissons $y_0\in V$, alors $\divi(f_yf_{y_0}^{-1})=0$ donc $f_yf_{y_0}^{-1}$ définit une fonction régulière sur $\bar{X}$. Comme $\bar{X}$ est complète (voir \ref{}), $f_yf_{y_0}^{-1}$ est en fait constante. Ainsi $h:=f/f_{y_0}$ définit une fonction rationnelle sur $Y$ telle que $f=f_{y_0}h$ comme désiré.
+On peut ainsi remplacer $X$ et $Y$ par deux ouverts affines lisses. Le produit  $X\times Y$ est encore affine et lisse. D'après \ref{}, on peut supposer que $X$ est un ouvert d'une variété projective normale $\bar{X}$, et on note $D_1,...,D_r$ les diviseurs premiers correspondants aux composantes irréductibles de $\bar{X}\setminus X$. Soit $f\in \Oo(X\times Y)^*$ que l'on regarde comme une fonction rationnelle sur $\bar{X}\times Y$, qui est normal d'après \ref{tensorproductNormalDomain}. Le diviseur associé à $f$ est à support dans $(\bar{X}\setminus X)\times Y$, on a donc $\divi(f)=\sum_{i=1}^rn_iD_i\times Y$ pour des entiers $n_1,...,n_r$. Soit $\pi_i$ une uniformisante de l'anneau de valuation discrète $\Oo_{\bar{X},D_i}$. Il existe $x_0\in D_i$ tel que $\pi_i$ définisse une équation locale de $D_i$. Soit $y_0\in Y$, on peut écrire une équation locale de $D_i\times Y$ en $(x_0,y_0)$ s'écrit $f_i(x)u(x,y)$ avec $u$ inversible sur un voisinage de $(x_0,y_0)$. Ainsi il existe un ouvert non-vide $V\subset Y$ tel que pour tout $y\in V$, on ait $\divi(f_y)=\sum_{i=1}^rn_iD_i$. Choisissons $y_0\in V$, alors $\divi(f_yf_{y_0}^{-1})=0$ donc $f_yf_{y_0}^{-1}$ définit une fonction régulière sur $\bar{X}$. Comme $\bar{X}$ est complète (voir \ref{}), $f_yf_{y_0}^{-1}$ est en fait constante. Ainsi $h:=f/f_{y_0}$ définit une fonction rationnelle sur $Y$ telle que $f=f_{y_0}h$ comme désiré.
 \end{proof}
 
 \noindent Soit $X,\,Y$ des variétés irréductibles. Considérons la suite exacte courte
