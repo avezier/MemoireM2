@@ -2,7 +2,7 @@
 
 \section{Algèbre commutative}
 
-On collecte dans cette partie des définitions et résultats d'algèbre commutative utilisés dans la suite. Soit $A$ un anneau, $\mathfrak{p}$ un idéal premier de $A$, et $f\in A$ un élément. On note $A_\mathfrak{p}$ la localisation de $A$ en la partie multiplicative $A\setminus \mathfrak{p}$, et $A_f$ la localisation de $A$ en la partie multiplicative $\lbrace 1, f, f^2, ....\rbrace$.
+On collecte dans cette partie des définitions et résultats d'algèbre commutative utilisés dans la suite. Notre principale référence est \cite{Matsumura}. Soit $A$ un anneau, $\mathfrak{p}$ un idéal premier de $A$, et $f\in A$ un élément. On note $A_\mathfrak{p}$ la localisation de $A$ en la partie multiplicative $A\setminus \mathfrak{p}$, et $A_f$ la localisation de $A$ en la partie multiplicative $\lbrace 1, f, f^2, ....\rbrace$.
 
 
 \subsection{Décomposition primaire des modules noetheriens}
@@ -135,7 +135,7 @@ Soit $k[x_1,...,x_n]$ un anneau de polynômes, et $f\in A$ un élément premier.
 Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de hauteur $1$. En remplaçant $A$ par sa localisation en $\mathfrak{p}$, on peut supposer $A$ local d'idéal maximal $\mathfrak{p}$. Par définition, il existe $g\in A\setminus (f) $ tel que $\mathfrak{p}=\lbrace x\in A\mid gx=0 \,\modu (f)\rbrace$. Soit $y:=g/f\in \fract(A)$. Si $y\mathfrak{p}\subset\mathfrak{p}$, c'est à dire $(x\in A$ et $gx=0 \,\modu (f))\implies g(x/f)=0\,\modu (f)$, ou encore $g(x/f^n)=0\,\modu (f)$ pour tout $n>0$. On en déduit $g\in (f)$, contradiction. Ainsi $y\mathfrak{p}=A$, ou encore $\mathfrak{p}=(f/g)$. Par le théorème de l'idéal principal de Krull (voir \ref{dimsousvariete}) on en déduit $\haut \mathfrak{p}=1$.
 \end{proof}
 
-\begin{prop}[Car. 0]\label{tensorproductNormalDomain}
+\begin{prop}[Car. zéro]\label{tensorproductNormalDomain}
 Soit $A$ et $B$ deux $k$-algèbres intégralement closes. Alors $A\otimes_k B$ est intégralement clos.
 \end{prop}
 
@@ -215,7 +215,7 @@ L'ensemble constitué de $0$ et des éléments $x\in K^*$ tels que $v(x)\geq 0$ 
 Un anneau intègre $A$ est un \textit{anneau de valuation discrète} si il existe une valuation discrète de son corps des fractions telle que $A$ soit l'anneau de valuation associé.
 \end{defn}
 
-\begin{prop}
+\begin{prop}\label{DVRCarac}
 Soit $A$ un anneau intègre local noetherien de dimension $1$. Soit $\mathfrak{m}$ son idéal maximal. Les assertions suivantes sont équivalentes
 \begin{enumerate}
 \item $A$ est un anneau de valuation discrète.
@@ -470,7 +470,7 @@ Un schéma $X$ est quasi-affine si il est quasi-compact et il admet une immersio
 \end{defn}
 
 \begin{defn}[Morphisme quasi-compact]
-Un morphisme de schémas $f:X\rightarrow Y$ est quasi-compact si l'image réciproque tout ouvert affine de $Y$ est quasi-compact. 
+Un morphisme de schémas $f:X\rightarrow Y$ est quasi-compact si l'image réciproque de tout ouvert affine de $Y$ est quasi-compact. 
 \end{defn}
 
 \begin{prop}\label{QuasiAffCritere}
@@ -541,7 +541,7 @@ Les morphismes entre schémas affines sont séparés et en particulier les sché
 Soit $f:X\rightarrow S$ un morphisme de schémas.
 	\begin{enumerate}
 	\item Si $f$ est séparé, alors pour toute paire $(U,V)$ d'ouverts affines de $X$ dont les images sont contenues dans un même ouvert affine de $S$, l'ouvert $U\cap V$ est affine, et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif.
-	\item Si pour toute paire $(x_1,x_2)$ de points de $X$ au-dessus d'un même point $s\in S$, on a des ouverts affines $x_1\in U$ et $x_2\in V$ dont l'image est contenue dans un même ouvert affine de $S$, et qui vérifient: l'ouvert $U\cap V$ est affine, et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif. Alors $f$ est séparé.
+	\item On suppose pour toute paire $(x_1,x_2)$ de points de $X$ au-dessus d'un même point $s\in S$, on a des ouverts affines $x_1\in U$ et $x_2\in V$ dont l'image est contenue dans un même ouvert affine de $S$, et qui vérifient: l'ouvert $U\cap V$ est affine, et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif. Alors $f$ est séparé.
 	\end{enumerate}
 \end{prop}
 
@@ -550,14 +550,14 @@ Soit $f:X\rightarrow S$ un morphisme de schémas.
 Les deux assertions ci-dessous s'appliquent à des morphismes entre schémas noetheriens.
 \begin{enumerate}
 	\item Le morphisme composé de deux morphismes séparés est séparé.
-	\item Les immersion ouvertes ou fermées sont séparées.
+	\item Les immersions ouvertes ou fermées sont séparées.
 	\end{enumerate}
 \end{prop}
 
 
 \section{Variétés algébriques}
 
-Dans ce mémoire, on travaille principalement dans la sous-catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos fixé. Ces objets sont appelés des \textit{$k$-variétés algèbriques}, ou tout simplement \textit{variétés}.  Cette catégorie est équivalente à la catégorie des variétés au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I. On rappelle que le corps de base est supposé de caractéristique nulle.
+Dans ce mémoire, on travaille principalement dans la sous-catégorie des $k$-schémas réduits séparés de type fini sur $k$, où $k$ est un corps algébriquement clos fixé. Ces objets sont appelés des \textit{$k$-variétés algèbriques}, ou tout simplement \textit{variétés}.  Cette catégorie est équivalente à la catégorie des variétés au sens de \cite{LAGSpringer} en ne considérant que les points fermés. D'ailleurs, par un point d'une variété $X$, on entendra point fermé, sauf mention du contraire. Soit $X_0$ le sous espace des points fermés de $X$ muni de la topologie induite. Alors les treillis des ouverts des topologies de $X$ et $X_0$ sont isomorphes. On bénéficie ainsi des résultats sur les morphismes et la dimension démontrés par exemple dans \cite{LAGSpringer} ou \cite{MumfordRedBook} chap I.
 
 Un schéma de type fini sur un corps est noetherien, on en déduit que tout fermé se décompose de manière unique en une union finie de composantes irréductibles. De plus, toute partie localement fermée d'une variété admet une unique structure de variété. Enfin, le produit sur $k$ préserve l'irréductibilité.
 
@@ -613,13 +613,13 @@ Un morphisme fini de variété algébriques est quasi-fini.
 \end{ex}
 
 \begin{thm}[Théorème principal de Zariski]\label{ZMT}
-Soit $f:X\rightarrow Y$ un morphisme birationnel quasi-fini séparé de variétés irréductibles. On suppose de plus que $Y$ est normale. Alors $f$ est une immersion ouverte.
+Soit $f:X\rightarrow Y$ un morphisme birationnel quasi-fini de variétés irréductibles. On suppose de plus que $Y$ est normale. Alors $f$ est une immersion ouverte.
 \end{thm}
 \begin{proof}
 Voir \cite{QingLiu} 4.4.6
 \end{proof}
 
-\begin{prop}\label{fibersCardinal}
+\begin{prop}[Car. zéro]\label{fibersCardinal}
 Soient $X,Y$ deux variétés algébriques affines irréductibles de même dimension et $f:X \mapsto Y$ un morphisme dominant. Alors il existe $g\in \Oo(Y)$ non nul tel que le morphisme induit $f:X_g \mapsto Y_g$ soit fini, surjectif avec des fibres de même cardinal.
 \end{prop}
 \begin{proof}
@@ -627,8 +627,6 @@ Par hypothèse, l'extension $k(Y) \xrightarrow{f^*} k(X)$ est algébrique finie,
 
 On a donc une factorisation de $f^\sharp(Y_v):\Oo(Y)_v\xrightarrow{p_1^\sharp}\Oo(Y)_v[t]\xrightarrow{\pi}\Oo(Y)_v[t]/(P)\xrightarrow{\overline{ev_u}}\Oo(Y)_v[u]$ qui donne $f:X_v \xrightarrow{\simeq} \lbrace (y,t) \in Y_v\times \mathbb{A}^1\mid P(y)(t)=0\rbrace \hookrightarrow Y_v\times \mathbb{A}^1 \xrightarrow{p_1} Y_v$. Ainsi, pour $y\in Y_v$ donné, le cardinal de la fibre $f^{-1}(y)$ est le cardinal de l'ensemble des zéros du polynôme $P(y)(t)$. On peut s'assurer que cet ensemble est de cardinal constant en intersectant à nouveau avec l'ouvert principal du discriminant de $P$ qui est un polynôme en les coefficients de $P$.
 \end{proof}
-
-Ce résultat reste vrai en caractéristique positive, voir \cite{LAGSpringer} 5.1.6 pour une preuve légèrement différente dans ce cadre. On y montre que le cardinal de la fibre générale est $[k(X):k(Y)]_s$. En revanche pour le corollaire immédiat suivant, la caractéristique zéro est essentielle (penser par exemple au morphisme de Frobenius $\AAA^1 \xrightarrow{x \mapsto x^p} \AAA^1$ ). 
 
 \begin{cor}[Car. zéro]\label{injectiveBirationel}
 Avec les hypothèses de \ref{fibersCardinal}, si de plus $f$ est injectif, alors il existe $g\in \Oo(Y)$ non-nulle tel que le morphisme induit $f:X_g \mapsto Y_g$ soit un isomorphisme.
@@ -641,6 +639,10 @@ Soit $f:X \mapsto Y$ un morphisme bijectif de variétés irréductibles avec $Y$
 D'après \ref{dimensionfibres} on peut appliquer \ref{injectiveBirationel} et on obtient ainsi que $f$ est birationnel. Ensuite, \ref{ZMT} nous dit que $f$ est une immersion ouverte. Mais $f$ est surjective par hypothèse, c'est donc un isomorphisme.
 \end{proof}
 
+\begin{rem}
+L'hypothèse sur la caractéristique est essentielle. En effet, considérons un corps de base $k$ algébriquement clos de caractéristique $p>0$. Le morphisme de Frobenius $\AAA^1 \xrightarrow{x \mapsto x^p} \AAA^1$  est bijectif entre deux variétés irréductibles et normales, mais ce n'est pas un isomorphisme. En effet l'image du comorphisme est $k[x^p]$, il n'est donc pas surjectif.
+\end{rem}
+
 \subsection{Variétés lisses}
 
 \begin{defn}[Variété lisse, point régulier]
@@ -650,7 +652,7 @@ Soit $X$ une variété. On dit que $x\in X$ est un point régulier si l'anneau l
 Par définition, un point $x$ d'une variété $X$ irréductible est régulier si \textit{l'espace tangent $(\mathfrak{m}_x/\mathfrak{m}_x^2)^*$} en $x$ est de dimension $\dim X$. L'ensemble des point singuliers de $X$ est un fermé propre. Dans le cas d'une variété normale, ce fermé est de codimension $\geq 2$ comme on le verra en \ref{codimesingnormal}, on dit dans ce cas que la variété est régulière en codimension $1$. Cela explique d'ailleurs la nécessité de la condition $1$ de \ref{SerreCritere}. Réciproquement, le théorème \ref{reglocufd} entraine qu'un point lisse est un point normal. On dispose d'un critère effectif pour déterminer si un point d'une variété est lisse.
 
 \begin{prop}\label{CritereReg}
-Soit $X$ une variété affine que l'on peut supposer plongée dans $\AAA^n$ avec des équations $f_1,...f_t\in k[x_1,...,x_n]$. Un point $p$ de $X$ est régulier si et seulement si le rang de la matrice $((\partial f_i/\partial x_j)(p))_{i,j}$ est $n-r$, où $r:=\dim X$.
+Soit $X\subset \AAA^n_k$ une variété affine et $f_1,...f_t\in k[x_1,...,x_n]$ des générateurs de $\Ii_{\AAA^n_k}(X)$. Un point $p$ de $X$ est régulier si et seulement si le rang de la matrice $((\partial f_i/\partial x_j)(p))_{i,j}$ est $n-r$, où $r:=\dim X$.
 \end{prop}
 \begin{proof}
 Voir \cite{Hartshorne} I.5.1
@@ -666,7 +668,7 @@ Un morphisme $f:X\rightarrow Y$ de variétés est plat si pour tout $x\in X$, le
 
 
 \begin{defn}[Morphisme non-ramifié, morphisme/revêtement étale]
-Un morphisme $f:X\rightarrow Y$ est non-ramifié si pour tout $x\in X$, $f^\sharp_x(\mathfrak{m}_{f(x)})\Oo_{X,x}=\mathfrak{m}_x$. Le morphisme est étale si il est plat et non-ramifié. Si $f$ est étale et surjectif, on dit  que $(X,f)$ est un revêtement étale de $Y$.
+Un morphisme $f:X\rightarrow Y$ est non-ramifié si pour tout $x\in X$, $f^\sharp_x(\mathfrak{m}_{f(x)})\Oo_{X,x}=\mathfrak{m}_x$. Le morphisme est étale si il est plat et non-ramifié. Si $f$ est étale, fini et surjectif, on dit  que $(X,f)$ est un revêtement étale de $Y$.
 \end{defn}
 
 
@@ -683,7 +685,7 @@ Voir \cite{Hartshorne} ex III.10.4
 Une variété normale est union disjointe de ses composantes irréductibles.
 \end{prop}
 \begin{proof}
-Si un point $p\in X$ d'une variété se situe à l'intersection de deux composantes irréductibles, l'anneau local en $p$ contient au moins deux premiers minimaux et n'est donc pas intègre.
+Supposons qu'un point $x$ d'une variété normale se situe à l'intersection de deux composantes irréductibles. Alors l'anneau local en $x$ contient au moins deux premiers minimaux et n'est donc pas intègre. C'est une contradiction.
 \end{proof}
 
 \begin{prop}\label{codimesingnormal}
@@ -700,6 +702,10 @@ Soit $X$ une variété normale irréductible. Pour toute sous-variété fermée 
 \begin{proof}
 On peut traiter le problème localement et supposer $X=\spec A$ affine. On considère $f$ régulière sur $U:=X\setminus Y$. On remarque que tout $\mathfrak{p}\in \spec A$ de hauteur $1$ est un point de $U$. En effet, dans le cas contraire il contiendrait les idéaux premiers correspondants aux composantes irréductibles de $Y$, ce qui est impossible car ils sont de hauteur $\geq 2$. On en déduit, en tenant compte de l'irréductibilité de $X$, des injections $\Oo_X(U)\xhookrightarrow{} \Oo_\mathfrak{p}=A_\mathfrak{p}$ dans les tiges qui peuvent être vues comme des inclusions dans le corps des fonctions rationnelles de $X$. On a ainsi en tenant compte de \ref{factonormal} un morphisme $\Oo_X(U)\xhookrightarrow{} \cap_\mathfrak{p} A_\mathfrak{p}=A=\Oo(X)$ qui est inverse de la restriction, d'où le résultat.
 \end{proof}
+
+\begin{rem}
+On verra en \ref{cohomcodimgeq2} que la réciproque de la proposition précédente est vraie sans hypothèse de normalité.
+\end{rem}
 
 \begin{prop}\label{codimaffinenormal}
 Soit $X$ une variété affine irréductible. Pour toute variété irréductible $Y$ contenant $X$ comme ouvert, le complémentaire $Y\setminus X$ est de codimension 1.
