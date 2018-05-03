@@ -31,7 +31,7 @@ Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique 
 \end{defn}
 
 \begin{defn}[Orbite, stabilisateur]
-Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $x\in X$. L'orbite de $x$ est l'image de l'application d'orbite $a_x=(.,x):G\rightarrow X$, on le note $G.x$. Le stabilisateur est l'ensemble des $g\in G$ tels que $g.x=x$, on le note $G_x$, ou $\stab_G(x)$. 
+Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $x\in X$. L'orbite $G.x$ de $x$ est l'image de l'application d'orbite $a_x:G\rightarrow X$, $g\mapsto g.x$. Le stabilisateur $G_x$ (ou $\stab_G(x)$) de $x$ est l'ensemble des éléments $g\in G$ tels que $g.x=x$.  
 \end{defn}
 
 Le stabilisateur d'un point $x$ de $G$ est un sous-groupe fermé de $G$. En effet, c'est la fibre de $x$ pour l'application d'orbite $a_x$. De plus pour tout $g.x$ dans l'image de $a_x$, la fibre de $g.x$ est $g.G_x$, donc toutes les fibres de $a_x$ sont isomorphes.
@@ -83,10 +83,10 @@ Montrons que l'action est algébrique. Comme les translatés de $f$ engendrent $
 \end{proof}
 
 \begin{thm}\label{embed}
-Soit $G$ un groupe algébrique et $X$ une $G$ variété affine. $X$ est isomorphe en tant que $G$-variété à une sous $G$-variété fermée d'un $G$-module de dimension finie.
+Soit $G$ un groupe algébrique et $X$ une $G$ variété affine. Alors $X$ est isomorphe en tant que $G$-variété à une sous $G$-variété fermée d'un $G$-module de dimension finie.
 \end{thm}
 \begin{proof}
-D'après la proposition précédente on voit que $\Oo(X)=k[f_1,...,f_n]$ est engendré comme $k$-algèbre par un sous $G$-module $V$ de $\Oo(X)$ de dimension finie, en prenant par exemple la somme des $V(f_i)$ pour $1\leq i\leq n$. On introduit le morphisme $\phi:X\rightarrow V^*, x\mapsto ev_x$, c'est une immersion fermée. En effet, il suffit de montrer que $V$ est dans l'image de $\phi^\sharp$, or $V^{**}\subset \Oo(V^*)$, et pour tout $ev_f\in V^{**}$, on a $\phi^\sharp(ev_f)=ev_f\circ\phi=f$. Enfin, en munissant $V^*$ de la représentation duale, on a $\phi(g.x)(f)=ev_{g.x}(f)=ev_x( g^{-1}.f)=(g^{-1})^t(ev_x)(f)=(g.\phi(x))(f)$, pour tout $g\in G, x\in X,f\in V$. Ainsi $\phi$ est un morphisme de $G$-variétés.
+D'après la proposition précédente on voit que $\Oo(X)=k[f_1,...,f_n]$ est engendré comme $k$-algèbre par un sous $G$-module $V$ de $\Oo(X)$ de dimension finie, en prenant par exemple la somme des $V(f_i)$ pour $1\leq i\leq n$. On introduit le morphisme $\phi:X\rightarrow V^*, x\mapsto ev_x$, c'est une immersion fermée. En effet, il suffit de montrer que $V$ est dans l'image de $\phi^\sharp$. Or $V^{**}\subset \Oo(V^*)$, et pour tout $ev_f\in V^{**}$, on a $\phi^\sharp(ev_f)=ev_f\circ\phi=f$. Enfin, en munissant $V^*$ de la représentation duale, on a $\phi(g.x)(f)=ev_{g.x}(f)=ev_x( g^{-1}.f)=(g^{-1})^t(ev_x)(f)=(g.\phi(x))(f)$, pour tout $g\in G, x\in X,f\in V$. Ainsi $\phi$ est un morphisme de $G$-variétés.
 \end{proof}
 
 \begin{cor}
@@ -187,9 +187,9 @@ Soit $G$ un groupe algébrique. Les assertions suivantes sont équivalentes:
 \item $\Oo(G)=\vect_k(X^*(G))$.
 \item Tout $G$-module est somme directe $G$-modules de dimension $1$.
 \end{enumerate}
-Si l'une de ces assertions est vérifiée, tout $G$-module $V$ est naturellement un $k$-espace vectoriel $X^*(G)$ gradué
+Si l'une de ces assertions est vérifiée, tout $G$-module $V$ est naturellement un $k$-espace vectoriel $X^*(G)$-gradué
 $$V=\bigoplus_{\chi \in X^*(G)}V_{\chi}$$
-où les sous-espaces $V_{\chi}$ sont les sous-espaces propres pour l'action $G$. On appelle $V_{\chi}$ le sous-espace de poids $\chi$. Réciproquement, tout $k$-espace vectoriel $X^*(G)$ gradué est naturellement un $G$-module.
+où les sous-espaces $V_{\chi}$ sont les sous-espaces propres pour l'action $G$. On appelle $V_{\chi}$ le sous-espace de poids $\chi$. Réciproquement, tout $k$-espace vectoriel $X^*(G)$-gradué est naturellement un $G$-module.
 \end{prop}
 \begin{proof}
 \begin{enumerate}
@@ -216,7 +216,7 @@ Le foncteur $X^*$ réalise une anti-équivalence de catégories entre la catégo
 En effet on a un isomorphisme de foncteurs $(X^*)^2\simeq Id$ d'après la proposition précédente.
 \end{proof}
 
-Une autre façon de voir cela est d'introduire \textit{l'algèbre de groupe} d'un groupe abélien de type fini $M$, c'est par définition $k[M]=\lbrace \sum_{\text{finie}} \lambda_gg,\,\lambda_g\in k,g\in G \rbrace$ avec la multiplication définie par l'opération de groupe de $G$. La propriété suivante montre que l'on construit ainsi un autre inverse de $X^*(.)$.
+Une autre façon de voir cela est d'introduire \textit{l'algèbre de groupe} d'un groupe abélien de type fini $M$, c'est par définition $k[M]:=\lbrace \sum_{\text{finie}} \lambda_gg,\,\lambda_g\in k,g\in G \rbrace$ avec la multiplication définie par l'opération de groupe de $G$. La propriété suivante montre que l'on construit ainsi un autre inverse de $X^*(.)$.
 
 \begin{prop}
 Soient, $M, M_1, M_2$ des groupes abéliens de type fini, et $G$ un groupe diagonalisable.\\
@@ -227,7 +227,7 @@ On a deux morphismes d'algèbre $k[M_1]\rightarrow k[M_1\oplus M_2], e_{m_1}\map
 Pour la deuxième assertion, comme on a $M\simeq \ZZ^r\oplus (\oplus_{i=1}^r \ZZ/d_i\ZZ)$, il suffit de traiter les cas $M=\ZZ$ et $M=\ZZ/d\ZZ$. On a $k[\ZZ]\simeq k[t,t^{-1}]$ qui est intègre, de type fini, et réduite. On a $k[\ZZ/d\ZZ]\simeq k[t]/(t^d-1)$. On voit, par le théorème chinois par exemple, que cette algèbre de type fini non-intègre est réduite si et seulement si les racine de $t^d-1$ sont simples, ce qui est le cas en caractéristique zéro. La structure d'algèbre de Hopf sur $k[M]$ est donnée par $\Delta(e_m)=e_m\otimes e_m,\, i(e_m)=e_{-m},\, e(e_m)=e_0$. Pour la dernière assertion, il suffit de voir que $\Oo(G)=k[X^*(G)]$.
 \end{proof}
 
-On déduit maintenant quelques résultats de base sur les groupes diagonalisables
+\noindent On déduit maintenant quelques résultats de base sur les groupes diagonalisables.
 
 \begin{prop}
 Soit $G$ un groupe diagonalisable. Alors:
@@ -264,16 +264,16 @@ G$ à $H$.
 \begin{center}
 $0\rightarrow X^*(G/H)\simeq\Ker i^\sharp\rightarrow X^*(G)\xrightarrow{i^\sharp} X^*(H)\rightarrow 0$
 \end{center}
-Comme $X^*(G)$ et $X^*(H)$ sont des $\ZZ$-modules libres on trouve des bases respectives tels que la matrice de $i^\sharp$ soit $\diag(a_1,...a_r,0,...,0)$, on en déduit facilement une section $s$ de $i^\sharp$. On a ainsi $X^*(G)=\Ker i^\sharp\oplus s(X^*(H))$, puis $G\simeq H\times \spec k[s(X^*(H))]$.
+Comme $X^*(G)$ et $X^*(H)$ sont des $\ZZ$-modules libres on trouve des bases respectives tels que la matrice de $i^\sharp$ soit $\diag(a_1,...a_r,0,...,0)$, on en déduit facilement une section $s$ de $i^\sharp$. On a ainsi $X^*(G)=\Ker i^\sharp\oplus s(X^*(H))$, puis $G\simeq \spec k[\Ker i^\sharp] \times \spec k[s(X^*(H))]\simeq H'\times H$, où $H':=\spec k[\Ker i^\sharp]$.
 
-Dans le cas où $H$ est seulement diagonalisable adaptée, considérons une base de $X^*(G)$ adaptée à $\Ker i^\sharp$. Cela fournit des coordonnées telles que $G\simeq \GG_m^n$ et $H\simeq \lbrace 1\rbrace\times...\times\lbrace 1\rbrace\times\mu_{n_1}\times...\times\mu_{n_s}\times\GG_m^r$. Par cet isomorphisme, $H':=\GG_m^{n-r}\times  \lbrace 1\rbrace\times...\times  \lbrace 1\rbrace$ convient.
+Dans le cas où $H$ est seulement diagonalisable, considérons une base de $X^*(G)$ adaptée à $\Ker i^\sharp$. Cela fournit des coordonnées telles que $G\simeq \GG_m^n$ et $H\simeq \lbrace 1\rbrace\times...\times\lbrace 1\rbrace\times\mu_{n_1}\times...\times\mu_{n_s}\times\GG_m^r$, où $\mu_{n_i}$ est le groupe des racines $n_i$ième de l'unité. Par cet isomorphisme, $H':=\GG_m^{n-r}\times  \lbrace 1\rbrace\times...\times  \lbrace 1\rbrace$ convient.
 \end{proof}
 
 \subsubsection{Action d'un groupe diagonalisable sur une variété affine}
 
 Les variétés affines munies d'une action d'un groupe diagonalisable forment une catégorie dans laquelle les morphismes sont les paires $(\phi,\widetilde{\phi})$, où $\phi:X\rightarrow X'$ est un morphisme de variétés affines, $\widetilde{\phi}:H\rightarrow H'$ est un morphisme de groupes diagonalisables, et pour tout $x\in X, h\in H$, on a $\phi(h.x)=\widetilde{\phi}(h)\phi(x)$.
 
-D'après \ref{GmoduleSectionsGlobales}, $\Oo(X)$ est un $H$-module, et aussi un $k$-espace vectoriel $K$-gradué avec $K:=X^*(H)$, d'après \ref{GroupeDiagCarac}. C'est en fait une $k$-algèbre $K$-graduée, en effet considérons $(f_1, f_2)\in \Oo(X)_{\chi_1}\times \Oo(X)_{\chi_2}$, alors pour tout $g\in G$, $g.f_1f_2=(g.f_1)(g.f_2)=(\chi_1(g)f_1)(\chi_2(g)f_2)=(\chi_1\chi_2)(g)f_1f_2$, ce qui prouve que $f_1f_2\in \Oo(X)_{\chi_1\chi_2}$. De plus, cette construction est fonctorielle, en effet considérons une $H'$-variété $X'$, ainsi qu'un morphisme $(\phi,\widetilde{\phi}):X\rightarrow X'$. On a donc par définition le diagramme de gauche ci-dessous, le second est obtenu par application de $\Oo(.)$.
+D'après \ref{GmoduleSectionsGlobales}, $\Oo(X)$ est un $H$-module. C'est aussi un $k$-espace vectoriel $K$-gradué avec $K:=X^*(H)$, d'après \ref{GroupeDiagCarac}. C'est en fait une $k$-algèbre $K$-graduée, en effet considérons $(f_1, f_2)\in \Oo(X)_{\chi_1}\times \Oo(X)_{\chi_2}$, alors pour tout $g\in G$, $g.f_1f_2=(g.f_1)(g.f_2)=(\chi_1(g)f_1)(\chi_2(g)f_2)=(\chi_1\chi_2)(g)f_1f_2$, ce qui prouve que $f_1f_2\in \Oo(X)_{\chi_1\chi_2}$. De plus, cette construction est fonctorielle, en effet considérons une $H'$-variété $X'$, ainsi qu'un morphisme $(\phi,\widetilde{\phi}):X\rightarrow X'$. On a donc par définition le diagramme de gauche ci-dessous, le second est obtenu par application de $\Oo(.)$.
 
 \begin{multicols}{2}
 	\begin{center}
@@ -371,9 +371,9 @@ Soit $A$ une algèbre affine $K$-graduée, $X:=\spec A$ muni de l'action de $H:=
 \end{prop}
 \begin{proof}
 La deuxième ligne est obtenue par le théorème \ref{groupequotient}, puis application du foncteur $X^*$, elle est bien exacte par exactitude du foncteur $X^*$. La flèche verticale centrale est l'isomorphisme canonique $X^*(\spec k[K])\simeq K$. Comme $\overline{H.x}$ est $H$-stable, la graduation est préservée sur $\Oo(\overline{H.x})$ d'après la proposition \ref{stablehomogene}. De plus si $f\in \Oo(X)_{\omega}$ est telle que $f(x)\neq 0$, cela reste le cas modulo $\mathcal{I}_{X}(\overline{H.x})_\omega$ et réciproquement. Ainsi, $S_x$ et $K_x$ ne sont pas modifiés si on remplace $X$ par $\overline{H.x}$. 
-Considérons le fermé propre $\overline{H.x}\setminus H.x$, éventuellement vide. Il est $H$-stable comme réunion d'orbites. Alors $\mathcal{I}_{\overline{H.x}}(\overline{H.x}\setminus H.x)$ est homogène et $\neq \lbrace 0\rbrace$. Choisissons $f\neq0$ homogène dans ce $H$-module, c'est donc un vecteur propre. Ainsi, $f$ est non-nulle quelque part sur $H.x$ et donc partout par transitivité et choix de $f$. On en conclut $H.x=(\overline{H.x})_f$. Considérons la graduation naturelle associée à $\Oo(\overline{H.x})_f$. Comme on a inversé $f$, le monoïde de poids est potentiellement plus gros. En revanche on voit facilement que $K_x$ n'est pas modifié. Finalement, on peut donc supposer $X=H.x$, qui est affine comme on va le voir. 
+Considérons le fermé propre $\overline{H.x}\setminus H.x$, éventuellement vide. Il est $H$-stable comme réunion d'orbites. Alors $\mathcal{I}_{\overline{H.x}}(\overline{H.x}\setminus H.x)$ est homogène et $\neq \lbrace 0\rbrace$. Choisissons $f\neq0$ homogène dans ce $H$-module, c'est donc un vecteur propre. Ainsi, $f$ est non-nulle quelque part sur $H.x$ et donc partout par transitivité et choix de $f$. On en conclut $H.x=(\overline{H.x})_f$. Considérons la graduation naturelle associée à $\Oo(\overline{H.x})_f$. Comme on a inversé $f$, le monoïde des poids est potentiellement plus gros. En revanche on voit facilement que $K_x$ n'est pas modifié. Finalement, on peut donc supposer $X=H.x$, qui est affine comme on va le voir. 
 
-Dans ce cas, on voit qu'une fonction homogène non-nulle est partout non-nulle, donc inversible. On a donc dans ce cas $S_x=K_x=S(\Oo(H.x))=K(\Oo(H.x))$, où $S(\Oo(H.x))$ et $K(\Oo(H.x))$ sont respectivement les monoïdes et groupes de poids de l'algèbre $K$-graduée $\Oo(H.x)$. Dans les deux diagrammes de \ref{eq:DiagOrbite1}, les flèches sont respectivement des morphismes de $H$-variétés, et des morphismes d'algèbres graduées. Ainsi, $\phi^\sharp$ induit un isomorphisme sur les groupes de poids $K(\Oo(H.x))=K_x \xrightarrow{w \mapsto\chi^w}K(\Oo(H/H_x))=X^*(H/H_x)$. Enfin, toujours en utilisant le diagramme, cet isomorphisme est l'unique faisant commuter le carré de gauche dans le diagramme de la proposition.
+Dans ce cas, on voit qu'une fonction homogène non-nulle est partout non-nulle, donc inversible. On a donc dans ce cas $S_x=K_x=S(\Oo(H.x))=K(\Oo(H.x))$, où $S(\Oo(H.x))$ et $K(\Oo(H.x))$ sont respectivement les monoïdes et groupes des poids de l'algèbre $K$-graduée $\Oo(H.x)$. Dans les deux diagrammes de \ref{eq:DiagOrbite1}, les flèches sont respectivement des morphismes de $H$-variétés, et des morphismes d'algèbres graduées. Ainsi, $\phi^\sharp$ induit un isomorphisme sur les groupes des poids $K(\Oo(H.x))=K_x \xrightarrow{w \mapsto\chi^w}K(\Oo(H/H_x))=X^*(H/H_x)$. Enfin, toujours en utilisant le diagramme, cet isomorphisme est l'unique faisant commuter le carré de gauche dans le diagramme de la proposition.
 \end{proof}
 
 On extrait de la preuve précédente le lemme ci-dessous, puis on l'utilise pour donner une caractérisation de l'adhérence de l'orbite d'un point en terme de son monoïde d'orbite.

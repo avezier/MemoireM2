@@ -13,7 +13,7 @@
 \contentsline {subsubsection}{Sch\IeC {\'e}mas r\IeC {\'e}duits, irr\IeC {\'e}ductibles, int\IeC {\`e}gres, noetheriens}{12}{section*.4}
 \contentsline {subsection}{\numberline {1.2.3}Quelques propri\IeC {\'e}t\IeC {\'e}s des morphismes de sch\IeC {\'e}mas}{13}{subsection.1.2.3}
 \contentsline {subsubsection}{Immersion ouverte, immersion ferm\IeC {\'e}e}{13}{section*.5}
-\contentsline {subsubsection}{Morphismes de type fini}{13}{section*.6}
+\contentsline {subsubsection}{Morphismes de type fini}{14}{section*.6}
 \contentsline {subsubsection}{Morphismes finis, normalit\IeC {\'e}}{14}{section*.7}
 \contentsline {subsubsection}{Morphismes affines}{14}{section*.8}
 \contentsline {subsubsection}{Morphismes s\IeC {\'e}par\IeC {\'e}s}{14}{section*.9}

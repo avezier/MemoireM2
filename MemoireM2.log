@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  30 APR 2018 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  2 MAY 2018 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1268,38 +1268,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--107
 [34] [35] [36] [37] [38]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 319.
+(hyperref)                removing `math shift' on input line 323.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 319.
+(hyperref)                removing `math shift' on input line 323.
 
 [39] [40] [41] [42] [43] [44]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 577.
+(hyperref)                removing `math shift' on input line 581.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 577.
+(hyperref)                removing `subscript' on input line 581.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 577.
+(hyperref)                removing `superscript' on input line 581.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 577.
+(hyperref)                removing `math shift' on input line 581.
 
 [45] [46]
 
-LaTeX Warning: Reference `' on page 47 undefined on input line 635.
+LaTeX Warning: Reference `' on page 47 undefined on input line 639.
 
 
-LaTeX Warning: Reference `' on page 47 undefined on input line 648.
+LaTeX Warning: Reference `' on page 47 undefined on input line 652.
 
 
-LaTeX Warning: Reference `' on page 47 undefined on input line 648.
+LaTeX Warning: Reference `' on page 47 undefined on input line 652.
 
 [47]) [48]
 \openout2 = `chapters/coxring.aux'.
@@ -1313,14 +1313,6 @@ Chapitre 4.
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
- []
-
-
-Overfull \hbox (2.13687pt too wide) in paragraph at lines 45--46
-\T1/cmr/m/n/10 te-ment par $\OML/cmm/m/it/10 ^^U:z \OT1/cmr/m/n/10 = (\OML/cmm/
-m/it/10 ^^Uz[]; ^^Uz[]; ^^U[]z[]; ^^U[]z[]\OT1/cmr/m/n/10 )$\T1/cmr/m/n/10 . L'
-al-gèbre des in-va-riants sous cette ac-tion est $\OML/cmm/m/it/10 k\OT1/cmr/m/
-n/10 [\OML/cmm/m/it/10 z[]z[]; z[]z[]; z[]z[]; z[]z[]\OT1/cmr/m/n/10 ]$
  []
 
 [50] [51] [52] [53] [54] [55] [56]
@@ -1350,11 +1342,14 @@ Package rerunfilecheck Info: File `MemoireM2.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 22055 strings out of 492995
- 412469 string characters out of 6132704
+ 22056 strings out of 492995
+ 412481 string characters out of 6132704
  488129 words of memory out of 5000000
  24626 multiletter control sequences out of 15000+600000
  28620 words of font info for 79 fonts, out of 8000000 for 9000
@@ -1403,10 +1398,10 @@ mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on MemoireM2.pdf (68 pages, 842252 bytes).
+Output written on MemoireM2.pdf (68 pages, 843881 bytes).
 PDF statistics:
- 1509 PDF objects out of 1728 (max. 8388607)
- 1389 compressed objects within 14 object streams
- 529 named destinations out of 1000 (max. 500000)
+ 1512 PDF objects out of 1728 (max. 8388607)
+ 1392 compressed objects within 14 object streams
+ 530 named destinations out of 1000 (max. 500000)
  429 words of extra memory for PDF output out of 10000 (max. 10000000)
 
