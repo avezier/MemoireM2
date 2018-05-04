@@ -47,12 +47,13 @@ Soit $X$ un schéma, alors on a les propriétés suivantes
 \item Une somme directe de faisceaux quasi-cohérents est un faisceau quasi-cohérent. Si $X$ est notherien, une somme directe finie de faisceaux cohérents est un faisceau cohérent.
 \item Soient $\Ff$ et $\Gg$ des faisceaux quasi-cohérents sur $X$, alors $\Ff\otimes \Gg$ est quasi-cohérent. Si $X$ est noetherien et $\Ff,\Gg$ cohérents, alors $\Ff\otimes_{\Oo_X} \Gg$ est cohérent. Enfin, si $X$ est affine, alors $(\Ff\otimes_{\Oo_X}\Gg)(U)=\Ff(U)\otimes_{\Oo(U)}\Gg(U)$ pour tout ouvert $U\subset X$.
 \item Soit $f:\Ff\rightarrow \Gg$ un morphisme de faisceaux quasi-cohérents. Alors $\Ker f$, $\Im f$ et $\Coker f$ sont quasi-cohérents. Si $X$ est noetherien, et $\Ff, \Gg$ cohérents, alors $\Ker f$, $\Im f$ et $\Coker f$ sont cohérents.
-\item Soit $f:X\rightarrow Y$ un morphisme de schémas, et $\Gg$ un $\Oo_Y$-module quasi-cohérent. Soit $U$ un ouvert affine de $X$ tel que $f(U)$ est contenu dans un ouvert affine $V$ de $Y$. Alors
+\item Soit $f:X\rightarrow Y$ un morphisme, et $\Gg$ un $\Oo_Y$-module quasi-cohérent. Soit $U$ un ouvert affine de $X$ tel que $f(U)$ est contenu dans un ouvert affine $V$ de $Y$. Alors
 \begin{center}
 $f^*\Gg_{|U}\simeq(\Gg(V)\otimes_{\Oo_Y(V)}\Oo_X(U))^{\widetilde{}}$
 \end{center}
 En particulier, $f^*\Gg$ est quasi-cohérent sur $X$. Si $X$ est noetherien et $\Gg$ cohérent, alors $f^*\Gg$ est cohérent.
-\item Soit $\Ff$ quasi-cohérent sur $X$. Si $X$ est noetherien, ou si $f$ est séparé et quasi-compact, alors $f_*\Ff$ est quasi-cohérent sur $Y$.
+\item Soit $f:X\rightarrow Y$ un morphisme, et $\Ff$ un $\Oo_X$-module quasi-cohérent. Si $X$ est noetherien, ou si $f$ est séparé et quasi-compact, alors $f_*\Ff$ est quasi-cohérent sur $Y$.
+\item Soit $f:X\rightarrow Y$ un morphisme fini, et $\Ff$ un $\Oo_X$-module cohérent. Si $Y$ est noetherien, alors $f_*\Ff$ est cohérent sur $Y$.
 \end{enumerate}
 \end{prop}
 
@@ -112,10 +113,10 @@ $0\rightarrow\Ii_X:=\Ker i^\sharp\rightarrow\Oo_{\PP_k^r}\xrightarrow{i^\sharp}i
 \end{center}
 On a $\Gamma_*(\Ii_X)=I$ (\cite{Hartshorne} ex II.5.10), et en appliquant $\Gamma_*$ on obtient une suite exacte
 \begin{center}
-$0\rightarrow I \rightarrow k[x_0,...,x_r]\xrightarrow{i^\sharp(\PP^r_k)}\Gamma_*(\Oo_X)$
+$0\rightarrow I \xrightarrow{\subset} k[x_0,...,x_r]\xrightarrow{\Gamma_*(i^\sharp)}\Gamma_*(\Oo_X)$
 \end{center}
 
-Le morphisme $i^\sharp(\PP^r_k)$ n'est pas surjectif en général. Son image est isomorphe à $A$, et on peut montrer (\cite{Hartshorne} II ex 5.14) que $\Gamma_*(\Oo_X)$ est la clôture intégrale de $A$. Comme exemple concret on peut prendre par exemple l'immersion fermée $i:\PP_k^1\xhookrightarrow{}\PP_k^3$ donnée par le morphisme gradué $\phi:k[x,y,z,w]\rightarrow k[s,t]$, ($x\mapsto s^m, t\mapsto s^{m-1}t, z\mapsto st^{m-1},w\mapsto t^m)$. On peut voir que $\Gamma_*(\Oo_{i(\PP_k^1)})=\bigoplus_{d\geq 0}k[s,t]_{md}$ et que l'image de $\phi$ est strictement incluse dans cette algèbre pour $m\geq 4$.
+Le morphisme $\Gamma_*(i^\sharp)$ n'est pas surjectif en général. Son image est isomorphe à $A$, et on peut montrer (\cite{Hartshorne} II ex 5.14) que $\Gamma_*(\Oo_X)$ est la clôture intégrale de $A$. Comme exemple concret on peut prendre par exemple l'immersion fermée $i:\PP_k^1\xhookrightarrow{}\PP_k^3$ donnée par le morphisme gradué $\phi:k[x,y,z,w]\rightarrow k[s,t]$, ($x\mapsto s^m, t\mapsto s^{m-1}t, z\mapsto st^{m-1},w\mapsto t^m)$. On peut voir que $\Gamma_*(\Oo_{i(\PP_k^1)})=\bigoplus_{d\geq 0}k[s,t]_{md}$ et que l'image de $\phi$ est strictement incluse dans cette algèbre pour $m\geq 4$.
 
 \end{rem}
 
@@ -284,25 +285,25 @@ On pose $U:=X\setminus Z$ et on utilise la suite exacte longue \ref{eq:longSESSu
 
 \subsection{Faisceaux inversibles, Fibrés en droites}
 \begin{defn}[Faisceau inversible]
-Soit $X$ une variété. Un faisceau inversible $\Ll$ sur $X$ est un $\mathcal{O}_X$-module localement libre de rang 1. Autrement dit, tout point $x\in X$ admet un voisinage ouvert $U \subset X$ tel que ${\mathcal L}|_U$ est isomorphe à ${\mathcal O}_U$.
+Un faisceau inversible $\Ll$ sur un schéma $X$ est un $\mathcal{O}_X$-module localement libre de rang 1. Autrement dit, tout point $x\in X$ admet un voisinage ouvert $U \subset X$ tel que ${\mathcal L}|_U$ est isomorphe à ${\mathcal O}_U$.
 \end{defn}
 
 On peut toujours trivialiser deux faisceaux inversibles sur un même recouvrement ouvert de $X$. On voit ainsi que le produit tensoriel sur $\mathcal{O}_X$ de faisceaux inversibles est inversible. Par ailleurs, le faisceau dual $\Ll^\vee:=\Hh om(\Ll,\Oo_X)$ est clairement inversible car sur les ouverts $U$ où $\Ll$ est trivial, se donner un morphisme $\Ll_{|U}\rightarrow\Oo_{|U}$ revient à se donner une section de $\Oo(U)$. De plus, l'application naturelle $\Ll\otimes_{\Oo_X} \Hh om(\Ll,\Oo_X)\rightarrow \Oo_X, (s,f)\mapsto f(s)$ est un isomorphisme. Ainsi, les classes d'isomorphie de faisceaux inversible sur $X$ munies du produit tensoriel forment un groupe appelé groupe de Picard de $X$, noté $\pic(X)$. 
 
 \begin{ex}\label{expicaff}
-Soit $X=\spec (A)$ irréductible. Alors se donner un faisceau inversible sur $X$ revient (à isomorphisme près) à se donner un idéal fractionnaire $I$ de $A$ qui est inversible (cf \ref{ideauxinversibles}), son inverse est alors $I^{-1}:=(A:I)$. Les idéaux fractionnaires inversibles donnant le faisceau inversible trivial sont les idéaux fractionnaires principaux. Le groupe de Picard de $X$ est ainsi isomorphe au groupe des idéaux fractionnaires inversibles modulo les idéaux fractionnaires principaux. Les idéaux de $A$ qui sont inversibles forment une partie génératrice de ce groupe. 
+Soit $X=\spec (A)$ un schéma affine irréductible. Alors se donner un faisceau inversible sur $X$ revient (à isomorphisme près) à se donner un idéal fractionnaire $I$ de $A$ qui est inversible (cf \ref{ideauxinversibles}), son inverse est alors $I^{-1}:=(A:I)$. Les idéaux fractionnaires inversibles donnant le faisceau inversible trivial sont les idéaux fractionnaires principaux. Le groupe de Picard de $X$ est ainsi isomorphe au groupe des idéaux fractionnaires inversibles modulo les idéaux fractionnaires principaux. Les idéaux de $A$ qui sont inversibles forment une partie génératrice de ce groupe. 
 
 Si de plus $A$ est localement factoriel, par exemple si $X$ est lisse, les idéaux inversibles sont les idéaux de hauteur 1 pure, c'est à dire tels que leurs idéaux premiers associés sont tous de hauteur 1. De plus tout idéal inversible s'écrit de manière unique comme produit de puissances d'idéaux premiers de hauteur 1. Ainsi $\pic(X)$ est donc le quotient du groupe libre sur les idéaux premiers de hauteur 1 par les idéaux fractionnaires principaux.
 \end{ex}
 
-On va maintenant voir que les faisceaux inversibles sur $X$ s'incarnent naturellement en des variétés sur $X$, ce sont les fibrés en droites.
+On va maintenant voir qu'un faisceau inversible sur une variété $X$ s'incarnent naturellement en une variété sur $X$, que l'on appelle un fibré en droites.
 
 \begin{defn}[Fibré en droites, morphismes, faisceau des sections]\label{linebundle}
 Soit $X$ une variété. Un fibré en droite sur $X$ est une variété $L$ munie d'un morphisme $\pi:L\rightarrow X$ tel que $X$ admet un recouvrement ouvert $(U_i)_{i\in I}$ satisfaisant:
 
 \begin{enumerate}
-\item $\forall i\in I$, il existe un isomorphisme $\phi_i :\pi^{-1}(U_i)\rightarrow U_i\times\AAA^1$ de variétés sur $U_i$.
-\item $\forall i, j\in I$, l'isomorphisme $\phi_j\circ \phi_i^{-1}: (U_i\cap U_j)\times \AAA^1\rightarrow (U_i\cap U_j)\times \AAA^1$ est de la forme $(x, z)\mapsto (x, a_{ij}(x)z)$.
+\item $\forall i\in I$, il existe un isomorphisme $\phi_i :\pi^{-1}(U_i)\rightarrow U_i\times\AAA^1`-k$ de variétés sur $U_i$.
+\item $\forall i, j\in I$, l'isomorphisme $\phi_j\circ \phi_i^{-1}: (U_i\cap U_j)\times \AAA^1_k\rightarrow (U_i\cap U_j)\times \AAA^1_k$ est de la forme $(x, z)\mapsto (x, a_{ij}(x)z)$.
 \end{enumerate}
 Un morphisme de fibrés en droites sur $X$ est un morphisme de variétés sur $X$ avec la conditions supplémentaire que les morphismes induits sur les fibres soient linéaires.
 Une section d'un fibré en droites $(L, \pi)$ est une section de $\pi$, et on a la version locale de cette notion.
@@ -547,7 +548,22 @@ Un diviseur de Cartier est dit principal si il provient d'une section globale de
 
 
 
-Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang 1, c'est à dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)^*$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceaux inversibles de $k(X)^*$. Par cette correspondance, deux diviseurs sont linéairement équivalents si et seulement si les faisceaux inversibles sont isomorphes. On a ainsi définit une application injective CaCl$(X)\rightarrow$ Pic$(X)$ dont on voit facilement que c'est un morphisme de groupes. Comme $X$ est supposé irréductible, c'est un isomorphisme car tout faisceau inversible est isomorphe à un sous-faisceau inversible de $k(X)^*$. En résumé on a le résultat suivant:
+Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang $1$, c'est à dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)^*$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceaux inversibles de $k(X)^*$. 
+$$
+\left\{
+\begin{matrix}
+\text{Diviseurs de Cartier sur }X
+\end{matrix}
+\right\}
+\leftrightarrow
+\left\{
+\begin{matrix}
+\text{Sous-faisceaux inversibles de } k(X)^*
+\end{matrix}
+\right\}
+$$
+
+Par cette correspondance, deux diviseurs sont linéairement équivalents si et seulement si les faisceaux inversibles sont isomorphes. On a ainsi définit une application injective CaCl$(X)\rightarrow$ Pic$(X)$ dont on voit facilement que c'est un morphisme de groupes. Comme $X$ est supposé irréductible, c'est un isomorphisme car tout faisceau inversible est isomorphe à un sous-faisceau inversible de $k(X)^*$. En résumé on a le résultat suivant:
 
 
 \begin{prop}\label{isopic}
@@ -566,7 +582,7 @@ Soit $X$ une variété normale irréductible, $D,E\in\wdiv X$ avec $D$ de Cartie
 Écrivons $D=(U_i,f_i)_{i\in I}$. Alors sur chaque $U_i$, le morphisme $\alpha$ induit un isomorphisme de $\Oo_X$-module. En effet on a un morphisme inverse, il s'agit de la multiplication par $f_i$ composée avec l'inverse de l'isomorphisme $\Oo_{U_i}(D)\otimes_{\Oo_{U_i}}\Oo_{U_i}(E) \simeq \Oo_{U_i}(D)$, localement donné par $a\otimes b\mapsto abf_i$ .
 \end{proof}
 
-Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée section canonique et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{X|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des isomorphismes $\phi_i$, et donc du couple $(\Ll,s)$ à isomorphisme près, on l'appelle le diviseur des zéros de $s$. Lorsque l'on a un isomorphisme $(\Ll,s)\simeq (\Oo_X(D),f)$, on note ce diviseur $\divi_D(f)$ et on a $\divi_D(f)=\divi(f)+D$. On voit qu'il existe un unique diviseur de Cartier effectif $D$ tel que $(\Ll,s)\simeq(\Oo_X(D),1_D)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
+Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée \textit{section canonique} et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{X|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des isomorphismes $\phi_i$, et donc du couple $(\Ll,s)$ à isomorphisme près, on l'appelle \textit{le diviseur des zéros} de $s$. Lorsque l'on a un isomorphisme $(\Ll,s)\simeq (\Oo_X(D),f)$, on note ce diviseur $\divi_D(f)$ et on a $\divi_D(f)=\divi(f)+D$. On voit qu'il existe un unique diviseur de Cartier effectif $D$ tel que $(\Ll,s)\simeq(\Oo_X(D),1_D)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
 
 $$
 \left\{
@@ -607,7 +623,7 @@ On note encore $\divi_D(s):=\divi(s)+D$ les diviseurs de Weil effectifs obtenus 
 \subsubsection{Faisceaux inversibles sur $\PP_k^n$}
 
 \begin{prop}
-Soit $X:=\PP_k^n=\proj k[x_0,...,x_n]$. Pour tout diviseur $D=\sum n_i D_i\in\wdiv()$, on définit le degré de $D$ par $\deg D:=\sum n_i\deg D_i$, où $\deg D_i$ est le degré de l'équation définissant $D_i$ dans une carte affine standard qui intersecte $D_i$. Soit $H$ l'hyperplan $x_0=0$. Alors
+Soit $X:=\PP_k^n=\proj k[x_0,...,x_n]$. Pour tout diviseur $D=\sum a_i D_i\in\wdiv(X)$, on définit le degré de $D$ par $\deg D:=\sum a_i\deg D_i$, où $\deg D_i$ est le degré de l'équation définissant $D_i$ dans une carte affine standard qui intersecte $D_i$. Soit $H$ l'hyperplan $x_0=0$. Alors
 \begin{enumerate}
 \item Si $D$ est un diviseur de degré $d\in \ZZ$, alors $D\sim dH$.
 \item Pour tout $f\in k(X)^*$, on a $\deg\divi(f)=0$.
@@ -620,39 +636,102 @@ Soit $X:=\PP_k^n=\proj k[x_0,...,x_n]$. Pour tout diviseur $D=\sum n_i D_i\in\wd
 
 La proposition précédente et \ref{isopic} nous dit que $\pic(X)$ est engendré librement par $\Oo_X(H)$ pour tout hyperplan $H$ de $\PP_n^k$. De plus, comme $k[x_0,...,x_n]$ est engendré par des éléments homogènes de degré $1$, le faisceau $\Oo_X(l)$ est inversible pour tout $l\in \ZZ$, et on a $\Oo_X(m)\otimes_{\Oo_X}\Oo_X(l)\simeq \Oo_X(m+l)$, pour tout $m,l\in \ZZ$. Comme $\Oo_X(1)$ est isomorphe à $\Oo_X(H)$, on en déduit que tout faisceau inversible sur $\PP_k^n$ est isomorphe à un faisceau $\Oo_X(l)$, pour un entier $l\in \ZZ$.
 
+\subsubsection{Faisceau engendré par ses sections globales, Image inverse d'une section globale}
+\noindent Un $\Oo_X$-module $\Ff$ sur un schéma $X$ est \textit{engendré par des section globales} si on a une suite exacte 
+$$\bigoplus_{i\in I}\Oo_X\rightarrow \Ff\rightarrow 0$$
+Soient $f:Y\rightarrow X$ un morphisme de schémas, $\Ff$ un $\Oo_X$-module engendré par des sections globales $s_1,...,s_n$. On considère le morphisme canonique de $\Oo_X$-modules $\alpha:\Ff\rightarrow f_*f^*\Ff$, où la structure de $\Oo_X$-module sur $f_*f^*\Ff$ est donnée par $\lambda.t=f^\sharp(\lambda)t$ pour tout ouvert $V\subset X$, $\lambda\in \Oo_X(V)$, $t\in f_*f^*\Ff(V)$. On définit \textit{l'image inverse} de la section $s_i$ par $f^*(s_i):=\alpha(X)(s_i)$, c'est une section globale du faisceau de modules $f^*(\Ff)$. On vérifie que $f^*(\Ff)$ est engendré par les sections globales $f^*(s_1),...,f^*(s_n)$.
+
+Considérons maintenant une paire $(\Ll,s)$ constituée d'un faisceau inversible $\Ll$ sur $X$, et d'une section globale $s$. On note $\Vv_X(s)$ le support du diviseur des zéros de $s$, et $X_{s}=\lbrace x\in X\mid \Oo_{X,x}s_x=\Ll_x\rbrace=\lbrace x\in X\mid s_x\notin \mathfrak{m}_x\Ll_x\rbrace$ son complémentaire. Si $\Ll=\Oo_X$, il s'agit de l'ouvert principal $X_s$, et on a de plus $f^{-1}(X_s)=X_{f^\sharp(s)}=X_{f^*(s)}$ car $f^*\Oo_Y=\Oo_X$ et $\alpha=g^\sharp$ dans ce cas. Dans le cas général, on voit facilement que $f^*\Ll$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\Ll$, on voit d'après ce qui précède que $f^{-1}(X_s)=Y_{f^*(s)}$.  
+
+Enfin, si $s_1,...,s_n$ sont des sections globales qui engendrent $\Ll$, on voit que $(X_{s_i})$ est un recouvrement de $X$ qui trivialise $\Ll$. En effet, sur chaque $Y_{l_i}$, on a un isomorphisme $\Oo_{X_{s_i}}\rightarrow \Ll_{|X_{s_i}}$, $\lambda \mapsto \lambda s_i$, et par hypothèse, l'intersection $\cap_{i=1}^n \Vv_X(s_i)$ est vide. Enfin, on note sans ambiguïté $s_j/s_i$ l'unique élément de $\Oo(X_{s_i})$ tel que $s_j/s_i.s_i=s_j$ par l'isomorphisme précédent.
+
 \subsubsection{Morphismes vers l'espace projectif}
 \label{morphismeproj}
-Soit $X$ une variété munie d'un morphisme $(f,f^\sharp):X\rightarrow \PP^n_k$, où $\PP^n_k=$Proj$k[x_0,...,x_n]$. On considère le faisceau décalé $\Oo(1)$ sur $\PP^n_k$. C'est un faisceau inversible engendré par les sections globales $x_0,...,x_n$. $f^*\Oo(1)$ est également inversible et on a un morphisme canonique de $\Oo_{\PP^n_k}$-module $\alpha:\Oo(1)\rightarrow f_*f^*\Oo(1)$ où la structure de $\Oo_{\PP^n_k}$-module sur $f_*f^*\Oo(1)$ est donnée par $\lambda.t=f^\sharp(\lambda)t$ pour tout ouvert $V\subset \PP^n_k$, $\lambda\in \Oo_{\PP^n_k}(V)$, $t\in f_*f^*\Oo(1)(V)$. On définit des sections globales $f^*(x_0):=s_0:=\alpha(\PP^n_k)(x_0),...,f^*(x_n):=s_n:=\alpha(\PP^n_k)(x_n)$ de $f^*\Oo(1)$ dont on voit facilement qu'elles engendrent $f^*\Oo(1)$.
 
-Considérons un faisceau inversible $\Ll$ sur une variété $Y$, une section globale $l$, et un morphisme $(g,g^\sharp):X\rightarrow Y$. On définit l'ouvert 
-$$Y_l:=\lbrace y\in Y\mid \Oo_{Y,y}l_y=\Ll_y\rbrace=\lbrace y\in Y\mid l_y\notin m_y\Ll_y\rbrace$$
-C'est tout simplement le complémentaire du support du diviseur des zéros associé au couple $(\Ll,l)$. Si $\Ll=\Oo_Y$ il s'agit de l'ouvert principal $Y_l$, et on a de plus $g^{-1}(Y_l)=X_{g^\sharp(l)}=X_{g^*(l)}$ car $g^*\Oo_Y=\Oo_X$ et $\alpha=g^\sharp$ dans ce cas. Revenant dans le cas général, on voit facilement que $g^*\Ll$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\Ll$, on voit d'après ce qui précède que $g^{-1}(Y_l)=X_{g^*(l)}$. D'autre part, si $l_1,...,l_n$ sont des sections globales qui engendrent $\Ll$, on voit que $(Y_{l_i})$ est un recouvrement de $Y$ qui trivialise $\Ll$. En effet, sur chaque $Y_{l_i}$, on a un isomorphisme $\Oo_{Y|Y_{l_i}}\rightarrow \Ll_{Y|Y_{l_i}}$, $\lambda \mapsto \lambda l_i$, et par hypothèse, l'intersection des complémentaires des $Y_{l_i}$ est vide. Enfin, on note sans ambiguïté $l_j/l_i$ l'unique élément de $\Oo_{Y|Y_{l_i}}(Y_l)$ tel que $l_j/l_i.l_i=l_j$ par l'isomorphisme précédent.
+Soit $A$ un anneau, $X$ un schéma sur $\spec A$, et $f:X\rightarrow\PP_A^n$ un morphisme de schémas sur $\spec A$ où $\PP^n_A=\proj A[x_0,...,x_n]$. On considère le faisceau décalé $\Oo(1)$ sur $\PP^n_A$. C'est un faisceau inversible engendré par les sections globales $x_0,...,x_n$. Les sections globales $s_i:=f^*(x_i)$ pour $0\leq i\leq n$, engendrent $f^*\Oo(1)$ d'après la partie précédente. Sur la carte affine standard $U_i:=\Oo(1)_{x_i}$, la $A$-algèbre $\Oo_{P^n_A}(U_i)$ est engendrée par les éléments $x_j/x_i$ et on a $s_j/s_i.s_i=s_j=\alpha(U_i)(x_j)=\alpha(U_i)(x_j/x_i.x_i)=f^\sharp(x_j/x_i).\alpha(U_i)(x_i)=f^\sharp(x_j/x_i).s_i$. On a donc nécessairement $f^\sharp(x_j/x_i)=s_j/s_i$. Comme les $U_i$ sont affines, cela définit des morphismes $f_i:X_{s_i}\rightarrow P^n_A$ en composant avec l'inclusion. C'est morphismes se recollent en un unique morphisme, car ils coïncident sur les $X_{s_i}\cap X_{s_j}$. En résumé, on récupère $f$ par la donnée des sections $s_i$. Ainsi $f$ est l'unique morphisme tel que $f^*(x_i)=s_i$.
 
-Revenons au cas initial et notons $U_i=D_+(x_i)=\Oo(1)_{x_i}$. La $k$-algèbre $\Oo_{P^n_k}(U_i)$ est engendrée par les éléments $x_j/x_i$ et on a $s_j/s_i.s_i=s_j=\alpha(U_i)(x_j)=\alpha(U_i)(x_j/x_i.x_i)=f^\sharp(x_j/x_i).\alpha(U_i)(x_i)=f^\sharp(x_j/x_i).s_i$. On a donc nécessairement $f^\sharp(x_j/x_i)=s_j/s_i$. Comme les $U_i$ sont affines, cela définit des morphismes $f_i:X_{s_i}\rightarrow P^n_k$ en composant avec l'inclusion. C'est morphismes se recollent en un unique morphisme, car ils coïncident sur les $X_{s_i}\cap X_{s_j}$. Autrement dit, on récupère $f$ par la donnée des $s_i$, et $f$ est ainsi l'unique morphisme tel que $f^*(x_i)=s_i$.
+Réciproquement montrons que la donnée d'un faisceau inversible $\Ll$ sur $X$ et de sections globales $s_0,...,s_n$ qui l'engendrent définissent un unique morphisme $f:X\rightarrow \PP^n_A$ tel que $\Ll\simeq f^*\Oo(1)$, ce dernier isomorphisme étant celui qui envoie $f^*(x_i)$ sur $s_i$. Si $f$ existe avec ces propriétés, il est unique d'après ce qui précède. Pour l'existence, on construit comme précédemment des morphismes $f_i:X_{s_i}\rightarrow U_i$ qui se recollent en un morphisme $f:X\rightarrow \PP^n_A$. Par construction, $\Ll$ et $f^*\Oo(1)$ se trivialisent sur le même recouvrement $(f^{-1}(U_i)=X_{s_i}=X_{f^*(x_i)})_{1\leq i\leq n}$. On a des isomorphismes locaux $\phi_i:\Ll_{|f^{-1}(U_i)}\rightarrow f^*\Oo(1)_{|f^{-1}(U_i)}$, $s_i\mapsto f^*x_i$. Ce sont des sections locales de $\mathscr{H}om_{\Oo_X}(\Ll,\Oo(1))$ sur un recouvrement de $X$. Pour vérifier qu'elles coïncident aux intersections $X_{s_i}\cap X_{s_j}$, on remarque que l'on a $s_i/s_j=f^\sharp(U_i\cap U_j)(x_i/x_j)= f^*(x_i)/f^*(x_j)\in \Oo_X(X_{s_i}\cap X_{s_j})^*$. Ces sections se recollent donc en un unique isomorphisme $\Ll\simeq f^*\Oo(1)$ qui est bien l'isomorphisme recherché.
 
-Réciproquement montrons que la donnée d'un faisceau inversible $\Ll$ sur $X$ et de sections globales $l_0,...,l_n$ qui l'engendrent définissent un unique morphisme $f:X\rightarrow \PP^n_k$ tel que $\Ll\simeq f^*\Oo(1)$, ce dernier isomorphisme étant celui qui envoie $f^*(x_i)$ sur $l_i$. Si $f$ existe avec ces propriétés, il est unique d'après ce qui précède. Pour l'existence, on construit comme précédemment des morphismes $f_i:X_{l_i}\rightarrow U_i$ qui se recollent en un morphisme $f:X\rightarrow \PP^n_k$. Par construction, $\Ll$ et $f^*\Oo(1)$ se trivialisent sur le même recouvrement $(f^{-1}(U_i)=X_{l_i}=X_{f^*(x_i)})_i$. On a des isomorphismes locaux $\phi_i:\Ll_{|f^{-1}(U_i)}\rightarrow f^*\Oo(1)_{|f^{-1}(U_i)}$, $l_i\mapsto f^*x_i$. Ce sont des sections locales de $\mathscr{H}om_{\Oo_X}(\Ll,\Oo(1))$ sur un recouvrement de $X$. Pour vérifier qu'elles coïncident aux intersections $X_{l_i}\cap X_{l_j}$, on remarque que l'on a $l_i/l_j=f^\sharp(U_i\cap U_j)(x_i/x_j)= f^*(x_i)/f^*(x_j)\in \Oo_X(X_{l_i}\cap X_{l_j})^*$. Ces sections se recollent donc en un unique isomorphisme $\Ll\simeq f^*\Oo(1)$ qui est bien l'isomorphisme recherché.
+\noindent En résumé on a obtenu une correspondance bijective
+$$
+\left\{
+\begin{matrix}
+\text{Morphismes de schémas sur } \spec A\\
+f:X\rightarrow \PP_A^n
+\end{matrix}
+\right\}
+\leftrightarrow
+\left\{
+\begin{matrix}
+\text{Classes d'isomorphies de uplets }(\Ll, s_0,...,s_n)\\
+\text{constituées d'un faisceau inversible}\\
+\text{et de sections globales qui l'engendrent}
+\end{matrix}
+\right\}
+$$
 
 
 \subsubsection{Variétés quasi-projectives, faisceaux amples}
 
+\noindent On se fixe un anneau de base $A$.
 
-\begin{defn}[Faisceau très ample]
-Soit $X$ une variété et $\Ll$ un faisceau inversible sur $X$ engendré par une famille finie de sections globales. Si ces sections définissent une immersion $X\xhookrightarrow{}\PP_k^n$, on dit que $\Ll$ est très ample. Cela revient à dire que $\Ll\simeq i^*\Oo(1)$  pour une immersion $i:\xhookrightarrow{}\PP_k^n$. Si $X$ est normale et irréductible, un diviseur de Cartier $D$ est dit très ample si on a $\Oo_X(D)\simeq i^*\Oo(1)$ pour une immersion $i:\xhookrightarrow{}\PP_k^n$.
+\begin{defn}[Morphisme projectif, quasi-projectif]
+Un morphisme de schémas $f:X\rightarrow \spec A$ est projectif si il se factorise à travers une immersion fermée $i:X\rightarrow \PP_A^n$ sur $\spec A$, pour un entier $n>0$. Le morphisme est quasi-projectif si il se factorise à travers une immersion ouverte $X\rightarrow X'$ composée avec un morphisme projectif $X'\rightarrow \spec A$.
 \end{defn}
 
-Supposons maintenant $X$ lisse (donc normale), irréductible et projective, $D\in \wdiv(X)$,  et $\Oo_X(D)$ le faisceau inversible associé. On a vu que l'ensemble des diviseurs effectifs linéairement équivalents à $D$ est $\lbrace \divi_D(s)\mid s\in\Gamma(X,\Oo_X(D))\setminus\lbrace0\rbrace \rbrace$. D'autre part, deux sections globales $s, s'$ non nulles ont même diviseur des zéros si et seulement si elles sont colinéaires dans le $k$-ev $\Gamma(X, \Oo_X(D))$, en effet dans ce cas $s/s'\in \Oo(X)^*=k^*$, car $k$ est algébriquement clos. Notons enfin que $\Gamma(X, \Oo_X(D))$ est de dimension finie sur $k$ (\cite{Hartshorne} II.5.19). Ainsi l'ensemble des diviseurs effectifs linéairement équivalent à $D$ est naturellement muni d'une structure d'espace projectif, cela amène la définition suivante:
+
+\begin{defn}[Schéma projectif, quasi-projectif]
+Un schéma $X$ sur $\spec A$ est projectif (resp. quasi-projectif) si le morphisme structural est projectif (resp. quasi-projectif).
+\end{defn}
+
+\begin{defn}[Faisceau très ample relativement à $\spec A$]
+Soit $X$ un schéma sur $\spec A$ et $\Ll$ un faisceau inversible sur $X$ engendré par une famille finie de sections globales. Si ces sections définissent une immersion $X\xhookrightarrow{}\PP_A^n$ sur $\spec A$, on dit que $\Ll$ est très ample relativement à $\spec A$. Cela revient à dire que $\Ll\simeq i^*\Oo(1)$  pour une immersion $i:X\xhookrightarrow{}\PP_A^n$.
+\end{defn}
+
+\begin{defn}[Faisceau ample]
+Soit $X$ un schéma. Un faisceau inversible $\Ll$ sur $X$ est ample si pour tout faisceau cohérent $\Ff$ sur $X$, il existe un entier $n_0>0$ tel que pour tout $n\geq n_0$, le faisceau $\Ff\otimes_{\Oo_X}\Ll^{\otimes n}$ est engendré par ses sections globales.
+\end{defn}
+
+\begin{prop}
+Soit $X$ un schéma sur $\spec A$ avec $A$ noetherien. Un faisceau très ample sur $X$ relativement à $\spec A$ est ample.
+\end{prop}
+\begin{proof}
+\cite{Hartshorne} II.5.17
+\end{proof}
+
+\begin{thm}
+Soit $X$ un schéma de type fini sur $\spec A$ avec $A$ noetherien, et $\Ll$ un faisceau inversible sur $X$. Alors $\Ll$ est ample si et seulement si $\Ll^{\otimes m}$ est très ample relativement à $\spec A$ pour un entier $m>0$.
+\end{thm}
+\begin{proof}
+\cite{Hartshorne} II.7.6
+\end{proof}
+
+
+Considèrons maintenant $X$ une variété lisse irréductible et projective, $D\in \wdiv(X)$, et $\Oo_X(D)$ le faisceau inversible associé. On a vu que l'ensemble des diviseurs effectifs linéairement équivalents à $D$ est $\lbrace \divi_D(s)\mid s\in\Gamma(X,\Oo_X(D))\setminus\lbrace0\rbrace \rbrace$. D'autre part, deux sections globales $s, s'$ non nulles ont même diviseur des zéros si et seulement si elles sont colinéaires dans le $k$-ev $\Gamma(X, \Oo_X(D))$, en effet dans ce cas $s/s'\in \Oo(X)^*=k^*$, car $k$ est algébriquement clos. Notons enfin que $\Gamma(X, \Oo_X(D))$ est de dimension finie sur $k$ (\cite{Hartshorne} II.5.19). Ainsi l'ensemble des diviseurs effectifs linéairement équivalent à $D$ est naturellement muni d'une structure d'espace projectif, cela amène la définition suivante:
 \begin{defn}[Système linéaire, point de base]
-Soit $X$ une variété lisse et projective, et $D$ un diviseur. Le système linéaire complet définit par $D$ est l'ensemble des diviseurs effectifs linéairement équivalents à $D$, on le note $|D|$. Un système linéaire est une partie de $|D|$ correspondant à un sous espace projectif. On dit que $p\in X$ est un point de base d'un système linéaire $\PP(V)\subset |D|$ si l'intersection des $\Vv_X(s):=X\setminus X_s$ pour $s\in V$ est non-vide. 
+Soit $X$ une variété lisse et projective, et $D$ un diviseur. Le système linéaire complet défini par $D$ est l'ensemble des diviseurs effectifs linéairement équivalents à $D$, on le note $|D|$. Un système linéaire est une partie de $|D|$ correspondant à un sous espace projectif. On dit que $p\in X$ est un point de base d'un système linéaire $\PP(V)\subset |D|$ si l'intersection des $\Vv_X(s):=X\setminus X_s$ pour $s\in V$ est non-vide. 
 \end{defn}
 
-Autrement dit dans ce langage, se donner un morphisme $X\rightarrow \PP^n_k$ est équivalent à se donner un système linéaire $\PP(V)\subset |D|$ sans point de base et une base de $V$.
+Autrement dit dans ce langage, se donner un morphisme $X\rightarrow \PP^n_k$ est équivalent à se donner un système linéaire $\PP(V)\subset |D|$ sans point de base et une base de $V$. Voir \cite{Hartshorne} II.7.8.2 pour une caractérisation des variétés projectives dans ce langage.
 
 
 \subsection{Le groupe des unités d'une variété irréductible}
 \label{unitGroupFiniteType}
 
 
-Soit $X$ une variété, le groupe des unités $U(X)$ de $X$ est le quotient du groupe $\Oo(X)^*$ des fonctions régulières inversibles par le sous-groupe $k^*$ des fonctions constantes. On va appliquer les techniques précédentes pour obtenir un résultat de finitude de $U(X)$ lorsque $X$ est irréductible, ainsi que du groupe des caractères d'un groupe algébrique.
+Soit $X$ une variété, le groupe des unités $U(X)$ de $X$ est le quotient du groupe $\Oo(X)^*$ des fonctions régulières inversibles par le sous-groupe $k^*$ des fonctions constantes. On va appliquer les techniques précédentes pour obtenir un résultat de finitude de $U(X)$ lorsque $X$ est irréductible, ainsi que du groupe des caractères d'un groupe algébrique. On commence par énoncer un lemme utile.
+
+\begin{lem}\label{CompletionNormal}
+Soit $X$ une variété affine irréductible.
+Il existe une variété projective irréductible $\bar{X}$ contenant $X$ comme ouvert. Si $X$ est normale, alors $\bar{X}$ peut être choisie normale également.
+\end{lem}
+\begin{proof}
+On peut supposer que $X$ est plongée dans un espace affine $\AAA^n_k$. On considère alors l'adhérence $Y$ de $X$ dans l'espace projectif $\PP^n_k$ (qui contient $\AAA^n_k$ comme ouvert). Par construction, $Y$ est projective, irréductible et contient $X$ comme ouvert.
+
+Si $X$ est normale, on considère la normalisation $\eta:\widetilde{Y}\rightarrow Y$. Alors $\widetilde{Y}$ contient encore $X$ comme ouvert par hypothèse. Pour montrer que $\widetilde{Y}$ est projective, il suffit de montrer qu'elle est quasi-projective car comme $\eta$ est fini, $\widetilde{Y}$ est propre sur $k$ (\cite{Hartshorne} II.4.8, ex II.4.1), ce qui permet d'utiliser \cite{Hartshorne} ex II.4.4. Par hypothèse, $Y$ admet un faisceau ample $\Ll$, on va vérifier que $\eta^*\Ll$ est ample, ce qui achèvera la preuve. Soit $\Ff$ un faisceau cohérent sur $\widetilde{Y}$. Alors $\eta_*\Ff$ est cohérent sur $Y$ car $\eta$ est fini et $Y$ est noetherien (\ref{FQCProps3} 6). Comme $\Ll$ est ample, $\eta_*\Ff\otimes_{\Oo_Y} \Ll^{\otimes m}$ est engendré par ses sections globales pour $m\gg 0$, ce qui donne un morphisme surjectif $\bigoplus_{i\in I}\Oo_Y\rightarrow \eta_*\Ff\otimes_{\Oo_Y} \Ll^{\otimes m}$. Par la formule de projection (\cite{Hartshorne} ex II.5.1.$d$), on a $\eta_*\Ff\otimes_{\Oo_Y} \Ll^{\otimes m}=\eta_*(\Ff\otimes_{\Oo_{\widetilde{Y}}}\eta^*(\Ll^{\otimes m}))$. Le foncteur $\eta^*$ est exacte à droite, commute au produit tensoriel et aux sommes directes. On obtient donc un morphisme surjectif 
+$$\oplus_{i\in I}\Oo_{\widetilde{Y}}=\oplus_{i\in I}\eta^*\Oo_Y\rightarrow \eta^*\eta_*(\Ff\otimes_{\Oo_{\widetilde{Y}}}(\eta^*\Ll)^{\otimes m})$$
+Finalement, comme l'application canonique $\eta^*\eta_*(\Ff\otimes_{\Oo_{\widetilde{Y}}}(\eta^*\Ll)^{\otimes m})\rightarrow \Ff\otimes_{\Oo_{\widetilde{Y}}}(\eta^*\Ll)^{\otimes m}$ est surjective car $\eta$ est affine, on obtient que $\eta^*\Ll$ est ample en composant les deux applications précédentes.
+\end{proof}
 
 \begin{prop}
 Soit $X$ une variété irréductible. Alors $U(X)$ est libre de type fini.
@@ -660,7 +739,7 @@ Soit $X$ une variété irréductible. Alors $U(X)$ est libre de type fini.
 \begin{proof}
 Comme $\Oo(X)^*$ s'injecte dans $\Oo(U)^*$ pour tout ouvert $U\subset X$, on peut supposer $X$ affine car un sous-groupe d'un groupe abélien libre de type fini est aussi libre de type fini. Soit $\eta_X:\widetilde{X}\rightarrow X$ l'application de normalisation. Alors $\widetilde{X}$ est affine, on a une injection $\eta_X^\sharp:\Oo(X)\xhookrightarrow{}\Oo(\widetilde{X})$ qui induit une injection $U(X)\xhookrightarrow{}U(\widetilde{X})$. On peut donc supposer $X$ normale.
 
-D'après \ref{}, on peut supposer que $X$ est un ouvert d'une variété projective normale $\bar{X}$. On note $D_1,...,D_r$ les composantes irréductibles de $\bar{X}\setminus X$. Ceux sont des diviseurs premiers car ils sont définis par l'équation de l'hyperplan à l'infini. Dans chaque carte affine qui les rencontre, il s'agit donc de sous-variétés fermés de codimension $1$ d'après \ref{dimsousvariete}. Chacun de ces diviseurs premiers $D_i$ définit un anneau de valuation discrète dont on note $v_i$ la valuation. On considère l'application:
+D'après \ref{CompletionNormal}, on peut supposer que $X$ est un ouvert d'une variété projective normale $\bar{X}$. On note $D_1,...,D_r$ les composantes irréductibles de $\bar{X}\setminus X$. Ceux sont des diviseurs premiers car ils sont définis par l'équation de l'hyperplan à l'infini. Dans chaque carte affine qui les rencontre, il s'agit donc de sous-variétés fermés de codimension $1$ d'après \ref{dimsousvariete}. Chacun de ces diviseurs premiers $D_i$ définit un anneau de valuation discrète dont on note $v_i$ la valuation. On considère l'application:
 $$\Oo(X)^*\rightarrow \ZZ^r, f\mapsto (v_1(f),...,v_r(f))$$
 C'est un morphisme de groupes de noyau $k^*$ d'après \cite{Hartshorne} I.3.4. ce qui conclut la preuve.
 \end{proof}
@@ -673,7 +752,7 @@ est surjectif.
 \begin{proof}
 Il suffit de montrer que $f\in \Oo(X\times Y)^*$ peut s'écrire $f=gh$ pour $g\in k(X)$ et $h\in k(Y)$. En effet, on considère un point $y\in Y$ où $h$ est régulière. D'autre part on constate que $f_y:x\mapsto f(x,y)$ est régulière sur $X$, ce qui se voit sur les ouverts affines $U\times V$. En effet $\Oo(U\times V)$ est alors le coproduit des algèbres de coordonnées $\Oo(U)$ et $\Oo(V)$, c'est à dire leur produit tensoriel. De plus, $f_y$ ne s'annule pas donc est inversible dans $\Oo(X)$. Cela prouve que $g$ est en fait régulière, et $h$ aussi par le même raisonnement.
 
-On peut ainsi remplacer $X$ et $Y$ par deux ouverts affines lisses. Le produit  $X\times Y$ est encore affine et lisse. D'après \ref{}, on peut supposer que $X$ est un ouvert d'une variété projective normale $\bar{X}$, et on note $D_1,...,D_r$ les diviseurs premiers correspondants aux composantes irréductibles de $\bar{X}\setminus X$. Soit $f\in \Oo(X\times Y)^*$ que l'on regarde comme une fonction rationnelle sur $\bar{X}\times Y$, qui est normal d'après \ref{tensorproductNormalDomain}. Le diviseur associé à $f$ est à support dans $(\bar{X}\setminus X)\times Y$, on a donc $\divi(f)=\sum_{i=1}^rn_iD_i\times Y$ pour des entiers $n_1,...,n_r$. Soit $\pi_i$ une uniformisante de l'anneau de valuation discrète $\Oo_{\bar{X},D_i}$. Il existe $x_0\in D_i$ tel que $\pi_i$ définisse une équation locale de $D_i$. Soit $y_0\in Y$, on peut écrire une équation locale de $D_i\times Y$ en $(x_0,y_0)$ s'écrit $f_i(x)u(x,y)$ avec $u$ inversible sur un voisinage de $(x_0,y_0)$. Ainsi il existe un ouvert non-vide $V\subset Y$ tel que pour tout $y\in V$, on ait $\divi(f_y)=\sum_{i=1}^rn_iD_i$. Choisissons $y_0\in V$, alors $\divi(f_yf_{y_0}^{-1})=0$ donc $f_yf_{y_0}^{-1}$ définit une fonction régulière sur $\bar{X}$. Comme $\bar{X}$ est complète (voir \ref{}), $f_yf_{y_0}^{-1}$ est en fait constante. Ainsi $h:=f/f_{y_0}$ définit une fonction rationnelle sur $Y$ telle que $f=f_{y_0}h$ comme désiré.
+On peut ainsi remplacer $X$ et $Y$ par deux ouverts affines lisses. Le produit  $X\times Y$ est encore affine et lisse. D'après \ref{CompletionNormal}, on peut supposer que $X$ est un ouvert d'une variété projective normale $\bar{X}$, et on note $D_1,...,D_r$ les diviseurs premiers correspondants aux composantes irréductibles de $\bar{X}\setminus X$. Soit $f\in \Oo(X\times Y)^*$ que l'on regarde comme une fonction rationnelle sur $\bar{X}\times Y$, qui est normal d'après \ref{tensorproductNormalDomain}. Le diviseur associé à $f$ est à support dans $(\bar{X}\setminus X)\times Y$, on a donc $\divi(f)=\sum_{i=1}^rn_iD_i\times Y$ pour des entiers $n_1,...,n_r$. Soit $\pi_i$ une uniformisante de l'anneau de valuation discrète $\Oo_{\bar{X},D_i}$. Il existe $x_0\in D_i$ tel que $\pi_i$ définisse une équation locale de $D_i$. Soit $y_0\in Y$, on peut écrire une équation locale de $D_i\times Y$ en $(x_0,y_0)$ sous la forme $\pi_i(x)u(x,y)$ avec $u$ inversible sur un voisinage de $(x_0,y_0)$. Ainsi il existe un ouvert non-vide $V\subset Y$ tel que pour tout $y\in V$, on ait $\divi(f_y)=\sum_{i=1}^rn_iD_i$. Choisissons $y_0\in V$, alors $\divi(f_yf_{y_0}^{-1})=0$ donc $f_yf_{y_0}^{-1}$ définit une fonction régulière sur $\bar{X}$. Comme $\bar{X}$ est propre sur $k$ (\cite{Hartshorne} II.4.9), $f_yf_{y_0}^{-1}$ est en fait constante (\cite{Hartshorne} ex II.4.4). Ainsi $h:=f/f_{y_0}$ définit une fonction rationnelle sur $Y$ telle que $f=f_{y_0}h$ comme désiré.
 \end{proof}
 
 \noindent Soit $X,\,Y$ des variétés irréductibles. Considérons la suite exacte courte

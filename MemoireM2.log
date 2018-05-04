@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  3 MAY 2018 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  4 MAY 2018 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1184,7 +1184,7 @@ ireM2.tocpdfTeX warning (ext4): destination with the same identifier (name{page
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.61 ...mberline {4}Anneaux de Cox}{51}{chapter.4}
+l.62 ...mberline {4}Anneaux de Cox}{52}{chapter.4}
                                                    [1
 
 ])
@@ -1259,63 +1259,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 59.
+(hyperref)                removing `math shift' on input line 60.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 59.
+(hyperref)                removing `subscript' on input line 60.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 59.
+(hyperref)                removing `math shift' on input line 60.
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
 [35] [36] [37] [38] [39] [40]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 347.
+(hyperref)                removing `math shift' on input line 348.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 347.
+(hyperref)                removing `math shift' on input line 348.
 
 [41] [42] [43] [44] [45] [46]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 605.
+(hyperref)                removing `math shift' on input line 621.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 605.
+(hyperref)                removing `subscript' on input line 621.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 605.
+(hyperref)                removing `superscript' on input line 621.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 605.
+(hyperref)                removing `math shift' on input line 621.
 
-[47] [48]
-
-LaTeX Warning: Reference `' on page 49 undefined on input line 663.
-
-
-LaTeX Warning: Reference `' on page 49 undefined on input line 676.
-
-
-LaTeX Warning: Reference `' on page 49 undefined on input line 676.
-
-[49]) [50]
+[47] [48] [49] [50]) [51]
 \openout2 = `chapters/coxring.aux'.
 
  (./chapters/coxring.tex
 Chapitre 4.
-[51
+[52
 
 
 
@@ -1324,17 +1314,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-[52] [53] [54] [55] [56] [57] [58]
+[53] [54] [55] [56] [57] [58] [59]
 
 LaTeX Warning: Command \textsection invalid in math mode on input line 310.
 
 Missing character: There is no Ÿ in font cmr10!
-[59] [60] [61] [62] [63] [64] [65] [66] [67]) [68] (./MemoireM2.bbl
+[60] [61] [62] [63] [64] [65] [66] [67] [68]) [69] (./MemoireM2.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 36.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [69
+)) [70
 
 
 ]
@@ -1349,17 +1339,14 @@ Package rerunfilecheck Info: File `MemoireM2.out' has not changed.
 (rerunfilecheck)             Checksum: 353C6C299AFA5745F0EDBA5A210B92D5;4437.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 22068 strings out of 492995
- 412607 string characters out of 6132704
- 493289 words of memory out of 5000000
+ 22078 strings out of 492995
+ 412727 string characters out of 6132704
+ 493286 words of memory out of 5000000
  24629 multiletter control sequences out of 15000+600000
  28620 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1407,10 +1394,10 @@ mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on MemoireM2.pdf (70 pages, 851148 bytes).
+Output written on MemoireM2.pdf (71 pages, 859526 bytes).
 PDF statistics:
- 1539 PDF objects out of 1728 (max. 8388607)
- 1416 compressed objects within 15 object streams
- 539 named destinations out of 1000 (max. 500000)
+ 1572 PDF objects out of 1728 (max. 8388607)
+ 1448 compressed objects within 15 object streams
+ 549 named destinations out of 1000 (max. 500000)
  429 words of extra memory for PDF output out of 10000 (max. 10000000)
 
