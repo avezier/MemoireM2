@@ -8,44 +8,44 @@ A level-1 auxiliary file: chapters/faisceaux.aux
 A level-1 auxiliary file: chapters/coxring.aux
 The style file: plain.bst
 Database file #1: biblio/biblio.bib
-You've used 14 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            578 strings with 5420 characters,
-and the built_in function-call counts, 3028 in all, are:
-= -- 272
-> -- 98
+            583 strings with 5526 characters,
+and the built_in function-call counts, 3236 in all, are:
+= -- 292
+> -- 105
 < -- 0
-+ -- 43
-- -- 28
-* -- 105
-:= -- 537
-add.period$ -- 45
-call.type$ -- 14
-change.case$ -- 45
++ -- 46
+- -- 30
+* -- 111
+:= -- 572
+add.period$ -- 48
+call.type$ -- 15
+change.case$ -- 49
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 153
-empty$ -- 309
-format.name$ -- 28
-if$ -- 648
+cite$ -- 15
+duplicate$ -- 160
+empty$ -- 331
+format.name$ -- 30
+if$ -- 694
 int.to.chr$ -- 0
-int.to.str$ -- 14
+int.to.str$ -- 15
 missing$ -- 22
-newline$ -- 76
-num.names$ -- 28
-pop$ -- 118
+newline$ -- 81
+num.names$ -- 30
+pop$ -- 126
 preamble$ -- 1
-purify$ -- 42
+purify$ -- 45
 quote$ -- 0
-skip$ -- 80
+skip$ -- 87
 stack$ -- 0
-substring$ -- 71
-swap$ -- 14
+substring$ -- 76
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 34
+type$ -- 38
 warning$ -- 0
-while$ -- 28
-width$ -- 16
-write$ -- 145
+while$ -- 30
+width$ -- 17
+write$ -- 155

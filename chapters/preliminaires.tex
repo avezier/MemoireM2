@@ -7,7 +7,7 @@ On collecte dans cette partie des définitions et résultats d'algèbre commutat
 
 \subsection{Décomposition primaire des modules noetheriens}
 
-On fixe dans cette partie un $A$-module non-nul $M$ de type fini avec $A$ noetherien. On pense par exemple à $A/\mathfrak{a}$, où $\mathfrak{a}$ est un idéal de $A$. Voir \cite{Matsumura} Chap. 6 pour les preuves et plus de résultats.
+On fixe dans cette partie un $A$-module non-nul $M$ de type fini avec $A$ noetherien. On pense par exemple à $A/\mathfrak{a}$, où $\mathfrak{a}$ est un idéal de $A$. Voir \cite[Chap. 6]{Matsumura} pour les preuves et plus de résultats.
 
 \begin{defn}[Idéal premier associé]
 Un idéal premier $\mathfrak{p}\subset A$ est un idéal premier associé à $M$ si c'est l'annulateur $\ann(m)$ d'un élément $m\in M$. Si $M$ est de la forme $A/\mathfrak{a}$, on parle d'idéal premier associé à $\mathfrak{a}$. On note $\assp_AM$ l'ensemble des idéaux premiers associés à $M$. Les éléments minimaux de $\assp_AM$ sont appelés premiers isolés, les autres sont appelés premiers immergés.
@@ -85,7 +85,7 @@ Les assertions suivantes sont équivalentes
 \end{enumerate}
 \end{prop}
 \begin{proof}
-Voir \cite{atiyahmacdo} 5.1
+Voir \cite[5.1]{atiyahmacdo}
 \end{proof}
 
 Ainsi, l'ensemble des éléments de $B$ entiers sur $A$ forment un sous-anneau de $B$, c'est la \textit{clôture intégrale} de $A$ dans $B$, notée $\overline{A_B}$. Si $\overline{A_B}=B$, on dit que $A$ est \textit{intégralement clos} dans $B$. Dans le cas où $A$ est intègre et $B=\fract A$, on dit tout simplement intégralement clos. Si $A$ n'est pas intègre, remarquons qu'il existe une notion plus générale qu'il est utile de mentionner pour la consistance avec la terminologie de variété normale que nous verrons plus loin. Pour un anneau quelconque $A$, on dit que $A$ est \textit{normal} si tout localisé de $A$ en un idéal premier est un anneau intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13). Notons que nous ne rencontrerons pas dans ce mémoire d'anneaux normaux non-intègres.
@@ -108,7 +108,7 @@ Soit $A$ un anneau intègre noetherien intégralement clos. Alors
 \end{enumerate}
 \end{thm}
 \begin{proof}
-Voir \cite{Matsumura} 11.5
+Voir \cite[11.5]{Matsumura} 
 \end{proof}
 
 
@@ -117,7 +117,7 @@ Soit $A$ un anneau noetherien intégralement clos. Alors,
 $A$ est factoriel si et seulement si tout idéal premier de hauteur $1$ est principal.
 \end{thm}
 \begin{proof}
-Voir \cite{Matsumura} 20.1
+Voir \cite[20.1]{Matsumura} 
 \end{proof}
 
 \begin{thm}[Critère de Serre pour la normalité]\label{SerreCritere}
@@ -128,7 +128,7 @@ Soit $A$ un anneau noetherien intègre. Alors $A$ est intégralement clos si et 
 \end{enumerate}
 \end{thm}
 \begin{proof}
-Voir \cite{Matsumura} 23.8
+Voir \cite[23.8]{Matsumura} 
 \end{proof}
 
 \begin{prop}\label{SerreCritere2}
@@ -149,21 +149,21 @@ Soit $A$ et $B$ deux $k$-algèbres intégralement closes. Alors $A\otimes_k B$ e
 Soit $A$ une algèbre de type fini sur un corps quelconque $k$. Alors il existe des éléments $a_1,...,a_n\in A$ tels que $A$ soit une extension finie de $k[a_1,...,a_n]$.
 \end{thm}
 \begin{proof}
-Voir \cite{MumfordRedBook} I.1
+Voir \cite[I.1]{MumfordRedBook} 
 \end{proof}
 
 \begin{thm}\label{IntClosureFinite}
 Soit $A$ une algèbre de type fini intègre sur un corps $k$ quelconque, $K=\fract A$ son corps des fractions, et $K\rightarrow L$ une extension finie de $K$. Alors la clôture intégrale $\overline{A_L}$ de $A$ dans $L$ est une extension finie de $A$, et une $k$-algèbre de type fini.
 \end{thm}
 \begin{proof}
-Voir \cite{Eisenbud} 4.14
+Voir \cite[4.14]{Eisenbud} 
 \end{proof}
 
 \begin{thm}[Nullstellensatz]\label{Nullstellensatz}
 Soit $k$ un corps algébriquement clos, et $A=k[x_1,...,x_n]$ une algèbre de polynômes. Alors les idéaux maximaux de $A$ sont les $\mathfrak{m}_\alpha=(x_1-\alpha_1,...,x_n-\alpha_n)$ avec $\alpha=(\alpha_1,...,\alpha_n)\in k^n$.
 \end{thm}
 \begin{proof}
-Voir \cite{Eisenbud} 4.14
+Voir \cite[5.3]{Matsumura}
 \end{proof}
 
 \begin{defn}[Dimension de Krull]
@@ -175,7 +175,7 @@ $$\mathfrak{p}_0\varsupsetneq \mathfrak{p}_1 \varsupsetneq...\varsupsetneq  \mat
 Soit $A$ une algèbre de type fini intègre sur un corps $k$ quelconque, $K=\fract A$ son corps des fractions. Alors $\dim A=\trdeg_k A$.
 \end{thm}
 \begin{proof}
-Voir \cite{Matsumura} 5.6
+Voir \cite[5.6]{Matsumura}
 \end{proof}
 
 \subsection{Anneaux locaux}
@@ -188,21 +188,21 @@ Un anneau local noethérien $A$ de corps résiduel $k=A/\mathfrak{m}$ est régul
 Soit $A$ un anneau local noetherien. Alors $$\dim_k\mathfrak{m}/\mathfrak{m}^2\geq \dim A $$
 \end{prop}
 \begin{proof}
-Voir \cite{Matsumura} V.14
+Voir \cite[5.14]{Matsumura} 
 \end{proof}
 
 \begin{thm}
 Soit $A$ un anneau local régulier, et $\mathfrak{p}$ un idéal premier. Alors $A_\mathfrak{p}$ est encore régulier.
 \end{thm}
 \begin{proof}
-Voir \cite{Matsumura} VII.19.3
+Voir \cite[19.3]{Matsumura}
 \end{proof}
 
 \begin{thm}\label{reglocufd}
 Un anneau local régulier est factoriel.
 \end{thm}
 \begin{proof}
-Voir \cite{Matsumura} VII.20.3
+Voir \cite[20.3]{Matsumura}
 \end{proof}
 
 \begin{defn}[Valuation discrète sur un corps]
@@ -230,7 +230,7 @@ Soit $A$ un anneau intègre local noetherien de dimension $1$. Soit $\mathfrak{m
 En particulier, un générateur de l'idéal maximal d'un anneau de valuation discrète est appelé une uniformisante.
 \end{prop}
 \begin{proof}
-Voir \cite{atiyahmacdo} 9.2
+Voir \cite[9.2]{atiyahmacdo} 
 \end{proof}
 
 \begin{defn}[Idéal fractionnaire]
@@ -259,7 +259,7 @@ Soit $A$ un anneau intègre et $\mathfrak{a}$ un idéal fractionnaire de $A$. Le
 \end{enumerate}
 \end{thm}
 \begin{proof}
-Voir \cite{Matsumura} IV.11.3
+Voir \cite[11.3]{Matsumura}
 \end{proof}
 
 \subsection{Algèbres graduées}
@@ -384,7 +384,7 @@ Soit $S$ un schéma. Un $S$-schéma, ou schéma sur $S$, est un schéma $X$ muni
 \end{defn}
 
 Soit $S$ un schéma de base. Les $S$-schémas forment une sous-catégorie où l'on demande que les morphismes soient compatibles avec les morphismes structuraux. Le produit existe dans cette catégorie, on l'appelle le \textit{produit fibré sur $S$}. Cette construction se fait par recollement en remarquant que pour des schémas affines $X,Y$ sur un schéma affine $S$, le produit fibré $X\times_S Y$ est naturellement $\spec (\Oo_X(X)\otimes_{\Oo_S(S)}\Oo_Y(Y))$. En effet, cela vient de \ref{EqCat} et du fait que le produit tensoriel sur $\Oo_S(S)$ est le co-produit dans la catégorie des $\Oo_S(S)$-algèbres. 
-Comme tout anneau est naturellement une $\ZZ$-algèbre, tout schéma est naturellement un schéma sur $\spec \ZZ$. Le produit de deux schéma est par définition le produit sur $\spec \ZZ$.
+Comme tout anneau est naturellement une $\ZZ$-algèbre, tout schéma est naturellement un schéma sur $\spec \ZZ$. Le produit de deux schémas est par définition le produit sur $\spec \ZZ$.
 
 \subsection{Quelques propriétés des schémas}
 
@@ -422,7 +422,7 @@ Soit $X$ un schéma noetherien. Alors
 \end{enumerate}
 \end{prop}
 \begin{proof}
-Voir \cite{QingLiu} 2.3.46
+Voir \cite[2.3.46]{QingLiu} 
 \end{proof}
 
 
@@ -448,7 +448,7 @@ Un schéma est intègre si il est réduit et irréductible.
 Un schéma $X$ est intègre si et seulement si $\Oo(U)$ est intègre pour tout ouvert $U\subset X$ non-vide.
 \end{prop}
 \begin{proof}
-Voir \cite{Hartshorne} II.3.1
+Voir \cite[II.3.1]{Hartshorne}
 \end{proof}
 
 Un point $x$ d'un espace topologique $X$ est dit \textit{générique} si $\overline{\lbrace x\rbrace}=X$. Ainsi, si $X$ admet un point générique, il est irréductible. Pour un schéma $X$ on a en fait une correspondance bijective entre fermés irréductibles de $X$ et points génériques donnée par $x\mapsto \overline{\lbrace x\rbrace}$. 
@@ -465,7 +465,7 @@ $$\Oo(U)=\bigcap_i \Oo(U_i)=\bigcap_{x\in U}\Oo_{X,x}$$
 \end{enumerate}
 \end{prop}
 \begin{proof}
-Voir \cite{Gortz} 3.29
+Voir \cite[3.29]{Gortz}
 \end{proof}
 
 \subsection{Quelques propriétés des morphismes de schémas}
@@ -489,8 +489,12 @@ Un morphisme de schémas $f:X\rightarrow Y$ est quasi-compact si l'image récipr
 \begin{prop}\label{QuasiAffCritere}
 Un schéma $X$ est quasi-affine si et seulement si le morphisme canonique $X\rightarrow \spec \Oo(X)$ est une immersion ouverte quasi-compacte.
 \end{prop}
+\begin{proof}
+\cite[\href{http://stacks.math.columbia.edu/tag/01P9}{Lemma 01P9}]{stacks-project}
+\end{proof}
 
-Soit $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal de $A$. Alors la projection $A\rightarrow A/\mathfrak{a}$ définit une immersion fermée $i:\spec A/\mathfrak{a}\rightarrow X$ d'image $\Vv_X(\mathfrak{a})$. On a un isomorphisme canonique $(\Vv_X(\mathfrak{a}), i^{-1}(\Oo_X/\Ker i^\sharp))\simeq \spec A/\mathfrak{a}$ et on remarque que $\Ker i^\sharp(X_g)=\mathfrak{a}_g$. Réciproquement, pour tout immersion fermée $j:Z\rightarrow X$, il existe un unique idéal $\mathfrak{a}$ tel que $j$ se factorise via un isomorphisme $Z\simeq \spec A/\mathfrak{a}$ et l'immersion fermée $\spec A/\mathfrak{a}\rightarrow X$. Un \textit{sous-schéma fermé} d'un schéma $X$ est un fermé $Z$ de $X$ muni d'une structure de schéma et d'une immersion fermée $Z\rightarrow X$. 
+
+Soit $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal de $A$. Alors la projection $A\rightarrow A/\mathfrak{a}$ définit une immersion fermée $\spec A/\mathfrak{a}\rightarrow X$ d'image $\Vv_X(\mathfrak{a})$. On a un isomorphisme canonique $(\Vv_X(\mathfrak{a}), i^{-1}(\Oo_X/\Ker i^\sharp))\simeq \spec A/\mathfrak{a}$, où $i:\Vv_X(\mathfrak{a})\rightarrow X$ est l'inclusion. Réciproquement, pour tout immersion fermée $j:Z\rightarrow X$, il existe un unique idéal $\mathfrak{a}$ tel que $j$ se factorise via un isomorphisme $Z\simeq \spec A/\mathfrak{a}$ et l'immersion fermée $\spec A/\mathfrak{a}\rightarrow X$. Un \textit{sous-schéma fermé} d'un schéma $X$ est un fermé $Z$ de $X$ muni d'une structure de schéma et d'une immersion fermée $Z\rightarrow X$. 
 
 \subsubsection{Morphismes de type fini}
 
@@ -521,6 +525,10 @@ Un schéma est dit normal si il est normal en chacun de ses points.
 \begin{prop}
 Un schéma intègre $X$ est normal si et seulement si pour tout ouvert affine $U\subset X$ non-vide, $\Oo(U)$ est intégralement clos.
 \end{prop}
+\begin{proof}
+Voir \cite[4.1.5]{QingLiu} 
+\end{proof}
+
 
 Soit $X$ un schéma intègre, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Pour chaque $U_i=\spec A_i$ on pose $\widetilde{U}_i=\spec \widetilde{A}_i$ où $\widetilde{A}_i$ est la clôture intégrale de $A_i$, c'est naturellement un schéma intègre sur $U_i$. De plus, comme la clôture intégrale  commute à la localisation, on a des isomorphismes naturels $\widetilde{U_i\cap U_j}\simeq \widetilde{U_i}\cap \widetilde{U_j}$. On construit alors par recollement un schéma intègre et normal $\widetilde{X}$ sur $X$ qui satisfait de plus la propriété universelle que tout morphisme dominant d'un schéma intègre $Z$ vers $X$ se factorise de manière unique à travers $\widetilde{X}$. On dit que $\widetilde{X}$ est la \textit{normalisation} de $X$. De plus, si $X$ est de type fini sur un corps $k$, alors d'après \ref{IntClosureFinite}, le morphisme structural de $\widetilde{X}$ est fini.
 
@@ -538,7 +546,6 @@ Un morphisme de schémas affines $\phi: X\rightarrow Y$ est affine. En effet, so
   		X \arrow[r, "\phi"] & Y
 	\end{tikzcd}\\
 	\end{center}
-
 \end{ex}
 
 \subsubsection{Morphismes séparés}
@@ -557,7 +564,9 @@ Soit $f:X\rightarrow S$ un morphisme de schémas.
 	\item On suppose pour toute paire $(x_1,x_2)$ de points de $X$ au-dessus d'un même point $s\in S$, on a des ouverts affines $x_1\in U$ et $x_2\in V$ dont l'image est contenue dans un même ouvert affine de $S$, et qui vérifient: l'ouvert $U\cap V$ est affine, et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif. Alors $f$ est séparé.
 	\end{enumerate}
 \end{prop}
-
+\begin{proof}
+Voir \cite[\href{http://stacks.math.columbia.edu/tag/01KP}{Lemma 01KP}]{stacks-project}
+\end{proof}
 
 \begin{prop}\label{sepCritere2}
 Les deux assertions ci-dessous s'appliquent à des morphismes entre schémas noetheriens.
@@ -566,7 +575,9 @@ Les deux assertions ci-dessous s'appliquent à des morphismes entre schémas noe
 	\item Les immersions ouvertes ou fermées sont séparées.
 	\end{enumerate}
 \end{prop}
-
+\begin{proof}
+Voir \cite[II.4.6]{Hartshorne} 
+\end{proof}
 
 \section{Variétés algébriques}
 
@@ -594,7 +605,7 @@ $$\dim X=\dim F+\codime_X F,\,\,\,\,\,\,\, \text{ et } \dim X=\dim\Oo_{X,x} \tex
 Soit $X$ une variété irréductible, $U\subset X$ un ouvert non-vide et $f\in \Oo_X(U)$ non nul et non-inversible. Soit $Z$ une composante irréductible de $\Vv_U((f))$. Alors $\dime Z= \dime(X)-1$.
 \end{thm}
 \begin{proof}
-Voir \cite{MumfordRedBook} I.7 Th.2, après réduction au cas $X$ affine, la preuve consiste en une réduction au cas facile où $\Oo(X)$ est factoriel. 
+Voir \cite[I.7 Th.2]{MumfordRedBook}, après réduction au cas $X$ affine, la preuve consiste en une réduction au cas facile où $\Oo(X)$ est factoriel. 
 \end{proof}
 
 Ce théorème peut aussi être vu comme une version géométrique du théorème de l'idéal principal de Krull qui assure que les idéaux premiers minimaux sur un idéal principal d'un anneau noetherien sont au plus de hauteur $1$.
@@ -610,7 +621,7 @@ Soit $f:X\rightarrow Y$ un morphisme dominant de variétés irréductibles. Alor
 En particulier, pour tout $Y\in U$, on a $\dim f^{-1}(y)=r.$
 \end{thm}
 \begin{proof}
-(Voir \cite{MumfordRedBook} I.8.3) Après réduction au cas où $X$ et $Y$ sont affines. On utilise le lemme clé \ref{NoetherNormalisation} pour obtenir une factorisation de $f$ de la forme 
+(Voir \cite[I.8.3]{MumfordRedBook}) Après réduction au cas où $X$ et $Y$ sont affines. On utilise le lemme clé \ref{NoetherNormalisation} pour obtenir une factorisation de $f$ de la forme 
 $$X_g\xrightarrow{\pi \text{ fini et surjectif}}U\times \AAA^r \xrightarrow{p_U}U:=Y_g$$
 
 \end{proof}
@@ -629,7 +640,7 @@ Un morphisme fini de variété algébriques est quasi-fini.
 Soit $f:X\rightarrow Y$ un morphisme birationnel quasi-fini de variétés irréductibles. On suppose de plus que $Y$ est normale. Alors $f$ est une immersion ouverte.
 \end{thm}
 \begin{proof}
-Voir \cite{QingLiu} 4.4.6
+Voir \cite[4.4.6]{QingLiu}
 \end{proof}
 
 \begin{prop}[Car. zéro]\label{fibersCardinal}
@@ -668,7 +679,7 @@ Par définition, un point $x$ d'une variété $X$ irréductible est régulier si
 Soit $X\subset \AAA^n_k$ une variété affine et $f_1,...f_t\in k[x_1,...,x_n]$ des générateurs de $\Ii_{\AAA^n_k}(X)$. Un point $p$ de $X$ est régulier si et seulement si le rang de la matrice $((\partial f_i/\partial x_j)(p))_{i,j}$ est $n-r$, où $r:=\dim X$.
 \end{prop}
 \begin{proof}
-Voir \cite{Hartshorne} I.5.1
+Voir \cite[I.5.1]{Hartshorne} 
 \end{proof}
 
 \begin{defn}[Module plat]
@@ -689,7 +700,7 @@ Un morphisme $f:X\rightarrow Y$ est non-ramifié si pour tout $x\in X$, $f^\shar
 Soit $(X,f)$ un revêtement étale d'une variété $Y$. Alors $X$ est lisse si et seulement si $Y$ est lisse.
 \end{prop}
 \begin{proof}
-Voir \cite{Hartshorne} ex III.10.4
+Voir \cite[ex III.10.4]{Hartshorne}
 \end{proof}
 
 \subsection{Propriétés des variétés normales}

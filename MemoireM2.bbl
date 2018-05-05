@@ -58,6 +58,11 @@ Q.Liu.
 \newblock {\em Algebraic geometry and arithmetic curves}.
 \newblock Oxford GTM, 2006.
 
+\bibitem{stacks-project}
+The {Stacks Project Authors}.
+\newblock \textit{Stacks Project}.
+\newblock \url{http://stacks.math.columbia.edu}, 2018.
+
 \bibitem{LAGSpringer}
 T.A.Springer.
 \newblock {\em Linear Algebraic Groups}.
