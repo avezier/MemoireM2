@@ -208,15 +208,22 @@ Le foncteur $X^*$ réalise une anti-équivalence de catégories entre la catégo
 En effet on a un isomorphisme de foncteurs $(X^*)^2\simeq Id$ d'après la proposition précédente.
 \end{proof}
 
-Une autre façon de voir cela est d'introduire \textit{l'algèbre de groupe} d'un groupe abélien de type fini $M$, c'est par définition $k[M]:=\lbrace \sum_{\text{finie}} \lambda_gg,\,\lambda_g\in k,g\in G \rbrace$ avec la multiplication définie par l'opération de groupe de $G$. La propriété suivante montre que l'on construit ainsi un autre inverse de $X^*(.)$.
+Une autre façon de voir cela est d'introduire \textit{l'algèbre de groupe} d'un groupe abélien de type fini $M$, c'est par définition $k[M]:=\lbrace \sum_{\text{finie}} \lambda_m e_m,\,\lambda_m\in k,e_m\in M \rbrace$ avec la multiplication définie par l'opération de groupe de $M$. La propriété suivante montre que l'on construit ainsi un autre inverse de $X^*(.)$.
 
 \begin{prop}
 Soient, $M, M_1, M_2$ des groupes abéliens de type fini, et $G$ un groupe diagonalisable.\\
-Alors $k[M]$ est de type fini, réduite et on a $k[M_1\oplus M_2]\simeq k[M_1]\otimes k[M_2]$. De plus, $k[M]$ est naturellement muni d'une structure d'algèbre de Hopf et on a $G=\spec k[X^*(G)]$.
+Alors $k[M]$ est de type fini, réduite et on a $k[M_1\oplus M_2]\simeq k[M_1]\otimes k[M_2]$. De plus, $\spec k[M]$ est naturellement muni d'une structure de groupe algébrique et on a $G=\spec k[X^*(G)]$.
 \end{prop}
 \begin{proof}
 On a deux morphismes d'algèbre $k[M_1]\rightarrow k[M_1\oplus M_2], e_{m_1}\mapsto e_{(m_1,0)}$ et $k[M_2]\rightarrow k[M_1\oplus M_2], e_{m_2}\mapsto e_{(0,e_{m_2})}$, d'où l'existence d'un morphisme $k[M_1]\otimes_k k[M_2]\rightarrow k[M_1\oplus M_2], $ dont on vérifie que c'est un isomorphisme.
-Pour la deuxième assertion, comme on a $M\simeq \ZZ^r\oplus (\oplus_{i=1}^r \ZZ/d_i\ZZ)$, il suffit de traiter les cas $M=\ZZ$ et $M=\ZZ/d\ZZ$. On a $k[\ZZ]\simeq k[t,t^{-1}]$ qui est intègre, de type fini, et réduite. On a $k[\ZZ/d\ZZ]\simeq k[t]/(t^d-1)$. On voit, par le théorème chinois par exemple, que cette algèbre de type fini non-intègre est réduite si et seulement si les racine de $t^d-1$ sont simples, ce qui est le cas en caractéristique zéro. La structure d'algèbre de Hopf sur $k[M]$ est donnée par $\Delta(e_m)=e_m\otimes e_m,\, i(e_m)=e_{-m},\, e(e_m)=e_0$. Pour la dernière assertion, il suffit de voir que $\Oo(G)=k[X^*(G)]$.
+Pour la deuxième assertion, comme on a $M\simeq \ZZ^r\oplus (\oplus_{i=1}^r \ZZ/d_i\ZZ)$, il suffit de traiter les cas $M=\ZZ$ et $M=\ZZ/d\ZZ$. On a $k[\ZZ]\simeq k[t,t^{-1}]$ qui est intègre, de type fini, et réduite. On a $k[\ZZ/d\ZZ]\simeq k[t]/(t^d-1)$. On voit, par le théorème chinois par exemple, que cette algèbre de type fini non-intègre est réduite si et seulement si les racine de $t^d-1$ sont simples, ce qui est le cas en caractéristique zéro. 
+
+On regarde $k$ comme une sous-algèbre de $k[M]$ en considérant l'image du morphisme $\lambda\mapsto \lambda e_0$. Par ailleurs, on vérifie que les formules suivantes $\Delta(e_m)=e_m\otimes_k e_m,\, i(e_m)=e_{-m},\, e(e_m)=e_0$ définissent des morphismes de $k$-algèbres 
+\begin{center}
+$\Delta:k[M]\rightarrow k[M]\otimes_k k[M]$, $i:k[M]\rightarrow k[M]$, et $e:k[M]\rightarrow k$
+\end{center}
+De plus, on peut voir que les comorphismes $\Delta^o$ et $i^o$ définissent une structure de groupe algébrique sur $\spec k[M]$ en posant $gh=\Delta^o(g,h)$ et $g^{-1}=i^o(g)$ pour $g, h\in \spec k[M]$, le neutre étant le point de $\spec k[M]$ correspondant à $e$. En effet, on a par exemple $m\circ(\Id,i)\circ\Delta=e$ Pour la dernière assertion, il suffit de voir que $\Oo(G)=k[X^*(G)]$
+
 \end{proof}
 
 \noindent On déduit maintenant quelques résultats de base sur les groupes diagonalisables.
@@ -460,7 +467,7 @@ $G=\gln_n$,\, $X=\mn_n$,\, $g.A=gAg^{-1},\, S=\dn_n,\, U=X_{\disc(\chi )}$, où 
 \subsubsection{Quotient catégorique}
 
 Soit $G$ un groupe algébrique et $X$ une $G$-variété. En tant que groupe abstrait agissant sur un ensemble, le quotient de $X$ par $G$ (noté $X/G$) est par définition l'ensemble des orbites. On note $\pi:X \rightarrow X/G$ l'application qui à un élément de $X$ associe son orbite. $X/G$ satisfait une propriété universelle, il représente le foncteur $\textrm{Ens}\rightarrow \textrm{Ens}, Y\mapsto \lbrace f\in \textrm{Map}(X, Y)\mid f \textrm{ est constante sur les orbites} \rbrace$, il est donc unique à isomorphisme près. Pour cette raison la paire $(X
-/G, \pi)$ est appelée le quotient catégorique de $X$ par $G$.
+/G, \pi)$ est appelée le \textit{quotient catégorique} de $X$ par $G$.
 
 On peut ainsi transporter cette définition dans la catégorie des variétés algébriques. Toutefois, il n'est pas clair que ce quotient existe toujours. L'exemple suivant montre que lorsqu'il existe, le quotient catégorique ne coïncide pas nécessairement avec l'ensemble des orbites.
 
@@ -477,6 +484,7 @@ Soit $G$ un groupe linéairement réductif et $X$ une $G$-variété affine.
 \item $(Y, \pi)$ est un quotient catégorique.
 \item Soit $Z\subset X$ une sous $G$-variété fermée. Le morphisme induit $Z/G \rightarrow X/G$ est une immersion fermé. On peut ainsi identifier $\pi_Z$ et $\pi_X$ restreint à $Z$. De plus, soit $Z'$ une autre sous $G$-variété fermée, on a $\pi_X(Z\cap Z')=\pi_X(Z)\cap\pi_X(Z')$.
 \item Chaque fibre de $\pi_X$ contient un unique orbite fermé.
+\item Si $X$ est irréductible, alors $Y$ aussi. Si de plus $X$ est normale, alors $Y$ est normale.
 \end{enumerate}
 \end{thm}
 \begin{proof}
@@ -486,6 +494,7 @@ Soit $G$ un groupe linéairement réductif et $X$ une $G$-variété affine.
 \item On note $i$ l'inclusion $Z\subset X$. $\pi_Xi$ est constant sur les orbites de $Z$ d'où l'existence d'un unique morphisme $\phi:Z/G\rightarrow X/G$ tel que $\phi\pi_Z=\pi_Xi$. La projection $\Oo(X) \rightarrow \Oo(Z)$ est un morphisme de $G$-module surjectif. D'après la proposition \ref{reynolds}, cette projection induit un morphisme de $k$-algèbre surjectif $\Oo(X)^G \xrightarrow{\phi^*} k[Z]^G$, donc $\phi$ est une immersion fermée.
 Soit $I$ (resp. $I'$) l'idéal de $Z$ (resp. $Z'$) dans $\Oo(X)$. L'idéal de $Z\cap Z'$ est $I+I'$ et l'idéal de $\pi_X(Z)$ est $\mathcal{I}_{X/G}(\pi_X(Z))=I\cap \Oo(X)^G=R_X(I)$. Ainsi $\mathcal{I}_{X/G}(\pi_X(Z\cap Z'))=R_X(I+I')=R_X(I)+R_X(I')=\mathcal{I}_{X/G}(\pi_X(Z)\cap \pi_X(Z'))$.
 \item D'après 3), $\pi_X$ envoie deux orbites fermés distincts sur deux points distincts.
+\item Le premier point est immédiat. Pour le deuxième, il suffit de montrer que $\Oo(X)^G$ est intégralement clos dans $k(X)^G$ car ce dernier contient $k(Y)=\fract(\Oo(X)^G)$. Or c'est immédiat car $\Oo(X)$ est intégralement clos par hypothèse.
 \end{enumerate}
 \end{proof}
 

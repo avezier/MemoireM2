@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  7 MAY 2018 14:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  7 MAY 2018 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1232,7 +1232,7 @@ iso-mor-phisme est $\OML/cmm/m/it/10 ev[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 G
  []
 
 [23] [24] [25] [26]
-Overfull \hbox (2.36337pt too wide) in paragraph at lines 410--411
+Overfull \hbox (2.36337pt too wide) in paragraph at lines 417--418
 []\T1/cmr/m/n/10 Sinon comme $\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 (\OML/cmm/m/it/
 10 A\OT1/cmr/m/n/10 ) \U/msb/m/n/10 ( \OML/cmm/m/it/10 K$\T1/cmr/m/n/10 , on pe
 ut choi-sir $\OML/cmm/m/it/10 g \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/
@@ -1352,13 +1352,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 22087 strings out of 492995
- 412852 string characters out of 6132704
- 494599 words of memory out of 5000000
+ 22090 strings out of 492995
+ 412879 string characters out of 6132704
+ 489599 words of memory out of 5000000
  24632 multiletter control sequences out of 15000+600000
  28620 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,16n,84p,2495b,1082s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,16n,84p,2473b,1082s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{thm.2.2.1.3} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1402,10 +1402,10 @@ mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on MemoireM2.pdf (71 pages, 865795 bytes).
+Output written on MemoireM2.pdf (71 pages, 866973 bytes).
 PDF statistics:
- 1600 PDF objects out of 1728 (max. 8388607)
- 1476 compressed objects within 15 object streams
- 555 named destinations out of 1000 (max. 500000)
+ 1604 PDF objects out of 1728 (max. 8388607)
+ 1480 compressed objects within 15 object streams
+ 558 named destinations out of 1000 (max. 500000)
  437 words of extra memory for PDF output out of 10000 (max. 10000000)
 
