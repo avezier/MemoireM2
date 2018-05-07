@@ -44,22 +44,22 @@
 \contentsline {subsection}{\numberline {3.1.3}Faisceaux quasi-coh\IeC {\'e}rents sur une vari\IeC {\'e}t\IeC {\'e} projective}{35}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}Cohomologie des faisceaux et applications}{36}{subsection.3.1.4}
 \contentsline {subsubsection}{G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{36}{section*.17}
-\contentsline {subsubsection}{Cohomologie \IeC {\`a} support}{36}{section*.18}
-\contentsline {subsubsection}{Cohomologie sur un sch\IeC {\'e}ma affine}{37}{section*.19}
-\contentsline {subsubsection}{Une application}{38}{section*.20}
-\contentsline {subsection}{\numberline {3.1.5}Faisceaux inversibles, Fibr\IeC {\'e}s en droites}{39}{subsection.3.1.5}
+\contentsline {subsubsection}{Cohomologie \IeC {\`a} support}{37}{section*.18}
+\contentsline {subsubsection}{Cohomologie sur un sch\IeC {\'e}ma affine}{38}{section*.19}
+\contentsline {subsubsection}{Une application}{39}{section*.20}
+\contentsline {subsection}{\numberline {3.1.5}Faisceaux inversibles, Fibr\IeC {\'e}s en droites}{40}{subsection.3.1.5}
 \contentsline {subsection}{\numberline {3.1.6}$G$-fibr\IeC {\'e} principal}{41}{subsection.3.1.6}
-\contentsline {subsection}{\numberline {3.1.7}$G$-linearisation d'un fibr\IeC {\'e} en droites}{41}{subsection.3.1.7}
+\contentsline {subsection}{\numberline {3.1.7}$G$-linearisation d'un fibr\IeC {\'e} en droites}{42}{subsection.3.1.7}
 \contentsline {section}{\numberline {3.2}Diviseurs}{43}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Diviseurs de Weil}{43}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Faisceau d'alg\IeC {\`e}bres divisorielles}{44}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Faisceau d'alg\IeC {\`e}bres divisorielles}{45}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Diviseurs de Cartier et groupe de Picard}{46}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}L'espace projectif $\mathbb {P}_k^n$}{47}{subsection.3.2.4}
-\contentsline {subsubsection}{Faisceaux inversibles sur $\mathbb {P}_k^n$}{47}{section*.21}
+\contentsline {subsection}{\numberline {3.2.4}L'espace projectif $\mathbb {P}_k^n$}{48}{subsection.3.2.4}
+\contentsline {subsubsection}{Faisceaux inversibles sur $\mathbb {P}_k^n$}{48}{section*.21}
 \contentsline {subsubsection}{Faisceau engendr\IeC {\'e} par ses sections globales, Image inverse d'une section globale}{48}{section*.22}
 \contentsline {subsubsection}{Morphismes vers l'espace projectif}{48}{section*.23}
 \contentsline {subsubsection}{Vari\IeC {\'e}t\IeC {\'e}s quasi-projectives, faisceaux amples}{49}{section*.24}
-\contentsline {subsection}{\numberline {3.2.5}Le groupe des unit\IeC {\'e}s d'une vari\IeC {\'e}t\IeC {\'e} irr\IeC {\'e}ductible}{49}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.5}Le groupe des unit\IeC {\'e}s d'une vari\IeC {\'e}t\IeC {\'e} irr\IeC {\'e}ductible}{50}{subsection.3.2.5}
 \contentsline {chapter}{\numberline {4}Anneaux de Cox}{52}{chapter.4}
 \contentsline {section}{\numberline {4.1}Un exemple introductif}{52}{section.4.1}
 \contentsline {section}{\numberline {4.2}Faisceau et anneau de Cox dans le cas sans torsion}{54}{section.4.2}

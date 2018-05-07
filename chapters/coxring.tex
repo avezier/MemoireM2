@@ -61,9 +61,9 @@ $\widetilde{X}=\spec_X(\bigoplus_{a_1\in\ZZ}\Oo_X(a_1D_1)\otimes_{\Oo_X}...\otim
 où, avec les notations de l'exemple d'introduction, $L_i$ est le fibré en droites correspondant à $\Oo_X(D_i)$. 
 
 Tout point de $X$ admet un voisinage ouvert $U$ sur lequel chacun des diviseurs $D_i$ est principal, égal disons à $\divi(f_i)$. Cet ouvert trivialise chaque fibré $L_i$ et on obtient un isomorphisme $p^{-1}(U)\simeq \GG_m^s\times U$ qui provient de l'isomorphisme d'algèbres graduées
-\begin{equation} \label{eq:1}
-\Oo_X(U)\otimes_k k[t_1^{\pm},...,t_s^{\pm}] \rightarrow \mathcal{R}(U),\, g\otimes t_1^{\nu_1}...t_s^{\nu_s}\mapsto gf_1^{-\nu_1}...f_s^{-\nu_s}
-\end{equation}
+\begin{center}
+$\Oo_X(U)\otimes_k k[t_1^{\pm},...,t_s^{\pm}] \rightarrow \mathcal{R}(U),\, g\otimes t_1^{\nu_1}...t_s^{\nu_s}\mapsto gf_1^{-\nu_1}...f_s^{-\nu_s}$
+\end{center}
 
 En notant $H:=\spec k[K]$, si bien que $H\simeq \GG_m^s$, on peut résumer la situation dans le digramme commutatif ci-dessous auquel on se référera ultérieurement. Les flèches sont $H$-équivariantes et $H$ agit sur le produit par multiplication sur le premier facteur. En particulier, $(\widetilde{X},p)$ est un $H$-fibré principal:
 \begin{center}
@@ -112,7 +112,7 @@ On écrit $D=(U_i, f_i)$, on a ainsi $s_i:=s_{|U_i}=\alpha_i f_i^{-1}$ avec $\al
 Les données sont celles de \ref{specrelatifdivi}. Pour tout $D\in K$ et $s\in\Ss_D(X)\subset \Oo(\widetilde{X})$, on a $\divi(s)=p^*(\divi_D(s))$. Si de plus $X_{D,s}$ est affine, on a $\Vv_{\widetilde{X}}(s)=p^{-1}(\Vv_X(D,s))$.
 \end{prop}
 \begin{proof}
-On peut supposer pour la première assertion que $X$ est lisse en utilisant \ref{preimagecodim2}, \ref{isomorphismcodim2} et \ref{isomorphismcodim2CorXreg}. Ainsi $\widetilde{X}$ est également lisse d'après \ref{lisseGoodQuotient}. Le résultat découle alors de la proposition précédente.
+On peut supposer pour la première assertion que $X$ est lisse en utilisant \ref{preimagecodim2} et \ref{isomorphismcodim2CorXreg}. Ainsi $\widetilde{X}$ est également lisse d'après \ref{lisseGoodQuotient}. Le résultat découle alors de la proposition précédente.
 
 Pour la deuxième assertion, il faut montrer $p^{-1}(X_{D,s})=\widetilde{X}_s$. On remarque que $s^{-1}\in \Ss_{-D}(X_{D,s})$ donc $s$ est inversible sur $p^{-1}(X_{D,s})$, ce qui montre $p^{-1}(X_{D,s})\subset \widetilde{X}_s$. Par ailleurs, $\divi_D(s)$ est de Cartier sur $X_{reg}$ et son image inverse est l'image inverse de ses équations locales, on obtient donc $p^{-1}(X_{D,s})\cap p^{-1}(X_{reg})=\widetilde{X}_s \cap p^{-1}(X_{reg})$, d'après la première assertion. Ainsi $\widetilde{X}_s \setminus p^{-1}(X_{D,s})$ est le complémentaire d'un ouvert affine, et il est de codimension $\geq 2$, donc est vide d'après \ref{codimaffinenormal}.
 \end{proof}
@@ -124,7 +124,7 @@ $\Gamma(X_{D,f},\Ss)\simeq \Gamma(X,\Ss)_f$
 \end{center}
 \end{prop}
 \begin{proof}
-La proposition est vérifiée sur $X_{reg}$ d'après la proposition précédente, le fait que $p_*\Oo_{\widetilde{X}}=\Ss$, et \ref{FQCProp2}. On conclut avec la proposition \ref{isomorphismcodim2CorXreg}.
+On peut supposer que $X$ est lisse, d'après \ref{isomorphismcodim2CorXreg}. Dans ce cas on a $\Vv_{\widetilde{X}}(f)=p^{-1}(\Vv_X(D,f))$, et on conclut en utilisant \ref{FQCProp2} et le fait que $p_*\Oo_{\widetilde{X}}=\Ss$.
 \end{proof}
 
 \begin{cor}\label{zerosspecrelatif}
@@ -132,8 +132,8 @@ Les données sont celles de \ref{specrelatifdivi}. Soit $\tilde{x}\in\widetilde{
 $$f(\tilde{x})=0 \iff p(\tilde{x})\in \supp(\divi_D(f))$$
 \end{cor}
 \begin{proof}
-Montrons dans un premier temps que l'on a $\supp(p^*(D))\subset p^{-1}(\supp(D))$. Soit $x\in \supp (p^*(D))$, comme $\supp(p^*(D))=\overline{\supp_{p^{-1}(X_{reg})}(p^*(D_{|X_{reg}}))}$, on a $x\in\Vv_{\widetilde{X}}(p^\sharp(f_i))$ pour un $i\in I$, où l'on a écrit $D_{|X_{reg}}=(U_i, f_i)_{i\in I}$. On en déduit que $p(x)\in \Vv_X(f_i)$, c'est à dire $x\in \overline{\supp_{X_{reg}}(D_{|X_{reg}})}=\supp(D)$. Maintenant, comme $p$ est surjective, on trouve $p(\supp(p^*(D)))\subset \supp(D)$. De plus, $p(\supp(p^*(D)))$ et $\supp(D)$ coïncident sur l'ouvert dense $X_{reg}$ et $p(\supp(p^*(D)))$ est fermé d'après \ref{goodquotientthm}. On a donc l'égalité:$$p(\supp(p^*(D)))=\supp(D)$$
-Ainsi en appliquant la proposition précédente, on a $p(\supp(\divi(f)))= \supp(\divi_D(f))$ et donc $f(\tilde{x})=0 \implies p(\tilde{x})\in\supp \divi_D(f)$. Réciproquement, si $p(\tilde{x})\in\supp \divi_D(f)$, on a $p(\tilde{x})=p(\tilde{x}')$ pour un $\tilde{x}'\in \supp(\divi(f))$. Toujours d'après \ref{goodquotientthm} et en utilisant que $H.\tilde{x}$ est fermé on obtient $H.\tilde{x}\subset\overline{H.\tilde{x}'}$ ce qui prouve $f(\tilde{x})=0$ car $f$ est nulle sur $H.\tilde{x}'$, étant homogène et s'annulant en $\tilde{x}'$.
+Montrons dans un premier temps que l'on a $\supp(p^*(D))\subset p^{-1}(\supp(D))$. Soit $x\in \supp (p^*(D))$, comme $\supp(p^*(D))=\overline{\supp_{p^{-1}(X_{reg})}(p^*(D_{|X_{reg}}))}$, on a $x\in\Vv_{\widetilde{X}}(p^\sharp(f_i))$ pour un $i\in I$, où l'on a écrit $D_{|X_{reg}}=(U_i, f_i)_{i\in I}$. On en déduit que $p(x)\in \Vv_X(f_i)$, c'est à dire $p(x)\in \overline{\supp_{X_{reg}}(D_{|X_{reg}})}=\supp(D)$. Maintenant, comme $p$ est surjectif, on trouve $p(\supp(p^*(D)))\subset \supp(D)$. De plus, $p(\supp(p^*(D)))$ et $\supp(D)$ coïncident sur l'ouvert dense $X_{reg}$ et $p(\supp(p^*(D)))$ est fermé d'après \ref{goodquotientthm}. On a donc l'égalité:$$p(\supp(p^*(D)))=\supp(D)$$
+Ainsi en appliquant \ref{pstarprincipal}, on a $p(\supp(\divi(f)))= \supp(\divi_D(f))$ et donc $f(\tilde{x})=0 \implies p(\tilde{x})\in\supp \divi_D(f)$. Réciproquement, si $p(\tilde{x})\in\supp \divi_D(f)$, on a $p(\tilde{x})=p(\tilde{x}')$ pour un $\tilde{x}'\in \supp(\divi(f))$. Toujours d'après \ref{goodquotientthm} et en utilisant que $H.\tilde{x}$ est fermé on obtient $H.\tilde{x}\subset\overline{H.\tilde{x}'}$ ce qui prouve $f(\tilde{x})=0$ car $f$ est nulle sur $H.\tilde{x}'$, étant homogène et s'annulant en $\tilde{x}'$.
 \end{proof}
 
 Toujours avec les données de \ref{specrelatifdivi}, on établit maintenant un résultat important sur le groupe des classes de $\widetilde{X}$. On a d'abord besoin d'un lemme préliminaire assurant l'existence de $H$-linéarisations sur les fibrés en droites sur $\widetilde{X}$.
@@ -142,7 +142,7 @@ Toujours avec les données de \ref{specrelatifdivi}, on établit maintenant un r
 Soit $X$ une variété irréductible munie d'une action d'un tore $H$, et $(L,\pi)$ un fibré en droites sur $X$. Alors il existe une $H$-linéarisation de cette action sur $L$.
 \end{lem}
 \begin{proof}
-On note $p_2:H\times X\rightarrow X$ la projection. En utilisant \cite{Hartshorne} II.6.6, on obtient in isomorphisme $p_2^*:\pic(X)\rightarrow \pic(H\times X)$, d'où avec les notations de \ref{existenceGLin}, $\alpha^*(L)\simeq p_2^*(M)$ pour un certain fibré en droites $M$ sur $X$. En prenant l'image inverse par $e\times \id$ on obtient un isomorphisme de fibré en droites $L\simeq M$. On a ainsi un isomorphisme de fibrés en droites $\alpha^*(L)\simeq p_2^*(L)$, ce qui conclut la preuve d'après \ref{existenceGLin}.
+On note $p_2:H\times X\rightarrow X$ la projection. En utilisant \cite[II.6.6]{Hartshorne}, on obtient un isomorphisme $p_2^*:\pic(X)\rightarrow \pic(H\times X)$, d'où avec les notations de \ref{existenceGLin}, $\alpha^*(L)\simeq p_2^*(M)$ pour un certain fibré en droites $M$ sur $X$. En prenant l'image inverse par $e\times \id$ on obtient un isomorphisme de fibré en droites $L\simeq M$. On a ainsi un isomorphisme de fibrés en droites $\alpha^*(L)\simeq p_2^*(L)$, ce qui conclut la preuve d'après \ref{existenceGLin}.
 \end{proof}
 
 \begin{thm}\label{clgtrivial}
@@ -162,7 +162,7 @@ En effet, $p^*(D)$ est $H$-invariant en tant qu'image inverse par l'application 
 \end{proof}
 
 \begin{rem}
-On remarque que si on ne suppose plus que $X$ est lisse, l'implication $1\implies 2$ reste vraie dans le théorème précédent. En effet, comme $p^{-1}(X_{sing})$ est de codimension $\geq 2$ on peut alors supposer $X$ et donc $\widetilde{X}$ lisse car on a un isomorphisme $\clg(\widetilde{X})\simeq\clg(\widetilde{X}\setminus p^{-1}(X_{sing}))$. 
+On remarque que si on ne suppose plus que $X$ est lisse, l'implication $1\implies 2$ reste vraie dans le théorème précédent. En effet, comme $p^{-1}(X_{sing})$ est de codimension $\geq 2$ on peut alors supposer $X$ lisse, car on a un isomorphisme $\clg(\widetilde{X})\simeq\clg(\widetilde{X}\setminus p^{-1}(X_{sing}))$. 
 \end{rem}
 
 
@@ -191,7 +191,7 @@ Dans cette partie on définit l'anneau de Cox d'une variété $X$ normale irréd
 Soit $X$ une variété normale irréductible avec un groupe des classes libre de type fini. Soit $K\subset \wdiv(X)$ un sous-groupe se projetant isomorphiquement sur $\clg(X)$ (il existe de tels $K$ car $\clg(X)$ est libre de type fini donc la projection admet des sections). On définit le faisceau de Cox sur $X$, noté $\Rr$ comme le faisceau d'algèbres divisorielles associé à $K$. Cette description ne dépend qu'à isomorphisme près du choix de $K$. L'anneau de Cox de $X$ est l'algèbre des sections globales du faisceau de Cox. 
 \end{cons}
 \begin{proof}
-Soient $K,K'$ deux sous-groupes de $\wdiv(X)$ se projetant isomorphiquement sur $\clg(X)$, et $\Rr,\Rr'$ les faisceaux de Cox correspondants. On choisit une base $(D_1,...,D_s)$ de $K$. Cette base définit une section de la projection $c:\wdiv(X)\rightarrow \clg(X)$ et on peut modifier cette section par des éléments du noyau, cela fournissant autant de bases de sous-groupes de $\wdiv(X)$ se projetant isomorphiquement sur $\clg(X)$. Par ailleurs, chaque $D_i+\Ker c$ rencontre nécessairement $K'$ sinon on aurait $\rg K' < \rg \clg(X)$ comme rang de modules libres de type fini. On choisit ainsi $f_1,...,f_s\in k(X)$ tels que $(D_i-\divi(f_i))_i$ forme une base de $K'$. On définit un morphisme $\alpha:K\rightarrow k(X)^*, a_1D_1+...+a_sD_s\mapsto f_1^{a_1}...f_s^{a_s}$. Avec cela, l'isomorphisme linéaire faisant correspondre les bases de $K$ et $K'$ est $\widetilde{\psi}:K\rightarrow K',\, D\mapsto -\divi(\alpha(D))+D$. Enfin on définit un isomorphisme d'algèbres divisorielles $(\psi, \widetilde{\psi}): \Rr\rightarrow\Rr'$ en posant $f\in \Gamma(U, \Rr_D)\mapsto \alpha(D)f$.
+Soient $K,K'$ deux sous-groupes de $\wdiv(X)$ se projetant isomorphiquement sur $\clg(X)$, et $\Rr,\Rr'$ les faisceaux de Cox correspondants. On choisit une base $(D_1,...,D_s)$ de $K$. Cette base définit une section de la projection $c:\wdiv(X)\rightarrow \clg(X)$ et on peut modifier cette section par des éléments du noyau, ce qui fournit autant de bases de sous-groupes de $\wdiv(X)$ se projetant isomorphiquement sur $\clg(X)$. Par ailleurs, chaque $D_i+\Ker c$ rencontre nécessairement $K'$ sinon on aurait $\rg K' < \rg \clg(X)$ comme rang de modules libres de type fini. On choisit ainsi $f_1,...,f_s\in k(X)$ tels que $(D_i-\divi(f_i))_i$ forme une base de $K'$, et on définit un morphisme $\alpha:K\rightarrow k(X)^*, a_1D_1+...+a_sD_s\mapsto f_1^{a_1}...f_s^{a_s}$. Avec cela, l'isomorphisme linéaire faisant correspondre les bases de $K$ et $K'$ est $\widetilde{\psi}:K\rightarrow K',\, D\mapsto D-\divi(\alpha(D))$. Enfin, on définit un isomorphisme d'algèbres divisorielles $(\psi, \widetilde{\psi}): \Rr\rightarrow\Rr'$ en posant $f\in \Gamma(U, \Rr_D)\mapsto \alpha(D)f$.
 \end{proof}
 
 \begin{ex}
@@ -209,13 +209,13 @@ Soit $X$ une variété normale irréductible dont le groupe des classes est libr
 \end{thm}
 \begin{proof}
 \begin{enumerate}
-\item On peut supposer $X$ lisse d'après \ref{isomorphismcodim2CorXreg} et ainsi utiliser le théorème \ref{clgtrivial}. Soit $f\in \Rr(X)=p_*\Oo_{\widetilde{X}}(X)=\Oo_{\widetilde{X}}(\widetilde{X})$. On a donc le diviseur effectif $\divi(f)= \sum n_iD_i=\sum n_i\divi(f_i)=\divi(\prod f_i^{n_i})$ où les $D_i$ sont des diviseurs premiers, chaque $f_i$ est irréductible et appartient à $\Rr(X)$ d'après \ref{caracfaisceaustructdiv}. L'unicité de l'écriture sur $\wdiv(X)$ donne l'unicité de l'écriture $f=u\prod f_i^{n_i}$ où $u\in \Rr(X)^*$.
-\item Une inclusion est évidente. Pour l'autre prenons $f\in\Rr(X)^*$, qui est homogène d'après \ref{GradedProp1}, disons de degré $D$. Alors, $fg=1\in \Rr_0(X)$ pour un $g\in\Rr(X)^*$ homogène de degré $-D$. Ainsi on a $0=\divi_0(1)=\divi_{D-D}(fg)=\divi_D(f)+\divi_{-D}(g)$. Les deux derniers diviseurs étant effectifs, on a $\divi_D(f)=0$ et donc $D=-\divi(f)$, ce qui donne $f\in\Rr_0(X)=\Oo(X)^*$ d'où le résultat.
+\item On peut supposer $X$ lisse d'après \ref{isomorphismcodim2CorXreg}. Soit $f\in \Rr(X)=p_*\Oo_{\widetilde{X}}(X)=\Oo_{\widetilde{X}}(\widetilde{X})$. En vertu du théorème \ref{clgtrivial} le diviseur de $f$ s'écrit $\divi(f)= \sum n_iD_i=\sum n_i\divi(f_i)=\divi(\prod f_i^{n_i})$ où les $D_i$ sont des diviseurs premiers, chaque $f_i$ est irréductible et appartient à $\Rr(X)$ d'après \ref{caracfaisceaustructdiv}. L'unicité de l'écriture sur $\wdiv(X)$ donne l'unicité de l'écriture $f=u\prod f_i^{n_i}$ où $u\in \Rr(X)^*$.
+\item L'inclusion $\Oo(X)^*\subset\Rr(X)^*$ est évidente par définition. Pour l'autre prenons $f\in\Rr(X)^*$, qui est homogène d'après \ref{GradedProp1}, disons de degré $D$. Alors, $fg=1\in \Rr_0(X)$ pour un $g\in\Rr(X)^*$ homogène de degré $-D$. Ainsi on a $0=\divi_0(1)=\divi_{D-D}(fg)=\divi_D(f)+\divi_{-D}(g)$. Les deux derniers diviseurs étant effectifs, on a $\divi_D(f)=0$ et donc $D=-\divi(f)$, ce qui donne $f\in\Rr_0(X)=\Oo(X)$ d'où le résultat.
 \end{enumerate}
 \end{proof}
 
 \begin{ex}
-Reprenons le cas du cône affine de l'exemple introductif.  $\Rr(\bar{X})$ est l'algèbre de polynômes sur $k$ à $4$ indéterminés, donc est factoriel en particulier.  Par ailleurs, $\Oo(\bar{X})^{\times}=k^*$ car en inversant par exemple $t_1$  on obtient $\bar{X}_{t_1}\simeq \AAA^{1}\setminus \lbrace0\rbrace\times\AAA^{2}$, d'où le résultat.
+Reprenons le cas du cône affine de l'exemple introductif.  L'anneau de Cox $\Rr(\bar{X})$ est l'algèbre de polynômes sur $k$ à $4$ indéterminés, donc est factoriel en particulier.  Par ailleurs, $\Oo(\bar{X})^{\times}=k^*$ car en inversant par exemple $t_1$  on obtient $\bar{X}_{t_1}\simeq \AAA^{1}\setminus \lbrace0\rbrace\times\AAA^{2}$, et les fonctions régulières inversibles sur cet ouvert sont nécessairement constantes.
 \end{ex}
 
 \begin{prop}\label{divisibilitePropsFreeCox}
@@ -233,16 +233,19 @@ Soit $f,g$ des fonctions régulières non-nulles sur $\widetilde{X}$. Comme $\wi
 
 \subsection{Faisceau et anneau de Cox}
 
-On souhaite maintenant définir l'anneau de Cox d'une variété $X$ dont le groupe des classes admet éventuellement de la torsion. On suppose comme toujours $X$ normale et irréductible, et $\clg(X)$ de type fini. L'idée est de construire le faisceau d'algèbres divisorielles $\Ss$ associé à un sous-groupe $K\subset \wdiv(X)$ se projetant surjectivement sur $\clg(X)$, puis d'identifier des composantes homogènes $\Ss_{D_1}$ et  $\Ss_{D_2}$ si $D_1=D_2+E$, où $E\in \Ker (c:K\rightarrow \clg(X))$. Pour cela on remarque que l'on a, d'après \ref{isomophismeOTimes}, un isomorphisme $\Ss_{D_1}\simeq \Ss_{D_2}\otimes_{\Oo_X}\Ss_E$. Posons $E=\divi(g)$ avec $g\in k(X)$, et considérons $f_2\in \Ss_{D_2}(U)$ une section sur un ouvert $U\in X$. Par l'isomorphisme, on voit que $f_2$ est de la forme $g_{|U}f_1$, où $f_1\in \Ss_{D_1}(U)$. Pour identifier $f_1$ et $f_2$, il faut imposer $g_{|U}=1_{|U}$, où $1\in\Ss_0(X)$, c'est ce que l'on fait dans la construction ci-dessous.
+On souhaite maintenant définir l'anneau de Cox d'une variété $X$ dont le groupe des classes admet éventuellement de la torsion. On suppose comme toujours $X$ normale irréductible, et $\clg(X)$ de type fini. L'idée est de construire le faisceau d'algèbres divisorielles $\Ss$ associé à un sous-groupe $K\subset \wdiv(X)$ se projetant surjectivement sur $\clg(X)$, puis d'identifier des composantes homogènes $\Ss_{D_1}$ et  $\Ss_{D_2}$ si $D_1=D_2+E$, où $E\in \Ker (c:K\rightarrow \clg(X))$. Pour cela on remarque que l'on a, d'après \ref{isomophismeOTimes}, un isomorphisme $\Ss_{D_1}\simeq \Ss_{D_2}\otimes_{\Oo_X}\Ss_E$. Posons $E=\divi(g)$ avec $g\in k(X)$, et considérons $f_2\in \Ss_{D_2}(U)$ une section sur un ouvert $U\subset X$. Par l'isomorphisme, on voit que $f_2$ est de la forme $g_{|U}f_1$, où $f_1\in \Ss_{D_1}(U)$. Pour identifier $f_1$ et $f_2$, il faut imposer $g_{|U}=1_{|U}$, où $1\in\Ss_0(X)$, c'est ce que l'on fait dans la construction ci-dessous.
 
 \begin{cons}[Faisceau de Cox, Anneau de Cox]\label{conscoxtorsion}
-Soit $X$ une variété normale irréductible, telle que $\Gamma(X,\Oo^\times)=k^*$ et $\clg(X)$ est de type fini. On se fixe un sous-groupe $K\subset \wdiv(X)$ tel que la projection $c:K\rightarrow \clg(X)$ est surjective. Soit $K^0:=\Ker c$ et $\chi:K^0\rightarrow k(X)^*$ un caractère, c'est à dire un morphisme de groupes tel que $\divi(\chi(E))=E$, pour tout $E\in K^0$. Pour construire un tel caractère, on peut considérer une base $(D_1,...,D_s)$ de $K^0$ est des éléments $f_i\in k(X)$ tels que $D_i=\divi(f_i)$. On définit le caractère en posant $\chi(D_i)=f_i$, il vérifie bien la condition voulue.
+Soit $X$ une variété normale irréductible, telle que $\Oo(X)^*=k^*$ et $\clg(X)$ est de type fini. On se fixe un sous-groupe $K\subset \wdiv(X)$ tel que la projection $c:K\rightarrow \clg(X)$ est surjective. Soit $K^0:=\Ker c$ et $\chi:K^0\rightarrow k(X)^*$ un caractère, c'est à dire un morphisme de groupes tel que $\divi(\chi(E))=E$, pour tout $E\in K^0$. Pour construire un tel caractère, on peut considérer une base $(D_1,...,D_s)$ de $K^0$ est des éléments $f_i\in k(X)$ tels que $D_i=\divi(f_i)$. On définit le caractère en posant $\chi(D_i)=f_i$, il vérifie bien la condition voulue.
 
 Soit $\Ss$ le faisceau d'algèbres divisorielles sur $X$ associé à $K$. Soit $\Ii$ le faisceau d'idéaux de $\Ss$ défini par l'image du morphisme 
 $$\bigoplus_{E\in K^0}\Ss\rightarrow \Ss,\, E\mapsto 1-\chi(E),\,\,\, \text{ où }1\in \Ss_0(X)$$
 Le faisceau de Cox associé à $K$ et $\chi$ est le faisceau quotient $\Rr:=\Ss/\Ii$. C'est une $\Oo_X$-algèbre quasi-cohérente et $\clg(X)$-graduée de la manière suivante: 
-$$\Rr=\bigoplus_{[D]\in \clg(X)}\Rr_{[D]},\,\,\,\,\,\, \Rr_{[D]}:=\pi(\bigoplus_{D'\in c^{-1}([D])}\Ss_{D'}),\,\,\,\, \text{où }\pi:\Ss\rightarrow \Rr\text{ est la projection}$$
-L'anneau de Cox associé à $K$ et $\chi$ est l'anneau des sections globales de $\Rr$.
+\begin{center}
+$\Rr=\bigoplus_{[D]\in \clg(X)}\Rr_{[D]},\,\,\,\,\,\, \Rr_{[D]}:=\pi(\bigoplus_{D'\in c^{-1}([D])}\Ss_{D'}),\,\,\,\,\,$ où $\pi:\Ss\rightarrow \Rr$ est la projection
+\end{center}
+
+\noindent L'anneau de Cox associé à $K$ et $\chi$ est l'anneau des sections globales de $\Rr$.
 \end{cons}
 
 La $\clg(X)$-graduation de $\Rr$ annoncée ci-dessus n'est pas évidente à priori. On clarifie cela dans la proposition ci-dessous.
@@ -250,16 +253,16 @@ La $\clg(X)$-graduation de $\Rr$ annoncée ci-dessus n'est pas évidente à prio
 \begin{prop}\label{coxidealform}
 Avec les notation de la construction \ref{conscoxtorsion}, $\Ss$ est naturellement muni d'une $\clg(X)$-graduation:
 $$\Ss=\bigoplus_{[D]\in\clg(X)}\Ss_{[D]},\,\,\,\,\,\,\, \Ss_{[D]}:=\bigoplus_{D'\in c^{-1}([D])}\Ss_{D'}$$
-Soit $U\subset X$ un ouvert, $f\in\Gamma(U,\Ii)$ et $D\in K$. La composante $\clg(X)$-homogène $f_{[D]}\in \Gamma(U,\Ss_{[D]})$ s'écrit de manière unique sous la forme:
+Soit $U\subset X$ un ouvert, $f\in\Gamma(U,\Ii)$ et $D\in K$. La composante $\clg(X)$-homogène $f_{[D]}\in \Gamma(U,\Ss_{[D]})$ s'écrit de manière unique sous la forme d'une somme finie:
 $$f_{[D]}=\sum_{E\in K^0}(1-\chi(E))f_E, \text{  où } f_E\in\Gamma(U,\Ss_D), \text{ et }\chi(E)\in \Gamma(U, \Ss_{-E})$$
 En particulier, $\Ii$ est un faisceau d'idéaux $\clg(X)$-homogènes, et $\pi$ est un morphisme de $\Oo_X$-algèbres $\clg(X)$-graduées. De plus, si $f\in \Gamma(U,\Ii)$ est $K$-homogène, alors c'est la section nulle.
 \end{prop}
 \begin{proof}
-On montre d'abord l'unicité. Si on obtient une telle écriture alors les composantes $K$-homogènes  $f_{[D]}$ sont facilement identifiables, il s'agit pour chaque degré $D-E\in c^{-1}([D])$ de $-\chi(E)f_E$.
+Supposons que l'on obtienne une telle écriture. Alors les composantes $K$-homogènes de $f_{[D]}$ sont facilement identifiables, et définissent les éléments $f_E\in\Gamma(U,\Ss_D)$ pour $E\neq 0$. Une telle écriture est donc unique.
 
-Montrons l'existence. Par définition de $\Ii$, chaque germe $f_{[D],x}$ a une représentation sur un voisinage ouvert $U_x$ de $x$ par une section 
+Montrons l'existence. Par définition de $\Ii$, chaque germe $f_{[D],x}$ admet une représentation sur un voisinage ouvert $U_x$ de $x$ par une section 
 $$g=\sum_{E\in K^0}(1-\chi(E))g_E \in \Gamma(U_x, \Ii)\text{, où }g_E\in \Gamma(U_x, \Ss_{[D]})$$
-On écrit la décomposition en composantes $K$-homogènes de chaque $g_E$:
+On écrit la décomposition en composantes $K$-homogènes de chaque section $g_E$:
 $$g_E=\sum_{D'\in D+K^0}g_{E,D'}, \text{ où } g_{E,D'}\in\Gamma(U_x, \Ss_{D'})$$
 La section $g'_{E,D'}:=\chi(D'-D)g_{E,D'}$ est $K$-homogène de degré $D$ et on a l'identité 
 $$(1-\chi(E))g_{E,D'}=(1-\chi(E+D-D'))g'_{E,D'}-(1-\chi(D-D'))g'_{E,D'}$$
@@ -267,7 +270,7 @@ On obtient ainsi l'écriture désirée localement sur des ouverts qui recouvrent
 \end{proof}
 
 \begin{cor}\label{genreatorsCoxIdeal}
-Supposons $K$ de type fini, et soit $E_1,...,E_s$ une base de $K^0$. Alors pour tout ouvert $U\subset X$, l'idéal $\Gamma(U,\Ii)$ est engendré par $1-\chi(E_i)$, $1\leq i\leq s$.
+Supposons $K$ de type fini. Soit $E_1,...,E_s$ une base de $K^0$. Alors pour tout ouvert $U\subset X$, l'idéal $\Gamma(U,\Ii)$ est engendré par $1-\chi(E_i)$, $1\leq i\leq s$.
 \end{cor}
 \begin{proof}
 C'est une conséquence de la proposition précédente et des identités suivantes:
@@ -277,13 +280,13 @@ $$1-\chi(-E)=(1-\chi(E))(-\chi(-E))$$
 
 \subsection{Invariance de l'anneau de Cox}
 
-Notre objectif est maintenant de vérifier que l'anneau de Cox construit en \ref{conscoxtorsion} est indépendant des choix faits à isomorphisme près. On aura donc une construction intrinsèque car elle ne dépend à isomorphisme près que de données intrinsèques de la variété (faisceau structural, groupe des classes).
+Notre objectif est maintenant de vérifier que l'anneau de Cox construit en \ref{conscoxtorsion} est indépendant des choix faits à isomorphisme près. On aura donc une construction intrinsèque car ne dépendant à isomorphisme près que de données intrinsèques de la variété (faisceau structural, groupe des classes).
 
 \begin{lem}\label{LemmeCoxRelevelement}
 Avec les données de \ref{conscoxtorsion}. Soit $U\subset X$ un ouvert, $f\in \Ss(U)$ une section $\clg(X)$-homogène de degré $[D]$, où $D\in K$. Il existe $f'\in \Ss_D(U)$ tel que $f-f'\in\Ii(U)$.
 \end{lem}
 \begin{proof}
-Cela se voit grâce à l'astuce d'écriture
+Cela se voit grâce à l'astuce d'écriture ci-dessous. En effet, le premier terme dans le membre de droite est homogène de degré $D$, le second appartient à $\Ii(U)$.
 $$f=\sum_{D'\in D+K^0}f_{D'}=\sum_{D'\in D+K^0}\chi(D'-D)f_{D'}+ \sum_{D'\in D+K^0}(1-\chi(D'-D))f_{D'}$$
 \end{proof}
 
@@ -292,23 +295,23 @@ $$f=\sum_{D'\in D+K^0}f_{D'}=\sum_{D'\in D+K^0}\chi(D'-D)f_{D'}+ \sum_{D'\in D+K
 Avec les données de \ref{conscoxtorsion}, on a pour tout $D\in K$ un isomorphisme de faisceaux $\pi_{|\Ss_D}:\Ss_D\rightarrow \Rr_{[D]}$.
 \end{prop}
 \begin{proof}
-Considérons pour $x\in X$ le morphisme induit entre les tiges $\pi_x:\Ss_{D,x}\rightarrow \Rr_{[D],x}$, et montrons que c'est un isomorphisme. La proposition \ref{coxidealform} montre qu'il existe un unique élément de $\Ss_{D,x}$ se projetant sur $0$, on a donc l'injectivité. Pour la surjectivité, il suffit de montrer que toute section $f$ de $\Ss_{[D]}$ sur un voisinage $U$ de $x$ s'écrit, éventuellement sur un voisinage $V$ de $x$ plus petit, sous la forme $f'+s$ avec $f'\in \Ss_D(V)$, et $s\in \Ii(V)$. Il suffit d'appliquer le lemme précédent.
+Considérons pour $x\in X$ le morphisme induit entre les tiges $\pi_x:\Ss_{D,x}\rightarrow \Rr_{[D],x}$, et montrons que c'est un isomorphisme. D'après \ref{coxidealform}, seul le germe nul de $\Ss_{D,x}$ se projette sur $0$, on a donc l'injectivité. Pour la surjectivité, il suffit de montrer que toute section $f$ de $\Ss_{[D]}$ sur un voisinage $U$ de $x$ s'écrit, éventuellement sur un voisinage $V$ de $x$ plus petit, sous la forme $f'+s$ avec $f'\in \Ss_D(V)$, et $s\in \Ii(V)$. Il suffit d'appliquer le lemme précédent.
 \end{proof}
 
 \begin{prop}\label{coxsheafiso}
 Avec les données de \ref{conscoxtorsion}, on a pour tout ouvert $U\subset X$ un isomorphisme canonique $\Rr(U)\simeq \Ss(U)/\Ii(U)$.
 \end{prop}
 \begin{proof}
-L'application canonique $\psi_U:\Gamma(U,\Ss)/\Gamma(U,\Ii)\rightarrow\Gamma(U,\Ss/\Ii)$ est $\clg(X)$-homogène et injective, montrons qu'elle est surjective. Soit $h\in\Gamma(U,\Ss/\Ii)$, c'est donc un recollement de sections locales $h_i:=\phi_{U_i}(g_i)$, avec $U=\cup_{i\in I}U_i$, et telles que la restriction de $g_i-g_j$ à $U_i\cap U_j$ appartient à $\Ii(U_i\cap U_j)$ pour tout couple $(i,j)\in I$. Soit $g_{i,[D]}\in \Ss_{[D]}(U_i)$ la composante $\clg(X)$-homogène de degré $[D]$ de $g_i$. Comme $\Ii$ est $\clg(X)$-homogène d'après \ref{coxidealform}, on a $g_{j,[D]}-g_{i,[D]}\in\Ii(U_i\cap U_j)$ pour tout couple $(i,j)\in I$. De plus, d'après le lemme \ref{LemmeCoxRelevelement}, il existe des éléments $f_{i,D}\in \Ss_D(U_i)$ tels que $g_{i,[D]}-f_{i,D}\in \Ii(U_i)$, et on a $f_{i,D}-f_{j,D}\in\Ii(U_i\cap U_j)$. Ainsi $f_{i,D}=f_{j,D}$ sur $U_i\cap U_j$ d'après \ref{coxidealform}, et on obtient que les $f_{i,D}$ se recollent en un section $f_D\in \Ss_D(U)$ telle que $\psi(f_D)=h_{[D]}$. Finalement, $f=\sum f_D$ est un antécédent de $h$ par $\psi$.
+L'application canonique $\psi_U:\Gamma(U,\Ss)/\Gamma(U,\Ii)\rightarrow\Gamma(U,\Ss/\Ii)$ est $\clg(X)$-homogène et injective, montrons qu'elle est surjective. Soit $h\in\Gamma(U,\Ss/\Ii)$, c'est donc un recollement de sections locales $h_i:=\psi_{U_i}(g_i)$, avec $U=\cup_{i\in I}U_i$, et telles que la restriction de $g_i-g_j$ à $U_i\cap U_j$ appartient à $\Ii(U_i\cap U_j)$ pour tout couple $(i,j)\in I$. Soit $g_{i,[D]}\in \Ss_{[D]}(U_i)$ la composante $\clg(X)$-homogène de degré $[D]$ de $g_i$. Comme $\Ii$ est $\clg(X)$-gradué d'après \ref{coxidealform}, on a $g_{j,[D]}-g_{i,[D]}\in\Ii(U_i\cap U_j)$ pour tout couple $(i,j)\in I$. De plus, d'après le lemme \ref{LemmeCoxRelevelement}, il existe des éléments $f_{i,D}\in \Ss_D(U_i)$ tels que $g_{i,[D]}-f_{i,D}\in \Ii(U_i)$, et on a $f_{i,D}-f_{j,D}\in\Ii(U_i\cap U_j)$. Ainsi $f_{i,D}=f_{j,D}$ sur $U_i\cap U_j$ d'après \ref{coxidealform}, et on obtient que les $f_{i,D}$ se recollent en une section $f_D\in \Ss_D(U)$ telle que $\psi(f_D)=h_{[D]}$. Finalement, $f=\sum f_D$ est un antécédent de $h$ par $\psi$.
 \end{proof}
 
 \begin{thm}\label{InvarianceCoxTorsion}
 Avec les données de \ref{conscoxtorsion}. Soit $K', \chi'$ un autre choix de sous-groupe et de caractères. Alors les faisceaux de Cox associés sont isomorphes en tant que faisceaux d'algèbres $\clg(X)$-graduées.
 \end{thm}
 \begin{proof}
-Dans un premier temps, montrons que l'on peut se ramener à des faisceaux de Cox définis par un sous-groupe de $\wdiv(X)$ de type fini. Soit donc $K_1\subset K$ de type fini se projetant surjectivement sur $\clg(X)$. Un tel $K_1$ existe car il suffit par exemple de prendre le sous-groupe de $K$ engendré par des antécédents par $c$ de générateurs de $\clg(X)$. La restriction de $\chi$ à $K_1$ définit un caractère $\chi_1:K_1^0\rightarrow k(X)^*$. L'inclusion $K_1\subset K$ définit une injection $\Ss_1\rightarrow \Ss$, qui envoie l'idéal $\Ii_1$ défini par $\chi_1$ dans $\Ii$. Cela donne une injection $\clg(X)$-graduée $\Rr_1\rightarrow \Rr$, où $\Rr_1$ est le faisceau de Cox associé à $K_1$ et $\chi_1$. Mais dans lemme \ref{LemmeCoxRelevelement}, on peut toujours choisir $D\in K_1$, cela donne la surjectivité de ce morphisme.
+Dans un premier temps, montrons que l'on peut se ramener à des faisceaux de Cox définis par un sous-groupe de $\wdiv(X)$ de type fini. Soit donc $K_1\subset K$ de type fini se projetant surjectivement sur $\clg(X)$. Un tel $K_1$ existe car il suffit par exemple de prendre le sous-groupe de $K$ engendré par des antécédents de générateurs de $\clg(X)$ par $c$. La restriction de $\chi$ à $K_1$ définit un caractère $\chi_1:K_1^0\rightarrow k(X)^*$. L'inclusion $K_1\subset K$ définit une injection $\Ss_1\rightarrow \Ss$, qui envoie l'idéal $\Ii_1$ défini par $\chi_1$ dans $\Ii$. Cela donne une injection $\clg(X)$-graduée $\Rr_1\rightarrow \Rr$, où $\Rr_1$ est le faisceau de Cox associé à $K_1$ et $\chi_1$. Mais d'après \ref{LemmeCoxRelevelement}, toute section $\clg(X)$-homogène de $\Rr$ peut se représenter par un section $K_1$-homogène, cela donne la surjectivité de ce morphisme.
 
-On suppose donc $K$ de type fini. Montrons que tout choix de caractères $\chi,\chi':K^0\rightarrow k(X)^*$ définit un isomorphisme entre les faisceaux de cox $\Rr$ et $\Rr'$ associés. Notons que $\chi^{-1}\chi'$ envoie $K^0$ dans $\Oo(X)^*=k^*$. On peut étendre $\chi^{-1}\chi'$ en un caractère $\theta:K\rightarrow k^*$, en effet considérons une $\ZZ$-base $(D_1,....,D_r)$ de $K$ adaptée à $K^0$. Il existe donc des entiers positifs $n_1,...n_s$ avec $s\leq k$ tels que $§n_1D_1,...,n_sD_s$ soit une $\ZZ$-base de $K^0$. Soit $\alpha_i := \chi^{-1}\chi'(n_iD_i)$ pour $1\leq i\leq s$. Choisissons une racine $n_i$-iéme de $\alpha_i$ que l'on note $\beta_i$, pour $1\leq i\leq s$. En posant $\theta(D_i)=\beta_i$ pour $1\leq i\leq s$, et $\theta(D_i)=1$ pour $s+1\leq i\leq r$ on définit un prolongement de $\chi^{-1}\chi'$. Enfin, on définit un automorphisme $K$-gradué $(\alpha,\id)$ de $\Ss$ en posant:
+On suppose donc $K$ de type fini. Montrons que tout choix de caractères $\chi,\chi':K^0\rightarrow k(X)^*$ définit un isomorphisme entre les faisceaux de cox $\Rr$ et $\Rr'$ associés. Notons que $\chi^{-1}\chi'$ envoie $K^0$ dans $\Oo(X)^*=k^*$. On peut ainsi étendre $\chi^{-1}\chi'$ en un caractère $\theta:K\rightarrow k^*$. En effet considérons une $\ZZ$-base $(D_1,....,D_r)$ de $K$ adaptée à $K^0$. Il existe alors des entiers positifs $n_1,...n_s$ avec $s\leq k$ tels que $§n_1D_1,...,n_sD_s$ soit une $\ZZ$-base de $K^0$. Soit $\alpha_i := \chi^{-1}\chi'(n_iD_i)$ pour $1\leq i\leq s$. Choisissons une racine $n_i$-iéme de $\alpha_i$ que l'on note $\beta_i$, pour $1\leq i\leq s$. En posant $\theta(D_i)=\beta_i$ pour $1\leq i\leq s$, et $\theta(D_i)=1$ pour $s+1\leq i\leq r$ on définit un prolongement de $\chi^{-1}\chi'$. Ce prolongement permet de définir un automorphisme $K$-gradué $(\alpha,\id)$ de $\Ss$ en posant:
 $$\alpha_D:\Ss_D\rightarrow \Ss_D,\,\,\, f\mapsto \theta(D)f$$
 Cet automorphisme envoie $\Ii'$ sur $\Ii$ par construction et induit donc un isomorphisme entre $\Ss/\Ii'$ et $\Ss/\Ii$.
 
@@ -320,7 +323,7 @@ Ce morphisme envoie l'idéal $\Ii$ défini par $\chi$ dans l'idéal $\Ii'$ défi
 \end{proof}
 
 \begin{rem}
-Avec les données de \ref{conscoxtorsion}. Si on se donne un point régulier $x\in X$, on peut définir de manière canonique le faisceau de Cox de la variété pointée $(X, x)$. Soit $K^x:=\lbrace D\in\wdiv(X)\mid x\notin \supp D\rbrace$.  Ce sous-groupe de $\wdiv(X)$ se projette surjectivement sur $\clg(X)$. En effet pour tout $[D]\in \clg(X)$, choisissons $D\in c^{-1}([D])$. Si $D\notin K^x$, alors comme $\Oo_{X,x}$ est factoriel, on a localement $D=\divi(f)$ avec $f\in k(X)$. Ainsi, $D-\divi(f)\in K^x$ et $c(D-\divi(f)) =[D]$. Pour tout $E\in K^{x,0}$, on a $E=\divi(f_E)$ pour un $f_E\in k(X)$ défini sur un voisinage de $x$, car $x\notin \supp E$. Si l'on impose $f_E(x)=1$, alors $f_E$ est unique et on définit ainsi un caractère $\chi^x:K^x\rightarrow k(X)^*,\,E\mapsto f_E$. On note $\Rr^x$ le faisceau de Cox obtenu canoniquement à partir de ces données.
+Avec les données de \ref{conscoxtorsion}. Si on se donne un point régulier $x\in X$, on peut définir de manière canonique le faisceau de Cox de la variété pointée $(X, x)$. Soit $K^x:=\lbrace D\in\wdiv(X)\mid x\notin \supp D\rbrace$.  Ce sous-groupe de $\wdiv(X)$ se projette surjectivement sur $\clg(X)$. En effet pour tout $[D]\in \clg(X)$, choisissons $D\in c^{-1}([D])$. Si $D\notin K^x$, alors comme $\Oo_{X,x}$ est factoriel, on a localement $D=\divi(f)$ avec $f\in k(X)$. Ainsi, $D-\divi(f)\in K^x$ et $c(D-\divi(f)) =[D]$. Pour tout $E\in K^{x,0}$, on a $E=\divi(f_E)$ pour une fonction rationnelle $f_E\in k(X)$ définie sur un voisinage de $x$, car $x\notin \supp E$. Si l'on impose $f_E(x)=1$, alors $f_E$ est unique car $\Oo(X)^*=k^*$ et on définit ainsi un caractère $\chi^x:K^x\rightarrow k(X)^*,\,E\mapsto f_E$. On note $\Rr^x$ le faisceau de Cox obtenu canoniquement à partir de ces données.
 \end{rem}
 
 \subsection{Exemples}
@@ -328,13 +331,15 @@ Avec les données de \ref{conscoxtorsion}. Si on se donne un point régulier $x\
 \begin{ex}
 Considérons la surface affine $X\subset \AAA_k^3$ d'équation $t_1t_2-t_3^2$. Cette surface est irréductible et normale d'après \ref{SerreCritere2} et \ref{CritereReg}. On note $f_i$ la fonction régulière sur $X$ associée à la restriction de la coordonnée $t_i$ pour $1\leq i\leq 3$. Soit $D_2:=\Vv_X(f_2,f_3)$, on a facilement $\Oo_{D_2}(D_2)\simeq k[f_1]$ donc $D_2$ est un fermé irréductible de codimension 1 de $X$, c'est donc un diviseur premier et $(f_2,f_3)$ est son point générique. On a $(f_2,f_3)\Oo(X)_{(f_2,f_3)}=(f_1f_2,f_3)\Oo(X)_{(f_2,f_3)}=(f_3^2,f_3)\Oo(X)_{(f_2,f_3)}=(f_3)\Oo(X)_{(f_2,f_3)}$ donc $f_3$ est une uniformisante dans l'anneau de valuation discrète $\Oo(X)_{(f_2,f_3)}$. Dans cet anneau, on a $f_2=f_1^{-1}f_3^2$, d'où $v_{D_2}(f_2)=2$, puis $\divi(f_2)=2D_2$ car $\supp \divi(f_2)=D_2$. On a de même $\divi(f_1)=2D_1$, et $\divi(f_3)=D_1+D_2$.
 
-Par ailleurs, $\Oo(X\setminus D_2)=\Oo(X)_{f_2}\simeq k[f_2,f_2^{-1},f_3]$ est factoriel donc $\clg(X\setminus D_2)=0$ d'après \ref{AffUFDClgTrifial}. Notons que cela montre aussi que $\Oo(X)^*=k^*$. D'après \ref{divexactseq}, $\clg(X)$ est engendré par $D_2$. Montrons que $D_2$ n'est pas principal. Soit l'idéal maximal $\mathfrak{m}:=(f_1,f_2,f_3)$. Le $k$-espace vectoriel $\mathfrak{m}/\mathfrak{m}^2$ est de dimension $3$ engendré par les classes $\bar{f_1},\bar{f_2},\bar{f_3}$ des $f_i$ modulo $\mathfrak{m}^2$. Mais $(f_2,f_3)\subset \mathfrak{m}$, et son image dans $\mathfrak{m}/\mathfrak{m}^2$ contient $\bar{f_2}$ et $\bar{f_3}$, il ne peut donc pas être principal. Ainsi, $\clg(X)\simeq \ZZ/2\ZZ$ et on a le choix entre deux générateurs de somme nulle $D_1$ et $D_2$.
+Par ailleurs, $\Oo(X\setminus D_2)=\Oo(X)_{f_2}\simeq k[f_2^{\pm 1},f_3]$ est factoriel donc $\clg(X\setminus D_2)=0$ d'après \ref{AffUFDClgTrifial}. Notons que cela montre aussi que $\Oo(X)^*=k^*$. D'après \ref{divexactseq}, $\clg(X)$ est engendré par $D_2$. Montrons que $D_2$ n'est pas principal. Soit l'idéal maximal $\mathfrak{m}:=(f_1,f_2,f_3)$. Le $k$-espace vectoriel $\mathfrak{m}/\mathfrak{m}^2$ est de dimension $3$ engendré par les classes $\bar{f_1},\bar{f_2},\bar{f_3}$ des fonctions $f_i$ modulo $\mathfrak{m}^2$. Mais $(f_2,f_3)\subset \mathfrak{m}$, et son image dans $\mathfrak{m}/\mathfrak{m}^2$ contient $\bar{f_2}$ et $\bar{f_3}$, il ne peut donc pas être principal. Ainsi, $\clg(X)\simeq \ZZ/2\ZZ$ et on a deux générateurs de somme nulle $D_1$ et $D_2$.
 
 Calculons le faisceau d'algèbres divisorielles $\Ss$ associé à $K=\ZZ D_2$. D'après ce qui précède on a $\Ss_{2D_2}(X)=(f_2^{-1})$ et $\Ss_{-2D_2}(X)=(f_2)$ comme $\Oo(X)$-modules. On a $\Ss_{-D_2}(X)=(f_2,f_3)$, puis d'après \ref{isomophismeOTimes} et \ref{FQCProps3} $2$, on a $\Ss_{D_2}(X)=(f_2,f_3)(f_2^{-1})=(1,f_2^{-1}f_3)$. Posons 
 $$g_1:=1\in\Ss_{D_2}(X), \,\,g_2:=f_2^{-1}f_3\in\Ss_{D_2}(X),\,\,g_3:=f_2^{-1}\in \Ss_{2D_2}(X), \,\,g_4:=f_2\in\Ss_{-2D_2}(X)$$
 Compte tenu des relations ci-dessous, $\Ss(X)$ est engendrée comme $k$-algèbre par $g_1,g_2,g_3$ et $g_4$.
-$$f_1=g_2^2g_4\in\Ss_0(X)=\Oo(X),\,\,f_2=g_1^2g_4,\,\,f_3=g_1g_2g_4$$
-Soit $\widetilde{X}=\spec_X(\Ss)$ le spectre relatif de $\Ss$ muni de son morphisme structural $p$. Comme $(X,p)$ est un bon quotient pour l'action de $\GG_m$ sur $\widetilde{X}$ défini par la $\ZZ$-graduation $\deg(g_1)=1,\deg(g_2)=1,\deg(g_3)=2$ et $\deg(g_4)=-2$, on a $\dim \widetilde{X}=\dim X+ 1$. De plus, $\dim \widetilde{X}=\dim \Ss(X)$ car on a une immersion ouverte $\widetilde{X}\xhookrightarrow{} \spec \Ss(X)$. On en déduit que $g_3g_4=1$ engendre toutes les relations dans $\Ss(X)$. On a ainsi un isomorphisme d'algèbres graduées $\Ss(X)\simeq k[t_1,t_2,t_3, t_3^{-1}]$, où les $t_i$ sont des indéterminées et $\deg(t_i):=\deg(g_i)$.
+\begin{center}
+$f_1=g_2^2g_4\in\Ss_0(X)=\Oo(X)$, de même,  $f_2=g_1^2g_4$ et $f_3=g_1g_2g_4$
+\end{center}
+Soit $\widetilde{X}=\spec_X(\Ss)$ le spectre relatif de $\Ss$ muni de son morphisme structural $p$. Comme $(X,p)$ est un bon quotient pour l'action de $\GG_m$ sur $\widetilde{X}$ défini par la $\ZZ$-graduation $\deg(g_1)=1,\deg(g_2)=1,\deg(g_3)=2$ et $\deg(g_4)=-2$, on a $\dim \widetilde{X}=\dim X+ 1$. De plus, $\dim \widetilde{X}=\dim \Ss(X)$ car on a une immersion ouverte $\widetilde{X}\xhookrightarrow{} \spec \Ss(X)$. On en déduit que $g_3g_4=1$ engendre toutes les relations dans $\Ss(X)$ car ce dernier est intègre. On a ainsi un isomorphisme d'algèbres graduées $\Ss(X)\simeq k[t_1,t_2,t_3, t_3^{-1}]$, où les $t_i$ sont des indéterminées et $\deg(t_i):=\deg(g_i)$.
 
 Le noyau de la projection $\ZZ D_2\rightarrow \clg(X)$ est $K^0:=2\ZZ D_2$, et un caractère est donnée par $\chi: K^0\rightarrow k(X),\,\,2nD_2\mapsto f_2^n$. L'idéal $\Ii$ est engendré en tant que $\Oo_X$-module par la section globale $1-g_4$. Finalement l'anneau de Cox de $X$ est donné à ismorphisme près par
 $$\Rr(X)\simeq k[t_1,t_2,t_3^{\pm}]/(1-t_3^{-1})\simeq k[t_1,t_2]$$
@@ -345,11 +350,11 @@ la $\clg(X)$-graduation étant donnée par $\deg(t_1)=\deg(t_2)=[D_2]$.
 Considérons la surface affine $X\subset \AAA_k^3$ d'équation $t_1^2-t_2t_3-1$. Cette surface est lisse et irréductible. On note $f_i$ la fonction régulière sur $X$ associée à la restriction de la coordonnée $t_i$ pour $1\leq i\leq 3$. Considérons les diviseurs premiers
 $$D_+=\Vv_X(f_1-1,f_2)=\lbrace 1\rbrace\times\lbrace 0\rbrace\times k$$
 $$D_-=\Vv_X(f_1+1,f_2)=\lbrace -1\rbrace\times\lbrace 0\rbrace\times k$$
-Dans chaque anneau local $\Oo_{X,D_\pm}$, on voit facilement que $f_2$ est une uniformisante, et on obtient $\divi(f_2)=D_++D_-$. De plus, $X\setminus\supp \divi(f_2)=X_{f_2}\simeq \AAA^{1*}_k\times \AAA^1$ car $\Oo(X_{f_2})\simeq k[f_1,f_2^{\pm 1}]$. Cela montre que $\Oo(X)^*=k^*$ et que $\clg(X)$ est engendré par $[D+]$, d'après \ref{AffUFDClgTrifial}, \ref{divexactseq}, et le fait que $D_+$ et $-D_-$ soient linéairement équivalents. Supposons qu'il existe $n>0$ tel que $n[D_+]=0$, alors $nD_+=\divi(f)$ avec $f\in\Oo(X)$ car $D_+$ est effectif. On a de fait $f_2^n=fh$ avec $h\in\Oo(X)$ tel que $\divi(h)=nD_-$. Si on munit $k[t_1,t_2,t_2]$ de la graduation $\deg(t_1)=0,\,\deg(t_2)=1,\,\deg(t_3)=-1$ alors l'équation $t_1^2-t_2t_3-1$ est homogène, est $\Oo(X)$ hérite d'une graduation induite avec $\deg(f_i)=\deg(t_i)$. Tout élément de degré positif est multiple de $f_2$, en particulier on voit dans l'écriture $f_2^n=fh$ que $f$ ou $h$ est nécessairement multiple de $f_2$, ce qui est impossible vu leur diviseurs respectifs. On conclut que $\clg(X)=\ZZ[D_+]$.
+Dans chaque anneau local $\Oo_{X,D_\pm}$, on voit facilement que $f_2$ est une uniformisante, et on obtient $\divi(f_2)=D_++D_-$. De plus, $X\setminus\supp \divi(f_2)=X_{f_2}\simeq \AAA^{1*}_k\times \AAA^1$ car $\Oo(X_{f_2})\simeq k[f_1,f_2^{\pm 1}]$. Cela montre que $\Oo(X)^*=k^*$ et que $\clg(X)$ est engendré par $[D+]$, d'après \ref{AffUFDClgTrifial}, \ref{divexactseq}, et le fait que $D_+$ et $-D_-$ soient linéairement équivalents. Supposons qu'il existe $n>0$ tel que $n[D_+]=0$, alors $nD_+=\divi(f)$ avec $f\in\Oo(X)$ car $D_+$ est effectif. On a de fait $f_2^n=fh$ avec $h\in\Oo(X)$ tel que $\divi(h)=nD_-$. Si on munit $k[t_1,t_2,t_2]$ de la graduation $\deg(t_1)=0,\,\deg(t_2)=1,\,\deg(t_3)=-1$ alors l'équation $t_1^2-t_2t_3-1$ est homogène, est $\Oo(X)$ hérite d'une graduation induite avec $\deg(f_i)=\deg(t_i)$. Tout élément de degré positif est multiple de $f_2$, en particulier on voit dans l'écriture $f_2^n=fh$ que $f$ ou $h$ est nécessairement multiple de $f_2$, ce qui est impossible vu leur diviseur respectif. On conclut que $\clg(X)=\ZZ[D_+]$.
 
-$X$ est naturellement muni d'une action de $G:=\lbrace \pm 1\rbrace\simeq \ZZ/2\ZZ$ par $x\mapsto -x$. D'après, \ref{goodquotientthm} on a l'existence du bon quotient $\pi:X\rightarrow Y:=X//G$, qui est de plus irréductible et normal. L'algèbre des invariants est facilement identifiable, on obtient  $Y=\spec k[f_1^2,f_2^2,f_3^2,f_1f_2,f_1f_3,f_2f_3]$, avec $\pi$ donné par l'inclusion de cette algèbre. On montre maintenant que $\clg(Y)\simeq \ZZ/2\ZZ$, engendré par la classe de $D:=\pi(D+)$. On a une action naturelle de $G$ sur $\wdiv(X)$ et l'orbite de $D_+$ est $\lbrace D_-,D_+\rbrace$. Ainsi, $G$ agit sur $X_{f_2}$ et le quotient $\pi(X_{f_2})$ a pour algèbre d'invariants $k[f_1^2,f_2^{\pm 2}]$. Ce dernier anneau est factoriel, on en déduit que $[D]$ engendre $\clg(Y)$. Par ailleurs, $D$ n'est pas principal sinon $\pi^*(D)=D_++D_-$ serait le diviseur d'une fonction $G$-invariante, ce qui n'est pas le cas. Enfin, comme on a $2D=\divi(f_2^2)$, le résultat est démontré.
+La variété $X$ est naturellement munie d'une action de $G:=\lbrace \pm 1\rbrace\simeq \ZZ/2\ZZ$ par $x\mapsto -x$. D'après, \ref{goodquotientthm} on a l'existence du bon quotient $\pi:X\rightarrow Y:=X//G$, qui est de plus irréductible et normal. L'algèbre des invariants est facilement identifiable, on obtient  $Y=\spec k[f_1^2,f_2^2,f_3^2,f_1f_2,f_1f_3,f_2f_3]$, avec $\pi$ donné par l'inclusion de cette algèbre. On montre maintenant que $\clg(Y)\simeq \ZZ/2\ZZ$, engendré par la classe de $D:=\pi(D+)$. On a une action naturelle de $G$ sur $\wdiv(X)$ et l'orbite de $D_+$ est $\lbrace D_-,D_+\rbrace$. Ainsi, $G$ agit sur $X_{f_2}$ et le quotient $\pi(X_{f_2})$ a pour algèbre d'invariants $k[f_1^2,f_2^{\pm 2}]$. Ce dernier anneau est factoriel, on en déduit que $[D]$ engendre $\clg(Y)$. Par ailleurs, $D$ n'est pas principal sinon $\pi^*(D)=D_++D_-$ serait le diviseur d'une fonction $G$-invariante, ce qui n'est pas le cas. Enfin, comme on a $2D=\divi(f_2^2)$, le résultat est démontré.
 
-Déterminons maintenant l'anneau de Cox de $Y$. Calculons le faisceau d'algèbres divisorielles $\Ss$ sur $Y$ associé à $K=\ZZ D$. On a $\Ss_{-D}(Y)=\Ii_Y(D)=\pi^{\sharp}(Y)^{-1}((f_2))=k[f_1^2,f_2^2,f_3^2,f_1f_2,f_1f_3,f_2f_3]\cap (f_2)=(f_1f_2,f_2^2,f_2f_3)$. On voit facilement que est Cartier car il est principal localement en $0$ et aussi sur les ouverts affines principaux associés à $f_1f_2, f_2f_3$ et $f_1f_3$ qui recouvrent $Y\setminus \lbrace 0\rbrace$. Par exemple on a 
+Déterminons maintenant l'anneau de Cox de $Y$. Calculons le faisceau d'algèbres divisorielles $\Ss$ sur $Y$ associé à $K=\ZZ D$. On a $\Ss_{-D}(Y)=\Ii_Y(D)=\pi^{\sharp}(Y)^{-1}((f_2))=k[f_1^2,f_2^2,f_3^2,f_1f_2,f_1f_3,f_2f_3]\cap (f_2)=(f_1f_2,f_2^2,f_2f_3)$. On voit facilement que $D$ est de Cartier car il est principal localement en $0$ et aussi sur les ouverts affines principaux associés à $f_1f_2, f_2f_3$ et $f_1f_3$ qui recouvrent $Y\setminus \lbrace 0\rbrace$. Par exemple on a 
 $$(f_1f_2,f_2^2,f_2f_3)_{f_1f_3}=(f_1^2f_2f_3,f_1^2f_2^2f_3^2,f_2f_3)_{f_1f_3}=((f_2f_3+1)f_2f_3,f_2f_3)_{f_1f_3}=(f_2f_3)_{f_1f_3}$$
 Ainsi, $\Ss_{-D}(Y)$ est inversible et on a $\Ss_{D}(Y)=\Ss_{-D}(Y)^{-1}=(\Oo(Y):\Ss_{-D}(Y))$. On trouve facilement des sections 
 $$a_1:=1,\,\,\,a_2:=f_1f_2^{-1},\,\,\,a_3:=f_2^{-1}f_3\in \Ss_D(Y)$$
@@ -376,7 +381,7 @@ On considère les données de la construction \ref{conscoxtorsion}. Alors pour t
 On a déjà vu l'isomorphisme $\Ss(U)\rightarrow \Ss(V)$ en \ref{isomorphismcodim2}. De plus, la proposition \ref{coxidealform} montre que la restriction $\Ii(U)\rightarrow \Ii(V)$ est un isomorphisme. On conclut en appliquant la proposition \ref{coxsheafiso}.
 \end{proof}
 
-\begin{cons}\label{conscoxtorsionlisse}
+\begin{cons}[Car. zéro]\label{conscoxtorsionlisse}
 On considère les données de la construction \ref{conscoxtorsion}. On suppose de plus que $X$ est lisse. On considère les spectres relatifs $(\widetilde{X}, p)=\spec_X \Ss$ et $(\widehat{X},p_X)=\spec_X \Rr$. De plus, on peut toujours supposer $K$ de type fini et ces spectres sont munis respectivement d'une action du tore $H:=\spec k[K]$ et du groupe diagonalisable $H_X:=\spec k[\clg(X)]$. On a une immersion fermée $\widehat{X}\xhookrightarrow{i}\widetilde{X}$ d'image $\Vv(\Ii)$ qui donne un diagramme commutatif
 
 	\begin{center}
@@ -388,12 +393,12 @@ On considère les données de la construction \ref{conscoxtorsion}. On suppose d
 De même, $H_X$ se plonge dans $H$, et l'immersion fermée $i$ est $H_X$ équivariante pour ce plongement. Les morphismes $p_X$ et $p$ sont des quotients géométriques. En particulier, $(p_X, \widehat{X})$ et $(p, \widetilde{X})$ sont des fibrés principaux. Enfin, $\widehat{X}$ est une variété lisse et quasi-affine.
 \end{cons}
 \begin{proof}
-Les actions de $H$ et $H_X$ sont dues aux graduations respectives de $\Ss$ et $\Rr$ par $K$ et $\clg(X)$. Pour tout ouvert affine $U\subset X$, notons $U_1:=p_X^{-1}(U)$ et $U_2:=p^{-1}(U)$. La projection $\Ss(U)\rightarrow \Rr(U)$ donne localement une immersion fermée $U_1\xhookrightarrow{} U_2$ d'image $\Vv_{U_2}(\Ii(U_2))$. De plus, ces immersions respectent les graduation par la projection $c:K\rightarrow \clg(X)$. Ces immersions se recollent en une immersion $i$ d'image $\Vv(\Ii)$ qui est $H_X$-équivariante. De plus les mêmes arguments qu'en \ref{specrelatifdivi} nous donne que $p_X$ et $p$ sont des bon quotients car on a
+Les actions de $H$ et $H_X$ sont dues aux graduations respectives de $\Ss$ et $\Rr$ par $K$ et $\clg(X)$. Pour tout ouvert affine $U\subset X$, notons $U_1:=p_X^{-1}(U)$ et $U_2:=p^{-1}(U)$. La projection $\Ss(U)\rightarrow \Rr(U)$ donne localement une immersion fermée $U_1\xhookrightarrow{} U_2$ d'image $\Vv_{U_2}(\Ii(U_2))$. De plus, ces immersions sont graduées par la projection $c:K\rightarrow \clg(X)$, et se recollent en une immersion $i$ d'image $\Vv(\Ii)$ qui est $H_X$-équivariante. Les mêmes arguments qu'en \ref{specrelatifdivi} nous donne que $p_X$ et $p$ sont des bon quotients car on a
 
 $$(p_X)_*(\Oo_{\widehat{X}})_0\simeq \Rr_0\simeq\Oo_X\simeq\Ss_0\simeq  p_*(\Oo_{\widetilde{X}})_0$$
-Puis la remarque \ref{lisseGoodQuotient} nous dit que ce sont en fait des quotients géométriques. Ainsi, le morphisme $\Gamma:H_X\times \widehat{X}\rightarrow \widehat{X}\times_X\widehat{X}$ est surjectif. Comme $H_X$ agit librement, $\Gamma$ est bijectif. On va voir que $\widehat{X}$ est normale, donc $\widehat{X}\times_X \widehat{X}$ également. Ainsi, $\Gamma$ est un isomorphisme. De plus, on va voir que $p_X$ est plat. Comme il est surjectif on obtient que $(\widehat{X}, p_X)$ est un $H_X$-fibré principal. On a déjà vu que $(\widetilde{X},p)$ était un $H$ fibré principal.
+Puis la remarque \ref{lisseGoodQuotient} nous dit que ce sont en fait des quotients géométriques. Ainsi, le morphisme $\Gamma:H_X\times \widehat{X}\rightarrow \widehat{X}\times_X\widehat{X}$ de \ref{GPrincipalBundleDef} est surjectif. Comme $H_X$ agit librement, $\Gamma$ est bijectif. On va voir plus loin que $\widehat{X}$ est normale, donc $\widehat{X}\times_X \widehat{X}$ également. Ainsi, $\Gamma$ est un isomorphisme. De plus, on va également voir que $p_X$ est plat. Comme il est surjectif on obtient que $(\widehat{X}, p_X)$ est un $H_X$-fibré principal. On a déjà vu que $(\widetilde{X},p)$ était un $H$-fibré principal.
 
-Montrons maintenant que $\widehat{X}\simeq \Vv_{\widetilde{X}}(\Ii)$ est une variété. C'est un schéma de type fini sur $k$. De plus, il est séparé sur $k$ car \ref{sepCritere} est vérifié par construction, et comme $X$ est séparé sur $k$, on peut appliquer \ref{sepCritere2}. Il reste à montrer que ce schéma est réduit. On peut travailler localement sur un ouvert affine que l'on peut choisir de la forme $\widetilde{U}=p^{-1}(U)=\spec(\Ss(U))$ pour un ouvert affine $U$ de $X$. Soit $f\in\sqrt{\Ii(U)}$, comme c'est un idéal $\clg(X)$-homogène, il contient les composantes $\clg(X)$-homogènes de $f$. Soit $f_{[D]}$ l'une d'entre elles, elle s'écrit $f_{[D]}=f_D+g$ avec $f_D\in \Ss_D(U)$ et $g\in\Ii(U)$ d'après \ref{coxsheafiso2}. On obtient facilement $f_D^n\in \Ii(U)$ pour un $n>0$. Cela impose $f_D^n=0$ compte tenu de \ref{coxidealform} et donc $f_D=0$. Finalement, $f\in\Ii(U)$ ce qui montre que $\Ii(U)$ est radical.
+Montrons maintenant que $\widehat{X}\simeq \Vv_{\widetilde{X}}(\Ii)$ est une variété. C'est un schéma de type fini sur $k$. De plus, il est séparé sur $k$ car \ref{sepCritere} est vérifié par construction, et comme $X$ est séparé sur $k$, on peut appliquer \ref{sepCritere2}. Il reste à montrer que ce schéma est réduit. On peut travailler localement sur un ouvert affine de la forme $\widetilde{U}=p^{-1}(U)=\spec(\Ss(U))$ pour un ouvert affine $U$ de $X$. Soit $f\in\sqrt{\Ii(U)}$, comme c'est un idéal $\clg(X)$-homogène, il contient les composantes $\clg(X)$-homogènes de $f$. Soit $f_{[D]}$ l'une d'entre elles, elle s'écrit $f_{[D]}=f_D+g$ avec $f_D\in \Ss_D(U)$ et $g\in\Ii(U)$ d'après \ref{coxsheafiso2}. On obtient facilement $f_D^n\in \Ii(U)$ pour un $n>0$. Cela impose $f_D^n=0$ compte tenu de \ref{coxidealform} et donc $f_D=0$. Finalement, $f\in\Ii(U)$ ce qui montre que $\Ii(U)$ est radical.
 
 La variété $\widehat{X}$ est quasi-affine car $\widetilde{X}$ l'est d'après \ref{specrelatifQuasiAff}. Montrons pour finir qu'elle est lisse. L'immersion $i$ est $H_X$ équivariante si bien que l'on peut supposer que  $\widehat{X}$ est une sous-variété $H_X$-stable de $\widetilde{X}$ pour l'action induite de $H_X\subset H$. De plus, on peut travailler localement et donc supposer que $\widetilde{X}\simeq H\times X$ avec l'action de $H$ sur le facteur de gauche, d'après \ref{lisseGoodQuotient} car $X$ est lisse. Supposons que $H_X$ soit un tore, alors c'est un facteur direct de $H$ d'après \ref{GDiagSubtorusFacteurDirect}, c'est à dire qu'il existe un sous-tore $H'\subset H$ tel que $ H_X\times H'\simeq H$ via le morphisme naturel $(h,h')\mapsto hh'$. Alors $\widehat{X}$ est égal à $H_X\times S$ pour une certaine sous-variété $S$ de $H'\times X$ qui est isomorphe à $X$ via la projection $p$. On obtient le diagramme ci-dessous, et donc le résultat.
 
@@ -430,17 +435,21 @@ Comme dans le cas facile où $H_X$ était facteur direct, on a $Y=H_X\times S$, 
 On considère les données de la construction \ref{conscoxtorsion}. On suppose de plus que $\Rr$ est localement de type fini. Alors pour tout ouvert $U\in X$, l'anneau $\Rr(U)$ est intégralement clos.
 \end{thm}
 \begin{proof}
-On peut supposer $X$ lisse donc être dans le contexte de \ref{conscoxtorsionlisse}. Alors $\widehat{X}$ est lisse donc normale. Il reste donc à prouver que les anneaux $\Rr(U)$ sont intègres pour tout ouvert $U$ de $X$. Si on prouve l'irréductibilité de $\widehat{X}$, ce sera donc un schéma intègre est on aura le résultat d'après \ref{SchemaIntegreCritere}. Comme $p_X$ est surjective, une de ses composantes irréductibles $\widehat{X}_1$ domine $X$ car une variété irréductible ne peut être réunion de fermés irréductibles de codimensions non-nulles. Soit $U$ un ouvert de $X$, si $p_X^{-1}(U)$ est irréductible alors il est inclus dans $\widehat{X}_1$. Par ailleurs, comme $p_X^{-1}(U)$ est isomorphe à la sous variété de $p^{-1}(U)$ définie par $\Ii(U)$. Il suffit de montrer que l'on peut recouvrir $X$ par des ouverts $U$ tels que $\Vv_{p^{-1}(U)}(\Ii(U))$ est irréductible, on aura alors $\widehat{X}_1=\widehat{X}$.
+On peut supposer $X$ lisse donc être dans le contexte de \ref{conscoxtorsionlisse}. Alors $\widehat{X}$ est lisse donc normale. Il reste donc à prouver que les anneaux $\Rr(U)$ sont intègres pour tout ouvert $U$ de $X$. Si on prouve l'irréductibilité de $\widehat{X}$, ce sera donc un schéma intègre est on aura le résultat d'après \ref{SchemaIntegreCritere}. Comme $p_X$ est surjectif, une de ses composantes irréductibles $\widehat{X}_1$ domine $X$ car une variété irréductible ne peut être réunion de fermés irréductibles de codimensions non-nulles. Soit $U$ un ouvert de $X$, si $p_X^{-1}(U)$ est irréductible alors il est inclus dans $\widehat{X}_1$. Par ailleurs, comme $p_X^{-1}(U)$ est isomorphe à la sous variété de $p^{-1}(U)$ définie par $\Ii(U)$. Il suffit de montrer que l'on peut recouvrir $X$ par des ouverts $U$ tels que $\Vv_{p^{-1}(U)}(\Ii(U))$ est irréductible, on aura alors $\widehat{X}_1=\widehat{X}$.
 
-On peut supposer $K$ de type fini d'après \ref{InvarianceCoxTorsion}. Soit $(D_1,...,D_s)$ une base de $K$ telle que $(n_1D_1,...,n_lD_l)$ soit une base de $K^0$ avec $1\leq l\leq s$. Une telle base existe d'après la théorie des $\ZZ$-modules. On peut également supposer que les diviseurs $D_i$ ne sont pas des multiples dans $K$, quitte à remplacer $K$ si nécessaire. On choisit un ouvert affine $U\subset X$ tel que chaque diviseur $D_i$ est principal, disons égal à $\divi(f_i)$ avec $f_i\in k(X)$. D'après le corollaire \ref{genreatorsCoxIdeal}, l'idéal $\Ii(U)$ est engendré par les générateurs $1-\chi(n_iD_i)$ pour $1\leq i\leq l$. L'isomorphisme \ref{eq:1} identifie $p^{-1}(U)$ à $U\times \GG_m^s$. Par cet identification, $p_X^{-1}(U)$ est donné par les équations $1-\chi(n_iD_i)f_i^{n_i}t_i^{n_i}$ pour $1\leq i\leq l$, et on va montrer que cet ouvert affine est irréductible. On doit pour cela vérifier que l'algèbre ci-dessous est intègre
+On peut supposer $K$ de type fini d'après \ref{InvarianceCoxTorsion}. Soit $(D_1,...,D_s)$ une base de $K$ telle que $(n_1D_1,...,n_lD_l)$ soit une base de $K^0$ avec $1\leq l\leq s$. Une telle base existe d'après la théorie des $\ZZ$-modules. On peut également supposer que les diviseurs $D_i$ ne sont pas des multiples dans $K$, quitte à remplacer $K$ si nécessaire. On choisit un ouvert affine $U\subset X$ tel que chaque diviseur $D_i$ est principal, disons égal à $\divi(f_i)$ avec $f_i\in k(X)$. D'après le corollaire \ref{genreatorsCoxIdeal}, l'idéal $\Ii(U)$ est engendré par les générateurs $1-\chi(n_iD_i)$ pour $1\leq i\leq l$. L'isomorphisme ci-dessous identifie $p^{-1}(U)$ à $U\times \GG_m^s$. 
 \begin{center}
-$\Oo_{\widetilde{X}}(p^{-1}(U))\simeq \frac{\Oo_X(U)[t_1^{\pm 1},...,t_s^{\pm 1}]}{(1-\chi(n_iD_i)f_i^{n_i}t_i^{n_i})_{1\leq i\leq l}}$
+$\Oo_X(U)\otimes_k k[t_1^{\pm},...,t_s^{\pm}] \rightarrow \mathcal{R}(U),\, g\otimes t_1^{\nu_1}...t_s^{\nu_s}\mapsto gf_1^{-\nu_1}...f_s^{-\nu_s}$
+\end{center}
+Par cet identification, $p_X^{-1}(U)$ est donné par les équations $1-\chi(n_iD_i)f_i^{n_i}t_i^{n_i}$ pour $1\leq i\leq l$, et on va montrer que cet ouvert affine est irréductible. On doit pour cela vérifier que l'algèbre ci-dessous est intègre
+\begin{center}
+$\Oo_{\widehat{X}}(p_X^{-1}(U))\simeq \frac{\Oo_X(U)[t_1^{\pm 1},...,t_s^{\pm 1}]}{(1-\chi(n_iD_i)f_i^{n_i}t_i^{n_i})_{1\leq i\leq l}}$
 \end{center}
 On peut le faire par quotients successifs, où à chaque étape $i<l$ on effectue un quotient
 \begin{center}
 $\frac{A_{i-1}[t_i^{\pm 1}]}{(1-\chi(n_iD_i)f_i^{n_i}t_i^{n_i})}[t_{i+1}^{\pm 1},...,t_s^{\pm 1}]$,
 \end{center}
-où $A_{i-1}$ est l'algèbre des coordonnées d'une sous-variété irréductible de $U\times\GG_m^{i-1}$, avec $A_0=\Oo_X(U)$, et l'équation $1-\chi(n_iD_i)f_i^{n_i}t_i^{n_i}$ est vue dans l'algèbre $A_{i-1}[t_i^{\pm 1}]$. On peut travailler dans le corps des fractions $K_{i-1}$ de $A_{i-1}$, et supposer $f_i$ inversible. En faisant le changement de variable $u_i=f_it_i$, on est donc ramené à montrer que $1-\chi(n_iD_i)u_i^{n_i}$ est irréductible dans $K_{i-1}[u_i^{\pm 1}]$. En utilisant le lemme suivant, on doit donc montrer que $\chi(n_iD_i)$ n'est pas une puissance dans $K_{i-1}$. Il est suffisant de le faire dans $k(X)$ car $\chi(n_iD_i)$ est indépendant des coordonnées $t_j$, donc si $\chi(n_iD_i)$ était une puissance dans $K_{i-1}$, il le serait nécessairement dans $k(X)$, en attribuant des valeurs arbitraires aux coordonnées $t_j$. Supposons par l'absurde que $\chi(n_iD_i)$ soit une puissance dans $k(X)$. On obtient alors $n_iD_i=k_i\divi(h_i)$ pour un élément $h_i\in k(X)$. Or les diviseurs $D_i$ ne sont pas multiples dans $\wdiv(X)$ donc $k_i$ divise $n_i$, ce qui entraine que $n_i/k_iD_i$ est principal, c'est une contradiction avec le fait que $(n_1D_1,...,n_lD_l)$ soit une base de $K^0$. Finalement, comme $X$ est lisse, on peut la recouvrir par de tels ouverts, ce qui conclut la preuve.
+où $A_{i-1}$ est l'algèbre des coordonnées d'une sous-variété irréductible de $U\times\GG_m^{i-1}$, avec $A_0=\Oo_X(U)$, et l'équation $1-\chi(n_iD_i)f_i^{n_i}t_i^{n_i}$ est vue dans l'algèbre $A_{i-1}[t_i^{\pm 1}]$. On peut travailler dans le corps des fractions $K_{i-1}$ de $A_{i-1}$, et supposer $f_i$ inversible. En faisant le changement de variable $u_i=f_it_i$, on est donc ramené à montrer que $1-\chi(n_iD_i)u_i^{n_i}$ est irréductible dans $K_{i-1}[u_i^{\pm 1}]$. En utilisant le lemme suivant, on doit donc montrer que $\chi(n_iD_i)$ n'est pas une puissance dans $K_{i-1}$. Il est suffisant de le faire dans $k(X)$ car $\chi(n_iD_i)$ est indépendant des coordonnées $t_j$ pour $j\neq i$. Donc si $\chi(n_iD_i)$ était une puissance dans $K_{i-1}$, il le serait nécessairement dans $k(X)$, en attribuant des valeurs arbitraires aux coordonnées $t_j$. Supposons par l'absurde que $\chi(n_iD_i)$ soit une puissance dans $k(X)$. On obtient alors $n_iD_i=k_i\divi(h_i)$ pour un élément $h_i\in k(X)$. Or les diviseurs $D_i$ ne sont pas multiples dans $\wdiv(X)$ donc $k_i$ divise $n_i$, ce qui entraine que $n_i/k_iD_i$ est principal, c'est une contradiction avec le fait que $(n_1D_1,...,n_lD_l)$ soit une base de $K^0$. Finalement, comme $X$ est lisse, on peut la recouvrir par de tels ouverts, ce qui conclut la preuve.
 \end{proof}
 
 \begin{lem}[Car. zéro]
@@ -453,12 +462,12 @@ Dans une clôture algébrique de $K$, notons $b=\sqrt[n]{a}$ une racine $n$ième
 \subsection{Localisation et groupe des unités}
 
 \begin{cons}\label{conscoxtorsionDDiviseur}
-Dans la situation de la construction \ref{conscoxtorsion}, considérons un diviseur $D\in K$ et une section globale homogène $f\in\Rr_{[D]}(X)$. D'après la proposition \ref{coxsheafiso2}, il existe un unique élément $\tilde{f}\in\Ss_D(X)$ tel que $\pi(\tilde{f})=f$. On définit le $[D]$-diviseur de $f$ comme le diviseur de Weil effectif
+Dans la situation de la construction \ref{conscoxtorsion}, considérons un diviseur $D\in K$ et une section globale homogène $f\in\Rr_{[D]}(X)$. D'après la proposition \ref{coxsheafiso2}, il existe un unique élément $\tilde{f}\in\Ss_D(X)$ tel que $\pi(X)(\tilde{f})=f$. On définit le $[D]$-diviseur de $f$ comme le diviseur de Weil effectif
 $$\divi_{[D]}(f):=\divi_D(\tilde{f})=\divi(\tilde{f})+D$$
-Ce diviseur ne dépend ni du choix de $D\in c^{-1}(D)$, ni des choix faits en \ref{conscoxtorsion}.
+Ce diviseur ne dépend ni du choix de $D\in c^{-1}([D])$, ni des choix faits en \ref{conscoxtorsion}.
 \end{cons}
 \begin{proof}
-Soit $f\in\Rr_{[D]}(X)$, et deux isomorphismes $\phi_i:\Oo_X(D_i)\rightarrow \Rr_{[D]}$. On note $\tilde{f}_i$ les deux sections telles que $\phi(\tilde{f}_i)=f$. En raisonnant sur l'ouvert régulier de $X$, on voit que l'isomorphisme $\phi_2^{-1}\phi_1$ est donné par la multiplication par un $h\in k(X)^*$ satisfaisant $\divi(h)=D_1-D_2$. On a ainsi $\tilde{f}_2=\tilde{f}_1h$ et on obtient facilement les égalités
+Soit $f\in\Rr_{[D]}(X)$, et deux isomorphismes $\phi_i:\Oo_X(D_i)\rightarrow \Rr_{[D]}$. On note $\tilde{f}_i$ les deux sections telles que $\phi(\tilde{f}_i)=f$. En raisonnant sur l'ouvert régulier de $X$, on voit que l'isomorphisme $\phi_2^{-1}\phi_1$ est donné par la multiplication par un élément $h\in k(X)^*$ satisfaisant $\divi(h)=D_1-D_2$. On a ainsi $\tilde{f}_2=\tilde{f}_1h$ et on obtient facilement les égalités
 $$D_2+\divi(\tilde{f}_2)=D_1+\divi(\tilde{f}_1)$$
 \end{proof}
 
@@ -466,7 +475,7 @@ $$D_2+\divi(\tilde{f}_2)=D_1+\divi(\tilde{f}_1)$$
 \begin{prop}\label{diviCoxTorsFormulas}
 Avec les notations de la proposition précédentes, on a:
 \begin{enumerate}
-\item Pour tout diviseur de Weil effectif $E$, il existe $[D]\in\clg(X)$ et $f\in\Rr_{[D]}(X)$ tels que $E=\divi_{[D]}(f)$.
+\item Pour tout diviseur effectif $E\in\wdiv(X)$, il existe $[D]\in\clg(X)$ et $f\in\Rr_{[D]}(X)$ tels que $E=\divi_{[D]}(f)$.
 \item Soit $[D]\in\clg(X)$ et $f\in\Rr_{[D]}(X)$ non-nulle. Alors $\divi_{[D]}(f)=0\implies [D]=0$ dans $\clg(X)$.
 \item Pour tous $f\in\Rr_{[D_1]}(X)$ et $g\in\Rr_{[D_2]}(X)$, on a $\divi_{[D_1]+[D_2]}(fg)=\divi_{[D_1]}(f)+\divi_{[D_2]}(g)$.
 \end{enumerate}
@@ -501,13 +510,13 @@ Dans la situation de la construction \ref{conscoxtorsion},
 \end{enumerate}
 \end{prop}
 \begin{proof}
-Considérons $f\in\Rr_{[D]}(X)$ inversible. Pour la première assertion, l'inverse $g$ de $f$ appartient à $\Rr_{-[D]}(X)$ et on a $fg=1$ dans $\Rr_0(X)^*=k^*$. D'après \ref{diviCoxTorsFormulas} on a $0=\divi_0(fg)=\divi_{[D]}(f)+\divi_{[-D]}(g)$. Comme les deux derniers diviseurs sont effectifs, ils sont nécessairement nuls. Toujours d'après \ref{diviCoxTorsFormulas} on obtient $[D]=0$, et donc $f\in k^*$.
-Montrons la seconde assertion. On doit montrer que tout $f\in\Rr(X)^*$ est de degré $0$. On considère la $K_0\oplus K_t$ où $K_t$ est le sous $\ZZ$-module de torsion de $K$.
-On considère la graduation épaissie 
+Considérons $f\in\Rr_{[D]}(X)$ inversible. Pour la première assertion, l'inverse $g$ de $f$ appartient à $\Rr_{-[D]}(X)$ et on a $fg=1$ dans $\Rr_0(X)^*=\Oo(X)^*=k^*$. D'après \ref{diviCoxTorsFormulas} on a $0=\divi_0(fg)=\divi_{[D]}(f)+\divi_{[-D]}(g)$. Comme les deux derniers diviseurs sont effectifs, ils sont nécessairement nuls. Toujours d'après \ref{diviCoxTorsFormulas} on obtient $[D]=0$, et donc $f\in k^*$.
+Pour la seconde assertion, on doit montrer que tout $f\in\Rr(X)^*$ est de degré $0$. On considère la $K_0\oplus K_t$ où $K_t$ est le sous $\ZZ$-module de torsion de $K$.
+On considère la graduation "épaissie"
 $$\Rr(X)=\bigoplus_{w\in K_0}R_w,\,\,\,\,\,\, R_w:=\bigoplus_{u\in K_t}\Rr(X)_{w+u}$$
 Avec cette graduation, on peut appliquer \ref{GradedProp1} et en déduire que $f$ et $f^{-1}$ sont homogènes de degré respectifs $w\in K_0$ et $-w$. On écrit les décompositions de $f$ et $f^{-1}$ en composantes $\clg(X)$-homogènes
 $$f=\sum_{u\in K_t}f_{w+u},\,\,\,\,\,\, f^{-1}=\sum_{u\in K_t}f^{-1}_{-w-u}$$
-Comme $fg=1$ on a $f_{w+u}f^{-1}_{-w-u}\neq 0$ pour au moins un $u\in K_t$. Comme $\Gamma(X, \Oo)=k$, $f_{w+u}f^{-1}_{-w-u}$ est une constante non-nulle, on en déduit $w+u=0$ comme plus haut et donc $w=0$. Ainsi, tous les $f_{w+u}$ sont de torsion pour la $\clg(X)$-graduation. Ainsi pour un certain $n>0$, on a $n\divi_{w+u}(f_{w+u})=0$, toujours en utilisant $\Gamma(X, \Oo)=k$. Cela force $f_{w+u}=0$ si $u\neq 0$. On en déduit que $f$ est homogène de degré $0$ donc constante.
+Comme $fg=1$ on a $f_{w+u_0}f^{-1}_{-w-u_0}\neq 0$ pour au moins un degré $u_0\in K_t$. En tant que fonction régulière sur $X$, le produit $f_{w+u_0}f^{-1}_{-w-u_0}$ est une constante non-nulle par hypothèse. On en déduit $w+u_0=0$ comme plus haut et donc $w=0$. Ainsi, tous les degrés $w+u$ sont de torsion dans $\clg(X)$. Pour $u\neq 0$, on a donc $n(w+u)=0$ pour un certain entier $n>0$, puis en utilisant que $\Oo(X)=k$, on a $0=\divi_{0}(f_{w+u}^n)=\divi_{n(w+u)}(f_{w+u}^n)=n\divi_{w+u}(f_{w+u})$. On en déduit $f_{w+u}=0$ d'après \ref{diviCoxTorsFormulas}, puis que $f$ est homogène de degré $0$ donc constante.
 \end{proof}
 
 \subsection{Propriétés de divisibilité}
@@ -575,7 +584,7 @@ Soit $X$ une variété normale irréductible telle que $\Oo(X)^*=k^*$ et $\clg(X
 \end{enumerate}
 \end{prop}
 \begin{proof}
-En utilisant \ref{isomcodime2CoxTorsion} on peut supposer $X$ lisse et donc se placer dans la situation de la construction \ref{conscoxtorsionlisse}. Alors la variété quasi-affine $\widehat{X}$ est lisse et son algèbre de fonction régulières est $\Rr(X)$. Ainsi on a $f\mid g$ dans $\Rr(X)$ si et seulement si $\divi(f)\leq \divi(g)$ dans $WDiv(\widehat{X})$. D'après le lemme précédent, c'est équivalent à $\divi_{[D]}(f)\leq\divi_{[E]}(g)$. Avec cela on obtient directement $2$.
+En utilisant \ref{isomcodime2CoxTorsion} on peut supposer $X$ lisse et donc se placer dans la situation de la construction \ref{conscoxtorsionlisse}. Alors la variété quasi-affine $\widehat{X}$ est lisse et son algèbre de fonction régulières est $\Rr(X)$. Ainsi on a $f\mid g$ dans $\Rr(X)$ si et seulement si $\divi(f)\leq \divi(g)$ dans $\wdiv(\widehat{X})$. D'après le lemme précédent, c'est équivalent à $\divi_{[D]}(f)\leq\divi_{[E]}(g)$. Avec cela on obtient directement $2$.
 
 Montrons le point $3$. Supposons $\divi_{[D]}(f)$ premier. Comme il est non-trivial, $\divi(f)$ l'est aussi d'après le lemme précédent. Ainsi $f$ est non-nul et non-inversible. Si $f$ divise un produit $f_1f_2$ d'éléments homogènes non-nuls de $\Rr(X)$ alors d'après $1$, il divise l'un des deux car $\divi_{[D]}(f)$ étant premier, il est nécessairement inférieur ou égal à l'un des deux diviseurs effectifs  $\divi_{[D]}(f_i)$. Ainsi $f$ est $\clg(X)$-premier. Réciproquement, supposons par l'absurde que $f$ est $\clg(X)$-premier et $\divi_{[D]}(f)$ non-premier. Alors $\divi_{[D]}(f)=D_1+D_2$ avec chaque $D_i$ non-nul et effectif. D'après \ref{diviCoxTorsFormulas} $1$), on obtient des $f_i\Rr_{[D_i]}(X)$ tels que $\divi_{[D_i]}(f_i)=D_i$. D'après $1$), $f$ divise $f_1f_2$ mais ne divise aucun des facteurs, contradiction.
 \end{proof}

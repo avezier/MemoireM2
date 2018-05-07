@@ -21,6 +21,9 @@ Soit $X\simeq \spec A$ un schéma affine, et $M$ un $A$-module. On définit un $
 \begin{prop}
 Soit $X\simeq\spec A$ un schéma affine. L'application $M\mapsto \widetilde{M}$ définit un foncteur exact, plein et fidèle de la catégorie des $A$-module vers la catégorie des $\Oo_X$-module. De plus il commute aux sommes directes et au produit tensoriel.
 \end{prop}
+\begin{proof}
+\cite[II.5.2]{Hartshorne}
+\end{proof}
 
 
 \begin{prop}\label{FQCProp2}
@@ -30,16 +33,25 @@ $\Ff(X)_f=\Ff(X)\otimes_{\Oo(X)}\Oo(X)_f\rightarrow \Ff(X_f)$
 \end{center}
 est un isomorphisme.
 \end{prop}
+\begin{proof}
+\cite[5.1.6]{QingLiu}
+\end{proof}
 
 \begin{thm}\label{FQCThm}
 Soit $\Ff$ un $\Oo_X$-module sur un schéma $X$. Alors $\Ff$ est quasi-cohérent si et seulement si pour tout ouvert affine $U\subset X$, on a $\Ff(U)^{\widetilde{}}\simeq\Ff_{|U}$.
 
 En particulier, si $X\simeq \spec A$ est affine, alors les foncteurs $M\mapsto \widetilde{M}$ et $\Gamma(X,.)$ réalisent une équivalence de catégories entre la catégorie des $A$-module et la catégorie des faisceaux quasi-cohérents sur $X$.
 \end{thm}
+\begin{proof}
+\cite[5.1.7]{QingLiu}
+\end{proof}
 
 \begin{prop}
 Soit $\Ff$ un faisceau quasi-cohérent sur un schéma noetherien $X$. Alors $\Ff$ est cohérent si et seulement si pour tout ouvert affine $U\subset X$, le module $\Ff(U)$ est de type fini. 
 \end{prop}
+\begin{proof}
+\cite[5.1.11]{QingLiu}
+\end{proof}
 
 \begin{prop}\label{FQCProps3}
 Soit $X$ un schéma, alors on a les propriétés suivantes
@@ -56,6 +68,9 @@ En particulier, $f^*\Gg$ est quasi-cohérent sur $X$. Si $X$ est noetherien et $
 \item Soit $f:X\rightarrow Y$ un morphisme fini, et $\Ff$ un $\Oo_X$-module cohérent. Si $Y$ est noetherien, alors $f_*\Ff$ est cohérent sur $Y$.
 \end{enumerate}
 \end{prop}
+\begin{proof}
+\cite[5.1.14]{QingLiu}
+\end{proof}
 
 \subsection{Spectre relatif d'une $\Oo_X$-algèbre}
 
@@ -193,21 +208,21 @@ L'objectif de cette partie est de montrer que les $\Oo_X$-module quasi-cohérent
 Soit $A$ un anneau noetherien, $M\subset N$ des $A$-modules de type fini, et $\mathfrak{a}$ un idéal de $A$. Alors, la topologie $\mathfrak{a}$-adique sur $M$ est induite par la topologie $\mathfrak{a}$-adic sur $N$. En particulier, pour tout $n>0$, il existe $n'\geq n$ tel que $\mathfrak{a}^{n'}N\cap M\subset\mathfrak{a}^nM$.
 \end{thm}
 \begin{proof}
-Voir \cite[10.11]{atiyahmacdo}
+\cite[10.11]{atiyahmacdo}
 \end{proof}
 
 \begin{cor}\label{cohomAffLemme1}
 Soient $A$ un anneau noetherien, $\mathfrak{a}$ un idéal de $A$, et $I$ un $A$-module injectif. Alors le sous-module $\Gamma_\mathfrak{a}(I)$ est aussi un $A$-module injectif.
 \end{cor}
 \begin{proof}
-Voir \cite[III.3.2]{Hartshorne} 
+\cite[III.3.2]{Hartshorne} 
 \end{proof}
 
 \begin{lem}
 Soient $A$ un anneau noetherien et $I$ un $A$-module injectif. Alors pour tout $f\in A$, la flèche de localisation $I\rightarrow I_f$ est surjective.
 \end{lem}
 \begin{proof}
-Voir \cite[III.3.3]{Hartshorne} 
+\cite[III.3.3]{Hartshorne} 
 \end{proof}
 
 \begin{prop}\label{cohomAffProp1}
@@ -347,7 +362,7 @@ Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$, c'es
 
 \noindent Soit $G$ un groupe algébrique.
 
-\begin{defn}[$G$-fibré principal]
+\begin{defn}[$G$-fibré principal]\label{GPrincipalBundleDef}
 Soit $X$ une $G$-variété, et $\pi:X\rightarrow Y$ un morphisme $G$-invariant. On dit que $(X,\pi)$ est un $G$-fibré principal sur $Y$ si
 \begin{enumerate}
 \item $\pi$ est plat et surjectif.
@@ -565,7 +580,7 @@ Un diviseur de Cartier est dit principal si il provient d'une section globale de
 
 
 
-Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang $1$, c'est à dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)^*$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceaux inversibles de $k(X)^*$. 
+Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang $1$, c'est à dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceaux inversibles de $k(X)$. 
 $$
 \left\{
 \begin{matrix}
@@ -575,12 +590,12 @@ $$
 \leftrightarrow
 \left\{
 \begin{matrix}
-\text{Sous-faisceaux inversibles de } k(X)^*
+\text{Sous-faisceaux inversibles de } k(X)
 \end{matrix}
 \right\}
 $$
 
-Par cette correspondance, deux diviseurs sont linéairement équivalents si et seulement si les faisceaux inversibles sont isomorphes. On a ainsi définit une application injective CaCl$(X)\rightarrow$ Pic$(X)$ dont on voit facilement que c'est un morphisme de groupes. Comme $X$ est supposé irréductible, c'est un isomorphisme car tout faisceau inversible est isomorphe à un sous-faisceau inversible de $k(X)^*$. En résumé on a le résultat suivant:
+Par cette correspondance, deux diviseurs sont linéairement équivalents si et seulement si les faisceaux inversibles sont isomorphes. On a ainsi définit une application injective CaCl$(X)\rightarrow$ Pic$(X)$ dont on voit facilement que c'est un morphisme de groupes. Comme $X$ est supposé irréductible, c'est un isomorphisme car tout faisceau inversible est isomorphe à un sous-faisceau inversible de $k(X)$. En résumé on a le résultat suivant:
 
 
 \begin{prop}\label{isopic}
