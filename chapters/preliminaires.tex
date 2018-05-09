@@ -432,7 +432,7 @@ Par le lemme de Zorn, on montre que l'ensemble des fermés irréductibles d'un s
 Soit $X=\spec A$ un schéma affine, et $\mathfrak{a}$ un idéal de $A$.
 \begin{enumerate}
 \item $\Vv_X(\mathfrak{a})$ est irréductible si et seulement si $\sqrt{\mathfrak{a}}$ est premier.
-\item Soit $(\mathfrak{p}_i)$ les premiers minimaux de $A$. Alors $(\Vv_X(\mathfrak{p}_i))_i$ sont les composantes irréductibles de $X$.
+\item Soit $(\mathfrak{p}_i)_{i\in I}$ les premiers minimaux de $A$. Alors $(\Vv_X(\mathfrak{p}_i))_{i\in I}$ sont les composantes irréductibles de $X$.
 \item $X$ est irréductible si et seulement si $A$ admet un unique idéal premier minimal. Dans ce cas, cet idéal est nécessairement $(0)$, et $A$ est intègre.
 \end{enumerate}
 \end{prop}
@@ -506,10 +506,27 @@ Un morphisme de schémas $f:X\rightarrow Y$ est de type fini si il est quasi-com
 Pour qu'un morphisme soit de type fini il suffit qu'il existe un recouvrement par des ouverts affines qui satisfont la condition de la définition.
 \end{rem}
 
+\subsubsection{Morphismes affines}
+
+\begin{defn}[Morphisme affine]
+Un morphisme de schémas $f:X\rightarrow Y$ est affine si pour tout ouvert affine $V\subset Y$, l'image réciproque $f^{-1}(V)$ est affine.
+\end{defn}
+
+\begin{ex}\label{exaff}
+Un morphisme de schémas affines $\phi: X\rightarrow Y$ est affine. En effet, soit $V$ un ouvert affine de $Y$ et $U=\phi^{-1}(V)$. En considérant le diagramme commutatif ci-dessous on constate que l'on a $U \simeq (\phi\times i_2)^{-1}(\Delta_Y)=\lbrace (x,\phi(x))\mid x\in U \rbrace \subset X\times V$. Comme $X\times V$ est affine, $U$ aussi.
+	\begin{center}
+	\begin{tikzcd}
+  		U \arrow[r, "\phi"] \arrow[d, "i_1"]& V \arrow[d, "i_2"] \\ 
+  		X \arrow[r, "\phi"] & Y
+	\end{tikzcd}\\
+	\end{center}
+\end{ex}
+
+
 \subsubsection{Morphismes finis, normalité}
 
 \begin{defn}[Morphisme fini]
-Un morphisme de schémas $f:X\rightarrow Y$ est fini si pour tout ouvert affine $V$ de $Y$, la $\Oo_Y(V)$-algèbre $(\Oo_X(f^{-1}(V)), f^\sharp(V))$ est finie.
+Un morphisme de schémas $f:X\rightarrow Y$ est fini si il est affine et pour tout ouvert affine $V$ de $Y$, la $\Oo_Y(V)$-algèbre $(\Oo_X(f^{-1}(V)), f^\sharp(V))$ est finie.
 \end{defn}
 
 \begin{rem}
@@ -531,22 +548,6 @@ Un schéma intègre $X$ est normal si et seulement si pour tout ouvert affine $U
 
 
 Soit $X$ un schéma intègre, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Pour chaque $U_i=\spec A_i$ on pose $\widetilde{U}_i=\spec \widetilde{A}_i$ où $\widetilde{A}_i$ est la clôture intégrale de $A_i$, c'est naturellement un schéma intègre sur $U_i$. De plus, comme la clôture intégrale  commute à la localisation, on a des isomorphismes naturels $\widetilde{U_i\cap U_j}\simeq \widetilde{U_i}\cap \widetilde{U_j}$. On construit alors par recollement un schéma intègre et normal $\widetilde{X}$ sur $X$ qui satisfait de plus la propriété universelle que tout morphisme dominant d'un schéma intègre $Z$ vers $X$ se factorise de manière unique à travers $\widetilde{X}$. On dit que $\widetilde{X}$ est la \textit{normalisation} de $X$. De plus, si $X$ est de type fini sur un corps $k$, alors d'après \ref{IntClosureFinite}, le morphisme structural de $\widetilde{X}$ est fini.
-
-\subsubsection{Morphismes affines}
-
-\begin{defn}[Morphisme affine]
-Un morphisme de schémas $f:X\rightarrow Y$ est affine si pour tout ouvert affine $V\subset Y$, l'image réciproque $f^{-1}(V)$ est affine.
-\end{defn}
-
-\begin{ex}\label{exaff}
-Un morphisme de schémas affines $\phi: X\rightarrow Y$ est affine. En effet, soit $V$ un ouvert affine de $Y$ et $U=\phi^{-1}(V)$. En considérant le diagramme commutatif ci-dessous on constate que l'on a $U \simeq (\phi\times i_2)^{-1}(\Delta_Y)=\lbrace (x,\phi(x))\mid x\in U \rbrace \subset X\times V$. Comme $X\times V$ est affine, $U$ aussi.
-	\begin{center}
-	\begin{tikzcd}
-  		U \arrow[r, "\phi"] \arrow[d, "i_1"]& V \arrow[d, "i_2"] \\ 
-  		X \arrow[r, "\phi"] & Y
-	\end{tikzcd}\\
-	\end{center}
-\end{ex}
 
 \subsubsection{Morphismes séparés}
 

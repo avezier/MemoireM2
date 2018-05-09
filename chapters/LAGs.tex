@@ -90,7 +90,7 @@ D'après la proposition précédente on voit que $\Oo(X)=k[f_1,...,f_n]$ est eng
 \end{proof}
 
 \begin{cor}
-Tout groupe algébrique est linéaire.
+Tout groupe algébrique (affine) est linéaire.
 \end{cor}
 \begin{proof}
 On munit $G$ de son action sur lui même par multiplication à gauche. D'après le théorème précédent on peut supposer $G\subset V$, où $(V,\rho)$ est un $G$-module avec $\rho(g).h=g.h$ pour tout $g,h\in G$. Montrons que $\rho$ est une immersion fermée. On a $\rho^\sharp(k[\gln(V)])=k[\lbrace g\in G\mapsto l(\rho(g).v)\mid l\in V^*,v\in V\rbrace]$, donc en prenant $v=e_G$, on voit que cette algèbre contient la restriction des fonctions de $\Oo(V)$ à $G$. Cela montre que $\rho^\sharp$ est surjectif car $G$ est fermé dans $V$.
@@ -208,7 +208,7 @@ Le foncteur $X^*$ réalise une anti-équivalence de catégories entre la catégo
 En effet on a un isomorphisme de foncteurs $(X^*)^2\simeq Id$ d'après la proposition précédente.
 \end{proof}
 
-Une autre façon de voir cela est d'introduire \textit{l'algèbre de groupe} d'un groupe abélien de type fini $M$, c'est par définition $k[M]:=\lbrace \sum_{\text{finie}} \lambda_m e_m,\,\lambda_m\in k,e_m\in M \rbrace$ avec la multiplication définie par l'opération de groupe de $M$. La propriété suivante montre que l'on construit ainsi un autre inverse de $X^*(.)$.
+Une autre façon de voir cela est d'introduire \textit{l'algèbre de groupe} d'un groupe abélien de type fini $M$, c'est par définition $k[M]:=\lbrace \sum_{\text{finie}} \lambda_m e_m,\,\lambda_m\in k,e_m\in M \rbrace$ avec la multiplication définie par l'opération de groupe de $M$, et la structure d'algèbre donnée par le morphisme naturel $k\rightarrow k[M],\lambda\mapsto \lambda e_0$. La propriété suivante montre que l'on construit ainsi un autre inverse de $X^*$.
 
 \begin{prop}
 Soient, $M, M_1, M_2$ des groupes abéliens de type fini, et $G$ un groupe diagonalisable.\\
@@ -216,13 +216,13 @@ Alors $k[M]$ est de type fini, réduite et on a $k[M_1\oplus M_2]\simeq k[M_1]\o
 \end{prop}
 \begin{proof}
 On a deux morphismes d'algèbre $k[M_1]\rightarrow k[M_1\oplus M_2], e_{m_1}\mapsto e_{(m_1,0)}$ et $k[M_2]\rightarrow k[M_1\oplus M_2], e_{m_2}\mapsto e_{(0,e_{m_2})}$, d'où l'existence d'un morphisme $k[M_1]\otimes_k k[M_2]\rightarrow k[M_1\oplus M_2], $ dont on vérifie que c'est un isomorphisme.
-Pour la deuxième assertion, comme on a $M\simeq \ZZ^r\oplus (\oplus_{i=1}^r \ZZ/d_i\ZZ)$, il suffit de traiter les cas $M=\ZZ$ et $M=\ZZ/d\ZZ$. On a $k[\ZZ]\simeq k[t,t^{-1}]$ qui est intègre, de type fini, et réduite. On a $k[\ZZ/d\ZZ]\simeq k[t]/(t^d-1)$. On voit, par le théorème chinois par exemple, que cette algèbre de type fini non-intègre est réduite si et seulement si les racine de $t^d-1$ sont simples, ce qui est le cas en caractéristique zéro. 
+D'autre part, comme $M\simeq \ZZ^r\oplus (\oplus_{i=1}^r \ZZ/d_i\ZZ)$, il suffit de traiter les cas $M=\ZZ$ et $M=\ZZ/d\ZZ$. On a $k[\ZZ]\simeq k[t,t^{-1}]$ qui est intègre, de type fini, et réduite. On a $k[\ZZ/d\ZZ]\simeq k[t]/(t^d-1)$. On voit, par le théorème chinois par exemple, que cette algèbre de type fini non-intègre est réduite si et seulement si les racine de $t^d-1$ sont simples, ce qui est le cas en caractéristique zéro. 
 
-On regarde $k$ comme une sous-algèbre de $k[M]$ en considérant l'image du morphisme $\lambda\mapsto \lambda e_0$. Par ailleurs, on vérifie que les formules suivantes $\Delta(e_m)=e_m\otimes_k e_m,\, i(e_m)=e_{-m},\, e(e_m)=e_0$ définissent des morphismes de $k$-algèbres 
+On regarde $k$ comme une sous-algèbre de $k[M]$ en considérant l'image du morphisme $\lambda\mapsto \lambda e_0$. Par ailleurs, on vérifie que les formules $\Delta(e_m)=e_m\otimes_k e_m,\, i(e_m)=e_{-m}$, et $e(e_m)=e_0$ définissent des morphismes de $k$-algèbres 
 \begin{center}
 $\Delta:k[M]\rightarrow k[M]\otimes_k k[M]$, $i:k[M]\rightarrow k[M]$, et $e:k[M]\rightarrow k$
 \end{center}
-De plus, on peut voir que les comorphismes $\Delta^o$ et $i^o$ définissent une structure de groupe algébrique sur $\spec k[M]$ en posant $gh=\Delta^o(g,h)$ et $g^{-1}=i^o(g)$ pour $g, h\in \spec k[M]$, le neutre étant le point de $\spec k[M]$ correspondant à $e$. En effet, on a par exemple $m\circ(\Id,i)\circ\Delta=e$ Pour la dernière assertion, il suffit de voir que $\Oo(G)=k[X^*(G)]$
+De plus, on peut voir que les comorphismes $\Delta^o$ et $i^o$ définissent une structure de groupe algébrique sur $\spec k[M]$ en posant $gh:=\Delta^o(g,h)$ et $g^{-1}:=i^o(g)$ pour tous $g, h\in \spec k[M]$, le neutre étant le point de $\spec k[M]$ correspondant à $e$, on le note $e$ également. Par exemple vérifions que $\phi:\spec k[M]\rightarrow \spec k[M], g\mapsto \Delta^o\circ(\Id\times i^o)(g,g)$ est le morphisme constant égal à $e$. Son comorphisme est $\phi^\sharp:m\circ (\Id\otimes i)\circ\Delta=e$, où $m:k[M]\otimes_k k[M]\rightarrow k[M]$ est la multiplication. Ainsi on a pour tout $g\in \spec k[M]$, $ev_{\phi(g)}=ev_g\circ \phi^\sharp=ev_g\circ e=e$, si bien que $\phi(g)=e$. Pour la dernière assertion, il suffit de voir que $\Oo(G)=k[X^*(G)]$.
 
 \end{proof}
 
@@ -255,7 +255,7 @@ Pour la seconde assertion, avec ce choix on a  $\Hom_{gp}(X^*(H),\GG_m)\simeq\Ho
 \end{proof}
 
 \begin{prop}\label{GDiagSubtorusFacteurDirect}
-Soit $G$ un tore et $H$ un sous-tore. Alors $H$ est facteur direct dans $G$, c'est à dire qu'il existe un sous-tore $H'$ tel que le morphisme naturel $H\times H'\rightarrow G,\, (h,h')\mapsto hh'$ soit un isomorphisme. Si $H$ est seulement diagonalisable il existe un sous-tore $H'$ tel que le morphisme ci-dessus soit noyau à noyau fini.
+Soit $G$ un tore et $H$ un sous-tore. Alors $H$ est facteur direct dans $G$, c'est à dire qu'il existe un sous-tore $H'$ tel que le morphisme naturel $H\times H'\rightarrow G,\, (h,h')\mapsto hh'$ soit un isomorphisme. Si $H$ est seulement diagonalisable il existe un sous-tore $H'$ tel que le morphisme ci-dessus soit surjectif à noyau fini.
 \end{prop}
 \begin{proof}
 On note $i:H\rightarrow G$ le morphisme d'inclusion. Par \ref{EqCatGpDiagGpAb}, on obtient la suite exacte courte ci-dessous où $i^\sharp$ est la restriction des caractères de $
@@ -265,7 +265,7 @@ $0\rightarrow X^*(G/H)\simeq\Ker i^\sharp\rightarrow X^*(G)\xrightarrow{i^\sharp
 \end{center}
 Comme $X^*(G)$ et $X^*(H)$ sont des $\ZZ$-modules libres on trouve des bases respectives tels que la matrice de $i^\sharp$ soit $\diag(a_1,...a_r,0,...,0)$, on en déduit facilement une section $s$ de $i^\sharp$. On a ainsi $X^*(G)=\Ker i^\sharp\oplus s(X^*(H))$, puis $G\simeq \spec k[\Ker i^\sharp] \times \spec k[s(X^*(H))]\simeq H'\times H$, où $H':=\spec k[\Ker i^\sharp]$.
 
-Dans le cas où $H$ est seulement diagonalisable, considérons une base de $X^*(G)$ adaptée à $\Ker i^\sharp$. Cela fournit des coordonnées telles que $G\simeq \GG_m^n$ et $H\simeq \lbrace 1\rbrace\times...\times\lbrace 1\rbrace\times\mu_{n_1}\times...\times\mu_{n_s}\times\GG_m^r$, où $\mu_{n_i}$ est le groupe des racines $n_i$ième de l'unité. Par cet isomorphisme, $H':=\GG_m^{n-r}\times  \lbrace 1\rbrace\times...\times  \lbrace 1\rbrace$ convient.
+Dans le cas où $H$ est seulement diagonalisable, considérons une base de $X^*(G)$ adaptée à $\Ker i^\sharp$. Cela fournit des coordonnées telles que $G\simeq \GG_m^n$ et $H\simeq \lbrace 1\rbrace\times...\times\lbrace 1\rbrace\times\mu_{n_1}\times...\times\mu_{n_s}\times\GG_m^r$, où $\mu_{n_i}$ est le groupe des racines $n_i$-ièmes de l'unité. Par cet isomorphisme, $H':=\GG_m^{n-r}\times  \lbrace 1\rbrace\times...\times  \lbrace 1\rbrace$ convient.
 \end{proof}
 
 \subsubsection{Action d'un groupe diagonalisable sur une variété affine}
@@ -291,7 +291,7 @@ D'après \ref{GmoduleSectionsGlobales}, $\Oo(X)$ est un $H$-module. C'est aussi 
 	\end{center}
 \end{multicols}
 
-Le petit calcul ci-dessous montre que $\forall f\in \Oo(X')_{\chi'},\,$ on a $\phi^\sharp(f)\in \Oo(X)_{\widetilde{\phi}^\sharp(\chi')}$. cela montre que $(\widetilde{\phi}^\sharp,\phi^\sharp)$ est un morphisme d'algèbres graduées car $\widetilde{\phi}^\sharp$ envoie des caractères sur des caractères en tant que comorphisme d'un morphisme de groupes diagonalisables. 
+Le petit calcul ci-dessous montre que $\forall f\in \Oo(X')_{\chi'},\,$ on a $\phi^\sharp(f)\in \Oo(X)_{\widetilde{\phi}^\sharp(\chi')}$. Cela montre que $(\widetilde{\phi}^\sharp,\phi^\sharp)$ est un morphisme d'algèbres graduées car $\widetilde{\phi}^\sharp$ envoie des caractères sur des caractères en tant que comorphisme d'un morphisme de groupes diagonalisables. 
 $$\forall h\in H,\,x\in X,\, \phi^\sharp(f)(h.x)=a_1^\sharp\phi^\sharp(f)(h, x)=(\widetilde{\phi}\otimes\phi)a_2^\sharp(f)(h,x)=\widetilde{\phi}^\sharp(\chi')(h)\phi^\sharp(f)(x)$$ 
 
 Réciproquement, considérons une paire $(A, K)$ constituée d'une algèbre affine $A$ graduée par un groupe abélien $K$ de type fini. On a un morphisme d'algèbres affines naturel que l'on peut définir sur les éléments homogènes par $a:A\rightarrow k[K]\otimes A,\, f_{\omega}\mapsto \chi^{\omega}\otimes f_{\omega}$. On voit facilement que ce morphisme définit une action de $H:=\spec k[K]$ sur $X:=\spec A$. De plus, cette association est fonctorielle, en effet considérons $A'$ une algèbre affine $K'$-graduée , ainsi qu'un morphisme $(\widetilde{\phi},\phi):A\rightarrow A'$ d'algèbres graduées. On a pour tout $f_w\in A_w$
@@ -315,7 +315,7 @@ D'où le diagramme commutatif de gauche ci-dessous, qui donne le diagramme de dr
 	\end{center}
 \end{multicols}
 
-Finalement on a obtenu le résultat suivant qui va nous permettre dans la suite caractériser l'action d'un groupe diagonalisable sur une variété affine en termes algébriques.
+Finalement on a obtenu le résultat suivant qui va nous permettre dans la suite de caractériser l'action d'un groupe diagonalisable sur une variété affine en termes algébriques.
 
 \begin{prop}
 Les foncteurs $X^*\times\spec$ et $k[.]\times\Oo(.)$ réalisent une anti-équivalence de catégories entre la catégorie des variétés affines munies d'une action de groupe diagonalisable et la catégorie des algèbres affines graduées par un groupe abélien de type fini. 
@@ -429,7 +429,7 @@ Un groupe algébrique $G$ est linéairement réductif si tout $G$-module est sem
 \end{defn}
 
 \begin{ex}\label{ExGpLinReductive}
-Les groupes finis sont linéairement réductifs par le théorème de Maschke. Dans la partie \ref{GroupesDiag} on verra un autre exemple de groupes linéairement réductifs, les groupe diagonalisables.
+Les groupes finis sont linéairement réductifs par le théorème de Maschke. Dans la partie \ref{GroupesDiag} on verra un autre exemple de groupes linéairement réductifs, les groupes diagonalisables.
 \end{ex}
 
 Soit $G$ linéairement réductif, et $V$ un $G$-module. Le sous-espace $V^G$ des éléments $G$-invariants admet un unique supplémentaire $G$-stable que l'on note $V_G$, il s'agit de la somme directe des sous $G$-modules non-triviaux de $V$. On définit \textit{l'opérateur de Reynolds} $R_V$ comme la projection sur $V^G$ associée à cette décomposition. Voici quelques propriétés de $R_V$:
@@ -475,7 +475,7 @@ On peut ainsi transporter cette définition dans la catégorie des variétés al
 On considère l'action naturelle de $\gln_n$ sur $\AAA^n$. Le quotient catégorique existe et est un point. En effet soir $f:\AAA^n\rightarrow Z$ constant sur les orbites, alors $f$ est constante car il existe un orbite dense. En revanche il y a un deuxième orbite, c'est le fermé $\lbrace 0\rbrace$. 
 \end{ex}
 
-On suppose $X$ affine et $\Oo(X)^G$ de type fini, c'est en particulier le cas lorsque $G$ est linéairement réductif d'aprés le théorème \ref{hilbert}. Dans ce cadre, l'algèbre des invariants définit une variété algébrique affine $Y=\spec \Oo(X)^G$ muni d'un morphisme $\pi$ défini par l'inclusion $\Oo(X)^G\subset \Oo(X)$. On constate que tout morphisme $G$-invariant de variétés affines $X\rightarrow Z$ se factorise à travers $Y$, car le comorphisme est alors à valeurs dans $\Oo(X)^G$. De ce fait, $Y$ semble être un bon candidat pour le quotient catégorique. Toutefois il faut être prudent, dans \cite[6.4.10]{LAGFerrer}, on exhibe un exemple de cette situation qui n'admet pas de quotient catégorique. En effet, le morphisme d'un quotient catégorique est toujours surjectif, c'est un conséquence de la propriété universelle de factorisation (Voir  \cite[6.4.5]{LAGFerrer}). Or $\pi$ n'est pas nécessairement surjectif. On a toutefois le résultat suivant:
+On suppose $X$ affine et $\Oo(X)^G$ de type fini, c'est en particulier le cas lorsque $G$ est linéairement réductif d'aprés le théorème \ref{hilbert}. Dans ce cadre, l'algèbre des invariants définit une variété algébrique affine $Y=\spec \Oo(X)^G$ muni d'un morphisme $\pi$ défini par l'inclusion $\Oo(X)^G\subset \Oo(X)$. On constate que tout morphisme $G$-invariant de variétés affines $X\rightarrow Z$ se factorise à travers $Y$, car le comorphisme est alors à valeurs dans $\Oo(X)^G$. De ce fait, $Y$ semble être un bon candidat pour le quotient catégorique. Toutefois il faut être prudent, dans \cite[6.4.10]{LAGFerrer}, on exhibe un exemple de cette situation qui n'admet pas de quotient catégorique. En effet, le morphisme d'un quotient catégorique est toujours surjectif, c'est une conséquence de la propriété universelle de factorisation (Voir  \cite[6.4.5]{LAGFerrer}). Or $\pi$ n'est pas nécessairement surjectif. On a toutefois le résultat suivant:
 
 \begin{thm}\label{goodquotientthm}
 Soit $G$ un groupe linéairement réductif et $X$ une $G$-variété affine.
@@ -588,5 +588,5 @@ Enfin, on remarque que les fermés de $\proj(A)$ correspondent aux fermés $\GG_
 
 
 \begin{rem}
-Plus généralement on peut définir un schéma $\proj A$ pour tout anneau $\NN$-gradué $A$ (\cite{Hartshorne} II.2.5). L'espace topologique $\proj A$ est alors le sous-espace de $\spec A$ constitué des idéaux premiers homogènes qui ne contiennent pas $A_+:=\oplus_{d>0}A_d$, on le munit de la topologie induite. Pour tout anneau $R$, on définit le $n$-espace projectif sur $\spec R$ en posant $\PP^n_R:=\proj R[x_0,...,x_n]$, avec la graduation standard.
+Plus généralement on peut définir un schéma $\proj A$ pour tout anneau $\NN$-gradué $A$ (\cite{Hartshorne} II.2.5). L'espace topologique $\proj A$ est alors le sous-espace de $\spec A$ constitué des idéaux premiers homogènes qui ne contiennent pas $A_+:=\oplus_{d>0}A_d$, on le munit de la topologie induite. En particulier, pour tout anneau $R$, on définit le $n$-espace projectif sur $\spec R$ en posant $\PP^n_R:=\proj R[x_0,...,x_n]$, avec la graduation standard.
 \end{rem}

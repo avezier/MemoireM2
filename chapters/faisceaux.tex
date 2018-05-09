@@ -122,7 +122,7 @@ En effet, tout élément homogène $f\in A_d$ définit une section globale de $\
 $\Gamma_*(\Ff)^{\widetilde{}}\simeq \Ff\,\,\,\,\,$ (\cite[II.5.15]{Hartshorne})\end{center}
 
 \begin{rem}
-Si $X=\PP_k^r$, c'est à dire $A=k[x_0,....,x_r]$ on peut voir que l'on a un isomorphisme de $k$-algèbres graduées $\Gamma_*(\Oo_{\PP_k^r})\simeq k[x_0,...,x_r]$ (\cite[II.5.13]{Hartshorne}). En revanche, on a pas général $\Gamma_*(\Oo_X)=A$ pour une algèbre affine $\NN$-graduée $A$ quelconque. En effet, supposons $X=\proj A$ irréductible et normale, avec $A=k[x_0,...,x_r]/I$ où $I$ est un idéal premier radical et homogène (\ref{ProjConstruction}). L'inclusion $i$ donne lieu à une suite exacte courte
+Si $X=\PP_k^r$, c'est à dire $A=k[x_0,....,x_r]$ on peut voir que l'on a un isomorphisme de $k$-algèbres graduées $\Gamma_*(\Oo_{\PP_k^r})\simeq k[x_0,...,x_r]$ (\cite[II.5.13]{Hartshorne}). En revanche, on n'a pas en général $\Gamma_*(\Oo_X)=A$ pour une algèbre affine $\NN$-graduée $A$ quelconque. En effet, supposons $X=\proj A$ irréductible et normale, avec $A=k[x_0,...,x_r]/I$ où $I$ est un idéal premier radical et homogène (\ref{ProjConstruction}). L'inclusion $i$ donne lieu à une suite exacte courte
 \begin{center}
 $0\rightarrow\Ii_X:=\Ker i^\sharp\rightarrow\Oo_{\PP_k^r}\xrightarrow{i^\sharp}i_*\Oo_X\rightarrow 0$
 \end{center}
@@ -164,7 +164,7 @@ Soit $\Gamma(X,.):\Aa b(X)\rightarrow \Aa b$ le foncteur sections globales. Les 
 \end{defn}
 
 
-Un faisceau $\Ff\in \Aa b(X)$ est dit \textit{acyclique} si $H^i(X,\Ff)$ est nul pour tout $i>0$. On peut toujours remplacer une résolution injective de $\Ff$ par une résolution acyclique pour le calcul des groupes de cohomologie de $\Ff$. Les faisceaux \textit{flasques} donne une classe de faisceaux acycliques, ce sont les faisceaux dont les flèches de restriction sont surjectives. De plus, tout $\Oo_X$-module injectif est flasque, on en déduit que l'on peut utiliser des résolutions injectives dans $\Mm od(X)$ pour calculer les groupes de cohomologie d'un $\Oo_X$-module vu comme faisceau de groupes abélien sur $X$.
+Un faisceau $\Ff\in \Aa b(X)$ est dit \textit{acyclique} si $H^i(X,\Ff)$ est nul pour tout entier $i>0$. On peut toujours remplacer une résolution injective de $\Ff$ par une résolution acyclique pour le calcul des groupes de cohomologie de $\Ff$. Les faisceaux \textit{flasques} donne une classe de faisceaux acycliques, ce sont les faisceaux dont les flèches de restriction sont surjectives. De plus, tout $\Oo_X$-module injectif est flasque, on en déduit que l'on peut utiliser des résolutions injectives dans $\Mm od(X)$ pour calculer les groupes de cohomologie d'un $\Oo_X$-module vu comme faisceau de groupes abélien sur $X$.
 
 \subsubsection{Cohomologie à support}
 
@@ -360,7 +360,7 @@ Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$, c'es
 
 \subsection{$G$-fibré principal}
 
-\noindent Soit $G$ un groupe algébrique.
+\noindent On se fixe un groupe algébrique $G$.
 
 \begin{defn}[$G$-fibré principal]\label{GPrincipalBundleDef}
 Soit $X$ une $G$-variété, et $\pi:X\rightarrow Y$ un morphisme $G$-invariant. On dit que $(X,\pi)$ est un $G$-fibré principal sur $Y$ si
@@ -461,7 +461,7 @@ Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors $v_D(f)=
 Soit $f=g/h\in k(X)^*$, où l'on peut supposer $X=\spec A$ affine. Comme $v_D(f)=v_D(g)-v_D(h)$, on peut supposer $f\in A$, et non-inversible. Soit $D$ un diviseur premier et $\mathfrak{p}$ son point générique. Si $f\in A_\mathfrak{p}^*$ alors $v_D(f)=0$. Sinon, $f\in \mathfrak{p}$ et donc $D \subset \mathcal{V}_X(f)$. Or, d'après \ref{factonormal} et \ref{AssociatedPrimesProp1}, les éléments minimaux du support de $A/(f)$ sont en bijection avec les idéaux premiers associés à $(f)$, qui sont tous de hauteur $1$. On en déduit que les composantes irréductibles $Z_i$ de $\mathcal{V}_X(f)$ qui leur correspondent sont des diviseurs premiers, en nombre fini. Ainsi $v_D(f)=0$ à moins que $D$ ne soit l'un des $Z_i$.
 \end{proof}
 
-Ainsi l'application $k(X)^*\rightarrow \wdiv(X),\, f\mapsto $ div$(f):=\sum_D v_D(f)D$ définit un morphisme de groupes. Son image est le \textit{groupe des diviseurs principaux} noté PDiv$(X)$. La relation modulo PDiv$(X)$ s'appelle \textit{l'équivalence linéaire}, et le groupe quotient $\clg(X)$ est le \textit{groupe des classes de diviseurs}. $\clg(X)$ est un invariant en général difficile à calculer. On liste ci-dessous quelques outils et exemples.
+Ainsi l'application $k(X)^*\rightarrow \wdiv(X),\, f\mapsto $ div$(f):=\sum_D v_D(f)D$ définit un morphisme de groupes. Son image est le \textit{groupe des diviseurs principaux} noté PDiv$(X)$. La relation modulo PDiv$(X)$ s'appelle \textit{l'équivalence linéaire}, et le groupe quotient $\clg(X)$ est le \textit{groupe des classes de diviseurs}. Le groupe des classes de diviseurs de $X$ est un invariant en général difficile à calculer. On liste ci-dessous quelques outils et exemples.
 
 
 \begin{prop}\label{AffUFDClgTrifial}
@@ -482,7 +482,7 @@ Soit $X$ une variété normale et irréductible et $Z$ une sous-variété fermé
 \item Si $\codime(Z,X)\geq 2$, alors $\clg(X)\rightarrow \clg(U)$ est un isomorphisme.
 \item Soient $D_1,..., D_s$ les composantes irréductibles de $Z$ qui sont des diviseurs. Alors la suite ci-dessous exacte
 \begin{center}
- $0\rightarrow\Oo(X)^*\rightarrow \Oo(U)^*\xrightarrow{\divi} \bigoplus_{i=1}^s \ZZ D_i \xrightarrow{\pi} \clg(X) \xrightarrow{.\cap U} \clg(U) \rightarrow 0 $
+ $0\rightarrow\Oo(X)^*\rightarrow \Oo(X\setminus \cup_{i=1}^s D_i)^*\xrightarrow{\divi} \bigoplus_{i=1}^s \ZZ D_i \xrightarrow{\pi} \clg(X) \xrightarrow{.\cap U} \clg(U) \rightarrow 0 $
 \end{center}
 
 \end{enumerate}
@@ -599,7 +599,7 @@ Par cette correspondance, deux diviseurs sont linéairement équivalents si et s
 
 
 \begin{prop}\label{isopic}
-Soit $X$ une variété irréductible. L'application $D\mapsto \mathcal{O}_X(D)$ définit un isomorphisme de groupe CaCl$(X)\simeq $ Pic$(X)$.
+Soit $X$ une variété irréductible. L'application $D\mapsto \Oo_X(D)$ définit un isomorphisme de groupes $\cacl(X)\simeq \pic(X)$.
 \end{prop}
 
 
