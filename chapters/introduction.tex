@@ -2,20 +2,38 @@
 
 \section*{Introduction}
 
-L'objectif du stage était d'entrer dans le sujet des anneaux de Cox en suivant la présentation de Arzhantzev, Derenthal, Hausen et Laface dans le chapitre $1$ du livre \cite{coxrings}. Il m'a fallu dans un premier temps acquérir des notions de bases en théorie des invariants, que j'ai pu trouver dans la note de synthèse \cite{LAGBrion}. Puis, je me suis naturellement intéressé à la théorie des diviseurs sur une variété algébrique, qui constitue un autre ingrédient important de la construction des anneaux de Cox. La meilleure exposition que j'ai pu trouver sur ce sujet est celle du livre \cite{Hartshorne}, ce qui m'a amené à me familiariser avec le langage des schémas. J'ai pu ensuite regarder les variétés
-Enfin, il m'a fallu éclaircir plusieurs points du livre. Le premier était de comprendre pourquoi la bijection naturelle $H/H_x\simeq H.x$, où $H.x$ est l'orbite d'un point $x$ d'une $H$-variété sous l'action d'un groupe algébrique diagonalisable, était un isomorphisme de variétés.
+L'objectif du stage était d'entrer dans le sujet des anneaux de Cox en suivant la présentation de Arzhantzev, Derenthal, Hausen et Laface dans le chapitre $1$ du livre \cite{coxrings}. Il m'a fallu dans un premier temps acquérir des notions de base en théorie des invariants, que j'ai pu trouver dans la note de synthèse \cite{LAGBrion}. Puis, je me suis naturellement intéressé à la théorie des diviseurs sur une variété algébrique, qui constitue un autre ingrédient important de la construction des anneaux de Cox. La meilleure exposition que j'ai pu trouver sur ce sujet est celle du livre \cite{Hartshorne}, ce qui m'a amené à me familiariser avec le langage des schémas. Cet effort m'a permis à la fois d'élargir ma vision et d'accéder à des résultats qui m'étaient nécessaires pour compléter certains points dans l'exposition de \cite{coxrings}. Le premier était de comprendre pourquoi la bijection naturelle $H/H_x\simeq H.x$, où $H.x$ est l'orbite d'un point $x$ d'une $H$-variété sous l'action d'un groupe algébrique diagonalisable, était un isomorphisme de variétés, c'est le théorème \ref{ZMTCor} du mémoire. Le second point m'ayant demandé un effort substantiel est le résultat \ref{cohomcodimgeq2}, utilisé implicitement à plusieurs reprises dans le livre \cite{coxrings}. Pour l'obtenir, j'ai mis en oeuvre des techniques de cohomologie des faisceaux sur un schéma, cela fait l'objet de la section \ref{Cohomologie}. Le théorème important de la théorie \ref{clgtrivial} faisait référence à des articles de recherche à deux reprises. La première concernait l'existence de $G$-linéarisation d'un fibré en droites. La seconde pointait des résultats de Rosenlicht sur les groupes des unités d'une variété et les groupes de caractères d'un groupe algébrique. Pour tout cela, la note \cite{LinearizationGBrion} m'a été très utile. Enfin, la preuve de la construction \ref{conscoxtorsionlisse} pointait un résultat très fort, or il était possible dans cette situation de procéder de manière plus "économique" en utilisant principalement le résultat \ref{GITEtaleFiniteGroup} tiré de \cite{MumfordAbelianVarieties}.
+
+Donnons maintenant un aperçu de ce qu'est un anneau de Cox. On considère une variété $X$ normale irréductible dont le groupe des classes est de type fini et les fonctions régulières inversibles sont constantes. L'anneau de Cox de $X$ est l'anneau $\Rr(X)$ des sections globales d'un faisceau d'algèbres $\Rr$ sur $X$, dit faisceau de Cox. Ce faisceau est construit essentiellement à partir du faisceau structural de $X$ et de son groupe des classes. Certains choix sont faits mais le faisceau obtenu n'en dépend qu'à isomorphisme près. L'anneau de Cox est donc un invariant de $X$. De plus, le faisceau et l'anneau de Cox sont $\clg(X)$-gradués. Géométriquement, cela signifie que leur spectres $\widetilde{X}:=\spec_X \Rr$ et $\overline{X}:=\spec \Rr(X)$ sont équipés d'une action du groupe algébrique diagonalisable $H:=\spec(k[\clg(X)])$. De plus, $\widetilde{X}$ est naturellement un schéma sur $X$, via un morphisme $p$ provenant de la structure de $\Oo_X$-algèbre sur $\Rr$, et $(X, p)$ est un bon quotient de $\widetilde{X}$ pour l'action de $H$. Enfin, le morphisme naturel $\widetilde{X}\rightarrow \overline{X}$ est une immersion ouverte $H$-équivariante, ce qui fait de $\widetilde{X}$ un schéma quasi-affine, et en fait une variété quasi-affine lorsque le faisceau de Cox est localement de type fini. On résume cela dans le diagramme ci-dessous
+	\begin{center}
+	\begin{tikzcd}
+  		\widetilde{X}=\spec_X \Rr \arrow[d, "p=/H"] \arrow[r, hook,""] & \overline{X}=\spec \Rr(X) \\ 
+  		X &
+	\end{tikzcd}
+	\end{center}
+
+Par exemple, le $d$-espace projectif $\PP_k^d$ peut se construire en tant que variété comme le quotient géométrique de $\AAA^{d+1}_k\setminus \lbrace 0 \rbrace$ sous l'action de $\GG_m$ agissant par homothéties. Le groupe des classes $\clg(\PP_k^d)$ est libre de rang $1$ engendré par la classe d'un hyperplan quelconque. Le faisceau de Cox est alors $\ZZ$-gradué et engendré en tant que $\Oo_{\PP_k^n}$-algèbre par $d+1$ sections globales de degré $1$. On trouve facilement
+\begin{center}
+$\spec_X\Rr=\AAA^{d+1}_k\setminus \lbrace 0 \rbrace$, et $\spec \Rr(X)=\AAA^{d+1}_k$
+\end{center}
+De plus, la $\ZZ$-graduation de $\Rr$ se traduit par l'action de $\GG_m$ sur $\AAA^{d+1}_k\setminus \lbrace 0 \rbrace$ par homothéties. Notons que $\spec_X\Rr$ peut dans cet exemple être vu comme un fibré en droites sur $\PP_k^d$, munit de l'action naturelle de $\GG_m$ sur les fibres. Cet exemple simple permet de fixer, en première approximation, la manière géométrique de penser les faisceaux et anneaux de Cox.
+
+Enfin mentionnons qu'au delà d'un invariant riche d'information algébro-géométrique, la théorie des anneaux de Cox a des applications importantes en arithmétique, notamment concernant la distribution des points rationnels sur une variété.
+
+
 
 \section*{Remerciements}
 
 Je souhaite remercier Michel BRION pour le sujet passionnant qu'il m'a proposé, sa disponibilité, ainsi que pour l'aide précieuse qu'il m'a apporté tout au long de ce travail.
 
 \section*{Conventions}
-\label{sec:conventions}
+\label{conventions}
 
 \begin{itemize}
 \item Sauf mention explicite du contraire, $k$ désigne un corps algébriquement clos de caractéristique zéro. Les résultats où l'hypothèse sur la caractéristique est nécessaire seront clairement balisés.
 \item Un anneau désigne un anneau commutatif unitaire.
 \item Un groupe algébrique désigne un groupe algébrique affine.
+\item Une variété est un $k$-schéma réduit séparé de type fini sur $k$.
 \end{itemize}
 
 

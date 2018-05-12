@@ -5,21 +5,21 @@
 
 \noindent Dans cette partie on utilise les références \cite{QingLiu} et \cite{Hartshorne}.\\
 
-Soit $X$ un schéma. Un \textit{$\Oo_X$-module} est un faisceau $\Ff$ tel que $\Ff(U)$ soit un $\Oo_X(U)$-module pour tout ouvert $U\subset X$, en demandant de plus que les actions soit compatibles aux restrictions, c'est à dire que pour tout ouverts $V\subset U$, $a\in\Oo(U)$, $f\in \Ff(U)$, on ait $(af)_{|V}=a_{|V}f_{|V}$. Un morphisme $\Ff\rightarrow\Gg$ de $\Oo_X$-modules est un morphisme de prefaisceaux tel que pour tout $U$ la flèche $\Ff(U)\rightarrow\Gg(U)$ soit un morphisme de $\Oo(U)$-modules. 
+Soit $X$ un schéma. Un \textit{$\Oo_X$-module} est un faisceau $\Ff$ tel que $\Ff(U)$ soit un $\Oo_X(U)$-module pour tout ouvert $U\subset X$, en demandant de plus que les actions soient compatibles aux restrictions, c'est à dire que pour tout ouvert $V\subset U$, $a\in\Oo(U)$, $f\in \Ff(U)$, on ait $(af)_{|V}=a_{|V}f_{|V}$. Un morphisme $\Ff\rightarrow\Gg$ de $\Oo_X$-modules est un morphisme de prefaisceaux tel que pour tout ouvert $U$, la flèche $\Ff(U)\rightarrow\Gg(U)$ soit un morphisme de $\Oo(U)$-modules. 
 
 \subsection{Faisceaux quasi-cohérents}
 
-Soit $X$ un schéma. Un $\Oo_X$-module $\Ff$ est \textit{quasi cohérent} si localement il admet une \textit{présentation}, c'est à dire que pour tout $x\in X$, il existe un voisinage ouvert $x\in U$ tel que on ait une suite exacte
+Soit $X$ un schéma. Un $\Oo_X$-module $\Ff$ est \textit{quasi cohérent} si localement il admet une \textit{présentation}, c'est-à-dire que pour tout $x\in X$, il existe un voisinage ouvert $x\in U$ tel que l'on ait une suite exacte
 \begin{center}
 $\bigoplus_{j\in J}\Oo_{X|U}\rightarrow\bigoplus_{i\in I}\Oo_{X|U}\rightarrow \Ff_{|U}\rightarrow 0$
 \end{center}
 
-On dit que $\Ff$ est \textit{cohérent} si sur chaque voisinage, la présentation est finie, c'est à dire que les famille $I$ et $J$ sont finies.
+On dit que $\Ff$ est \textit{cohérent} si sur chaque voisinage, la présentation est finie, c'est-à-dire que les famille $I$ et $J$ sont finies.
 Soit $X\simeq \spec A$ un schéma affine, et $M$ un $A$-module. On définit un $\Oo_X$-module $\widetilde{M}$ sur le même modèle que le faisceau structural en posant $\widetilde{M}(X_f)=M_f$ pour chaque ouvert principal $X_f$. On vérifie que cela définit un $\Oo_X$-module tel que $\widetilde{M}_\mathfrak{p}=M_\mathfrak{p}$ pour tout $\mathfrak{p}\in X$, et $\widetilde{M}(X)=M$.
 
 
 \begin{prop}
-Soit $X\simeq\spec A$ un schéma affine. L'application $M\mapsto \widetilde{M}$ définit un foncteur exact, plein et fidèle de la catégorie des $A$-module vers la catégorie des $\Oo_X$-module. De plus il commute aux sommes directes et au produit tensoriel.
+Soit $X\simeq\spec A$ un schéma affine. L'application $M\mapsto \widetilde{M}$ définit un foncteur exact, plein et fidèle de la catégorie des $A$-modules vers la catégorie des $\Oo_X$-modules. De plus il commute aux sommes directes et au produit tensoriel.
 \end{prop}
 \begin{proof}
 \cite[II.5.2]{Hartshorne}
@@ -40,7 +40,7 @@ est un isomorphisme.
 \begin{thm}\label{FQCThm}
 Soit $\Ff$ un $\Oo_X$-module sur un schéma $X$. Alors $\Ff$ est quasi-cohérent si et seulement si pour tout ouvert affine $U\subset X$, on a $\Ff(U)^{\widetilde{}}\simeq\Ff_{|U}$.
 
-En particulier, si $X\simeq \spec A$ est affine, alors les foncteurs $M\mapsto \widetilde{M}$ et $\Gamma(X,.)$ réalisent une équivalence de catégories entre la catégorie des $A$-module et la catégorie des faisceaux quasi-cohérents sur $X$.
+En particulier, si $X\simeq \spec A$ est affine, alors les foncteurs $M\mapsto \widetilde{M}$ et $\Gamma(X,.)$ réalisent une équivalence de catégories entre la catégorie des $A$-modules et la catégorie des faisceaux quasi-cohérents sur $X$.
 \end{thm}
 \begin{proof}
 \cite[5.1.7]{QingLiu}
@@ -56,7 +56,7 @@ Soit $\Ff$ un faisceau quasi-cohérent sur un schéma noetherien $X$. Alors $\Ff
 \begin{prop}\label{FQCProps3}
 Soit $X$ un schéma, alors on a les propriétés suivantes
 \begin{enumerate}
-\item Une somme directe de faisceaux quasi-cohérents est un faisceau quasi-cohérent. Si $X$ est notherien, une somme directe finie de faisceaux cohérents est un faisceau cohérent.
+\item Une somme directe de faisceaux quasi-cohérents est un faisceau quasi-cohérent. Si $X$ est noetherien, une somme directe finie de faisceaux cohérents est un faisceau cohérent.
 \item Soient $\Ff$ et $\Gg$ des faisceaux quasi-cohérents sur $X$, alors $\Ff\otimes \Gg$ est quasi-cohérent. Si $X$ est noetherien et $\Ff,\Gg$ cohérents, alors $\Ff\otimes_{\Oo_X} \Gg$ est cohérent. Enfin, si $X$ est affine, alors $(\Ff\otimes_{\Oo_X}\Gg)(U)=\Ff(U)\otimes_{\Oo(U)}\Gg(U)$ pour tout ouvert $U\subset X$.
 \item Soit $f:\Ff\rightarrow \Gg$ un morphisme de faisceaux quasi-cohérents. Alors $\Ker f$, $\Im f$ et $\Coker f$ sont quasi-cohérents. Si $X$ est noetherien, et $\Ff, \Gg$ cohérents, alors $\Ker f$, $\Im f$ et $\Coker f$ sont cohérents.
 \item Soit $f:X\rightarrow Y$ un morphisme, et $\Gg$ un $\Oo_Y$-module quasi-cohérent. Soit $U$ un ouvert affine de $X$ tel que $f(U)$ est contenu dans un ouvert affine $V$ de $Y$. Alors
@@ -83,7 +83,7 @@ Soit $X$ un schéma. Une $\Oo_X$-algèbre est un faisceau d'anneaux $\Ss$ sur $X
 On introduit ci-dessous la version relative du spectre d'un anneau. On se donne un schéma de base $X$ que l'on suppose séparé pour les applications que l'on a en vue, et une $\Oo_X$-algèbre quasi-cohérente $\Ss$. A partir de ces données, on souhaite construire un schéma $\spec_X S$ sur $X$ dont le morphisme structural est affine. Cette construction nous sera très utile par la suite.
 
 \begin{cons}[Spectre relatif]	\label{relspec}
-Soit $X$ un schéma séparé, $\Ss$ une $\Oo_X$-algèbre quasi-cohérente, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Il existe un schéma $\spec_X \Ss$ construit par recollement des schémas affines $\spec(\Ss(U_i))$, unique à isomorphisme canonique près. Ce schéma est séparé sur $X$ via le recollement des morphismes $\spec(\Ss(U_i))\rightarrow U_i$ donnés par la structure d'algèbre. De plus, le morphisme structural $p$ est affine est on a l'égalité de faisceaux
+Soit $X$ un schéma séparé, $\Ss$ une $\Oo_X$-algèbre quasi-cohérente, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Il existe un schéma $\spec_X \Ss$ construit par recollement des schémas affines $\spec(\Ss(U_i))$, unique à isomorphisme canonique près. Ce schéma est séparé sur $X$ via le recollement des morphismes $\spec(\Ss(U_i))\rightarrow U_i$ donnés par la structure d'algèbre. De plus, le morphisme structural $p$ est affine et on a l'égalité de faisceaux
 $$p_*(\Oo_{\spec_X\Ss})=\Ss$$
 Enfin, si $X$ est une variété et que $\Ss$ est un faisceau d'algèbres réduites, localement de type fini, alors $\spec_X \Ss$ est une variété.
 \end{cons}
@@ -97,11 +97,11 @@ On note $U_{ij}:=U_i\cap U_j$, $A_i:=\Ss(U_i)$ et $A_{ij}:=\Ss(U_{ij})$. Les don
 	\end{tikzcd}\\
 	\end{center}
 	
-On a $\Ss_{|U_{ij}}=\iota^*(\Ss_{|U_i})$ donc $\widetilde{A_{ij}}=\iota^*(\widetilde{A_i})=\widetilde{A_i \otimes_{R_i}R_{ij}}$ d'après \ref{FQCProps3} $4$, où $R_i:=\Oo_X(U_i)$ et $R_{ij}:=\Oo_X(U_{ij})$, ce qui donne $A_{ij}\simeq A_i\otimes_{R_i}R_{ij}$ d'après \ref{FQCThm}, puis $\widetilde{X}_{ij}\simeq U_{ij}\times_{U_i}\widetilde{X}_i$. Cela prouve que $\phi_i$ est une immersion ouverte. On a de même une immersion ouverte $\phi_j:\widetilde{X}_{ij}\rightarrow \widetilde{X}_j$. Les $\phi_{ij}:=\phi_j\phi_i^{-1}$ vérifient bient les conditions de recollement de \ref{gluevar}. On a donc un schéma $\widetilde{X}$ sur $X$ car les $p_i$ se recollent en un morphisme $p:\widetilde{X}\rightarrow X$ qui est affine par construction. Ce morphisme est séparé d'après \ref{sepCritere}. La dernière assertion est claire par définition.
+On a $\Ss_{|U_{ij}}=\iota^*(\Ss_{|U_i})$ donc $\widetilde{A_{ij}}=\iota^*(\widetilde{A_i})=\widetilde{A_i \otimes_{R_i}R_{ij}}$ d'après \ref{FQCProps3} $4$, où $R_i:=\Oo_X(U_i)$ et $R_{ij}:=\Oo_X(U_{ij})$, ce qui donne $A_{ij}\simeq A_i\otimes_{R_i}R_{ij}$ d'après \ref{FQCThm}, puis $\widetilde{X}_{ij}\simeq U_{ij}\times_{U_i}\widetilde{X}_i$. Cela prouve que $\phi_i$ est une immersion ouverte. On a de même une immersion ouverte $\phi_j:\widetilde{X}_{ij}\rightarrow \widetilde{X}_j$. Les $\phi_{ij}:=\phi_j\phi_i^{-1}$ vérifient bien les conditions de recollement de \ref{gluevar}. On a donc un schéma $\widetilde{X}$ sur $X$ car les $p_i$ se recollent en un morphisme $p:\widetilde{X}\rightarrow X$ qui est affine par construction. Ce morphisme est séparé d'après \ref{sepCritere}. La dernière assertion est claire par définition.
 \end{proof}
 
 \begin{rem}
-Soit $X$ un schéma. On peut montrer (\cite[12.1]{Gortz}) que le foncteur $\Ss\mapsto \spec_X\Ss$ définit une anti-équivalence de catégories entre la catégorie des $\Oo_X$-algèbres quasi-cohérentes et la catégorie des schémas qui sont affines sur $X$, c'est à dire dont le morphisme structural est affine. Un quasi-inverse est donnée par $(f:Y\rightarrow X)\mapsto f_*\Oo_Y$.
+Soit $X$ un schéma. On peut montrer (\cite[12.1]{Gortz}) que le foncteur $\Ss\mapsto \spec_X\Ss$ définit une anti-équivalence de catégories entre la catégorie des $\Oo_X$-algèbres quasi-cohérentes et la catégorie des schémas qui sont affines sur $X$, c'est-à-dire dont le morphisme structural est affine. Un quasi-inverse est donnée par $(f:Y\rightarrow X)\mapsto f_*\Oo_Y$.
 \end{rem}
 
 
@@ -113,7 +113,7 @@ Soit $X:=\proj A$ une variété projective. Ainsi $A$ est une algèbre affine $\
 
 Pour tout $n\in \ZZ$, on note $\Oo_X(n)$ le faisceau quasi-cohérent associé au $A$-module décalé $A(n)$. Plus généralement, étant donné un $\Oo_X$-module quasi-cohérent $\Ff$, on définit le faisceau décalé $\Ff(n):=\Ff\otimes_{\Oo_X}\Oo_X(n)$, c'est un faisceau quasi-cohérent. L'opération tilde commute au décalage, et on a $\Oo_X(n)=i^*(\Oo_{\PP_k^r}(n))$.
 
-On définit un foncteur exact à gauche de la catégorie des $\Oo_X$-module dans la catégorie des $A$-modules $\ZZ$-gradués en posant 
+On définit un foncteur exact à gauche de la catégorie des $\Oo_X$-modules dans la catégorie des $A$-modules $\ZZ$-gradués en posant 
 \begin{center}
 $\Gamma_*(\Ff):=\bigoplus_{n=-\infty}^{+\infty}\Gamma(X,\Ff(n))$
 \end{center}
@@ -122,7 +122,7 @@ En effet, tout élément homogène $f\in A_d$ définit une section globale de $\
 $\Gamma_*(\Ff)^{\widetilde{}}\simeq \Ff\,\,\,\,\,$ (\cite[II.5.15]{Hartshorne})\end{center}
 
 \begin{rem}
-Si $X=\PP_k^r$, c'est à dire $A=k[x_0,....,x_r]$ on peut voir que l'on a un isomorphisme de $k$-algèbres graduées $\Gamma_*(\Oo_{\PP_k^r})\simeq k[x_0,...,x_r]$ (\cite[II.5.13]{Hartshorne}). En revanche, on n'a pas en général $\Gamma_*(\Oo_X)=A$ pour une algèbre affine $\NN$-graduée $A$ quelconque. En effet, supposons $X=\proj A$ irréductible et normale, avec $A=k[x_0,...,x_r]/I$ où $I$ est un idéal premier radical et homogène (\ref{ProjConstruction}). Le plongement $i$ donne lieu à une suite exacte courte
+Si $X=\PP_k^r$, c'est-à-dire $A=k[x_0,....,x_r]$ on peut voir que l'on a un isomorphisme de $k$-algèbres graduées $\Gamma_*(\Oo_{\PP_k^r})\simeq k[x_0,...,x_r]$ (\cite[II.5.13]{Hartshorne}). En revanche, on n'a pas en général $\Gamma_*(\Oo_X)=A$ pour une algèbre affine $\NN$-graduée $A$ quelconque. En effet, supposons $X=\proj A$ irréductible et normale, avec $A=k[x_0,...,x_r]/I$ où $I$ est un idéal premier radical et homogène (\ref{ProjConstruction}). Le plongement $i$ donne lieu à une suite exacte courte
 \begin{center}
 $0\rightarrow\Ii_X:=\Ker i^\sharp\rightarrow\Oo_{\PP_k^r}\xrightarrow{i^\sharp}i_*\Oo_X\rightarrow 0$
 \end{center}
@@ -131,12 +131,12 @@ On a $\Gamma_*(\Ii_X)=I$ (\cite[ex II.5.10]{Hartshorne}), et en appliquant $\Gam
 $0\rightarrow I \xrightarrow{\subset} k[x_0,...,x_r]\xrightarrow{\Gamma_*(i^\sharp)}\Gamma_*(\Oo_X)$
 \end{center}
 
-Le morphisme $\Gamma_*(i^\sharp)$ n'est pas surjectif en général. Son image est isomorphe à $A$, et on peut montrer (\cite[II ex 5.14]{Hartshorne}) que $\Gamma_*(\Oo_X)$ est la clôture intégrale de $A$. Comme exemple concret on peut prendre par exemple l'immersion fermée $i:\PP_k^1\xhookrightarrow{}\PP_k^3$ donnée par le morphisme gradué $\phi:k[x,y,z,w]\rightarrow k[s,t]$, ($x\mapsto s^m, t\mapsto s^{m-1}t, z\mapsto st^{m-1},w\mapsto t^m)$. On peut voir que $\Gamma_*(\Oo_{i(\PP_k^1)})=\bigoplus_{d\geq 0}k[s,t]_{md}$ et que l'image de $\phi$ est strictement incluse dans cette algèbre pour $m\geq 4$.
+Le morphisme $\Gamma_*(i^\sharp)$ n'est pas surjectif en général. Son image est isomorphe à $A$, et on peut montrer (\cite[II ex 5.14]{Hartshorne}) que $\Gamma_*(\Oo_X)$ est la clôture intégrale de $A$. Comme exemple concret prenons l'immersion fermée $i:\PP_k^1\xhookrightarrow{}\PP_k^3$ donnée par le morphisme gradué $\phi:k[x,y,z,w]\rightarrow k[s,t]$, ($x\mapsto s^m, t\mapsto s^{m-1}t, z\mapsto st^{m-1},w\mapsto t^m)$. On peut voir que $\Gamma_*(\Oo_{i(\PP_k^1)})=\bigoplus_{d\geq 0}k[s,t]_{md}$ et que l'image de $\phi$ est strictement incluse dans cette algèbre pour $m\geq 4$.
 
 \end{rem}
 
 \subsection{Cohomologie des faisceaux et applications}
-
+\label{Cohomologie}
 \subsubsection{Généralités}
 
 On rappelle sans démonstrations quelques définitions et résultats de base, l'objectif étant de définir les groupes de cohomologie d'un faisceau sur un schéma relatifs au foncteur sections globales. La référence principale est \cite[chap III]{Hartshorne}.\\
