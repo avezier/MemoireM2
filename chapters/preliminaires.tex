@@ -18,7 +18,7 @@ $A=k[x,y], M=A/(xy),\mathfrak{p}=(x)=\ann(\bar{y})=((xy):y)$.
 \end{ex}
 
 \begin{defn}[Élément $M$-régulier]
-Un élément $x\in A$ est $M$-régulier si la multiplication par $x$ est un endomorphisme injectif de $M$, c'est à dire que $x$ n'est pas diviseur de zéro d'un élément de $M$. Si $x$ n'est pas régulier on dit que c'est un diviseur de zéro de $M$.
+Un élément $x\in A$ est $M$-régulier si la multiplication par $x$ est un endomorphisme injectif de $M$, c'est-à-dire que $x$ n'est pas diviseur de zéro d'un élément de $M$. Si $x$ n'est pas régulier on dit que c'est un diviseur de zéro de $M$.
 \end{defn}
 
 \begin{defn}[Support d'un module]
@@ -61,7 +61,7 @@ Réciproquement, si cette assertion est vérifiée pour un sous-module $N$, alor
 $$\mathfrak{a}\text{ est }\mathfrak{p}\text{-primaire} \iff (x\in A,\, y\in A\setminus\mathfrak{a},\,xy\in\mathfrak{a}\implies x\in \sqrt{\mathfrak{a}}=\mathfrak{p})$$
 \end{rem}
 
-Un sous-module $N$ est dit irréductible si on ne peut pas l'écrire comme une intersection de sous-modules qui le contiennent strictement. Une décomposition irréductible de $N$ est une écriture $N=N_1\cap...\cap N_r$ avec $N_i$ irréductible pour tout $i$. Cette écriture n'est pas unique en général, même si elle est réduite, c'est à dire qu'on ne peut ôter aucun facteur. 
+Un sous-module $N$ est dit irréductible si on ne peut pas l'écrire comme une intersection de sous-modules qui le contiennent strictement. Une décomposition irréductible de $N$ est une écriture $N=N_1\cap...\cap N_r$ avec $N_i$ irréductible pour tout $i$. Cette écriture n'est pas unique en général, même si elle est réduite, c'est-à-dire qu'on ne peut ôter aucun facteur. 
 
 \begin{thm}
 \begin{enumerate}
@@ -88,7 +88,7 @@ Les assertions suivantes sont équivalentes
 \cite[5.1]{atiyahmacdo}
 \end{proof}
 
-Ainsi, l'ensemble des éléments de $B$ entiers sur $A$ forment un sous-anneau de $B$, c'est la \textit{clôture intégrale} de $A$ dans $B$, notée $\overline{A_B}$. Si $\overline{A_B}=A$, on dit que $A$ est \textit{intégralement clos} dans $B$. Dans le cas où $A$ est intègre et $B=\fract A$, on dit tout simplement intégralement clos. Si $A$ n'est pas intègre, remarquons qu'il existe une notion plus générale qu'il est utile de mentionner pour la consistance avec la terminologie de variété normale que nous verrons plus loin. Pour un anneau quelconque $A$, on dit que $A$ est \textit{normal} si tout localisé de $A$ en un idéal premier est un anneau intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13). Notons que nous ne rencontrerons pas dans ce mémoire d'anneaux normaux non-intègres.
+Ainsi, l'ensemble des éléments de $B$ entiers sur $A$ forme un sous-anneau de $B$, c'est la \textit{clôture intégrale} de $A$ dans $B$, notée $\overline{A_B}$. Si $\overline{A_B}=A$, on dit que $A$ est \textit{intégralement clos} dans $B$. Dans le cas où $A$ est intègre et $B=\fract A$, on dit tout simplement intégralement clos. Si $A$ n'est pas intègre, remarquons qu'il existe une notion plus générale qu'il est utile de mentionner pour la consistance avec la terminologie de variété normale que nous verrons plus loin. Pour un anneau quelconque $A$, on dit que $A$ est \textit{normal} si tout localisé de $A$ en un idéal premier est un anneau intégralement clos. On note qu'un anneau intègre est intégralement clos si et seulement si il est normal (\cite{atiyahmacdo} 5.13). Notons que nous ne rencontrerons pas dans ce mémoire d'anneaux normaux non-intègres.
 
 \begin{cor}
 Soit $B$ une $A$-algèbre de type fini. Alors $B$ est entière sur $A$ si et seulement si elle est finie.
@@ -123,7 +123,7 @@ $A$ est factoriel si et seulement si tout idéal premier de hauteur $1$ est prin
 \begin{thm}[Critère de Serre pour la normalité]\label{SerreCritere}
 Soit $A$ un anneau noetherien intègre. Alors $A$ est intégralement clos si et seulement si il satisfait les deux conditions suivantes
 \begin{enumerate}
-\item Pour tout idéal premier de hauteur $\leq 1$, L'anneau local $A_\mathfrak{p}$ est régulier.
+\item Pour tout idéal premier de hauteur $\leq 1$, l'anneau local $A_\mathfrak{p}$ est régulier.
 \item Les idéaux premiers associés d'un idéal principal non-nul sont de hauteur $1$.
 \end{enumerate}
 \end{thm}
@@ -135,7 +135,7 @@ Soit $A$ un anneau noetherien intègre. Alors $A$ est intégralement clos si et 
 Soit $k[x_1,...,x_n]$ un anneau de polynômes, et $f\in A$ un élément premier. Alors $A=k[x_1,...,x_n]/(f)$ satisfait la condition $2$ du théorème précédent. 
 \end{prop}
 \begin{proof}
-Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de hauteur $1$. En remplaçant $A$ par sa localisation en $\mathfrak{p}$, on peut supposer $A$ local d'idéal maximal $\mathfrak{p}$. Par définition, il existe $g\in A\setminus (f) $ tel que $\mathfrak{p}=\lbrace x\in A\mid gx=0 \,\modu (f)\rbrace$. Soit $y:=g/f\in \fract(A)$. Si $y\mathfrak{p}\subset\mathfrak{p}$, c'est à dire $(x\in A$ et $gx=0 \,\modu (f))\implies g(x/f)=0\,\modu (f)$, ou encore $g(x/f^n)=0\,\modu (f)$ pour tout $n>0$. On en déduit $g\in (f)$, contradiction. Ainsi $y\mathfrak{p}=A$, ou encore $\mathfrak{p}=(f/g)$. Par le théorème de l'idéal principal de Krull (voir \ref{dimsousvariete}) on en déduit $\haut \mathfrak{p}=1$.
+Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de hauteur $1$. En remplaçant $A$ par sa localisation en $\mathfrak{p}$, on peut supposer $A$ local d'idéal maximal $\mathfrak{p}$. Par définition, il existe $g\in A\setminus (f) $ tel que $\mathfrak{p}=\lbrace x\in A\mid gx=0 \,\modu (f)\rbrace$. Soit $y:=g/f\in \fract(A)$. Si $y\mathfrak{p}\subset\mathfrak{p}$, c'est-à-dire $(x\in A$ et $gx=0 \,\modu (f))\implies g(x/f)=0\,\modu (f)$, ou encore $g(x/f^n)=0\,\modu (f)$ pour tout $n>0$. On en déduit $g\in (f)$, c'est une contradiction. Ainsi $y\mathfrak{p}=A$, ou encore $\mathfrak{p}=(f/g)$. Par le théorème de l'idéal principal de Krull (voir \ref{dimsousvariete}) on en déduit $\haut \mathfrak{p}=1$.
 \end{proof}
 
 \begin{prop}[Car. zéro]\label{tensorproductNormalDomain}
@@ -241,9 +241,9 @@ Soit $A$ un anneau intègre et $K$ son corps des fractions. Un idéal fractionna
 Un sous $A$-module $M$ de $K$ est inversible si il existe un sous $A$-module $N$ de $K$ tel que $MN=A$.
 \end{defn}
 
-Un sous $A$-module inversible $M$ de $K$ est nécessairement de type fini, donc est fractionnaire. De plus, on a $M^{-1}=(A:M)=\lbrace x\in K\mid xM\subset A\rbrace$. Si $A$ est noetherien, les idéaux fractionnaires sont exactement les sous $A$-modules de type fini de $K$. 
+Un sous $A$-module inversible $M$ de $K$ est nécessairement de type fini, donc fractionnaire. De plus, on a $M^{-1}=(A:M)=\lbrace x\in K\mid xM\subset A\rbrace$. Si $A$ est noetherien, les idéaux fractionnaires sont exactement les sous $A$-modules de type fini de $K$. 
 
-Soit $A$ un anneau intègre, et $\mathfrak{p}$ un idéal premier de hauteur $1$ tel que $A_\mathfrak{p}$ soit un anneau de valuation discrète. L'idéal maximal $\mathfrak{p}A_\mathfrak{p}$ de $A_\mathfrak{p}$ est principal engendré par une uniformisante $\pi$. Tout idéal fractionnaire non-nul de $A_\mathfrak{p}$ est inversible, et cette condition est même suffisante pour que $A_\mathfrak{p}$ soit un anneau de valuation discrète (voir \cite{atiyahmacdo} 9.7). Pour tout entier $k\in \ZZ$ on a en tant que $A_\mathfrak{p}$-modules
+Soit $A$ un anneau intègre, et $\mathfrak{p}$ un idéal premier de hauteur $1$ tel que $A_\mathfrak{p}$ soit un anneau de valuation discrète. L'idéal maximal $\mathfrak{p}A_\mathfrak{p}$ de $A_\mathfrak{p}$ est principal, engendré par une uniformisante $\pi$. Tout idéal fractionnaire non-nul de $A_\mathfrak{p}$ est inversible, et cette condition est même suffisante pour que $A_\mathfrak{p}$ soit un anneau de valuation discrète (voir \cite{atiyahmacdo} 9.7). Pour tout entier $k\in \ZZ$ on a en tant que $A_\mathfrak{p}$-modules
 \begin{center}
 $(\mathfrak{p}A_\mathfrak{p})^k=(\pi)^k=\lbrace x\in K\mid v_\mathfrak{p}(x)\geq k \rbrace$,
 \end{center}
@@ -330,7 +330,7 @@ Soit $A$ un anneau, on note $X=\spec A$ l'ensemble de ses idéaux premiers, il e
 \begin{defn}[Espace annelé]
 Un espace annelé est un espace topologique $X$ muni d'un faisceau d'anneau $\Oo_X$ tel que les tiges $\Oo_{X,x}$ soient des anneaux locaux en tout point $x\in X$.
 
-Un morphisme d'espaces annelés $(f, f^\sharp):(X,\Oo_X)\rightarrow (Y,\Oo_Y)$ est une application continue $f:X\rightarrow Y$ et un morphisme $f^\sharp:\Oo_Y\rightarrow f_*\Oo_X$ tel que les morphismes induits entre les tiges soient locaux, c'est à dire $f^{\sharp -1}_x(\mathfrak{m}_x)=\mathfrak{m}_{f(x)}$ pour tout $x\in X$.
+Un morphisme d'espaces annelés $(f, f^\sharp):(X,\Oo_X)\rightarrow (Y,\Oo_Y)$ est une application continue $f:X\rightarrow Y$ et un morphisme $f^\sharp:\Oo_Y\rightarrow f_*\Oo_X$ tel que les morphismes induits entre les tiges soient locaux, c'est-à-dire $f^{\sharp -1}_x(\mathfrak{m}_x)=\mathfrak{m}_{f(x)}$ pour tout $x\in X$.
 \end{defn}
 
 \begin{defn}[Schéma affine, schéma]
@@ -345,13 +345,13 @@ Réciproquement, tout morphisme entre schémas affines $f:\spec B\rightarrow \sp
 Les foncteurs $\spec$ et $\Gamma(.)$ définissent une anti-équivalence de catégories entre la catégorie des schémas affines et la catégorie des anneaux (commutatifs).
 \end{prop}
 
-Soit $X$ un schéma, on peut étendre l'opération $\Vv_X(.)$ définie plus haut pour les schémas affines. On considère un faisceau d'idéaux $\Ii$ de $\Oo_X$, et on pose $\Vv_X(\Ii)=\supp \Oo_X/\Ii$. De même, soit $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U\simeq\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$, et on note encore $X_f:=X\setminus \Vv_X(f\Oo_X)$. On peut alors définir l' idéal des fonctions régulières sur $X$ s'annulant sur une partie $Y$ de $X$, on le note $\Ii_X(Y)$, c'est un idéal radical. Si $X\simeq\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
+Soit $X$ un schéma, on peut étendre l'opération $\Vv_X(.)$ définie plus haut pour les schémas affines. On considère un faisceau d'idéaux $\Ii$ de $\Oo_X$, et on pose $\Vv_X(\Ii)=\supp \Oo_X/\Ii$. De même, soit $f\in \Oo(X)$ une fonction régulière sur $X$, et $x$ un point de $X$. On dit que $f$ s'annule en $x$ si son germe n'est pas inversible dans l'anneau local $\Oo_{X,x}$. Soit $U\simeq\spec A$ un voisinage affine de $x$, on a un isomorphisme canonique $\Oo_{X,x}\simeq A_\mathfrak{p}$, où $\mathfrak{p}$ est l'idéal premier correspondant à $x$. Alors $f$ s'annule en $x$ revient à dire que $f_{|U}\in \mathfrak{p}$, et on note encore $X_f:=X\setminus \Vv_X(f\Oo_X)$. On peut alors définir l'idéal des fonctions régulières sur $X$ s'annulant sur une partie $Y$ de $X$, on le note $\Ii_X(Y)$, c'est un idéal radical. Si $X\simeq\spec A$ est un schéma affine, on a alors pour un idéal $\mathfrak{a}$ et une partie $Y$ de $X$ les formules
 $$\Ii_X(Y)=\bigcap_{\mathfrak{p}\in Y}\mathfrak{p},\,\,\,\,\, \Ii_X(\Vv_X(\mathfrak{a}))=\sqrt{\mathfrak{a}},\,\,\,\,\,\,\Vv_X(\Ii_X(Y))=\overline{Y}$$
 
 \begin{rem}
-On considère une \textit{algèbre affine}, c'est à dire une $k$-algèbre de type fini réduite, et on suppose de plus $k$ algébriquement clos. Alors si l'on remplace "premier" par "maximal" dans les formules ci-dessus relatives aux opérations $\Vv$ et $\Ii$, on retombe sur les définitions classiques de ces opérations qui donnent les ensemble algébriques et leurs équations dans un espace affine de dimension finie sur $k$. En effet le Nullstellensatz (\ref{Nullstellensatz}) assure dans ce cas que les points de l'ensemble algébrique correspondent aux idéaux maximaux de l'algèbre et que $\Ii(Y)=\bigcap_{y\in Y}\mathfrak{m}_y$.
+On considère une \textit{algèbre affine}, c'est-à-dire une $k$-algèbre de type fini réduite, et on suppose de plus $k$ algébriquement clos. Alors si l'on remplace "premier" par "maximal" dans les formules ci-dessus relatives aux opérations $\Vv$ et $\Ii$, on retombe sur les définitions classiques de ces opérations qui donnent les ensemble algébriques et leurs équations dans un espace affine de dimension finie sur $k$. En effet, le Nullstellensatz (\ref{Nullstellensatz}) assure dans ce cas que les points de l'ensemble algébrique correspondent aux idéaux maximaux de l'algèbre et que $\Ii(Y)=\bigcap_{y\in Y}\mathfrak{m}_y$.
 
-Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ d'un schéma $X$ peuvent être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Dans le cas d'une variété affine, c'est à dire $X\simeq \spec A$ où $A$ est une $k$-algèbre affine sur un corps algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est à dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant s'identifie à $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique des morphismes entre ensembles algébriques, c'est à dire telles que sur sur chaque coordonnées les applications soient polynomiales.
+Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ d'un schéma $X$ peut être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Dans le cas d'une variété affine, c'est-à-dire $X\simeq \spec A$ où $A$ est une $k$-algèbre affine sur un corps algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est-à-dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant s'identifie à $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique des morphismes entre ensembles algébriques, c'est-à-dire telles que sur chaque coordonnées les applications soient polynomiales.
 \end{rem}
 
 \begin{cons}[Recollement de schémas]\label{gluevar}
@@ -403,7 +403,7 @@ Réciproquement, soit $f_x\in \Oo_{X,x}$ nilpotent alors $f_x$ est la classe d'u
 \end{proof}
 
 \begin{defn}[Schéma irréductible]
-Un schéma est irréductible si l'espace topologique sous-jacent est irréductible, c'est à dire qu'il est non vide et n'est pas réunion de deux fermés propres.
+Un schéma est irréductible si l'espace topologique sous-jacent est irréductible, c'est-à-dire qu'il est non vide et n'est pas réunion de deux fermés propres.
 \end{defn}
 
 \begin{defn}[Schéma noetherien]
@@ -411,7 +411,7 @@ Un schéma $X$ est noetherien si c'est une union finie d'ouverts affines $U_i$ t
 \end{defn}
 
 \begin{defn}[Schéma quasi-compact]
-Un schéma $X$ est quasi-compact si l'espace topologique sous-jacent est quasi-compact, c'est à dire que tout recouvrement ouvert de $X$ admet un sous-recouvrement fini. 
+Un schéma $X$ est quasi-compact si l'espace topologique sous-jacent est quasi-compact, c'est-à-dire que tout recouvrement ouvert de $X$ admet un sous-recouvrement fini. 
 \end{defn}
 
 \begin{prop}
@@ -453,7 +453,7 @@ Un schéma $X$ est intègre si et seulement si $\Oo(U)$ est intègre pour tout o
 
 Un point $x$ d'un espace topologique $X$ est dit \textit{générique} si $\overline{\lbrace x\rbrace}=X$. Ainsi, si $X$ admet un point générique, il est irréductible. Pour un schéma $X$ on a en fait une correspondance bijective entre fermés irréductibles de $X$ et points génériques donnée par $x\mapsto \overline{\lbrace x\rbrace}$. 
 
-Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$, et $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est à dire le corps des fractions de $A$. Plus généralement, on définit le \textit{corps des fonctions rationnelles} d'un schéma intègre $X$ comme les fonctions régulières sur un ouvert non-vide de $X$. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce qui précède, on le note $k(X)$.
+Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$, et $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est-à-dire le corps des fractions de $A$. Plus généralement, on définit le \textit{corps des fonctions rationnelles} d'un schéma intègre $X$ comme les fonctions régulières sur un ouvert non-vide de $X$. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce qui précède, on le note $k(X)$.
 
 \begin{prop}
 Soit $X$ un schéma intègre et $k(X)$ son corps des fonctions rationnelles. 
@@ -717,7 +717,7 @@ Supposons qu'un point $x$ d'une variété normale se situe à l'intersection de 
 Le lieu singulier d'une variété normale est un fermé de codimension $\geq 2$
 \end{prop}
 \begin{proof}
-Supposons par l'absurde qu'il existe une composante irréductible $Y$ de $X_{\text{sing}}$ de codimension $1$ dans $X$, et notons $\eta_Y$ son point générique. La tige $\Oo_{X,\eta_Y}$ est un anneau de valuation discrète car il est local noetherien normal et de dimension $1$. Soit $\pi$ une uniformisante de cet anneau, il existe donc un ouvert affine $U$ contenant $\eta_Y$ tel que $Y':=Y\cap U=\Vv_U((\pi))$. Maintenant, $Y'$ en tant que sous-variété contient au moins un point non-singulier $y$. L'anneau local $\Oo_{Y',y}$ est régulier, c'est à dire que l'on a des paramètres locaux $u_1,...,u_{n-1}\in\mathfrak{m}_{Y',y}$ tels que leur image forment une base du $k$-espace vectoriel $\mathfrak{m}_{Y',y}/\mathfrak{m}_{Y',y}^2$. Comme $\Oo_{Y',y}\simeq \Oo_{U,\eta_Y}/(\pi)$, on voit que $\mathfrak{m}_{U,y}$ est engendré par $(v_1,...,v_{n-1},\pi)$, où les éléments $v_i$ sont des antécédents des éléments $u_i$ par la projection dans le quotient $\Oo_{U,\eta_Y}/(\pi)$. Ainsi $\dim_k \mathfrak{m}_{U,y}/\mathfrak{m}_{U,y}^2\leq n$ ce qui prouve que $y$ est un point régulier de $X'$ appartenant à $Y$, contradiction.
+Supposons par l'absurde qu'il existe une composante irréductible $Y$ de $X_{\text{sing}}$ de codimension $1$ dans $X$, et notons $\eta_Y$ son point générique. La tige $\Oo_{X,\eta_Y}$ est un anneau de valuation discrète car il est local noetherien normal et de dimension $1$. Soit $\pi$ une uniformisante de cet anneau, il existe donc un ouvert affine $U$ contenant $\eta_Y$ tel que $Y':=Y\cap U=\Vv_U((\pi))$. Maintenant, $Y'$ en tant que sous-variété contient au moins un point non-singulier $y$. L'anneau local $\Oo_{Y',y}$ est régulier, c'est-à-dire que l'on a des paramètres locaux $u_1,...,u_{n-1}\in\mathfrak{m}_{Y',y}$ tels que leur image forment une base du $k$-espace vectoriel $\mathfrak{m}_{Y',y}/\mathfrak{m}_{Y',y}^2$. Comme $\Oo_{Y',y}\simeq \Oo_{U,\eta_Y}/(\pi)$, on voit que $\mathfrak{m}_{U,y}$ est engendré par $(v_1,...,v_{n-1},\pi)$, où les éléments $v_i$ sont des antécédents des éléments $u_i$ par la projection dans le quotient $\Oo_{U,\eta_Y}/(\pi)$. Ainsi $\dim_k \mathfrak{m}_{U,y}/\mathfrak{m}_{U,y}^2\leq n$ ce qui prouve que $y$ est un point régulier de $X'$ appartenant à $Y$, contradiction.
 \end{proof}
 
 
