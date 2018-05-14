@@ -11,14 +11,14 @@ Un groupe algébrique est une variété affine $G$ munie d'une structure de grou
 $$\mu:G\times G\rightarrow G$$
 et l'inverse
 $$\iota:G\rightarrow G$$
-soient des morphismes de variétés. Les morphismes de groupes algébriques sont les morphisme de groupes  qui sont également des morphismes de variétés.
+soient des morphismes de variétés. Les morphismes de groupes algébriques sont les morphismes de groupes  qui sont également des morphismes de variétés.
 \end{defn}
 
 \begin{ex}
 \begin{enumerate}
 \item Tout groupe fini est algébrique
 \item Le groupe linéaire $\gln_n(k)$ est l'ouvert principal de $\mn_n(k)$ défini par le déterminant. De plus, le produit et l'inverse sont des applications polynomiales en les coordonnées. Pour $n=1$ on note ce groupe $\GG_m:=\gln_1(k)$.
-\item Tout sous groupe fermé de $\gln_n(k)$ est un groupe algébrique. Par exemple $\sln_n(k)$ le sous-groupe des matrices de déterminant $1$. Mentionnons aussi D$_n$, le sous groupe des matrices diagonales. Il est défini par l'annulation des coefficients hors-diagonale.
+\item Tout sous-groupe fermé de $\gln_n(k)$ est un groupe algébrique. Par exemple $\sln_n(k)$ le sous-groupe des matrices de déterminant $1$. Mentionnons aussi D$_n$, le sous-groupe des matrices diagonales. Il est défini par l'annulation des coefficients hors-diagonale.
 \end{enumerate}
 \end{ex}
 
@@ -528,7 +528,7 @@ Soit $G$ un groupe algébrique et $X$ une $G$-variété. Une paire $(Y, \pi)$ o�
 On remarque que pour un quotient géométrique $(X/G, \pi)$, tous les orbites sont fermés dans $X$ et l'application quotient est ouverte. En effet, soit $U$ un ouvert de $X$, on a $\pi^{-1}(\pi(U))=\cup_{g\in G}g.U$ qui est ouvert.
 
 \begin{ex}\label{groupQuotientGeometrique}
-Soit $G$ un groupe algébrique et $H$ un sous-groupe fermé. Dans la catégorie des ensemble, le quotient $(G/H,\pi)$ est exactement le quotient catégorique pour l'action de $H$ sur $G$ par multiplication à droite. Dans \cite[5.5.5]{LAGSpringer}, en caractéristique quelconque, on munit $G/H$ d'une structure d'espace annelé en lui attribuant la topologie quotient puis en définissant le faisceau structural par $\Oo_{G/H}(U):=\lbrace f\in\textrm{Map}(U,k)\mid f\pi \in \Oo_G(\pi^{-1}(U))\rbrace$. Par construction, cet espace annelé vérifie la propriété universelle de factorisation. De plus, on montre ensuite qu'il est isomorphe à une variété quasi-projective, ce qui montre l'existence du quotient catégorique $(G/H,\pi)$ dans la catégorie des variétés algébriques. Par définition de $\Oo_{G/H}$, on a une flèche $\Oo_{G/H} \xrightarrow{\pi^\sharp} (\pi_*\Oo_G)^H$. Elle est injective par la surjectivité de $\pi$, et elle est surjective construction du faisceau sur $G/H$. Ainsi, $(G/H,\pi)$ est un quotient géométrique. Cela généralise bien sur le théorème \ref{groupequotient}.
+Soit $G$ un groupe algébrique et $H$ un sous-groupe fermé. Dans la catégorie des ensembles, le quotient $(G/H,\pi)$ est exactement le quotient catégorique pour l'action de $H$ sur $G$ par multiplication à droite. Dans \cite[5.5.5]{LAGSpringer}, en caractéristique quelconque, on munit $G/H$ d'une structure d'espace annelé en lui attribuant la topologie quotient puis en définissant le faisceau structural par $\Oo_{G/H}(U):=\lbrace f\in\textrm{Map}(U,k)\mid f\pi \in \Oo_G(\pi^{-1}(U))\rbrace$. Par construction, cet espace annelé vérifie la propriété universelle de factorisation. De plus, on montre ensuite qu'il est isomorphe à une variété quasi-projective, ce qui montre l'existence du quotient catégorique $(G/H,\pi)$ dans la catégorie des variétés algébriques. Par définition de $\Oo_{G/H}$, on a une flèche $\Oo_{G/H} \xrightarrow{\pi^\sharp} (\pi_*\Oo_G)^H$. Elle est injective par la surjectivité de $\pi$, et elle est surjective par construction du faisceau sur $G/H$. Ainsi, $(G/H,\pi)$ est un quotient géométrique. Cela généralise bien sur le théorème \ref{groupequotient}.
 \end{ex}
 
 \begin{ex}
@@ -555,7 +555,7 @@ Voir \cite[II.7]{MumfordAbelianVarieties}
 
 \subsection{Un exemple: La construction Proj}
 \label{ProjConstruction}
-Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n_k$. On considère $A$ une algèbre affine $\NN$-graduée et on pose $X:=\spec(A)$, ainsi muni d'une action de $\GG_m$. Une orbite $\GG_m.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $\GG_m.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir.
+Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n_k$. On considère $A$ une algèbre affine $\NN$-graduée et on pose $X:=\spec(A)$ ainsi muni d'une action de $\GG_m$. Une orbite $\GG_m.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $\GG_m.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir.
 
 On note $F$ l'ensemble des points fixes et on remarque que $F=\mathcal{V}_X(A_{>0})$, où $A_{>0}:=(f\mid f\in A_d \textrm{ pour un }d>0)$ est l'idéal dit inconvenant. En effet, $F$ est l'ensemble des idéaux maximaux qui sont $\GG_m$-stables. Or, un idéal maximal et homogène contient nécessairement $A_{>0}$.
 

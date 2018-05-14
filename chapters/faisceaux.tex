@@ -308,23 +308,23 @@ On peut toujours trivialiser deux faisceaux inversibles sur un même recouvremen
 \begin{ex}\label{expicaff}
 Soit $X=\spec (A)$ un schéma affine irréductible. Alors se donner un faisceau inversible sur $X$ revient (à isomorphisme près) à se donner un idéal fractionnaire $I$ de $A$ qui est inversible (cf \ref{ideauxinversibles}), son inverse est alors $I^{-1}:=(A:I)$. Les idéaux fractionnaires inversibles donnant le faisceau inversible trivial sont les idéaux fractionnaires principaux. Le groupe de Picard de $X$ est ainsi isomorphe au groupe des idéaux fractionnaires inversibles modulo les idéaux fractionnaires principaux. Les idéaux de $A$ qui sont inversibles forment une partie génératrice de ce groupe. 
 
-Si de plus $A$ est localement factoriel, par exemple si $X$ est lisse, les idéaux inversibles sont les idéaux de hauteur 1 pure, c'est-à-dire tels que leurs idéaux premiers associés sont tous de hauteur 1. De plus tout idéal inversible s'écrit de manière unique comme produit de puissances d'idéaux premiers de hauteur 1. Ainsi $\pic(X)$ est donc le quotient du groupe libre sur les idéaux premiers de hauteur 1 par les idéaux fractionnaires principaux.
+Si $A$ est localement factoriel, par exemple si $X$ est lisse, alors les idéaux inversibles sont les idéaux de hauteur $1$ pure, c'est-à-dire tels que leurs idéaux premiers associés sont tous de hauteur $1$. Dans ce cas, tout idéal inversible s'écrit de manière unique comme produit de puissances d'idéaux premiers de hauteur $1$. Ainsi $\pic(X)$ est alors le quotient du groupe libre sur les idéaux premiers de hauteur $1$ par les idéaux fractionnaires principaux.
 \end{ex}
 
 On va maintenant voir qu'un faisceau inversible sur une variété $X$ s'incarne naturellement en une variété sur $X$, que l'on appelle un fibré en droites.
 
 \begin{defn}[Fibré en droites, morphismes, faisceau des sections]\label{linebundle}
-Soit $X$ une variété. Un fibré en droite sur $X$ est une variété $L$ munie d'un morphisme $\pi:L\rightarrow X$ tel que $X$ admet un recouvrement ouvert $(U_i)_{i\in I}$ satisfaisant:
+Soit $X$ une variété. Un fibré en droites sur $X$ est une variété $L$ munie d'un morphisme $\pi:L\rightarrow X$ tel que $X$ admet un recouvrement ouvert $(U_i)_{i\in I}$ satisfaisant:
 
 \begin{enumerate}
-\item $\forall i\in I$, il existe un isomorphisme $\phi_i :\pi^{-1}(U_i)\rightarrow U_i\times\AAA^1`-k$ de variétés sur $U_i$.
+\item $\forall i\in I$, il existe un isomorphisme $\phi_i :\pi^{-1}(U_i)\rightarrow U_i\times\AAA^1_k$ de variétés sur $U_i$.
 \item $\forall i, j\in I$, l'isomorphisme $\phi_j\circ \phi_i^{-1}: (U_i\cap U_j)\times \AAA^1_k\rightarrow (U_i\cap U_j)\times \AAA^1_k$ est de la forme $(x, z)\mapsto (x, a_{ij}(x)z)$.
 \end{enumerate}
-Un morphisme de fibrés en droites sur $X$ est un morphisme de variétés sur $X$ avec la conditions supplémentaire que les morphismes induits sur les fibres soient linéaires.
+Un morphisme de fibrés en droites sur $X$ est un morphisme de variétés sur $X$ avec la condition supplémentaire que les morphismes induits sur les fibres soient linéaires.
 Une section d'un fibré en droites $(L, \pi)$ est une section de $\pi$, et on a la version locale de cette notion.
 \end{defn}
 
-On constate qu'un fibré en droite $(L,\pi)$ sur $X$ est obtenu en recollant des fibrés en droites de la forme $U_i\times \AAA^1\rightarrow U_i$ appelés fibrés triviaux via des automorphismes linéaires sur les intersections définis par des fonctions $a_{ij}\in \Oo(U_i\cap U_j)^*$, dites de transition. De plus, un automorphisme de fibré en droites est donné par une fonction $f\in \Oo(X)^*$. En effet, localement il s'agit d'automorphismes de fibrés triviaux qui sont nécessairement de cette forme.
+On constate qu'un fibré en droites $(L,\pi)$ sur $X$ est obtenu en recollant des fibrés en droites de la forme $U_i\times \AAA^1\rightarrow U_i$ appelés fibrés triviaux via des automorphismes linéaires sur les intersections définis par des fonctions $a_{ij}\in \Oo(U_i\cap U_j)^*$, dites de transition. De plus, un automorphisme de fibré en droites est donné par une fonction $f\in \Oo(X)^*$. En effet, localement il s'agit d'automorphismes de fibrés triviaux qui sont nécessairement de cette forme.
 
 Considérons un faisceau inversible $\Ll$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\Ll(U_i)$ sur chaque $U_i$. Sur $U_i\cap U_j$, on a $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. On a ainsi construit un fibré en droites sur $X$.
 
@@ -332,13 +332,13 @@ Réciproquement, considérons le $\mathcal{O}_X$-module des sections d'un fibré
 
 	\begin{center}
 	\begin{tikzcd}
-  		U_i\cap U_j\times \AAA^1 \arrow[rr, "\id\times m_{a_{ij}}"] & & U_i\cap U_j\times \AAA^1 \arrow[ld, ""] \\ 
-  		& U_i\cap U_j \arrow[ul, "\id\times f_i"] \arrow[ur, swap, "\id\times f_j"] &
+  		U_i\cap U_j\times \AAA^1 \arrow[rr, "\id\times m_{a_{ij}}"] & & U_i\cap U_j\times \AAA^1 \\ 
+  		& U_i\cap U_j \arrow[ul, "\id\times f_i"] \arrow[ru, swap, "\id\times f_j"] &
 	\end{tikzcd}
 	$\,\,\,\,\,\,\,\,\,$ où $m_{a_{ij}}$ est la multiplication par $a_{ij}$ 
 	\end{center}
 
-En composant les deux opérations on trouve le faisceau inversible dual du faisceau de départ, car les sections de $L$ s'identifient naturellement à des éléments de $\Hh om(\Ll,\Oo_X)$, et on a en particulier $\Gamma(X,L)=\Gamma(X,\Ll^\vee)$. Ces opérations sont fonctorielles et réalisent une anti-équivalence de catégorie entre la sous-catégorie des faisceaux inversibles sur $X$ et la catégorie des fibrés en droites sur $X$. Cela permet de transporter la structure du groupe de Picard sur les classes d'isomorphie de fibrés en droites. En particulier, on définit le fibré dual $L^{^-1}$ de $L$ comme le fibré en droites construit à partir de $\Ll^\vee$. Il est défini par les fonctions de transition $a_{ij}^{-1}$.
+En composant les deux opérations que l'on vient de décrire on trouve le faisceau inversible dual du faisceau de départ, car les sections de $L$ s'identifient naturellement à des éléments de $\Hh om(\Ll,\Oo_X)$, et on a en particulier $\Gamma(X,L)=\Gamma(X,\Ll^\vee)$. Ces opérations sont fonctorielles et réalisent une anti-équivalence de catégories entre la sous-catégorie des faisceaux inversibles sur $X$ et la catégorie des fibrés en droites sur $X$. Cela permet de transporter la structure du groupe de Picard sur les classes d'isomorphie de fibrés en droites. En particulier, on définit le fibré dual $L^{-1}$ de $L$ comme le fibré en droites construit à partir de $\Ll^\vee$. Il est défini par les fonctions de transition $a_{ij}^{-1}$.
 
 \begin{rem}
 Si on se donne un faisceau inversible $\Ll$ sur une variété $X$, le fibré en droites qu'on lui associe dans la discussion précédente n'est autre que $\spec_X(\sym(\Ll))$, où $\sym(\Ll))$ est l'algèbre symétrique associée à $\Ll$ sur $\mathcal{O}_X$. En effet, on recolle les $\spec_{U_i}(\sym(\Ll)_{|U_i}))\simeq\spec_{U_i}( \mathcal{O}_{U_i}[t])\simeq U_i \times_k \AAA^1_k$, où $(U_i)_i$ est un recouvrement qui trivialise $\Ll$.
@@ -355,7 +355,7 @@ Soit $(L,\pi)$ un fibré en droite sur $X$, et $f:X'\rightarrow X$ un morphisme 
 	\end{center}
 
 \begin{rem}\label{remfibsectionsglobales}
-Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$, c'est l'action de multiplication par les scalaires dans les fibres. L'ensemble $L_0$ des points fixes sous $\GG_m$ est le fermé correspondant à l'image de la section nulle. Son complémentaire $L^\times:=L\setminus L_0$ est une $\GG_m$-variété et $\pi$ se restreint en $\pi^\times: L^\times \rightarrow X$ qui est un quotient géométrique. En effet sur les $U_i$, on a $\pi^{\times-1}(U_i) \simeq U_i\times_k \GG_m$ et l'action de $\GG_m$ se fait par multiplication sur le facteur de droite. Cette action sur $L$  se traduit par une graduation du faisceau d'algèbres $\pi_*\Oo_L=\sym\Ll=\oplus_{n\geq 0}\Ll^{\otimes n}$ sur $X$. Le sous-espace de poids $1$ de $\Oo(L)=\pi_*\Oo_L(X)$ s'identifie alors à $\Gamma(X,L^{-1})$.
+Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$, c'est la multiplication par les scalaires dans les fibres. L'ensemble $L_0$ des points fixes sous $\GG_m$ est le fermé correspondant à l'image de la section nulle. Son complémentaire $L^\times:=L\setminus L_0$ est une $\GG_m$-variété et $\pi$ se restreint en $\pi^\times: L^\times \rightarrow X$ qui est un quotient géométrique. En effet sur les $U_i$, on a $\pi^{\times-1}(U_i) \simeq U_i\times_k \GG_m$ et l'action de $\GG_m$ se fait par multiplication sur le facteur de droite. Cette action sur $L$  se traduit par une graduation du faisceau d'algèbres $\pi_*\Oo_L=\sym\Ll=\oplus_{n\geq 0}\Ll^{\otimes n}$ sur $X$. Le sous-espace de poids $1$ de $\Oo(L)=\pi_*\Oo_L(X)$ s'identifie alors à $\Gamma(X,L^{-1})$.
 \end{rem}
 
 \subsection{$G$-fibré principal}
@@ -372,7 +372,7 @@ Soit $X$ une $G$-variété, et $\pi:X\rightarrow Y$ un morphisme $G$-invariant. 
 
 \begin{ex}
 \begin{enumerate}
-\item La variété $G\times Y$ munie de sa deuxième projection, ou toute $G$-variété localement de cette forme.
+\item La variété $G\times Y$ munie de l'action de $G$ sur le facteur de gauche et de la deuxième projection, ou toute $G$-variété localement de cette forme.
 \item Un fibré en droites est un $\GG_m$-fibré principal. On peut montrer une "réciproque" (voir \cite[3.1.3]{LinearizationGBrion}).
 \end{enumerate}
 \end{ex}
