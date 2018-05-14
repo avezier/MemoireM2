@@ -1,81 +1,81 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{}
 
-\bibitem{Eisenbud}
-D.Eisenbud.
-\newblock {\em Commutative algebra, with a view towards algebraic geometry}.
-\newblock Springer, 2004.
-
-\bibitem{MumfordAbelianVarieties}
-D.Mumford.
-\newblock {\em Abelian Varieties}.
-\newblock Oxford University Press, 1974.
-
-\bibitem{MumfordRedBook}
-D.Mumford.
-\newblock {\em The red book of varieties and schemes}.
-\newblock Springer, 1999.
-
-\bibitem{coxrings}
-I.Arzhantsev et~al.
-\newblock {\em Cox Rings}.
-\newblock Cambridge University Press, 2014.
-
-\bibitem{Hartshorne}
-R.~Hartshorne.
-\newblock {\em Algebraic Geometry}.
-\newblock Springer, 1977.
-
-\bibitem{Matsumura}
-H.Matsumura.
-\newblock {\em Commutative ring theory}.
-\newblock Cambridge University Press, 1986.
-
-\bibitem{LAGArzhantsev}
-I.Arzhantsev.
+\bibitem[\protect\astroncite{Arzhantsev}{}]{LAGArzhantsev}
+Arzhantsev, I.
 \newblock Introduction to algebraic groups and invariant theory.
 \newblock \url{http://halgebra.math.msu.su/staff/arzhan/driver.pdf}.
 \newblock Accessed: 2018-23-01.
 
-\bibitem{atiyahmacdo}
-I.MacDonald M.Atiyah.
-\newblock {\em Introduction to commutative algebra}.
-\newblock Addison-Wesley, 1969.
+\bibitem[\protect\astroncite{Arzhantsev and al.}{2014}]{coxrings}
+Arzhantsev, I. and al. (2014).
+\newblock {\em Cox Rings}.
+\newblock Cambridge University Press.
 
-\bibitem{LAGBrion}
-M.Brion.
+\bibitem[\protect\astroncite{Atiyah and MacDonald}{1969}]{atiyahmacdo}
+Atiyah, M. and MacDonald, I. (1969).
+\newblock {\em Introduction to commutative algebra}.
+\newblock Addison-Wesley.
+
+\bibitem[\protect\astroncite{Brion}{a}]{LAGBrion}
+Brion, M.
 \newblock Introduction to actions of algebraic groups.
 \newblock \url{https://www-fourier.ujf-grenoble.fr/~mbrion/notes_luminy.pdf}.
 \newblock Accessed: 2018-23-01.
 
-\bibitem{LinearizationGBrion}
-M.Brion.
+\bibitem[\protect\astroncite{Brion}{b}]{LinearizationGBrion}
+Brion, M.
 \newblock Linearization of algebraic group actions.
 \newblock \url{https://www-fourier.ujf-grenoble.fr/~mbrion/lin_rev.pdf}.
 \newblock Accessed: 2018-18-03.
 
-\bibitem{QingLiu}
-Q.Liu.
-\newblock {\em Algebraic geometry and arithmetic curves}.
-\newblock Oxford GTM, 2006.
+\bibitem[\protect\astroncite{Eisenbud}{2004}]{Eisenbud}
+Eisenbud, D. (2004).
+\newblock {\em Commutative algebra, with a view towards algebraic geometry}.
+\newblock Springer.
 
-\bibitem{stacks-project}
-The {Stacks Project Authors}.
-\newblock \textit{Stacks Project}.
-\newblock \url{http://stacks.math.columbia.edu}, 2018.
-
-\bibitem{LAGSpringer}
-T.A.Springer.
-\newblock {\em Linear Algebraic Groups}.
-\newblock Birkhauser, 1998.
-
-\bibitem{Gortz}
-T.Wedhorn U.Görtz.
+\bibitem[\protect\astroncite{Görtz and Wedhorn}{2010}]{Gortz}
+Görtz, U. and Wedhorn, T. (2010).
 \newblock {\em Algebraic Geometry I}.
-\newblock Vieweg +Teubner, 2010.
+\newblock Vieweg +Teubner.
 
-\bibitem{LAGFerrer}
-A.Rittatore W.Ferrer~Santos.
+\bibitem[\protect\astroncite{Hartshorne}{1977}]{Hartshorne}
+Hartshorne, R. (1977).
+\newblock {\em Algebraic Geometry}.
+\newblock Springer.
+
+\bibitem[\protect\astroncite{Liu}{2006}]{QingLiu}
+Liu, Q. (2006).
+\newblock {\em Algebraic geometry and arithmetic curves}.
+\newblock Oxford GTM.
+
+\bibitem[\protect\astroncite{Matsumura}{1986}]{Matsumura}
+Matsumura, H. (1986).
+\newblock {\em Commutative ring theory}.
+\newblock Cambridge University Press.
+
+\bibitem[\protect\astroncite{Mumford}{1974}]{MumfordAbelianVarieties}
+Mumford, D. (1974).
+\newblock {\em Abelian Varieties}.
+\newblock Oxford University Press.
+
+\bibitem[\protect\astroncite{Mumford}{1999}]{MumfordRedBook}
+Mumford, D. (1999).
+\newblock {\em The red book of varieties and schemes}.
+\newblock Springer.
+
+\bibitem[\protect\astroncite{Santos and Rittatore}{2005}]{LAGFerrer}
+Santos, W.~F. and Rittatore, A. (2005).
 \newblock {\em Actions and invariants of algebraic groups}.
-\newblock Chapman and Hall, 2005.
+\newblock Chapman and Hall.
+
+\bibitem[\protect\astroncite{Springer}{1998}]{LAGSpringer}
+Springer, T.~A. (1998).
+\newblock {\em Linear Algebraic Groups}.
+\newblock Birkhauser.
+
+\bibitem[\protect\astroncite{{Stacks Project Authors}}{2018}]{stacks-project}
+{Stacks Project Authors}, T. (2018).
+\newblock \textit{Stacks Project}.
+\newblock \url{http://stacks.math.columbia.edu}.
 
 \end{thebibliography}

@@ -22,32 +22,33 @@
 \BOOKMARK [1][-]{section.2.2}{Th\351orie des invariants}{chapter.2}% 22
 \BOOKMARK [2][-]{subsection.2.2.1}{L'alg\350bre des invariants}{section.2.2}% 23
 \BOOKMARK [2][-]{subsection.2.2.2}{Quotient d'une vari\351t\351 alg\351brique sous l'action d'un groupe alg\351brique}{section.2.2}% 24
-\BOOKMARK [0][-]{chapter.3}{Faisceaux divisoriels sur une vari\351t\351 alg\351brique}{}% 25
-\BOOKMARK [1][-]{section.3.1}{Faisceaux de modules}{chapter.3}% 26
-\BOOKMARK [2][-]{subsection.3.1.1}{Faisceaux quasi-coh\351rents}{section.3.1}% 27
-\BOOKMARK [2][-]{subsection.3.1.2}{Spectre relatif d'une OX-alg\350bre}{section.3.1}% 28
-\BOOKMARK [2][-]{subsection.3.1.3}{Faisceaux quasi-coh\351rents sur une vari\351t\351 projective}{section.3.1}% 29
-\BOOKMARK [2][-]{subsection.3.1.4}{Cohomologie des faisceaux et applications}{section.3.1}% 30
-\BOOKMARK [2][-]{subsection.3.1.5}{Faisceaux inversibles, Fibr\351s en droites}{section.3.1}% 31
-\BOOKMARK [2][-]{subsection.3.1.6}{G-fibr\351 principal}{section.3.1}% 32
-\BOOKMARK [2][-]{subsection.3.1.7}{G-linearisation d'un fibr\351 en droites}{section.3.1}% 33
-\BOOKMARK [1][-]{section.3.2}{Diviseurs}{chapter.3}% 34
-\BOOKMARK [2][-]{subsection.3.2.1}{Diviseurs de Weil}{section.3.2}% 35
-\BOOKMARK [2][-]{subsection.3.2.2}{Faisceau d'alg\350bres divisorielles}{section.3.2}% 36
-\BOOKMARK [2][-]{subsection.3.2.3}{Diviseurs de Cartier et groupe de Picard}{section.3.2}% 37
-\BOOKMARK [2][-]{subsection.3.2.4}{L'espace projectif Pkn}{section.3.2}% 38
-\BOOKMARK [2][-]{subsection.3.2.5}{Le groupe des unit\351s d'une vari\351t\351 irr\351ductible}{section.3.2}% 39
-\BOOKMARK [0][-]{chapter.4}{Anneaux de Cox}{}% 40
-\BOOKMARK [1][-]{section.4.1}{Un exemple introductif}{chapter.4}% 41
-\BOOKMARK [1][-]{section.4.2}{Faisceau et anneau de Cox dans le cas sans torsion}{chapter.4}% 42
-\BOOKMARK [2][-]{subsection.4.2.1}{Le spectre relatif d'une alg\350bre divisorielle}{section.4.2}% 43
-\BOOKMARK [2][-]{subsection.4.2.2}{Faisceau et anneau de Cox}{section.4.2}% 44
-\BOOKMARK [2][-]{subsection.4.2.3}{Propri\351t\351s alg\351briques de l'anneau de Cox}{section.4.2}% 45
-\BOOKMARK [1][-]{section.4.3}{Faisceau et anneau de Cox dans le cas g\351n\351ral}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.3.1}{Faisceau et anneau de Cox}{section.4.3}% 47
-\BOOKMARK [2][-]{subsection.4.3.2}{Invariance de l'anneau de Cox}{section.4.3}% 48
-\BOOKMARK [2][-]{subsection.4.3.3}{Exemples}{section.4.3}% 49
-\BOOKMARK [1][-]{section.4.4}{Propri\351t\351s alg\351briques de l'anneau de Cox}{chapter.4}% 50
-\BOOKMARK [2][-]{subsection.4.4.1}{Int\351grit\351 et normalit\351}{section.4.4}% 51
-\BOOKMARK [2][-]{subsection.4.4.2}{Localisation et groupe des unit\351s}{section.4.4}% 52
-\BOOKMARK [2][-]{subsection.4.4.3}{Propri\351t\351s de divisibilit\351}{section.4.4}% 53
+\BOOKMARK [2][-]{subsection.2.2.3}{Un exemple: La construction Proj}{section.2.2}% 25
+\BOOKMARK [0][-]{chapter.3}{Faisceaux divisoriels sur une vari\351t\351 alg\351brique}{}% 26
+\BOOKMARK [1][-]{section.3.1}{Faisceaux de modules}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.1.1}{Faisceaux quasi-coh\351rents}{section.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.1.2}{Spectre relatif d'une OX-alg\350bre}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.3}{Faisceaux quasi-coh\351rents sur une vari\351t\351 projective}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.4}{Cohomologie des faisceaux et applications}{section.3.1}% 31
+\BOOKMARK [2][-]{subsection.3.1.5}{Faisceaux inversibles, Fibr\351s en droites}{section.3.1}% 32
+\BOOKMARK [2][-]{subsection.3.1.6}{G-fibr\351 principal}{section.3.1}% 33
+\BOOKMARK [2][-]{subsection.3.1.7}{G-linearisation d'un fibr\351 en droites}{section.3.1}% 34
+\BOOKMARK [1][-]{section.3.2}{Diviseurs}{chapter.3}% 35
+\BOOKMARK [2][-]{subsection.3.2.1}{Diviseurs de Weil}{section.3.2}% 36
+\BOOKMARK [2][-]{subsection.3.2.2}{Faisceau d'alg\350bres divisorielles}{section.3.2}% 37
+\BOOKMARK [2][-]{subsection.3.2.3}{Diviseurs de Cartier et groupe de Picard}{section.3.2}% 38
+\BOOKMARK [2][-]{subsection.3.2.4}{L'espace projectif Pkn}{section.3.2}% 39
+\BOOKMARK [2][-]{subsection.3.2.5}{Le groupe des unit\351s d'une vari\351t\351 irr\351ductible}{section.3.2}% 40
+\BOOKMARK [0][-]{chapter.4}{Anneaux de Cox}{}% 41
+\BOOKMARK [1][-]{section.4.1}{Un exemple introductif}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.2}{Faisceau et anneau de Cox dans le cas sans torsion}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.2.1}{Le spectre relatif d'une alg\350bre divisorielle}{section.4.2}% 44
+\BOOKMARK [2][-]{subsection.4.2.2}{Faisceau et anneau de Cox}{section.4.2}% 45
+\BOOKMARK [2][-]{subsection.4.2.3}{Propri\351t\351s alg\351briques de l'anneau de Cox}{section.4.2}% 46
+\BOOKMARK [1][-]{section.4.3}{Faisceau et anneau de Cox dans le cas g\351n\351ral}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.3.1}{Faisceau et anneau de Cox}{section.4.3}% 48
+\BOOKMARK [2][-]{subsection.4.3.2}{Invariance de l'anneau de Cox}{section.4.3}% 49
+\BOOKMARK [2][-]{subsection.4.3.3}{Exemples}{section.4.3}% 50
+\BOOKMARK [1][-]{section.4.4}{Propri\351t\351s alg\351briques de l'anneau de Cox}{chapter.4}% 51
+\BOOKMARK [2][-]{subsection.4.4.1}{Int\351grit\351 et normalit\351}{section.4.4}% 52
+\BOOKMARK [2][-]{subsection.4.4.2}{Localisation et groupe des unit\351s}{section.4.4}% 53
+\BOOKMARK [2][-]{subsection.4.4.3}{Propri\351t\351s de divisibilit\351}{section.4.4}% 54

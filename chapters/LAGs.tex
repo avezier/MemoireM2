@@ -24,7 +24,7 @@ soient des morphismes de variétés. Les morphismes de groupes algébriques sont
 
 Pour un groupe algébrique $G$, les composantes irréductibles et les composantes connexes coïncident. On note $G^o$ la composante connexe contenant le neutre $e_G$, on l'appelle la \textit{composante neutre}. C'est un sous-groupe normal et fermé de $G$, et les autres composantes connexes de $G$ sont les classes à gauche de $G^o$.
 
-\subsection{G-variétés, représentations}
+\subsection{$G$-variétés, représentations}
 
 \begin{defn}[$G$-variété]
 Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique $X$ sur laquelle $G$ agit algébriquement. C'est-à-dire que l'action de $G$ est définie par un morphisme de variétés $a:G\times X\rightarrow X$. Un morphisme de $G$-variétés est un morphisme qui commute à l'action de $G$. 
@@ -322,7 +322,7 @@ Les foncteurs $X^*\times\spec$ et $k[.]\times\Oo(.)$ réalisent une anti-équiva
 \end{prop}
 
 \begin{prop}\label{stablehomogene}
-Soit $A$ une algèbre affine $K$-graduée, $X:=\spec A$ muni de l'action de $H:=\spec k[K]$.  Soit $Y\subset X$ une sous variété fermée, et $\mathfrak{a}=\mathcal{I}_X(Y)$. Les assertions suivantes sont équivalentes:
+Soit $A$ une algèbre affine $K$-graduée où $K$ est un groupe abélien de type fini. Soit $X:=\spec A$ muni de l'action de $H:=\spec k[K]$.  Soit $Y\subset X$ une sous variété fermée, et $\mathfrak{a}=\mathcal{I}_X(Y)$. Les assertions suivantes sont équivalentes:
 \begin{enumerate}
 \item $Y$ est $H$-stable.
 \item $\mathfrak{a}$ est un idéal homogène.
@@ -553,7 +553,7 @@ Soit $X$ une $G$-variété avec $G$ fini agissant librement et telles que les or
 Voir \cite[II.7]{MumfordAbelianVarieties}
 \end{proof}
 
-\subsubsection{Un exemple: La construction Proj}
+\subsection{Un exemple: La construction Proj}
 \label{ProjConstruction}
 Dans cette partie, on va détailler une construction qui à la fois éclaire et généralise la construction de la variété algébrique $\PP^n_k$. On considère $A$ une algèbre affine $\NN$-graduée et on pose $X:=\spec(A)$, ainsi muni d'une action de $\GG_m$. Une orbite $\GG_m.x$ est de dimension 0 ou 1. Si elle est de dimension 0, c'est un point fixe car $k^*$ est connexe. Si elle est de dimension 1, elle est soit fermée, soit son adhérence est constituée de $\GG_m.x$  et d'une réunion de points fixes, en fait un seul comme on va le voir.
 

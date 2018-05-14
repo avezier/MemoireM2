@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  13 MAY 2018 21:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  14 MAY 2018 17:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1083,6 +1083,13 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \colbreak@box=\box67
 \mc@col@check@num=\count159
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip70
+\bibsep=\skip71
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count160
+)
 (./MemoireM2.aux (./chapters/introduction.aux) (./chapters/preliminaires.aux)
 (./chapters/LAGs.aux
 
@@ -1091,37 +1098,41 @@ LaTeX Warning: Label `GITEtaleFiniteGroup' multiply defined.
 ) (./chapters/faisceaux.aux) (./chapters/coxring.aux))
 \openout1 = `MemoireM2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Info: Redefining \degres on input line 20.
-LaTeX Info: Redefining \dots on input line 20.
-LaTeX Info: Redefining \up on input line 20.
-\AtBeginShipoutBox=\box68
-Package hyperref Info: Link coloring ON on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Info: Redefining \degres on input line 21.
+LaTeX Info: Redefining \dots on input line 21.
 
+
+Package frenchb.ldf Warning: Please load the "natbib" package
+(frenchb.ldf)                BEFORE babel/frenchb; reported on input line 21.
+
+LaTeX Info: Redefining \up on input line 21.
+\AtBeginShipoutBox=\box68
+Package hyperref Info: Link coloring ON on input line 21.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count160
+\c@section@level=\count161
 )
-LaTeX Info: Redefining \ref on input line 20.
-LaTeX Info: Redefining \pageref on input line 20.
-LaTeX Info: Redefining \nameref on input line 20.
+LaTeX Info: Redefining \ref on input line 21.
+LaTeX Info: Redefining \pageref on input line 21.
+LaTeX Info: Redefining \nameref on input line 21.
 
 (./MemoireM2.out) (./MemoireM2.out)
 \@outlinefile=\write4
@@ -1130,16 +1141,16 @@ LaTeX Info: Redefining \nameref on input line 20.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count161
+\scratchcounter=\count162
 \scratchdimen=\dimen256
 \scratchbox=\box69
-\nofMPsegments=\count162
-\nofMParguments=\count163
+\nofMPsegments=\count163
+\nofMParguments=\count164
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count164
+\MPscratchCnt=\count165
 \MPscratchDim=\dimen257
-\MPnumerator=\count165
-\makeMPintoPDFobject=\count166
+\MPnumerator=\count166
+\makeMPintoPDFobject=\count167
 \everyMPtoPDFconversion=\toks51
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1159,22 +1170,22 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 43.
+LaTeX Font Info:    Try loading font information for U+msa on input line 44.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 43.
+LaTeX Font Info:    Try loading font information for U+msb on input line 44.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 43.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 44.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 43.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 44.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
 
@@ -1184,7 +1195,7 @@ ireM2.tocpdfTeX warning (ext4): destination with the same identifier (name{page
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 ...mberline {4}Anneaux de Cox}{52}{chapter.4}
+l.62 ...r\IeC {\'e}ductible}{50}{subsection.3.2.5}
                                                    [1
 
 ])
@@ -1215,6 +1226,14 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
  (./chapters/LAGs.tex
 Chapitre 2.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 27.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 27.
+
 [19
 
 
@@ -1228,7 +1247,7 @@ iso-mor-phisme est $\OML/cmm/m/it/10 ev[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 G
 /10 )\OML/cmm/m/it/10 ; g \OMS/cmsy/m/n/10 7!
  []
 
-[23] [24] [25] [26]
+[23] [24] [25] [26] [27]
 Overfull \hbox (2.36337pt too wide) in paragraph at lines 417--418
 []\T1/cmr/m/n/10 Sinon comme $\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 (\OML/cmm/m/it/
 10 A\OT1/cmr/m/n/10 ) \U/msb/m/n/10 ( \OML/cmm/m/it/10 K$\T1/cmr/m/n/10 , on pe
@@ -1239,7 +1258,7 @@ mm/m/it/10 g \OMS/cmsy/m/n/10 2 \[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^_\OT1
 0 (\OML/cmm/m/it/10 ^^_\OT1/cmr/m/n/10 )$
  []
 
-[27] [28] [29] [30] [31]) [32]
+[28] [29] [30] [31]) [32]
 \openout2 = `chapters/faisceaux.aux'.
 
  (./chapters/faisceaux.tex
@@ -1305,27 +1324,32 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 653.
 
-[47] [48] [49] [50]) [51]
+[47] [48] [49] [50] [51]) [52]
 \openout2 = `chapters/coxring.aux'.
 
  (./chapters/coxring.tex
 Chapitre 4.
-[52
+[53
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[53] [54] [55] [56] [57] [58] [59]
 
-LaTeX Warning: Command \textsection invalid in math mode on input line 314.
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+[54] [55] [56] [57] [58] [59] [60] [61]
+
+LaTeX Warning: Command \textsection invalid in math mode on input line 315.
 
 Missing character: There is no Ÿ in font cmr10!
-[60] [61]
-Overfull \hbox (0.1456pt too wide) in paragraph at lines 355--356
+[62]
+Overfull \hbox (0.1456pt too wide) in paragraph at lines 356--357
 []\T1/cmr/m/n/10 La va-riété $\OML/cmm/m/it/10 X$ \T1/cmr/m/n/10 est na-tu-rel-
 le-ment mu-nie d'une ac-tion de $\OML/cmm/m/it/10 G \OT1/cmr/m/n/10 := \OMS/cms
 y/m/n/10 f^^F\OT1/cmr/m/n/10 1\OMS/cmsy/m/n/10 g ' \U/msb/m/n/10 Z\OML/cmm/m/it
@@ -1336,12 +1360,12 @@ L/cmm/m/it/10 t[]; t[]; t[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 7! \OT1/cmr/m/n/1
 0 .
  []
 
-[62] [63] [64] [65] [66] [67] [68]) [69] (./MemoireM2.bbl
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 36.
+[63] [64] [65] [66] [67] [68] [69] [70]) [71] (./MemoireM2.bbl
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 6.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [70
+)) [72
 
 
 ]
@@ -1353,7 +1377,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
 Package rerunfilecheck Info: File `MemoireM2.out' has not changed.
-(rerunfilecheck)             Checksum: 4D3E5A5FD10E80A314DC9DAD1ACB80C9;4511.
+(rerunfilecheck)             Checksum: 0337E6FA82BEB3414C563FE76418C7A5;4597.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1361,10 +1385,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 22171 strings out of 492995
- 414902 string characters out of 6132704
- 488978 words of memory out of 5000000
- 24712 multiletter control sequences out of 15000+600000
+ 22522 strings out of 492995
+ 419475 string characters out of 6132704
+ 492614 words of memory out of 5000000
+ 25057 multiletter control sequences out of 15000+600000
  28620 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,16n,84p,2474b,1089s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1411,10 +1435,10 @@ mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on MemoireM2.pdf (71 pages, 876413 bytes).
+Output written on MemoireM2.pdf (73 pages, 879677 bytes).
 PDF statistics:
- 1619 PDF objects out of 1728 (max. 8388607)
- 1495 compressed objects within 15 object streams
- 559 named destinations out of 1000 (max. 500000)
- 437 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1633 PDF objects out of 1728 (max. 8388607)
+ 1506 compressed objects within 16 object streams
+ 561 named destinations out of 1000 (max. 500000)
+ 445 words of extra memory for PDF output out of 10000 (max. 10000000)
 
