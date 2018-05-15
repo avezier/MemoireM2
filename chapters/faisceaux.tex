@@ -9,12 +9,12 @@ Soit $X$ un schéma. Un \textit{$\Oo_X$-module} est un faisceau $\Ff$ tel que $\
 
 \subsection{Faisceaux quasi-cohérents}
 
-Soit $X$ un schéma. Un $\Oo_X$-module $\Ff$ est \textit{quasi cohérent} si localement il admet une \textit{présentation}, c'est-à-dire que pour tout $x\in X$, il existe un voisinage ouvert $x\in U$ tel que l'on ait une suite exacte
+Soit $X$ un schéma. Un $\Oo_X$-module $\Ff$ est \textit{quasi-cohérent} si localement il admet une \textit{présentation}, c'est-à-dire que pour tout $x\in X$, il existe un voisinage ouvert $x\in U$ tel que l'on ait une suite exacte
 \begin{center}
-$\bigoplus_{j\in J}\Oo_{X|U}\rightarrow\bigoplus_{i\in I}\Oo_{X|U}\rightarrow \Ff_{|U}\rightarrow 0$
+$\bigoplus_{j\in J}\Oo_{U}\rightarrow\bigoplus_{i\in I}\Oo_{U}\rightarrow \Ff_{|U}\rightarrow 0$
 \end{center}
 
-On dit que $\Ff$ est \textit{cohérent} si sur chaque voisinage, la présentation est finie, c'est-à-dire que les famille $I$ et $J$ sont finies.
+On dit que $\Ff$ est \textit{cohérent} si sur chaque voisinage, la présentation est finie, c'est-à-dire que les familles $I$ et $J$ sont finies.
 Soit $X\simeq \spec A$ un schéma affine, et $M$ un $A$-module. On définit un $\Oo_X$-module $\widetilde{M}$ sur le même modèle que le faisceau structural en posant $\widetilde{M}(X_f)=M_f$ pour chaque ouvert principal $X_f$. On vérifie que cela définit un $\Oo_X$-module tel que $\widetilde{M}_\mathfrak{p}=M_\mathfrak{p}$ pour tout $\mathfrak{p}\in X$, et $\widetilde{M}(X)=M$.
 
 
@@ -109,7 +109,7 @@ Soit $X$ un schéma. On peut montrer (\cite[12.1]{Gortz}) que le foncteur $\Ss\m
 
 \label{FQCProj}
 
-Soit $X$ une variété projective, on a ainsi un isomorphisme $X\simeq\proj A$ pour une algèbre affine $\NN$-graduée $A$ engendrée par $r$ éléments homogènes de degré $1$, et on note $i:X\xhookrightarrow{} \PP_k^r$ le plongement associé. Soit $M$ un $A$-module $\ZZ$-gradué. On définit un $\Oo_X$-module $\widetilde{M}$ en posant $\widetilde{M}(X_f):=M_{(f)}:=(M_f)_0$ pour tout ouvert principal $X_f$, avec $f\in A$ homogène de degré $\geq 1$. C'est un faisceau quasi-cohérent car $(\widetilde{M})_{|X_f}=\widetilde{M_{(f)}}$, où $M_{(f)}$ est un module sur $A_{(f)}=\Oo(X_f)$. Cette construction définit un foncteur exact de la catégorie des $A$-modules $\ZZ$-gradués vers la catégorie des faisceaux quasi-cohérents sur $X$ commutant au produit tensoriel.
+Soit $X$ une variété projective, on a ainsi un isomorphisme $X\simeq\proj A$ pour une algèbre affine $\NN$-graduée $A$ engendrée par $r+1$ éléments homogènes de degré $1$, et on note $i:X\xhookrightarrow{} \PP_k^r$ le plongement associé. Soit $M$ un $A$-module $\ZZ$-gradué. On définit un $\Oo_X$-module $\widetilde{M}$ en posant $\widetilde{M}(X_f):=M_{(f)}:=(M_f)_0$ pour tout ouvert principal $X_f$, avec $f\in A$ homogène de degré $\geq 1$. C'est un faisceau quasi-cohérent car $(\widetilde{M})_{|X_f}=\widetilde{M_{(f)}}$, où $M_{(f)}$ est un module sur $A_{(f)}=\Oo(X_f)$. Cette construction définit un foncteur exact de la catégorie des $A$-modules $\ZZ$-gradués vers la catégorie des faisceaux quasi-cohérents sur $X$ commutant au produit tensoriel.
 
 Pour tout $n\in \ZZ$, on note $\Oo_X(n)$ le faisceau quasi-cohérent associé au $A$-module décalé $A(n)$. Plus généralement, étant donné un $\Oo_X$-module quasi-cohérent $\Ff$, on définit le faisceau décalé $\Ff(n):=\Ff\otimes_{\Oo_X}\Oo_X(n)$, c'est un faisceau quasi-cohérent. L'opération tilde commute au décalage, et on a $\Oo_X(n)=i^*(\Oo_{\PP_k^r}(n))$.
 
@@ -328,7 +328,7 @@ On constate qu'un fibré en droites $(L,\pi)$ sur $X$ est obtenu en recollant de
 
 Considérons un faisceau inversible $\Ll$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\Ll(U_i)$ sur chaque $U_i$. Sur $U_i\cap U_j$, on a $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. On a ainsi construit un fibré en droites sur $X$.
 
-Réciproquement, considérons le $\mathcal{O}_X$-module des sections d'un fibré en droite $L$ sur $X$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{X|U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est-à-dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible. Les sections globales de $L$ s'identifie via les trivialisations locales aux familles $(f_i)_{i\in I}$ telles que $f_i=a_{ij}f_j$ sur $U_i\cap U_j$. En effet, un telle section donne sur les intersections $U_i\cap U_j$ un diagramme commutatif:
+Réciproquement, considérons le $\mathcal{O}_X$-module des sections d'un fibré en droite $L$ sur $X$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est-à-dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible. Les sections globales de $L$ s'identifie via les trivialisations locales aux familles $(f_i)_{i\in I}$ telles que $f_i=a_{ij}f_j$ sur $U_i\cap U_j$. En effet, un telle section donne sur les intersections $U_i\cap U_j$ un diagramme commutatif:
 
 	\begin{center}
 	\begin{tikzcd}
@@ -355,7 +355,7 @@ Soit $(L,\pi)$ un fibré en droite sur $X$, et $f:X'\rightarrow X$ un morphisme 
 	\end{center}
 
 \begin{rem}\label{remfibsectionsglobales}
-Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$, c'est la multiplication par les scalaires dans les fibres. L'ensemble $L_0$ des points fixes sous $\GG_m$ est le fermé correspondant à l'image de la section nulle. Son complémentaire $L^\times:=L\setminus L_0$ est une $\GG_m$-variété et $\pi$ se restreint en $\pi^\times: L^\times \rightarrow X$ qui est un quotient géométrique. En effet sur les $U_i$, on a $\pi^{\times-1}(U_i) \simeq U_i\times_k \GG_m$ et l'action de $\GG_m$ se fait par multiplication sur le facteur de droite. Cette action sur $L$  se traduit par une graduation du faisceau d'algèbres $\pi_*\Oo_L=\sym\Ll=\oplus_{n\geq 0}\Ll^{\otimes n}$ sur $X$. Le sous-espace de poids $1$ de $\Oo(L)=\pi_*\Oo_L(X)$ s'identifie alors à $\Gamma(X,L^{-1})$.
+Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$, c'est la multiplication par les scalaires dans les fibres. L'ensemble $L_0$ des points fixes sous $\GG_m$ est le fermé correspondant à l'image de la section nulle. Son complémentaire $L^\times:=L\setminus L_0$ est une $\GG_m$-variété et $\pi$ se restreint en $\pi^\times: L^\times \rightarrow X$ qui est un quotient géométrique. En effet sur les $U_i$, on a $\pi^{\times-1}(U_i) \simeq U_i\times_k \GG_m$ et l'action de $\GG_m$ se fait par multiplication sur le facteur de droite. Cette action sur $L$  se traduit par une graduation du faisceau d'algèbres $\pi_*\Oo_L=\sym\Ll=\oplus_{n\geq 0}\Ll^{\otimes n}$ sur $X$. Le sous-espace de poids $1$ de $\Oo(L)=\pi_*\Oo_L(X)$ s'identifie alors à $\Gamma(X,L^{-1})=\Gamma(X,\Ll^{\vee\vee})\simeq\Gamma(X,\Ll)$.
 \end{rem}
 
 \subsection{$G$-fibré principal}
@@ -386,11 +386,11 @@ Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $(L,\pi)$ un fibré en
 \end{defn}
 
 Une action $G$-linéarisée définit donc un morphisme $G\rightarrow \Aut L$ à valeurs dans le groupe d'automorphisme de fibrés en droites de $(L,\pi)$. On note $\alpha: G\times X\rightarrow X$ l'action de $G$ sur $X$ et $p_2:G\times X\rightarrow X$ la projection sur $X$. Pour tout $g\in G$ on a une application:
-$$g\times \id: X\rightarrow G\times X,\,\, x\mapsto (g,x)$$ 
+$$g\times \Id: X\rightarrow G\times X,\,\, x\mapsto (g,x)$$ 
 Les images inverses des deux fibrés $\alpha^*(L)$ et $p_2^*(L)$ par cette application sont explicitement: 
-$$(g\times \id)^*\alpha^*(L)=X\times_{G\times X}((G\times X)\times_X L)=\lbrace (x,(g',x'),l)\mid \alpha(g',x')=\pi(l)\text{ et } (g,x)=(g',x')\rbrace$$
-$$(g\times \id)^*p_2^*(L)=X\times_{G\times X}((G\times X)\times_X L)=\lbrace (x,(g',x'),l)\mid x'=\pi(l)\text{ et } (g,x)=(g',x')\rbrace$$
-On obtient ainsi des isomorphismes canoniques $(g\times \id)^*\alpha^*(L)\simeq g^*L$ et $(g\times \id)^*p_2^*(L)\simeq L$, où $g^*L$ est l'image inverse de $L$ par l'automorphisme de $X$ associé à l'action de $g$, et on fait ces identifications par la suite. Ainsi, vu la discussion suivant \ref{linebundle}, tout morphisme de fibrés en droites $\Phi: \alpha^*(L)\rightarrow p_2^*(L)$ induit pour tout $g\in G$ un morphisme $\Phi_g:g^*(L)\rightarrow L$.
+$$(g\times \Id)^*\alpha^*(L)=X\times_{G\times X}((G\times X)\times_X L)=\lbrace (x,(g',x'),l)\mid \alpha(g',x')=\pi(l)\text{ et } (g,x)=(g',x')\rbrace$$
+$$(g\times \Id)^*p_2^*(L)=X\times_{G\times X}((G\times X)\times_X L)=\lbrace (x,(g',x'),l)\mid x'=\pi(l)\text{ et } (g,x)=(g',x')\rbrace$$
+On obtient ainsi des isomorphismes canoniques $(g\times \Id)^*\alpha^*(L)\simeq g^*L$ et $(g\times \Id)^*p_2^*(L)\simeq L$, où $g^*L$ est l'image inverse de $L$ par l'automorphisme de $X$ associé à l'action de $g$, et on fait ces identifications par la suite. Ainsi, vu la discussion suivant \ref{linebundle}, tout morphisme de fibrés en droites $\Phi: \alpha^*(L)\rightarrow p_2^*(L)$ induit pour tout $g\in G$ un morphisme $\Phi_g:g^*(L)\rightarrow L$.
 
 \begin{lem}\label{CritereExistenceGLin}
 Avec les notations ci-dessus, on a une correspondance bijective entre les $G$-linéarisations de $L$ et les isomorphismes
@@ -414,33 +414,33 @@ Réciproquement, étant donné un $\Phi$ comme dans l'énoncé, on note $\gamma:
 Soient $G$ un groupe algébrique connexe, $X$ une $G$-variété irréductible, et $(L,\pi)$ un fibré en droites sur $X$. Alors $L$ admet une $G$-linéarisation si et seulement si $\alpha^*(L)$ et $p_2^*(L)$ sont isomorphes en tant que fibrés en droites sur $G\times X$.
 \end{lem}
 \begin{proof}
-L'implication directe est contenue dans le lemme précédent. Pour la réciproque, on considère un isomorphisme $\Phi:\alpha^*(L)\rightarrow p_2^*(L)$ de fibrés en droites sur $G\times X$. Comme $\alpha(e,x)=x$ pour tout $x\in X$, on a une identification canonique $(e\times \id)^*\alpha^*(L)\simeq L$, d'où un automorphisme $(e\times \id)^*(\Phi):L\rightarrow L$ de fibré en droites. Cet automorphisme est donné d'après \ref{linebundle} par une fonction $f\in \Oo(X)^*$. En remplaçant $\Phi$ par $\Phi\circ p_2^\sharp(f^{-1})$, on peut supposer $f=1$. On obtient ainsi un morphisme  $\beta: G\times L \rightarrow L$ qui satisfait le diagramme commutatif suivant:
+L'implication directe est contenue dans le lemme précédent. Pour la réciproque, on considère un isomorphisme $\Phi:\alpha^*(L)\rightarrow p_2^*(L)$ de fibrés en droites sur $G\times X$. Comme $\alpha(e,x)=x$ pour tout $x\in X$, on a une identification canonique $(e\times \id)^*\alpha^*(L)\simeq L$, d'où un automorphisme $(e\times \Id)^*(\Phi):L\rightarrow L$ de fibré en droites. Cet automorphisme est donné d'après \ref{linebundle} par une fonction $f\in \Oo(X)^*$. En remplaçant $\Phi$ par $\Phi\circ p_2^\sharp(f^{-1})$, on peut supposer $f=1$. On obtient ainsi un morphisme  $\beta: G\times L \rightarrow L$ qui satisfait le diagramme commutatif suivant:
 	\begin{center}
 	\begin{tikzcd}
-  		G\times L \arrow[r, "\beta"] \arrow[d, "id\times\pi"]& L\arrow[d, "\pi"] \\ 
+  		G\times L \arrow[r, "\beta"] \arrow[d, "\Id\times\pi"]& L\arrow[d, "\pi"] \\ 
   		G\times X \arrow[r, "\alpha"] & X
 	\end{tikzcd}\\
 	\end{center}
 De plus, on a modifié $\Phi$ de telle manière que l'on ait $\forall l\in L,\,\beta(e,l)=l$. Il reste maintenant à prouver que la condition d'associativité d'une action de groupe est satisfaite. On note $\beta_1:G\times G\times X\rightarrow X, (g,h,x)\mapsto \beta(g,\beta(h, x))$, $\beta_2:G\times G\times X\rightarrow X, (g,h,x)\mapsto \beta(gh, x)$, et par abus on note encore $\alpha:G\times G\times X\rightarrow X, (g,h,x)\mapsto \alpha(gh, x)$. On obtient deux diagrammes commutatifs:
 	\begin{center}
 	\begin{tikzcd}
-  		G\times G\times L \arrow[r, "\beta_1"] \arrow[d, "id\times\pi"]& L\arrow[d, "\pi"] \\ 
+  		G\times G\times L \arrow[r, "\beta_1"] \arrow[d, "\Id\times\pi"]& L\arrow[d, "\pi"] \\ 
   		G\times G\times X \arrow[r, "\alpha"] & X
 	\end{tikzcd}
 	\,\,\,\,\,\,\,\,\,\,\,\,
 	\begin{tikzcd}
-  		G\times G\times L \arrow[r, "\beta_2"] \arrow[d, "id\times\pi"]& L\arrow[d, "\pi"] \\ 
+  		G\times G\times L \arrow[r, "\beta_2"] \arrow[d, "\Id\times\pi"]& L\arrow[d, "\pi"] \\ 
   		G\times G\times X \arrow[r, "\alpha"] & X
 	\end{tikzcd}
 	\end{center}
-	On obtient ainsi deux isomorphismes $\gamma_1:G\times G\times L\rightarrow\alpha^*(L), (g,h,l)\mapsto ((g,h,\pi(l)), \beta_1(g,h,l))$ et $\gamma_2:G\times G\times L\rightarrow\alpha^*(L), (g,h,l)\mapsto ((g,h,\pi(l)), \beta_2(g,h,l))$. La condition d'associativité correspond à $\gamma_1\gamma_2^{-1}=\id$. Or $\gamma_1\gamma_2^{-1}$ est un automorphisme du fibré en droite $(G\times G\times L,\id\times \pi)$, donc correspond à une fonction $\phi\in \Oo(G\times G\times X)^*$. D'après \ref{rosenlicht1}, il existe $\chi\in X^*(G\times G)$ et $\psi\in\Oo(X)^*$ tels que $\phi(g,h,x)=\chi(g,h)\psi(x)$ pour tout $g,h\in G$ et $x\in X$. En évaluant en $g=h=e$ on obtient $\psi=1$, puis comme $\phi(g,e,x)=1=\phi(e,g,x)$ pour tout $g\in G$ et $x\in X$, on obtient $\chi(g,e)=\chi(e,g)$ pour tout $g\in G$. Comme l'application naturelle $X^*(G)\times X^*(G)\rightarrow X^*(G\times G)$ est un isomorphisme, on conclut que $\chi=1$ et donc $\phi=1$, ce qui termine la preuve.
+	On obtient ainsi deux isomorphismes $\gamma_1:G\times G\times L\rightarrow\alpha^*(L), (g,h,l)\mapsto ((g,h,\pi(l)), \beta_1(g,h,l))$ et $\gamma_2:G\times G\times L\rightarrow\alpha^*(L), (g,h,l)\mapsto ((g,h,\pi(l)), \beta_2(g,h,l))$. La condition d'associativité correspond à $\gamma_1\gamma_2^{-1}=\Id$. Or $\gamma_1\gamma_2^{-1}$ est un automorphisme du fibré en droite $(G\times G\times L,\id\times \pi)$, donc correspond à une fonction $\phi\in \Oo(G\times G\times X)^*$. D'après \ref{rosenlicht1}, il existe $\chi\in X^*(G\times G)$ et $\psi\in\Oo(X)^*$ tels que $\phi(g,h,x)=\chi(g,h)\psi(x)$ pour tout $g,h\in G$ et $x\in X$. En évaluant en $g=h=e$ on obtient $\psi=1$, puis comme $\phi(g,e,x)=1=\phi(e,g,x)$ pour tout $g\in G$ et $x\in X$, on obtient $\chi(g,e)=\chi(e,g)$ pour tout $g\in G$. Comme l'application naturelle $X^*(G)\times X^*(G)\rightarrow X^*(G\times G)$ est un isomorphisme, on conclut que $\chi=1$ et donc $\phi=1$, ce qui termine la preuve.
 \end{proof}
 
 \begin{prop}\label{GmoduleSectionsGlobalesGlin}
 Soit $X$ une $G$-variété et $L$ un fibré en droite $G$-linéarisé sur $X$. Alors le $k$-espace vectoriel des sections globales $\Gamma(X, L)$ a une structure naturelle de $G$-module.
 \end{prop}
 \begin{proof}
-$L^{-1}$ admet aussi une $G$-linéarisation d'après \ref{CritereExistenceGLin} et le fait que l'image inverse d'un fibré en droite commute à la prise de son dual. $L^{-1}$ est en fait une $G\times \GG_m$-variété où l'action de $\GG_m$ est l'action naturelle sur les fibres par multiplication. D'après \ref{GmoduleSectionsGlobales}, $\Oo(L^{-1})$ est un $G\times \GG_m$-module, donc en particulier un $\GG_m$-module. Le sous-espace de poids $1$ pour l'action de $\GG_m$ de ce module est $\Gamma(X, L)$ d'après \ref{remfibsectionsglobales}. Il est facile de vérifier que ce sous-espace est stable par l'action de $G$, ce qui en fait un $G$-module.
+$L^{-1}$ admet aussi une $G$-linéarisation d'après \ref{CritereExistenceGLin} et le fait que l'image inverse d'un fibré en droite commute à la prise de son dual. Le fibré $L^{-1}$ est en fait une $G\times \GG_m$-variété où l'action de $\GG_m$ est l'action naturelle sur les fibres par multiplication. D'après \ref{GmoduleSectionsGlobales}, $\Oo(L^{-1})$ est un $G\times \GG_m$-module, donc en particulier un $\GG_m$-module. Le sous-espace de poids $1$ pour l'action de $\GG_m$ de ce module est $\Gamma(X, L)$ d'après \ref{remfibsectionsglobales}. Il est facile de vérifier que ce sous-espace est stable par l'action de $G$, ce qui en fait un $G$-module.
 \end{proof}
 
 \section{Diviseurs}
@@ -452,7 +452,7 @@ En se rappelant le résultat \ref{extregularnormal}, on voit que la "géométrie
 \begin{defn}[Diviseur premier, diviseur de Weil, diviseur effectif]
 Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une sous-variété fermée irréductible de codimension 1. On définit $\wdiv(X)$ le groupe abélien libre engendré par les diviseurs premiers. Un élément de $\wdiv(X)$ est appelé un diviseur de Weil. Enfin, un diviseur est dit effectif si il est à coefficients $\geq 0$. 
 \end{defn}
-On introduit maintenant pour chaque diviseur premier $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles en $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. Soit $\eta$ le point générique de $D$, et $\mathcal{O}_{\eta,X}$ son anneau local. Par hypothèse et grâce aux propriétés de la localisation, il est noethérien normal et de dimension 1, c'est donc un anneau de valuation discrète (\ref{DVRCarac}). La valuation associée $v_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
+On introduit maintenant pour chaque diviseur premier $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles sur $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. Soit $\eta$ le point générique de $D$, et $\mathcal{O}_{\eta,X}$ son anneau local. Par hypothèse et grâce aux propriétés de la localisation, il est noethérien normal et de dimension 1, c'est donc un anneau de valuation discrète (\ref{DVRCarac}). La valuation associée $v_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
 
 \begin{prop}\label{noetherienPWDivBienDef}
 Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors $v_D(f)=0$ sauf pour un nombre fini de diviseurs premiers $D$.
@@ -546,7 +546,7 @@ Ainsi on voit que l'application $\phi_n:k[t_0,t_1]_n\rightarrow S_{nD}(\PP^1), f
 Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors $\Oo_X(D)$ est un $\Oo_X$-module cohérent. En particulier, le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est une $\Oo_X$-algèbre quasi-cohérente.
 \end{prop}
 \begin{proof}
-On peut supposer $X=\spec A$ affine car le problème est local.  Alors d'après \ref{FQCThm}, $\Oo_X(D)\simeq \tilde{M}$ où $M=\Gamma(X,\Oo_X(D))$. Il s'agit donc de montrer que $M$ est un $A$-module de type fini. Mais d'après \ref{divaff}, on voit que $\Gamma(X,\Oo_X(D))$ est un idéal fractionnaire de $A$, il est donc isomorphe à un idéal de $A$ en tant $A$-module après multiplication par une certaine fonction rationnelle. Comme $A$ est noetherien cela conclut la preuve.
+On peut supposer $X=\spec A$ affine car le problème est local. Posons $M=\Gamma(X, \Oo_X(D))$ et considérons $f\in A\setminus\lbrace 0\rbrace$. Il est facile de voir que $M_f\subset \Gamma(X_f,\Oo_X(D))$ car $\divi(f)=0$ sur cet ouvert. Réciproquement, considérons $g\in \Gamma(X_f,\Oo_X(D))$, alors on voit facilement que $f^mg\in M$ pour un certain $m>0$, et on en déduit que $g\in M_f$. Ainsi, $\Oo_X(D)\simeq \widetilde{M}$ ce qui montre que $\Oo_X(D)$ est quasi-cohérent d'après \ref{FQCThm}. Montrons maintenant que $M$ est un $A$-module de type fini. D'après \ref{divaff}, on voit que $\Gamma(X,\Oo_X(D))$ est un idéal fractionnaire de $A$, il est donc isomorphe à un idéal de $A$ en tant $A$-module après multiplication par une certaine fonction rationnelle. Comme $A$ est noetherien cela conclut la preuve.
 \end{proof}
 
 \begin{prop}\label{isomorphismcodim2}
@@ -580,7 +580,7 @@ Un diviseur de Cartier est dit principal si il provient d'une section globale de
 
 
 
-Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $(\mathcal{O}_X)_{|U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang $1$, c'est-à-dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceaux inversibles de $k(X)$. 
+Soit $X$ une variété irréductible. On remarque que pour un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ de $X$, $\mathcal{O}_X(D)_{|U_i}$ est le $\mathcal{O}_{U_i}$-module libre de base $(f_i^{-1})$. Il est donc localement libre de rang $1$, c'est-à-dire inversible. On récupère facilement $D$ à partir de $\mathcal{O}_X(D)$ en prenant un recouvrement qui le trivialise. Enfin, pour tout sous-faisceau inversible de $k(X)$ on construit de la même manière un diviseur de Cartier. On a donc une correspondance bijective entre diviseurs de Cartier et sous-faisceaux inversibles de $k(X)$. 
 $$
 \left\{
 \begin{matrix}
@@ -611,10 +611,10 @@ Le sous-groupe $\cacl(X)$ est propre en général (cf \cite{Hartshorne} 6.11.3).
 Soit $X$ une variété normale irréductible, $D,E\in\wdiv X$ avec $D$ de Cartier. Alors le morphisme naturel $\alpha:\Oo_X(D)\otimes_{\Oo_X}\Oo_X(E)\rightarrow \Oo_X(D+E)$ est un isomorphisme.
 \end{prop}
 \begin{proof}
-Écrivons $D=(U_i,f_i)_{i\in I}$. Alors sur chaque $U_i$, le morphisme $\alpha$ induit un isomorphisme de $\Oo_X$-module. En effet on a un morphisme inverse, il s'agit de la multiplication par $f_i$ composée avec l'inverse de l'isomorphisme $\Oo_{U_i}(D)\otimes_{\Oo_{U_i}}\Oo_{U_i}(E) \simeq \Oo_{U_i}(D)$, localement donné par $a\otimes b\mapsto abf_i$ .
+Écrivons $D=(U_i,f_i)_{i\in I}$. Alors sur chaque ouvert $U_i$, le morphisme $\alpha$ induit un isomorphisme de $\Oo_X$-module. En effet on a un morphisme inverse, il s'agit de la multiplication par $f_i$ composée avec l'inverse de l'isomorphisme $\Oo_{U_i}(D)\otimes_{\Oo_{U_i}}\Oo_{U_i}(E) \simeq \Oo_{U_i}(E)$ donné par $a\otimes b\mapsto abf_i$ .
 \end{proof}
 
-Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée \textit{section canonique} et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{X|U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des isomorphismes $\phi_i$, et donc du couple $(\Ll,s)$ à isomorphisme près, on l'appelle \textit{le diviseur des zéros} de $s$. Lorsque l'on a un isomorphisme $(\Ll,s)\simeq (\Oo_X(D),f)$, on note ce diviseur $\divi_D(f)$ et on a $\divi_D(f)=\divi(f)+D$. On voit qu'il existe un unique diviseur de Cartier effectif $D$ tel que $(\Ll,s)\simeq(\Oo_X(D),1_D)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
+Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée \textit{section canonique} et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des isomorphismes $\phi_i$, et donc du couple $(\Ll,s)$ à isomorphisme près, on l'appelle \textit{le diviseur des zéros} de $s$. Lorsque l'on a un isomorphisme $(\Ll,s)\simeq (\Oo_X(D),f)$, on note ce diviseur $\divi_D(f)$ et on a $\divi_D(f)=\divi(f)+D$. On voit qu'il existe un unique diviseur de Cartier effectif $D$ tel que $(\Ll,s)\simeq(\Oo_X(D),1_D)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
 
 $$
 \left\{
@@ -673,9 +673,9 @@ La proposition précédente et \ref{isopic} nous dit que $\pic(X)$ est engendré
 $$\bigoplus_{i\in I}\Oo_X\rightarrow \Ff\rightarrow 0$$
 Soient $f:Y\rightarrow X$ un morphisme de schémas, $\Ff$ un $\Oo_X$-module engendré par des sections globales $s_1,...,s_n$. On considère le morphisme canonique de $\Oo_X$-modules $\alpha:\Ff\rightarrow f_*f^*\Ff$, où la structure de $\Oo_X$-module sur $f_*f^*\Ff$ est donnée par $\lambda.t=f^\sharp(\lambda)t$ pour tout ouvert $V\subset X$, $\lambda\in \Oo_X(V)$, $t\in f_*f^*\Ff(V)$. On définit \textit{l'image inverse} de la section $s_i$ par $f^*(s_i):=\alpha(X)(s_i)$, c'est une section globale du faisceau de modules $f^*(\Ff)$. On vérifie que $f^*(\Ff)$ est engendré par les sections globales $f^*(s_1),...,f^*(s_n)$.
 
-Considérons maintenant une paire $(\Ll,s)$ constituée d'un faisceau inversible $\Ll$ sur $X$, et d'une section globale $s$. On note $\Vv_X(s)$ le support du diviseur des zéros de $s$, et $X_{s}=\lbrace x\in X\mid \Oo_{X,x}s_x=\Ll_x\rbrace=\lbrace x\in X\mid s_x\notin \mathfrak{m}_x\Ll_x\rbrace$ son complémentaire. Si $\Ll=\Oo_X$, il s'agit de l'ouvert principal $X_s$, et on a de plus $f^{-1}(X_s)=X_{f^\sharp(s)}=X_{f^*(s)}$ car $f^*\Oo_Y=\Oo_X$ et $\alpha=g^\sharp$ dans ce cas. Dans le cas général, on voit facilement que $f^*\Ll$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\Ll$, on voit d'après ce qui précède que $f^{-1}(X_s)=Y_{f^*(s)}$.  
+Considérons maintenant une paire $(\Ll,s)$ constituée d'un faisceau inversible $\Ll$ sur $X$, et d'une section globale $s$. On note $\Vv_X(s)$ le support du diviseur des zéros de $s$, et $X_{s}=\lbrace x\in X\mid \Oo_{X,x}s_x=\Ll_x\rbrace=\lbrace x\in X\mid s_x\notin \mathfrak{m}_x\Ll_x\rbrace$ son complémentaire. Si $\Ll=\Oo_X$, il s'agit de l'ouvert principal $X_s$, et on a de plus $f^{-1}(X_s)=X_{f^\sharp(s)}=X_{f^*(s)}$ car $f^*\Oo_Y=\Oo_X$ et $\alpha=f^\sharp$ dans ce cas. Dans le cas général, on voit facilement que $f^*\Ll$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\Ll$, on voit d'après ce qui précède que $f^{-1}(X_s)=Y_{f^*(s)}$.  
 
-Enfin, si $s_1,...,s_n$ sont des sections globales qui engendrent $\Ll$, on voit que $(X_{s_i})$ est un recouvrement de $X$ qui trivialise $\Ll$. En effet, sur chaque $Y_{l_i}$, on a un isomorphisme $\Oo_{X_{s_i}}\rightarrow \Ll_{|X_{s_i}}$, $\lambda \mapsto \lambda s_i$, et par hypothèse, l'intersection $\cap_{i=1}^n \Vv_X(s_i)$ est vide. Enfin, on note sans ambiguïté $s_j/s_i$ l'unique élément de $\Oo(X_{s_i})$ tel que $s_j/s_i.s_i=s_j$ par l'isomorphisme précédent.
+Enfin, si $s_1,...,s_n$ sont des sections globales qui engendrent $\Ll$, on voit que $(X_{s_i})$ est un recouvrement de $X$ qui trivialise $\Ll$. En effet, sur chaque $X_{s_i}$, on a un isomorphisme $\Oo_{X_{s_i}}\rightarrow \Ll_{|X_{s_i}}$, $\lambda \mapsto \lambda s_i$, et par hypothèse, l'intersection $\cap_{i=1}^n \Vv_X(s_i)$ est vide. Enfin, on note sans ambiguïté $s_j/s_i$ l'unique élément de $\Oo(X_{s_i})$ tel que $s_j/s_i.s_i=s_j$ par l'isomorphisme précédent.
 
 \subsubsection{Morphismes vers l'espace projectif}
 \label{morphismeproj}
@@ -769,7 +769,7 @@ L'application canonique $\eta^*\eta_*(\Ff\otimes_{\Oo_{\widetilde{Y}}}(\eta^*\Ll
 Soit $X$ une variété irréductible. Alors $U(X)$ est libre de type fini.
 \end{prop}
 \begin{proof}
-Comme $\Oo(X)^*$ s'injecte dans $\Oo(U)^*$ pour tout ouvert $U\subset X$, on peut supposer $X$ affine car un sous-groupe d'un groupe abélien libre de type fini est aussi libre de type fini. Soit $\eta_X:\widetilde{X}\rightarrow X$ l'application de normalisation. Alors $\widetilde{X}$ est affine, on a une injection $\eta_X^\sharp:\Oo(X)\xhookrightarrow{}\Oo(\widetilde{X})$ qui induit une injection $U(X)\xhookrightarrow{}U(\widetilde{X})$. On peut donc supposer $X$ normale.
+Comme $\Oo(X)^*$ s'injecte dans $\Oo(U)^*$ pour tout ouvert $U\subset X$, on peut supposer $X$ affine car un sous-groupe d'un groupe abélien libre de type fini est aussi libre de type fini. Soit $\eta_X:\widetilde{X}\rightarrow X$ le morphisme de normalisation. Alors $\widetilde{X}$ est affine et on a une injection $\eta_X^\sharp:\Oo(X)\xhookrightarrow{}\Oo(\widetilde{X})$ qui induit une injection $U(X)\xhookrightarrow{}U(\widetilde{X})$. On peut donc supposer $X$ normale.
 
 D'après \ref{CompletionNormal}, on peut supposer que $X$ est un ouvert d'une variété projective normale $\bar{X}$. On note $D_1,...,D_r$ les composantes irréductibles de $\bar{X}\setminus X$. Ceux sont des diviseurs premiers car ils sont définis par l'équation de l'hyperplan à l'infini. Dans chaque carte affine qui les rencontre, il s'agit donc de sous-variétés fermées de codimension $1$ d'après \ref{dimsousvariete}. Chacun de ces diviseurs premiers $D_i$ définit un anneau de valuation discrète dont on note $v_i$ la valuation. On considère l'application:
 $$\Oo(X)^*\rightarrow \ZZ^r, f\mapsto (v_1(f),...,v_r(f))$$
