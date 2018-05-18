@@ -16,18 +16,18 @@ soient des morphismes de variétés. Les morphismes de groupes algébriques sont
 
 \begin{ex}
 \begin{enumerate}
-\item Tout groupe fini est algébrique
-\item Le groupe linéaire $\gln_n(k)$ est l'ouvert principal de $\mn_n(k)$ défini par le déterminant. De plus, le produit et l'inverse sont des applications polynomiales en les coordonnées. Pour $n=1$ on note ce groupe $\GG_m:=\gln_1(k)$.
-\item Tout sous-groupe fermé de $\gln_n(k)$ est un groupe algébrique. Par exemple $\sln_n(k)$ le sous-groupe des matrices de déterminant $1$. Mentionnons aussi D$_n$, le sous-groupe des matrices diagonales. Il est défini par l'annulation des coefficients hors-diagonale.
+\item Tout groupe fini est algébrique.
+\item Le groupe linéaire $\gln_n$ est l'ouvert principal de $\mn_n$ défini par le déterminant. De plus, le produit et l'inverse sont des applications polynomiales en les coordonnées. Pour $n=1$ on note ce groupe $\GG_m:=\gln_1$.
+\item Tout sous-groupe fermé de $\gln_n$ est un groupe algébrique. Par exemple $\sln_n$ le sous-groupe des matrices de déterminant $1$. Mentionnons aussi D$_n$, le sous-groupe des matrices diagonales. Il est défini par l'annulation des coefficients hors-diagonale.
 \end{enumerate}
 \end{ex}
 
-Pour un groupe algébrique $G$, les composantes irréductibles et les composantes connexes coïncident. On note $G^o$ la composante connexe contenant le neutre $e_G$, on l'appelle la \textit{composante neutre}. C'est un sous-groupe normal et fermé de $G$, et les autres composantes connexes de $G$ sont les classes à gauche de $G^o$.
+Pour un groupe algébrique $G$, les composantes irréductibles et les composantes connexes coïncident. On note $G^o$ la composante connexe contenant le neutre $e_G$, on l'appelle la \textit{composante neutre}. C'est un sous-groupe distingué et fermé de $G$, et les autres composantes connexes de $G$ sont les classes (à gauche) de $G^o$.
 
 \subsection{$G$-variétés, représentations}
 
 \begin{defn}[$G$-variété]
-Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique $X$ sur laquelle $G$ agit algébriquement. C'est-à-dire que l'action de $G$ est définie par un morphisme de variétés $a:G\times X\rightarrow X$. Un morphisme de $G$-variétés est un morphisme qui commute à l'action de $G$. 
+Soit $G$ un groupe algébrique. Une $G$-variété est une variété algébrique $X$ sur laquelle $G$ agit algébriquement. C'est-à-dire que l'action de $G$ est définie par un morphisme de variétés $a:G\times X\rightarrow X$. Un morphisme de $G$-variétés est un morphisme qui commute aux actions de $G$. 
 \end{defn}
 
 \begin{defn}[Orbite, stabilisateur]
@@ -40,20 +40,23 @@ Le stabilisateur d'un point $x$ de $G$ est un sous-groupe fermé de $G$. En effe
 Soit $G$ un groupe algébrique, $X$ une $G$-variété et $x\in X$.
 \begin{enumerate}
 \item $G.x$ est ouvert dans $\overline{G.x}$.
-\item Toute composante irréductible de $G.x$ a pour dimension $\dim G-\dim G.x$.
-\item $\overline{G.x}\setminus G.X$ est une union d'orbites de dimension strictement inférieure à $\dim \overline{G.x}$.
-\item $G.x$ est ouvert dans $\overline{G.x}$.
+\item Toute composante irréductible de $G.x$ a pour dimension $\dim G-\dim G_x$.
+\item $\overline{G.x}\setminus G.x$ est une union d'orbites de dimension strictement inférieure à $\dim \overline{G.x}$.
+\item Tout orbite de dimension minimale est fermé.
 \end{enumerate}
 \end{prop}
 \begin{proof}
-On suppose d'abord $G$ connexe.
+On suppose d'abord $G$ connexe, si bien que $G$ et $\overline{G.x}$ sont irréductibles.
 \begin{enumerate}
-\item D'après \ref{dimensionfibres}, $G.x$ contient un ouvert dense $U$ de $\overline{G.x}$. Or, $G$ est réunion de translatés de $U$.
+\item D'après \ref{dimensionfibres}, $G.x$ contient un ouvert dense $U$ de $\overline{G.x}$. Or, $G.x$ est réunion de translatés de $U$.
 \item D'après \ref{dimensionfibres}, il existe un ouvert dense de $G.x$ tel que toute les fibres de cet ouvert ont pour dimension $\dim G-\dim G.x=\dim G_x$.
 \item $\overline{G.x}\setminus G.x$ est un fermé propre de $\overline{G.x}$ donc de dimension inférieure. Par ailleurs, $\overline{G.x}$ est $G$-stable donc $\overline{G.x}\setminus G.x$ est réunion d'orbites.
 \item Enfin si dim($G.x$) est minimal, $\overline{G.x}\setminus G.x$ est vide
 \end{enumerate}
-Enfin, $G$ n'est pas connexe, on écrit $G=\cup_{i=1}^{n}g_iG^\circ .x=\cup_{i=1}^{n}G^\circ g_i.x$ car $G^o$ est normal. D'où $\overline{G.x}=\cup_{i=1}^{n}\overline{g_iG^\circ .x}$. Les $\overline{g_iG^\circ}$ sont égales ou disjointes, c'est donc la décomposition en composantes irréductibles. On construit un ouvert de $\overline{G.x}$ inclus dans $G.x$ en posant $U=G^\circ .x\setminus \cup_{i=2}^{n}\overline{g_iG^\circ .x}$. On a $\dim G^o-\dim (G^o) _x=\dim G -\dim G_x$ car $(G_x)^o \subset(G^o)_x \subset G_x$, d'où $\dim G_x=\dim (G^o) _x$. Or chaque composante de $G.x$ est l'adhérence d'un orbite pour $G^o$, d'où 2) d'après le cas connexe. On a $\overline{G.x}\setminus G.x=\cup_{i=1}^{n}\overline{g_iG^o .x}\setminus g_iG^o .x=\cup_{i=1}^{n}g_i(\overline{G^\circ .x}\setminus G^o .x)$ qui est une union finie de fermés de dimension inférieure à $\overline{G .x}$ ce qui prouve 3). On utilise le même argument pour prouver 4) dans le cas général.
+Enfin, si $G$ n'est pas connexe, on écrit $G.x=\cup_{i=1}^{n}g_iG^\circ .x=\cup_{i=1}^{n}G^\circ g_i.x$ car $G^o$ est normal. Ainsi, $G.x$ est réunion de $G^o$-orbites isomorphes qui sont fermées car il existe des orbites fermées d'après $1$ dans le cas connexe. Comme les fermés irréductibles $G^\circ g_i.x$ sont égaux où disjoints, $G.x=\cup_{i=1}^{n}g_iG^\circ .x$ est la décomposition en composantes irréductibles de $G.x$. Ainsi $G^o.x$ est ouvert dans $\overline{G.x}$, d'où $1$).
+
+
+, puis $\overline{G.x}=\cup_{i=1}^{n}\overline{G^\circ g_i.x}$. Les fermés irréductibles $\overline{G^\circ g_i.x}$ sont égaux ou disjoints, c'est donc la décomposition en composantes irréductibles. On construit un ouvert de $\overline{G.x}$ inclus dans $G.x$ en posant $U=G^\circ .x\setminus \cup_{i=2}^{n}\overline{g_iG^\circ .x}$. On a $\dim G^o-\dim (G^o) _x=\dim G -\dim G_x$ car $(G_x)^o \subset(G^o)_x \subset G_x$, d'où $\dim G_x=\dim (G^o) _x$. Or chaque composante de $G.x$ est l'adhérence d'un orbite pour $G^o$, d'où 2) d'après le cas connexe. On a $\overline{G.x}\setminus G.x=\cup_{i=1}^{n}\overline{g_iG^o .x}\setminus g_iG^o .x=\cup_{i=1}^{n}g_i(\overline{G^\circ .x}\setminus G^o .x)$ qui est une union finie de fermés de dimension inférieure à $\overline{G .x}$ ce qui prouve 3). On utilise le même argument pour prouver 4) dans le cas général.
 \end{proof}
 
 \begin{prop}
@@ -449,7 +452,7 @@ Seule la deuxième assertion n'est pas évidente. Considérons $a\in \Oo(X)^G$ e
 Soit $G$ un groupe linéairement réductif et $X$ une $G$-variété affine. Alors l'algèbre des invariant $\Oo(X)^G$ est de type fini.
 \end{thm}
 \begin{proof}
-Supposons que $X$ soit un $G$-module $V$ de dimension finie. L'action de $\GG_m$ sur $V$ par homothétie donne une $\NN$-graduation $\Oo(V)=\bigoplus_{n=0}^{\infty}\Oo(V)_n$, $\Oo(V)_n$ étant le sous espace des polynômes homogènes de degré $n$. Cette graduation est $G$-stable et se restreint sur l'algèbre des invariants en une $\NN$-graduation $\Oo(V)^G=\bigoplus_{n=0}^{\infty}\Oo(V)^G_n$. Or on remarque que $\Oo(V)^G$ est noetherien. En effet, soit $I$ un idéal de $\Oo(V)^G$, et $J$ son extension dans $\Oo(V)$. L'idéal $J$ est un sous $G$-module, donc la contraction de $J$ dans $\Oo(V)^G$ est $R_{\Oo(V)}(J)=IR_{\Oo(V)}(\Oo(V))=I$. On voit donc que la condition de chaîne est satisfaite sur $\Oo(V)^G$ si elle satisfaite sur $\Oo(V)$, ce qui est le cas car ce dernier est noetherien par le théorème de la base de Hilbert. 
+Supposons que $X$ soit un $G$-module $V$ de dimension finie. L'action de $\GG_m$ sur $V$ par homothétie donne une $\NN$-graduation $\Oo(V)=\bigoplus_{n=0}^{\infty}\Oo(V)_n$, $\Oo(V)_n$ étant le sous espace des polynômes homogènes de degré $n$. Cette graduation est $G$-stable et se restreint sur l'algèbre des invariants en une $\NN$-graduation $\Oo(V)^G=\bigoplus_{n=0}^{\infty}\Oo(V)^G_n$. Or on remarque que $\Oo(V)^G$ est noethérien. En effet, soit $I$ un idéal de $\Oo(V)^G$, et $J$ son extension dans $\Oo(V)$. L'idéal $J$ est un sous $G$-module, donc la contraction de $J$ dans $\Oo(V)^G$ est $R_{\Oo(V)}(J)=IR_{\Oo(V)}(\Oo(V))=I$. On voit donc que la condition de chaîne est satisfaite sur $\Oo(V)^G$ si elle satisfaite sur $\Oo(V)$, ce qui est le cas car ce dernier est noethérien par le théorème de la base de Hilbert. 
 
 Dans le cas général, on peut d'après le théorème \ref{embed} supposer $X$ inclus dans un $G$-module $V$. On obtient alors un $G$-morphisme surjectif $\Oo(V) \rightarrow \Oo(X)$ qui induit un $G$-morphisme surjectif $\Oo(V)^G \rightarrow \Oo(X)^G$ d'après la proposition \ref{reynolds}. Cela montre que $\Oo(X)^G$ est de type fini.
 \end{proof}
@@ -584,7 +587,7 @@ On note $A_{(f)}:=(A_f)_0$ en remarquant qu'il s'agit de l'algèbre des invarian
 \end{multicols}
 Les flèches horizontales du diagramme de droite sont des immersions ouvertes, en effet on a $U_{f_if_j}\simeq (U_{f_i})_{f_j}$. Les conditions de la construction \ref{gluevar} sont satisfaites, on peut former un schéma $\proj(A)$ par recollement des $U_{f_i}$ le long de ces immersions. Il est facile de montrer que $\proj k[t_1,...,t_n]$, où les $t_i$ sont des indéterminées, est séparé en utilisant \ref{sepCritere}. On en déduit que $\proj(A)$ est séparé en utilisant \ref{sepCritere2}, et donc que c'est une variété. Enfin, les $(U_{f_i},\pi_i)$ sont des quotients géométriques et le diagramme exprime que l'on a les conditions de recollement sur les intersections pour définir un morphisme global $\pi:X\rightarrow\proj(A)$ qui fait de $(\proj A,\pi)$ le quotient géométrique global $W/\GG_m$. 
 
-Enfin, on remarque que les fermés de $\proj(A)$ correspondent aux fermés $\GG_m$-stables de $W$, c'est-à-dire aux idéaux radicaux homogènes qui ne contiennent pas l'idéal inconvenant. Si $A$ admet $n$ générateurs homogènes de degré $1$, alors $\proj(A)$ est un fermé d'un espace projectif $\PP^n_k:=\proj B$, où $B:=k[x_0,...,x_n]$ avec la graduation habituelle. Un tel fermé muni du faisceau défini ci-dessus  est une \textit{variété projective}. La topologie quotient sur $\proj(A)$ que l'on vient de définir est aussi appelé la topologie de Zariski. Elle admet une base d'ouverts affines de la forme $X_f$ avec $f\in A$ homogène, ils sont appelés les \textit{ouverts principaux}.
+Enfin, on remarque que les fermés de $\proj(A)$ correspondent aux fermés $\GG_m$-stables de $W$, c'est-à-dire aux idéaux radicaux homogènes de $A$ qui ne contiennent pas l'idéal inconvenant. La topologie quotient sur $\proj(A)$ que l'on vient de définir est aussi appelée la \textit{topologie de Zariski}. Elle admet une base d'ouverts affines de la forme $X_f$ avec $f\in A_{>0}$ homogène, ils sont appelés les \textit{ouverts principaux}. Si $A$ admet $n+1$ générateurs homogènes de degré $1$, alors $\proj(A)$ admet une immersion fermée dans le $n$-espace projectif $\PP^n_k:=\proj B$, où $B:=k[x_0,...,x_n]$ avec la graduation standard. On dit alors que $\proj A$ est une \textit{variété projective sur} $k$. 
 
 
 \begin{rem}

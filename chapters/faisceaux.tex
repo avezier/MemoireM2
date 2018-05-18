@@ -27,7 +27,7 @@ Soit $X\simeq\spec A$ un schéma affine. L'application $M\mapsto \widetilde{M}$ 
 
 
 \begin{prop}\label{FQCProp2}
-Soit $\Ff$ un faisceau quasi-cohérent sur un schéma $X$. On suppose $X$ noetherien, ou quasi-compact et séparé. Alors pour tout $f\in \Oo(X)$, le morphisme canonique
+Soit $\Ff$ un faisceau quasi-cohérent sur un schéma $X$. On suppose $X$ noethérien, ou quasi-compact et séparé. Alors pour tout $f\in \Oo(X)$, le morphisme canonique
 \begin{center}
 $\Ff(X)_f=\Ff(X)\otimes_{\Oo(X)}\Oo(X)_f\rightarrow \Ff(X_f)$
 \end{center}
@@ -47,7 +47,7 @@ En particulier, si $X\simeq \spec A$ est affine, alors les foncteurs $M\mapsto \
 \end{proof}
 
 \begin{prop}
-Soit $\Ff$ un faisceau quasi-cohérent sur un schéma noetherien $X$. Alors $\Ff$ est cohérent si et seulement si pour tout ouvert affine $U\subset X$, le module $\Ff(U)$ est de type fini. 
+Soit $\Ff$ un faisceau quasi-cohérent sur un schéma noethérien $X$. Alors $\Ff$ est cohérent si et seulement si pour tout ouvert affine $U\subset X$, le module $\Ff(U)$ est de type fini. 
 \end{prop}
 \begin{proof}
 \cite[5.1.11]{QingLiu}
@@ -56,16 +56,16 @@ Soit $\Ff$ un faisceau quasi-cohérent sur un schéma noetherien $X$. Alors $\Ff
 \begin{prop}\label{FQCProps3}
 Soit $X$ un schéma, alors on a les propriétés suivantes
 \begin{enumerate}
-\item Une somme directe de faisceaux quasi-cohérents est un faisceau quasi-cohérent. Si $X$ est noetherien, une somme directe finie de faisceaux cohérents est un faisceau cohérent.
-\item Soient $\Ff$ et $\Gg$ des faisceaux quasi-cohérents sur $X$, alors $\Ff\otimes \Gg$ est quasi-cohérent. Si $X$ est noetherien et $\Ff,\Gg$ cohérents, alors $\Ff\otimes_{\Oo_X} \Gg$ est cohérent. Enfin, si $X$ est affine, alors $(\Ff\otimes_{\Oo_X}\Gg)(U)=\Ff(U)\otimes_{\Oo(U)}\Gg(U)$ pour tout ouvert $U\subset X$.
-\item Soit $f:\Ff\rightarrow \Gg$ un morphisme de faisceaux quasi-cohérents. Alors $\Ker f$, $\Im f$ et $\Coker f$ sont quasi-cohérents. Si $X$ est noetherien, et $\Ff, \Gg$ cohérents, alors $\Ker f$, $\Im f$ et $\Coker f$ sont cohérents.
+\item Une somme directe de faisceaux quasi-cohérents est un faisceau quasi-cohérent. Si $X$ est noethérien, une somme directe finie de faisceaux cohérents est un faisceau cohérent.
+\item Soient $\Ff$ et $\Gg$ des faisceaux quasi-cohérents sur $X$, alors $\Ff\otimes \Gg$ est quasi-cohérent. Si $X$ est noethérien et $\Ff,\Gg$ cohérents, alors $\Ff\otimes_{\Oo_X} \Gg$ est cohérent. Enfin, si $X$ est affine, alors $(\Ff\otimes_{\Oo_X}\Gg)(U)=\Ff(U)\otimes_{\Oo(U)}\Gg(U)$ pour tout ouvert $U\subset X$.
+\item Soit $f:\Ff\rightarrow \Gg$ un morphisme de faisceaux quasi-cohérents. Alors $\Ker f$, $\Im f$ et $\Coker f$ sont quasi-cohérents. Si $X$ est noethérien, et $\Ff, \Gg$ cohérents, alors $\Ker f$, $\Im f$ et $\Coker f$ sont cohérents.
 \item Soit $f:X\rightarrow Y$ un morphisme, et $\Gg$ un $\Oo_Y$-module quasi-cohérent. Soit $U$ un ouvert affine de $X$ tel que $f(U)$ est contenu dans un ouvert affine $V$ de $Y$. Alors
 \begin{center}
 $f^*\Gg_{|U}\simeq(\Gg(V)\otimes_{\Oo_Y(V)}\Oo_X(U))^{\widetilde{}}$
 \end{center}
-En particulier, $f^*\Gg$ est quasi-cohérent sur $X$. Si $X$ est noetherien et $\Gg$ cohérent, alors $f^*\Gg$ est cohérent.
-\item Soit $f:X\rightarrow Y$ un morphisme, et $\Ff$ un $\Oo_X$-module quasi-cohérent. Si $X$ est noetherien, ou si $f$ est séparé et quasi-compact, alors $f_*\Ff$ est quasi-cohérent sur $Y$.
-\item Soit $f:X\rightarrow Y$ un morphisme fini, et $\Ff$ un $\Oo_X$-module cohérent. Si $Y$ est noetherien, alors $f_*\Ff$ est cohérent sur $Y$.
+En particulier, $f^*\Gg$ est quasi-cohérent sur $X$. Si $X$ est noethérien et $\Gg$ cohérent, alors $f^*\Gg$ est cohérent.
+\item Soit $f:X\rightarrow Y$ un morphisme, et $\Ff$ un $\Oo_X$-module quasi-cohérent. Si $X$ est noethérien, ou si $f$ est séparé et quasi-compact, alors $f_*\Ff$ est quasi-cohérent sur $Y$.
+\item Soit $f:X\rightarrow Y$ un morphisme fini, et $\Ff$ un $\Oo_X$-module cohérent. Si $Y$ est noethérien, alors $f_*\Ff$ est cohérent sur $Y$.
 \end{enumerate}
 \end{prop}
 \begin{proof}
@@ -175,9 +175,9 @@ Soit $X$ un schéma, $\Ff\in \Aa b(X)$, et $Z$ un fermé de $X$. Le support $\su
 \end{equation}
 
 \begin{ex}\label{cohomsupportaffineex}
-Soit $X=\spec A$ un schéma affine noetherien, $M$ un $A$-module, $\Ff:=\widetilde{M}$, $\mathfrak{a}\subset A$ un idéal, et $Z=\Vv_X(\mathfrak{a})$. Soit $m\in M=\Gamma(X,\Ff)$, alors $\supp m=\Vv_X(\ann m)$, où $\ann M=\lbrace a\in A\mid am=0\rbrace$ est l'annulateur de $m$. En effet, soit $\mathfrak{p}$ un point de $X$, alors $m_\mathfrak{p}\neq 0\iff \forall a\in A\setminus \mathfrak{p}, am\neq 0\iff \ann(m)\subset \mathfrak{p}$.
+Soit $X=\spec A$ un schéma affine noethérien, $M$ un $A$-module, $\Ff:=\widetilde{M}$, $\mathfrak{a}\subset A$ un idéal, et $Z=\Vv_X(\mathfrak{a})$. Soit $m\in M=\Gamma(X,\Ff)$, alors $\supp m=\Vv_X(\ann m)$, où $\ann M=\lbrace a\in A\mid am=0\rbrace$ est l'annulateur de $m$. En effet, soit $\mathfrak{p}$ un point de $X$, alors $m_\mathfrak{p}\neq 0\iff \forall a\in A\setminus \mathfrak{p}, am\neq 0\iff \ann(m)\subset \mathfrak{p}$.
 
-On définit un sous-module $\Gamma_\mathfrak{a}(M)$ de $M$ par $\Gamma_\mathfrak{a}(M):=\lbrace m\in M\mid \mathfrak{a}^nm=0 \text{ pour un } n>0 \rbrace$. Alors on a $\Gamma_\mathfrak{a}(M)^{\widetilde{}} = \Hh ^0 _Z(\Ff)$. En effet, tout d'abord $\Hh^0 _Z(\Ff)$ est quasi-cohérent comme noyau d'un morphisme entre faisceaux quasi-cohérents, cela d'après la suite exacte ci-dessus et \ref{FQCProps3} $5$ et $3$. En utilisant \ref{FQCThm}, il reste donc à montrer que $\Gamma_\mathfrak{a}(M)\simeq\Gamma_Z(X,\Ff)=\Gamma(X,\Hh ^0 _Z(\Ff))$ en tant que $A$-modules. Soit $m\in\Gamma_Z(X,\Ff)$, on a par définition $\supp m=\Vv_X(\ann m)\subset \Vv_X(\mathfrak{a})$, d'où $\mathfrak{a}\subset \sqrt{\ann m}$. Or, $\mathfrak{a}$ est de type fini car $A$ est noetherien, on en conclut que $m\in \Gamma_\mathfrak{a}(M)$. En effet, si on a $k$ générateurs $x_1,...,x_k$ de $\mathfrak{a}$, on peut trouver un exposant commun $n$ tel que $x^n_i$ annule $m$ pour tout $i$. Il s'en suit que l'on a par exemple $\mathfrak{a}^{n^k}m=0$. Réciproquement, si $m\in \Gamma_\mathfrak{a}(M)$, alors $\mathfrak{a}^n\subset \ann m$ pour un $n>0$, ce qui donne $\supp m \subset\Vv(\mathfrak{a}^n)=\Vv(\mathfrak{a})$, puis $m\in \Gamma_Z(X,\Ff)$. Finalement on a bien $\Gamma_\mathfrak{a}(M)=\Gamma_Z(X,\Ff)$.
+On définit un sous-module $\Gamma_\mathfrak{a}(M)$ de $M$ par $\Gamma_\mathfrak{a}(M):=\lbrace m\in M\mid \mathfrak{a}^nm=0 \text{ pour un } n>0 \rbrace$. Alors on a $\Gamma_\mathfrak{a}(M)^{\widetilde{}} = \Hh ^0 _Z(\Ff)$. En effet, tout d'abord $\Hh^0 _Z(\Ff)$ est quasi-cohérent comme noyau d'un morphisme entre faisceaux quasi-cohérents, cela d'après la suite exacte ci-dessus et \ref{FQCProps3} $5$ et $3$. En utilisant \ref{FQCThm}, il reste donc à montrer que $\Gamma_\mathfrak{a}(M)\simeq\Gamma_Z(X,\Ff)=\Gamma(X,\Hh ^0 _Z(\Ff))$ en tant que $A$-modules. Soit $m\in\Gamma_Z(X,\Ff)$, on a par définition $\supp m=\Vv_X(\ann m)\subset \Vv_X(\mathfrak{a})$, d'où $\mathfrak{a}\subset \sqrt{\ann m}$. Or, $\mathfrak{a}$ est de type fini car $A$ est noethérien, on en conclut que $m\in \Gamma_\mathfrak{a}(M)$. En effet, si on a $k$ générateurs $x_1,...,x_k$ de $\mathfrak{a}$, on peut trouver un exposant commun $n$ tel que $x^n_i$ annule $m$ pour tout $i$. Il s'en suit que l'on a par exemple $\mathfrak{a}^{n^k}m=0$. Réciproquement, si $m\in \Gamma_\mathfrak{a}(M)$, alors $\mathfrak{a}^n\subset \ann m$ pour un $n>0$, ce qui donne $\supp m \subset\Vv(\mathfrak{a}^n)=\Vv(\mathfrak{a})$, puis $m\in \Gamma_Z(X,\Ff)$. Finalement on a bien $\Gamma_\mathfrak{a}(M)=\Gamma_Z(X,\Ff)$.
 \end{ex}
 
 Il est facile de montrer que $\Gamma_Z(X, .)$ est un foncteur exact à gauche, on définit alors \textit{les groupes de cohomologie de $\Ff$ à support dans $Z$} comme ses foncteurs dérivés à droite, on les note $H_Z^i(X,\Ff)$. Si $\Ff$ est flasque, il est acyclique pour $\Gamma_Z(X, .)$, et de plus, en appliquant le foncteur sections globales $\Gamma(X,.)$ à la suite exacte \ref{eq:ESSupport}, on obtient la suite exacte courte ci-dessous:
@@ -202,34 +202,34 @@ Remarquons enfin qu'avec les notations et hypothèses de l'exemple \ref{cohomsup
 
 \subsubsection{Cohomologie sur un schéma affine}
 
-L'objectif de cette partie est de montrer que les $\Oo_X$-module quasi-cohérents sur un schéma affine noetherien $X=\spec A$ sont acycliques. Le point clé sera de montrer que pour un $A$-module injectif $I$, le faisceau $\widetilde{I}$ est flasque. On commence par des préliminaires d'algèbre commutative:
+L'objectif de cette partie est de montrer que les $\Oo_X$-module quasi-cohérents sur un schéma affine noethérien $X=\spec A$ sont acycliques. Le point clé sera de montrer que pour un $A$-module injectif $I$, le faisceau $\widetilde{I}$ est flasque. On commence par des préliminaires d'algèbre commutative:
 
 \begin{thm}[de Krull]
-Soit $A$ un anneau noetherien, $M\subset N$ des $A$-modules de type fini, et $\mathfrak{a}$ un idéal de $A$. Alors, la topologie $\mathfrak{a}$-adique sur $M$ est induite par la topologie $\mathfrak{a}$-adic sur $N$. En particulier, pour tout $n>0$, il existe $n'\geq n$ tel que $\mathfrak{a}^{n'}N\cap M\subset\mathfrak{a}^nM$.
+Soit $A$ un anneau noethérien, $M\subset N$ des $A$-modules de type fini, et $\mathfrak{a}$ un idéal de $A$. Alors, la topologie $\mathfrak{a}$-adique sur $M$ est induite par la topologie $\mathfrak{a}$-adic sur $N$. En particulier, pour tout $n>0$, il existe $n'\geq n$ tel que $\mathfrak{a}^{n'}N\cap M\subset\mathfrak{a}^nM$.
 \end{thm}
 \begin{proof}
 \cite[10.11]{atiyahmacdo}
 \end{proof}
 
 \begin{cor}\label{cohomAffLemme1}
-Soient $A$ un anneau noetherien, $\mathfrak{a}$ un idéal de $A$, et $I$ un $A$-module injectif. Alors le sous-module $\Gamma_\mathfrak{a}(I)$ est aussi un $A$-module injectif.
+Soient $A$ un anneau noethérien, $\mathfrak{a}$ un idéal de $A$, et $I$ un $A$-module injectif. Alors le sous-module $\Gamma_\mathfrak{a}(I)$ est aussi un $A$-module injectif.
 \end{cor}
 \begin{proof}
 \cite[III.3.2]{Hartshorne} 
 \end{proof}
 
 \begin{lem}
-Soient $A$ un anneau noetherien et $I$ un $A$-module injectif. Alors pour tout $f\in A$, la flèche de localisation $I\rightarrow I_f$ est surjective.
+Soient $A$ un anneau noethérien et $I$ un $A$-module injectif. Alors pour tout $f\in A$, la flèche de localisation $I\rightarrow I_f$ est surjective.
 \end{lem}
 \begin{proof}
 \cite[III.3.3]{Hartshorne} 
 \end{proof}
 
 \begin{prop}\label{cohomAffProp1}
-Soient $A$ un anneau noetherien et $I$ un $A$-module injectif. Alors le faisceau $\widetilde{I}$ est flasque.
+Soient $A$ un anneau noethérien et $I$ un $A$-module injectif. Alors le faisceau $\widetilde{I}$ est flasque.
 \end{prop}
 \begin{proof}
-On utilise que $X$ est un espace topologique noetherien, et on considère les fermés de la forme $Y:=\overline{\supp \widetilde{I}}$, où $I$ est un $A$-module injectif. On remarque que le résultat est immédiatement vérifié si $Y$ est l'ensemble vide. Il suffit donc de montrer qu'étant donné un fermé $Y$ de la forme $\overline{\supp \widetilde{I}}$ on est ramené à montrer le résultat pour un fermé propre de $Y$ de même forme.
+On utilise que $X$ est un espace topologique noethérien, et on considère les fermés de la forme $Y:=\overline{\supp \widetilde{I}}$, où $I$ est un $A$-module injectif. On remarque que le résultat est immédiatement vérifié si $Y$ est l'ensemble vide. Il suffit donc de montrer qu'étant donné un fermé $Y$ de la forme $\overline{\supp \widetilde{I}}$ on est ramené à montrer le résultat pour un fermé propre de $Y$ de même forme.
 
 Pour montrer que $\widetilde{I}$ est flasque, il est suffisant de montrer que $\Gamma(X,\widetilde{I})\rightarrow\Gamma(U,\widetilde{I})$ est surjectif pour tout ouvert $U\subset X$. Si $Y\cap U=\emptyset$ il n'y a rien à montrer. Sinon, il existe $f\in A$ tel que $X_f\subset U$ et $X_f\cap Y\neq \emptyset$. On note $Z= X\setminus X_f$, et on considère le diagramme commutatif:
 
@@ -246,7 +246,7 @@ Posons $J=\Gamma_Z(X,\widetilde{I})$, et $\mathfrak{a}=fA$. Alors d'après l'exe
 
 
 \begin{thm}\label{cohomoaffine}
-Soit $X=\spec A$ un schéma affine noetherien. Alors pour tout faisceau quasi-cohérent $\Ff$ sur $X$, et pour tout $i>0$, on a $H^i(X,\Ff)=0$. 
+Soit $X=\spec A$ un schéma affine noethérien. Alors pour tout faisceau quasi-cohérent $\Ff$ sur $X$, et pour tout $i>0$, on a $H^i(X,\Ff)=0$. 
 \end{thm}
 \begin{proof}
 Soit $M=\Gamma(X,\Ff)$, et $M\rightarrow I^.$ une résolution injective de $M$. On obtient d'après \ref{FQCThm} une résolution injective $\Ff\simeq \widetilde{M}\rightarrow \widetilde{I}^.$ de $\Ff$ dans la catégorie des $\Oo_X$-modules quasi-cohérents. Or cette résolution est flasque d'après \ref{cohomAffProp1}. Cela suffit à montrer le théorème car une résolution flasque de faisceau est acyclique, et peut être utilisé pour calculer la cohomologie.
@@ -269,7 +269,7 @@ Soit $A$ un anneau, $M$ un $A$-module et $\mathfrak{a}\subset A$ un idéal. La $
 \end{defn}
 
 \begin{prop}
-Soit $A$ un anneau noetherien, $\mathfrak{a}$ un idéal, et $M$ un $A$-module de type fini. Alors pour tout $n\geq 0$, les conditions suivantes sont équivalentes:
+Soit $A$ un anneau noethérien, $\mathfrak{a}$ un idéal, et $M$ un $A$-module de type fini. Alors pour tout $n\geq 0$, les conditions suivantes sont équivalentes:
 \begin{enumerate}
 \item $\depth_\mathfrak{a} M\geq n$.
 \item $H_\mathfrak{a}^i(M)=0$ pour tout $i<n$.
@@ -326,7 +326,7 @@ Une section d'un fibré en droites $(L, \pi)$ est une section de $\pi$, et on a 
 
 On constate qu'un fibré en droites $(L,\pi)$ sur $X$ est obtenu en recollant des fibrés en droites de la forme $U_i\times \AAA^1\rightarrow U_i$ appelés fibrés triviaux via des automorphismes linéaires sur les intersections définis par des fonctions $a_{ij}\in \Oo(U_i\cap U_j)^*$, dites de transition. De plus, un automorphisme de fibré en droites est donné par une fonction $f\in \Oo(X)^*$. En effet, localement il s'agit d'automorphismes de fibrés triviaux qui sont nécessairement de cette forme.
 
-Considérons un faisceau inversible $\Ll$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\Ll(U_i)$ sur chaque $U_i$. Sur $U_i\cap U_j$, on a $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. On a ainsi construit un fibré en droites sur $X$.
+Considérons un faisceau inversible $\Ll$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\Ll(U_i)$ sur chaque $U_i$. Sur $U_i\cap U_j$, on a $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes_k k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. On a ainsi construit un fibré en droites sur $X$.
 
 Réciproquement, considérons le $\mathcal{O}_X$-module des sections d'un fibré en droite $L$ sur $X$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est-à-dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible. Les sections globales de $L$ s'identifie via les trivialisations locales aux familles $(f_i)_{i\in I}$ telles que $f_i=a_{ij}f_j$ sur $U_i\cap U_j$. En effet, un telle section donne sur les intersections $U_i\cap U_j$ un diagramme commutatif:
 
@@ -454,7 +454,7 @@ Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une so
 \end{defn}
 On introduit maintenant pour chaque diviseur premier $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles sur $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. Soit $\eta$ le point générique de $D$, et $\mathcal{O}_{\eta,X}$ son anneau local. Par hypothèse et grâce aux propriétés de la localisation, il est noethérien normal et de dimension 1, c'est donc un anneau de valuation discrète (\ref{DVRCarac}). La valuation associée $v_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
 
-\begin{prop}\label{noetherienPWDivBienDef}
+\begin{prop}\label{noethérienPWDivBienDef}
 Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors $v_D(f)=0$ sauf pour un nombre fini de diviseurs premiers $D$.
 \end{prop}
 \begin{proof}
@@ -546,7 +546,7 @@ Ainsi on voit que l'application $\phi_n:k[t_0,t_1]_n\rightarrow S_{nD}(\PP^1), f
 Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. Alors $\Oo_X(D)$ est un $\Oo_X$-module cohérent. En particulier, le faisceau d'algèbres divisorielles associé à un sous-groupe $K\in \wdiv(X)$ est une $\Oo_X$-algèbre quasi-cohérente.
 \end{prop}
 \begin{proof}
-On peut supposer $X=\spec A$ affine car le problème est local. Posons $M=\Gamma(X, \Oo_X(D))$ et considérons $f\in A\setminus\lbrace 0\rbrace$. Il est facile de voir que $M_f\subset \Gamma(X_f,\Oo_X(D))$ car $\divi(f)=0$ sur cet ouvert. Réciproquement, considérons $g\in \Gamma(X_f,\Oo_X(D))$, alors on voit facilement que $f^mg\in M$ pour un certain $m>0$, et on en déduit que $g\in M_f$. Ainsi, $\Oo_X(D)\simeq \widetilde{M}$ ce qui montre que $\Oo_X(D)$ est quasi-cohérent d'après \ref{FQCThm}. Montrons maintenant que $M$ est un $A$-module de type fini. D'après \ref{divaff}, on voit que $\Gamma(X,\Oo_X(D))$ est un idéal fractionnaire de $A$, il est donc isomorphe à un idéal de $A$ en tant $A$-module après multiplication par une certaine fonction rationnelle. Comme $A$ est noetherien cela conclut la preuve.
+On peut supposer $X=\spec A$ affine car le problème est local. Posons $M=\Gamma(X, \Oo_X(D))$ et considérons $f\in A\setminus\lbrace 0\rbrace$. Il est facile de voir que $M_f\subset \Gamma(X_f,\Oo_X(D))$ car $\divi(f)=0$ sur cet ouvert. Réciproquement, considérons $g\in \Gamma(X_f,\Oo_X(D))$, alors on voit facilement que $f^mg\in M$ pour un certain $m>0$, et on en déduit que $g\in M_f$. Ainsi, $\Oo_X(D)\simeq \widetilde{M}$ ce qui montre que $\Oo_X(D)$ est quasi-cohérent d'après \ref{FQCThm}. Montrons maintenant que $M$ est un $A$-module de type fini. D'après \ref{divaff}, on voit que $\Gamma(X,\Oo_X(D))$ est un idéal fractionnaire de $A$, il est donc isomorphe à un idéal de $A$ en tant $A$-module après multiplication par une certaine fonction rationnelle. Comme $A$ est noethérien cela conclut la preuve.
 \end{proof}
 
 \begin{prop}\label{isomorphismcodim2}
@@ -603,7 +603,7 @@ Soit $X$ une variété irréductible. L'application $D\mapsto \Oo_X(D)$ définit
 \end{prop}
 
 
-On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur premier $D$, on choisit un indice $i\in I$ tel que $U_i\cap D\neq \emptyset$ et on prend $v_D(f_i)$ pour coefficient de $D$. Cette somme est finie par la même preuve que \ref{noetherienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \Oo_X^*(U_i\cap U_j)$ par définition, donc $v_D(f_i)=v_D(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir $\cacl(X)$ comme un sous-groupe de $\clg(X)$ car on vérifie que les diviseurs principaux se correspondent.
+On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur premier $D$, on choisit un indice $i\in I$ tel que $U_i\cap D\neq \emptyset$ et on prend $v_D(f_i)$ pour coefficient de $D$. Cette somme est finie par la même preuve que \ref{noethérienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \Oo_X^*(U_i\cap U_j)$ par définition, donc $v_D(f_i)=v_D(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir $\cacl(X)$ comme un sous-groupe de $\clg(X)$ car on vérifie que les diviseurs principaux se correspondent.
 
 Le sous-groupe $\cacl(X)$ est propre en général (cf \cite{Hartshorne} 6.11.3). En revanche, si $X$ est lisse, tout diviseur de Weil est localement principal . En effet dans ce cas, les anneaux locaux sont factoriels, on obtient ainsi en tout point une équation locale d'un diviseur premier car un idéal premier de hauteur 1 d'un anneau factoriel est principal, ce qui permet de conclure.
 
@@ -615,7 +615,6 @@ Soit $X$ une variété normale irréductible, $D,E\in\wdiv X$ avec $D$ de Cartie
 \end{proof}
 
 Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée \textit{section canonique} et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des isomorphismes $\phi_i$, et donc du couple $(\Ll,s)$ à isomorphisme près, on l'appelle \textit{le diviseur des zéros} de $s$. Lorsque l'on a un isomorphisme $(\Ll,s)\simeq (\Oo_X(D),f)$, on note ce diviseur $\divi_D(f)$ et on a $\divi_D(f)=\divi(f)+D$. On voit qu'il existe un unique diviseur de Cartier effectif $D$ tel que $(\Ll,s)\simeq(\Oo_X(D),1_D)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
-
 $$
 \left\{
 \begin{matrix}
@@ -631,6 +630,7 @@ $$
 \end{matrix}
 \right\}
 $$
+
 En faisant varier $s$ non-nulle dans les couples $(\Oo_X(D),s)$ tels que ci-dessus, on obtient tous les diviseurs de Cartier effectifs linéairement équivalents à $D$. En effet, $\divi_D(s)$ est par définition un diviseur effectif linéairement équivalent à $D$. Réciproquement un diviseur effectif linéairement équivalent à $D$ s'écrit $D+\divi(s)\geq 0$ où $s$ est donc une section globale $s$ de $\Oo_X(D)$.
 
 On peut étendre la correspondance précédente en une correspondance entre diviseurs de Weil effectifs et couples $(\Oo_X(D),s)$ constitués d'un faisceau divisoriel et d'une section globale. En effet on a d'une part un isomorphisme $\wdiv(X)\simeq\wdiv(X_{reg})$ respectant l'effectivité (\ref{isomorphismcodim2} et \ref{divexactseq}). D'autre part on a une égalité $\Oo_X(D)= i_*\Oo_{X_{reg}}(D)$, pour tout diviseur $D\in\wdiv(X)$, où $i:X_{reg}\rightarrow X$ est l'inclusion. Comme tous les diviseurs de Weil sont de Cartier sur $X_{reg}$, on obtient
@@ -649,6 +649,7 @@ $$
 \end{matrix}
 \right\}
 $$
+
 On note encore $\divi_D(s):=\divi(s)+D$ les diviseurs de Weil effectifs obtenus de cette manière.
 \subsection{L'espace projectif $\PP_k^n$}
 
@@ -725,14 +726,14 @@ Soit $X$ un schéma. Un faisceau inversible $\Ll$ sur $X$ est ample si pour tout
 \end{defn}
 
 \begin{prop}
-Soit $X$ un schéma sur $\spec A$ avec $A$ noetherien. Un faisceau très ample sur $X$ relativement à $\spec A$ est ample.
+Soit $X$ un schéma sur $\spec A$ avec $A$ noethérien. Un faisceau très ample sur $X$ relativement à $\spec A$ est ample.
 \end{prop}
 \begin{proof}
 \cite[II.5.17]{Hartshorne} 
 \end{proof}
 
 \begin{thm}
-Soit $X$ un schéma de type fini sur $\spec A$ avec $A$ noetherien, et $\Ll$ un faisceau inversible sur $X$. Alors $\Ll$ est ample si et seulement si $\Ll^{\otimes m}$ est très ample relativement à $\spec A$ pour un entier $m>0$.
+Soit $X$ un schéma de type fini sur $\spec A$ avec $A$ noethérien, et $\Ll$ un faisceau inversible sur $X$. Alors $\Ll$ est ample si et seulement si $\Ll^{\otimes m}$ est très ample relativement à $\spec A$ pour un entier $m>0$.
 \end{thm}
 \begin{proof}
 \cite[II.7.6]{Hartshorne}
@@ -760,7 +761,7 @@ Il existe une variété projective irréductible $\bar{X}$ contenant $X$ comme o
 \begin{proof}
 On peut supposer que $X$ est plongée dans un espace affine $\AAA^n_k$. On considère alors l'adhérence $Y$ de $X$ dans l'espace projectif $\PP^n_k$ (qui contient $\AAA^n_k$ comme ouvert). Par construction, $Y$ est projective, irréductible et contient $X$ comme ouvert.
 
-Si $X$ est normale, on considère la normalisation $\eta:\widetilde{Y}\rightarrow Y$. Alors $\widetilde{Y}$ contient encore $X$ comme ouvert par hypothèse. Pour montrer que $\widetilde{Y}$ est projective, il suffit de montrer qu'elle est quasi-projective car comme $\eta$ est fini, $\widetilde{Y}$ est propre sur $Y$ et donc sur $k$ (\cite[II.4.8, ex II.4.1]{Hartshorne}), ce qui permet d'utiliser \cite[ex II.4.4]{Hartshorne}. Par hypothèse, $Y$ admet un faisceau ample $\Ll$, on va vérifier que $\eta^*\Ll$ est ample, ce qui achèvera la preuve. Soit $\Ff$ un faisceau cohérent sur $\widetilde{Y}$. Alors $\eta_*\Ff$ est cohérent sur $Y$ car $\eta$ est fini et $Y$ est noetherien (\ref{FQCProps3} 6). Comme $\Ll$ est ample, $\eta_*\Ff\otimes_{\Oo_Y} \Ll^{\otimes m}$ est engendré par ses sections globales pour $m\gg 0$, ce qui donne un morphisme surjectif $\bigoplus_{i\in I}\Oo_Y\rightarrow \eta_*\Ff\otimes_{\Oo_Y} \Ll^{\otimes m}$. Par la formule de projection (\cite[ex II.5.1.d]{Hartshorne}), on a $\eta_*\Ff\otimes_{\Oo_Y} \Ll^{\otimes m}=\eta_*(\Ff\otimes_{\Oo_{\widetilde{Y}}}\eta^*(\Ll^{\otimes m}))$. Le foncteur $\eta^*$ est exact à droite, commute au produit tensoriel et aux sommes directes. On obtient donc un morphisme surjectif 
+Si $X$ est normale, on considère la normalisation $\eta:\widetilde{Y}\rightarrow Y$. Alors $\widetilde{Y}$ contient encore $X$ comme ouvert par hypothèse. Pour montrer que $\widetilde{Y}$ est projective, il suffit de montrer qu'elle est quasi-projective car comme $\eta$ est fini, $\widetilde{Y}$ est propre sur $Y$ et donc sur $k$ (\cite[II.4.8, ex II.4.1]{Hartshorne}), ce qui permet d'utiliser \cite[ex II.4.4]{Hartshorne}. Par hypothèse, $Y$ admet un faisceau ample $\Ll$, on va vérifier que $\eta^*\Ll$ est ample, ce qui achèvera la preuve. Soit $\Ff$ un faisceau cohérent sur $\widetilde{Y}$. Alors $\eta_*\Ff$ est cohérent sur $Y$ car $\eta$ est fini et $Y$ est noethérien (\ref{FQCProps3} 6). Comme $\Ll$ est ample, $\eta_*\Ff\otimes_{\Oo_Y} \Ll^{\otimes m}$ est engendré par ses sections globales pour $m\gg 0$, ce qui donne un morphisme surjectif $\bigoplus_{i\in I}\Oo_Y\rightarrow \eta_*\Ff\otimes_{\Oo_Y} \Ll^{\otimes m}$. Par la formule de projection (\cite[ex II.5.1.d]{Hartshorne}), on a $\eta_*\Ff\otimes_{\Oo_Y} \Ll^{\otimes m}=\eta_*(\Ff\otimes_{\Oo_{\widetilde{Y}}}\eta^*(\Ll^{\otimes m}))$. Le foncteur $\eta^*$ est exact à droite, commute au produit tensoriel et aux sommes directes. On obtient donc un morphisme surjectif 
 $$\oplus_{i\in I}\Oo_{\widetilde{Y}}=\oplus_{i\in I}\eta^*\Oo_Y\rightarrow \eta^*\eta_*(\Ff\otimes_{\Oo_{\widetilde{Y}}}(\eta^*\Ll)^{\otimes m})$$
 L'application canonique $\eta^*\eta_*(\Ff\otimes_{\Oo_{\widetilde{Y}}}(\eta^*\Ll)^{\otimes m})\rightarrow \Ff\otimes_{\Oo_{\widetilde{Y}}}(\eta^*\Ll)^{\otimes m}$ est surjective car $\eta$ est affine, et on obtient que $\eta^*\Ll$ est ample en composant les deux applications précédentes. En effet, $\eta$ est un recollement de morphismes locaux entre des sous-schémas affines de $\widetilde{Y}$ et $Y$. On peut donc supposer $\widetilde{Y}=\spec B$, $Y=\spec A$ et $\eta$ provenant d'un morphisme d'anneaux $\phi:A\rightarrow B$. Un faisceau cohérent sur $\widetilde{Y}$ correspond alors à un $B$-module $M$ de type fini. Effectuer les opérations $\eta_*$ puis $\eta^*$ revient à effectuer la restriction des scalaires de $B$ à $A$ sur $M$ par $\phi$ puis l'extension des scalaires et enfin d'appliquer le tilde. Le morphisme canonique $\eta^*\eta_* \widetilde{M}\rightarrow \widetilde{M}$ correspond alors à l'isomorphisme canonique $B\otimes_A M_A\rightarrow M$.
 \end{proof}

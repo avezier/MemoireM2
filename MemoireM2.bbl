@@ -28,6 +28,12 @@ Brion, M.
 \newblock \url{https://www-fourier.ujf-grenoble.fr/~mbrion/lin_rev.pdf}.
 \newblock Accessed: 2018-18-03.
 
+\bibitem[\protect\astroncite{Dieudonn{\'e}}{1967}]{EGA}
+Dieudonn{\'e}, Jean et~Grothendieck, A. (1961--1967).
+\newblock \'{E}l\'ements de g\'eom\'etrie alg\'ebrique.
+\newblock {\em Inst. Hautes \'Etudes Sci. Publ. Math.}, 4, 8, 11, 17, 20, 24,
+  28, 32.
+
 \bibitem[\protect\astroncite{Eisenbud}{2004}]{Eisenbud}
 Eisenbud, D. (2004).
 \newblock {\em Commutative algebra, with a view towards algebraic geometry}.
@@ -73,8 +79,9 @@ Springer, T.~A. (1998).
 \newblock {\em Linear Algebraic Groups}.
 \newblock Birkhauser.
 
-\bibitem[\protect\astroncite{{Stacks Project Authors}}{2018}]{stacks-project}
-{Stacks Project Authors}, T. (2018).
+\bibitem[\protect\astroncite{{The Stacks Project
+  Authors}}{2018}]{stacks-project}
+{The Stacks Project Authors} (2018).
 \newblock \textit{Stacks Project}.
 \newblock \url{http://stacks.math.columbia.edu}.
 
