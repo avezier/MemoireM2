@@ -17,10 +17,6 @@ Un idéal premier $\mathfrak{p}\subset A$ est un idéal premier associé à $M$ 
 $A=k[x,y], M=A/(xy),\mathfrak{p}=(x)=\ann(\bar{y})=((xy):y)$.
 \end{ex}
 
-\begin{defn}[Élément $M$-régulier]
-Un élément $x\in A$ est $M$-régulier si la multiplication par $x$ est un endomorphisme injectif de $M$, c'est-à-dire que $x$ n'est pas diviseur de zéro d'un élément de $M$. Si $x$ n'est pas régulier on dit que c'est un diviseur de zéro de $M$.
-\end{defn}
-
 \begin{defn}[Support d'un module]
 Le support de $M$ est l'ensemble des idéaux premiers $\mathfrak{p}$ tels que $M_\mathfrak{p}\neq \lbrace 0\rbrace$.
 \end{defn}
@@ -264,14 +260,14 @@ Soit $A$ un anneau intègre et $\mathfrak{a}$ un idéal fractionnaire de $A$. Le
 
 \subsection{Algèbres graduées}
 
-On fixe dans cette partie un anneau $R$ et un monoïde abélien $K$. A partir de $K$ on peut construire le groupe des différences $K^{\pm}$ comme l'ensemble des paires $(w_1,w_2)\in K^2$ modulo la relation d'équivalence $(w_1,w_2)\sim (z_1,z_2)\iff w_1+z_2=w_2+z_1$. 
+On fixe dans cette partie un anneau $R$ et un monoïde abélien $K$. A partir de $K$ on peut construire le groupe des différences $K^{\pm}$ comme l'ensemble des couples $(w_1,w_2)\in K^2$ modulo la relation d'équivalence $(w_1,w_2)\sim (z_1,z_2)\iff w_1+z_2=w_2+z_1$. 
 
 \begin{defn}[Algèbre graduée, élément homogène]
 Une $R$-algèbre $A$ est $K$-graduée si on a une décomposition en somme directe de sous $R$-modules 
 $$A=\bigoplus_{w\in K}A_w,\text{ où pour tout } w,w'\in K\text{, on a }A_wA_{w'}\subset A_{w+w'}$$
 Un élément $f\in A$ est $K$-homogène de degré $w$ si $f\in A_w$.
 
-Un morphisme d'une algèbre $K$-graduée $A$ vers une algèbre $K'$-graduée $A'$ est une paire $(\psi,\widetilde{\psi})$, où $\psi:A\rightarrow A'$ est un morphisme de $R$-algèbres, $\widetilde{\psi}:K\rightarrow K'$ est un morphisme de monoïdes, et
+Un morphisme d'une algèbre $K$-graduée $A$ vers une algèbre $K'$-graduée $A'$ est un couple $(\psi,\widetilde{\psi})$, où $\psi:A\rightarrow A'$ est un morphisme de $R$-algèbres, $\widetilde{\psi}:K\rightarrow K'$ est un morphisme de monoïdes, et
 $$\psi(A_w)\subset A'_{\widetilde{\psi}(w)}, \forall w\in K$$  
 \end{defn}
 
@@ -317,7 +313,13 @@ Soit $A$ une $R$-algèbre $\ZZ^r$-graduée telle que $ff'\neq 0$ pour tous $f,f'
 On se donne un ordre lexicographique sur $\ZZ^r$, et deux éléments $g,g'\in A$. On écrit les décompositions en éléments homogènes $g=\sum f_u$ et $g'=\sum f'_u$. Alors la composante maximale (resp. minimale) de $gg'$ est $f_wf'_{w'}\neq 0$ où $f_w$ et $f'_{w'}$ sont les composantes maximales (resp. minimales) de $g$ (resp. $g'$). Cela prouve les deux premières assertions. Pour la troisième, on observe que $1\in A$ est nécessairement homogène de degré zéro.
 \end{proof}
 
-
+\begin{prop}\label{GradedPositivNoetherianFG}
+Soit $A$ un anneau $\NN$-gradué. Les assertions suivantes sont équivalentes :
+\begin{enumerate}
+\item $A$ est noethérien.
+\item $A_0$ est noethérien et $A$ est de type fini en tant que $A_0$-algèbre.
+\end{enumerate}
+\end{prop}
 
 \section{Schémas}
 
@@ -561,8 +563,8 @@ Les morphismes entre schémas affines sont séparés et en particulier les sché
 \begin{prop}\label{sepCritere}
 Soit $f:X\rightarrow S$ un morphisme de schémas.
 	\begin{enumerate}
-	\item Si $f$ est séparé, alors pour toute paire $(U,V)$ d'ouverts affines de $X$ dont les images sont contenues dans un même ouvert affine de $S$, l'ouvert $U\cap V$ est affine, et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif.
-	\item On suppose pour toute paire $(x_1,x_2)$ de points de $X$ au-dessus d'un même point $s\in S$, on a des ouverts affines $x_1\in U$ et $x_2\in V$ dont l'image est contenue dans un même ouvert affine de $S$, et qui vérifient: l'ouvert $U\cap V$ est affine, et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif. Alors $f$ est séparé.
+	\item Si $f$ est séparé, alors pour tout couple $(U,V)$ d'ouverts affines de $X$ dont les images sont contenues dans un même ouvert affine de $S$, l'ouvert $U\cap V$ est affine, et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif.
+	\item On suppose pour tout couple $(x_1,x_2)$ de points de $X$ au-dessus d'un même point $s\in S$, on a des ouverts affines $x_1\in U$ et $x_2\in V$ dont l'image est contenue dans un même ouvert affine de $S$, et qui vérifient: l'ouvert $U\cap V$ est affine, et le morphisme naturel $\Oo(U)\otimes_\ZZ \Oo(V)\rightarrow\Oo(U\cap V), f\otimes g\mapsto f_{U\cap V}g_{U\cap V}$ est surjectif. Alors $f$ est séparé.
 	\end{enumerate}
 \end{prop}
 \begin{proof}

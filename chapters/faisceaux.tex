@@ -1,11 +1,11 @@
-\chapter{Faisceaux divisoriels sur une variété algébrique}
+\chapter{Faisceaux divisoriels sur une variété algébrique normale}
 
 
 \section{Faisceaux de modules}
 
 \noindent Dans cette partie on utilise les références \cite{QingLiu} et \cite{Hartshorne}.\\
 
-Soit $X$ un schéma. Un \textit{$\Oo_X$-module} est un faisceau $\Ff$ tel que $\Ff(U)$ soit un $\Oo_X(U)$-module pour tout ouvert $U\subset X$, en demandant de plus que les actions soient compatibles aux restrictions, c'est-à-dire que pour tout ouvert $V\subset U$, $a\in\Oo(U)$, $f\in \Ff(U)$, on ait $(af)_{|V}=a_{|V}f_{|V}$. Un morphisme $\Ff\rightarrow\Gg$ de $\Oo_X$-modules est un morphisme de prefaisceaux tel que pour tout ouvert $U$, la flèche $\Ff(U)\rightarrow\Gg(U)$ soit un morphisme de $\Oo(U)$-modules. 
+Soit $X$ un schéma. Un \textit{$\Oo_X$-module} est un faisceau $\Ff$ tel que $\Ff(U)$ soit un $\Oo_X(U)$-module pour tout ouvert $U\subset X$, en demandant de plus que les actions soient compatibles aux restrictions, c'est-à-dire que pour tout ouvert $V\subset U$, $a\in\Oo(U)$, $f\in \Ff(U)$, on ait $(af)_{|V}=a_{|V}f_{|V}$. Un morphisme $\Ff\rightarrow\Gg$ de $\Oo_X$-modules est un morphisme de faisceaux tel que pour tout ouvert $U$, la flèche $\Ff(U)\rightarrow\Gg(U)$ soit un morphisme de $\Oo(U)$-modules. 
 
 \subsection{Faisceaux quasi-cohérents}
 
@@ -14,7 +14,7 @@ Soit $X$ un schéma. Un $\Oo_X$-module $\Ff$ est \textit{quasi-cohérent} si loc
 $\bigoplus_{j\in J}\Oo_{U}\rightarrow\bigoplus_{i\in I}\Oo_{U}\rightarrow \Ff_{|U}\rightarrow 0$
 \end{center}
 
-On dit que $\Ff$ est \textit{cohérent} si sur chaque voisinage, la présentation est finie, c'est-à-dire que les familles $I$ et $J$ sont finies.
+On dit que $\Ff$ est \textit{cohérent} si sur chaque voisinage, il existe une présentation finie, c'est-à-dire que les familles $I$ et $J$ sont finies.
 Soit $X\simeq \spec A$ un schéma affine, et $M$ un $A$-module. On définit un $\Oo_X$-module $\widetilde{M}$ sur le même modèle que le faisceau structural en posant $\widetilde{M}(X_f)=M_f$ pour chaque ouvert principal $X_f$. On vérifie que cela définit un $\Oo_X$-module tel que $\widetilde{M}_\mathfrak{p}=M_\mathfrak{p}$ pour tout $\mathfrak{p}\in X$, et $\widetilde{M}(X)=M$.
 
 
@@ -54,7 +54,7 @@ Soit $\Ff$ un faisceau quasi-cohérent sur un schéma noethérien $X$. Alors $\F
 \end{proof}
 
 \begin{prop}\label{FQCProps3}
-Soit $X$ un schéma, alors on a les propriétés suivantes
+Soit $X$ un schéma, alors on a les propriétés suivantes :
 \begin{enumerate}
 \item Une somme directe de faisceaux quasi-cohérents est un faisceau quasi-cohérent. Si $X$ est noethérien, une somme directe finie de faisceaux cohérents est un faisceau cohérent.
 \item Soient $\Ff$ et $\Gg$ des faisceaux quasi-cohérents sur $X$, alors $\Ff\otimes \Gg$ est quasi-cohérent. Si $X$ est noethérien et $\Ff,\Gg$ cohérents, alors $\Ff\otimes_{\Oo_X} \Gg$ est cohérent. Enfin, si $X$ est affine, alors $(\Ff\otimes_{\Oo_X}\Gg)(U)=\Ff(U)\otimes_{\Oo(U)}\Gg(U)$ pour tout ouvert $U\subset X$.
@@ -74,16 +74,16 @@ En particulier, $f^*\Gg$ est quasi-cohérent sur $X$. Si $X$ est noethérien et 
 
 \subsection{Spectre relatif d'une $\Oo_X$-algèbre}
 
-Soit $X=\spec A$ un schéma affine, et $B$ une $A$-algèbre. Ces données définissent naturellement un schéma $\widetilde{X}:=\spec B$ sur $X$ via un morphisme $f:\widetilde{X}\rightarrow X$ défini par la structure de $A$-algèbre sur $B$. De plus, $f_*\Oo_{\widetilde{X}}$ est un faisceau d'algèbres sur $X$ dans le sens où pour tout ouvert $U\subset X$, l'anneau $\Oo_{\widetilde{X}}(f^{-1}(U))$ est naturellement une $\Oo_X(U)$-algèbre. Finalement, $f_*\Oo_{\widetilde{X}}$ est un $\Oo_X$-module quasi-cohérent car il s'agit de $\widetilde{B}$.
+Soit $X=\spec A$ un schéma affine, et $B$ une $A$-algèbre. Ces données définissent naturellement un schéma $\widetilde{X}:=\spec B$ sur $X$ via le morphisme $f:\widetilde{X}\rightarrow X$ défini par la structure de $A$-algèbre sur $B$. De plus, $f_*\Oo_{\widetilde{X}}$ est un faisceau d'algèbres sur $X$ dans le sens où pour tout ouvert $U\subset X$, l'anneau $\Oo_{\widetilde{X}}(f^{-1}(U))$ est naturellement une $\Oo_X(U)$-algèbre. Finalement, $f_*\Oo_{\widetilde{X}}$ est un $\Oo_X$-module quasi-cohérent car il s'agit de $\widetilde{B}$.
 
 \begin{defn}[$\Oo_X$-algèbre]
-Soit $X$ un schéma. Une $\Oo_X$-algèbre est un faisceau d'anneaux $\Ss$ sur $X$ muni d'un morphisme $\Oo_X\rightarrow \Ss$. On dit que $\Ss$ est quasi-cohérente si elle l'est en tant que $\Oo_X$-module. On dit qu'elle est localement de type fini si tout point $x\in X$ admet un voisinage ouvert $U$ tel que $\Ss(U)$ soit de type fini en tant que $\Oo_X(U)$-algèbre.
+Soit $X$ un schéma. Une $\Oo_X$-algèbre est un faisceau d'anneaux $\Ss$ sur $X$ muni d'un morphisme de faisceaux d'anneaux $\Oo_X\rightarrow \Ss$. On dit que $\Ss$ est quasi-cohérente si elle l'est en tant que $\Oo_X$-module. On dit qu'elle est localement de type fini si tout point $x\in X$ admet un voisinage ouvert $U$ tel que $\Ss(U)$ soit de type fini en tant que $\Oo_X(U)$-algèbre.
 \end{defn}
 
 On introduit ci-dessous la version relative du spectre d'un anneau. On se donne un schéma de base $X$ que l'on suppose séparé pour les applications que l'on a en vue, et une $\Oo_X$-algèbre quasi-cohérente $\Ss$. A partir de ces données, on souhaite construire un schéma $\spec_X S$ sur $X$ dont le morphisme structural est affine. Cette construction nous sera très utile par la suite.
 
 \begin{cons}[Spectre relatif]	\label{relspec}
-Soit $X$ un schéma séparé, $\Ss$ une $\Oo_X$-algèbre quasi-cohérente, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Il existe un schéma $\spec_X \Ss$ construit par recollement des schémas affines $\spec(\Ss(U_i))$, unique à isomorphisme canonique près. Ce schéma est séparé sur $X$ via le recollement des morphismes $\spec(\Ss(U_i))\rightarrow U_i$ donnés par la structure d'algèbre. De plus, le morphisme structural $p$ est affine et on a l'égalité de faisceaux
+Soit $X$ un schéma séparé, $\Ss$ une $\Oo_X$-algèbre quasi-cohérente, et $(U_i)_{i\in I}$ un recouvrement affine de $X$. Il existe un schéma $\spec_X \Ss$ construit par recollement des schémas affines $\spec(\Ss(U_i))$, unique à isomorphisme canonique près. Ce schéma est affine sur $X$ via le recollement des morphismes $\spec(\Ss(U_i))\rightarrow U_i$ donnés par la structure d'algèbre. En particulier, $\spec_X \Ss$ est séparé sur $X$. On a l'égalité de faisceaux
 $$p_*(\Oo_{\spec_X\Ss})=\Ss$$
 Enfin, si $X$ est une variété et que $\Ss$ est un faisceau d'algèbres réduites, localement de type fini, alors $\spec_X \Ss$ est une variété.
 \end{cons}
@@ -109,7 +109,7 @@ Soit $X$ un schéma. On peut montrer (\cite[12.1]{Gortz}) que le foncteur $\Ss\m
 
 \label{FQCProj}
 
-Soit $X$ une variété projective, on a ainsi un isomorphisme $X\simeq\proj A$ pour une algèbre affine $\NN$-graduée $A$ engendrée par $r+1$ éléments homogènes de degré $1$, et on note $i:X\xhookrightarrow{} \PP_k^r$ le plongement associé. Soit $M$ un $A$-module $\ZZ$-gradué. On définit un $\Oo_X$-module $\widetilde{M}$ en posant $\widetilde{M}(X_f):=M_{(f)}:=(M_f)_0$ pour tout ouvert principal $X_f$, avec $f\in A$ homogène de degré $\geq 1$. C'est un faisceau quasi-cohérent car $(\widetilde{M})_{|X_f}=\widetilde{M_{(f)}}$, où $M_{(f)}$ est un module sur $A_{(f)}=\Oo(X_f)$. Cette construction définit un foncteur exact de la catégorie des $A$-modules $\ZZ$-gradués vers la catégorie des faisceaux quasi-cohérents sur $X$ commutant au produit tensoriel.
+Soit $X$ une variété projective, on a ainsi un isomorphisme $X\simeq\proj A$ pour une algèbre affine $\NN$-graduée $A$ engendrée par $r+1$ éléments homogènes de degré $1$, et on note $i:X\xhookrightarrow{} \PP_k^r$ l'immersion fermée associée. Soit $M$ un $A$-module $\ZZ$-gradué. On définit un $\Oo_X$-module $\widetilde{M}$ en posant $\widetilde{M}(X_f):=M_{(f)}:=(M_f)_0$ pour tout ouvert principal $X_f$, avec $f\in A$ homogène de degré $\geq 1$. C'est un faisceau quasi-cohérent car $(\widetilde{M})_{|X_f}=\widetilde{M_{(f)}}$, où $M_{(f)}$ est un module sur $A_{(f)}=\Oo(X_f)$. Cette construction définit un foncteur exact de la catégorie des $A$-modules $\ZZ$-gradués vers la catégorie des faisceaux quasi-cohérents sur $X$ commutant au produit tensoriel.
 
 Pour tout $n\in \ZZ$, on note $\Oo_X(n)$ le faisceau quasi-cohérent associé au $A$-module décalé $A(n)$. Plus généralement, étant donné un $\Oo_X$-module quasi-cohérent $\Ff$, on définit le faisceau décalé $\Ff(n):=\Ff\otimes_{\Oo_X}\Oo_X(n)$, c'est un faisceau quasi-cohérent. L'opération tilde commute au décalage, et on a $\Oo_X(n)=i^*(\Oo_{\PP_k^r}(n))$.
 
@@ -117,7 +117,7 @@ On définit un foncteur exact à gauche de la catégorie des $\Oo_X$-modules dan
 \begin{center}
 $\Gamma_*(\Ff):=\bigoplus_{n=-\infty}^{+\infty}\Gamma(X,\Ff(n))$
 \end{center}
-En effet, tout élément homogène $f\in A_d$ définit une section globale de $\Oo_X(d)$ pour $d\in \ZZ$, puis pour tout $t\in \Gamma(X,\Ff(n)),\, n\in\ZZ$, on pose $ft=s\otimes_{\Oo(X)} t\in \Gamma(X, \Ff(n+d))$. Comme $A$ est engendré par des éléments homogènes de degré $1$, on a un isomorphisme naturel 
+En effet, tout élément homogène $f\in A_d$ définit une section globale de $\Oo_X(d)$ pour $d\in \ZZ$, puis pour tout $t\in \Gamma(X,\Ff(n)),\, n\in\ZZ$, on pose $ft=s\otimes_{\Oo(X)} t\in \Gamma(X, \Ff(n+d))$. Comme $A$ est engendrée par des éléments homogènes de degré $1$, on a un isomorphisme naturel 
 \begin{center}
 $\Gamma_*(\Ff)^{\widetilde{}}\simeq \Ff\,\,\,\,\,$ (\cite[II.5.15]{Hartshorne})\end{center}
 
@@ -139,14 +139,14 @@ Le morphisme $\Gamma_*(i^\sharp)$ n'est pas surjectif en général. Son image es
 \label{Cohomologie}
 \subsubsection{Généralités}
 
-On rappelle sans démonstrations quelques définitions et résultats de base, l'objectif étant de définir les groupes de cohomologie d'un faisceau sur un schéma relatifs au foncteur sections globales. La référence principale est \cite[chap III]{Hartshorne}.\\
+On rappelle sans démonstration quelques définitions et résultats de base, l'objectif étant de définir les groupes de cohomologie d'un faisceau sur un schéma relatifs au foncteur sections globales. La référence principale est \cite[chap III]{Hartshorne}.\\
 
 Soit $X$ un schéma, on considère la catégorie $\Aa b(X)$ des faisceaux de groupes abéliens sur $X$, et la catégorie $\Mm od(X)$ des $\Oo_X$-modules. Soit $A^.$ un \textit{complexe} dans $\Aa b(X)$, c'est-à-dire une famille d'objets $(A^i)_{i\geq 0}$ et des morphismes $d^i:A^i\rightarrow A^{i+1}$ tels que $d^{i+1}d^i=0$ pour tout $i\geq 0$. Un morphisme de complexes $f:A^.\rightarrow B^.$ est une famille de morphismes $f^i:A^i\rightarrow B^i$ qui commutent avec les applications $d^i$. Le $i^e$ groupe de cohomologie $h^i(A^.)$ du complexe $A^.$ est le groupe $\Ker d^i/\Im d^{i-1}$. Soit $0\rightarrow A^.\rightarrow B^. \rightarrow C^. \rightarrow 0$ une suite exacte courte de complexes, on obtient grâce au lemme du serpent (\cite{atiyahmacdo} 2.10) des morphismes $\delta ^i:h^i(C^.)\rightarrow h^{i+1}(A^.) $ dits de connexion, donnant une suite exacte longue:
 \begin{equation}\label{eq:longSES}
 ...\rightarrow h^i(A^.) \rightarrow h^i(B^.) \rightarrow h^i(C^.) \xrightarrow{\delta ^i} h^{i+1}(A^.) \rightarrow ...
 \end{equation}
 
-Ces définitions ont également un sens dans la catégorie $\Aa b$ des groupes abéliens, et si on se donne un foncteur $F:\Aa b(X)\rightarrow \Aa b$, alors $F$ envoie des complexes de faisceaux sur des complexes de groupes. On se fixe un tel foncteur $F$ et on suppose de plus qu'il est covariant exact à gauche. Pour tout faisceau $\Ff\in \Aa b(X)$ (resp. tout $\Ff\in\Mm od(X)$) on peut obtenir une résolution injective, c'est-à-dire une suite exacte:
+Ces définitions ont également un sens dans la catégorie $\Aa b$ des groupes abéliens, et si on se donne un foncteur $F:\Aa b(X)\rightarrow \Aa b$, alors $F$ envoie des complexes de faisceaux sur des complexes de groupes. On se fixe un tel foncteur $F$ et on suppose de plus qu'il est covariant et exact à gauche. Pour tout faisceau $\Ff\in \Aa b(X)$ (resp. tout $\Ff\in\Mm od(X)$) on peut obtenir une résolution injective, c'est-à-dire une suite exacte:
 $$0\rightarrow \Ff \xrightarrow{\epsilon} I^0\rightarrow I^1\rightarrow ...$$
 telle que les faisceaux $I^k$ soient injectifs dans leurs catégories respectives. Cela signifie que les foncteurs $\Hom(.,I^k)$ sont exacts (ils sont exacts seulement à gauche en général). On définit les foncteurs dérivés à droite $R^iF$ de $F$ pour $i\geq 0$ par $R^i F(\Ff)=h^i(F(I^.))$, et on a le résultat fondamental suivant:
 
@@ -164,14 +164,14 @@ Soit $\Gamma(X,.):\Aa b(X)\rightarrow \Aa b$ le foncteur sections globales. Les 
 \end{defn}
 
 
-Un faisceau $\Ff\in \Aa b(X)$ est dit \textit{acyclique} si $H^i(X,\Ff)$ est nul pour tout entier $i>0$. On peut toujours remplacer une résolution injective de $\Ff$ par une résolution acyclique pour le calcul des groupes de cohomologie de $\Ff$. Les faisceaux \textit{flasques} donnent une classe de faisceaux acycliques, ce sont les faisceaux dont les flèches de restriction sont surjectives. De plus, tout $\Oo_X$-module injectif est flasque, on en déduit que l'on peut utiliser des résolutions injectives dans $\Mm od(X)$ pour calculer les groupes de cohomologie d'un $\Oo_X$-module vu comme faisceau de groupes abélien sur $X$.
+Un faisceau $\Ff\in \Aa b(X)$ est dit \textit{acyclique} si $H^i(X,\Ff)$ est nul pour tout entier $i>0$. On peut toujours remplacer une résolution injective de $\Ff$ par une résolution acyclique pour le calcul des groupes de cohomologie de $\Ff$. Les faisceaux \textit{flasques} donnent une classe de faisceaux acycliques, ce sont les faisceaux dont les flèches de restriction sont surjectives. De plus, tout $\Oo_X$-module injectif est flasque, on en déduit que l'on peut utiliser des résolutions injectives dans $\Mm od(X)$ pour calculer les groupes de cohomologie d'un $\Oo_X$-module vu comme faisceau de groupes abéliens sur $X$.
 
 \subsubsection{Cohomologie à support}
 
-Soit $X$ un schéma, $\Ff\in \Aa b(X)$, et $Z$ un fermé de $X$. Le support $\supp\Ff$ est l'ensemble des points où la tige et non-nulle. De même, le support d'une section est l'ensemble des points où le germe de la section est non-nul, c'est un fermé de $X$. On définit le sous-faisceau $\Hh ^0 _Z(\Ff):V\mapsto \Gamma_{Z\cap V}(V,\Ff)$ où $\Gamma_{Z\cap V}(V,\Ff)$ est le sous-groupe de $\Gamma(V,\Ff)$ constitué des sections à support contenu dans $Z\cap V$. C'est bien un faisceau car les sections locales se recollent de manière unique en sections de $\Ff$ qui restent à support dans $Z$. En notant $U:=X\setminus Z$ et $j:U\rightarrow X$ l'inclusion, on a de plus une suite exacte
+Soit $X$ un schéma, $\Ff\in \Aa b(X)$, et $Z$ un fermé de $X$. Le support $\supp\Ff$ est l'ensemble des points où la tige est non-nulle. De même, le support d'une section est l'ensemble des points où le germe de la section est non-nul, c'est un fermé de $X$. On définit le sous-faisceau $\Hh ^0 _Z(\Ff):V\mapsto \Gamma_{Z\cap V}(V,\Ff)$ où $\Gamma_{Z\cap V}(V,\Ff)$ est le sous-groupe de $\Gamma(V,\Ff)$ constitué des sections à support contenu dans $Z\cap V$. C'est bien un faisceau car les sections locales se recollent de manière unique en des sections de $\Ff$ qui restent à support dans $Z$. En notant $U:=X\setminus Z$ et $j:U\rightarrow X$ l'inclusion, on a de plus une suite exacte
 
 \begin{equation}\label{eq:ESSupport}
-0\rightarrow \Hh^0 _Z(\Ff) \rightarrow \Ff \rightarrow j_*(\Ff_{|U})
+0\rightarrow \Hh^0 _Z(\Ff) \rightarrow \Ff \rightarrow j_*(\Ff_{|U}).
 \end{equation}
 
 \begin{ex}\label{cohomsupportaffineex}
@@ -180,10 +180,10 @@ Soit $X=\spec A$ un schéma affine noethérien, $M$ un $A$-module, $\Ff:=\wideti
 On définit un sous-module $\Gamma_\mathfrak{a}(M)$ de $M$ par $\Gamma_\mathfrak{a}(M):=\lbrace m\in M\mid \mathfrak{a}^nm=0 \text{ pour un } n>0 \rbrace$. Alors on a $\Gamma_\mathfrak{a}(M)^{\widetilde{}} = \Hh ^0 _Z(\Ff)$. En effet, tout d'abord $\Hh^0 _Z(\Ff)$ est quasi-cohérent comme noyau d'un morphisme entre faisceaux quasi-cohérents, cela d'après la suite exacte ci-dessus et \ref{FQCProps3} $5$ et $3$. En utilisant \ref{FQCThm}, il reste donc à montrer que $\Gamma_\mathfrak{a}(M)\simeq\Gamma_Z(X,\Ff)=\Gamma(X,\Hh ^0 _Z(\Ff))$ en tant que $A$-modules. Soit $m\in\Gamma_Z(X,\Ff)$, on a par définition $\supp m=\Vv_X(\ann m)\subset \Vv_X(\mathfrak{a})$, d'où $\mathfrak{a}\subset \sqrt{\ann m}$. Or, $\mathfrak{a}$ est de type fini car $A$ est noethérien, on en conclut que $m\in \Gamma_\mathfrak{a}(M)$. En effet, si on a $k$ générateurs $x_1,...,x_k$ de $\mathfrak{a}$, on peut trouver un exposant commun $n$ tel que $x^n_i$ annule $m$ pour tout $i$. Il s'en suit que l'on a par exemple $\mathfrak{a}^{n^k}m=0$. Réciproquement, si $m\in \Gamma_\mathfrak{a}(M)$, alors $\mathfrak{a}^n\subset \ann m$ pour un $n>0$, ce qui donne $\supp m \subset\Vv(\mathfrak{a}^n)=\Vv(\mathfrak{a})$, puis $m\in \Gamma_Z(X,\Ff)$. Finalement on a bien $\Gamma_\mathfrak{a}(M)=\Gamma_Z(X,\Ff)$.
 \end{ex}
 
-Il est facile de montrer que $\Gamma_Z(X, .)$ est un foncteur exact à gauche, on définit alors \textit{les groupes de cohomologie de $\Ff$ à support dans $Z$} comme ses foncteurs dérivés à droite, on les note $H_Z^i(X,\Ff)$. Si $\Ff$ est flasque, il est acyclique pour $\Gamma_Z(X, .)$, et de plus, en appliquant le foncteur sections globales $\Gamma(X,.)$ à la suite exacte \ref{eq:ESSupport}, on obtient la suite exacte courte ci-dessous:
+Il est facile de montrer que $\Gamma_Z(X, .)$ est un foncteur exact à gauche, on définit alors \textit{les groupes de cohomologie de $\Ff$ à support dans $Z$} comme ses foncteurs dérivés à droite, on les note $H_Z^i(X,\Ff)$. Si $\Ff$ est flasque, il est acyclique pour $\Gamma_Z(X, .)$, et de plus, en appliquant le foncteur sections globales $\Gamma(X,.)$ à la suite exacte \ref{eq:ESSupport}, on obtient la suite exacte courte
 
 \begin{center}
-$0\rightarrow \Gamma_Z(X,\Ff)\rightarrow \Gamma(X,\Ff)\rightarrow \Gamma(U,\Ff)\rightarrow 0$, où $\Ff$ est flasque.
+$0\rightarrow \Gamma_Z(X,\Ff)\rightarrow \Gamma(X,\Ff)\rightarrow \Gamma(U,\Ff)\rightarrow 0\quad$ ($\Ff$ flasque).
 \end{center}
 
 On choisit maintenant une résolution flasque $\Ii^.$ de $\Ff$, alors $\Ii^._{|U}$ est flasque également. On peut donc utiliser ces résolutions pour calculer les groupes de cohomologie $H_Z^i(X,\Ff)$, $H^i(X,\Ff)$ et $H^i(U,\Ff_{|U})$. En utilisant la suite exacte courte ci-dessus on obtient une suite exacte courte de complexes de groupes abéliens:
@@ -229,7 +229,7 @@ Soient $A$ un anneau noethérien et $I$ un $A$-module injectif. Alors pour tout 
 Soient $A$ un anneau noethérien et $I$ un $A$-module injectif. Alors le faisceau $\widetilde{I}$ est flasque.
 \end{prop}
 \begin{proof}
-On utilise que $X$ est un espace topologique noethérien, et on considère les fermés de la forme $Y:=\overline{\supp \widetilde{I}}$, où $I$ est un $A$-module injectif. On remarque que le résultat est immédiatement vérifié si $Y$ est l'ensemble vide. Il suffit donc de montrer qu'étant donné un fermé $Y$ de la forme $\overline{\supp \widetilde{I}}$ on est ramené à montrer le résultat pour un fermé propre de $Y$ de même forme.
+On utilise le fait que $X$ est un espace topologique noethérien, et on considère les fermés de la forme $Y:=\overline{\supp \widetilde{I}}$, où $I$ est un $A$-module injectif. On remarque que le résultat est immédiatement vérifié si $Y$ est l'ensemble vide. Il suffit donc de montrer qu'étant donné un fermé $Y$ de la forme $\overline{\supp \widetilde{I}}$ on est ramené à montrer le résultat pour un fermé propre de $Y$ de même forme.
 
 Pour montrer que $\widetilde{I}$ est flasque, il est suffisant de montrer que $\Gamma(X,\widetilde{I})\rightarrow\Gamma(U,\widetilde{I})$ est surjectif pour tout ouvert $U\subset X$. Si $Y\cap U=\emptyset$ il n'y a rien à montrer. Sinon, il existe $f\in A$ tel que $X_f\subset U$ et $X_f\cap Y\neq \emptyset$. On note $Z= X\setminus X_f$, et on considère le diagramme commutatif:
 
@@ -241,7 +241,7 @@ Pour montrer que $\widetilde{I}$ est flasque, il est suffisant de montrer que $\
 	\end{center}
 Soit une section $s\in\Gamma(U,\widetilde{I})$, et $s'$ son image dans $\Gamma(X_f,\widetilde{I})$. D'après le lemme précédent et \ref{FQCProp2}, $s'$ admet un antécédent $t\in \Gamma(X,\widetilde{I})$. On note $t'$ la restriction de $t$ à $U$. Alors $s-t'$ se restreint en la section nulle sur $X_f$, et a donc support dans $Z$. Si on peut trouver un antécédent $u$ de $s-t'$ dans $\Gamma_Z(X,\widetilde{I})$, alors $t+u$ est antécédent de $s$ dans $\Gamma(X,\widetilde{I})$. On est donc ramené à prouver la surjectivité de $\Gamma_Z(X,\widetilde{I})\rightarrow\Gamma_Z(U,\widetilde{I})$.
 
-Posons $J=\Gamma_Z(X,\widetilde{I})$, et $\mathfrak{a}=fA$. Alors d'après l'exemple \ref{cohomsupportaffineex}, on a $J=\Gamma_\mathfrak{a}(I)$. Puis d'après \ref{cohomAffLemme1}, $J$ est un $A$-module injectif. Enfin, le support de $\widetilde{J}$ est contenu dans $Y\cap Z$ qui est fermé propre de $Y$.  Toujours d'après l'exemple \ref{cohomsupportaffineex}, on a $\widetilde{J} = \Hh ^0 _Z(\Ff)$. On est donc ramené à montrer que $\widetilde{J}$ est flasque, ce qui termine la preuve.
+Posons $J=\Gamma_Z(X,\widetilde{I})$, et $\mathfrak{a}=fA$. Alors d'après l'exemple \ref{cohomsupportaffineex}, on a $J=\Gamma_\mathfrak{a}(I)$. Puis d'après \ref{cohomAffLemme1}, $J$ est un $A$-module injectif. Enfin, le support de $\widetilde{J}$ est contenu dans $Y\cap Z$ qui est un fermé propre de $Y$.  Toujours d'après l'exemple \ref{cohomsupportaffineex}, on a $\widetilde{J} = \Hh ^0 _Z(\Ff)$. On est donc ramené à montrer que $\widetilde{J}$ est flasque, ce qui termine la preuve.
 \end{proof}
 
 
@@ -249,7 +249,7 @@ Posons $J=\Gamma_Z(X,\widetilde{I})$, et $\mathfrak{a}=fA$. Alors d'après l'exe
 Soit $X=\spec A$ un schéma affine noethérien. Alors pour tout faisceau quasi-cohérent $\Ff$ sur $X$, et pour tout $i>0$, on a $H^i(X,\Ff)=0$. 
 \end{thm}
 \begin{proof}
-Soit $M=\Gamma(X,\Ff)$, et $M\rightarrow I^.$ une résolution injective de $M$. On obtient d'après \ref{FQCThm} une résolution injective $\Ff\simeq \widetilde{M}\rightarrow \widetilde{I}^.$ de $\Ff$ dans la catégorie des $\Oo_X$-modules quasi-cohérents. Or cette résolution est flasque d'après \ref{cohomAffProp1}. Cela suffit à montrer le théorème car une résolution flasque de faisceau est acyclique, et peut être utilisé pour calculer la cohomologie.
+Soit $M=\Gamma(X,\Ff)$, et $M\rightarrow I^.$ une résolution injective de $M$. On obtient d'après \ref{FQCThm} une résolution injective $\Ff\simeq \widetilde{M}\rightarrow \widetilde{I}^.$ de $\Ff$ dans la catégorie des $\Oo_X$-modules quasi-cohérents. Or cette résolution est flasque d'après \ref{cohomAffProp1}. Cela suffit à montrer le théorème car une résolution flasque est acyclique, et peut être utilisée pour calculer la cohomologie.
 \end{proof}
 
 \subsubsection{Une application}
@@ -294,11 +294,11 @@ Montrons maintenant la réciproque. On suppose $H^i_\mathfrak{a}(M)=0$ pour tout
 Soit $X$ une variété affine irréductible et $Z\subset X$ un fermé tel que la restriction $\Oo(X)\rightarrow \Oo(X\setminus Z)$ soit un isomorphisme. Alors $Z$ est de codimension au moins $2$ dans $X$.
 \end{cor}
 \begin{proof}
-On pose $U:=X\setminus Z$ et on utilise la suite exacte longue \ref{eq:longSESSupport}. Compte tenu de l'hypothèse et de \ref{cohomoaffine} on obtient que $H^0_Z(X,\Oo_X)=H^1_Z(X,\Oo_X)=0$. D'après la propriété précédente cela donne $\depth_\mathfrak{a}(\Oo(X))\geq 2$, où $\mathfrak{a}:=\Ii(Z)$. Mais d'après, \ref{dimsousvariete} on obtient facilement $\codime_X(Z)\geq \depth_\mathfrak{a}(\Oo(X))$.
+On pose $U:=X\setminus Z$ et on utilise la suite exacte longue \ref{eq:longSESSupport}. Compte tenu de l'hypothèse et de \ref{cohomoaffine} on obtient que $H^0_Z(X,\Oo_X)=H^1_Z(X,\Oo_X)=0$. D'après la proposition précédente cela donne $\depth_\mathfrak{a}(\Oo(X))\geq 2$, où $\mathfrak{a}:=\Ii(Z)$. Mais d'après \ref{dimsousvariete} on obtient facilement $\codime_X(Z)\geq \depth_\mathfrak{a}(\Oo(X))$.
 \end{proof}
 
 
-\subsection{Faisceaux inversibles, Fibrés en droites}
+\subsection{Faisceaux inversibles, fibrés en droites}
 \begin{defn}[Faisceau inversible]
 Un faisceau inversible $\Ll$ sur un schéma $X$ est un $\mathcal{O}_X$-module localement libre de rang 1. Autrement dit, tout point $x\in X$ admet un voisinage ouvert $U \subset X$ tel que ${\mathcal L}|_U$ est isomorphe à ${\mathcal O}_U$.
 \end{defn}
@@ -308,7 +308,7 @@ On peut toujours trivialiser deux faisceaux inversibles sur un même recouvremen
 \begin{ex}\label{expicaff}
 Soit $X=\spec (A)$ un schéma affine irréductible. Alors se donner un faisceau inversible sur $X$ revient (à isomorphisme près) à se donner un idéal fractionnaire $I$ de $A$ qui est inversible (cf \ref{ideauxinversibles}), son inverse est alors $I^{-1}:=(A:I)$. Les idéaux fractionnaires inversibles donnant le faisceau inversible trivial sont les idéaux fractionnaires principaux. Le groupe de Picard de $X$ est ainsi isomorphe au groupe des idéaux fractionnaires inversibles modulo les idéaux fractionnaires principaux. Les idéaux de $A$ qui sont inversibles forment une partie génératrice de ce groupe. 
 
-Si $A$ est localement factoriel, par exemple si $X$ est lisse, alors les idéaux inversibles sont les idéaux de hauteur $1$ pure, c'est-à-dire tels que leurs idéaux premiers associés sont tous de hauteur $1$. Dans ce cas, tout idéal inversible s'écrit de manière unique comme produit de puissances d'idéaux premiers de hauteur $1$. Ainsi $\pic(X)$ est alors le quotient du groupe libre sur les idéaux premiers de hauteur $1$ par les idéaux fractionnaires principaux.
+Si $A$ est localement factoriel, par exemple si $X$ est une variété lisse, alors les idéaux inversibles sont les idéaux de hauteur $1$ pure, c'est-à-dire tels que leurs idéaux premiers associés sont tous de hauteur $1$. Dans ce cas, tout idéal inversible s'écrit de manière unique comme produit de puissances d'idéaux premiers de hauteur $1$. Ainsi $\pic(X)$ est alors le quotient du groupe libre sur les idéaux premiers de hauteur $1$ par les idéaux fractionnaires principaux.
 \end{ex}
 
 On va maintenant voir qu'un faisceau inversible sur une variété $X$ s'incarne naturellement en une variété sur $X$, que l'on appelle un fibré en droites.
@@ -328,7 +328,7 @@ On constate qu'un fibré en droites $(L,\pi)$ sur $X$ est obtenu en recollant de
 
 Considérons un faisceau inversible $\Ll$ sur $X$ trivialisé sur un recouvrement affine $(U_i)_{i\in I}$ avec un générateur $s_i\in\Ll(U_i)$ sur chaque $U_i$. Sur $U_i\cap U_j$, on a $s_j=a_{ij}s_i$ avec $a_{ij} \in \mathcal{O}_X(U_i\cap U_j)^\times$. On considère au dessus de chaque $U_i$ le fibré trivial $(U_i\times\AAA^1, \pi_i)$, et on les recolle avec des isomorphismes définis par $\mathcal{O}_X(U_i\cap U_j)\otimes_k k[t]\rightarrow \mathcal{O}_X(U_i\cap U_j)\otimes_k k[u]$, $f\otimes_k 1\mapsto f\otimes_k 1$, $1 \otimes_k t \mapsto a_{ij}\otimes_k u$. On a ainsi construit un fibré en droites sur $X$.
 
-Réciproquement, considérons le $\mathcal{O}_X$-module des sections d'un fibré en droite $L$ sur $X$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections forment un faisceau isomorphe à $\mathcal{O}_{U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est-à-dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible. Les sections globales de $L$ s'identifie via les trivialisations locales aux familles $(f_i)_{i\in I}$ telles que $f_i=a_{ij}f_j$ sur $U_i\cap U_j$. En effet, un telle section donne sur les intersections $U_i\cap U_j$ un diagramme commutatif:
+Réciproquement, considérons le $\mathcal{O}_X$-module des sections locales d'un fibré en droites $L$ sur $X$. Sur les ouverts $U_i$ où $L$ est trivialisé on voit que les sections locales forment un faisceau isomorphe à $\mathcal{O}_{U_i}$. En effet se donner une section sur $U_i$ revient à se donner un morphisme $U_i\rightarrow \AAA^1$, c'est-à-dire un élément de $\mathcal{O}_X(U_i)$. C'est donc un faisceau inversible. Les sections globales de $L$ s'identifie via les trivialisations locales aux familles $(f_i)_{i\in I}$ telles que $f_i=a_{ij}f_j$ sur $U_i\cap U_j$. En effet, un telle section donne sur les intersections $U_i\cap U_j$ un diagramme commutatif:
 
 	\begin{center}
 	\begin{tikzcd}
@@ -344,7 +344,7 @@ En composant les deux opérations que l'on vient de décrire on trouve le faisce
 Si on se donne un faisceau inversible $\Ll$ sur une variété $X$, le fibré en droites qu'on lui associe dans la discussion précédente n'est autre que $\spec_X(\sym(\Ll))$, où $\sym(\Ll))$ est l'algèbre symétrique associée à $\Ll$ sur $\mathcal{O}_X$. En effet, on recolle les $\spec_{U_i}(\sym(\Ll)_{|U_i}))\simeq\spec_{U_i}( \mathcal{O}_{U_i}[t])\simeq U_i \times_k \AAA^1_k$, où $(U_i)_i$ est un recouvrement qui trivialise $\Ll$.
 \end{rem}
 
-Soit $(L,\pi)$ un fibré en droite sur $X$, et $f:X'\rightarrow X$ un morphisme de variétés. L'image inverse de $f^*(L)$ est le produit fibré $X'\times_X L$ muni de sa projection vers $X'$. C'est un fibré en droites sur $X'$, en effet c'est un recollement des fibrés triviaux $f^{-1}(U_i)\times \AAA^1\rightarrow f^{-1}(U_i)$ via les fonctions de transition $f^\sharp(a_{ij})$. Si on a $L=\spec_X(\sym(\Ll))$ pour un faisceau inversible $\Ll$, on constate que $f^*(L)$ est le fibré en droites construit à partir du faisceau inversible $f^*(\Ll)$. Enfin, si on se donne un morphisme $\phi:(L_1,\pi_1)\rightarrow (L_2,\pi_2)$ de fibrés en droites sur $X$ et un morphisme de variétés $f:X'\rightarrow X$ on définit l'image inverse $f^*(\phi)$ comme l'unique morphisme faisant commuter le diagramme ci-dessous:
+Soit $(L,\pi)$ un fibré en droites sur $X$, et $f:X'\rightarrow X$ un morphisme de variétés. L'image inverse de $f^*(L)$ est le produit fibré $X'\times_X L$ muni de sa projection vers $X'$. C'est un fibré en droites sur $X'$, en effet c'est un recollement des fibrés triviaux $f^{-1}(U_i)\times \AAA^1\rightarrow f^{-1}(U_i)$ via les fonctions de transition $f^\sharp(a_{ij})$. Si on a $L=\spec_X(\sym(\Ll))$ pour un faisceau inversible $\Ll$, on constate que $f^*(L)$ est le fibré en droites construit à partir du faisceau inversible $f^*(\Ll)$. Enfin, si on se donne un morphisme $\phi:(L_1,\pi_1)\rightarrow (L_2,\pi_2)$ de fibrés en droites sur $X$ et un morphisme de variétés $f:X'\rightarrow X$ on définit l'image inverse $f^*(\phi)$ comme l'unique morphisme faisant commuter le diagramme ci-dessous:
 
 	\begin{center}
 	\begin{tikzcd}
@@ -355,7 +355,7 @@ Soit $(L,\pi)$ un fibré en droite sur $X$, et $f:X'\rightarrow X$ un morphisme 
 	\end{center}
 
 \begin{rem}\label{remfibsectionsglobales}
-Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$, c'est la multiplication par les scalaires dans les fibres. L'ensemble $L_0$ des points fixes sous $\GG_m$ est le fermé correspondant à l'image de la section nulle. Son complémentaire $L^\times:=L\setminus L_0$ est une $\GG_m$-variété et $\pi$ se restreint en $\pi^\times: L^\times \rightarrow X$ qui est un quotient géométrique. En effet sur les $U_i$, on a $\pi^{\times-1}(U_i) \simeq U_i\times_k \GG_m$ et l'action de $\GG_m$ se fait par multiplication sur le facteur de droite. Cette action sur $L$  se traduit par une graduation du faisceau d'algèbres $\pi_*\Oo_L=\sym\Ll=\oplus_{n\geq 0}\Ll^{\otimes n}$ sur $X$. Le sous-espace de poids $1$ de $\Oo(L)=\pi_*\Oo_L(X)$ s'identifie alors à $\Gamma(X,L^{-1})=\Gamma(X,\Ll^{\vee\vee})\simeq\Gamma(X,\Ll)$.
+Notons qu'un fibré en droites $(L, \pi)$ est muni d'une action de $\GG_m$, c'est la multiplication par les scalaires dans les fibres. L'ensemble $L_0$ des points fixes sous $\GG_m$ est le fermé correspondant à l'image de la section nulle. Son complémentaire $L^\times:=L\setminus L_0$ est une $\GG_m$-variété et $\pi$ se restreint en $\pi^\times: L^\times \rightarrow X$ qui est un quotient géométrique. En effet sur les $U_i$, on a $\pi^{\times-1}(U_i) \simeq U_i\times_k \GG_m$ et l'action de $\GG_m$ se fait par multiplication sur le facteur de droite. Cette action sur $L$  se traduit par la graduation naturelle du faisceau d'algèbres $\pi_*\Oo_L=\sym\Ll=\oplus_{n\geq 0}\Ll^{\otimes n}$ sur $X$. Le sous-espace de poids $1$ de $\Oo(L)=\pi_*\Oo_L(X)$ s'identifie alors à $\Gamma(X,L^{-1})=\Gamma(X,\Ll^{\vee\vee})\simeq\Gamma(X,\Ll)$.
 \end{rem}
 
 \subsection{$G$-fibré principal}
@@ -373,7 +373,7 @@ Soit $X$ une $G$-variété, et $\pi:X\rightarrow Y$ un morphisme $G$-invariant. 
 \begin{ex}
 \begin{enumerate}
 \item La variété $G\times Y$ munie de l'action de $G$ sur le facteur de gauche et de la deuxième projection, ou toute $G$-variété localement de cette forme.
-\item Un fibré en droites est un $\GG_m$-fibré principal. On peut montrer une "réciproque" (voir \cite[3.1.3]{LinearizationGBrion}).
+\item Soit $L$ un fibré en droites sur une variété. Alors $L^\times$ est un $\GG_m$-fibré principal. On peut montrer une "réciproque" (voir \cite[3.1.3]{LinearizationGBrion}).
 \end{enumerate}
 \end{ex}
 
@@ -385,7 +385,7 @@ Dans cette section on s'interroge sur la possibilité d'étendre une action d'un
 Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $(L,\pi)$ un fibré en droites. Une $G$-linéarisation de  $(L,\pi)$ est une action de $G$ sur $L$ telle que $\pi$ est $G$-équivariante et pour tout $(g,x)\in G\times X$ l'application $L_x\rightarrow L_{g.x},\, l\mapsto g.l$ est linéaire.
 \end{defn}
 
-Une action $G$-linéarisée définit donc un morphisme $G\rightarrow \Aut L$ à valeurs dans le groupe d'automorphisme de fibrés en droites de $(L,\pi)$. On note $\alpha: G\times X\rightarrow X$ l'action de $G$ sur $X$ et $p_2:G\times X\rightarrow X$ la projection sur $X$. Pour tout $g\in G$ on a une application:
+Une action $G$-linéarisée définit donc un morphisme $G\rightarrow \Aut L$ à valeurs dans le groupe d'automorphismes de fibrés en droites de $(L,\pi)$. On note $\alpha: G\times X\rightarrow X$ l'action de $G$ sur $X$ et $p_2:G\times X\rightarrow X$ la projection sur $X$. Pour tout $g\in G$ on a une application:
 $$g\times \Id: X\rightarrow G\times X,\,\, x\mapsto (g,x)$$ 
 Les images inverses des deux fibrés $\alpha^*(L)$ et $p_2^*(L)$ par cette application sont explicitement: 
 $$(g\times \Id)^*\alpha^*(L)=X\times_{G\times X}((G\times X)\times_X L)=\lbrace (x,(g',x'),l)\mid \alpha(g',x')=\pi(l)\text{ et } (g,x)=(g',x')\rbrace$$
@@ -450,9 +450,9 @@ $L^{-1}$ admet aussi une $G$-linéarisation d'après \ref{CritereExistenceGLin} 
 En se rappelant le résultat \ref{extregularnormal}, on voit que la "géométrie en codimension 1" d'une variété normale irréductible, c'est-à-dire le comportement des fonctions sur les fermés irréductibles de codimension 1, contient beaucoup d'information sur la variété. Ces fermés sont appelés des diviseurs premiers, on va voir qu'ils permettent de définir un invariant particulièrement intéressant de la variété, et fondamental pour la construction de l'anneau de Cox, c'est le groupe des classes. Notre cadre est celui d'une variété normale que l'on supposera de plus irréductible pour plus de simplicité, suivant la remarque \ref{normaluniondisjointe}.
 
 \begin{defn}[Diviseur premier, diviseur de Weil, diviseur effectif]
-Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une sous-variété fermée irréductible de codimension 1. On définit $\wdiv(X)$ le groupe abélien libre engendré par les diviseurs premiers. Un élément de $\wdiv(X)$ est appelé un diviseur de Weil. Enfin, un diviseur est dit effectif si il est à coefficients $\geq 0$. 
+Soit $X$ une variété normale irréductible. Un diviseur premier $D$ est une sous-variété fermée irréductible de codimension 1. On note $\wdiv(X)$ le groupe abélien libre engendré par les diviseurs premiers. Un élément de $\wdiv(X)$ est appelé un diviseur de Weil. Enfin, un diviseur est dit effectif si il est à coefficients $\geq 0$. 
 \end{defn}
-On introduit maintenant pour chaque diviseur premier $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles sur $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. Soit $\eta$ le point générique de $D$, et $\mathcal{O}_{\eta,X}$ son anneau local. Par hypothèse et grâce aux propriétés de la localisation, il est noethérien normal et de dimension 1, c'est donc un anneau de valuation discrète (\ref{DVRCarac}). La valuation associée $v_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
+On introduit maintenant pour chaque diviseur premier $D$ une valuation sur $k(X)$ donnant des informations sur le comportement des fonctions rationnelles sur $D$. C'est l'analogue de l'ordre d'un zéro ou d'un pôle d'une fonction rationnelle de la droite affine en un point. Soit $\eta$ le point générique de $D$, et $\mathcal{O}_{X,\eta}$ son anneau local. Par hypothèse et grâce aux propriétés de la localisation, il est noethérien normal et de dimension 1, c'est donc un anneau de valuation discrète (\ref{DVRCarac}). La valuation associée $v_D:k(X)\rightarrow \ZZ$ donne par définition l'ordre d'annulation d'une fonction rationnelle le long de $D$. La propriété ci-dessous montre que les fonctions rationnelles permettent de définir des diviseurs de Weil.
 
 \begin{prop}\label{noethérienPWDivBienDef}
 Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors $v_D(f)=0$ sauf pour un nombre fini de diviseurs premiers $D$.
@@ -461,7 +461,7 @@ Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors $v_D(f)=
 Soit $f=g/h\in k(X)^*$, où l'on peut supposer $X=\spec A$ affine. Comme $v_D(f)=v_D(g)-v_D(h)$, on peut supposer $f\in A$, et non-inversible. Soit $D$ un diviseur premier et $\mathfrak{p}$ son point générique. Si $f\in A_\mathfrak{p}^*$ alors $v_D(f)=0$. Sinon, $f\in \mathfrak{p}$ et donc $D \subset \mathcal{V}_X(f)$. Or, d'après \ref{factonormal} et \ref{AssociatedPrimesProp1}, les éléments minimaux du support de $A/(f)$ sont en bijection avec les idéaux premiers associés à $(f)$, qui sont tous de hauteur $1$. On en déduit que les composantes irréductibles $Z_i$ de $\mathcal{V}_X(f)$ qui leur correspondent sont des diviseurs premiers, en nombre fini. Ainsi $v_D(f)=0$ à moins que $D$ ne soit l'un des $Z_i$.
 \end{proof}
 
-Ainsi l'application $k(X)^*\rightarrow \wdiv(X),\, f\mapsto $ div$(f):=\sum_D v_D(f)D$ définit un morphisme de groupes. Son image est le \textit{groupe des diviseurs principaux} noté PDiv$(X)$. La relation modulo PDiv$(X)$ s'appelle \textit{l'équivalence linéaire}, et le groupe quotient $\clg(X)$ est le \textit{groupe des classes de diviseurs}. Le groupe des classes de diviseurs de $X$ est un invariant en général difficile à calculer. On liste ci-dessous quelques outils et exemples.
+Ainsi l'application $k(X)^*\rightarrow \wdiv(X),\, f\mapsto $ div$(f):=\sum_D v_D(f)D$ définit un morphisme de groupes. Son image est le \textit{groupe des diviseurs principaux} noté $\pdiv(X)$. La relation modulo $\pdiv(X)$ s'appelle \textit{l'équivalence linéaire}, et le groupe quotient $\clg(X)$ est le \textit{groupe des classes de diviseurs}. Le groupe des classes de diviseurs de $X$ est un invariant en général difficile à calculer. On liste ci-dessous quelques outils et exemples.
 
 
 \begin{prop}\label{AffUFDClgTrifial}
@@ -478,20 +478,20 @@ $\clg(\mathbb{A} ^n_k)=0$ pour $n\geq 1$.
 \begin{thm}\label{divexactseq}
 Soit $X$ une variété normale et irréductible et $Z$ une sous-variété fermée propre. On pose $U:=X\setminus Z$. Alors:
 \begin{enumerate}
-\item Le morphisme $\clg(X)\rightarrow\clg(U)$ défini par $\sum_i n_iD_i\mapsto \sum_i n_i(D_i\cap U)$, avec $D_i\cap U = 0$ si $D_i\cap U=\emptyset $, est un morphisme de groupe surjectif.
-\item Si $\codime(Z,X)\geq 2$, alors $\clg(X)\rightarrow \clg(U)$ est un isomorphisme.
+\item Le morphisme $\clg(X)\rightarrow\clg(U)$ défini par $\sum_i n_iD_i\mapsto \sum_i n_i(D_{i|U})$, avec $D_{i|U} = 0$ si $D_i\cap U=\emptyset $, est un morphisme de groupes surjectif.
 \item Soient $D_1,..., D_s$ les composantes irréductibles de $Z$ qui sont des diviseurs. Alors la suite ci-dessous exacte
 \begin{center}
  $0\rightarrow\Oo(X)^*\rightarrow \Oo(X\setminus \cup_{i=1}^s D_i)^*\xrightarrow{\divi} \bigoplus_{i=1}^s \ZZ D_i \xrightarrow{\pi} \clg(X) \xrightarrow{.\cap U} \clg(U) \rightarrow 0 $
 \end{center}
+En particulier, si $\codime(Z,X)\geq 2$, alors $\clg(X)\rightarrow \clg(U)$ est un isomorphisme.
+
 
 \end{enumerate}
 \end{thm}
 \begin{proof}
 \begin{enumerate}
 \item Si $D\cap U\neq \emptyset$ alors $\dim X=\dim U$ et $\dim D=\dim D\cap U$ car ce sont des ouverts de variétés irréductibles donc la dimension est préservée. Ainsi cela définit une application $\wdiv(X)\rightarrow \wdiv(U)$ qui est un morphisme par construction. De plus, comme un diviseur principal est envoyé sur un diviseur principal, on a bien le morphisme attendu. Il est surjectif car pour tout $D\in\wdiv(U)$ premier, on a $D=\overline{D}\cap U$.
-\item Dans ce cas on ne peut avoir $D\subset Z$ cause de la dimension donc $D\cap U\neq \emptyset$. Ainsi, le noyau du morphisme $\wdiv(X)\rightarrow \wdiv(U)$ est exactement PDiv$(X)$ d'où l'isomorphisme.
-\item Le noyau de $.\cap U$ est exactement l'ensemble des $\pi(D)$ où $D$ est un diviseur dont le support est contenu dans $X\setminus U=Z$. De plus ce morphisme est surjectif donc les deux dernières flèches sont exactes. La deuxième flèche est injective car $X$ est irréductible, et son image est bien l'ensemble des fonctions régulières et inversibles sur $U$ de diviseur nul. Cela montre l'exactitude des deux premières flèches. La troisième et la quatrième flèches sont exacts par définition.
+\item Le noyau de $._{|U}$ est exactement l'ensemble des $\pi(D)$ où $D$ est un diviseur dont le support est contenu dans $X\setminus U=Z$. De plus ce morphisme est surjectif donc les deux dernières flèches sont exactes. La deuxième flèche est injective car $X$ est irréductible, et son image est bien l'ensemble des fonctions régulières et inversibles sur $U$ de diviseur nul (voir \ref{caracfaisceaustructdiv}). Cela montre l'exactitude des deux premières flèches. La troisième et la quatrième flèches sont exactes par définition de $\clg(X)$.
 \end{enumerate}
 \end{proof}
 
@@ -510,9 +510,9 @@ Soit $X$ une variété normale et irréductible et $f\in k(X)^*$. Alors
 Il est suffisant de vérifier ces propriétés localement sur les ouverts affines. Or dans ce cas, $f$ est une section globale si et seulement si $f$ appartient à tous les anneaux locaux des diviseurs premier d'après \ref{factonormal}. Cette dernière condition revient à dire que $\divi(f)$ est effectif, cela prouve $1$. Pour la deuxième assertion, on remarque que div$(f)=0\iff$div$(f)\geq 0$ et div$(f^{-1})\geq 0$.
 \end{proof}
 
-Plus généralement, on définit pour chaque diviseur $D\in \wdiv(X)$ le \textit{faisceau divisoriel} $\Oo_X(D)$ associé à $D$ en posant
+Plus généralement, on définit pour chaque diviseur $D\in \wdiv(X)$ le \textit{faisceau divisoriel} $\Oo_X(D)$ associé à $D$ en posant pour tout ouvert $U\subset X$
 \begin{center}
-$\Gamma(U,\Oo_X(D)):=\lbrace f\in k(X)^* \mid (\textrm{div}(f)+D)_{|U}\geq 0\rbrace\cup \lbrace 0 \rbrace$ pour tout ouvert $U\subset X$
+$\Gamma(U,\Oo_X(D)):=\lbrace f\in k(X)^* \mid (\textrm{div}(f)+D)_{|U}\geq 0\rbrace\cup \lbrace 0 \rbrace$.
 \end{center}
 C'est un sous $\Oo_X$-module de $k(X)$, ce qui se vérifie grâce aux propriétés des valuations $v_D$. Pour tout ouvert affine $U$ de $X$, les sections sur $U$ d'un faisceau divisoriel forment un idéal fractionnaire de $\Oo_X(U)$ que l'on peut décrire explicitement:
 
@@ -526,7 +526,7 @@ Soit $X=\spec A$ une variété affine normale et irréductible, et $D=:=\sum_i a
 \begin{proof}
 \begin{enumerate}
 \item Cela vient de la discussion suivant \ref{DefIdealInvertible}.
-\item Dans ce cas, $D$ est effectif, donc $\Gamma(X,\Oo_X(-D))$ est un sous-module de $A$, donc un idéal. On a donc $\Gamma(X,\Oo_X(-D))=\mathfrak{p}A_\mathfrak{p}\cap A=\mathfrak{p}$. Pour l'autre assertion, c'est immédiat car $\Oo_X(D)$ est alors inversible d'après \ref{expicaff}, c'est-à-dire que $D$ est de Cartier.
+\item Dans ce cas, $D$ est effectif, donc $\Gamma(X,\Oo_X(-D))$ est un sous-module de $A$, donc un idéal. On a donc $\Gamma(X,\Oo_X(-D))=\mathfrak{p}A_\mathfrak{p}\cap A=\mathfrak{p}$. Pour l'autre assertion, c'est immédiat car $\Oo_X(D)$ est alors inversible d'après \ref{expicaff}, c'est-à-dire que $D$ est de Cartier (voir \ref{SectionDivCartierPicardGroup}).
 \end{enumerate}
 \end{proof}
 
@@ -557,7 +557,7 @@ Encore une fois, on peut traiter le problème localement et supposer $X=\spec A$
 \end{proof}
 
 \begin{cor}\label{isomorphismcodim2CorXreg}
-Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. On a des isomorphismes donnés par la restriction à $X_{reg}$
+Soit $X$ une variété normale et irréductible et $D\in\wdiv(X)$. On a des isomorphismes donnés par la restriction à l'ouvert $X_{reg}$ des points réguliers de $X$ :
 \begin{center}
 $\wdiv(X)\simeq \wdiv(X_{reg})$, et  $\Oo_X(D)=i_*\Oo_{X_{reg}}(D)$, où $i:X_{reg}\rightarrow X$ est l'inclusion.
 \end{center}
@@ -603,7 +603,7 @@ Soit $X$ une variété irréductible. L'application $D\mapsto \Oo_X(D)$ définit
 \end{prop}
 
 
-On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur premier $D$, on choisit un indice $i\in I$ tel que $U_i\cap D\neq \emptyset$ et on prend $v_D(f_i)$ pour coefficient de $D$. Cette somme est finie par la même preuve que \ref{noethérienPWDivBienDef}. Par ailleurs elle ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \Oo_X^*(U_i\cap U_j)$ par définition, donc $v_D(f_i)=v_D(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir $\cacl(X)$ comme un sous-groupe de $\clg(X)$ car on vérifie que les diviseurs principaux se correspondent.
+On suppose à nouveau $X$ normale et irréductible. Dans ce cadre, tout diviseur de Cartier $(U_i, f_i)_{i\in I}$ définit un unique diviseur de Weil de la façon suivante. Pour tout diviseur premier $D$, on choisit un indice $i\in I$ tel que $U_i\cap D\neq \emptyset$ et on prend $v_D(f_i)$ pour coefficient de $D$. Cette somme est finie par la même preuve que \ref{noethérienPWDivBienDef}. Par ailleurs $v_D(f_i)$ ne dépend pas du choix des indices car si $j$ est un autre indice possible, $f_if_j^{-1}\in \Oo_X^*(U_i\cap U_j)$ par définition, donc $v_D(f_i)=v_D(f_j)$. On a ainsi un diviseur de Weil tel que sa restriction à tout ouvert du recouvrement $(U_i)_{i\in I}$ est principal. D'où la terminologie "localement principal". Ce constat permet de voir $\cacl(X)$ comme un sous-groupe de $\clg(X)$ car on vérifie que les diviseurs principaux se correspondent.
 
 Le sous-groupe $\cacl(X)$ est propre en général (cf \cite{Hartshorne} 6.11.3). En revanche, si $X$ est lisse, tout diviseur de Weil est localement principal . En effet dans ce cas, les anneaux locaux sont factoriels, on obtient ainsi en tout point une équation locale d'un diviseur premier car un idéal premier de hauteur 1 d'un anneau factoriel est principal, ce qui permet de conclure.
 
@@ -611,10 +611,10 @@ Le sous-groupe $\cacl(X)$ est propre en général (cf \cite{Hartshorne} 6.11.3).
 Soit $X$ une variété normale irréductible, $D,E\in\wdiv X$ avec $D$ de Cartier. Alors le morphisme naturel $\alpha:\Oo_X(D)\otimes_{\Oo_X}\Oo_X(E)\rightarrow \Oo_X(D+E)$ est un isomorphisme.
 \end{prop}
 \begin{proof}
-Écrivons $D=(U_i,f_i)_{i\in I}$. Alors sur chaque ouvert $U_i$, le morphisme $\alpha$ induit un isomorphisme de $\Oo_X$-module. En effet on a un morphisme inverse, il s'agit de la multiplication par $f_i$ composée avec l'inverse de l'isomorphisme $\Oo_{U_i}(D)\otimes_{\Oo_{U_i}}\Oo_{U_i}(E) \simeq \Oo_{U_i}(E)$ donné par $a\otimes b\mapsto abf_i$ .
+Écrivons $D=(U_i,f_i)_{i\in I}$. Alors sur chaque ouvert $U_i$, le morphisme $\alpha$ induit un isomorphisme de $\Oo_X$-modules. En effet on a un morphisme inverse, il s'agit de la multiplication par $f_i$ composée avec l'inverse de l'isomorphisme $\Oo_{U_i}(D)\otimes_{\Oo_{U_i}}\Oo_{U_i}(E) \simeq \Oo_{U_i}(E)$ donné par $a\otimes b\mapsto abf_i$ .
 \end{proof}
 
-Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement généré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée \textit{section canonique} et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des isomorphismes $\phi_i$, et donc du couple $(\Ll,s)$ à isomorphisme près, on l'appelle \textit{le diviseur des zéros} de $s$. Lorsque l'on a un isomorphisme $(\Ll,s)\simeq (\Oo_X(D),f)$, on note ce diviseur $\divi_D(f)$ et on a $\divi_D(f)=\divi(f)+D$. On voit qu'il existe un unique diviseur de Cartier effectif $D$ tel que $(\Ll,s)\simeq(\Oo_X(D),1_D)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
+Par analogie avec les diviseurs de Weil, un diviseur de Cartier $D=(U_i, f_i)_{i\in I}$ est dit effectif si pour tout $i\in I$, $f_i\in \Oo_X(U_i)$. Dans ce cas $\Oo_X(-D)$ est un sous $\Oo_X$-module de $\Oo_X$, c'est concrètement le faisceau d'idéaux localement engendré sur chaque $U_i$ par $f_i$. D'après \ref{dimsousvariete} cela définit un sous-schéma fermé de $X$ de codimension 1. L'inclusion $\Oo_X(-D)\xhookrightarrow{} \Oo_X$ est une section globale de $\Hh om(\Oo_X(-D), \Oo_X)\simeq \Oo_X(D)$ appelée \textit{section canonique} et notée $1_D$ puisqu'elle correspond à la multiplication par $1$. Réciproquement, la donnée d'un couple $(\Ll, s)$ constitué d'un faisceau inversible sur $X$ et d'une section globale définit un diviseur de Cartier effectif de la manière suivante. Soit $(U_i)_{i\in I}$ un recouvrement qui trivialise $\Ll$. Sur chaque $U_i$ on a un isomorphisme $\phi_i:\Ll_{|U_i}\rightarrow\Oo_{U_i}$. On voit que $(U_i,\phi_i(s))_i$ définit un diviseur de Cartier effectif indépendant du choix des isomorphismes $\phi_i$, et donc du couple $(\Ll,s)$ à isomorphisme près, on l'appelle \textit{le diviseur des zéros} de $s$. Lorsque l'on a un isomorphisme $(\Ll,s)\simeq (\Oo_X(D),f)$, on note ce diviseur $\divi_D(f)$ et on a $\divi_D(f)=\divi(f)+D$. On voit qu'il existe un unique diviseur de Cartier effectif $D$ tel que $(\Ll,s)\simeq(\Oo_X(D),1_D)$. Les deux procédés que l'on vient de décrire sont inverses l'un de l'autre, on obtient ainsi une correspondance bijective:
 $$
 \left\{
 \begin{matrix}
@@ -667,23 +667,23 @@ Soit $X:=\PP_k^n=\proj k[x_0,...,x_n]$. Pour tout diviseur $D=\sum a_i D_i\in\wd
 \cite{Hartshorne} II.6.4
 \end{proof}
 
-La proposition précédente et \ref{isopic} nous dit que $\pic(X)$ est engendré librement par $\Oo_X(H)$ pour tout hyperplan $H$ de $\PP_n^k$. De plus, comme $k[x_0,...,x_n]$ est engendré par des éléments homogènes de degré $1$, le faisceau $\Oo_X(l)$ est inversible pour tout $l\in \ZZ$, et on a $\Oo_X(m)\otimes_{\Oo_X}\Oo_X(l)\simeq \Oo_X(m+l)$, pour tout $m,l\in \ZZ$. Comme $\Oo_X(1)$ est isomorphe à $\Oo_X(H)$, on en déduit que tout faisceau inversible sur $\PP_k^n$ est isomorphe à un faisceau $\Oo_X(l)$, pour un entier $l\in \ZZ$.
+La proposition précédente et \ref{isopic} nous dit que $\pic(X)$ est engendré librement par $\Oo_X(H)$ pour tout hyperplan $H$ de $\PP_n^k$. De plus, comme $k[x_0,...,x_n]$ est engendré par des éléments homogènes de degré $1$, le faisceau $\Oo_X(l)$ est inversible pour tout $l\in \ZZ$, et on a $\Oo_X(m)\otimes_{\Oo_X}\Oo_X(l)\simeq \Oo_X(m+l)$, pour tout $m,l\in \ZZ$. Comme $\Oo_X(1)$ est isomorphe à $\Oo_X(H)$, on en déduit que tout faisceau inversible sur $\PP_k^n$ est isomorphe à un faisceau $\Oo_X(l)$, pour un unique entier $l\in \ZZ$.
 
 \subsubsection{Faisceau engendré par ses sections globales, Image inverse d'une section globale}
-\noindent Un $\Oo_X$-module $\Ff$ sur un schéma $X$ est \textit{engendré par des section globales} si on a une suite exacte 
+\noindent Un $\Oo_X$-module $\Ff$ sur un schéma $X$ est \textit{engendré par des sections globales} si on a une suite exacte 
 $$\bigoplus_{i\in I}\Oo_X\rightarrow \Ff\rightarrow 0$$
 Soient $f:Y\rightarrow X$ un morphisme de schémas, $\Ff$ un $\Oo_X$-module engendré par des sections globales $s_1,...,s_n$. On considère le morphisme canonique de $\Oo_X$-modules $\alpha:\Ff\rightarrow f_*f^*\Ff$, où la structure de $\Oo_X$-module sur $f_*f^*\Ff$ est donnée par $\lambda.t=f^\sharp(\lambda)t$ pour tout ouvert $V\subset X$, $\lambda\in \Oo_X(V)$, $t\in f_*f^*\Ff(V)$. On définit \textit{l'image inverse} de la section $s_i$ par $f^*(s_i):=\alpha(X)(s_i)$, c'est une section globale du faisceau de modules $f^*(\Ff)$. On vérifie que $f^*(\Ff)$ est engendré par les sections globales $f^*(s_1),...,f^*(s_n)$.
 
-Considérons maintenant une paire $(\Ll,s)$ constituée d'un faisceau inversible $\Ll$ sur $X$, et d'une section globale $s$. On note $\Vv_X(s)$ le support du diviseur des zéros de $s$, et $X_{s}=\lbrace x\in X\mid \Oo_{X,x}s_x=\Ll_x\rbrace=\lbrace x\in X\mid s_x\notin \mathfrak{m}_x\Ll_x\rbrace$ son complémentaire. Si $\Ll=\Oo_X$, il s'agit de l'ouvert principal $X_s$, et on a de plus $f^{-1}(X_s)=X_{f^\sharp(s)}=X_{f^*(s)}$ car $f^*\Oo_Y=\Oo_X$ et $\alpha=f^\sharp$ dans ce cas. Dans le cas général, on voit facilement que $f^*\Ll$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\Ll$, on voit d'après ce qui précède que $f^{-1}(X_s)=Y_{f^*(s)}$.  
+Considérons maintenant un couple $(\Ll,s)$ constitué d'un faisceau inversible $\Ll$ sur $X$, et d'une section globale $s$. On note $\Vv_X(s)$ le support du diviseur des zéros de $s$, et $X_{s}=\lbrace x\in X\mid \Oo_{X,x}s_x=\Ll_x\rbrace=\lbrace x\in X\mid s_x\notin \mathfrak{m}_x\Ll_x\rbrace$ son complémentaire. Si $\Ll=\Oo_X$, il s'agit de l'ouvert principal $X_s$, et on a de plus $f^{-1}(X_s)=X_{f^\sharp(s)}=X_{f^*(s)}$ car $f^*\Oo_Y=\Oo_X$ et $\alpha=f^\sharp$ dans ce cas. Dans le cas général, on voit facilement que $f^*\Ll$ est inversible et en raisonnant localement sur des ouverts affines qui trivialisent $\Ll$, on voit d'après ce qui précède que $f^{-1}(X_s)=Y_{f^*(s)}$.  
 
 Enfin, si $s_1,...,s_n$ sont des sections globales qui engendrent $\Ll$, on voit que $(X_{s_i})$ est un recouvrement de $X$ qui trivialise $\Ll$. En effet, sur chaque $X_{s_i}$, on a un isomorphisme $\Oo_{X_{s_i}}\rightarrow \Ll_{|X_{s_i}}$, $\lambda \mapsto \lambda s_i$, et par hypothèse, l'intersection $\cap_{i=1}^n \Vv_X(s_i)$ est vide. Enfin, on note sans ambiguïté $s_j/s_i$ l'unique élément de $\Oo(X_{s_i})$ tel que $s_j/s_i.s_i=s_j$ par l'isomorphisme précédent.
 
 \subsubsection{Morphismes vers l'espace projectif}
 \label{morphismeproj}
 
-Soit $A$ un anneau, $X$ un schéma sur $\spec A$, et $f:X\rightarrow\PP_A^n$ un morphisme de schémas sur $\spec A$ où $\PP^n_A=\proj A[x_0,...,x_n]$. On considère le faisceau décalé $\Oo(1)$ sur $\PP^n_A$. C'est un faisceau inversible engendré par les sections globales $x_0,...,x_n$. Les sections globales $s_i:=f^*(x_i)$ pour $0\leq i\leq n$, engendrent $f^*\Oo(1)$ d'après la partie précédente. Sur la carte affine standard $U_i:=\Oo(1)_{x_i}$, la $A$-algèbre $\Oo_{P^n_A}(U_i)$ est engendrée par les éléments $x_j/x_i$ et on a $s_j/s_i.s_i=s_j=\alpha(U_i)(x_j)=\alpha(U_i)(x_j/x_i.x_i)=f^\sharp(x_j/x_i).\alpha(U_i)(x_i)=f^\sharp(x_j/x_i).s_i$. On a donc nécessairement $f^\sharp(x_j/x_i)=s_j/s_i$. Comme les $U_i$ sont affines, cela définit des morphismes $f_i:X_{s_i}\rightarrow P^n_A$ en composant avec l'inclusion. Ces morphismes se recollent en un unique morphisme, car ils coïncident sur les $X_{s_i}\cap X_{s_j}$. En résumé, on récupère $f$ par la donnée des sections $s_i$. Ainsi $f$ est l'unique morphisme tel que $f^*(x_i)=s_i$.
+Soit $A$ un anneau, $X$ un schéma sur $\spec A$, et $f:X\rightarrow\PP_A^n$ un morphisme de schémas sur $\spec A$ où $\PP^n_A=\proj A[x_0,...,x_n]$. On considère le faisceau décalé $\Oo(1)$ sur $\PP^n_A$. C'est un faisceau inversible engendré par les sections globales $x_0,...,x_n$. Les sections globales $s_i:=f^*(x_i)$ pour $0\leq i\leq n$, engendrent $f^*\Oo(1)$ d'après la partie précédente. Sur la carte affine standard $U_i:=\Oo(1)_{x_i}$, la $A$-algèbre $\Oo_{\PP^n_A}(U_i)$ est engendrée par les éléments $x_j/x_i$ et on a $s_j/s_i.s_i=s_j=\alpha(U_i)(x_j)=\alpha(U_i)(x_j/x_i.x_i)=f^\sharp(x_j/x_i).\alpha(U_i)(x_i)=f^\sharp(x_j/x_i).s_i$. On a donc nécessairement $f^\sharp(x_j/x_i)=s_j/s_i$. Comme les $U_i$ sont affines, cela définit des morphismes $f_i:X_{s_i}\rightarrow \PP^n_A$ en composant avec l'inclusion. Ces morphismes se recollent en un unique morphisme, car ils coïncident sur les $X_{s_i}\cap X_{s_j}$. En résumé, on récupère $f$ par la donnée des sections $s_i$. Ainsi $f$ est l'unique morphisme tel que $f^*(x_i)=s_i$.
 
-Réciproquement montrons que la donnée d'un faisceau inversible $\Ll$ sur $X$ et de sections globales $s_0,...,s_n$ qui l'engendrent définissent un unique morphisme $f:X\rightarrow \PP^n_A$ tel que $\Ll\simeq f^*\Oo(1)$, ce dernier isomorphisme étant celui qui envoie $f^*(x_i)$ sur $s_i$. Si $f$ existe avec ces propriétés, il est unique d'après ce qui précède. Pour l'existence, on construit comme précédemment des morphismes $f_i:X_{s_i}\rightarrow U_i$ qui se recollent en un morphisme $f:X\rightarrow \PP^n_A$. Par construction, $\Ll$ et $f^*\Oo(1)$ se trivialisent sur le même recouvrement $(f^{-1}(U_i)=X_{s_i}=X_{f^*(x_i)})_{0\leq i\leq n}$. On a des isomorphismes locaux $\phi_i:\Ll_{|f^{-1}(U_i)}\rightarrow f^*\Oo(1)_{|f^{-1}(U_i)}$, $s_i\mapsto f^*x_i$. Ce sont des sections locales de $\mathscr{H}om_{\Oo_X}(\Ll,\Oo(1))$ sur un recouvrement de $X$. Pour vérifier qu'elles coïncident aux intersections $X_{s_i}\cap X_{s_j}$, on remarque que l'on a $s_i/s_j=f^\sharp(U_i\cap U_j)(x_i/x_j)= f^*(x_i)/f^*(x_j)\in \Oo_X(X_{s_i}\cap X_{s_j})^*$. Ces sections se recollent donc en un unique isomorphisme $\Ll\simeq f^*\Oo(1)$ qui est bien l'isomorphisme recherché.
+Réciproquement montrons que la donnée d'un faisceau inversible $\Ll$ sur $X$ et de sections globales $s_0,...,s_n$ qui l'engendrent définissent un unique morphisme $f:X\rightarrow \PP^n_A$ tel que $\Ll\simeq f^*\Oo(1)$, ce dernier isomorphisme étant celui qui envoie $f^*(x_i)$ sur $s_i$. Si $f$ existe avec ces propriétés, il est unique d'après ce qui précède. Pour l'existence, on construit comme précédemment des morphismes $f_i:X_{s_i}\rightarrow U_i$ qui se recollent en un morphisme $f:X\rightarrow \PP^n_A$. Par construction, $\Ll$ et $f^*\Oo(1)$ se trivialisent sur le même recouvrement $(f^{-1}(U_i)=X_{s_i}=X_{f^*(x_i)})_{0\leq i\leq n}$. On a des isomorphismes locaux $\phi_i:\Ll_{|f^{-1}(U_i)}\rightarrow f^*\Oo(1)_{|f^{-1}(U_i)}$, $s_i\mapsto f^*x_i$. Ce sont des sections locales de $\mathscr{H}om_{\Oo_X}(\Ll,\Oo(1))$ sur un recouvrement de $X$. Pour vérifier qu'elles coïncident sur les intersections $X_{s_i}\cap X_{s_j}$, on remarque que l'on a $s_i/s_j=f^\sharp(U_i\cap U_j)(x_i/x_j)= f^*(x_i)/f^*(x_j)\in \Oo_X(X_{s_i}\cap X_{s_j})^*$. Ces sections se recollent donc en un unique isomorphisme $\Ll\simeq f^*\Oo(1)$ qui est bien l'isomorphisme recherché.
 
 \noindent En résumé on a obtenu une correspondance bijective
 $$
@@ -726,7 +726,7 @@ Soit $X$ un schéma. Un faisceau inversible $\Ll$ sur $X$ est ample si pour tout
 \end{defn}
 
 \begin{prop}
-Soit $X$ un schéma sur $\spec A$ avec $A$ noethérien. Un faisceau très ample sur $X$ relativement à $\spec A$ est ample.
+Soit $X$ un schéma sur $\spec A$ avec $A$ noethérien. Tout faisceau très ample sur $X$ relativement à $\spec A$ est ample.
 \end{prop}
 \begin{proof}
 \cite[II.5.17]{Hartshorne} 
