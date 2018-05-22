@@ -6,8 +6,8 @@ Arzhantsev, I.
 \newblock \url{http://halgebra.math.msu.su/staff/arzhan/driver.pdf}.
 \newblock Accessed: 2018-23-01.
 
-\bibitem[\protect\astroncite{Arzhantsev and al.}{2014}]{coxrings}
-Arzhantsev, I. and al. (2014).
+\bibitem[\protect\astroncite{Arzhantsev et~al.}{2014}]{coxrings}
+Arzhantsev, I., Derenthal, U., Hausen, J., and Laface, A. (2014).
 \newblock {\em Cox Rings}.
 \newblock Cambridge University Press.
 
@@ -28,16 +28,16 @@ Brion, M.
 \newblock \url{https://www-fourier.ujf-grenoble.fr/~mbrion/lin_rev.pdf}.
 \newblock Accessed: 2018-18-03.
 
-\bibitem[\protect\astroncite{Dieudonn{\'e}}{1967}]{EGA}
-Dieudonn{\'e}, Jean et~Grothendieck, A. (1961--1967).
-\newblock \'{E}l\'ements de g\'eom\'etrie alg\'ebrique.
-\newblock {\em Inst. Hautes \'Etudes Sci. Publ. Math.}, 4, 8, 11, 17, 20, 24,
-  28, 32.
-
 \bibitem[\protect\astroncite{Eisenbud}{2004}]{Eisenbud}
 Eisenbud, D. (2004).
 \newblock {\em Commutative algebra, with a view towards algebraic geometry}.
 \newblock Springer.
+
+\bibitem[\protect\astroncite{Grothendieck and Dieudonn{\'e}}{1967}]{EGA}
+Grothendieck, A. and Dieudonn{\'e}, J. (1961--1967).
+\newblock \'{E}l\'ements de g\'eom\'etrie alg\'ebrique.
+\newblock {\em Inst. Hautes \'Etudes Sci. Publ. Math.}, 4, 8, 11, 17, 20, 24,
+  28, 32.
 
 \bibitem[\protect\astroncite{Görtz and Wedhorn}{2010}]{Gortz}
 Görtz, U. and Wedhorn, T. (2010).

@@ -109,26 +109,26 @@ Soit $X$ un schéma. On peut montrer (\cite[12.1]{Gortz}) que le foncteur $\Ss\m
 
 \label{FQCProj}
 
-Soit $X$ une variété projective, on a ainsi un isomorphisme $X\simeq\proj A$ pour une algèbre affine $\NN$-graduée $A$ engendrée par $r+1$ éléments homogènes de degré $1$, et on note $i:X\xhookrightarrow{} \PP_k^r$ l'immersion fermée associée. Soit $M$ un $A$-module $\ZZ$-gradué. On définit un $\Oo_X$-module $\widetilde{M}$ en posant $\widetilde{M}(X_f):=M_{(f)}:=(M_f)_0$ pour tout ouvert principal $X_f$, avec $f\in A$ homogène de degré $\geq 1$. C'est un faisceau quasi-cohérent car $(\widetilde{M})_{|X_f}=\widetilde{M_{(f)}}$, où $M_{(f)}$ est un module sur $A_{(f)}=\Oo(X_f)$. Cette construction définit un foncteur exact de la catégorie des $A$-modules $\ZZ$-gradués vers la catégorie des faisceaux quasi-cohérents sur $X$ commutant au produit tensoriel.
+Soit $X$ une variété projective, on a ainsi un isomorphisme $X\simeq\proj A$ pour une algèbre affine $\NN$-graduée $A$ engendrée par $n+1$ éléments homogènes de degré $1$, et on note $i:X\xhookrightarrow{} \PP_k^n$ l'immersion fermée associée. Soit $M$ un $A$-module $\ZZ$-gradué. On définit un $\Oo_X$-module $\widetilde{M}$ en posant $\widetilde{M}(X_f):=M_{(f)}:=(M_f)_0$ pour tout ouvert principal $X_f$, avec $f\in A$ homogène de degré $\geq 1$. C'est un faisceau quasi-cohérent car $(\widetilde{M})_{|X_f}=\widetilde{M_{(f)}}$, où $M_{(f)}$ est un module sur $A_{(f)}=\Oo(X_f)$. Cette construction définit un foncteur exact de la catégorie des $A$-modules $\ZZ$-gradués vers la catégorie des faisceaux quasi-cohérents sur $X$ commutant au produit tensoriel.
 
-Pour tout $n\in \ZZ$, on note $\Oo_X(n)$ le faisceau quasi-cohérent associé au $A$-module décalé $A(n)$. Plus généralement, étant donné un $\Oo_X$-module quasi-cohérent $\Ff$, on définit le faisceau décalé $\Ff(n):=\Ff\otimes_{\Oo_X}\Oo_X(n)$, c'est un faisceau quasi-cohérent. L'opération tilde commute au décalage, et on a $\Oo_X(n)=i^*(\Oo_{\PP_k^r}(n))$.
+Pour tout $d\in \ZZ$, on note $\Oo_X(d)$ le faisceau quasi-cohérent associé au $A$-module décalé $A(d)$. Plus généralement, étant donné un $\Oo_X$-module quasi-cohérent $\Ff$, on définit le faisceau décalé $\Ff(d):=\Ff\otimes_{\Oo_X}\Oo_X(d)$, c'est un faisceau quasi-cohérent. L'opération tilde commute au décalage, et on a $\Oo_X(d)=i^*(\Oo_{\PP_k^n}(d))$.
 
 On définit un foncteur exact à gauche de la catégorie des $\Oo_X$-modules dans la catégorie des $A$-modules $\ZZ$-gradués en posant 
 \begin{center}
-$\Gamma_*(\Ff):=\bigoplus_{n=-\infty}^{+\infty}\Gamma(X,\Ff(n))$
+$\Gamma_*(\Ff):=\bigoplus_{d=-\infty}^{+\infty}\Gamma(X,\Ff(d))$
 \end{center}
-En effet, tout élément homogène $f\in A_d$ définit une section globale de $\Oo_X(d)$ pour $d\in \ZZ$, puis pour tout $t\in \Gamma(X,\Ff(n)),\, n\in\ZZ$, on pose $ft=s\otimes_{\Oo(X)} t\in \Gamma(X, \Ff(n+d))$. Comme $A$ est engendrée par des éléments homogènes de degré $1$, on a un isomorphisme naturel 
+En effet, tout élément homogène $f\in A_d$ définit une section globale de $\Oo_X(d)$ pour $d\in \NN$, puis pour tout $t\in \Gamma(X,\Ff(e)),\, e\in\ZZ$, on pose $ft=s\otimes_{\Oo(X)} t\in \Gamma(X, \Ff(d+e))$. Comme $A$ est engendrée par des éléments homogènes de degré $1$, on a un isomorphisme naturel 
 \begin{center}
 $\Gamma_*(\Ff)^{\widetilde{}}\simeq \Ff\,\,\,\,\,$ (\cite[II.5.15]{Hartshorne})\end{center}
 
 \begin{rem}
-Si $X=\PP_k^r$, c'est-à-dire $A=k[x_0,....,x_r]$ on peut voir que l'on a un isomorphisme de $k$-algèbres graduées $\Gamma_*(\Oo_{\PP_k^r})\simeq k[x_0,...,x_r]$ (\cite[II.5.13]{Hartshorne}). En revanche, on n'a pas en général $\Gamma_*(\Oo_X)=A$ pour une algèbre affine $\NN$-graduée $A$ quelconque. En effet, supposons $X=\proj A$ irréductible et normale, avec $A=k[x_0,...,x_r]/I$ où $I$ est un idéal premier radical et homogène (\ref{ProjConstruction}). Le plongement $i$ donne lieu à une suite exacte courte
+Si $X=\PP_k^n$, c'est-à-dire $A=k[x_0,....,x_n]$ on peut voir que l'on a un isomorphisme de $k$-algèbres graduées $\Gamma_*(\Oo_{\PP_k^n})\simeq k[x_0,...,x_n]$ (\cite[II.5.13]{Hartshorne}). En revanche, on n'a pas en général $\Gamma_*(\Oo_X)=A$ pour une algèbre affine $\NN$-graduée $A$ quelconque. En effet, supposons $X=\proj A$ irréductible et normale, avec $A=k[x_0,...,x_n]/I$ où $I$ est un idéal premier radical et homogène (\ref{ProjConstruction}). Le plongement $i$ donne lieu à une suite exacte courte
 \begin{center}
-$0\rightarrow\Ii_X:=\Ker i^\sharp\rightarrow\Oo_{\PP_k^r}\xrightarrow{i^\sharp}i_*\Oo_X\rightarrow 0$
+$0\rightarrow\Ii_X:=\Ker i^\sharp\rightarrow\Oo_{\PP_k^n}\xrightarrow{i^\sharp}i_*\Oo_X\rightarrow 0$
 \end{center}
 On a $\Gamma_*(\Ii_X)=I$ (\cite[ex II.5.10]{Hartshorne}), et en appliquant $\Gamma_*$ on obtient une suite exacte
 \begin{center}
-$0\rightarrow I \xrightarrow{\subset} k[x_0,...,x_r]\xrightarrow{\Gamma_*(i^\sharp)}\Gamma_*(\Oo_X)$
+$0\rightarrow I \xrightarrow{\subset} k[x_0,...,x_n]\xrightarrow{\Gamma_*(i^\sharp)}\Gamma_*(\Oo_X)$
 \end{center}
 
 Le morphisme $\Gamma_*(i^\sharp)$ n'est pas surjectif en général. Son image est isomorphe à $A$, et on peut montrer (\cite[II ex 5.14]{Hartshorne}) que $\Gamma_*(\Oo_X)$ est la clôture intégrale de $A$. Comme exemple concret prenons l'immersion fermée $i:\PP_k^1\xhookrightarrow{}\PP_k^3$ donnée par le morphisme gradué $\phi:k[x,y,z,w]\rightarrow k[s,t]$, ($x\mapsto s^m, t\mapsto s^{m-1}t, z\mapsto st^{m-1},w\mapsto t^m)$. On peut voir que $\Gamma_*(\Oo_{i(\PP_k^1)})=\bigoplus_{d\geq 0}k[s,t]_{md}$ et que l'image de $\phi$ est strictement incluse dans cette algèbre pour $m\geq 4$.

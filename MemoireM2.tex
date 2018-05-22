@@ -16,6 +16,7 @@
 \usepackage{wrapfig}
 \usepackage{tikz-cd}
 \usepackage{multicol}
+\usepackage{graphicx}
 \usepackage[numbers]{natbib}
 
 \begin{document}
@@ -50,13 +51,29 @@ Michel \textsc{Brion}
 \end{flushright}
 \end{minipage}\\[2cm]
 
-{\large \today}\\[8cm] 
+
+
+{\large \today}\\[5cm] 
 
 
 {\large This work has been partially supported by the LabEx PERSYVAL-Lab (ANR-11-LABX-0025-01) funded by the French program Investissement d’avenir
-}\\[1cm] 
+}
 
- 
+\begin{figure}[!htb]
+   \begin{minipage}{0.3\textwidth}
+     \centering
+     \includegraphics[width=20mm]{investissement-avenir.jpg}
+   \end{minipage}
+   \begin{minipage}{0.35\textwidth}
+     \centering
+          \includegraphics[width=30mm]{ANRfinance.jpg}
+   \end{minipage}
+   \begin{minipage}{0.3\textwidth}
+        \includegraphics[width=60mm]{PERSYVAL.png}
+     \centering
+   \end{minipage}
+\end{figure}
+
 \vfill % Fill the rest of the page with whitespace
 
 \end{titlepage}
