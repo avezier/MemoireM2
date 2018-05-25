@@ -351,9 +351,9 @@ Soit $X$ un schéma, on peut étendre l'opération $\Vv_X(.)$ définie plus haut
 $$\Ii_X(Y)=\bigcap_{\mathfrak{p}\in Y}\mathfrak{p},\,\,\,\,\, \Ii_X(\Vv_X(\mathfrak{a}))=\sqrt{\mathfrak{a}},\,\,\,\,\,\,\Vv_X(\Ii_X(Y))=\overline{Y}$$
 
 \begin{rem}
-On considère une \textit{algèbre affine}, c'est-à-dire une $k$-algèbre de type fini réduite, et on suppose de plus $k$ algébriquement clos. Alors si l'on remplace "premier" par "maximal" dans les formules ci-dessus relatives aux opérations $\Vv$ et $\Ii$, on retombe sur les définitions classiques de ces opérations qui donnent les ensemble algébriques et leurs équations dans un espace affine de dimension finie sur $k$. En effet, le Nullstellensatz (\ref{Nullstellensatz}) assure dans ce cas que les points de l'ensemble algébrique correspondent aux idéaux maximaux de l'algèbre et que $\Ii(Y)=\bigcap_{y\in Y}\mathfrak{m}_y$.
+On considère le cas où $X$ est le spectre d'une \textit{algèbre affine}, c'est-à-dire une $k$-algèbre de type fini réduite, et on suppose de plus $k$ algébriquement clos. Alors si l'on remplace "premier" par "maximal" dans les formules ci-dessus relatives aux opérations $\Vv$ et $\Ii$, on retombe sur les définitions classiques de ces opérations qui donnent les ensemble algébriques et leurs équations dans un espace affine de dimension finie sur $k$. En effet, le Nullstellensatz (\ref{Nullstellensatz}) assure dans ce cas que les points de l'ensemble algébrique correspondent aux idéaux maximaux de l'algèbre et que $\Ii_X(Y)=\bigcap_{y\in Y}\mathfrak{m}_y$.
 
-Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ d'un schéma $X$ peut être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Dans le cas d'une variété affine, c'est-à-dire $X\simeq \spec A$ où $A$ est une $k$-algèbre affine sur un corps algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est-à-dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant s'identifie à $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique des morphismes entre ensembles algébriques, c'est-à-dire tels que sur chaque coordonnées les applications soient polynomiales.
+Par ailleurs, une fonction régulière $s$ sur un ouvert $U$ de $X$ peut être vue comme une fonction à valeurs dans les différents corps résiduels $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ pour chaque $\mathfrak{p}\in U$ en prenant $s(\mathfrak{p})$ modulo $\mathfrak{p}A_\mathfrak{p}$. Or, comme on a supposé $k$ algébriquement clos, tous les corps résiduels sont isomorphes à $k$. D'après le Nullstellensatz, l'évaluation de $s\in A$ en les points fermés, c'est-à-dire les idéaux maximaux, coïncide avec l'évaluation de $s$ en les points correspondants de l'ensemble algébrique associé à $A$. Enfin, considérons deux $k$-algèbres affines $A$ et $B$ sur un corps algébriquement clos, et $X, Y$ les variétés affines correspondantes. Étant donné un morphisme $f:X\rightarrow Y$, le morphisme de $k$-algèbres correspondant s'identifie à $\phi:A\rightarrow B,s\mapsto s\circ f$. En considérant $X$ et $Y$ plongés dans un espace affine et en prenant pour $s$ les différentes coordonnées de $Y$ on retrouve la définition classique des morphismes entre ensembles algébriques, c'est-à-dire tels que sur chaque coordonnées les applications soient polynomiales.
 \end{rem}
 
 \begin{cons}[Recollement de schémas]\label{gluevar}
@@ -455,7 +455,7 @@ Un schéma $X$ est intègre si et seulement si $\Oo(U)$ est intègre pour tout o
 
 Un point $x$ d'un espace topologique $X$ est dit \textit{générique} si $\overline{\lbrace x\rbrace}=X$. Ainsi, si $X$ admet un point générique, il est irréductible. Pour un schéma $X$, tout fermé irréductible admet un unique point générique et on a donc une correspondance bijective entre les points de $X$ et les fermés irréductibles de $X$ donnée par $x\mapsto \overline{\lbrace x\rbrace}$. 
 
-Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$, et $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est-à-dire le corps des fractions de $A$. Plus généralement, on définit le \textit{corps des fonctions rationnelles} d'un schéma intègre $X$ comme l'ensemble des fonctions régulières sur un ouvert non-vide de $X$, dans lequel on identifie deux fonctions lorsqu'elles coïncident sur un ouvert non-vide. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce qui précède, on le note $k(X)$.
+Un schéma affine $X=\spec A$ est intègre si et seulement si $A$ est intègre. Alors le point générique $\eta$ de $X$ correspond à l'idéal $(0)$, et $\Oo_{X,\eta}$ est la localisation $A_{(0)}$, c'est-à-dire le corps des fractions de $A$. Plus généralement, on définit le \textit{corps des fonctions rationnelles} d'un schéma intègre $X$ comme l'ensemble des fonctions régulières sur un ouvert non-vide de $X$, modulo l'identification de deux fonctions lorsqu'elles coïncident sur un ouvert non-vide. Comme tout ouvert non-vide contient le point générique $\eta$ de $X$, il s'agit de $\Oo_{X,\eta}$ qui est bien un corps d'après ce qui précède, on le note $k(X)$.
 
 \begin{prop}
 Soit $X$ un schéma intègre et $k(X)$ son corps des fonctions rationnelles. 
@@ -608,7 +608,7 @@ $$\dim X=\dim F+\codime_X F,\,\,\,\,\,\,\, \text{ et } \dim X=\dim\Oo_{X,x} \tex
 Soit $X$ une variété irréductible, $U\subset X$ un ouvert non-vide et $f\in \Oo_X(U)$ non nul et non-inversible. Soit $Z$ une composante irréductible de $\Vv_U((f))$. Alors $\dime(Z)= \dime(X)-1$.
 \end{thm}
 \begin{proof}
-Voir \cite[I.7 Th.2]{MumfordRedBook}, après réduction au cas $X$ affine, la preuve consiste en une réduction au cas facile où $\Oo(X)$ est factoriel. 
+Voir \cite[I.7 Th.2]{MumfordRedBook}, après réduction au cas $X$ affine, la preuve consiste en une réduction au cas facile où $\Oo(X)$ est un anneau de polynômes. 
 \end{proof}
 
 Ce théorème peut aussi être vu comme une version géométrique du théorème de l'idéal principal de Krull qui assure que les idéaux premiers minimaux sur un idéal principal d'un anneau noethérien sont au plus de hauteur $1$.
@@ -655,7 +655,7 @@ On a donc une factorisation de $f^\sharp(Y_v):\Oo(Y)_v\xrightarrow{p_1^\sharp}\O
 \end{proof}
 
 \begin{cor}[Car. zéro]\label{injectiveBirationel}
-Avec les hypothèses de \ref{fibersCardinal}, si de plus $f$ est injectif, alors il existe $g\in \Oo(Y)$ non-nulle tel que le morphisme induit $f:X_g \mapsto Y_g$ soit un isomorphisme.
+Avec les hypothèses de \ref{fibersCardinal}, si de plus $f$ est injectif, alors il existe $v\in \Oo(Y)$ non-nulle tel que le morphisme induit $f:X_v \mapsto Y_v$ soit un isomorphisme.
 \end{cor}
 
 \begin{thm}[Car. zéro]\label{ZMTCor}
@@ -702,7 +702,7 @@ Un morphisme $f:X\rightarrow Y$ est non-ramifié si pour tout $x\in X$, $f^\shar
 Soit $(X,f)$ un revêtement étale d'une variété $Y$. Alors $X$ est lisse si et seulement si $Y$ est lisse.
 \end{prop}
 \begin{proof}
-\cite[ex III.10.4]{Hartshorne}
+\cite[IV.17.3.5]{EGA} ou \cite[ex III.10.4]{Hartshorne}
 \end{proof}
 
 \subsection{Propriétés des variétés normales}

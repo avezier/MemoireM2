@@ -66,8 +66,8 @@
 \contentsline {subsection}{\numberline {4.2.1}Le spectre relatif d'une alg\IeC {\`e}bre divisorielle}{55}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Faisceau et anneau de Cox}{58}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{59}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Faisceau et anneau de Cox dans le cas g\IeC {\'e}n\IeC {\'e}ral}{60}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Faisceau et anneau de Cox}{60}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.3}Faisceau et anneau de Cox dans le cas g\IeC {\'e}n\IeC {\'e}ral}{59}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Faisceau et anneau de Cox}{59}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Invariance de l'anneau de Cox}{61}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Exemples}{62}{subsection.4.3.3}
 \contentsline {section}{\numberline {4.4}Propri\IeC {\'e}t\IeC {\'e}s alg\IeC {\'e}briques de l'anneau de Cox}{64}{section.4.4}

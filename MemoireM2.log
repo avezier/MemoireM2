@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  24 MAY 2018 21:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.6)  25 MAY 2018 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1364,12 +1364,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-[54] [55] [56] [57] [58] [59] [60] [61]
+[54] [55] [56] [57] [58] [59] [60]
 
 LaTeX Warning: Command \textsection invalid in math mode on input line 314.
 
 Missing character: There is no Ÿ in font cmr10!
-[62]
+[61] [62]
 Overfull \hbox (0.1456pt too wide) in paragraph at lines 355--356
 []\T1/cmr/m/n/10 La va-riété $\OML/cmm/m/it/10 X$ \T1/cmr/m/n/10 est na-tu-rel-
 le-ment mu-nie d'une ac-tion de $\OML/cmm/m/it/10 G \OT1/cmr/m/n/10 := \OMS/cms
@@ -1408,7 +1408,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 92.
 Here is how much of TeX's memory you used:
  22547 strings out of 492995
  419854 string characters out of 6132704
- 495933 words of memory out of 5000000
+ 496817 words of memory out of 5000000
  25073 multiletter control sequences out of 15000+600000
  28620 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1455,10 +1455,10 @@ dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2017/texmf-dist
 /fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/f
 onts/type1/public/cm-super/sftt1000.pfb>
-Output written on MemoireM2.pdf (73 pages, 906140 bytes).
+Output written on MemoireM2.pdf (73 pages, 906489 bytes).
 PDF statistics:
- 1646 PDF objects out of 1728 (max. 8388607)
- 1516 compressed objects within 16 object streams
+ 1647 PDF objects out of 1728 (max. 8388607)
+ 1517 compressed objects within 16 object streams
  565 named destinations out of 1000 (max. 500000)
  460 words of extra memory for PDF output out of 10000 (max. 10000000)
 
