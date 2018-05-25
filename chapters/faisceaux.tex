@@ -57,7 +57,8 @@ Soit $\Ff$ un faisceau quasi-cohérent sur un schéma noethérien $X$. Alors $\F
 Soit $X$ un schéma, alors on a les propriétés suivantes :
 \begin{enumerate}
 \item Une somme directe de faisceaux quasi-cohérents est un faisceau quasi-cohérent. Si $X$ est noethérien, une somme directe finie de faisceaux cohérents est un faisceau cohérent.
-\item Soient $\Ff$ et $\Gg$ des faisceaux quasi-cohérents sur $X$, alors $\Ff\otimes \Gg$ est quasi-cohérent. Si $X$ est noethérien et $\Ff,\Gg$ cohérents, alors $\Ff\otimes_{\Oo_X} \Gg$ est cohérent. Enfin, si $X$ est affine, alors $(\Ff\otimes_{\Oo_X}\Gg)(U)=\Ff(U)\otimes_{\Oo(U)}\Gg(U)$ pour tout ouvert $U\subset X$.
+\item Soient $\Ff$ et $\Gg$ des faisceaux quasi-cohérents sur $X$, alors $\Ff\otimes \Gg$ est quasi-cohérent. De plus, pour tout ouvert affine $U\subset X$, on a $(\Ff\otimes_{\Oo_X}\Gg)(U)=\Ff(U)\otimes_{\Oo(U)}\Gg(U)$. Enfin, si $X$ est noethérien et $\Ff,\Gg$ cohérents, alors $\Ff\otimes_{\Oo_X} \Gg$ est cohérent.
+
 \item Soit $f:\Ff\rightarrow \Gg$ un morphisme de faisceaux quasi-cohérents. Alors $\Ker f$, $\Im f$ et $\Coker f$ sont quasi-cohérents. Si $X$ est noethérien, et $\Ff, \Gg$ cohérents, alors $\Ker f$, $\Im f$ et $\Coker f$ sont cohérents.
 \item Soit $f:X\rightarrow Y$ un morphisme, et $\Gg$ un $\Oo_Y$-module quasi-cohérent. Soit $U$ un ouvert affine de $X$ tel que $f(U)$ est contenu dans un ouvert affine $V$ de $Y$. Alors
 \begin{center}
@@ -385,7 +386,7 @@ Dans cette section on s'interroge sur la possibilité d'étendre une action d'un
 Soit $G$ un groupe algébrique, $X$ une $G$-variété, et $(L,\pi)$ un fibré en droites. Une $G$-linéarisation de  $(L,\pi)$ est une action de $G$ sur $L$ telle que $\pi$ est $G$-équivariante et pour tout $(g,x)\in G\times X$ l'application $L_x\rightarrow L_{g.x},\, l\mapsto g.l$ est linéaire.
 \end{defn}
 
-Une action $G$-linéarisée définit donc un morphisme $G\rightarrow \Aut L$ à valeurs dans le groupe d'automorphismes de fibrés en droites de $(L,\pi)$. On note $\alpha: G\times X\rightarrow X$ l'action de $G$ sur $X$ et $p_2:G\times X\rightarrow X$ la projection sur $X$. Pour tout $g\in G$ on a une application:
+Une action $G$-linéarisée définit donc un morphisme $G\rightarrow \Aut(L)$ à valeurs dans le sous-groupe $\Aut^{\GG_m}(L)$ constitué des automorphismes de la variété $L$ qui commutent à l'action de $\GG_m$ sur les fibres. On note $\alpha: G\times X\rightarrow X$ l'action de $G$ sur $X$ et $p_2:G\times X\rightarrow X$ la projection sur $X$. Pour tout $g\in G$ on a une application:
 $$g\times \Id: X\rightarrow G\times X,\,\, x\mapsto (g,x)$$ 
 Les images inverses des deux fibrés $\alpha^*(L)$ et $p_2^*(L)$ par cette application sont explicitement: 
 $$(g\times \Id)^*\alpha^*(L)=X\times_{G\times X}((G\times X)\times_X L)=\lbrace (x,(g',x'),l)\mid \alpha(g',x')=\pi(l)\text{ et } (g,x)=(g',x')\rbrace$$
@@ -401,13 +402,13 @@ de fibrés en droites sur $G\times X$ tels que $\Phi_{gh}=\Phi_h\circ h^*(\Phi_g
 Soit $\beta:G\times L\rightarrow L$ une $G$-linéarisation. Par définition, on a un diagramme commutatif:
 	\begin{center}
 	\begin{tikzcd}
-  		G\times L \arrow[r, "\beta"] \arrow[d, "id\times\pi"]& L\arrow[d, "\pi"] \\ 
+  		G\times L \arrow[r, "\beta"] \arrow[d, "\Id\times\pi"]& L\arrow[d, "\pi"] \\ 
   		G\times X \arrow[r, "\alpha"] & X
 	\end{tikzcd}\\
 	\end{center}
 Par la propriété universelle du produit fibré on a donc un morphisme $\gamma:G\times L\rightarrow\alpha^*(L)$ de variétés sur $G\times X$. On remarque que l'on a un isomorphisme canonique $G\times L\rightarrow p_2^*(L),\, (g,l)\mapsto ((g,\pi (l)),l)$. Avec cette identification, $\gamma$ s'écrit explicitement $\gamma(g,l)=((g,\pi(l)),\beta(g,l))$. C'est un isomorphisme car on a un inverse évident $\Phi((g,x),l)=(g,\beta(g^{-1},l))$. Pour $g\in G$ fixé, l'image inverse de $\gamma$ par $g\times \id$ est simplement $\gamma_g:L\rightarrow g^*L, l\mapsto (\pi(l),\beta(g,l))$. Soit maintenant $h\in G$, et on note également $h$ l'automorphisme de $X$ donné par son action. En tenant compte des identifications précédentes on a pour $l\in L$ les formules $h^*(\gamma_g)\circ\gamma_h(l)=h^*(\gamma_g)(\pi(l),\beta(h,l))=(\pi(l),\beta(g,\beta(h,l)))=(\pi(l),\beta(gh,l))=\gamma_{gh}(l)$. Ainsi, $\Phi$ satisfait la condition de l'énoncé.
 
-Réciproquement, étant donné un $\Phi$ comme dans l'énoncé, on note $\gamma:=\Phi^{-1}$ et $p_L:\alpha^*(L)\rightarrow L$ la projection sur $L$. On a alors un morphisme $\beta:=p_L\circ\gamma : G\times L \rightarrow L$. La condition sur $\Phi$ exprime qu'il s'agit d'une action de $G$  sur $L$. Enfin, pour $g\in G$ fixé, $p_L\circ \gamma_g$ est un automorphisme de $(L,\pi)$, autrement dit on obtient un diagramme commutatif comme ci-dessus. On a donc bien une $G$-linéarisation.
+Réciproquement, étant donné un isomorphisme $\Phi$ comme dans l'énoncé, on note $\gamma:=\Phi^{-1}$ et $p_L:\alpha^*(L)\rightarrow L$ la projection sur $L$. On a alors un morphisme $\beta:=p_L\circ\gamma : G\times L \rightarrow L$. La condition sur $\Phi$ exprime qu'il s'agit d'une action de $G$  sur $L$. De plus, comme $\gamma$ est un isomorphisme de fibrés en droites sur $G\times X$, on obtient un diagramme commutatif comme ci-dessus qui induit des isomorphismes linéaires $L_x\rightarrow L_{\alpha(g,x)}$ entre les fibres, pour tout $(g,x)\in G\times X$. On a donc bien une $G$-linéarisation.
 \end{proof}
 
 \begin{lem}\label{existenceGLin}
