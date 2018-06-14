@@ -314,9 +314,7 @@ L'application canonique $\psi_U:\Gamma(U,\Ss)/\Gamma(U,\Ii)\rightarrow\Gamma(U,\
 Avec les données de \ref{conscoxtorsion}, soit $K', \chi'$ un autre choix de sous-groupe et de caractères. Alors les faisceaux de Cox associés sont isomorphes en tant que faisceaux d'algèbres $\clg(X)$-graduées.
 \end{thm}
 \begin{proof}
-Dans un premier temps, montrons que l'on peut se ramener à des faisceaux de Cox définis par un sous-groupe de $\wdiv(X)$ de type fini. Soit donc $K_1\subset K$ de type fini se projetant surjectivement sur $\clg(X)$. Un tel $K_1$ existe car il suffit par exemple de prendre le sous-groupe de $K$ engendré par des antécédents de générateurs de $\clg(X)$ par $c$. La restriction de $\chi$ à $K_1$ définit un caractère $\chi_1:K_1^0\rightarrow k(X)^*$. L'inclusion $K_1\subset K$ définit une injection $\Ss_1\rightarrow \Ss$, qui envoie l'idéal $\Ii_1$ défini par $\chi_1$ dans $\Ii$. Cela donne une injection $\clg(X)$-graduée $\Rr_1\rightarrow \Rr$, où $\Rr_1$ est le faisceau de Cox associé à $K_1$ et $\chi_1$. Mais d'après \ref{LemmeCoxRelevelement}, toute section $\clg(X)$-homogène de $\Rr$ peut se représenter par un section $K_1$-homogène, cela donne la surjectivité de ce morphisme.
-
-On suppose donc $K$ de type fini. Montrons que tout choix de caractères $\chi,\chi':K^0\rightarrow k(X)^*$ définit un isomorphisme entre les faisceaux de Cox $\Rr$ et $\Rr'$ associés. Notons que $\chi^{-1}\chi'$ envoie $K^0$ dans $\Oo(X)^*=k^*$. On peut ainsi étendre $\chi^{-1}\chi'$ en un caractère $\theta:K\rightarrow k^*$. En effet considérons une $\ZZ$-base $(D_1,....,D_r)$ de $K$ adaptée à $K^0$. Il existe alors des entiers positifs $n_1,...n_s$ avec $s\leq k$ tels que $§n_1D_1,...,n_sD_s$ soit une $\ZZ$-base de $K^0$. Soit $\alpha_i := \chi^{-1}\chi'(n_iD_i)$ pour $1\leq i\leq s$. Choisissons une racine $n_i$-ième de $\alpha_i$ que l'on note $\beta_i$, pour $1\leq i\leq s$. En posant $\theta(D_i)=\beta_i$ pour $1\leq i\leq s$, et $\theta(D_i)=1$ pour $s+1\leq i\leq r$ on définit un prolongement de $\chi^{-1}\chi'$. Ce prolongement permet de définir un automorphisme $K$-gradué $(\alpha,\id)$ de $\Ss$ en posant:
+Montrons que tout choix de caractères $\chi,\chi':K^0\rightarrow k(X)^*$ définit un isomorphisme entre les faisceaux de Cox $\Rr$ et $\Rr'$ associés. Notons que $\chi^{-1}\chi'$ envoie $K^0$ dans $\Oo(X)^*=k^*$. On peut ainsi étendre $\chi^{-1}\chi'$ en un caractère $\theta:K\rightarrow k^*$. En effet considérons une $\ZZ$-base $(D_1,....,D_r)$ de $K$ adaptée à $K^0$. Il existe alors des entiers positifs $n_1,...n_s$ avec $s\leq k$ tels que $§n_1D_1,...,n_sD_s$ soit une $\ZZ$-base de $K^0$. Soit $\alpha_i := \chi^{-1}\chi'(n_iD_i)$ pour $1\leq i\leq s$. Choisissons une racine $n_i$-ième de $\alpha_i$ que l'on note $\beta_i$, pour $1\leq i\leq s$. En posant $\theta(D_i)=\beta_i$ pour $1\leq i\leq s$, et $\theta(D_i)=1$ pour $s+1\leq i\leq r$ on définit un prolongement de $\chi^{-1}\chi'$. Ce prolongement permet de définir un automorphisme $K$-gradué $(\alpha,\id)$ de $\Ss$ en posant:
 $$\alpha_D:\Ss_D\rightarrow \Ss_D,\,\,\, f\mapsto \theta(D)f$$
 Cet automorphisme envoie $\Ii'$ sur $\Ii$ par construction et induit donc un isomorphisme entre $\Ss/\Ii'$ et $\Ss/\Ii$.
 
@@ -398,48 +396,37 @@ On considère les données de la construction \ref{conscoxtorsion}. On suppose d
 De même, $H_X$ se plonge dans $H$, et l'immersion fermée $i$ est $H_X$ équivariante pour ce plongement. Le couple $(\widetilde{X},p)$ (resp. $(\widehat{X},p_X)$) est un $H$-fibré principal (resp. $H_X$-fibré principal). En particulier, ce sont des quotients géométriques. Enfin, $\widehat{X}$ est une variété lisse et quasi-affine.
 \end{cons}
 \begin{proof}
-Les actions de $H$ et $H_X$ sont dues aux graduations respectives de $\Ss$ et $\Rr$ par $K$ et $\clg(X)$. Pour tout ouvert affine $U\subset X$, notons $U_1:=p_X^{-1}(U)$ et $U_2:=p^{-1}(U)$. La projection $\Ss(U)\rightarrow \Rr(U)$ est graduée par $c:K\rightarrow \clg(X)$, et donne une immersion fermée $H_X$-équivariante $U_1\xhookrightarrow{} U_2$ d'image $\Vv_{U_2}(\Ii(U_2))$. Ces immersions se recollent globalement en une immersion fermée $H_X$-équivariante $i$ d'image $\Vv(\Ii)$. Les mêmes arguments qu'en \ref{specrelatifdivi} nous donnent que $p_X$ et $p$ sont des bons quotients car on a
-$$(p_X)_*(\Oo_{\widehat{X}})_0\simeq \Rr_0\simeq\Oo_X\simeq\Ss_0\simeq  p_*(\Oo_{\widetilde{X}})_0$$
-On a déjà vu que $(\widetilde{X},p)$ est un $H$-fibré principal car c'est localement un $H$-fibré trivial (\ref{lisseGoodQuotient}). Soit $(U_i)_{i\in I}$ un recouvrement ouvert de $X$ tel que $\widetilde{U_i}$ soit un $H$-fibré trivial pour tout $i\in I$. On construit avec cela un morphisme étale et surjectif $X':=\bigsqcup_{i\in I} U_i\rightarrow X$. On obtient également un morphisme surjectif étale et $H$-équivariant $H\times X'\rightarrow \widetilde{X}$, où l'action de $H$ se fait sur le facteur de gauche. Puis, on trouve un sous-tore $H'$ de $H$ tel que $H_XH'=H$ et $H_X\cap H'$ est fini (\ref{GDiagSubtorusFacteurDirect}). Avec cela on construit d'après \ref{GITEtaleFiniteGroup} un revêtement étale $H_X\times H'\times X'$ de $H\times X'$, en faisant le quotient géométrique par l'action du groupe fini $H_X\cap H'$. On en déduit le diagramme commutatif ci-dessous, où le morphisme $\phi$ est étale surjectif $H$-équivariant, et le carré cartésien
+Les actions de $H$ et $H_X$ sont dues aux graduations respectives de $\Ss$ et $\Rr$ par $K$ et $\clg(X)$. Pour tout ouvert affine $U\subset X$, notons $U_1:=p_X^{-1}(U)$ et $U_2:=p^{-1}(U)$. La projection $\Ss(U)\rightarrow \Rr(U)$ est graduée par $c:K\rightarrow \clg(X)$, et donne une immersion fermée $H_X$-équivariante $U_1\xhookrightarrow{} U_2$ d'image $\Vv_{U_2}(\Ii(U_2))$. Ces immersions se recollent globalement en une immersion fermée $H_X$-équivariante $i$ d'image $\Vv(\Ii)$. 
 
+On a déjà vu que $(\widetilde{X},p)$ est un $H$-fibré principal car c'est localement un $H$-fibré trivial (\ref{lisseGoodQuotient}). Soit $(U_i)_{i\in I}$ un recouvrement ouvert de $X$ tel que $\widetilde{U_i}$ soit un $H$-fibré trivial pour tout $i\in I$. On construit avec cela un morphisme étale et surjectif $\psi:X':=\bigsqcup_{i\in I} U_i\rightarrow X$. On obtient également un morphisme étale surjectif et $H$-équivariant $\phi:H\times X'\rightarrow \widetilde{X}$, où l'action de $H$ se fait sur le facteur de gauche. Puis on trouve un sous-tore $H'$ de $H$ tel que $H_XH'=H$ et $H_X\cap H'$ est fini (\ref{GDiagSubtorusFacteurDirect}). Avec cela on construit d'après \ref{GITEtaleFiniteGroup} un revêtement étale $(H_X\times H'\times X',\pi)$ de $H\times X'$, en faisant le quotient géométrique par l'action du groupe fini $H_X\cap H'$. On en déduit le diagramme commutatif ci-dessous, où le morphisme $\phi$ est étale surjectif $H$-équivariant et le carré cartésien
+	
+	
 	\begin{center}
 	\begin{tikzcd}
-  		\widehat{X} \arrow[r, hook,"\subset"] \arrow[rd, "p_X"] &\widetilde{X} \arrow[d, "p"]  \arrow[rd, phantom, "\square"] & H_X\times H'\times X' \arrow[l, "\phi"] \arrow[d, "p_{X'}"]\\ 
-  		& X  & X' \arrow[l, ""]
+  		\widehat{X} \arrow[r, hook,"\subset"] \arrow[rd, "p_X"] & \widetilde{X} \arrow[d, "p"] \arrow[rd, phantom,"\square"] & H\times X' \arrow[l, "\phi"] \arrow[d, "p_{X'}"] & H_X\times H'\times X' \arrow[l, "\pi"]\\ 
+  		& X  & X' \arrow[l, "\psi"] &
 	\end{tikzcd}
 	\end{center}
-Ainsi $\phi^{-1}(\widehat{X})$ est une sous-variété $H_X$-stable de $H_X\times H'\times X'$ où l'on rappelle que l'action de $H_X$ se fait sur le facteur de gauche. On en déduit facilement qu'elle est de la forme $H_X\times S$ pour une sous-variété $S$ de $H'\times X'$ qui se projette surjectivement sur $X'$. Ainsi, $(\phi^{-1}(\widehat{X}),p_{X'})$ est un $H_X$-fibré principal, et cela conclut la preuve car la propriété d'être un fibré principal peut se tester par changement de base fidèlement plat (Voir \cite[IV 2.7.1]{EGA} où sont étudiées les propriétés des morphismes permanentes par changement de base fidèlement plat).
+
+En prenant l'image inverse de $\widehat{X}$ par $\phi\circ\pi$, on obtient une sous-variété $H_X$ stable de $H_X\times H'\times X'$ où l'on rappelle que l'action de $H_X$ se fait sur le facteur de gauche. On en déduit facilement qu'elle est de la forme $H_X\times S$ pour une sous-variété $S$ de $H'\times X'$. On en déduit le diagramme commutatif ci-dessous
+	\begin{center}
+	\begin{tikzcd}
+  		\phi^{-1}(\widehat{X}) \arrow[d, "p_{X'}"]  & H_X\times S \arrow[l, "\pi"] \arrow[d, "p_S"]\\ 
+  		X'  & S \arrow[l, ""]
+	\end{tikzcd}
+	\end{center}
+où les deux flèches horizontales correspondent au quotient par l'action du groupe fini $H_X\cap H'$. On en déduit que le carré ci-dessus est nécessairement cartésien et on conclut finalement que l'on a un carré cartésien
+	\begin{center}
+	\begin{tikzcd}
+  		\widehat{X} \arrow[d, "p_X"] \arrow[rd, phantom, "\square"]  & H_X\times S \arrow[l, ""] \arrow[d, "p_S"]\\ 
+  		X  & S \arrow[l, ""]
+	\end{tikzcd}
+	\end{center}
+où les flèches horizontales sont étales, surjectives et $H_X$-équivariantes. Cela montre que $(\widehat{X},p_X)$ est un $H_X$-fibré principal car cette propriété se teste par changement de base fidèlement plat (Voir \cite[IV 2.7.1]{EGA} où sont étudiées les propriétés des morphismes permanentes par changement de base fidèlement plat).
 
 Montrons maintenant que $\widehat{X}\simeq \Vv_{\widetilde{X}}(\Ii)$ est une variété. C'est un schéma de type fini sur $k$. De plus, il est séparé sur $k$ car \ref{sepCritere} est vérifié par construction, et comme $X$ est séparé sur $k$, on peut appliquer \ref{sepCritere2}. Il reste à montrer que ce schéma est réduit. On peut travailler localement sur un ouvert affine de la forme $\widetilde{U}=p^{-1}(U)=\spec(\Ss(U))$ pour un ouvert affine $U$ de $X$. Soit $f\in\sqrt{\Ii(U)}$, comme c'est un idéal $\clg(X)$-homogène, il contient les composantes $\clg(X)$-homogènes de $f$. Soit $f_{[D]}$ l'une d'entre elles, elle s'écrit $f_{[D]}=f_D+g$ avec $f_D\in \Ss_D(U)$ et $g\in\Ii(U)$ d'après \ref{coxsheafiso2}. On obtient facilement $f_D^n\in \Ii(U)$ pour un $n>0$. Cela impose $f_D^n=0$ compte tenu de \ref{coxidealform} et donc $f_D=0$. Finalement, $f\in\Ii(U)$ ce qui montre que $\Ii(U)$ est radical.
 
-La variété $\widehat{X}$ est quasi-affine car $\widetilde{X}$ l'est d'après \ref{specrelatifQuasiAff}. Montrons pour finir qu'elle est lisse. L'immersion $i$ est $H_X$ équivariante si bien que l'on peut supposer que  $\widehat{X}$ est une sous-variété $H_X$-stable de $\widetilde{X}$ pour l'action induite de $H_X\subset H$. De plus, on peut travailler localement et donc supposer que $\widetilde{X}\simeq H\times X$ avec l'action de $H$ sur le facteur de gauche, d'après \ref{lisseGoodQuotient} car $X$ est lisse. Supposons que $H_X$ soit un tore, alors c'est un facteur direct de $H$ d'après \ref{GDiagSubtorusFacteurDirect}, c'est-à-dire qu'il existe un sous-tore $H'\subset H$ tel que $ H_X\times H'\simeq H$ via le morphisme naturel $(h,h')\mapsto hh'$. Alors $\widehat{X}$ est égal à $H_X\times S$ pour une certaine sous-variété $S$ de $H'\times X$ qui est isomorphe à $X$ via la projection $p$. On obtient le diagramme ci-dessous, et donc le résultat.
-
-	\begin{center}
-	\begin{tikzcd}
-  		\widehat{X}=H_X\times S \arrow[r, hook,"\subset"] \arrow[d, "p_S"] & \widetilde{X}=H_X\times H'\times X \arrow[d, "p"] \\ 
-  		S \arrow[r, "\simeq"] & X
-	\end{tikzcd}
-	\end{center}
-
-Dans le cas général, on utilise à nouveau le sous-tore $H'$ de $H$ tel que $H_XH'=H$ et $H_X\cap H'$ est fini. Grâce à cela on va pouvoir construire un revêtement étale $S$ de $X$ tel que $\widehat{X}$ soit le quotient de $H_X\times S$ par le groupe fini $H_X\cap H'$. Comme $S$ sera lisse en tant que revêtement étale d'une variété lisse d'après \ref{EtaleLisse}, le résulta suivra d'après \ref{GITEtaleFiniteGroup}. On considère le carré cartésien ci-dessous, où $(\widetilde{X},\pi)$ est le quotient par $H_X\cap H'$
-
-	\begin{center}
-	\begin{tikzcd}
-  		Y=\pi^{-1}(\widehat{X}) \arrow[r, hook,"\subset"] \arrow[d, "\pi_Y"] \arrow[rd, phantom, "\square"]& H_X\times H'\times X \arrow[d, "\pi"] \\ 
-  		\widehat{X} \arrow[r, "\subset"] & \widetilde{X}=H\times X
-	\end{tikzcd}
-	\end{center}
-
-Comme dans le cas facile où $H_X$ était facteur direct, on a $Y=H_X\times S$, où $S$ est une sous-variété de $H'\times X$ telle que $X$ est le quotient de $S$ par $H_X\cap H'$. On a également que $(\widehat{X}, \pi_Y)$ est le quotient de $Y$ par $H_X\cap H'$ d'après \ref{goodquotientthm}. Ainsi $\pi_Y$ est étale d'après \ref{GITEtaleFiniteGroup}. Finalement on obtient le diagramme commutatif ci-dessous, où $\pi_S$ est également étale pour la même raison que $\pi_Y$, ce qui finit la preuve.
-
-	\begin{center}
-	\begin{tikzcd}
-  		& Y=H_X\times S \arrow[r, hook,"\subset"] \arrow[d, "\pi_Y=/H_X\cap H'"] \arrow[ddl, "p_S"]& H_X\times H'\times X \arrow[d, "\pi=/H_X\cap H"] \\ 
-  		& \widehat{X} \arrow[d, "p_X=/H_X"] \arrow[r, "\subset"]& \widetilde{X}=H\times X \arrow[dl, "p=/H"] \\
-  		S \arrow[r,"\pi_S=/H_X\cap H'"] & X &
-	\end{tikzcd}
-	\end{center}
-
+La variété $\widehat{X}$ est quasi-affine car $\widetilde{X}$ l'est d'après \ref{specrelatifQuasiAff}, et elle est lisse car $X$ est lisse et $(\widehat{X},p_X)$ est un $H_X$-fibré principal (voir \cite[2.3.3]{LinearizationGBrion}). 
 
 \end{proof}
 

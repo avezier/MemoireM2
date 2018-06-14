@@ -99,7 +99,7 @@ $$\mathfrak{p}_0=\mathfrak{p}\varsupsetneq \mathfrak{p}_1 \varsupsetneq...\varsu
 \begin{thm}\label{factonormal}
 Soit $A$ un anneau intègre noethérien intégralement clos. Alors
 \begin{enumerate}
-\item Tous les idéaux premiers associés d'un idéal principal non-nul sont de hauteur 1.
+\item Tous les idéaux premiers associés d'un idéal principal non-nul sont de hauteur $1$.
 \item $A$ est l'intersection des localisés $A_\mathfrak{p}$, où $\mathfrak{p}$ parcourt les idéaux premiers de hauteur $1$.
 \end{enumerate}
 \end{thm}
@@ -128,11 +128,9 @@ Soit $A$ un anneau noethérien intègre. Alors $A$ est intégralement clos si et
 \end{proof}
 
 \begin{prop}\label{SerreCritere2}
-Soit $k[x_1,...,x_n]$ un anneau de polynômes, et $f\in A$ un élément premier. Alors $A=k[x_1,...,x_n]/(f)$ satisfait la condition $2$ du théorème précédent. 
+Soit $k[x_1,...,x_n]$ un anneau de polynômes, et $f\in k[x_1,...,x_n]$ un élément premier. Alors $A=k[x_1,...,x_n]/(f)$ satisfait la condition $2$ du théorème précédent. 
 \end{prop}
-\begin{proof}
-Soit $\mathfrak{p}$ un premier associé de $A/(f)$, on veut montrer qu'il est de hauteur $1$. En remplaçant $A$ par sa localisation en $\mathfrak{p}$, on peut supposer $A$ local d'idéal maximal $\mathfrak{p}$. Par définition, il existe $g\in A\setminus (f) $ tel que $\mathfrak{p}=\lbrace x\in A\mid gx=0 \,\modu (f)\rbrace$. Soit $y:=g/f\in \fract(A)$, et supposons par l'absurde $y\mathfrak{p}\subset\mathfrak{p}$. Ainsi, on a l'implication $(x\in A$ et $gx=0 \,\modu (f))\implies g(x/f)=0\,\modu (f)$. On en tire aisément $g(x/f^n)=0\,\modu (f)$ pour tout $n>0$ tel que $x/f^n\in A$, ce qui force $g\in (f)$, c'est une contradiction. Ainsi $y\mathfrak{p}=A$, ou encore $\mathfrak{p}=(f/g)$. Par le théorème de l'idéal principal de Krull (voir \ref{dimsousvariete}) on en déduit $\haut \mathfrak{p}=1$.
-\end{proof}
+
 
 \begin{prop}[Car. zéro]\label{tensorproductNormalDomain}
 Soit $A$ et $B$ deux $k$-algèbres intégralement closes. Alors $A\otimes_k B$ est intégralement clos.
